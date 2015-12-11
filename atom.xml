@@ -122,7 +122,7 @@
     <link href="http://reasonpun.com/2015/12/08/apache-kafka-structure/"/>
     <id>http://reasonpun.com/2015/12/08/apache-kafka-structure/</id>
     <published>2015-12-08T08:30:08.000Z</published>
-    <updated>2015-12-11T10:09:23.000Z</updated>
+    <updated>2015-12-11T10:10:41.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -132,6 +132,7 @@
 <!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
 <!--                                                 \ \_\                   -->
 <!--                                                  \/_/                   -->
+<!--  -->
 <h4 id="Apache_Kafka_u6D88_u606F_u670D_u52A1"><a href="#Apache_Kafka_u6D88_u606F_u670D_u52A1" class="headerlink" title="Apache Kafka消息服务"></a>Apache Kafka消息服务</h4><ul>
 <li><p>参考地址 <a href="http://kafka.apache.org/documentation.html#brokerconfigs" target="_blank" rel="external">http://kafka.apache.org/documentation.html</a></p>
 </li>
