@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2015-12-25T03:15:36.000Z</updated>
+  <updated>2015-12-25T03:28:01.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/"/>
     <id>http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/</id>
     <published>2015-12-21T08:53:46.000Z</published>
-    <updated>2015-12-25T03:15:36.000Z</updated>
+    <updated>2015-12-25T03:28:01.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -112,17 +112,17 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
+      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+    
+      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+    
       <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
     
-      <category term="admin" scheme="http://reasonpun.com/tags/admin/"/>
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
     
-      <category term="docs" scheme="http://reasonpun.com/tags/docs/"/>
+      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
     
-      <category term="hadoop" scheme="http://reasonpun.com/tags/hadoop/"/>
-    
-      <category term="spark" scheme="http://reasonpun.com/tags/spark/"/>
-    
-      <category term="spark-streaming" scheme="http://reasonpun.com/tags/spark-streaming/"/>
+      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
     
   </entry>
   
@@ -131,7 +131,7 @@
     <link href="http://reasonpun.com/2015/12/21/Oryx2-Overview/"/>
     <id>http://reasonpun.com/2015/12/21/Oryx2-Overview/</id>
     <published>2015-12-21T03:37:05.000Z</published>
-    <updated>2015-12-25T03:18:40.000Z</updated>
+    <updated>2015-12-25T03:30:40.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -205,19 +205,17 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Overview" scheme="http://reasonpun.com/tags/Overview/"/>
+      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
     
-      <category term="hadoop" scheme="http://reasonpun.com/tags/hadoop/"/>
+      <category term="Java" scheme="http://reasonpun.com/tags/Java/"/>
     
-      <category term="java" scheme="http://reasonpun.com/tags/java/"/>
+      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
     
-      <category term="oryx2" scheme="http://reasonpun.com/tags/oryx2/"/>
+      <category term="Recommendation" scheme="http://reasonpun.com/tags/Recommendation/"/>
     
-      <category term="recommendation" scheme="http://reasonpun.com/tags/recommendation/"/>
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
     
-      <category term="spark" scheme="http://reasonpun.com/tags/spark/"/>
-    
-      <category term="spark-streaming" scheme="http://reasonpun.com/tags/spark-streaming/"/>
+      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
     
   </entry>
   
@@ -226,7 +224,7 @@
     <link href="http://reasonpun.com/2015/12/14/Genetic-Algorithm/"/>
     <id>http://reasonpun.com/2015/12/14/Genetic-Algorithm/</id>
     <published>2015-12-14T08:25:10.000Z</published>
-    <updated>2015-12-14T08:25:34.000Z</updated>
+    <updated>2015-12-25T03:29:45.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -245,8 +243,6 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Algorithm" scheme="http://reasonpun.com/tags/Algorithm/"/>
-    
       <category term="Genetic Algorithm" scheme="http://reasonpun.com/tags/Genetic-Algorithm/"/>
     
   </entry>
@@ -256,7 +252,7 @@
     <link href="http://reasonpun.com/2015/12/10/apache-flume-ng-structure/"/>
     <id>http://reasonpun.com/2015/12/10/apache-flume-ng-structure/</id>
     <published>2015-12-10T07:01:57.000Z</published>
-    <updated>2015-12-15T09:43:27.000Z</updated>
+    <updated>2015-12-25T03:30:08.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -362,11 +358,11 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="apache" scheme="http://reasonpun.com/tags/apache/"/>
+      <category term="Apache" scheme="http://reasonpun.com/tags/Apache/"/>
     
-      <category term="flume-ng" scheme="http://reasonpun.com/tags/flume-ng/"/>
+      <category term="Flume-NG" scheme="http://reasonpun.com/tags/Flume-NG/"/>
     
-      <category term="hdfs" scheme="http://reasonpun.com/tags/hdfs/"/>
+      <category term="HDFS" scheme="http://reasonpun.com/tags/HDFS/"/>
     
   </entry>
   
@@ -375,7 +371,7 @@
     <link href="http://reasonpun.com/2015/12/08/apache-kafka-structure/"/>
     <id>http://reasonpun.com/2015/12/08/apache-kafka-structure/</id>
     <published>2015-12-08T08:30:08.000Z</published>
-    <updated>2015-12-11T10:10:41.000Z</updated>
+    <updated>2015-12-25T03:29:55.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -584,11 +580,11 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="apache" scheme="http://reasonpun.com/tags/apache/"/>
+      <category term="Apache" scheme="http://reasonpun.com/tags/Apache/"/>
     
-      <category term="hdfs" scheme="http://reasonpun.com/tags/hdfs/"/>
+      <category term="HDFS" scheme="http://reasonpun.com/tags/HDFS/"/>
     
-      <category term="kafka" scheme="http://reasonpun.com/tags/kafka/"/>
+      <category term="Kafka" scheme="http://reasonpun.com/tags/Kafka/"/>
     
   </entry>
   
@@ -597,7 +593,7 @@
     <link href="http://reasonpun.com/2015/12/05/kafa-documentation/"/>
     <id>http://reasonpun.com/2015/12/05/kafa-documentation/</id>
     <published>2015-12-05T08:47:08.000Z</published>
-    <updated>2015-12-11T10:13:38.000Z</updated>
+    <updated>2015-12-25T03:28:28.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -961,11 +957,11 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+      <category term="Documentation" scheme="http://reasonpun.com/tags/Documentation/"/>
     
-      <category term="hdfs" scheme="http://reasonpun.com/tags/hdfs/"/>
+      <category term="HDFS" scheme="http://reasonpun.com/tags/HDFS/"/>
     
-      <category term="kafaka" scheme="http://reasonpun.com/tags/kafaka/"/>
+      <category term="Kafka" scheme="http://reasonpun.com/tags/Kafka/"/>
     
   </entry>
   
@@ -974,7 +970,7 @@
     <link href="http://reasonpun.com/2015/12/05/linux-shell-%E8%8E%B7%E5%BE%97%E4%BB%A5%E5%89%8D%E6%97%A5%E6%9C%9F/"/>
     <id>http://reasonpun.com/2015/12/05/linux-shell-获得以前日期/</id>
     <published>2015-12-05T07:26:55.000Z</published>
-    <updated>2015-12-11T10:13:42.000Z</updated>
+    <updated>2015-12-25T03:29:02.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -1004,11 +1000,9 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="linux" scheme="http://reasonpun.com/tags/linux/"/>
+      <category term="Linux" scheme="http://reasonpun.com/tags/Linux/"/>
     
-      <category term="shell" scheme="http://reasonpun.com/tags/shell/"/>
-    
-      <category term="time" scheme="http://reasonpun.com/tags/time/"/>
+      <category term="Shell" scheme="http://reasonpun.com/tags/Shell/"/>
     
   </entry>
   
@@ -1017,7 +1011,7 @@
     <link href="http://reasonpun.com/2015/12/04/spark-in-docker/"/>
     <id>http://reasonpun.com/2015/12/04/spark-in-docker/</id>
     <published>2015-12-04T09:48:17.000Z</published>
-    <updated>2015-12-11T10:13:49.000Z</updated>
+    <updated>2015-12-25T03:29:21.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -1095,13 +1089,11 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="docker" scheme="http://reasonpun.com/tags/docker/"/>
+      <category term="Docker" scheme="http://reasonpun.com/tags/Docker/"/>
     
-      <category term="hadoop" scheme="http://reasonpun.com/tags/hadoop/"/>
+      <category term="HDFS" scheme="http://reasonpun.com/tags/HDFS/"/>
     
-      <category term="hdfs" scheme="http://reasonpun.com/tags/hdfs/"/>
-    
-      <category term="spark" scheme="http://reasonpun.com/tags/spark/"/>
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
     
   </entry>
   
@@ -1110,7 +1102,7 @@
     <link href="http://reasonpun.com/2015/12/04/nginx-logrotate/"/>
     <id>http://reasonpun.com/2015/12/04/nginx-logrotate/</id>
     <published>2015-12-04T08:11:51.000Z</published>
-    <updated>2015-12-11T10:13:45.000Z</updated>
+    <updated>2015-12-25T03:29:38.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -1159,9 +1151,9 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="logrorate" scheme="http://reasonpun.com/tags/logrorate/"/>
+      <category term="Logrorate" scheme="http://reasonpun.com/tags/Logrorate/"/>
     
-      <category term="nginx" scheme="http://reasonpun.com/tags/nginx/"/>
+      <category term="Nginx" scheme="http://reasonpun.com/tags/Nginx/"/>
     
   </entry>
   
@@ -1170,7 +1162,7 @@
     <link href="http://reasonpun.com/2015/12/04/spark-source-1/"/>
     <id>http://reasonpun.com/2015/12/04/spark-source-1/</id>
     <published>2015-12-04T02:59:14.000Z</published>
-    <updated>2015-12-11T10:13:52.000Z</updated>
+    <updated>2015-12-25T03:30:47.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -1190,11 +1182,11 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="kernel" scheme="http://reasonpun.com/tags/kernel/"/>
+      <category term="Kernel" scheme="http://reasonpun.com/tags/Kernel/"/>
     
-      <category term="source" scheme="http://reasonpun.com/tags/source/"/>
+      <category term="Source" scheme="http://reasonpun.com/tags/Source/"/>
     
-      <category term="spark" scheme="http://reasonpun.com/tags/spark/"/>
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
     
   </entry>
   
