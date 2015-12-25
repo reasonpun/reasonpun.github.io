@@ -4,7 +4,7 @@
   <subtitle><![CDATA[窝在魔都的「全体位」攻城狮]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2015-12-14T08:25:34.000Z</updated>
+  <updated>2015-12-25T03:15:36.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -13,6 +13,213 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Oryx2 Admin Docs]]></title>
+    <link href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/"/>
+    <id>http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/</id>
+    <published>2015-12-21T08:53:46.000Z</published>
+    <updated>2015-12-25T03:15:36.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<h3 id="Oryx_2-1-0__u7CFB_u7EDF_u8981_u6C42"><a href="#Oryx_2-1-0__u7CFB_u7EDF_u8981_u6C42" class="headerlink" title="Oryx 2.1.0 系统要求"></a>Oryx 2.1.0 系统要求</h3><ul>
+<li>Java 7 or later (JRE only is required)</li>
+<li>A Hadoop cluster running the following components:<ul>
+<li>Apache Hadoop 2.6.0 or later</li>
+<li>Apache Zookeeper 3.4.5 or later</li>
+<li>Apache Kafka 0.8.2 or later (in 0.8.x line)</li>
+<li>Apache Spark 1.5.0 or later</li>
+</ul>
+</li>
+</ul>
+<h3 id="u670D_u52A1"><a href="#u670D_u52A1" class="headerlink" title="服务"></a>服务</h3><p>Hadoop cluster 服务</p>
+<ul>
+<li>HDFS</li>
+<li>YARN</li>
+<li>Zookeeper</li>
+<li>Kafka</li>
+<li>Spark (on YARN)</li>
+</ul>
+<p>Note that for CDH, Kafka is available as a parcel from <a href="http://www.cloudera.com/content/cloudera/en/developers/home/cloudera-labs/apache-kafka.html" target="_blank" rel="external">Cloudera Labs</a>.</p>
+<p>Kafka brokers 需要配置在集群中，根据实例，需要注意hosts和端口。端口一般会设置为9092，此处和ZK server的端口保持一致，缺省设置为2181。缺省端口会在随后的例子中使用。</p>
+<p>多个hosts需要通过都好分割，并需要提供host:port 这种方式，比如 ： your-zk-1:2181,your-zk-2:2181。</p>
+<p>同时需要注意，你的ZK实例是否使用了chroot path。这是一个简单的路径前缀，比如 your-zk:2181/your-chroot<br>/kafka 是经常用到作为前缀的。如果没有使用chroot，就可以忽略这个。注意：如果存在多个ZK server，和一个chroot，只需要在最后添加一次chroot即可，比如 your-zk-1:2181,your-zk-2:2181/kafka</p>
+<h3 id="u914D_u7F6EKafka"><a href="#u914D_u7F6EKafka" class="headerlink" title="配置Kafka"></a>配置Kafka</h3><p>Oryx 使用2个Kafka topics 做数据传输。</p>
+<ul>
+<li>一个传输输入数据到批量处理，和实时计算层</li>
+<li>另一个同步模型更新到服务层</li>
+</ul>
+<p>缺省的topics的名称分别为OryxInput 和 OryxUpdate，只有Oryx服务启动后才能创建这两个topics。</p>
+<p>输入topic的分区数目会影响消费数据的Spark Streaming 作业的分区数，甚至是并发数。比如，批量处理层读取HDFS上的历史数据分区和Kafka数据。</p>
+<p>如果输入topic只有一个分区，且在每个时间间隔内有大量的数据涌入，这是Kafka基于的输入分区相对的需要很长的时间去处理。一个比较合适的经验值是选择一些topic分区，在一个批处理时间间隔内到达的大量数据，大约是一个HDFS 块大小，缺省值是128MB。</p>
+<p>提供的oryx-run.sh kafka设置脚本，缺省设置为4个分区，当然了，这个值之后是可以修改的。必须注意不能设置更新topic多于1个分区。</p>
+<p>重复因子可以设置为任何值，但是建议最少是2。注意：重复因子数目不能超过Kafka brokers在集群上的数目。所以提供的设置脚本里缺省设置重复因子为1. 之后你可以通过kafka-topics –zookeeper … –alter –topic … –replication-factor N 等修改这些缺省值。</p>
+<p>你需要为其中一个或者两个topic配置持续时间。尤其重要的是需要限制更新topic的持续时间，因为实时计算层和服务层需要从启动开始的起点获取整个topic。这个机制并如不输入数据重要，输入数据不会再次从头读取数据。</p>
+<p>设置这个值为批量处理层更新间隔的2倍是比较合适。比如设置该值为1天（24 <em> 60 </em> 60 * 1000 = 86400000 ms），设置topic的为86400000ms。这个可以通过oryx-run.sh设置脚本自动设置。</p>
+<p>上述两个topics会包含大量信息；尤其是更新topic包含整个序列化的PMML模型。很有可能他会超过Kafka缺省最大消息的大小（kafka消息最大1Mib）。如果有更大的数据则需要设置topic’s max.message.bytes。oryx-run.sh Kafka设置脚本设置更新topic缺省为16Mib。这也是Oryx试图吸入更新topic里的模型默认最大值；更大的模型只会保存文件在HDFS中的路径。请查看属性oryx.update-topic.message.max-size。</p>
+<p>Kafka代理的message.max.bytes属性可以控制这个，但是设置这个值会影响到代理管理的所有的topics，甚至包括不良状态的topics。可以查看性能和资源部分了解更多。尤其是，需要注意的是必须设置代理的replica.fetch.max.bytes属性，以防止重复任何非常大的消息。</p>
+<blockquote>
+<p>There is no per-topic equivalent to this.</p>
+</blockquote>
+<h3 id="Kafka_u914D_u7F6E_u81EA_u52A8_u8BBE_u7F6E"><a href="#Kafka_u914D_u7F6E_u81EA_u52A8_u8BBE_u7F6E" class="headerlink" title="Kafka配置自动设置"></a>Kafka配置自动设置</h3><p>提供的oryx-run.sh脚本可以打印ZK的当前配置，列出已经存在的Kafka中的topics，如果需要，会创建配置好的输入topics和更新topics。</p>
+<p>你需要先创建Oryx配置文件，或者可以拷贝conf/als-example.conf。需要按照要求修改Kafka和ZK的配置文件，比如topic名称。</p>
+<p>oryx.conf文件需要和每个层的JAR文件放在同一个目录下，然后执行：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">./oryx-run.sh kafka-setup</span><br><span class="line"></span><br><span class="line">Input  ZK:    your-zk:<span class="number">2181</span></span><br><span class="line">Input  Kafka: your-kafka:<span class="number">9092</span></span><br><span class="line">Input  topic: OryxInput</span><br><span class="line">Update ZK:    your-zk:<span class="number">2181</span></span><br><span class="line">Update Kafka: your-kafka:<span class="number">9092</span></span><br><span class="line">Update topic: OryxUpdate</span><br><span class="line"></span><br><span class="line">All available topics:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Input topic OryxInput does not exist. Create it? y</span><br><span class="line">Creating topic OryxInput</span><br><span class="line">Created topic <span class="string">"OryxInput"</span>.</span><br><span class="line">Status of topic OryxInput:</span><br><span class="line">Topic:OryxInput	PartitionCount:<span class="number">4</span>	ReplicationFactor:<span class="number">1</span>	Configs:</span><br><span class="line">	Topic: OryxInput	Partition: <span class="number">0</span>	Leader: <span class="number">120</span>	Replicas: <span class="number">120</span>,<span class="number">121</span>	Isr: <span class="number">120</span>,<span class="number">121</span></span><br><span class="line">	Topic: OryxInput	Partition: <span class="number">1</span>	Leader: <span class="number">121</span>	Replicas: <span class="number">121</span>,<span class="number">120</span>	Isr: <span class="number">121</span>,<span class="number">120</span></span><br><span class="line">	Topic: OryxInput	Partition: <span class="number">2</span>	Leader: <span class="number">120</span>	Replicas: <span class="number">120</span>,<span class="number">121</span>	Isr: <span class="number">120</span>,<span class="number">121</span></span><br><span class="line">	Topic: OryxInput	Partition: <span class="number">3</span>	Leader: <span class="number">121</span>	Replicas: <span class="number">121</span>,<span class="number">120</span>	Isr: <span class="number">121</span>,<span class="number">120</span></span><br><span class="line"></span><br><span class="line">Update topic OryxUpdate does not exist. Create it? y</span><br><span class="line">Creating topic OryxUpdate</span><br><span class="line">Created topic <span class="string">"OryxUpdate"</span>.</span><br><span class="line">Updated config <span class="keyword">for</span> topic <span class="string">"OryxUpdate"</span>.</span><br><span class="line">Status of topic OryxUpdate:</span><br><span class="line">Topic:OryxUpdate	PartitionCount:<span class="number">1</span>	ReplicationFactor:<span class="number">1</span>	Configs:retention.ms=<span class="number">86400000</span>,max.message.bytes=<span class="number">16777216</span></span><br><span class="line">	Topic: OryxUpdate	Partition: <span class="number">0</span>	Leader: <span class="number">120</span>	Replicas: <span class="number">120</span>,<span class="number">121</span>	Isr: <span class="number">120</span>,<span class="number">121</span></span><br></pre></td></tr></table></figure>
+<p>查看发送到输入和更新topic，监控应用的动作，可以执行：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">./oryx-run.sh kafka-tail</span><br><span class="line">Input  <span class="string">ZK:</span>    your-<span class="string">zk:</span><span class="number">2181</span></span><br><span class="line">Input  <span class="string">Kafka:</span> your-<span class="string">kafka:</span><span class="number">9092</span></span><br><span class="line">Input  <span class="string">topic:</span> OryxInput</span><br><span class="line">Update <span class="string">ZK:</span>    your-<span class="string">zk:</span><span class="number">2181</span></span><br><span class="line">Update <span class="string">Kafka:</span> your-<span class="string">kafka:</span><span class="number">9092</span></span><br><span class="line">Update <span class="string">topic:</span> OryxUpdate</span><br><span class="line"></span><br><span class="line">...output...</span><br></pre></td></tr></table></figure>
+<p>接着在另外一个窗口，可以接受输入数据，比如将来自终端用户的文档data.csv加入到输入队列，并验证：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./oryx-<span class="keyword">run</span>.<span class="keyword">sh</span> kafka-<span class="keyword">input</span> --<span class="keyword">input</span>-<span class="keyword">file</span> data.csv</span><br></pre></td></tr></table></figure>
+<p>如果以上全部成功了，可以关闭这些进程。集群至此已经准备好运行Oryx了。</p>
+<h3 id="HDFS_u548C_u6570_u636E_u5C42"><a href="#HDFS_u548C_u6570_u636E_u5C42" class="headerlink" title="HDFS和数据层"></a>HDFS和数据层</h3><p>在Oryx中，Kafka是数据传输的途径，因此数据在Kafka中只是需要暂时存放的。然而输入数据也会持久化到HDFS中以备之后使用。同样的，模型和更新用来为Kafka的更新topic提供数据，模型也会持久化到HDFS以备之后引用。</p>
+<p>oryx.batch.storage.data-dir定义了输入数据存放在HDFS中的位置。在这个目录下，子目录标题会以oryx-[timestamp].data形式创建，每一个会通过Spark Straming在批量处理层执行。在这里，时间戳格式格式与Unix相同，且以毫秒为单位。</p>
+<p>实际上，和大多数Hadoop中分布式式进程输出的『文件』一样，存在这样的一个子目录，包含了很多以part-开头的文件。每个文件都是序列化文件，通过Writable类序列化Kafka输入topics的键值，Writable类实现自oryx.batch.storage.key-writable-class 和 oryx.batch.storage.message-writable-class类。默认情况下，这是TextWritable，并且keys和消息是以字符串形式被记录下来的。</p>
+<p>该目录下的数据会被删除。也就不会再次被批处理层计算使用。尤其是，设置oryx.batch.storage.max-age-data-hours为一个非负数，将会使批处理层自动删除大于给定时间的数据。</p>
+<p>同样的，在每个批处理间隔内被批处理层选中的模型会被原始的机器学习应用（扩展子MLUpdate）输出。也会被持久化到oryx.batch.storage.model-dir定义的目录下的子目录中。在这个目录下，子目录的命名都是以时间戳形式实现的，同Unix毫秒形式。</p>
+<p>子目录下的内容取决于应用，但是一般会包含以model.pmml命名的PMML模块，并且和模块一起存在的可选的追加文件。</p>
+<p>这个目录之所以存在是因为需要记录PMML模块用来归档用或者被其他工具使用。也可按照规则删除其内容。</p>
+<h3 id="u6355_u83B7_u9519_u8BEF"><a href="#u6355_u83B7_u9519_u8BEF" class="headerlink" title="捕获错误"></a>捕获错误</h3><p>最后，你可能希望停止其中一个或者几个层的运行，或者重启。服务也可能挂鸟。这到底发生了神马？为啥会这样捏？</p>
+<h4 id="u6570_u636E_u4E22_u5931"><a href="#u6570_u636E_u4E22_u5931" class="headerlink" title="数据丢失"></a>数据丢失</h4><p>历史数据存放在HDFS中，理论上会存放多个副本。HDFS会确保数据被靠谱的存放着。当设置了副本，Kafka也被设计为采用副本方式应对故障。</p>
+<p>这并没有啥鸟用，这样不能确保数据不会丢失，只能依靠HDFS和Kafka能正常可用罢了。</p>
+<h4 id="u670D_u52A1_u5668_u6302_u9E1F"><a href="#u670D_u52A1_u5668_u6302_u9E1F" class="headerlink" title="服务器挂鸟"></a>服务器挂鸟</h4><p>通常情况下，所有的三层服务进程应该会持续的工作，如果不得不停止或者挂鸟的话，服务自己会立即重启。这个可以通过初始化脚本完美完成或者类似机制（尚未实现鸟）</p>
+<h5 id="u670D_u52A1_u5C42"><a href="#u670D_u52A1_u5C42" class="headerlink" title="服务层"></a>服务层</h5><p>服务层是无状态的。启动后，他会读取更新topics中的所有的模型和可用更新。当首个可用的模型就绪后，就可以开始应答请求。基于这个原因，需要适当的限制更新topic的持续时间。</p>
+<p>服务层的操作不是分布式的，每个实例是独立的，启动和停止不会影响到其他部分。</p>
+<h5 id="u5B9E_u65F6_u8BA1_u7B97_u5C42"><a href="#u5B9E_u65F6_u8BA1_u7B97_u5C42" class="headerlink" title="实时计算层"></a>实时计算层</h5><p>实时计算层同样也不存在状态，也会在读取全部的模型和更新topic的更新。只要存在合法的模型，就可以生成更新。同时，从最后一次偏移位置开始读取输入topics。</p>
+<p>实时计算层使用Spark和Spark Streaming 做计算。Spark会响应计算过程中失败情况，并重试任务。</p>
+<p>Spark Streaming的Kafka集成模块在某些情况下可以恢复接收的故障。<br>如果是整个进程死掉并被重新启动，oryx.id的值被设定以后，系统会自动从上一次Kafka记录的偏移地址开始读取。（否则，将会从上次偏移地址开始，这就意味着实时计算层没有运行的时候，到达的数据就不会生成任何更新。），同样的，如果实时计算层的模型还没有准备好的话，收到的数据也会被忽略。It effectively adopts “at most once” semantics.</p>
+<p>由于实时计算层的作用是为最后发布的模型提供approximate, “best effort”的更新。这种行为由于其间接性一般是没有问题，且令人满意的。</p>
+<h5 id="u6279_u5904_u7406_u5C42"><a href="#u6279_u5904_u7406_u5C42" class="headerlink" title="批处理层"></a>批处理层</h5><p>批处理层是最复杂的，因为他并生成某些状态：</p>
+<ul>
+<li>历史数据，总是持久化到HDFS</li>
+<li>如果应用选择的话，模型的扩展状态和topics都可以被持久化到HDFS上</li>
+</ul>
+<p>对于多次或者根本不读取数据是非常敏感的，因为他本来就是生产官方下一代模型的组件</p>
+<p>与实时计算层一起，Spark和Spark Streaming在计算过程中可以捕获很多错误情况。也可以管理存储到HDFS中的数据，负责避免两次写入相同数据。</p>
+<p>应用负责回复各自的「状态」，一般情况下，建立在Oryx ML层的应用会将状态写入唯一的子目录中，并且在重启后会在新的目录简单的产生一个新状态。前一个状态如果存在的话，也会被完整写入或者被完全忽视。</p>
+<p>批处理层也和实时计算层一样，符合『至多一次』的规则。综上，如果整个进程死掉或者被重启，oryx.id被设置的话，则会从Kafka记录的最后一次偏移重新读取，否则会在最后一次偏移处重新读取数据。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+    
+      <category term="admin" scheme="http://reasonpun.com/tags/admin/"/>
+    
+      <category term="docs" scheme="http://reasonpun.com/tags/docs/"/>
+    
+      <category term="hadoop" scheme="http://reasonpun.com/tags/hadoop/"/>
+    
+      <category term="spark" scheme="http://reasonpun.com/tags/spark/"/>
+    
+      <category term="spark-streaming" scheme="http://reasonpun.com/tags/spark-streaming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Oryx2 Overview]]></title>
+    <link href="http://reasonpun.com/2015/12/21/Oryx2-Overview/"/>
+    <id>http://reasonpun.com/2015/12/21/Oryx2-Overview/</id>
+    <published>2015-12-21T03:37:05.000Z</published>
+    <updated>2015-12-21T08:53:01.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<h3 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h3><img src="/images/oryx/OryxLogoMedium.png" title="oryx2">
+<p>Oryx2是专注于进行大规模，实时机器学习框架，遵循lambda规则，基于Apache Spark和Apache Kafka构建。</p>
+<p>Oryx 不仅是构建应用程序的框架，而且包含 协同过滤，分类，回归和聚类的打包的端到端的应用。</p>
+<p>包含3层</p>
+<ul>
+<li>lambda层<ul>
+<li>批量处理</li>
+<li>快速处理</li>
+<li>服务</li>
+</ul>
+</li>
+<li>ML抽象层</li>
+<li>端到端实现层</li>
+</ul>
+<p>从另一个角度，可以看成是一系列链接的元素</p>
+<ul>
+<li>批处理层：依据历史数据进行离线处理</li>
+<li>实时处理层：通过增量数据流，实时更新结果</li>
+<li>服务层：通过模型的传递实现异步查询API</li>
+<li>数据传输层：在外部数据源与处理层之间传输数据</li>
+</ul>
+<p>The project</p>
+<ul>
+<li>may be reused tier by tier for example, the packaged app tier can be ignored, and it can be a framework for building new ML applications.</li>
+<li>It can be reused layer by layer too: for example, the Speed Layer can be omitted if a deployment does not need incremental updates.</li>
+<li>It can be modified piece-by-piece too: the collaborative filtering application’s model-building batch layer could be swapped for a custom implementation based on a new algorithm outside Spark MLlib while retaining the serving and speed layer implementations.</li>
+</ul>
+<img src="/images/oryx/Architecture.png" title="Architecture">
+<h3 id="Lambda_u5C42_u5B9E_u73B0"><a href="#Lambda_u5C42_u5B9E_u73B0" class="headerlink" title="Lambda层实现"></a>Lambda层实现</h3><h4 id="u6570_u636E_u4F20_u8F93"><a href="#u6570_u636E_u4F20_u8F93" class="headerlink" title="数据传输"></a>数据传输</h4><p>  数据传输机制其实就是一个Kafka的Topic。任何一个进程（包含且不局限与服务层）都可以向topic中写入数据，并通过实时处理和批处理层查看。<br>  Kafka Topic也可以用来模型和模型之间的更新，并被实时处理层和服务层消费。</p>
+<h4 id="u6279_u5904_u7406_u5C42"><a href="#u6279_u5904_u7406_u5C42" class="headerlink" title="批处理层"></a>批处理层</h4><p>  批处理层是以Spark Streaming进程的方式实现的，运行在Hadoop Cluster节点上，并读取来自Kafka topic的输入数据。 Streaming 进程会有一个很长的运行周期-若干小时甚至一天。会使用Spark存储当前会话数据到HDFS中，然后合并HDFS上的所有历史数据，之后重新初始化构建新的结果数据。并将新的结果重新写入HDFS，同时发不到Kafka更新topic中。</p>
+<h4 id="u5B9E_u65F6_u5904_u7406_u5C42"><a href="#u5B9E_u65F6_u5904_u7406_u5C42" class="headerlink" title="实时处理层"></a>实时处理层</h4><p>  实时处理层也是由Spark Streaming进程实现的，同样读取Kafka topic输入数据。但是他存在比较短的运行周期，比如秒级别。会持续消费更新topic中的新模型，并生产新的模型。也会回写更新topic。</p>
+<h4 id="u670D_u52A1_u5C42"><a href="#u670D_u52A1_u5C42" class="headerlink" title="服务层"></a>服务层</h4><p>  服务层监听更新topic上的模型以及模型更新。在内存中持久化模型状态。<br>  会暴露顶层方法的 HTTP REST API 用于查询内存中的模型。大部分接口都支持大规模的部署。<br>  每个接口都可以接收新的数据并写入Kafka，以此在实时处理层和批处理层可见。</p>
+<h4 id="u914D_u7F6E_u548C_u90E8_u7F72"><a href="#u914D_u7F6E_u548C_u90E8_u7F72" class="headerlink" title="配置和部署"></a>配置和部署</h4><p>  程序是基于Java实现的，依赖</p>
+<pre><code>* Spark 1.3.x+
+* Hadoop 2.6.x+
+* Tomcat 8.x+
+* Kafka 0.8.2+
+* Zookeeper 等。
+</code></pre><p>  配置文件通过 <a href="https://github.com/typesafehub/config" target="_blank" rel="external">Typesafe Config</a> 的方式实现整个系统的部署配置。<br>  包括： 批处理，实时处理，服务层逻辑关键的接口类的实现</p>
+<p>  每个层的二进制形式分开进行打包和部署的，每个都是以可执行的Java的jar包的形式存在并包含所有必须的服务。</p>
+<h3 id="ML_u5C42_u5B9E_u73B0"><a href="#ML_u5C42_u5B9E_u73B0" class="headerlink" title="ML层实现"></a>ML层实现</h3><p>  ML层对上述通用接口方法做了简单的专一话的实现，实现了通用ML需求，并且对应用暴露了机器学习特有的接入接口。</p>
+<p>  举个例子，实现了批量处理层，用于自动更新测试集和训练集进程。可以调用应用提供的函数来评估测试机模型。通过尝试不同的超参数值，选择出最佳结果。通过PMML管理模型的序列号。</p>
+<h3 id="u7AEF_u5230_u7AEF_u5E94_u7528_u5B9E_u73B0"><a href="#u7AEF_u5230_u7AEF_u5E94_u7528_u5B9E_u73B0" class="headerlink" title="端到端应用实现"></a>端到端应用实现</h3><p>  除了作为一种框架，Oryx2 包含完整的三中机器学习需要的批处理层，实时处理层，服务层。<br>  开箱即用，或者作为自定义程序的基础：</p>
+<pre><code>* 基于最小二乘法的协同过滤/推荐
+* 基于k-means的聚类
+* 基于随机决策森林的分类和回归
+</code></pre><h3 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
+<li><a href="http://oryx.io/index.html" target="_blank" rel="external">http://oryx.io/index.html</a></li>
+<li><a href="http://www.ivanopt.com/oryx-document%E7%BF%BB%E8%AF%91/" target="_blank" rel="external">http://www.ivanopt.com/oryx-document%E7%BF%BB%E8%AF%91/</a></li>
+<li><a href="http://jameskinley.tumblr.com/post/37398560534/the-lambda-architecture-principles-for" target="_blank" rel="external">http://jameskinley.tumblr.com/post/37398560534/the-lambda-architecture-principles-for</a></li>
+<li><a href="http://dmg.org/pmml/v4-1/GeneralStructure.html" target="_blank" rel="external">http://dmg.org/pmml/v4-1/GeneralStructure.html</a></li>
+<li><a href="http://blog.csdn.net/nxcjh321/article/details/24796879" target="_blank" rel="external">http://blog.csdn.net/nxcjh321/article/details/24796879</a></li>
+<li><a href="http://youngfor.me/post/recsys/oryx-tui-jian-xi-tong-chu-ti-yan" target="_blank" rel="external">http://youngfor.me/post/recsys/oryx-tui-jian-xi-tong-chu-ti-yan</a></li>
+<li><a href="https://github.com/OryxProject/oryx" target="_blank" rel="external">https://github.com/OryxProject/oryx</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Overview" scheme="http://reasonpun.com/tags/Overview/"/>
+    
+      <category term="hadoop" scheme="http://reasonpun.com/tags/hadoop/"/>
+    
+      <category term="java" scheme="http://reasonpun.com/tags/java/"/>
+    
+      <category term="oryx2" scheme="http://reasonpun.com/tags/oryx2/"/>
+    
+      <category term="recommendation" scheme="http://reasonpun.com/tags/recommendation/"/>
+    
+      <category term="spark" scheme="http://reasonpun.com/tags/spark/"/>
+    
+      <category term="spark-streaming" scheme="http://reasonpun.com/tags/spark-streaming/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Genetic Algorithm]]></title>
