@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-01-25T03:30:56.000Z</updated>
+  <updated>2016-03-15T07:14:18.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -13,6 +13,140 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Java关键字volatile]]></title>
+    <link href="http://reasonpun.com/2016/03/08/Java%E5%85%B3%E9%94%AE%E5%AD%97volatile/"/>
+    <id>http://reasonpun.com/2016/03/08/Java关键字volatile/</id>
+    <published>2016-03-08T09:59:30.000Z</published>
+    <updated>2016-03-15T07:14:18.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<p>翻译自：<a href="http://tutorials.jenkov.com/java-concurrency/volatile.html" target="_blank" rel="external">http://tutorials.jenkov.com/java-concurrency/volatile.html</a></p>
+<h3 id="Java_Volatile__u5173_u952E_u5B57"><a href="#Java_Volatile__u5173_u952E_u5B57" class="headerlink" title="Java Volatile 关键字"></a>Java Volatile 关键字</h3><p>Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。</p>
+<p>Actually, since Java 5 the volatile keyword guarantees more than just that volatile variables are written to and read from main memory. I will explain that in the following sections.</p>
+<p>实际上，自Java5开始，volatile关键字保证的是volatile声明的变量都是写入和读取自主内存的。以下将会详细讲解。</p>
+<h3 id="Java_volatile_u4FDD_u8BC1_u53EF_u89C1_u6027"><a href="#Java_volatile_u4FDD_u8BC1_u53EF_u89C1_u6027" class="headerlink" title="Java volatile保证可见性"></a>Java volatile保证可见性</h3><p>Java中volatile关键字保证了线程之间变量修改的可见性。这个可能会有点抽象，因此让我详细讲解下。</p>
+<p>在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：</p>
+<img src="/images/volatile/java-volatile-1.png" title="volatile">
+<p>使用非volatile变量，当JVM自主内存读取数据到CPU缓存，或者自CPU缓存写入主内存时，是没有保证的。这可能会引起很多问题，接下来章节中会降到。</p>
+<p>设想一种情况，多个线程可以访问类似如下的同一个共享对象，这个对象包含一个计数器变量：</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SharedObject</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> counter = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另一个设想，只有线程1改变计数变量，但是线程1和线程2都可能经常读取这个计数变量。</p>
+<p>如果计数变量没有被声明为volatile，那么自CPU缓存回写到主内存的过程中，就无法保证这个计数变量的值了。也就是说，技术变量的值在通过CPU缓存写会主内存的过程中发生了改变。如图：</p>
+<img src="/images/volatile/java-volatile-2.png" title="volatile 2">
+<p>这个问题是因为线程并没有得到最新的值，另外那个线程并没有将最新的变量写回主内存，这就是所谓的“可见”问题。某一个线程的更新并没有被另外的线程获取。</p>
+<p>通过声明计数变量为volatile，那么这个计数变量所有的更新都会立即被写回主内存。同时，所有的读操作都会直接通过主内存。如下既是如何声明计数变量为volatile类型：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> SharedObject &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">volatile</span> <span class="keyword">int</span> counter = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>声明一个变量为volatile由此可以保证了变量的写操作对于其他线程都是可见的。</p>
+<h3 id="The_Java_volatile_Happens-Before_Guarantee"><a href="#The_Java_volatile_Happens-Before_Guarantee" class="headerlink" title="The Java volatile Happens-Before Guarantee"></a>The Java volatile Happens-Before Guarantee</h3><p>自Java5开始，volatile关键字保证的不止是变量的主内存读和写，实际上还包含：</p>
+<ul>
+<li><p>如果线程A写入一个volatile变量，此时线程B读取了相同的volatile变量，那么此时所有的变量在写入volatile变量前对线程A是可见的，同时也对线程B在读取了volatile变量后也是可见的。</p>
+</li>
+<li><p>volatile变量的读写指令不能促使JVM重新排序（只要JVM发现排序不会改变程序的行为，基于性能的原因，JVM会进行排序）。前后的指令会被排序，但是volatile得读写不会混入这些指令。无论如何，指令都会follow一个volatile变量的读写，并且保证这种操作发生在读或者写之后。</p>
+</li>
+</ul>
+<p>这个需要更深入的解释。</p>
+<p>当一个线程写入一个volatile变量时，并不止这个volatile变量自己写入了主内存。同时所有被线程修改的变量在写入volatile变量之前都会被回写到主内存。当一个线程读取一个volatile变量时，他会同时读取主内存中所有其他的变量，这些变量都是和volatile变量一同写入主内存的。</p>
+<p>看例子：</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Thread <span class="keyword">A</span>:</span><br><span class="line">    sharedObject.nonVolatile = 123<span class="comment">;</span></span><br><span class="line">    sharedObject.counter     = sharedObject.counter + 1<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">Thread B:</span><br><span class="line">    int counter     = sharedObject.counter<span class="comment">;</span></span><br><span class="line">    int nonVolatile = sharedObject.nonVolatile<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>因为线程A在写入volatile变量sharedObject.counter之前写入了非volatile变量sharedObject.nonVolatile，那么当线程A写入sharedObject.counter时，sharedObject.nonVolatile 和 sharedObject.counter 都会被写入主内存。</p>
+<p>由于线程B开始的时候读取volatile类型的sharedObject.counter，那么sharedObject.counter and sharedObject.nonVolatile都会使用线程B自主内存读取到CPU缓存。等到线程B读取sharedObject.nonVolatile时，就会看到线程A写入的值。</p>
+<p>开发者可能会使用这种扩展的可见性，保证了线程之间变量的可见性。只需要声明一个或者非常少的volatile变量替换掉每个变量都声明为volatile。如下是一个例子：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Exchanger</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Object   <span class="keyword">object</span>       = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> hasNewObject = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span>(<span class="params">Object newObject</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(hasNewObject) &#123;</span><br><span class="line">            <span class="comment">//wait - do not overwrite existing new object</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">object</span> = newObject;</span><br><span class="line">        hasNewObject = <span class="keyword">true</span>; <span class="comment">//volatile write</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">take</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(!hasNewObject)&#123; <span class="comment">//volatile read</span></span><br><span class="line">            <span class="comment">//wait - don't take old object (or null)</span></span><br><span class="line">        &#125;</span><br><span class="line">        Object obj = <span class="keyword">object</span>;</span><br><span class="line">        hasNewObject = <span class="keyword">false</span>; <span class="comment">//volatile write</span></span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>线程A通过调用put()持续的写入对象。线程B通过take()持续的获取对象。这个类只有在线程A调用put()和线程B调用take()时，通过使用volatile变量才能工作正常。</p>
+<p>如果JVM在不改变排序指令的语义的基础上实现，那么JVM则会通过记录JAVA指令优化性能。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(hasNewObject) &#123;</span><br><span class="line">    <span class="regexp">//wait</span> - <span class="keyword">do</span> <span class="keyword">not</span> overwrite existing new object</span><br><span class="line">&#125;</span><br><span class="line">hasNewObject = <span class="keyword">true</span>; <span class="regexp">//volatile</span> write</span><br><span class="line">object = newObject;</span><br></pre></td></tr></table></figure>
+<p>注意到volatile变量hasNewObject在被实际设置前已经被执行。对于JVM，这看上去完全合法。这两个写入变量的值相对于另外一个是独立的。</p>
+<p>然而，排序执行的指令会有损对象变量的可见性。首先，线程B可能在线程A设置新值之前将hasNewObject设置为true。其次，甚至没法保证当新值写入对象后回写到主内存。</p>
+<p>为了防止如上述情况的发生，volatile关键字采用“发生前保证”机制。”发生前保证“机制保证读和写volatile变量的指令不能被排序。前后指令可以被排序，但是volatile读或者写指令发生前后不能被排序。</p>
+<p>举个例子：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sharedObject.nonVolatile1 = <span class="number">123</span>;</span><br><span class="line">sharedObject.nonVolatile2 = <span class="number">456</span>;</span><br><span class="line">sharedObject.nonVolatile3 = <span class="number">789</span>;</span><br><span class="line"></span><br><span class="line">sharedObject.<span class="keyword">volatile</span>     = <span class="literal">true</span>; <span class="comment">//a volatile variable</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> someValue1 = sharedObject.nonVolatile4;</span><br><span class="line"><span class="keyword">int</span> someValue2 = sharedObject.nonVolatile5;</span><br><span class="line"><span class="keyword">int</span> someValue3 = sharedObject.nonVolatile6;</span><br></pre></td></tr></table></figure>
+<p>JVM会排序前3个指令，只要他们在volatile写指令之前。</p>
+<p>同样的，只要volatile写入质量发生在后三个指令之前，那么后三个指令就会被排序。在此之前，这三个指令中任何一个指令都不会被排序。<br>That is basically the meaning of the Java volatile happens before guarantee.</p>
+<h3 id="volatile__u5E76_u4E0D_u603B_u662F_u8DB3_u591F_u7684"><a href="#volatile__u5E76_u4E0D_u603B_u662F_u8DB3_u591F_u7684" class="headerlink" title="volatile 并不总是足够的"></a>volatile 并不总是足够的</h3><p>即使volatile关键字保证了所有的volatile变量直接从主内存读取，所有的写操作都是直接写入主内存，但是存在声明了volatile而仍然不够的情况。</p>
+<p>之前提过的，只有线程1写入共享的counter变量，声明为volatile的时候才能确保线程2总是能获取最新的写入值。</p>
+<p>事实上，多线程甚至能写入一个共享的volatile变量，如果这个新写入的值不依赖于旧数据的话就将正确的值存入主内存。换句话说, 如果一个线程写入一个值到共享的volatile变量，并不会马上将读取的值用于下一个值得话。</p>
+<p>一旦一个线程首次读取一个volatile变量的值，并且需要基于这个值生成一个新的共享volatile变量值，那么这个volatile变量就不能保证正确的可见性。读取volatile变量的值并且写入新值得很短的间隙，就会创建一个竞争的条件：多个线程会读取同一个volatile变量的值，并且生成一个新的值，当回写进主内存后就会覆盖掉其他的值。</p>
+<p>多线程增加相同的计数器值得这种情况，准确的说对于volatile变量是不适用的。一下片段讲话详细讲述这种情况。</p>
+<p>设想，如果线程1读取共享计数变量，他的值是0，并放入CPU的缓存，使其加1，但是这样的改变并不会回写如主内存。线程2此时可以自主内存读取相同的计数器变量，但是读到的值仍然是0，并将这个值放入了自己的CPU缓存。线程2也可以对其加1，并且可以回写到主内存。这种情况详见下图：</p>
+<img src="/images/volatile/java-volatile-3.png" title="volatile 3">
+<p>线程1和线程2此时并不是同步的。这个共享计数器的值应该是2，但是每个线程在自己的CPU缓存中存放的值却是1，在主内存中的值是0.这已经完全乱了！即使最后每个线程回写这个共享计数变量的值到主内存，这个值也是错误的。</p>
+<h3 id="volatile_u5728_u4EC0_u4E48_u65F6_u5019_u662F_u9002_u7528_u7684_3F"><a href="#volatile_u5728_u4EC0_u4E48_u65F6_u5019_u662F_u9002_u7528_u7684_3F" class="headerlink" title="volatile在什么时候是适用的?"></a>volatile在什么时候是适用的?</h3><p>就像之前提到过的，如果是两个线程都需要读取和写入一个共享变量，那么此时适用volatile关键字是不适用的。那么就需要使用synchronized来保证读和写的原子性。读写volatile变量不会阻塞线程的读写。为了实现这一点，你必须使用synchronized关键字。</p>
+<p>作为synchronized可供选择，需要采用java.util.concurrent包中的某一个。比如AtomicLong，AtomicReference或者其他的任意一个。</p>
+<p>在这种情况下，只有一个线程读写volatile变量的值，其他线程只是读取变量，那么读取线程就可以通过volatile变量保证可以读取到最新的写入值。如果没有volatile变量，则这个过程就不能被保证。</p>
+<p>volatile关键字可以被用在32和64位变量中。</p>
+<h3 id="volatile__u6027_u80FD_u6CE8_u610F_u4E8B_u9879"><a href="#volatile__u6027_u80FD_u6CE8_u610F_u4E8B_u9879" class="headerlink" title="volatile 性能注意事项"></a>volatile 性能注意事项</h3><p>volatile变量的读写会触发变量在主内存中的读写。主内存中的读写会比CPU缓存消耗的代价高。使用volatile变量同样会阻止普通性能增强指令的排序。因此，只能在确实需要增加变量可见性基础上使用volatile变量。</p>
+<h3 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
+<li><a href="http://www.ibm.com/developerworks/cn/java/j-jtp06197.html" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/j-jtp06197.html</a></li>
+<li><a href="http://www.infoq.com/cn/articles/ftf-java-volatile" target="_blank" rel="external">http://www.infoq.com/cn/articles/ftf-java-volatile</a></li>
+<li><a href="http://www.infoq.com/cn/articles/java-memory-model-4" target="_blank" rel="external">http://www.infoq.com/cn/articles/java-memory-model-4</a></li>
+<li><a href="http://sakyone.iteye.com/blog/668091" target="_blank" rel="external">http://sakyone.iteye.com/blog/668091</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Volatile%E5%8F%98%E9%87%8F" target="_blank" rel="external">https://zh.wikipedia.org/wiki/Volatile%E5%8F%98%E9%87%8F</a></li>
+<li><a href="http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html" target="_blank" rel="external">http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Android" scheme="http://reasonpun.com/tags/Android/"/>
+    
+      <category term="Android" scheme="http://reasonpun.com/categories/Android/"/>
+    
+      <category term="关键字" scheme="http://reasonpun.com/categories/Android/%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[OKHttp源码学习过程]]></title>
+    <link href="http://reasonpun.com/2016/03/08/OKHttp%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B/"/>
+    <id>http://reasonpun.com/2016/03/08/OKHttp源码学习过程/</id>
+    <published>2016-03-08T09:52:23.000Z</published>
+    <updated>2016-03-08T10:01:39.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<h2 id="u5B66_u4E60OKHttp_u6E90_u7801_u7684_u8FC7_u7A0B"><a href="#u5B66_u4E60OKHttp_u6E90_u7801_u7684_u8FC7_u7A0B" class="headerlink" title="学习OKHttp源码的过程"></a>学习OKHttp源码的过程</h2><h3 id="u51C6_u5907"><a href="#u51C6_u5907" class="headerlink" title="准备"></a>准备</h3><p>可以在<a href="https://github.com/square/okhttp" target="_blank" rel="external">这里</a>下载OKHttp源代码</p>
+<h3 id="u8D77_u6B65"><a href="#u8D77_u6B65" class="headerlink" title="起步"></a>起步</h3><h4 id="Request-java"><a href="#Request-java" class="headerlink" title="Request.java"></a>Request.java</h4><p>所在目录：/okhttp/okhttp/src/main/java/com/squareup/okhttp/Request.java</p>
+<p>文件第38行~40行，遇到关键字 volatile</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URL url; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URI uri; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> CacheControl cacheControl; <span class="comment">// Lazily initialized.</span></span><br></pre></td></tr></table></figure>
+<h3 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
+<li><a href="http://frodoking.github.io/2015/03/12/android-okhttp/" target="_blank" rel="external">http://frodoking.github.io/2015/03/12/android-okhttp/</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Android" scheme="http://reasonpun.com/tags/Android/"/>
+    
+      <category term="Android" scheme="http://reasonpun.com/categories/Android/"/>
+    
+      <category term="源码" scheme="http://reasonpun.com/categories/Android/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[正则表达式处理Nginx]]></title>
@@ -548,7 +682,7 @@
     <link href="http://reasonpun.com/2015/12/10/apache-flume-ng-structure/"/>
     <id>http://reasonpun.com/2015/12/10/apache-flume-ng-structure/</id>
     <published>2015-12-10T07:01:57.000Z</published>
-    <updated>2015-12-25T03:33:17.000Z</updated>
+    <updated>2016-03-07T08:25:29.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -618,7 +752,7 @@
   <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a1<span class="class">.sinkgroups</span> = g1</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.sinks</span> = k1 k2 k3</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.type</span> = load_balance</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.backoff</span> = true</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.selector</span> = round_robin</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.selector</span><span class="class">.maxTimeOut</span>=<span class="number">10000</span></span><br></pre></td></tr></table></figure>
 <h4 id="u5B9E_u73B0failover_u80FD"><a href="#u5B9E_u73B0failover_u80FD" class="headerlink" title="实现failover能"></a>实现failover能</h4><p>  Failover Sink Processor能够实现failover功能，具体流程类似load balance，<br>  但是内部处理机制与load balance完全不同：Failover Sink Processor维护一个优先级Sink组件列表，只要有一个Sink组件可用，<br>  Event就被传递到下一个组件。如果一个Sink能够成功处理Event，则会加入到一个Pool中，否则会被移出Pool并计算失败次数，设置一个惩罚因子</p>
   <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a1<span class="class">.sinkgroups</span> = g1</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.sinks</span> = k1 k2 k3</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.type</span> = failover</span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.priority</span><span class="class">.k1</span> = <span class="number">5</span></span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.priority</span><span class="class">.k2</span> = <span class="number">7</span></span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.priority</span><span class="class">.k3</span> = <span class="number">6</span></span><br><span class="line">a1<span class="class">.sinkgroups</span><span class="class">.g1</span><span class="class">.processor</span><span class="class">.maxpenalty</span> = <span class="number">20000</span></span><br></pre></td></tr></table></figure>
-<h3 id="u5B89_u88C5_u914D_u7F6E"><a href="#u5B89_u88C5_u914D_u7F6E" class="headerlink" title="安装配置"></a>安装配置</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载二进制包</span></span><br><span class="line">[mofun_mining<span class="variable">@i</span>-tev02vc1 ~]<span class="variable">$ </span>wget <span class="string">"http://www.gtlib.gatech.edu/pub/apache/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz"</span></span><br><span class="line">[mofun_mining<span class="variable">@i</span>-tev02vc1 ~]<span class="variable">$ </span>tar xvzf apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin.tar.gz</span><br><span class="line">[mofun_mining<span class="variable">@i</span>-tev02vc1 ~]<span class="variable">$ </span>mv apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin /usr/local/</span><br><span class="line"><span class="comment"># 修改配置文件</span></span><br><span class="line">[mofun_mining<span class="variable">@i</span>-qe32ajmq conf]<span class="variable">$ </span>pwd</span><br><span class="line">/usr/local/apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin/conf</span><br><span class="line">[mofun_mining<span class="variable">@i</span>-qe32ajmq conf]<span class="variable">$ </span>sudo cp flume-conf.properties.template flume-conf.properties</span><br></pre></td></tr></table></figure>
+<h3 id="u5B89_u88C5_u914D_u7F6E"><a href="#u5B89_u88C5_u914D_u7F6E" class="headerlink" title="安装配置"></a>安装配置</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载二进制包</span></span><br><span class="line">[mofun_mining<span class="variable">@i</span>-tev02vc1 ~]<span class="variable">$ </span>wget <span class="string">"http://apache.arvixe.com/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz"</span></span><br><span class="line">[mofun_mining<span class="variable">@i</span>-tev02vc1 ~]<span class="variable">$ </span>tar xvzf apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin.tar.gz</span><br><span class="line">[mofun_mining<span class="variable">@i</span>-tev02vc1 ~]<span class="variable">$ </span>mv apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin /usr/local/</span><br><span class="line"><span class="comment"># 修改配置文件</span></span><br><span class="line">[mofun_mining<span class="variable">@i</span>-qe32ajmq conf]<span class="variable">$ </span>pwd</span><br><span class="line">/usr/local/apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin/conf</span><br><span class="line">[mofun_mining<span class="variable">@i</span>-qe32ajmq conf]<span class="variable">$ </span>sudo cp flume-conf.properties.template flume-conf.properties</span><br></pre></td></tr></table></figure>
 <p>采用 Avro Source+Memory Channel+HDFS Sink 方式</p>
 <ul>
 <li><p>服务器（日志汇总服务器agent）端配置文件</p>
