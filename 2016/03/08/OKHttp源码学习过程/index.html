@@ -12,6 +12,9 @@
 <h3 id="u8D77_u6B65"><a href="#u8D77_u6B65" class="headerlink" title="起步"></a>起步</h3><h4 id="Request-java"><a href="#Request-java" class="headerlink" title="Request.java"></a>Request.java</h4><p>所在目录：/okhttp/okhttp/src/main/java/com/squareup/okhttp/Request.java</p>
 <p>文件第38行~40行，遇到关键字 volatile</p>
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URL url; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URI uri; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> CacheControl cacheControl; <span class="comment">// Lazily initialized.</span></span><br></pre></td></tr></table></figure>
+<p>然后稍微看了下这个关键字的解释，可以移步<a href="http://reasonpun.com/2016/03/08/Java%E5%85%B3%E9%94%AE%E5%AD%97volatile/">这里</a></p>
+<hr>
+<p>未完待续</p>
 <h3 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
 <li><a href="http://frodoking.github.io/2015/03/12/android-okhttp/" target="_blank" rel="external">http://frodoking.github.io/2015/03/12/android-okhttp/</a></li>
 </ul>

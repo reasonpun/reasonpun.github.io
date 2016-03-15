@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-03-15T07:14:18.000Z</updated>
+  <updated>2016-03-15T07:16:36.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://reasonpun.com/2016/03/08/Java%E5%85%B3%E9%94%AE%E5%AD%97volatile/"/>
     <id>http://reasonpun.com/2016/03/08/Java关键字volatile/</id>
     <published>2016-03-08T09:59:30.000Z</published>
-    <updated>2016-03-15T07:14:18.000Z</updated>
+    <updated>2016-03-15T07:16:36.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -32,7 +32,6 @@
 <!--  -->
 <p>翻译自：<a href="http://tutorials.jenkov.com/java-concurrency/volatile.html" target="_blank" rel="external">http://tutorials.jenkov.com/java-concurrency/volatile.html</a></p>
 <h3 id="Java_Volatile__u5173_u952E_u5B57"><a href="#Java_Volatile__u5173_u952E_u5B57" class="headerlink" title="Java Volatile 关键字"></a>Java Volatile 关键字</h3><p>Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。</p>
-<p>Actually, since Java 5 the volatile keyword guarantees more than just that volatile variables are written to and read from main memory. I will explain that in the following sections.</p>
 <p>实际上，自Java5开始，volatile关键字保证的是volatile声明的变量都是写入和读取自主内存的。以下将会详细讲解。</p>
 <h3 id="Java_volatile_u4FDD_u8BC1_u53EF_u89C1_u6027"><a href="#Java_volatile_u4FDD_u8BC1_u53EF_u89C1_u6027" class="headerlink" title="Java volatile保证可见性"></a>Java volatile保证可见性</h3><p>Java中volatile关键字保证了线程之间变量修改的可见性。这个可能会有点抽象，因此让我详细讲解下。</p>
 <p>在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：</p>
@@ -114,7 +113,7 @@
     <link href="http://reasonpun.com/2016/03/08/OKHttp%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B/"/>
     <id>http://reasonpun.com/2016/03/08/OKHttp源码学习过程/</id>
     <published>2016-03-08T09:52:23.000Z</published>
-    <updated>2016-03-08T10:01:39.000Z</updated>
+    <updated>2016-03-15T07:17:42.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -129,6 +128,9 @@
 <h3 id="u8D77_u6B65"><a href="#u8D77_u6B65" class="headerlink" title="起步"></a>起步</h3><h4 id="Request-java"><a href="#Request-java" class="headerlink" title="Request.java"></a>Request.java</h4><p>所在目录：/okhttp/okhttp/src/main/java/com/squareup/okhttp/Request.java</p>
 <p>文件第38行~40行，遇到关键字 volatile</p>
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URL url; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URI uri; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> CacheControl cacheControl; <span class="comment">// Lazily initialized.</span></span><br></pre></td></tr></table></figure>
+<p>然后稍微看了下这个关键字的解释，可以移步<a href="http://reasonpun.com/2016/03/08/Java%E5%85%B3%E9%94%AE%E5%AD%97volatile/">这里</a></p>
+<hr>
+<p>未完待续</p>
 <h3 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
 <li><a href="http://frodoking.github.io/2015/03/12/android-okhttp/" target="_blank" rel="external">http://frodoking.github.io/2015/03/12/android-okhttp/</a></li>
 </ul>

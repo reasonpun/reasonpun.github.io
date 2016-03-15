@@ -10,7 +10,6 @@
 <!--  -->
 <p>翻译自：<a href="http://tutorials.jenkov.com/java-concurrency/volatile.html" target="_blank" rel="external">http://tutorials.jenkov.com/java-concurrency/volatile.html</a></p>
 <h3 id="Java_Volatile__u5173_u952E_u5B57"><a href="#Java_Volatile__u5173_u952E_u5B57" class="headerlink" title="Java Volatile 关键字"></a>Java Volatile 关键字</h3><p>Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。</p>
-<p>Actually, since Java 5 the volatile keyword guarantees more than just that volatile variables are written to and read from main memory. I will explain that in the following sections.</p>
 <p>实际上，自Java5开始，volatile关键字保证的是volatile声明的变量都是写入和读取自主内存的。以下将会详细讲解。</p>
 <h3 id="Java_volatile_u4FDD_u8BC1_u53EF_u89C1_u6027"><a href="#Java_volatile_u4FDD_u8BC1_u53EF_u89C1_u6027" class="headerlink" title="Java volatile保证可见性"></a>Java volatile保证可见性</h3><p>Java中volatile关键字保证了线程之间变量修改的可见性。这个可能会有点抽象，因此让我详细讲解下。</p>
 <p>在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：</p>
