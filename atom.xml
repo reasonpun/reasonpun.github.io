@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-04-06T09:39:54.000Z</updated>
+  <updated>2016-04-06T09:54:44.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://reasonpun.com/2016/04/06/Oryx2-%E7%BB%88%E7%AB%AF%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/"/>
     <id>http://reasonpun.com/2016/04/06/Oryx2-终端用户文档/</id>
     <published>2016-04-06T07:18:22.000Z</published>
-    <updated>2016-04-06T09:39:54.000Z</updated>
+    <updated>2016-04-06T09:54:44.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -30,7 +30,7 @@
 <!--                                                 \ \_\                   -->
 <!--                                                  \/_/                   -->
 <!--  -->
-<h3 id="u8FD0_u884C"><a href="#u8FD0_u884C" class="headerlink" title="运行"></a>运行</h3><p>注意：你必须已经按照管理员文档中提到的配置好了你的集群。</p>
+<h3 id="u8FD0_u884C"><a href="#u8FD0_u884C" class="headerlink" title="运行"></a>运行</h3><p>注意：你必须已经按照<a href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/">管理员文档</a>中提到的配置好了你的集群。</p>
 <p>下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。</p>
 <p>或者，源码编译他们并从deploy/bin/获取最新的脚本。</p>
 <p>拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。</p>
