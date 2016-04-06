@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-04-06T09:54:44.000Z</updated>
+  <updated>2016-04-06T11:04:45.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -13,6 +13,151 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Oryx2 开发者文档]]></title>
+    <link href="http://reasonpun.com/2016/04/06/Oryx2-developer-doc/"/>
+    <id>http://reasonpun.com/2016/04/06/Oryx2-developer-doc/</id>
+    <published>2016-04-06T09:58:20.000Z</published>
+    <updated>2016-04-06T11:04:45.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<h3 id="u73AF_u5883_u9700_u6C42"><a href="#u73AF_u5883_u9700_u6C42" class="headerlink" title="环境需求"></a>环境需求</h3><ul>
+<li><a href="http://git-scm.com/" target="_blank" rel="external">git</a>, 或者一个支持git的IDE</li>
+<li><a href="http://maven.apache.org/" target="_blank" rel="external">Apache Maven</a> 3.2.1 或者更新版本</li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Java JDK</a> (不能只有JRE) 7 或者更新版本</li>
+</ul>
+<p>以上需要已经安装到了你的开发环境中。</p>
+<h2 id="Building"><a href="#Building" class="headerlink" title="Building"></a>Building</h2><p>克隆代码到你本地，并且编译：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/OryxProject/oryx.git oryx</span><br><span class="line">cd oryx</span><br><span class="line">mvn -DskipTests package</span><br></pre></td></tr></table></figure>
+<p>会编译出如下的二进制的jar文件：</p>
+<ul>
+<li>批处理层: deploy/oryx-batch/target/oryx-batch-2.1.2.jar</li>
+<li>实时处理层: deploy/oryx-speed/target/oryx-speed-2.1.2.jar</li>
+<li>服务层: deploy/oryx-serving/target/oryx-serving-2.1.2.jar</li>
+</ul>
+<p>友情提醒，如果你对开发Oryx感兴趣，可以根据这个<a href="https://help.github.com/articles/fork-a-repo" target="_blank" rel="external">分支</a>克隆自己的分支，然后就可以提交修改了。</p>
+<h3 id="Java_8"><a href="#Java_8" class="headerlink" title="Java 8"></a>Java 8</h3><p>如果使用Java8编译，需要添加参数-Pjava8 并且测试这里的指令。</p>
+<h3 id="Platform_Only"><a href="#Platform_Only" class="headerlink" title="Platform Only"></a>Platform Only</h3><p>默认的编译包括基于Spark MLlib和其他库的端到端的ML程序。如果只是编译lambda和ML层，需要通过参数-P!app-tier关闭其他的选项。注意，在bash中，！需要转义： -P!app-tier。</p>
+<h3 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a>测试</h3><p>mvn 测试会执行所有的但愿测试用例。也同时会执行所有的集成测试，这个可能会需要稍微长点的时间。</p>
+<h2 id="u6A21_u578B_u5BF9_u5E94_u8868"><a href="#u6A21_u578B_u5BF9_u5E94_u8868" class="headerlink" title="模型对应表"></a>模型对应表</h2><p>主要的模型和他们对应的层：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Serving</th>
+<th>Speed</th>
+<th>Batch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binary</td>
+<td>oryx-serving</td>
+<td>oryx-speed</td>
+<td>oryx-batch</td>
+</tr>
+<tr>
+<td>App</td>
+<td>oryx-app-serving</td>
+<td>oryx-app-mllib oryx-app</td>
+<td>oryx-app-mllib oryx-app</td>
+</tr>
+<tr>
+<td>ML</td>
+<td></td>
+<td>oryx-ml</td>
+<td>oryx-ml</td>
+</tr>
+<tr>
+<td>Lambda</td>
+<td>oryx-lambda-serving</td>
+<td>oryx-lambda</td>
+<td>oryx-lambda</td>
+</tr>
+</tbody>
+</table>
+<p>支持的模型，比如：<a href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-common" target="_blank" rel="external">oryx-common</a>, <a href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-common" target="_blank" rel="external">oryx-app-common</a>, <a href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-api" target="_blank" rel="external">oryx-api</a>, and <a href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-api" target="_blank" rel="external">oryx-app-api</a> 没有在这里列出了。</p>
+<h2 id="u5B9E_u73B0_u4E00_u4E2AOryx__u7A0B_u5E8F"><a href="#u5B9E_u73B0_u4E00_u4E2AOryx__u7A0B_u5E8F" class="headerlink" title="实现一个Oryx 程序"></a>实现一个Oryx 程序</h2><p>Oryx 中的“app 层”，是实现了推荐的真实的批处理，实时，服务层逻辑，集群和分类。然而，任何实现都需要使用到Oryx。他们也可以混合和匹配。举个例子，你可以重新实现ALS-related推荐的批处理层，但是仍然使用原来的ALS的服务层和实时计算层。</p>
+<h3 id="u521B_u5EFA_u4E00_u4E2A_u7A0B_u5E8F"><a href="#u521B_u5EFA_u4E00_u4E2A_u7A0B_u5E8F" class="headerlink" title="创建一个程序"></a>创建一个程序</h3><p>In each case, creating a custom Batch, Speed or Serving Layer app amounts to implementing a few key Java interfaces or Scala traits in com.cloudera.oryx.api. These interfaces/traits are found in the oryx-api module within the project.<br>在每个例子中，创建一个自定义的批处理层，实时计算层或者服务层的程序都需要实现com.cloudera.oryx.api中的几个关键的Java接口或者Scala的特性。这些接口/特性可以在项目的oryx-api模型中找到。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Java</th>
+<th>Scala</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Batch</td>
+<td>batch.BatchLayerUpdate</td>
+<td>batch.ScalaBatchLayerUpdate</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>speed.SpeedModelManager</td>
+<td>speed.ScalaSpeedModelManager</td>
+</tr>
+<tr>
+<td>Serving</td>
+<td>serving.ServingModelManager</td>
+<td>serving.ScalaServingModelManager</td>
+</tr>
+</tbody>
+</table>
+<p>com.cloudera.oryx.api也包含大量的关键的类和接口，举个例子，<a href="https://github.com/OryxProject/oryx/blob/master/framework/oryx-api/src/main/java/com/cloudera/oryx/api/serving/OryxResource.java" target="_blank" rel="external">serving.OryxResource</a>  是一个入口，用来编译自定义的JAX-RS 端点，但是不需要使用。</p>
+<h3 id="u7F16_u8BD1_u7A0B_u5E8F"><a href="#u7F16_u8BD1_u7A0B_u5E8F" class="headerlink" title="编译程序"></a>编译程序</h3><p>进入你的程序的这些接口/特性，添加一个com.cloudera.oryx:oryx-api的依赖，scope字段需要填写“provided”，在Maven中，需要添加如下依赖：<br>In Maven, this would mean adding a dependency like:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">dependencies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">groupId</span>&gt;</span>com.cloudera.oryx<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>oryx-api<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="title">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="title">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这些artifacts被放在了<a href="https://repository.cloudera.com/artifactory/cloudera-repos/" target="_blank" rel="external">Cloudera</a>这个分支下，因此在编译的时候需要引用这个分支：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">repositories</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">repository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">id</span>&gt;</span>cloudera<span class="tag">&lt;/<span class="title">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">url</span>&gt;</span>https://repository.cloudera.com/artifactory/cloudera-repos/<span class="tag">&lt;/<span class="title">url</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">repository</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">repositories</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>一个最小的实例可以访问<a href="https://github.com/OryxProject/oryx/tree/master/app/example" target="_blank" rel="external">example/</a> 这里。</p>
+<p>”Word Count” 这个程序是按照空格将行分割成独立的单词，然后统计出排重后的单词出现的次数。</p>
+<p>编译代码后生成一个JAR文件，包含了程序实现和所有第三方的diam，如果使用Maven，可以通过mvn package命令。</p>
+<h3 id="u7F16_u8BD1_Word_Count__u4F8B_u5B50"><a href="#u7F16_u8BD1_Word_Count__u4F8B_u5B50" class="headerlink" title="编译 Word Count 例子"></a>编译 Word Count 例子</h3><p>举例：编译样例代码如下：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="keyword">app</span>/example</span><br><span class="line">mvn package</span><br></pre></td></tr></table></figure></p>
+<p>生成的JAR包在target/example-2.1.2.jar。</p>
+<h3 id="u81EA_u5B9A_u4E49Oryx_u7A0B_u5E8F"><a href="#u81EA_u5B9A_u4E49Oryx_u7A0B_u5E8F" class="headerlink" title="自定义Oryx程序"></a>自定义Oryx程序</h3><p>当发布一个源自Oryx的预打包程序，在某些情况下，有可能会提供一个扩展的实现，从而可以自定义他们的行为。举例，ALS推荐程序暴露了com.cloudera.oryx.app.als.RescorerProvider接口。这些特定程序API类可以在模块oryx-app-api中找到。这些接口的实现也可以在独立模式下被编译，打包，部署。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">dependencies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">groupId</span>&gt;</span>com.cloudera.oryx<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>oryx-app-api<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="title">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="title">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u53D1_u5E03_u7A0B_u5E8F"><a href="#u53D1_u5E03_u7A0B_u5E8F" class="headerlink" title="发布程序"></a>发布程序</h2><p>拷贝生成的JAR文件–myapp.jar，放到需要执行的Oryx 二进制JAR文件相同的目录下。</p>
+<p>修改Oryx的配置文件，以便于引用自定义的批处理，实时计算和服务层的实现。<br>当执行批处理，实时计算和服务层时，需要添加–app-jar myapp.jar到oryx-run.sh命令行中。</p>
+<h3 id="u53D1_u5E03_Word_Count__u4F8B_u5B50"><a href="#u53D1_u5E03_Word_Count__u4F8B_u5B50" class="headerlink" title="发布 Word Count 例子"></a>发布 Word Count 例子</h3><p>举例，如果已经编译好了上述的“word count”的程序，你可以执行这个程序，直接引用wordcount-example.conf这个配置文件：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./oryx-<span class="keyword">run</span>.<span class="keyword">sh</span> batch --<span class="keyword">conf</span> wordcount-example.<span class="keyword">conf</span> --<span class="keyword">app</span>-jar example-2.1.2.jar</span><br></pre></td></tr></table></figure>
+<p>… 对于实时计算和服务层也是同样的。</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -X <span class="type">POST</span> http://.../add/foo%<span class="number">20</span>bar%<span class="number">20</span>baz</span><br><span class="line">...</span><br><span class="line">curl http://.../<span class="keyword">distinct</span></span><br><span class="line">&#123;<span class="string">"foo"</span>:<span class="number">2</span>,<span class="string">"bar"</span>:<span class="number">2</span>,<span class="string">"baz"</span>:<span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>配置文件本身已经配置好了主机名称和<a href="http://www.cloudera.com/content/www/en-us/downloads/quickstart_vms.html" target="_blank" rel="external">Cloudera Quickstart VM</a>的参数。事实上，这个例子可以作为一个集群配置的例子：<a href="http://oryx.io/docs/admin.html#cloudera_quickstart_vm_setup" target="_blank" rel="external">Cloudera Quickstart VM Setup</a>。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+    
+      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+    
+      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+    
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+    
+      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+    
+      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+    
+      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+    
+      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Oryx2 终端用户文档]]></title>
