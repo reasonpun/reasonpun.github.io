@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-04-06T11:04:45.000Z</updated>
+  <updated>2016-04-06T11:10:33.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://reasonpun.com/2016/04/06/Oryx2-developer-doc/"/>
     <id>http://reasonpun.com/2016/04/06/Oryx2-developer-doc/</id>
     <published>2016-04-06T09:58:20.000Z</published>
-    <updated>2016-04-06T11:04:45.000Z</updated>
+    <updated>2016-04-06T11:10:33.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -87,7 +87,7 @@
 </table>
 <p>支持的模型，比如：<a href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-common" target="_blank" rel="external">oryx-common</a>, <a href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-common" target="_blank" rel="external">oryx-app-common</a>, <a href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-api" target="_blank" rel="external">oryx-api</a>, and <a href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-api" target="_blank" rel="external">oryx-app-api</a> 没有在这里列出了。</p>
 <h2 id="u5B9E_u73B0_u4E00_u4E2AOryx__u7A0B_u5E8F"><a href="#u5B9E_u73B0_u4E00_u4E2AOryx__u7A0B_u5E8F" class="headerlink" title="实现一个Oryx 程序"></a>实现一个Oryx 程序</h2><p>Oryx 中的“app 层”，是实现了推荐的真实的批处理，实时，服务层逻辑，集群和分类。然而，任何实现都需要使用到Oryx。他们也可以混合和匹配。举个例子，你可以重新实现ALS-related推荐的批处理层，但是仍然使用原来的ALS的服务层和实时计算层。</p>
-<h3 id="u521B_u5EFA_u4E00_u4E2A_u7A0B_u5E8F"><a href="#u521B_u5EFA_u4E00_u4E2A_u7A0B_u5E8F" class="headerlink" title="创建一个程序"></a>创建一个程序</h3><p>In each case, creating a custom Batch, Speed or Serving Layer app amounts to implementing a few key Java interfaces or Scala traits in com.cloudera.oryx.api. These interfaces/traits are found in the oryx-api module within the project.<br>在每个例子中，创建一个自定义的批处理层，实时计算层或者服务层的程序都需要实现com.cloudera.oryx.api中的几个关键的Java接口或者Scala的特性。这些接口/特性可以在项目的oryx-api模型中找到。</p>
+<h3 id="u521B_u5EFA_u4E00_u4E2A_u7A0B_u5E8F"><a href="#u521B_u5EFA_u4E00_u4E2A_u7A0B_u5E8F" class="headerlink" title="创建一个程序"></a>创建一个程序</h3><p>在每个例子中，创建一个自定义的批处理层，实时计算层或者服务层的程序都需要实现com.cloudera.oryx.api中的几个关键的Java接口或者Scala的特性。这些接口/特性可以在项目的oryx-api模型中找到。</p>
 <table>
 <thead>
 <tr>
