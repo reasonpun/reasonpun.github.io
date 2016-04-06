@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-03-15T07:19:35.000Z</updated>
+  <updated>2016-04-06T09:39:54.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -13,6 +13,117 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Oryx2 终端用户文档]]></title>
+    <link href="http://reasonpun.com/2016/04/06/Oryx2-%E7%BB%88%E7%AB%AF%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/"/>
+    <id>http://reasonpun.com/2016/04/06/Oryx2-终端用户文档/</id>
+    <published>2016-04-06T07:18:22.000Z</published>
+    <updated>2016-04-06T09:39:54.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<h3 id="u8FD0_u884C"><a href="#u8FD0_u884C" class="headerlink" title="运行"></a>运行</h3><p>注意：你必须已经按照管理员文档中提到的配置好了你的集群。</p>
+<p>下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。</p>
+<p>或者，源码编译他们并从deploy/bin/获取最新的脚本。</p>
+<p>拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。</p>
+<p>创建一个配置文件，可以简单的拷贝例子中的conf/als-example.conf。并修改host名称，端口和目录。实际上，选择hdfs上已经存在的数据和模型目录便于用户运行Oryx 二进制命令。</p>
+<p>拷贝该配置文件，并重命名为oryx.conf，将他放到每个机器的上二进制命令和脚本相同的目录下。</p>
+<p>执行如下命令开始这3个层的运行：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./oryx-<span class="keyword">run</span>.<span class="keyword">sh</span> batch</span><br><span class="line">./oryx-<span class="keyword">run</span>.<span class="keyword">sh</span> speed</span><br><span class="line">./oryx-<span class="keyword">run</span>.<span class="keyword">sh</span> serving</span><br></pre></td></tr></table></figure>
+<p>参数–layer-jar your-layer.jar and –conf your-config.conf可以指定某一层特定位置的jar文件和配置文件。也可以使用–jvm-args直接传递更多的参数给Spark驱动程序，比如：–jvm-args=”-Dkey=value”</p>
+<p>这都不需要在同一台机器上，但是也不一定（如果配置特殊指定批处理和实时处理层，服务层API不同的端口）。服务层可以运行在多个机器上。</p>
+<p>举个例子，批处理层SparkUI运行在启动脚本所在的机器的4040端口（除非通过配置更改）。一个简单的基于web端的控制台的服务层默认是运行在8080端口的。</p>
+<p>完美！</p>
+<h3 id="u5C1D_u8BD5_u4E0BALS_u7684_u4F8B_u5B50_u5427"><a href="#u5C1D_u8BD5_u4E0BALS_u7684_u4F8B_u5B50_u5427" class="headerlink" title="尝试下ALS的例子吧"></a>尝试下ALS的例子吧</h3><p>如果你已经使用了上述的配置，你就已经可以运行一个基于ALS的推荐程序实例。<br>自获取GroupLens 100K的数据集，并且找到u.data文件，这个文件的内容需要转换成csv格式：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">tr</span> <span class="string">'\t'</span> <span class="string">','</span> &lt; u<span class="class">.data</span> &gt; data.csv</span><br></pre></td></tr></table></figure>
+<p>将这些数据放入服务层，使用本地的命令行工具，如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --quiet --post-file data<span class="class">.csv</span> --output-document - \</span><br><span class="line">  --<span class="tag">header</span> <span class="string">"Content-Type: text/csv"</span> \</span><br><span class="line">  http:<span class="comment">//your-serving-layer:8080/ingest</span></span><br></pre></td></tr></table></figure>
+<p>如果你使用tail命令查看输入的内容，可以看到如下数据：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">196</span>,<span class="number">242</span>,<span class="number">3.0</span>,<span class="number">881250949186</span></span><br><span class="line"><span class="number">196</span>,<span class="number">242</span>,<span class="number">3.0</span>,<span class="number">881250949</span></span><br><span class="line"><span class="number">186</span>,<span class="number">302</span>,<span class="number">3.0</span>,<span class="number">891717742</span></span><br><span class="line"><span class="number">22</span>,<span class="number">377</span>,<span class="number">1.0</span>,<span class="number">878887116</span></span><br><span class="line"><span class="number">244</span>,<span class="number">51</span>,<span class="number">2.0</span>,<span class="number">880606923</span></span><br><span class="line"><span class="number">166</span>,<span class="number">346</span>,<span class="number">1.0</span>,<span class="number">886397596</span></span><br><span class="line"><span class="number">298</span>,<span class="number">474</span>,<span class="number">4.0</span>,<span class="number">884182806</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>很快的，你也可以看到批处理层已经开始触发一个新的计算了。这个例子被配置为5分钟一个周期。</p>
+<p>数据首先会被写入HDFS。默认配置被写入hdfs:///user/example/Oryx/data/目录下。且目录以时间戳命名，每一部分都包含Hadoop part-r-* 文件，都是以文本的序列话文件的方式存储。虽然不是纯文本，打印出来的话，还是有一部分是可以识别的，因为这其实真的是文本。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SEQorg<span class="class">.apache</span><span class="class">.hadoop</span><span class="class">.io</span><span class="class">.Text</span>org<span class="class">.apache</span><span class="class">.hadoop</span><span class="class">.io</span><span class="class">.Text</span>����^�]�XسN�<span class="number">22</span>,<span class="number">377</span>,<span class="number">1.0</span>,<span class="number">878887116</span><span class="number">62</span>...</span><br></pre></td></tr></table></figure>
+<p>模型计算开始。这些批处理层会以大量的新的分布式的作业形式展现。在这个例子中，Spark UI可以通过<a href="http://your-batch-layer:4040访问。" target="_blank" rel="external">http://your-batch-layer:4040访问。</a></p>
+<p>模型计算是非常快的，执行完毕以后会合并PMML和支持数据文件并存储到目录hdfs:///user/example/Oryx/model/下。举个例子，model.pmml 的内容如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">PMML</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.dmg.org/PMML-4_2"</span> <span class="attribute">version</span>=<span class="value">"4.2.1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">Application</span> <span class="attribute">name</span>=<span class="value">"Oryx"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">Timestamp</span>&gt;</span>2014-12-18T04:48:54-0800<span class="tag">&lt;/<span class="title">Timestamp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">Header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Extension</span> <span class="attribute">name</span>=<span class="value">"X"</span> <span class="attribute">value</span>=<span class="value">"X/"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Extension</span> <span class="attribute">name</span>=<span class="value">"Y"</span> <span class="attribute">value</span>=<span class="value">"Y/"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Extension</span> <span class="attribute">name</span>=<span class="value">"features"</span> <span class="attribute">value</span>=<span class="value">"10"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Extension</span> <span class="attribute">name</span>=<span class="value">"lambda"</span> <span class="attribute">value</span>=<span class="value">"0.001"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Extension</span> <span class="attribute">name</span>=<span class="value">"implicit"</span> <span class="attribute">value</span>=<span class="value">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Extension</span> <span class="attribute">name</span>=<span class="value">"alpha"</span> <span class="attribute">value</span>=<span class="value">"1.0"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Extension</span> <span class="attribute">name</span>=<span class="value">"XIDs"</span>&gt;</span>56 168 222 343 397 ...</span><br><span class="line">     ...</span><br></pre></td></tr></table></figure>
+<p>The X/ and Y/ subdirectories next to it contain feature vectors, like:</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[56,[<span class="number">0.57462828</span><span class="number">34154238</span>,-<span class="number">0.088966141</span><span class="number">31333057</span>,-<span class="number">0.029456222</span><span class="number">765775263</span>,</span><br><span class="line">  <span class="number">0.603982121</span><span class="number">9690552,0</span>.<span class="number">149790181477</span>4658,-<span class="number">0.01865431</span><span class="number">2114339863</span>,</span><br><span class="line">  -<span class="number">0.37342063</span><span class="number">488340266</span>,-<span class="number">0.237076884</span><span class="number">3521807,1</span>.<span class="number">148260034028</span>485,</span><br><span class="line">  <span class="number">1.06456436</span><span class="number">56769153</span>]]</span><br><span class="line">[168,[<span class="number">0.87227698</span><span class="number">82777296,0</span>.<span class="number">43704169430</span><span class="number">31704,0.27</span><span class="number">40204446154</span>9885,</span><br><span class="line">  -<span class="number">0.031252701</span><span class="number">117490456</span>,-<span class="number">0.724138575</span><span class="number">3098256,0</span>.<span class="number">02607908100</span><span class="number">2582338</span>,</span><br><span class="line">  <span class="number">0.42050973</span><span class="number">702065714</span>,<span class="number">0.277669233</span><span class="number">96205817,0</span>.<span class="number">6241033215856</span>671,</span><br><span class="line">  -<span class="number">0.48530795</span><span class="number">198811266</span>]]</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>如果使用tail命令查看更新的内容。<br>这些数据会很快放入服务层，此时访问/ready会返回200 OK。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget --quiet --output-document - --server-response \</span><br><span class="line">  http:<span class="comment">//your-serving-layer:8080/ready</span></span><br><span class="line">...</span><br><span class="line">  HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</span><br><span class="line">  Content-Length: <span class="number">0</span></span><br><span class="line">  Date: Tue, <span class="number">1</span> Sep <span class="number">2015</span> <span class="number">13</span>:<span class="number">26</span>:<span class="number">53</span> GMT</span><br><span class="line">  Server: Oryx</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wget --quiet --output-document -  http:<span class="comment">//your-serving-layer:8080/recommend/17</span></span><br><span class="line">...</span><br><span class="line"><span class="number">50</span>,<span class="number">0.7749542842056966</span></span><br><span class="line"><span class="number">275</span>,<span class="number">0.7373013861581563</span></span><br><span class="line"><span class="number">258</span>,<span class="number">0.731818692628511</span></span><br><span class="line"><span class="number">181</span>,<span class="number">0.7049967175706345</span></span><br><span class="line"><span class="number">127</span>,<span class="number">0.704518989947498</span></span><br><span class="line"><span class="number">121</span>,<span class="number">0.7014631029793741</span></span><br><span class="line"><span class="number">15</span>,<span class="number">0.6954683387287907</span></span><br><span class="line"><span class="number">288</span>,<span class="number">0.6774889711024022</span></span><br><span class="line"><span class="number">25</span>,<span class="number">0.6663619887033064</span></span><br><span class="line"><span class="number">285</span>,<span class="number">0.6398968471343595</span></span><br></pre></td></tr></table></figure>
+<p>恭喜！实时推荐系统搭建完毕！可以通过Ctrl-C关闭。</p>
+<h3 id="API_u624B_u518C"><a href="#API_u624B_u518C" class="headerlink" title="API手册"></a>API手册</h3><p>Oryx 支持多种端到端的程序，包括服务层的REST 接口。</p>
+<h3 id="u534F_u540C_u8FC7_u6EE4_u548C_u63A8_u8350"><a href="#u534F_u540C_u8FC7_u6EE4_u548C_u63A8_u8350" class="headerlink" title="协同过滤和推荐"></a>协同过滤和推荐</h3><ul>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Recommend.html" target="_blank" rel="external">/recommend</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToMany.html" target="_blank" rel="external">/recommendToMany</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToAnonymous.html" target="_blank" rel="external">/recommendToAnonymous</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendWithContext.html" target="_blank" rel="external">/recommendWithContext</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Similarity.html" target="_blank" rel="external">/similarity</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/SimilarityToItem.html" target="_blank" rel="external">/similarityToItem</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/KnownItems.html" target="_blank" rel="external">/knownItems</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Estimate.html" target="_blank" rel="external">/estimate</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/EstimateForAnonymous.html" target="_blank" rel="external">/estimateForAnonymous</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Because.html" target="_blank" rel="external">/because</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostSurprising.html" target="_blank" rel="external">/mostSurprising</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/PopularRepresentativeItems.html" target="_blank" rel="external">/popularRepresentativeItems</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html" target="_blank" rel="external">/mostActiveUsers</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostPopularItems.html" target="_blank" rel="external">/mostPopularItems</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html" target="_blank" rel="external">/mostActiveUsers</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/AllItemIDs.html" target="_blank" rel="external">/item/allIDs</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ready.html" target="_blank" rel="external">/ready</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Preference.html" target="_blank" rel="external">/pref</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ingest.html" target="_blank" rel="external">/ingest</a></li>
+</ul>
+<h3 id="u5206_u7C7B_/__u56DE_u5F52"><a href="#u5206_u7C7B_/__u56DE_u5F52" class="headerlink" title="分类 / 回归"></a>分类 / 回归</h3><ul>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Predict.html" target="_blank" rel="external">/predict</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/ClassificationDistribution.html" target="_blank" rel="external">/classificationDistribution</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Ready.html" target="_blank" rel="external">/ready</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Train.html" target="_blank" rel="external">/train</a></li>
+</ul>
+<h3 id="u805A_u7C7B"><a href="#u805A_u7C7B" class="headerlink" title="聚类"></a>聚类</h3><ul>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Assign.html" target="_blank" rel="external">/assign</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/DistanceToNearest.html" target="_blank" rel="external">/distanceToNearest</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Ready.html" target="_blank" rel="external">/ready</a></li>
+<li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Add.html" target="_blank" rel="external">/add</a></li>
+</ul>
+<h3 id="u914D_u7F6E"><a href="#u914D_u7F6E" class="headerlink" title="配置"></a>配置</h3><ul>
+<li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/als-example.conf" target="_blank" rel="external">app/conf/als-example.conf</a></li>
+<li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/kmeans-example.conf" target="_blank" rel="external">app/conf/kmeans-example.conf</a></li>
+<li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/rdf-example.conf" target="_blank" rel="external">app/conf/rdf-example.conf</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+    
+      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+    
+      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+    
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+    
+      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+    
+      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+    
+      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+    
+      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Java关键字volatile]]></title>
