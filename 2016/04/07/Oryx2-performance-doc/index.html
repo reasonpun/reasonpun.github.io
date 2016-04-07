@@ -79,14 +79,108 @@
 </li>
 </ul>
 <p><em>With LSH (sample rate = 0.3)</em></p>
-<p>|Features|Items (M)|Throughput (qps)|Latency (ms)|<br>|50|1|437|7|<br>|250|1|151|13|<br>|50|5|84|24|<br>|250|5|36|56|<br>|50|20|14|69|<br>|250|20|6|162|</p>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>Items (M)</th>
+<th>Throughput (qps)</th>
+<th>Latency (ms)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>1</td>
+<td>437</td>
+<td>7</td>
+</tr>
+<tr>
+<td>250</td>
+<td>1</td>
+<td>151</td>
+<td>13</td>
+</tr>
+<tr>
+<td>50</td>
+<td>5</td>
+<td>84</td>
+<td>24</td>
+</tr>
+<tr>
+<td>250</td>
+<td>5</td>
+<td>36</td>
+<td>56</td>
+</tr>
+<tr>
+<td>50</td>
+<td>20</td>
+<td>14</td>
+<td>69</td>
+</tr>
+<tr>
+<td>250</td>
+<td>20</td>
+<td>6</td>
+<td>162</td>
+</tr>
+</tbody>
+</table>
 <p><em>Without LSH (sample rate = 1.0)</em></p>
-<p>|Features|Items (M)|Throughput (qps)|Latency (ms)|<br>|50|1|74|27|<br>|250|1|23|44|<br>|50|5|13|80|<br>|250|5|5|191|<br>|50|20|4|282|<br>|250|20|1|708|</p>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>Items (M)</th>
+<th>Throughput (qps)</th>
+<th>Latency (ms)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>1</td>
+<td>74</td>
+<td>27</td>
+</tr>
+<tr>
+<td>250</td>
+<td>1</td>
+<td>23</td>
+<td>44</td>
+</tr>
+<tr>
+<td>50</td>
+<td>5</td>
+<td>13</td>
+<td>80</td>
+</tr>
+<tr>
+<td>250</td>
+<td>5</td>
+<td>5</td>
+<td>191</td>
+</tr>
+<tr>
+<td>50</td>
+<td>20</td>
+<td>4</td>
+<td>282</td>
+</tr>
+<tr>
+<td>250</td>
+<td>20</td>
+<td>1</td>
+<td>708</td>
+</tr>
+</tbody>
+</table>
 <h3 id="JVM__u4F18_u5316-1"><a href="#JVM__u4F18_u5316-1" class="headerlink" title="JVM 优化"></a>JVM 优化</h3><p>机器上运行（多个）服务层，使用越多的可用的核，意味着可以提供更多的并发请求处理能力。在ALS中，一些请求，比如/recommend 可以在一个请求中通过多核计算完成。</p>
 <p>内存的需求主要是由加载进内存的模型的需求控制的。对于大的模型，比如ALS，这就意味着需要确保服务层有足够的内存以保证不会导致GC崩溃。查看oryx.serving.memory。</p>
 <p>-XX:+UseG1GC remains a good garbage collection setting to supply with –jvm-args. In Java 8, -XX:+UseStringDeduplication can reduce memory requirements by about 20%.</p>
-<h3 id="u5B9E_u65F6_u8BA1_u7B97_u5C42"><a href="#u5B9E_u65F6_u8BA1_u7B97_u5C42" class="headerlink" title="实时计算层"></a>实时计算层</h3><p>The Speed layer driver process is as memory-hungry as the Serving layer since it also loads a model into memory. The memory of the driver process, controlled by oryx.speed.streaming.driver-memory, may need to be set like the Serving layer memory, and may benefit from the same JVM flags.</p>
-<p>It is also a Spark Streaming job and so needs executors configures like the Batch layer. However, there is generally much less processing done by the Speed layer’s executors, but at a much lower latency requirement.</p>
+<h3 id="u5B9E_u65F6_u8BA1_u7B97_u5C42"><a href="#u5B9E_u65F6_u8BA1_u7B97_u5C42" class="headerlink" title="实时计算层"></a>实时计算层</h3><p>实时计算层驱动进程类似服务层那样也是需要大量内存的，因为他也是需要加载一个模型到内存中的。驱动进程的内存是通过oryx.speed.streaming.driver-memory控制的，也需要和服务层内存一样设置，并且也需要JVM的一些flags支持。</p>
+<p>这也是一个Spark Streaming 作业，也需要想批处理层那样配置executors。一般情况下，需要更少的处理和更低的时间延迟。</p>
 <p>Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.</p>
 </div><div class="tags"><a href="/tags/Admin/">Admin</a><a href="/tags/Hadoop/">Hadoop</a><a href="/tags/Oryx2/">Oryx2</a><a href="/tags/Spark/">Spark</a><a href="/tags/Spark-Streaming/">Spark-Streaming</a><a href="/tags/documentation/">documentation</a></div><div class="post-nav"><a href="/2016/04/06/Oryx2-developer-doc/" class="next">Oryx2 开发者文档<i class="icon-next"></i></a></div><div id="disqus_thread"><script>var disqus_shortname = 'reasonpun';
 var disqus_identifier = '2016/04/07/Oryx2-performance-doc/';
