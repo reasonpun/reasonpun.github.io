@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-04-07T07:01:19.000Z</updated>
+  <updated>2016-04-07T07:03:35.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Oryx2 performance doc]]></title>
+    <title><![CDATA[Oryx2 性能优化 doc]]></title>
     <link href="http://reasonpun.com/2016/04/07/Oryx2-performance-doc/"/>
     <id>http://reasonpun.com/2016/04/07/Oryx2-performance-doc/</id>
     <published>2016-04-07T01:56:28.000Z</published>
-    <updated>2016-04-07T07:01:19.000Z</updated>
+    <updated>2016-04-07T07:03:35.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
