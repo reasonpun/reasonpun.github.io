@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-04-06T11:10:33.000Z</updated>
+  <updated>2016-04-07T07:01:19.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -13,6 +13,128 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Oryx2 performance doc]]></title>
+    <link href="http://reasonpun.com/2016/04/07/Oryx2-performance-doc/"/>
+    <id>http://reasonpun.com/2016/04/07/Oryx2-performance-doc/</id>
+    <published>2016-04-07T01:56:28.000Z</published>
+    <updated>2016-04-07T07:01:19.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<p>这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。</p>
+<h2 id="u786C_u4EF6_u548C_u96C6_u7FA4_u8BBE_u8BA1"><a href="#u786C_u4EF6_u548C_u96C6_u7FA4_u8BBE_u8BA1" class="headerlink" title="硬件和集群设计"></a>硬件和集群设计</h2><p>一般情况下，对硬件或者集群没有特别的要求。集群资源的需求主要取决于基于Spark的作业，这些往往是内存密集型和CPU密集型的，但是一般不会是I/O绑定的。如果数据的采集率非常的高，Kafka可能需要一些特殊的考虑。在这两种情况下，针对其他任何的Kafka或者Spark作业并没有不同的标准。</p>
+<h3 id="u6570_u636E_u4F20_u8F93"><a href="#u6570_u636E_u4F20_u8F93" class="headerlink" title="数据传输"></a>数据传输</h3><p>因为Kafka是底层传输数据的，存储要求的采集和存放数据对于Kafka也就是这样的。查看<a href="http://kafka.apache.org/performance.html" target="_blank" rel="external">Kafka 性能</a>中提到的内容。一般情况下，Kafka并不会接近瓶颈，也能够像其他Kafka的使用一样调整资源占用大小。</p>
+<h3 id="u6279_u5904_u7406_u5C42"><a href="#u6279_u5904_u7406_u5C42" class="headerlink" title="批处理层"></a>批处理层</h3><p>批处理层独特的地方是模型的构建, and the element that is of most interest to benchmark are likely the model building processes implemented in the app tier, on top of MLlib. Here again, the resources required to build a model over a certain amount of data are just that of the underlying MLlib implementations of ALS, k-means and decision forests.</p>
+<p>MLlib的任何性能优化或者是基准测试都适用于这些基于MLlib预制的实现的批处理层，这对于Oryx也是一样的。</p>
+<h3 id="JVM__u4F18_u5316"><a href="#JVM__u4F18_u5316" class="headerlink" title="JVM 优化"></a>JVM 优化</h3><p>Choosing the number of Spark executors, cores and memory is a topic in its own right.</p>
+<p>很自然的，更多的executors意味着更多的核心和内存。但是数量是不能超多集群上机器的总数量的；请查看：oryx.batch.streaming.num-executors。</p>
+<p>更多的核，意味着可能会有更多的并发进程。在典型的模型构建进程中，如果能达到任务总数的三分之一或者2分之一的话，这将是非常有用的。你可以观察到任务的数量，以及Spark UI中批处理层固有的并发情况。在这数量之下，核数再多也无法增加更多的并发了。少一些是可以的，无非就是增加了点运行时间。当然，在批处理的时间间隔内，充足的核数可以保证批处理的顺利完成。核的数量可以通过oryx.batch.streaming.executor-cores进行配置。</p>
+<p>如果你的作业发生了内存溢出，驱动器和executors可能需要更多的内存。如果你注意到在批处理层的”存储”标签页中并不是100%的RDD被缓存住了，那么更多的内存可能会有所帮助。查看：oryx.batch.streaming.executor-memory。</p>
+<p>oryx-run.sh脚本的–jvm-args参数是用来为所有的JVM进程设置内存参数的。举个例子，通过设置 -XX:+UseG1GC ，会达到一个比较合理的效果。</p>
+<h3 id="u670D_u52A1_u5C42"><a href="#u670D_u52A1_u5C42" class="headerlink" title="服务层"></a>服务层</h3><p>REST API 后端服务器是Tomcat。配置文件是没有暴露给用户的，但是对于他的负载已经做了合理的调整。Tomcat容器本身开销很小，不需要担心性能问题。</p>
+<p>最可能感兴趣的是项目中提供的关于CPU密集型程序实现的性能问题，而不是框架本身。</p>
+<h3 id="u57FA_u51C6_u6D4B_u8BD5_3A__u4EA4_u66FF_u6700_u5C0F_u4E8C_u4E58_u6CD5_u63A8_u8350"><a href="#u57FA_u51C6_u6D4B_u8BD5_3A__u4EA4_u66FF_u6700_u5C0F_u4E8C_u4E58_u6CD5_u63A8_u8350" class="headerlink" title="基准测试: 交替最小二乘法推荐"></a>基准测试: 交替最小二乘法推荐</h3><p>由于ALS实现的程序的服务层的大多数的操作是，会在内存中实时的计算一个非常大的矩阵，所以这个程序是最具有挑战性的了。大概其的规则如下：</p>
+<p>如果需要运行类似的基准测试，可以使用LoadBenchmark，可以按照如下的配置：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mvn -DskipTests clean install</span><br><span class="line">cd app/oryx-app-serving</span><br><span class="line">...</span><br><span class="line">mvn -Pbenchmark \</span><br><span class="line"> -Doryx<span class="class">.test</span><span class="class">.als</span><span class="class">.benchmark</span><span class="class">.users</span>=<span class="number">1000000</span> \</span><br><span class="line"> -Doryx<span class="class">.test</span><span class="class">.als</span><span class="class">.benchmark</span><span class="class">.items</span>=<span class="number">5000000</span> \</span><br><span class="line"> -Doryx<span class="class">.test</span><span class="class">.als</span><span class="class">.benchmark</span><span class="class">.features</span>=<span class="number">250</span> \</span><br><span class="line"> -Doryx<span class="class">.test</span><span class="class">.als</span><span class="class">.benchmark</span><span class="class">.lshSampleRate</span>=<span class="number">0.3</span> \</span><br><span class="line"> -Doryx<span class="class">.test</span><span class="class">.als</span><span class="class">.benchmark</span><span class="class">.workers</span>=<span class="number">2</span> \</span><br><span class="line"> integration-test</span><br></pre></td></tr></table></figure>
+<h3 id="u5185_u5B58"><a href="#u5185_u5B58" class="headerlink" title="内存"></a>内存</h3><ul>
+<li>内存需求是成线性的：(users + items) x features</li>
+<li>-XX:+UseStringDeduplication 在 Java 8中是非常有用的 (reflected below)</li>
+<li><p>At scale, 1M users or items ~= 500-1000M of heap required, depending on features</p>
+<p>Example steady-state heap usage (Java 8):</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>Users+Items (M)</th>
+<th>Heap (MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>2</td>
+<td>1400</td>
+</tr>
+<tr>
+<td>50</td>
+<td>6</td>
+<td>2600</td>
+</tr>
+<tr>
+<td>50</td>
+<td>21</td>
+<td>7500</td>
+</tr>
+<tr>
+<td>250</td>
+<td>2</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>250</td>
+<td>6</td>
+<td>7500</td>
+</tr>
+<tr>
+<td>250</td>
+<td>21</td>
+<td>25800</td>
+</tr>
+</tbody>
+</table>
+<h3 id="u8BF7_u6C42_u5EF6_u8FDF_uFF0C_u541E_u5410_u91CF"><a href="#u8BF7_u6C42_u5EF6_u8FDF_uFF0C_u541E_u5410_u91CF" class="headerlink" title="请求延迟，吞吐量"></a>请求延迟，吞吐量</h3><ul>
+<li>Recommend and similarity computation time scales linearly with items x features</li>
+<li>A single request is parallelized across CPUs; max throughput and minimum latency is already achieved at about 1-2 concurrent requests</li>
+<li><p>Locality sensitive hashing decreases processing time roughly linearly; 0.33 ~= 1/0.33 ~= 3x faster (setting too low adversely affects result quality)</p>
+<p>Below are representative throughput / latency measurements for the /recommend endpoint using<br>a 32-core Intel Xeon 2.3GHz (Haswell), OpenJDK 8 and flags -XX:+UseG1GC -XX:+UseStringDeduplication. Heap size was comfortably large enough for the data set in each case. The tests were run with 1-3 concurrent request at a time, as necessary to achieve near-full CPU utilization.</p>
+</li>
+</ul>
+<p><em>With LSH (sample rate = 0.3)</em></p>
+<p>|Features|Items (M)|Throughput (qps)|Latency (ms)|<br>|50|1|437|7|<br>|250|1|151|13|<br>|50|5|84|24|<br>|250|5|36|56|<br>|50|20|14|69|<br>|250|20|6|162|</p>
+<p><em>Without LSH (sample rate = 1.0)</em></p>
+<p>|Features|Items (M)|Throughput (qps)|Latency (ms)|<br>|50|1|74|27|<br>|250|1|23|44|<br>|50|5|13|80|<br>|250|5|5|191|<br>|50|20|4|282|<br>|250|20|1|708|</p>
+<h3 id="JVM__u4F18_u5316-1"><a href="#JVM__u4F18_u5316-1" class="headerlink" title="JVM 优化"></a>JVM 优化</h3><p>机器上运行（多个）服务层，使用越多的可用的核，意味着可以提供更多的并发请求处理能力。在ALS中，一些请求，比如/recommend 可以在一个请求中通过多核计算完成。</p>
+<p>内存的需求主要是由加载进内存的模型的需求控制的。对于大的模型，比如ALS，这就意味着需要确保服务层有足够的内存以保证不会导致GC崩溃。查看oryx.serving.memory。</p>
+<p>-XX:+UseG1GC remains a good garbage collection setting to supply with –jvm-args. In Java 8, -XX:+UseStringDeduplication can reduce memory requirements by about 20%.</p>
+<h3 id="u5B9E_u65F6_u8BA1_u7B97_u5C42"><a href="#u5B9E_u65F6_u8BA1_u7B97_u5C42" class="headerlink" title="实时计算层"></a>实时计算层</h3><p>The Speed layer driver process is as memory-hungry as the Serving layer since it also loads a model into memory. The memory of the driver process, controlled by oryx.speed.streaming.driver-memory, may need to be set like the Serving layer memory, and may benefit from the same JVM flags.</p>
+<p>It is also a Spark Streaming job and so needs executors configures like the Batch layer. However, there is generally much less processing done by the Speed layer’s executors, but at a much lower latency requirement.</p>
+<p>Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+    
+      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+    
+      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+    
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+    
+      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+    
+      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+    
+      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+    
+      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Oryx2 开发者文档]]></title>
