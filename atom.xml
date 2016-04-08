@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-04-08T10:53:19.000Z</updated>
+  <updated>2016-04-08T11:00:02.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[搭建Oryx环境]]></title>
+    <title><![CDATA[玩转 Oryx2 （一）]]></title>
     <link href="http://reasonpun.com/2016/04/08/set-up-oryx-env/"/>
     <id>http://reasonpun.com/2016/04/08/set-up-oryx-env/</id>
     <published>2016-04-08T04:08:24.000Z</published>
-    <updated>2016-04-08T10:53:19.000Z</updated>
+    <updated>2016-04-08T11:00:02.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -96,6 +96,10 @@
 <p>咱们下一篇再找找原因吧。</p>
 <h2 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
 <li><a href="http://oryx.io/docs/admin.html" target="_blank" rel="external">http://oryx.io/docs/admin.html</a></li>
+<li><a href="http://oryx.io/docs/endusers.html" target="_blank" rel="external">http://oryx.io/docs/endusers.html</a></li>
+<li><a href="http://oryx.io/docs/developer.html" target="_blank" rel="external">http://oryx.io/docs/developer.html</a></li>
+<li><a href="http://oryx.io/docs/performance.html" target="_blank" rel="external">http://oryx.io/docs/performance.html</a></li>
+<li><a href="http://oryx.io/apidocs/index.html" target="_blank" rel="external">http://oryx.io/apidocs/index.html</a></li>
 </ul>
 ]]></content>
     <summary type="html">
