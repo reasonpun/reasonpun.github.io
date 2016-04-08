@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-04-07T07:12:41.000Z</updated>
+  <updated>2016-04-08T04:13:24.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -13,6 +13,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[搭建Oryx环境]]></title>
+    <link href="http://reasonpun.com/2016/04/08/set-up-oryx-env/"/>
+    <id>http://reasonpun.com/2016/04/08/set-up-oryx-env/</id>
+    <published>2016-04-08T04:08:24.000Z</published>
+    <updated>2016-04-08T04:13:24.000Z</updated>
+    <content type="html"><![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+<h2 id="u51C6_u5907"><a href="#u51C6_u5907" class="headerlink" title="准备"></a>准备</h2><h2 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="http://oryx.io/docs/admin.html" target="_blank" rel="external">http://oryx.io/docs/admin.html</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
+    </summary>
+    
+      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+    
+      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+    
+      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+    
+      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+    
+      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+    
+      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+    
+      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+    
+      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Oryx2 性能优化文档]]></title>
@@ -377,8 +422,8 @@
   
   <entry>
     <title><![CDATA[Oryx2 终端用户文档]]></title>
-    <link href="http://reasonpun.com/2016/04/06/Oryx2-%E7%BB%88%E7%AB%AF%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/"/>
-    <id>http://reasonpun.com/2016/04/06/Oryx2-终端用户文档/</id>
+    <link href="http://reasonpun.com/2016/04/06/Oryx2-end-user-doc/"/>
+    <id>http://reasonpun.com/2016/04/06/Oryx2-end-user-doc/</id>
     <published>2016-04-06T07:18:22.000Z</published>
     <updated>2016-04-06T09:54:44.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -488,8 +533,8 @@
   
   <entry>
     <title><![CDATA[Java关键字volatile]]></title>
-    <link href="http://reasonpun.com/2016/03/08/Java%E5%85%B3%E9%94%AE%E5%AD%97volatile/"/>
-    <id>http://reasonpun.com/2016/03/08/Java关键字volatile/</id>
+    <link href="http://reasonpun.com/2016/03/08/Java-keyword-volatile/"/>
+    <id>http://reasonpun.com/2016/03/08/Java-keyword-volatile/</id>
     <published>2016-03-08T09:59:30.000Z</published>
     <updated>2016-03-15T07:19:35.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -582,8 +627,8 @@
   
   <entry>
     <title><![CDATA[OKHttp源码学习过程]]></title>
-    <link href="http://reasonpun.com/2016/03/08/OKHttp%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B/"/>
-    <id>http://reasonpun.com/2016/03/08/OKHttp源码学习过程/</id>
+    <link href="http://reasonpun.com/2016/03/08/OKHttp-sourcecode/"/>
+    <id>http://reasonpun.com/2016/03/08/OKHttp-sourcecode/</id>
     <published>2016-03-08T09:52:23.000Z</published>
     <updated>2016-03-15T07:17:42.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -624,8 +669,8 @@
   
   <entry>
     <title><![CDATA[正则表达式处理Nginx]]></title>
-    <link href="http://reasonpun.com/2016/01/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%A4%84%E7%90%86Nginx/"/>
-    <id>http://reasonpun.com/2016/01/24/正则表达式处理Nginx/</id>
+    <link href="http://reasonpun.com/2016/01/24/Reg-Nginx/"/>
+    <id>http://reasonpun.com/2016/01/24/Reg-Nginx/</id>
     <published>2016-01-24T03:37:16.000Z</published>
     <updated>2016-01-25T03:30:56.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -705,8 +750,8 @@
   
   <entry>
     <title><![CDATA[Spark优化]]></title>
-    <link href="http://reasonpun.com/2016/01/04/Spark%E4%BC%98%E5%8C%96/"/>
-    <id>http://reasonpun.com/2016/01/04/Spark优化/</id>
+    <link href="http://reasonpun.com/2016/01/04/Spark-tuning/"/>
+    <id>http://reasonpun.com/2016/01/04/Spark-tuning/</id>
     <published>2016-01-04T06:13:35.000Z</published>
     <updated>2016-01-18T03:07:41.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -825,8 +870,8 @@
   
   <entry>
     <title><![CDATA[Python关键字:yield]]></title>
-    <link href="http://reasonpun.com/2016/01/02/Python%E5%85%B3%E9%94%AE%E5%AD%97-yield/"/>
-    <id>http://reasonpun.com/2016/01/02/Python关键字-yield/</id>
+    <link href="http://reasonpun.com/2016/01/02/Python-keyword-yield/"/>
+    <id>http://reasonpun.com/2016/01/02/Python-keyword-yield/</id>
     <published>2016-01-02T09:15:47.000Z</published>
     <updated>2016-01-04T06:13:14.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1877,8 +1922,8 @@
   
   <entry>
     <title><![CDATA[linux shell 获得以前日期]]></title>
-    <link href="http://reasonpun.com/2015/12/05/linux-shell-%E8%8E%B7%E5%BE%97%E4%BB%A5%E5%89%8D%E6%97%A5%E6%9C%9F/"/>
-    <id>http://reasonpun.com/2015/12/05/linux-shell-获得以前日期/</id>
+    <link href="http://reasonpun.com/2015/12/05/linux-shell-generate-date/"/>
+    <id>http://reasonpun.com/2015/12/05/linux-shell-generate-date/</id>
     <published>2015-12-05T07:26:55.000Z</published>
     <updated>2016-01-18T03:06:13.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
