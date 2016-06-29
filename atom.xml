@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-06-29T09:57:26.000Z</updated>
+  <updated>2016-06-29T10:14:05.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://reasonpun.com/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
     <id>http://reasonpun.com/2016/06/29/Laravel和Dropzone-js实现文件上传/</id>
     <published>2016-06-29T03:13:38.000Z</published>
-    <updated>2016-06-29T09:57:26.000Z</updated>
+    <updated>2016-06-29T10:14:05.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -104,13 +104,13 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Lavarel" scheme="http://reasonpun.com/tags/Lavarel/"/>
+      <category term="Laravel" scheme="http://reasonpun.com/tags/Laravel/"/>
     
       <category term="PHP" scheme="http://reasonpun.com/tags/PHP/"/>
     
-      <category term="Lavarel" scheme="http://reasonpun.com/categories/Lavarel/"/>
+      <category term="Laravel" scheme="http://reasonpun.com/categories/Laravel/"/>
     
-      <category term="PHP" scheme="http://reasonpun.com/categories/Lavarel/PHP/"/>
+      <category term="PHP" scheme="http://reasonpun.com/categories/Laravel/PHP/"/>
     
   </entry>
   
