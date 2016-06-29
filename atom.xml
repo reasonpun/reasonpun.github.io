@@ -115,11 +115,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Lavarel 环境安装和配置]]></title>
-    <link href="http://reasonpun.com/2016/06/13/Lavarel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
-    <id>http://reasonpun.com/2016/06/13/Lavarel-环境安装和配置/</id>
+    <title><![CDATA[Laravel 环境安装和配置]]></title>
+    <link href="http://reasonpun.com/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://reasonpun.com/2016/06/13/Laravel-环境安装和配置/</id>
     <published>2016-06-13T15:35:49.000Z</published>
-    <updated>2016-06-22T10:45:40.000Z</updated>
+    <updated>2016-06-29T10:12:49.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -161,13 +161,13 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Lavarel" scheme="http://reasonpun.com/tags/Lavarel/"/>
+      <category term="Laravel" scheme="http://reasonpun.com/tags/Laravel/"/>
     
       <category term="PHP" scheme="http://reasonpun.com/tags/PHP/"/>
     
-      <category term="Lavarel" scheme="http://reasonpun.com/categories/Lavarel/"/>
+      <category term="Laravel" scheme="http://reasonpun.com/categories/Laravel/"/>
     
-      <category term="PHP" scheme="http://reasonpun.com/categories/Lavarel/PHP/"/>
+      <category term="PHP" scheme="http://reasonpun.com/categories/Laravel/PHP/"/>
     
   </entry>
   
