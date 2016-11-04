@@ -43,11 +43,16 @@
 <p>如果修改了Vagrantfile和Cheffile文件，你需要使用如下命令重新使机器配置生效</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">vagrant</span> provision</span><br></pre></td></tr></table></figure>
 <h2 id="u5728Vagrant_u4E2D_u4F7F_u7528Rails"><a href="#u5728Vagrant_u4E2D_u4F7F_u7528Rails" class="headerlink" title="在Vagrant中使用Rails"></a>在Vagrant中使用Rails</h2><p>Vagrant会创建一个名字为/vagrant的共享文件夹，可以是虚拟机和本机之间做文件共享。如果进入/vagrant目录下并执行ls命令，会看到Rails项目的所有文件。</p>
-<p>bundle 在虚拟机中安装所有需要的gem。</p>
-<p>rbenv rehash 确保我们刚刚安装的gem是可用的。</p>
-<p>rake db:create &amp;&amp; rake db:migrate 创建和迁移数据库。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundle</span><br></pre></td></tr></table></figure>
+<p>在虚拟机中安装所有需要的gem。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rbenv <span class="built_in">rehash</span></span><br></pre></td></tr></table></figure>
+<p>确保我们刚刚安装的gem是可用的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:create</span> &amp;&amp; <span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:migrate</span></span><br></pre></td></tr></table></figure>
+<p>创建和迁移数据库。</p>
 <p>该目录下的Rails服务器通过3000端口对外提供服务。可以通过localhost:3000访问Rails。</p>
-<h2 id="u7ED3_u8BED"><a href="#u7ED3_u8BED" class="headerlink" title="结语"></a>结语</h2><p>Vagrant是一个非常Diao的工具，非常方便，通过见得的Chef配置文件，我们可以随时随地使用。<br>如果你需要再次配置一个Vagrant机器，或者是你的合作小伙伴需要配置一个的话，你们只需要执行vagrant up即可。</p>
+<h2 id="u7ED3_u8BED"><a href="#u7ED3_u8BED" class="headerlink" title="结语"></a>结语</h2><p>Vagrant是一个非常Diao的工具，非常方便，通过见得的Chef配置文件，我们可以随时随地使用。<br>如果你需要再次配置一个Vagrant机器，或者是你的合作小伙伴需要配置一个的话，你们只需要执行</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">vagrant</span> up</span><br></pre></td></tr></table></figure>
+<p>即可。</p>
 </div><div class="tags"><a href="/tags/Development/">Development</a><a href="/tags/Rails/">Rails</a><a href="/tags/Vagrant/">Vagrant</a></div><div class="post-nav"><a href="/2016/06/29/Laravel和Dropzone-js实现文件上传/" class="next">Laravel和Dropzone.js实现文件上传<i class="icon-next"></i></a></div><div id="disqus_thread"><script>var disqus_shortname = 'reasonpun';
 var disqus_identifier = '2016/11/04/Using-Vagrant-for-Rails-Development/';
 var disqus_title = '使用Vagrant部署Rails项目';
