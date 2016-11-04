@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://reasonpun.com/2016/11/04/Using-Vagrant-for-Rails-Development/</loc>
+    <lastmod>2016-11-04T08:12:52.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://reasonpun.com/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
     <lastmod>2016-06-29T10:14:05.000Z</lastmod>
   </url>
@@ -67,12 +72,12 @@
   </url>
   
   <url>
-    <loc>http://reasonpun.com/2015/12/04/spark-source-1/</loc>
+    <loc>http://reasonpun.com/2015/12/14/Genetic-Algorithm/</loc>
     <lastmod>2016-01-25T03:17:11.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://reasonpun.com/2015/12/14/Genetic-Algorithm/</loc>
+    <loc>http://reasonpun.com/2015/12/04/spark-source-1/</loc>
     <lastmod>2016-01-25T03:17:11.000Z</lastmod>
   </url>
   
