@@ -4,7 +4,7 @@
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://reasonpun.com/"/>
-  <updated>2016-11-04T09:01:34.000Z</updated>
+  <updated>2016-11-04T09:57:03.000Z</updated>
   <id>http://reasonpun.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://reasonpun.com/2016/11/04/Using-Vagrant-for-Rails-Development/"/>
     <id>http://reasonpun.com/2016/11/04/Using-Vagrant-for-Rails-Development/</id>
     <published>2016-11-04T03:42:26.000Z</published>
-    <updated>2016-11-04T09:01:34.000Z</updated>
+    <updated>2016-11-04T09:57:03.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
 <!--  -->
 <!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
@@ -75,6 +75,14 @@
 <h2 id="u7ED3_u8BED"><a href="#u7ED3_u8BED" class="headerlink" title="结语"></a>结语</h2><p>Vagrant是一个非常Diao的工具，非常方便，通过见得的Chef配置文件，我们可以随时随地使用。<br>如果你需要再次配置一个Vagrant机器，或者是你的合作小伙伴需要配置一个的话，你们只需要执行</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">vagrant</span> up</span><br></pre></td></tr></table></figure>
 <p>即可。</p>
+<p>Q&amp;A</p>
+<ul>
+<li><p>执行vagrant up命令失败<br>A：请检查 VirtualBox的版本是否与Vagrant下载扩展的版本一致，我本地使用的是5.0.24 。</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">==&gt; <span class="keyword">default</span>: Machine booted <span class="keyword">and</span> ready!</span><br><span class="line">[<span class="keyword">default</span>] GuestAdditions versions <span class="keyword">on</span> your host (<span class="number">4.3</span>.<span class="number">28</span>) <span class="keyword">and</span> guest (<span class="number">5.0</span>.<span class="number">24</span>) <span class="keyword">do</span> <span class="keyword">not</span> match.</span><br><span class="line">mesg: ttyname failed: Inappropriate ioctl <span class="keyword">for</span> device</span><br><span class="line">mesg: ttyname failed: Inappropriate ioctl <span class="keyword">for</span> device</span><br></pre></td></tr></table></figure>
+<p>另外Vagrant 1.8.4与 VirtualBox5.1.x版本不兼容。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">➜  ds git:(dev) ✗ vagrant up <span class="comment">--provider=virtualbox</span></span><br><span class="line">No usable default provider could be found <span class="keyword">for</span> your system.</span><br><span class="line"></span><br><span class="line">Vagrant relies <span class="function_start"><span class="keyword">on</span></span> interactions <span class="keyword">with</span> <span class="number">3</span>rd party systems, known <span class="keyword">as</span></span><br><span class="line"><span class="string">"providers"</span>, <span class="keyword">to</span> provide Vagrant <span class="keyword">with</span> resources <span class="keyword">to</span> <span class="command">run</span> development</span><br><span class="line">environments. Examples are VirtualBox, VMware, Hyper-V.</span><br><span class="line"></span><br><span class="line">The easiest solution <span class="keyword">to</span> this message <span class="keyword">is</span> <span class="keyword">to</span> install VirtualBox, which</span><br><span class="line"><span class="keyword">is</span> available <span class="keyword">for</span> free <span class="function_start"><span class="keyword">on</span></span> all major platforms.</span><br><span class="line"></span><br><span class="line">If you believe you already have a provider available, make sure <span class="keyword">it</span></span><br><span class="line"><span class="keyword">is</span> properly installed <span class="keyword">and</span> configured. You can see more details <span class="keyword">about</span></span><br><span class="line">why a particular provider <span class="keyword">isn't</span> working <span class="keyword">by</span> forcing usage <span class="keyword">with</span></span><br><span class="line">`vagrant up <span class="comment">--provider=PROVIDER`, which should give you a more specific</span></span><br><span class="line"><span class="keyword">error</span> message <span class="keyword">for</span> <span class="keyword">that</span> particular provider.</span><br><span class="line">➜  ds git:(dev) ✗ cat /etc/profile</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 ]]></content>
     <summary type="html">
     <![CDATA[<!--  -->
