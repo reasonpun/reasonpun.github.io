@@ -3,9 +3,9 @@
   <title><![CDATA[Tensor Cell]]></title>
   <subtitle><![CDATA[还要再走500里]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://reasonpun.com/"/>
+  <link href="http://pangz.me/"/>
   <updated>2016-11-08T06:55:35.000Z</updated>
-  <id>http://reasonpun.com/</id>
+  <id>http://pangz.me/</id>
   
   <author>
     <name><![CDATA[reasono]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[使用Vagrant部署Rails项目]]></title>
-    <link href="http://reasonpun.com/2016/11/04/Using-Vagrant-for-Rails-Development/"/>
-    <id>http://reasonpun.com/2016/11/04/Using-Vagrant-for-Rails-Development/</id>
+    <link href="http://pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development/"/>
+    <id>http://pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development/</id>
     <published>2016-11-04T03:42:26.000Z</published>
     <updated>2016-11-08T06:55:35.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -97,22 +97,22 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Development" scheme="http://reasonpun.com/tags/Development/"/>
+      <category term="Development" scheme="http://pangz.me/tags/Development/"/>
     
-      <category term="Rails" scheme="http://reasonpun.com/tags/Rails/"/>
+      <category term="Rails" scheme="http://pangz.me/tags/Rails/"/>
     
-      <category term="Vagrant" scheme="http://reasonpun.com/tags/Vagrant/"/>
+      <category term="Vagrant" scheme="http://pangz.me/tags/Vagrant/"/>
     
-      <category term="Rails" scheme="http://reasonpun.com/categories/Rails/"/>
+      <category term="Rails" scheme="http://pangz.me/categories/Rails/"/>
     
-      <category term="Vagrant" scheme="http://reasonpun.com/categories/Rails/Vagrant/"/>
+      <category term="Vagrant" scheme="http://pangz.me/categories/Rails/Vagrant/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Laravel和Dropzone.js实现文件上传]]></title>
-    <link href="http://reasonpun.com/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
-    <id>http://reasonpun.com/2016/06/29/Laravel和Dropzone-js实现文件上传/</id>
+    <link href="http://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    <id>http://pangz.me/2016/06/29/Laravel和Dropzone-js实现文件上传/</id>
     <published>2016-06-29T03:13:38.000Z</published>
     <updated>2016-06-29T10:14:05.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -199,20 +199,20 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Laravel" scheme="http://reasonpun.com/tags/Laravel/"/>
+      <category term="Laravel" scheme="http://pangz.me/tags/Laravel/"/>
     
-      <category term="PHP" scheme="http://reasonpun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://pangz.me/tags/PHP/"/>
     
-      <category term="Laravel" scheme="http://reasonpun.com/categories/Laravel/"/>
+      <category term="Laravel" scheme="http://pangz.me/categories/Laravel/"/>
     
-      <category term="PHP" scheme="http://reasonpun.com/categories/Laravel/PHP/"/>
+      <category term="PHP" scheme="http://pangz.me/categories/Laravel/PHP/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Laravel 环境安装和配置]]></title>
-    <link href="http://reasonpun.com/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
-    <id>http://reasonpun.com/2016/06/13/Laravel-环境安装和配置/</id>
+    <link href="http://pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://pangz.me/2016/06/13/Laravel-环境安装和配置/</id>
     <published>2016-06-13T15:35:49.000Z</published>
     <updated>2016-06-29T10:12:49.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -256,20 +256,20 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Laravel" scheme="http://reasonpun.com/tags/Laravel/"/>
+      <category term="Laravel" scheme="http://pangz.me/tags/Laravel/"/>
     
-      <category term="PHP" scheme="http://reasonpun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://pangz.me/tags/PHP/"/>
     
-      <category term="Laravel" scheme="http://reasonpun.com/categories/Laravel/"/>
+      <category term="Laravel" scheme="http://pangz.me/categories/Laravel/"/>
     
-      <category term="PHP" scheme="http://reasonpun.com/categories/Laravel/PHP/"/>
+      <category term="PHP" scheme="http://pangz.me/categories/Laravel/PHP/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[玩转 Oryx2 （一）]]></title>
-    <link href="http://reasonpun.com/2016/04/08/set-up-oryx-env/"/>
-    <id>http://reasonpun.com/2016/04/08/set-up-oryx-env/</id>
+    <link href="http://pangz.me/2016/04/08/set-up-oryx-env/"/>
+    <id>http://pangz.me/2016/04/08/set-up-oryx-env/</id>
     <published>2016-04-08T04:08:24.000Z</published>
     <updated>2016-04-08T11:00:02.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -361,28 +361,28 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+      <category term="Admin" scheme="http://pangz.me/tags/Admin/"/>
     
-      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+      <category term="Hadoop" scheme="http://pangz.me/tags/Hadoop/"/>
     
-      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+      <category term="Oryx2" scheme="http://pangz.me/tags/Oryx2/"/>
     
-      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+      <category term="Spark" scheme="http://pangz.me/tags/Spark/"/>
     
-      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+      <category term="Spark-Streaming" scheme="http://pangz.me/tags/Spark-Streaming/"/>
     
-      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+      <category term="documentation" scheme="http://pangz.me/tags/documentation/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+      <category term="实时计算" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Oryx2 性能优化文档]]></title>
-    <link href="http://reasonpun.com/2016/04/07/Oryx2-performance-doc/"/>
-    <id>http://reasonpun.com/2016/04/07/Oryx2-performance-doc/</id>
+    <link href="http://pangz.me/2016/04/07/Oryx2-performance-doc/"/>
+    <id>http://pangz.me/2016/04/07/Oryx2-performance-doc/</id>
     <published>2016-04-07T01:56:28.000Z</published>
     <updated>2016-04-07T07:12:41.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -577,28 +577,28 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+      <category term="Admin" scheme="http://pangz.me/tags/Admin/"/>
     
-      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+      <category term="Hadoop" scheme="http://pangz.me/tags/Hadoop/"/>
     
-      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+      <category term="Oryx2" scheme="http://pangz.me/tags/Oryx2/"/>
     
-      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+      <category term="Spark" scheme="http://pangz.me/tags/Spark/"/>
     
-      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+      <category term="Spark-Streaming" scheme="http://pangz.me/tags/Spark-Streaming/"/>
     
-      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+      <category term="documentation" scheme="http://pangz.me/tags/documentation/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+      <category term="实时计算" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Oryx2 开发者文档]]></title>
-    <link href="http://reasonpun.com/2016/04/06/Oryx2-developer-doc/"/>
-    <id>http://reasonpun.com/2016/04/06/Oryx2-developer-doc/</id>
+    <link href="http://pangz.me/2016/04/06/Oryx2-developer-doc/"/>
+    <id>http://pangz.me/2016/04/06/Oryx2-developer-doc/</id>
     <published>2016-04-06T09:58:20.000Z</published>
     <updated>2016-04-06T11:10:33.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -722,28 +722,28 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+      <category term="Admin" scheme="http://pangz.me/tags/Admin/"/>
     
-      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+      <category term="Hadoop" scheme="http://pangz.me/tags/Hadoop/"/>
     
-      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+      <category term="Oryx2" scheme="http://pangz.me/tags/Oryx2/"/>
     
-      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+      <category term="Spark" scheme="http://pangz.me/tags/Spark/"/>
     
-      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+      <category term="Spark-Streaming" scheme="http://pangz.me/tags/Spark-Streaming/"/>
     
-      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+      <category term="documentation" scheme="http://pangz.me/tags/documentation/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+      <category term="实时计算" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Oryx2 终端用户文档]]></title>
-    <link href="http://reasonpun.com/2016/04/06/Oryx2-end-user-doc/"/>
-    <id>http://reasonpun.com/2016/04/06/Oryx2-end-user-doc/</id>
+    <link href="http://pangz.me/2016/04/06/Oryx2-end-user-doc/"/>
+    <id>http://pangz.me/2016/04/06/Oryx2-end-user-doc/</id>
     <published>2016-04-06T07:18:22.000Z</published>
     <updated>2016-04-06T09:54:44.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -756,7 +756,7 @@
 <!--                                                 \ \_\                   -->
 <!--                                                  \/_/                   -->
 <!--  -->
-<h3 id="u8FD0_u884C"><a href="#u8FD0_u884C" class="headerlink" title="运行"></a>运行</h3><p>注意：你必须已经按照<a href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/">管理员文档</a>中提到的配置好了你的集群。</p>
+<h3 id="u8FD0_u884C"><a href="#u8FD0_u884C" class="headerlink" title="运行"></a>运行</h3><p>注意：你必须已经按照<a href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/" target="_blank" rel="external">管理员文档</a>中提到的配置好了你的集群。</p>
 <p>下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。</p>
 <p>或者，源码编译他们并从deploy/bin/获取最新的脚本。</p>
 <p>拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。</p>
@@ -833,28 +833,28 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+      <category term="Admin" scheme="http://pangz.me/tags/Admin/"/>
     
-      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+      <category term="Hadoop" scheme="http://pangz.me/tags/Hadoop/"/>
     
-      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+      <category term="Oryx2" scheme="http://pangz.me/tags/Oryx2/"/>
     
-      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+      <category term="Spark" scheme="http://pangz.me/tags/Spark/"/>
     
-      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+      <category term="Spark-Streaming" scheme="http://pangz.me/tags/Spark-Streaming/"/>
     
-      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+      <category term="documentation" scheme="http://pangz.me/tags/documentation/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+      <category term="实时计算" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Java关键字volatile]]></title>
-    <link href="http://reasonpun.com/2016/03/08/Java-keyword-volatile/"/>
-    <id>http://reasonpun.com/2016/03/08/Java-keyword-volatile/</id>
+    <link href="http://pangz.me/2016/03/08/Java-keyword-volatile/"/>
+    <id>http://pangz.me/2016/03/08/Java-keyword-volatile/</id>
     <published>2016-03-08T09:59:30.000Z</published>
     <updated>2016-06-29T10:02:16.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -937,16 +937,16 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Android" scheme="http://reasonpun.com/tags/Android/"/>
+      <category term="Android" scheme="http://pangz.me/tags/Android/"/>
     
-      <category term="Android" scheme="http://reasonpun.com/categories/Android/"/>
+      <category term="Android" scheme="http://pangz.me/categories/Android/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[OKHttp源码学习过程]]></title>
-    <link href="http://reasonpun.com/2016/03/08/OKHttp-sourcecode/"/>
-    <id>http://reasonpun.com/2016/03/08/OKHttp-sourcecode/</id>
+    <link href="http://pangz.me/2016/03/08/OKHttp-sourcecode/"/>
+    <id>http://pangz.me/2016/03/08/OKHttp-sourcecode/</id>
     <published>2016-03-08T09:52:23.000Z</published>
     <updated>2016-03-15T07:17:42.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -963,7 +963,7 @@
 <h3 id="u8D77_u6B65"><a href="#u8D77_u6B65" class="headerlink" title="起步"></a>起步</h3><h4 id="Request-java"><a href="#Request-java" class="headerlink" title="Request.java"></a>Request.java</h4><p>所在目录：/okhttp/okhttp/src/main/java/com/squareup/okhttp/Request.java</p>
 <p>文件第38行~40行，遇到关键字 volatile</p>
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URL url; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> URI uri; <span class="comment">// Lazily initialized.</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> CacheControl cacheControl; <span class="comment">// Lazily initialized.</span></span><br></pre></td></tr></table></figure>
-<p>然后稍微看了下这个关键字的解释，可以移步<a href="http://reasonpun.com/2016/03/08/Java%E5%85%B3%E9%94%AE%E5%AD%97volatile/">这里</a></p>
+<p>然后稍微看了下这个关键字的解释，可以移步<a href="http://reasonpun.com/2016/03/08/Java%E5%85%B3%E9%94%AE%E5%AD%97volatile/" target="_blank" rel="external">这里</a></p>
 <hr>
 <p>未完待续</p>
 <h3 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
@@ -977,18 +977,18 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Android" scheme="http://reasonpun.com/tags/Android/"/>
+      <category term="Android" scheme="http://pangz.me/tags/Android/"/>
     
-      <category term="Android" scheme="http://reasonpun.com/categories/Android/"/>
+      <category term="Android" scheme="http://pangz.me/categories/Android/"/>
     
-      <category term="源码" scheme="http://reasonpun.com/categories/Android/%E6%BA%90%E7%A0%81/"/>
+      <category term="源码" scheme="http://pangz.me/categories/Android/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[正则表达式处理Nginx]]></title>
-    <link href="http://reasonpun.com/2016/01/24/Reg-Nginx/"/>
-    <id>http://reasonpun.com/2016/01/24/Reg-Nginx/</id>
+    <link href="http://pangz.me/2016/01/24/Reg-Nginx/"/>
+    <id>http://pangz.me/2016/01/24/Reg-Nginx/</id>
     <published>2016-01-24T03:37:16.000Z</published>
     <updated>2016-01-25T03:30:56.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1019,20 +1019,20 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Nginx" scheme="http://reasonpun.com/tags/Nginx/"/>
+      <category term="Nginx" scheme="http://pangz.me/tags/Nginx/"/>
     
-      <category term="日志" scheme="http://reasonpun.com/tags/%E6%97%A5%E5%BF%97/"/>
+      <category term="日志" scheme="http://pangz.me/tags/%E6%97%A5%E5%BF%97/"/>
     
-      <category term="正则" scheme="http://reasonpun.com/tags/%E6%AD%A3%E5%88%99/"/>
+      <category term="正则" scheme="http://pangz.me/tags/%E6%AD%A3%E5%88%99/"/>
     
-      <category term="Nginx" scheme="http://reasonpun.com/categories/Nginx/"/>
+      <category term="Nginx" scheme="http://pangz.me/categories/Nginx/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[TAPL]]></title>
-    <link href="http://reasonpun.com/2016/01/06/TAPL/"/>
-    <id>http://reasonpun.com/2016/01/06/TAPL/</id>
+    <link href="http://pangz.me/2016/01/06/TAPL/"/>
+    <id>http://pangz.me/2016/01/06/TAPL/</id>
     <published>2016-01-06T04:42:09.000Z</published>
     <updated>2016-01-25T03:17:11.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1054,22 +1054,22 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="awk" scheme="http://reasonpun.com/tags/awk/"/>
+      <category term="awk" scheme="http://pangz.me/tags/awk/"/>
     
-      <category term="programming" scheme="http://reasonpun.com/tags/programming/"/>
+      <category term="programming" scheme="http://pangz.me/tags/programming/"/>
     
-      <category term="AWK" scheme="http://reasonpun.com/categories/AWK/"/>
+      <category term="AWK" scheme="http://pangz.me/categories/AWK/"/>
     
-      <category term="Linux" scheme="http://reasonpun.com/categories/AWK/Linux/"/>
+      <category term="Linux" scheme="http://pangz.me/categories/AWK/Linux/"/>
     
-      <category term="Ebook" scheme="http://reasonpun.com/categories/AWK/Linux/Ebook/"/>
+      <category term="Ebook" scheme="http://pangz.me/categories/AWK/Linux/Ebook/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Spark优化]]></title>
-    <link href="http://reasonpun.com/2016/01/04/Spark-tuning/"/>
-    <id>http://reasonpun.com/2016/01/04/Spark-tuning/</id>
+    <link href="http://pangz.me/2016/01/04/Spark-tuning/"/>
+    <id>http://pangz.me/2016/01/04/Spark-tuning/</id>
     <published>2016-01-04T06:13:35.000Z</published>
     <updated>2016-01-18T03:07:41.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1174,22 +1174,22 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="spark" scheme="http://reasonpun.com/tags/spark/"/>
+      <category term="spark" scheme="http://pangz.me/tags/spark/"/>
     
-      <category term="优化" scheme="http://reasonpun.com/tags/%E4%BC%98%E5%8C%96/"/>
+      <category term="优化" scheme="http://pangz.me/tags/%E4%BC%98%E5%8C%96/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+      <category term="实时计算" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
     
-      <category term="优化" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/%E4%BC%98%E5%8C%96/"/>
+      <category term="优化" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Python关键字:yield]]></title>
-    <link href="http://reasonpun.com/2016/01/02/Python-keyword-yield/"/>
-    <id>http://reasonpun.com/2016/01/02/Python-keyword-yield/</id>
+    <link href="http://pangz.me/2016/01/02/Python-keyword-yield/"/>
+    <id>http://pangz.me/2016/01/02/Python-keyword-yield/</id>
     <published>2016-01-02T09:15:47.000Z</published>
     <updated>2016-01-04T06:13:14.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1262,18 +1262,18 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Python" scheme="http://reasonpun.com/tags/Python/"/>
+      <category term="Python" scheme="http://pangz.me/tags/Python/"/>
     
-      <category term="Python" scheme="http://reasonpun.com/categories/Python/"/>
+      <category term="Python" scheme="http://pangz.me/categories/Python/"/>
     
-      <category term="学习" scheme="http://reasonpun.com/categories/Python/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://pangz.me/categories/Python/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Oryx2 管理员文档]]></title>
-    <link href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/"/>
-    <id>http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/</id>
+    <link href="http://pangz.me/2015/12/21/Oryx2-Admin-Docs/"/>
+    <id>http://pangz.me/2015/12/21/Oryx2-Admin-Docs/</id>
     <published>2015-12-21T08:53:46.000Z</published>
     <updated>2016-04-08T08:14:23.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1368,28 +1368,28 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Admin" scheme="http://reasonpun.com/tags/Admin/"/>
+      <category term="Admin" scheme="http://pangz.me/tags/Admin/"/>
     
-      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+      <category term="Hadoop" scheme="http://pangz.me/tags/Hadoop/"/>
     
-      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+      <category term="Oryx2" scheme="http://pangz.me/tags/Oryx2/"/>
     
-      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+      <category term="Spark" scheme="http://pangz.me/tags/Spark/"/>
     
-      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+      <category term="Spark-Streaming" scheme="http://pangz.me/tags/Spark-Streaming/"/>
     
-      <category term="documentation" scheme="http://reasonpun.com/tags/documentation/"/>
+      <category term="documentation" scheme="http://pangz.me/tags/documentation/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+      <category term="实时计算" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Oryx2 简介]]></title>
-    <link href="http://reasonpun.com/2015/12/21/Oryx2-Overview/"/>
-    <id>http://reasonpun.com/2015/12/21/Oryx2-Overview/</id>
+    <link href="http://pangz.me/2015/12/21/Oryx2-Overview/"/>
+    <id>http://pangz.me/2015/12/21/Oryx2-Overview/</id>
     <published>2015-12-21T03:37:05.000Z</published>
     <updated>2016-01-25T03:17:11.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1465,28 +1465,28 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Hadoop" scheme="http://reasonpun.com/tags/Hadoop/"/>
+      <category term="Hadoop" scheme="http://pangz.me/tags/Hadoop/"/>
     
-      <category term="Java" scheme="http://reasonpun.com/tags/Java/"/>
+      <category term="Java" scheme="http://pangz.me/tags/Java/"/>
     
-      <category term="Oryx2" scheme="http://reasonpun.com/tags/Oryx2/"/>
+      <category term="Oryx2" scheme="http://pangz.me/tags/Oryx2/"/>
     
-      <category term="Recommendation" scheme="http://reasonpun.com/tags/Recommendation/"/>
+      <category term="Recommendation" scheme="http://pangz.me/tags/Recommendation/"/>
     
-      <category term="Spark" scheme="http://reasonpun.com/tags/Spark/"/>
+      <category term="Spark" scheme="http://pangz.me/tags/Spark/"/>
     
-      <category term="Spark-Streaming" scheme="http://reasonpun.com/tags/Spark-Streaming/"/>
+      <category term="Spark-Streaming" scheme="http://pangz.me/tags/Spark-Streaming/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="实时计算" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
+      <category term="实时计算" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%AE%9E%E6%97%B6%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Genetic Algorithm]]></title>
-    <link href="http://reasonpun.com/2015/12/14/Genetic-Algorithm/"/>
-    <id>http://reasonpun.com/2015/12/14/Genetic-Algorithm/</id>
+    <link href="http://pangz.me/2015/12/14/Genetic-Algorithm/"/>
+    <id>http://pangz.me/2015/12/14/Genetic-Algorithm/</id>
     <published>2015-12-14T08:25:10.000Z</published>
     <updated>2016-01-25T03:17:11.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1508,16 +1508,16 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Genetic Algorithm" scheme="http://reasonpun.com/tags/Genetic-Algorithm/"/>
+      <category term="Genetic Algorithm" scheme="http://pangz.me/tags/Genetic-Algorithm/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[apache-flume-ng-structure]]></title>
-    <link href="http://reasonpun.com/2015/12/10/apache-flume-ng-structure/"/>
-    <id>http://reasonpun.com/2015/12/10/apache-flume-ng-structure/</id>
+    <link href="http://pangz.me/2015/12/10/apache-flume-ng-structure/"/>
+    <id>http://pangz.me/2015/12/10/apache-flume-ng-structure/</id>
     <published>2015-12-10T07:01:57.000Z</published>
     <updated>2016-03-07T08:25:29.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1625,20 +1625,20 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Apache" scheme="http://reasonpun.com/tags/Apache/"/>
+      <category term="Apache" scheme="http://pangz.me/tags/Apache/"/>
     
-      <category term="Flume-NG" scheme="http://reasonpun.com/tags/Flume-NG/"/>
+      <category term="Flume-NG" scheme="http://pangz.me/tags/Flume-NG/"/>
     
-      <category term="HDFS" scheme="http://reasonpun.com/tags/HDFS/"/>
+      <category term="HDFS" scheme="http://pangz.me/tags/HDFS/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[apache_kafka_structure]]></title>
-    <link href="http://reasonpun.com/2015/12/08/apache-kafka-structure/"/>
-    <id>http://reasonpun.com/2015/12/08/apache-kafka-structure/</id>
+    <link href="http://pangz.me/2015/12/08/apache-kafka-structure/"/>
+    <id>http://pangz.me/2015/12/08/apache-kafka-structure/</id>
     <published>2015-12-08T08:30:08.000Z</published>
     <updated>2015-12-25T03:33:24.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -1849,20 +1849,20 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Apache" scheme="http://reasonpun.com/tags/Apache/"/>
+      <category term="Apache" scheme="http://pangz.me/tags/Apache/"/>
     
-      <category term="HDFS" scheme="http://reasonpun.com/tags/HDFS/"/>
+      <category term="HDFS" scheme="http://pangz.me/tags/HDFS/"/>
     
-      <category term="Kafka" scheme="http://reasonpun.com/tags/Kafka/"/>
+      <category term="Kafka" scheme="http://pangz.me/tags/Kafka/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[kafka文档简述]]></title>
-    <link href="http://reasonpun.com/2015/12/05/kafa-documentation/"/>
-    <id>http://reasonpun.com/2015/12/05/kafa-documentation/</id>
+    <link href="http://pangz.me/2015/12/05/kafa-documentation/"/>
+    <id>http://pangz.me/2015/12/05/kafa-documentation/</id>
     <published>2015-12-05T08:47:08.000Z</published>
     <updated>2015-12-25T03:33:49.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -2228,20 +2228,20 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Documentation" scheme="http://reasonpun.com/tags/Documentation/"/>
+      <category term="Documentation" scheme="http://pangz.me/tags/Documentation/"/>
     
-      <category term="HDFS" scheme="http://reasonpun.com/tags/HDFS/"/>
+      <category term="HDFS" scheme="http://pangz.me/tags/HDFS/"/>
     
-      <category term="Kafka" scheme="http://reasonpun.com/tags/Kafka/"/>
+      <category term="Kafka" scheme="http://pangz.me/tags/Kafka/"/>
     
-      <category term="数据挖掘" scheme="http://reasonpun.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://pangz.me/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[linux shell 获得以前日期]]></title>
-    <link href="http://reasonpun.com/2015/12/05/linux-shell-generate-date/"/>
-    <id>http://reasonpun.com/2015/12/05/linux-shell-generate-date/</id>
+    <link href="http://pangz.me/2015/12/05/linux-shell-generate-date/"/>
+    <id>http://pangz.me/2015/12/05/linux-shell-generate-date/</id>
     <published>2015-12-05T07:26:55.000Z</published>
     <updated>2016-12-19T07:51:51.000Z</updated>
     <content type="html"><![CDATA[<!--  -->
@@ -2276,11 +2276,11 @@
 <!-- /\`'__\/'__`\ /'__`\   /',__\  / _]]>
     </summary>
     
-      <category term="Linux" scheme="http://reasonpun.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://pangz.me/tags/Linux/"/>
     
-      <category term="Shell" scheme="http://reasonpun.com/tags/Shell/"/>
+      <category term="Shell" scheme="http://pangz.me/tags/Shell/"/>
     
-      <category term="系统维护" scheme="http://reasonpun.com/categories/%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4/"/>
+      <category term="系统维护" scheme="http://pangz.me/categories/%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4/"/>
     
   </entry>
   
