@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  
+  <title>Oryx2 性能优化文档</title>
+  <meta name="description" content="">
+  <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Tensor Cell" href="/feed.xml">
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+  <body>
+    <div class="body_container">
+      <div id="header">
+        <div class="site-name">
+          <h1 class="hidden">Oryx2 性能优化文档</h1>
+          <a id="logo" href="/.">Tensor Cell</a>
+          <p class="description">还要再走500里</p>
+        </div>
+        <div id="nav-menu">
+          
+            <a href="//"><i class="icon-home"> 首页</i></a>
+          
+            <a href="/archives/"><i class="icon-archive"> 归档</i></a>
+          
+            <a href="/about/"><i class="icon-about"> 关于</i></a>
+          
+            <a href="/history/"><i class="icon-history"> 历史</i></a>
+          
+            <a href="/feed.xml"><i class="icon-rss"> 订阅</i></a>
+          
+        </div>
+      <script type="text/javascript">
+      var menus=document.getElementById('nav-menu');
+      var ishome = true;
+      for (var i=1;i<menus.childElementCount;i++) {
+        var path = location.href;
+        var current = path.startsWith(menus.children[i].href);
+        if (current) {
+          menus.children[i].className ='current';
+          ishome = false;
+          break;
+        }
+      }
+      if (ishome) {
+      	menus.children[0].className ='current';
+      }
+      </script>
+      </div>
+
+      <div id="layout" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+          <div class="content_container">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Oryx2 性能优化文档</h1>
+    <p class="post-meta"><time datetime="2016-04-07T00:00:00+08:00" itemprop="datePublished">Apr 7, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+
+<p>这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。</p>
+
+<h2 id="硬件和集群设计">硬件和集群设计</h2>
+
+<p>一般情况下，对硬件或者集群没有特别的要求。集群资源的需求主要取决于基于Spark的作业，这些往往是内存密集型和CPU密集型的，但是一般不会是I/O绑定的。如果数据的采集率非常的高，Kafka可能需要一些特殊的考虑。在这两种情况下，针对其他任何的Kafka或者Spark作业并没有不同的标准。</p>
+
+<h3 id="数据传输">数据传输</h3>
+
+<p>因为Kafka是底层传输数据的，存储要求的采集和存放数据对于Kafka也就是这样的。查看<a href="http://kafka.apache.org/performance.html">Kafka 性能</a>中提到的内容。一般情况下，Kafka并不会接近瓶颈，也能够像其他Kafka的使用一样调整资源占用大小。</p>
+
+<h3 id="批处理层">批处理层</h3>
+
+<p>批处理层独特的地方是模型的构建, and the element that is of most interest to benchmark are likely the model building processes implemented in the app tier, on top of MLlib. Here again, the resources required to build a model over a certain amount of data are just that of the underlying MLlib implementations of ALS, k-means and decision forests.</p>
+
+<p>MLlib的任何性能优化或者是基准测试都适用于这些基于MLlib预制的实现的批处理层，这对于Oryx也是一样的。</p>
+
+<h3 id="jvm-优化">JVM 优化</h3>
+
+<p>Choosing the number of Spark executors, cores and memory is a topic in its own right.</p>
+
+<p>很自然的，更多的executors意味着更多的核心和内存。但是数量是不能超多集群上机器的总数量的；请查看：oryx.batch.streaming.num-executors。</p>
+
+<p>更多的核，意味着可能会有更多的并发进程。在典型的模型构建进程中，如果能达到任务总数的三分之一或者2分之一的话，这将是非常有用的。你可以观察到任务的数量，以及Spark UI中批处理层固有的并发情况。在这数量之下，核数再多也无法增加更多的并发了。少一些是可以的，无非就是增加了点运行时间。当然，在批处理的时间间隔内，充足的核数可以保证批处理的顺利完成。核的数量可以通过oryx.batch.streaming.executor-cores进行配置。</p>
+
+<p>如果你的作业发生了内存溢出，驱动器和executors可能需要更多的内存。如果你注意到在批处理层的”存储”标签页中并不是100%的RDD被缓存住了，那么更多的内存可能会有所帮助。查看：oryx.batch.streaming.executor-memory。</p>
+
+<p>oryx-run.sh脚本的–jvm-args参数是用来为所有的JVM进程设置内存参数的。举个例子，通过设置 -XX:+UseG1GC ，会达到一个比较合理的效果。</p>
+<h3 id="服务层">服务层</h3>
+
+<p>REST API 后端服务器是Tomcat。配置文件是没有暴露给用户的，但是对于他的负载已经做了合理的调整。Tomcat容器本身开销很小，不需要担心性能问题。</p>
+
+<p>最可能感兴趣的是项目中提供的关于CPU密集型程序实现的性能问题，而不是框架本身。</p>
+
+<h3 id="基准测试-交替最小二乘法推荐">基准测试: 交替最小二乘法推荐</h3>
+
+<p>由于ALS实现的程序的服务层的大多数的操作是，会在内存中实时的计算一个非常大的矩阵，所以这个程序是最具有挑战性的了。大概其的规则如下：</p>
+
+<p>如果需要运行类似的基准测试，可以使用LoadBenchmark，可以按照如下的配置：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn -DskipTests clean install
+cd app/oryx-app-serving
+...
+mvn -Pbenchmark \
+ -Doryx.test.als.benchmark.users=1000000 \
+ -Doryx.test.als.benchmark.items=5000000 \
+ -Doryx.test.als.benchmark.features=250 \
+ -Doryx.test.als.benchmark.lshSampleRate=0.3 \
+ -Doryx.test.als.benchmark.workers=2 \
+ integration-test
+
+</code></pre></div></div>
+
+<h3 id="内存">内存</h3>
+
+<ul>
+  <li>内存需求是成线性的：(users + items) x features</li>
+  <li>-XX:+UseStringDeduplication 在 Java 8中是非常有用的 (reflected below)</li>
+  <li>At scale, 1M users or items ~= 500-1000M of heap required, depending on features</li>
+</ul>
+
+<p>Example steady-state heap usage (Java 8):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Features</th>
+      <th>Users+Items (M)</th>
+      <th>Heap (MB)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>2</td>
+      <td>1400</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>6</td>
+      <td>2600</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>21</td>
+      <td>7500</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>2</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>6</td>
+      <td>7500</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>21</td>
+      <td>25800</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="请求延迟吞吐量">请求延迟，吞吐量</h3>
+
+<ul>
+  <li>Recommend and similarity computation time scales linearly with items x features</li>
+  <li>A single request is parallelized across CPUs; max throughput and minimum latency is already achieved at about 1-2 concurrent requests</li>
+  <li>Locality sensitive hashing decreases processing time roughly linearly; 0.33 ~= 1/0.33 ~= 3x faster (setting too low adversely affects result quality)</li>
+</ul>
+
+<p>Below are representative throughput / latency measurements for the /recommend endpoint using
+  a 32-core Intel Xeon 2.3GHz (Haswell), OpenJDK 8 and flags -XX:+UseG1GC -XX:+UseStringDeduplication. Heap size was comfortably large enough for the data set in each case. The tests were run with 1-3 concurrent request at a time, as necessary to achieve near-full CPU utilization.</p>
+
+<p><em>With LSH (sample rate = 0.3)</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Features</th>
+      <th>Items (M)</th>
+      <th>Throughput (qps)</th>
+      <th>Latency (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>1</td>
+      <td>437</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>1</td>
+      <td>151</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>5</td>
+      <td>84</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>5</td>
+      <td>36</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>20</td>
+      <td>14</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>20</td>
+      <td>6</td>
+      <td>162</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Without LSH (sample rate = 1.0)</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Features</th>
+      <th>Items (M)</th>
+      <th>Throughput (qps)</th>
+      <th>Latency (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>1</td>
+      <td>74</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>1</td>
+      <td>23</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>5</td>
+      <td>13</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>5</td>
+      <td>5</td>
+      <td>191</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>20</td>
+      <td>4</td>
+      <td>282</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>20</td>
+      <td>1</td>
+      <td>708</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="jvm-优化-1">JVM 优化</h3>
+
+<p>机器上运行（多个）服务层，使用越多的可用的核，意味着可以提供更多的并发请求处理能力。在ALS中，一些请求，比如/recommend 可以在一个请求中通过多核计算完成。</p>
+
+<p>内存的需求主要是由加载进内存的模型的需求控制的。对于大的模型，比如ALS，这就意味着需要确保服务层有足够的内存以保证不会导致GC崩溃。查看oryx.serving.memory。</p>
+
+<p>-XX:+UseG1GC remains a good garbage collection setting to supply with –jvm-args. In Java 8, -XX:+UseStringDeduplication can reduce memory requirements by about 20%.</p>
+
+<h3 id="实时计算层">实时计算层</h3>
+
+<p>实时计算层驱动进程类似服务层那样也是需要大量内存的，因为他也是需要加载一个模型到内存中的。驱动进程的内存是通过oryx.speed.streaming.driver-memory控制的，也需要和服务层内存一样设置，并且也需要JVM的一些flags支持。</p>
+
+<p>这也是一个Spark Streaming 作业，也需要想批处理层那样配置executors。一般情况下，需要更少的处理和更低的时间延迟。</p>
+
+<p>Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.</p>
+
+  </div>
+
+</article>
+
+          </div>
+        </div>
+        
+        <div class="pure-u-1-4">
+          <div id="sidebar">
+            <div class="widget">
+              
+                <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                  <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+                  <input type="hidden" name="q6" value="http://localhost:4000">
+                </form>
+              
+              
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">分类</div>
+                <ul class="category-list">
+                  
+                </ul>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">标签</div>
+                <div class="tagcloud">
+                  
+                    <a href="/tag/Emacs" style="font-size: 15px;">Emacs</a>
+                  
+                </div>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">相关推荐</div>
+                <ul class="post-list">
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Emacs-STEP-1.html"> Emacs STEP-1 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Using-Vagrant-for-Rails-Development.html"> 使用Vagrant部署Rails项目 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html"> Laravel 环境安装和配置 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/08/set-up-oryx-env.html"> 玩转 Oryx2 （一） </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-end-user-doc.html"> Oryx2 终端用户文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-developer-doc.html"> Oryx2 开发者文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/03/08/Java-keyword-volatile.html"> Java关键字volatile </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/01/24/Reg-Nginx.html"> 正则表达式处理Nginx </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/01/04/Spark-tuning.html"> Spark优化 </a></li>
+                
+                </ul>
+            </div>
+              
+            <div class="widget">
+              <div class="widget-title">友情链接</div>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="http://people.csail.mit.edu/matei/" title="Matei Zaharia" target="_blank">Matei Zaharia</a>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="https://github.com/tensorflow/tensorflow" title="tensorflow" target="_blank">tensorflow</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">© 2019 
+        <a href="/." rel="nofollow">Tensor Cell.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
+        
+      </div>
+      
+
+      <a id="rocket" href="#top" class="show"></a>
+      
+      <script src="/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/js/totop.js" type="text/javascript"></script>
+      <script src="/js/fancybox.pack.js" type="text/javascript"></script>
+      <script src="/js/jquery.fancybox.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
+      
+    </div>
+
+    
+
+  </body>
+
+</html>

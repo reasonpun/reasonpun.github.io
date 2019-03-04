@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  
+  <title>Linux shell 获得以前日期</title>
+  <meta name="description" content="">
+  <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Tensor Cell" href="/feed.xml">
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+  <body>
+    <div class="body_container">
+      <div id="header">
+        <div class="site-name">
+          <h1 class="hidden">Linux shell 获得以前日期</h1>
+          <a id="logo" href="/.">Tensor Cell</a>
+          <p class="description">还要再走500里</p>
+        </div>
+        <div id="nav-menu">
+          
+            <a href="//"><i class="icon-home"> 首页</i></a>
+          
+            <a href="/archives/"><i class="icon-archive"> 归档</i></a>
+          
+            <a href="/about/"><i class="icon-about"> 关于</i></a>
+          
+            <a href="/history/"><i class="icon-history"> 历史</i></a>
+          
+            <a href="/feed.xml"><i class="icon-rss"> 订阅</i></a>
+          
+        </div>
+      <script type="text/javascript">
+      var menus=document.getElementById('nav-menu');
+      var ishome = true;
+      for (var i=1;i<menus.childElementCount;i++) {
+        var path = location.href;
+        var current = path.startsWith(menus.children[i].href);
+        if (current) {
+          menus.children[i].className ='current';
+          ishome = false;
+          break;
+        }
+      }
+      if (ishome) {
+      	menus.children[0].className ='current';
+      }
+      </script>
+      </div>
+
+      <div id="layout" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+          <div class="content_container">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Linux shell 获得以前日期</h1>
+    <p class="post-meta"><time datetime="2015-12-05T00:00:00+08:00" itemprop="datePublished">Dec 5, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+
+<h3 id="在linux-shell里我想获得以前的日期">在linux shell里，我想获得以前的日期</h3>
+
+<p>1、比如，去年的上个月的昨天的日期：（今天是2009年2月2日，也就是2008年1月1日）</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 year -1 month -1 day" "+%Y_%m_%d"`"
+reasonpun@reasonpun:~$ echo $logRecordDate
+2008_01_01
+reasonpun@reasonpun:~$
+</code></pre></div></div>
+
+<p>2、上个月的今天：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 month" "+%Y_%m_%d"`"
+reasonpun@reasonpun:~$ echo $logRecordDate
+2009_01_02
+</code></pre></div></div>
+
+<p>3、去年的今天：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 year" "+%Y_%m_%d"`"
+reasonpun@reasonpun:~$ echo $logRecordDate
+2008_02_02
+</code></pre></div></div>
+
+<p>4、上个月的昨天：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 month -1 day" "+%Y_%m_%d"`"
+reasonpun@reasonpun:~$ echo $logRecordDate
+2009_01_01
+</code></pre></div></div>
+
+<p>5、根据时间戳转换成日期</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mofun_mining@i-qe32ajmq ~]$ date -d @1434847028 "+%Y-%m-%d"
+2015-06-21
+</code></pre></div></div>
+
+<p>其他的类推～～呵呵，还是希望大家给测测其他日期会不会出错呵呵。多谢～～～
+鼓捣之环境：ubuntu8.04</p>
+
+<p>update @ 2016-12-19 15:48</p>
+
+<h3 id="php获取后一天日期的写法">PHP获取后一天日期的写法</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+$date = "04-15-2013";
+$date1 = str_replace('-', '/', $date);
+$tomorrow = date('m-d-Y', strtotime($date1 . "+1 days"));
+
+echo $tomorrow;
+
+</code></pre></div></div>
+
+<h3 id="另附上windows下获得前一天的日期">另附上windows下获得前一天的日期：</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
+set td=%date:~2,2%%date:~5,2%%date:~8,2%
+set dy=%date:~0,4%
+set dm=%date:~5,2%
+set dd=%date:~8,2%
+set da=%date:~8,2%
+if %dm%%dd%==0101 goto L01
+if %dm%%dd%==0201 goto L02
+if %dm%%dd%==0301 goto L07
+if %dm%%dd%==0401 goto L02
+if %dm%%dd%==0501 goto L04
+if %dm%%dd%==0601 goto L02
+if %dm%%dd%==0701 goto L04
+if %dm%%dd%==0801 goto L02
+if %dm%%dd%==0901 goto L02
+if %dm%%dd%==1001 goto L05
+if %dm%%dd%==1101 goto L03
+if %dm%%dd%==1201 goto L06
+if %dd%==02 goto L10
+if %dd%==03 goto L10
+if %dd%==04 goto L10
+if %dd%==05 goto L10
+if %dd%==06 goto L10
+if %dd%==07 goto L10
+if %dd%==08 goto L10
+if %dd%==09 goto L10
+if %dd%==10 goto L11
+set /A dd=dd-1
+set dt=%dy%-%dm%-%dd%
+goto END
+:L10
+set /A dd=%dd:~1,1%-1
+set dt=%dy%-%dm%-0%dd%
+goto END
+:L11
+set dt=%dy%-%dm%-09
+goto END
+:L02
+set /A dm=%dm:~1,1%-1
+set dt=%dy%-0%dm%-31
+goto END
+:L04
+set /A dm=dm-1
+set dt=%dy%-0%dm%-30
+goto END
+:L05
+set dt=%dy%-09-30
+goto END
+:L03
+set dt=%dy%-10-31
+goto END
+:L06
+set dt=%dy%-11-30
+goto END
+:L01
+set /A dy=dy-1
+set dt=%dy%-12-31
+goto END
+:L07
+set /A "dd=dy%%4"
+if not %dd%==0 goto L08
+set /A "dd=dy%%100"
+if not %dd%==0 goto L09
+set /A "dd=dy%%400"
+if %dd%==0 goto L09
+:L08
+set dt=%dy%-02-28
+goto END
+:L09
+set dt=%dy%-02-29
+goto END
+:END
+set dateTime=20%dt:~2,2%%dt:~5,2%%dt:~8,2%
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+          </div>
+        </div>
+        
+        <div class="pure-u-1-4">
+          <div id="sidebar">
+            <div class="widget">
+              
+                <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                  <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+                  <input type="hidden" name="q6" value="http://localhost:4000">
+                </form>
+              
+              
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">分类</div>
+                <ul class="category-list">
+                  
+                </ul>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">标签</div>
+                <div class="tagcloud">
+                  
+                    <a href="/tag/Emacs" style="font-size: 15px;">Emacs</a>
+                  
+                </div>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">相关推荐</div>
+                <ul class="post-list">
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Emacs-STEP-1.html"> Emacs STEP-1 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Using-Vagrant-for-Rails-Development.html"> 使用Vagrant部署Rails项目 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html"> Laravel 环境安装和配置 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/08/set-up-oryx-env.html"> 玩转 Oryx2 （一） </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/07/Oryx2-performance-doc.html"> Oryx2 性能优化文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-end-user-doc.html"> Oryx2 终端用户文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-developer-doc.html"> Oryx2 开发者文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/03/08/Java-keyword-volatile.html"> Java关键字volatile </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/01/24/Reg-Nginx.html"> 正则表达式处理Nginx </a></li>
+                
+                </ul>
+            </div>
+              
+            <div class="widget">
+              <div class="widget-title">友情链接</div>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="http://people.csail.mit.edu/matei/" title="Matei Zaharia" target="_blank">Matei Zaharia</a>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="https://github.com/tensorflow/tensorflow" title="tensorflow" target="_blank">tensorflow</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">© 2019 
+        <a href="/." rel="nofollow">Tensor Cell.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
+        
+      </div>
+      
+
+      <a id="rocket" href="#top" class="show"></a>
+      
+      <script src="/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/js/totop.js" type="text/javascript"></script>
+      <script src="/js/fancybox.pack.js" type="text/javascript"></script>
+      <script src="/js/jquery.fancybox.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
+      
+    </div>
+
+    
+
+  </body>
+
+</html>

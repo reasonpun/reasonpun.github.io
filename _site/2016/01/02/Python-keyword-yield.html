@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  
+  <title>Python关键字:yield</title>
+  <meta name="description" content="">
+  <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Tensor Cell" href="/feed.xml">
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+  <body>
+    <div class="body_container">
+      <div id="header">
+        <div class="site-name">
+          <h1 class="hidden">Python关键字:yield</h1>
+          <a id="logo" href="/.">Tensor Cell</a>
+          <p class="description">还要再走500里</p>
+        </div>
+        <div id="nav-menu">
+          
+            <a href="//"><i class="icon-home"> 首页</i></a>
+          
+            <a href="/archives/"><i class="icon-archive"> 归档</i></a>
+          
+            <a href="/about/"><i class="icon-about"> 关于</i></a>
+          
+            <a href="/history/"><i class="icon-history"> 历史</i></a>
+          
+            <a href="/feed.xml"><i class="icon-rss"> 订阅</i></a>
+          
+        </div>
+      <script type="text/javascript">
+      var menus=document.getElementById('nav-menu');
+      var ishome = true;
+      for (var i=1;i<menus.childElementCount;i++) {
+        var path = location.href;
+        var current = path.startsWith(menus.children[i].href);
+        if (current) {
+          menus.children[i].className ='current';
+          ishome = false;
+          break;
+        }
+      }
+      if (ishome) {
+      	menus.children[0].className ='current';
+      }
+      </script>
+      </div>
+
+      <div id="layout" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+          <div class="content_container">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Python关键字:yield</h1>
+    <p class="post-meta"><time datetime="2016-01-02T00:00:00+08:00" itemprop="datePublished">Jan 2, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+
+<p>注：以下代码实验环境均为</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>➜  ~  python
+Python 2.7.10 (default, Oct 23 2015, 18:05:06)
+[GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+</code></pre></div></div>
+
+<h3 id="yield关键字">Yield关键字</h3>
+
+<p>理解yield关键字之前需要先明白什么是迭代。</p>
+
+<h4 id="可迭代对象">可迭代对象</h4>
+
+<p>建立一个列表之后，可以逐项的读取列表中的元素，这就是一个可迭代的对象：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; list = [1, 2, 3, 4]
+&gt;&gt;&gt; for i in list:
+...     print i
+...
+1
+2
+3
+4
+&gt;&gt;&gt;
+</code></pre></div></div>
+
+<p>使用列表生成器建立一个列表，同样也是创建了一个可迭代的对象：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; list = [x * 2 for x in range(3)]
+&gt;&gt;&gt; list
+[0, 2, 4]
+&gt;&gt;&gt; for i in list:
+...     print i
+...
+0
+2
+4
+&gt;&gt;&gt;
+</code></pre></div></div>
+
+<p>可以使用for .. in .. 的方式处理：链表，字符串等，这就叫做一个迭代器。但是这样会将数据存放到内存中，如果数据量过大的话，就非常不适合了。</p>
+
+<h4 id="生成器">生成器</h4>
+
+<p><a href="http://pyzh.readthedocs.org/en/latest/the-python-yield-keyword-explained.html">生成器是可以迭代的，但是你 只可以读取它一次 ，因为它并不把所有的值放在内存中，它是实时地生成数据</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; g = (x * 2 for x in range(3))
+&gt;&gt;&gt; g
+&lt;generator object &lt;genexpr&gt; at 0x10978ca00&gt;
+&gt;&gt;&gt; for i in g:
+...     print i
+...
+0
+2
+4
+&gt;&gt;&gt; for i in g:
+...     print i
+...
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+</code></pre></div></div>
+
+<h4 id="yield关键字-1">yield关键字</h4>
+
+<p>yield 是一个类似return的关键字，但是这个函数返回的是生成器。</p>
+
+<p>同时我们可以利用 isgeneratorfunction 判断一个特殊的 generator 函数</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; mg = createGenerator()
+&gt;&gt;&gt; print (mg)
+&lt;generator object createGenerator at 0x10978c9b0&gt;
+&gt;&gt;&gt; for i in mg:
+...     print i
+...
+0
+2
+4
+&gt;&gt;&gt; from inspect import isgeneratorfunction
+&gt;&gt;&gt; isgeneratorfunction(mg)
+False
+&gt;&gt;&gt; isgeneratorfunction(createGenerator)
+True
+&gt;&gt;&gt;
+</code></pre></div></div>
+<p>需要注意的是：<em>当你调用这个函数的时候，函数内部的代码并不立马执行</em> ，而是返回一个生成器对象。只有当使用for进行迭代的时候，函数内的代码才会执行。</p>
+
+<h4 id="控制资源访问">控制资源访问</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; class Bank():
+...     crisis = False
+...     def createAtm(self):
+...             while not self.crisis:
+...                     yield "$100"
+...
+&gt;&gt;&gt;
+&gt;&gt;&gt; bank = Bank()
+&gt;&gt;&gt; atm = bank.createAtm()
+&gt;&gt;&gt; print(atm.next())
+$100
+&gt;&gt;&gt; print(atm.next())
+$100
+&gt;&gt;&gt; print(atm.next())
+$100
+&gt;&gt;&gt; print(atm.next())
+$100
+&gt;&gt;&gt; atm.crisis = True
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+AttributeError: 'generator' object has no attribute 'crisis'
+&gt;&gt;&gt; bank.crisis = True
+&gt;&gt;&gt; print (atm.next())
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+StopIteration
+&gt;&gt;&gt;
+</code></pre></div></div>
+<p>如果不使用yield的话，这个类执行createAtm之后就会导致系统资源耗尽（或者说是无限循环）</p>
+
+<h4 id="使用yield可以是程序非常优美虽然python程序本身就会很优美">使用yield可以是程序非常优美，虽然python程序本身就会很优美</h4>
+
+<h5 id="生成斐波那契fibonacci数列">生成斐波那契（Fibonacci）数列</h5>
+
+<p>许多初学者都会这么写</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; def fab(max):
+...     n, a, b = 0, 0, 1
+...     while n &lt; max:
+...             print b
+...             a, b = b, a + b
+...             n = n + 1
+...
+&gt;&gt;&gt; fab(5)
+1
+1
+2
+3
+5
+&gt;&gt;&gt;
+</code></pre></div></div>
+<p>使用yield改写一个版本</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; def fab(max):
+...     n, a, b = 0, 0, 1
+...     while n &lt; max:
+...             yield b
+...             a, b = b, a + b
+...             n = n + 1
+...
+&gt;&gt;&gt;
+&gt;&gt;&gt; for n in fab(5):
+...     print n
+...
+1
+1
+2
+3
+5
+&gt;&gt;&gt;
+</code></pre></div></div>
+<h4 id="简单描述下">简单描述下</h4>
+
+<p>for 语句在碰到生成器 generator 的时候，</p>
+
+<p>调用</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>generator.__next__()
+</code></pre></div></div>
+
+<p>获取生成器的返回值。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>__next__()
+</code></pre></div></div>
+
+<p>以Fibonacci为例：for每次调用，可以理解为执行了一次generator() 执行到 yield 的时候，生成器返回了n的值并停止。
+这就像普通函数碰到 return 时一样，剩下的代码都被忽略了。</p>
+
+<p>不同的地方在于，python 会记录这个停止的位置。 当再次执行generator()的时候，python 从这个停止位置开始执行而不是开头， 也就是说这次返回了1。再执行generator()，则返回2，当执行到返回5的时候，已经没有 yield 语句了， 就抛出了 StopIteration 。这和其他迭代器是类似的，当然在for中是不会抛出异常的。</p>
+
+<h4 id="进阶">进阶</h4>
+
+<p>在<a href="https://www.python.org/dev/peps/pep-0342/">PEP 342</a>中加入了将值传给生成器的支持。PEP 342加入了新的特性，能让生成器在单一语句中实现，生成一个值（像从前一样），接受一个值，或同时生成一个值并接受一个值。
+我们用前面那个关于素数的函数来展示如何将一个值传给生成器。这一次，我们不再简单地生成比某个数大的素数，而是找出比某个数的等比级数大的最小素数（例如10， 我们要生成比10，100，1000，10000 … 大的最小素数）。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; import math
+&gt;&gt;&gt; def getPrimes(number):
+...     while True:
+...             if isPrime(number):
+&gt;&gt;&gt;                     '''
+...                     yield关键字返回number的值，
+...                     而other = yield foo "返回foo的值，
+...                     这个值返回给调用者的同时，将other的值也设置为那个值"。
+...                     可以通过send方法来将一个值”发送“给生成器。
+&gt;&gt;&gt;                     '''
+...                     number = yield number
+...             number += 1
+...
+&gt;&gt;&gt; def printSuccessivePrimes(iterations, base=10):
+...     printGenerator = getPrimes(base)
+&gt;&gt;&gt;     '''
+...     用send来“启动”一个生成器时（就是从生成器函数的第一行代码执行到第一个yield语句的位置），必须发送None。因为此时生成器还没有走到第一个yield语句，如果send一个真实的值，这时是没有人去“接收”它的。一旦生成器启动了，我们就可以像上面那样发送数据了
+&gt;&gt;&gt;     '''
+...     printGenerator.send(None)
+...     for power in range(iterations):
+&gt;&gt;&gt;             '''
+...             打印的是generator.send的结果，send在发送数据给生成器的同时还返回生成器通过yield生成的值
+&gt;&gt;&gt;             '''
+...             print(printGenerator.send(base ** power))
+...
+&gt;&gt;&gt; def isPrime(number):
+...     if number &gt; 1:
+...             if number == 2:
+...                     return True
+...             if number % 2 == 0:
+...                     return False
+...             for current in range(3, int(math.sqrt(number) + 1), 2):
+...                     if number % current == 0:
+...                             return False
+...             return True
+...     return False
+...
+&gt;&gt;&gt;
+&gt;&gt;&gt; printSuccessivePrimes(10)
+2
+11
+101
+1009
+10007
+100003
+1000003
+10000019
+100000007
+1000000007
+&gt;&gt;&gt;
+</code></pre></div></div>
+<p>Python 使用yield的关键思想</p>
+<ul>
+  <li>generator是用来产生一系列值的</li>
+  <li>yield则像是generator函数的返回结果</li>
+  <li>yield唯一所做的另一件事就是保存一个generator函数的状态</li>
+  <li>generator就是一个特殊类型的迭代器（iterator）</li>
+  <li>和迭代器相似，我们可以通过使用next()来从generator中获取下一个值</li>
+  <li>通过隐式地调用next()来忽略一些值</li>
+</ul>
+
+<h3 id="参考文献">参考文献</h3>
+<ul>
+  <li>http://pyzh.readthedocs.org/en/latest/the-python-yield-keyword-explained.html</li>
+  <li>http://www.dabeaz.com/coroutines/index.html</li>
+  <li>https://docs.python.org/2/tutorial/classes.html</li>
+  <li>http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python</li>
+  <li>http://www.pydanny.com/python-yields-are-fun.html</li>
+  <li>http://dhcmrlchtdj.github.io/sia/post/2012-11-20/python_yield.html</li>
+  <li>http://www.oschina.net/translate/improve-your-python-yield-and-generators-explained</li>
+  <li>http://www.pythonclub.org/python-basic/yield</li>
+  <li>https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/</li>
+  <li>https://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/</li>
+  <li>http://pythontips.com/2013/09/29/the-python-yield-keyword-explained/</li>
+  <li>http://blog.jobbole.com/28506/</li>
+</ul>
+
+  </div>
+
+</article>
+
+          </div>
+        </div>
+        
+        <div class="pure-u-1-4">
+          <div id="sidebar">
+            <div class="widget">
+              
+                <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                  <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+                  <input type="hidden" name="q6" value="http://localhost:4000">
+                </form>
+              
+              
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">分类</div>
+                <ul class="category-list">
+                  
+                </ul>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">标签</div>
+                <div class="tagcloud">
+                  
+                    <a href="/tag/Emacs" style="font-size: 15px;">Emacs</a>
+                  
+                </div>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">相关推荐</div>
+                <ul class="post-list">
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Emacs-STEP-1.html"> Emacs STEP-1 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Using-Vagrant-for-Rails-Development.html"> 使用Vagrant部署Rails项目 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html"> Laravel 环境安装和配置 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/08/set-up-oryx-env.html"> 玩转 Oryx2 （一） </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/07/Oryx2-performance-doc.html"> Oryx2 性能优化文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-end-user-doc.html"> Oryx2 终端用户文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-developer-doc.html"> Oryx2 开发者文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/03/08/Java-keyword-volatile.html"> Java关键字volatile </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/01/24/Reg-Nginx.html"> 正则表达式处理Nginx </a></li>
+                
+                </ul>
+            </div>
+              
+            <div class="widget">
+              <div class="widget-title">友情链接</div>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="http://people.csail.mit.edu/matei/" title="Matei Zaharia" target="_blank">Matei Zaharia</a>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="https://github.com/tensorflow/tensorflow" title="tensorflow" target="_blank">tensorflow</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">© 2019 
+        <a href="/." rel="nofollow">Tensor Cell.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
+        
+      </div>
+      
+
+      <a id="rocket" href="#top" class="show"></a>
+      
+      <script src="/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/js/totop.js" type="text/javascript"></script>
+      <script src="/js/fancybox.pack.js" type="text/javascript"></script>
+      <script src="/js/jquery.fancybox.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
+      
+    </div>
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,2591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tensor Cell</title>
+    <description>博客描述</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 04 Mar 2019 23:55:57 +0800</pubDate>
+    <lastBuildDate>Mon, 04 Mar 2019 23:55:57 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Emacs STEP-1</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;h2 id=&quot;emacs学习入门-step1&quot;&gt;Emacs学习入门 STEP－1&lt;/h2&gt;
+
+&lt;p&gt;摘自（ &lt;a href=&quot;http://blog.csdn.net/redguardtoo/article/details/7222501&quot;&gt;一年成为Emacs高手（像神一样使用编辑器）&lt;/a&gt; ）&lt;/p&gt;
+
+&lt;h3 id=&quot;开端&quot;&gt;开端&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不要着急从Lisp入手，先着手短小练习，培养兴趣，逐步提高－－以实际问题作为切入点&lt;/li&gt;
+  &lt;li&gt;站在巨人的肩膀上
+    &lt;ul&gt;
+      &lt;li&gt;Copy高手的配置文件 &lt;a href=&quot;http://www.sanityinc.com/&quot;&gt;世界级大师 Steve Purcell&lt;/a&gt;的&lt;a href=&quot;https://github.com/purcell/emacs.d&quot;&gt;Emacs 配置&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;关键是要实干.一个很好的治愈方法就是把&lt;a href=&quot;http://planet.emacsen.org/&quot;&gt;http://planet.emacsen.org/&lt;/a&gt; 上约4000篇文章通读一遍&lt;/li&gt;
+      &lt;li&gt;加入社区更上一层楼
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/emacs/&quot;&gt;https://www.reddit.com/r/emacs/&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=oJTwQvgfgMM&quot;&gt;https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=oJTwQvgfgMM&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;多读书
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.emacswiki.org/&quot;&gt;https://www.emacswiki.org/&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;Bob Glickstein的&lt;a href=&quot;https://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611&quot;&gt;Writing GNU Emacs Extensions&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html&quot;&gt;Xah Lee 提供付费Lisp教程&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html&quot;&gt;Steve Yegge的Emacs Lisp教程&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;第三方插件
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.emacswiki.org/emacs/Evil&quot;&gt;Evil&lt;/a&gt;	: 将 Emacs变为Vim&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://orgmode.org/&quot;&gt;Org&lt;/a&gt;	: org-mode,全能的笔记工具&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/company-mode/company-mode&quot;&gt;company-mode&lt;/a&gt; :	自动完成输入,支持各种语言和后端&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/magnars/expand-region.el&quot;&gt;expand-region&lt;/a&gt;	快捷键选中文本,可将选择区域伸缩&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/nonsequitur/smex&quot;&gt;smex&lt;/a&gt; :	让输入命令变得飞快&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/joaotavora/yasnippet&quot;&gt;yasnippet&lt;/a&gt; :	强大的文本模板输入工具&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.emacswiki.org/emacs/FlyMake&quot;&gt;flymake&lt;/a&gt; :	对不同语言做语法检查&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/abo-abo/swiper/blob/master/ivy.el&quot;&gt;ivy&lt;/a&gt; or &lt;a href=&quot;https://github.com/emacs-helm/helm&quot;&gt;helm&lt;/a&gt; :	自动完成,在其上有插件完成具体功能&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.emacswiki.org/emacs/InteractivelyDoThings&quot;&gt;ido&lt;/a&gt;	和helm类似,helm和ido可同时用&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/mooz/js2-mode&quot;&gt;js2-mode&lt;/a&gt; :	javascript的主模式,自带语法解释器&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.emacswiki.org/emacs/emacs-w3m&quot;&gt;w3m&lt;/a&gt; :	网络浏览器(需安装命令行工具w3m)&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/skeeto/emacs-web-server&quot;&gt;simple-httpd&lt;/a&gt;	: Lisp 写的 Web 服务器&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/nschum/window-numbering.el&quot;&gt;window-numbering.el&lt;/a&gt; :	跳转到不同的子窗口&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/fxbois/web-mode&quot;&gt;web-mode&lt;/a&gt; :	支持各种 HTML 文件&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/magit/magit&quot;&gt;magit&lt;/a&gt; :	玩转git&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/syohex/emacs-git-gutter&quot;&gt;git-gutter.el&lt;/a&gt; :	标记版本控制的diff(支持subversion)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;学习org-mode : &lt;a href=&quot;http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html&quot;&gt;http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;行动 行动 行动&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;注意&quot;&gt;注意&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不需要刻意的去记快捷键，随用随记&lt;/li&gt;
+  &lt;li&gt;用 &lt;a href=&quot;https://www.emacswiki.org/emacs/Smex&quot;&gt;Smex&lt;/a&gt;,可飞快输入命令,快捷键实际上不需要了&lt;/li&gt;
+  &lt;li&gt;如下载了第三方插件,如果发觉其有问题,可以在&lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html&quot;&gt;不碰该插件原始代码的情况下修复&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;插件服务器关闭了,应可以在&lt;a href=&quot;https://github.com/redguardtoo/elpa-mirror&quot;&gt;自带的U盘上快速建立镜像&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
+
+&lt;p&gt;官方插件仓库&lt;a href=&quot;https://elpa.gnu.org&quot;&gt;https://elpa.gnu.org&lt;/a&gt;下载安装插件&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 21 Jan 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/01/21/Emacs-STEP-1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/21/Emacs-STEP-1.html</guid>
+        
+        <category>Emacs</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>使用Vagrant部署Rails项目</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;h2 id=&quot;简述&quot;&gt;简述&lt;/h2&gt;
+
+&lt;p&gt;Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。&lt;/p&gt;
+
+&lt;p&gt;自个儿的Rails的开发环境也不会随着你开发机的变化而变化。另外，你可以在分分钟内启动一个可能需要在12个月以后重新访问的项目，那时你会感谢自己在项目初期使用了这个工具。&lt;/p&gt;
+
+&lt;p&gt;我们会使用&lt;a href=&quot;https://www.chef.io/chef/&quot;&gt;Chef&lt;/a&gt;完成虚拟机开发环境的自动部署。chef会负责为我们的系统配置Ruby和所有依赖的包。非常适合快速开发（It’s pretty RAD）。&lt;/p&gt;
+
+&lt;p&gt;BB的够多的了，让我们开始吧！&lt;/p&gt;
+
+&lt;h2 id=&quot;配置vagrant&quot;&gt;配置Vagrant&lt;/h2&gt;
+
+&lt;p&gt;首先，开始执行之前确认下本机至少有1G的空闲内存，因为Vagrant会在你的虚拟机中启动一个完整的操作系统，用来执行Rails程序。&lt;/p&gt;
+
+&lt;p&gt;第一步，在本机安装Vagrant和VirtualBox。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.vagrantup.com/downloads.html&quot;&gt;移步这里下载安装Vagrant&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;移步这里下载安装VirtualBox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;虚拟机是运行在VirtualBox里的，这些都是后台运行的程序，只能通过SSH进行交互。&lt;/p&gt;
+
+&lt;p&gt;其次，我们需要安装Vagrant的两个插件。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vagrant-vbguest 自动安装各种Guest扩展程序&lt;/li&gt;
+  &lt;li&gt;vagrant-librarian-chef 让我们可以在机器启动的时候自动执行chef&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-librarian-chef-nochef
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这个可能需要些时间才能执行完毕。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  ds git:(dev) vagrant plugin install vagrant-vbguest
+Installing the 'vagrant-vbguest' plugin. This can take a few minutes...
+Installed the plugin 'vagrant-vbguest (0.13.0)'!
+➜  ds git:(dev) vagrant plugin install vagrant-librarian-chef-nochef
+Installing the 'vagrant-librarian-chef-nochef' plugin. This can take a few minutes...
+Installed the plugin 'vagrant-librarian-chef-nochef (0.2.0)'!
+➜  ds git:(dev)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;创建vagrant配置文件&quot;&gt;创建Vagrant配置文件&lt;/h2&gt;
+
+&lt;p&gt;首要的，进入需要配置chef的Rails项目目录，并执行如下命令。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  ds git:(dev) vagrant init
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+➜  ds git:(dev) ✗ touch Cheffile
+➜  ds git:(dev) ✗ ls
+Cheffile     README.md    app          config.ru    log          tmp
+Gemfile      Rakefile     bin          db           public       vendor
+Gemfile.lock Vagrantfile  config       lib          test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;由此会生成Vagrantfile和Cheffile两个文件。&lt;/p&gt;
+
+&lt;h2 id=&quot;cheffile&quot;&gt;Cheffile&lt;/h2&gt;
+
+&lt;p&gt;现在，我们可以配置Chef文件了。这个文件和我们的Rails的gem 文件类似，只不过是用于Chef的。这个文件中会定义很多Chef cookbooks用来在稍后的Vagrantfile中指挥Vagrant配置我们的环境的具体内容。&lt;/p&gt;
+
+&lt;p&gt;我们仅仅只需要黏贴如下代码到Cheffile中：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+site &quot;http://community.opscode.com/api/v1&quot;
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'mysql', '5.5.3'
+cookbook 'ruby_build'
+cookbook 'nodejs'
+cookbook 'rbenv', git: 'https://github.com/aminin/chef-rbenv'
+cookbook 'vim'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;vagrantfile&quot;&gt;Vagrantfile&lt;/h2&gt;
+
+&lt;p&gt;Vagrantfile 定义了虚拟机中的操作系统和Chef的配置项。&lt;/p&gt;
+
+&lt;p&gt;我们会使用Ubuntu 16.04 xenial 64-bit和4G的内存这个版本配置（如果你用的32位的系统，只需要改成xenial32即可）。还需要打开虚拟机的3000端口，这样，我们通过本地浏览器就可以访问虚拟机上的Rails服务了。不过至少到现在为止，我们已经在虚拟机中通过Chef配置好了Ruby2.3.1和MySQL。&lt;/p&gt;
+
+&lt;p&gt;Vagrantfile文件的内容如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# -*- mode: ruby -*-&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# vi: set ft=ruby :&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;VAGRANTFILE_API_VERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2&quot;&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;Vagrant&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;configure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;VAGRANTFILE_API_VERSION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Use Ubuntu 16.04 Xenial Xerus 64-bit as our operating system&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;vm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;box&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ubuntu/xenial64&quot;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Configurate the virtual machine to use 4GB of RAM&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;vm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;provider&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:virtualbox&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;customize&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;modifyvm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;--memory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;4048&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Forward the Rails server default port to the host&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;vm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;network&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:forwarded_port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;guest: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;host: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Use Chef Solo to provision our virtual machine&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;vm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;provision&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:chef_solo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cookbooks_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cookbooks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;site-cookbooks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;apt&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;nodejs&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ruby_build&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rbenv::user&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rbenv::vagrant&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;vim&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mysql::server&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_recipe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mysql::client&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# Install Ruby 2.3.1 and Bundler&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Set an empty root password for MySQL to make things simple&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;chef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;rbenv: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;user_installs: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;
+          &lt;span class=&quot;ss&quot;&gt;user: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'vagrant'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;ss&quot;&gt;rubies: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2.3.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+          &lt;span class=&quot;ss&quot;&gt;global: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2.3.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;ss&quot;&gt;gems: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&quot;2.3.1&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bundler&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;mysql: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;server_root_password: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;执行vagrant&quot;&gt;执行Vagrant&lt;/h2&gt;
+
+&lt;p&gt;至此，我们已经配置好了Vagrant和Chef。我们将启动Vagrant虚拟主机，并通过ssh登陆进去！&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# The commented lines are the output you should see when you run these commands
+
+vagrant up
+#==&amp;gt; default: Checking if box 'ubuntu/xenial64' is up to date...
+#==&amp;gt; default: Clearing any previously set forwarded ports...
+#==&amp;gt; default: Installing Chef cookbooks with Librarian-Chef...
+#==&amp;gt; default: The cookbook path '/Users/chris/code/test_app/site-cookbooks' doesn't exist. Ignoring...
+#==&amp;gt; default: Clearing any previously set network interfaces...
+#==&amp;gt; default: Preparing network interfaces based on configuration...
+#    default: Adapter 1: nat
+#==&amp;gt; default: Forwarding ports...
+#    default: 3000 =&amp;gt; 3000 (adapter 1)
+#    default: 22 =&amp;gt; 2222 (adapter 1)
+#==&amp;gt; default: Running 'pre-boot' VM customizations...
+#==&amp;gt; default: Booting VM...
+#==&amp;gt; default: Waiting for machine to boot. This may take a few minutes...
+#    default: SSH address: 127.0.0.1:2222
+#    default: SSH username: vagrant
+#    default: SSH auth method: private key
+#    default: Warning: Connection timeout. Retrying...
+#==&amp;gt; default: Machine booted and ready!
+#==&amp;gt; default: Checking for guest additions in VM...
+#==&amp;gt; default: Mounting shared folders...
+#    default: /vagrant =&amp;gt; /Users/chris/code/test_app
+#   default: /tmp/vagrant-chef-1/chef-solo-1/cookbooks =&amp;gt; /Users/chris/code/test_app/cookbooks
+#==&amp;gt; default: VM already provisioned. Run `vagrant provision` or use `--provision` to force it
+
+vagrant ssh
+#Welcome to Ubuntu 16.04 LTS (GNU/Linux 3.13.0-24-generic x86_64)
+#
+# * Documentation:  https://help.ubuntu.com/
+#
+# System information disabled due to load higher than 1.0
+#
+#  Get cloud support with Ubuntu Advantage Cloud Guest:
+#    http://www.ubuntu.com/business/services/cloud
+#
+#
+#vagrant@vagrant-ubuntu-xenial-64:~$
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;首次启动vagrant需要很长很长很长时间，因为需要准备chef文件中设置的诸多配置项，之后再次执行的话，不再执行Chef就会快很多了。&lt;/p&gt;
+
+&lt;p&gt;如果修改了Vagrantfile和Cheffile文件，你需要使用如下命令重新使机器配置生效&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vagrant provision
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;在vagrant中使用rails&quot;&gt;在Vagrant中使用Rails&lt;/h2&gt;
+
+&lt;p&gt;Vagrant会创建一个名字为/vagrant的共享文件夹，可以是虚拟机和本机之间做文件共享。如果进入/vagrant目录下并执行ls命令，会看到Rails项目的所有文件。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;在虚拟机中安装所有需要的gem。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv rehash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;确保我们刚刚安装的gem是可用的。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake db:create &amp;amp;&amp;amp; rake db:migrate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;创建和迁移数据库。&lt;/p&gt;
+
+&lt;p&gt;该目录下的Rails服务器通过3000端口对外提供服务。可以通过localhost:3000访问Rails。&lt;/p&gt;
+
+&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;
+
+&lt;p&gt;Vagrant是一个非常Diao的工具，非常方便，通过见得的Chef配置文件，我们可以随时随地使用。
+如果你需要再次配置一个Vagrant机器，或者是你的合作小伙伴需要配置一个的话，你们只需要执行&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vagrant up
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;即可。&lt;/p&gt;
+
+&lt;p&gt;Q&amp;amp;A&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;执行vagrant up命令失败
+A：请检查 VirtualBox的版本是否与Vagrant下载扩展的版本一致，我本地使用的是5.0.24 。&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;==&amp;gt; default: Machine booted and ready!
+[default] GuestAdditions versions on your host (4.3.28) and guest (5.0.24) do not match.
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;另外Vagrant 1.8.4与 VirtualBox5.1.x版本不兼容。&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  ds git:(dev) ✗ vagrant up --provider=virtualbox
+No usable default provider could be found for your system.
+
+Vagrant relies on interactions with 3rd party systems, known as
+&quot;providers&quot;, to provide Vagrant with resources to run development
+environments. Examples are VirtualBox, VMware, Hyper-V.
+
+The easiest solution to this message is to install VirtualBox, which
+is available for free on all major platforms.
+
+If you believe you already have a provider available, make sure it
+is properly installed and configured. You can see more details about
+why a particular provider isn't working by forcing usage with
+`vagrant up --provider=PROVIDER`, which should give you a more specific
+error message for that particular provider.
+➜  ds git:(dev) ✗ cat /etc/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;需要安装ruby-dev&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;PostgresSQL 头文件&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libpq-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 04 Nov 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/11/04/Using-Vagrant-for-Rails-Development.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/04/Using-Vagrant-for-Rails-Development.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Laravel和Dropzone.js实现文件上传</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;p&gt;Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。&lt;/p&gt;
+
+&lt;p&gt;在Laravel项目中加入Dropzone对于没有经验的新手来说会有很多麻烦，所以在这里会讲些最靠谱的解决方法。&lt;/p&gt;
+
+&lt;p&gt;这篇引导会讲到：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;文件自动上传（上传队列自动处理）&lt;/li&gt;
+  &lt;li&gt;在预览页面通过ajax直接删除图片&lt;/li&gt;
+  &lt;li&gt;还可以统计上传的图片数量&lt;/li&gt;
+  &lt;li&gt;保存两种图片尺寸：原始尺寸和icon尺寸&lt;/li&gt;
+  &lt;li&gt;Using Image Intervention package for resizing and image encoding&lt;/li&gt;
+  &lt;li&gt;保存图片数据到数据库&lt;/li&gt;
+  &lt;li&gt;服务器端保存唯一的文件名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果正在找一种上传和编辑图片的最贱的方法，可以checkout&lt;a href=&quot;http://www.croppic.net/&quot;&gt;Croppic jQuery plugin&lt;/a&gt;。Croppic是一个简单的类似Facebook，Twitter或者LinkedIn的照片属性编辑组件。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;整个项目可以从 https://github.com/codingo-me/dropzone-laravel-image-upload 获取&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;实现的效果图如下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;基本的项目配置&quot;&gt;基本的项目配置&lt;/h2&gt;
+
+&lt;p&gt;我将会使用Laravel安装器安装一版纯净的Laravel环境 and create environment file with database credentials.&lt;/p&gt;
+
+&lt;p&gt;首先从 https://github.com/enyo/dropzone/tree/master/dist 下载最新的js和styles文件。然后放到项目的public/packages/dropzone文件夹下。&lt;/p&gt;
+
+&lt;p&gt;前端使用Bootstrap。 把相关文件放到public/packages/bootstrap。&lt;/p&gt;
+
+&lt;p&gt;需要用到两个第三方包：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;......
+    &quot;require&quot;: {
+        &quot;php&quot;: &quot;&amp;gt;=5.5.9&quot;,
+        &quot;laravel/framework&quot;: &quot;5.2.*&quot;,
+        &quot;laravelcollective/html&quot;: &quot;5.2.*&quot;,
+        &quot;intervention/image&quot;: &quot;^2.3&quot;
+    },
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;通过composer install/update安装完成后，需要在同一个文件中添加：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Intervention\Image\ImageServiceProvider::class,
+Collective\Html\HtmlServiceProvider::class,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;和facades&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    'Form'      =&amp;gt; Collective\Html\FormFacade::class,
+    'HTML'      =&amp;gt; Collective\Html\HtmlFacade::class,
+    'Image'     =&amp;gt; Intervention\Image\Facades\Image::class
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;视图&quot;&gt;视图&lt;/h2&gt;
+
+&lt;p&gt;这个引导只包含一个用来上传图片的页面。但是最好能分割成不同的模块：主布局文件和独立的文件；&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Image upload in Laravel 5.2 with Dropzone.js&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    {!! HTML::style('/packages/bootstrap/css/bootstrap.min.css') !!}
+    {!! HTML::style('/assets/css/style.css') !!}
+    {!! HTML::script('https://code.jquery.com/jquery-2.1.4.min.js') !!}
+
+    @yield('head')
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar navbar-default&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;button&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-toggle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-toggle=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;collapse&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.navbar-collapse&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon-bar&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon-bar&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon-bar&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-brand&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Dropzone + Laravel&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-collapse collapse&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nav navbar-nav&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Upload&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+
+@yield('content')
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+@yield('footer')
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;主要的布局文件非常简单，只是包含底部导航栏和多个balde的section。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@extends('layout')
+
+@section('head')
+    {!! HTML::style('/packages/dropzone/dropzone.css') !!}
+@stop
+
+@section('footer')
+    {!! HTML::script('/packages/dropzone/dropzone.js') !!}
+    {!! HTML::script('/assets/js/dropzone-config.js') !!}
+@stop
+
+@section('content')
+
+    &amp;lt;div class=&quot;row&quot;&amp;gt;
+        &amp;lt;div class=&quot;col-md-offset-1 col-md-10&quot;&amp;gt;
+            &amp;lt;div class=&quot;jumbotron how-to-create&quot; &amp;gt;
+
+                &amp;lt;h3&amp;gt;Images &amp;lt;span id=&quot;photoCounter&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/h3&amp;gt;
+                &amp;lt;br /&amp;gt;
+
+                {!! Form::open(['url' =&amp;gt; route('upload-post'), 'class' =&amp;gt; 'dropzone', 'files'=&amp;gt;true, 'id'=&amp;gt;'real-dropzone']) !!}
+
+                &amp;lt;div class=&quot;dz-message&quot;&amp;gt;
+
+                &amp;lt;/div&amp;gt;
+
+                &amp;lt;div class=&quot;fallback&quot;&amp;gt;
+                    &amp;lt;input name=&quot;file&quot; type=&quot;file&quot; multiple /&amp;gt;
+                &amp;lt;/div&amp;gt;
+
+                &amp;lt;div class=&quot;dropzone-previews&quot; id=&quot;dropzonePreview&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+                &amp;lt;h4 style=&quot;text-align: center;color:#428bca;&quot;&amp;gt;Drop images in this area  &amp;lt;span class=&quot;glyphicon glyphicon-hand-down&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/h4&amp;gt;
+
+                {!! Form::close() !!}
+
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;jumbotron how-to-create&quot;&amp;gt;
+                &amp;lt;ul&amp;gt;
+                    &amp;lt;li&amp;gt;Images are uploaded as soon as you drop them&amp;lt;/li&amp;gt;
+                    &amp;lt;li&amp;gt;Maximum allowed size of image is 8MB&amp;lt;/li&amp;gt;
+                &amp;lt;/ul&amp;gt;
+
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;!-- Dropzone Preview Template --&amp;gt;
+    &amp;lt;div id=&quot;preview-template&quot; style=&quot;display: none;&quot;&amp;gt;
+
+        &amp;lt;div class=&quot;dz-preview dz-file-preview&quot;&amp;gt;
+            &amp;lt;div class=&quot;dz-image&quot;&amp;gt;&amp;lt;img data-dz-thumbnail=&quot;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+            &amp;lt;div class=&quot;dz-details&quot;&amp;gt;
+                &amp;lt;div class=&quot;dz-size&quot;&amp;gt;&amp;lt;span data-dz-size=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;dz-filename&quot;&amp;gt;&amp;lt;span data-dz-name=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;dz-progress&quot;&amp;gt;&amp;lt;span class=&quot;dz-upload&quot; data-dz-uploadprogress=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;dz-error-message&quot;&amp;gt;&amp;lt;span data-dz-errormessage=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+
+            &amp;lt;div class=&quot;dz-success-mark&quot;&amp;gt;
+                &amp;lt;svg width=&quot;54px&quot; height=&quot;54px&quot; viewBox=&quot;0 0 54 54&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:sketch=&quot;http://www.bohemiancoding.com/sketch/ns&quot;&amp;gt;
+                    &amp;lt;!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch --&amp;gt;
+                    &amp;lt;title&amp;gt;Check&amp;lt;/title&amp;gt;
+                    &amp;lt;desc&amp;gt;Created with Sketch.&amp;lt;/desc&amp;gt;
+                    &amp;lt;defs&amp;gt;&amp;lt;/defs&amp;gt;
+                    &amp;lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; sketch:type=&quot;MSPage&quot;&amp;gt;
+                        &amp;lt;path d=&quot;M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z&quot; id=&quot;Oval-2&quot; stroke-opacity=&quot;0.198794158&quot; stroke=&quot;#747474&quot; fill-opacity=&quot;0.816519475&quot; fill=&quot;#FFFFFF&quot; sketch:type=&quot;MSShapeGroup&quot;&amp;gt;&amp;lt;/path&amp;gt;
+                    &amp;lt;/g&amp;gt;
+                &amp;lt;/svg&amp;gt;
+            &amp;lt;/div&amp;gt;
+
+            &amp;lt;div class=&quot;dz-error-mark&quot;&amp;gt;
+                &amp;lt;svg width=&quot;54px&quot; height=&quot;54px&quot; viewBox=&quot;0 0 54 54&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:sketch=&quot;http://www.bohemiancoding.com/sketch/ns&quot;&amp;gt;
+                    &amp;lt;!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch --&amp;gt;
+                    &amp;lt;title&amp;gt;error&amp;lt;/title&amp;gt;
+                    &amp;lt;desc&amp;gt;Created with Sketch.&amp;lt;/desc&amp;gt;
+                    &amp;lt;defs&amp;gt;&amp;lt;/defs&amp;gt;
+                    &amp;lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; sketch:type=&quot;MSPage&quot;&amp;gt;
+                        &amp;lt;g id=&quot;Check-+-Oval-2&quot; sketch:type=&quot;MSLayerGroup&quot; stroke=&quot;#747474&quot; stroke-opacity=&quot;0.198794158&quot; fill=&quot;#FFFFFF&quot; fill-opacity=&quot;0.816519475&quot;&amp;gt;
+                            &amp;lt;path d=&quot;M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z&quot; id=&quot;Oval-2&quot; sketch:type=&quot;MSShapeGroup&quot;&amp;gt;&amp;lt;/path&amp;gt;
+                        &amp;lt;/g&amp;gt;
+                    &amp;lt;/g&amp;gt;
+                &amp;lt;/svg&amp;gt;
+            &amp;lt;/div&amp;gt;
+
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;!-- End Dropzone Preview Template --&amp;gt;
+
+{!! Form::hidden('csrf-token', csrf_token(), ['id' =&amp;gt; 'csrf-token']) !!}
+@stop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在上传视图的 &lt;strong&gt;头部部分&lt;/strong&gt; 加入Dropzone的缺省样式，在 &lt;strong&gt;底部部分&lt;/strong&gt; 加入Dropzone缺省的js文件，和自己的Dropzone配置文件。&lt;/p&gt;
+
+&lt;p&gt;内容部分包含两个，第一个是上传表单部分，第二部分是隐藏的预览模板部分。在Dropzone下载了预览模板的代码。配置文件中的模板部分用来显示上传文件的预览。&lt;/p&gt;
+
+&lt;p&gt;因为需要使用token完成提交和删除路由，所以在内容的底部部分，加入隐藏的csrf字段。&lt;/p&gt;
+
+&lt;h2 id=&quot;dropzone的配置&quot;&gt;Dropzone的配置&lt;/h2&gt;
+
+&lt;p&gt;Dropzone具有很多可用的配置选项。对于这个项目来说，使用Dropzone实现文件的批量顺序上传，就可以避免重复选择需要上传的文件。并行的上传数最大100个，单个文件的尺寸最大设置为8MB。同时上传成功的文件可以在模板html页面中显示预览。&lt;/p&gt;
+
+&lt;p&gt;每个预览的图片都可以通过点击下方的删除链接删除，这个操作会触发删除文件事件。这个事件会创建一个ajax发起一个删除请求，并且会返回200状态码，图片数也会相应的减少。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var photo_counter = 0;
+Dropzone.options.realDropzone = {
+
+    uploadMultiple: false,
+    parallelUploads: 100,
+    maxFilesize: 8,
+    previewsContainer: '#dropzonePreview',
+    previewTemplate: document.querySelector('#preview-template').innerHTML,
+    addRemoveLinks: true,
+    dictRemoveFile: 'Remove',
+    dictFileTooBig: 'Image is bigger than 8MB',
+
+    // The setting up of the dropzone
+    init:function() {
+
+        this.on(&quot;removedfile&quot;, function(file) {
+
+            $.ajax({
+                type: 'POST',
+                url: 'upload/delete',
+                data: {id: file.name, _token: $('#csrf-token').val()},
+                dataType: 'html',
+                success: function(data){
+                    var rep = JSON.parse(data);
+                    if(rep.code == 200)
+                    {
+                        photo_counter--;
+                        $(&quot;#photoCounter&quot;).text( &quot;(&quot; + photo_counter + &quot;)&quot;);
+                    }
+
+                }
+            });
+
+        } );
+    },
+    error: function(file, response) {
+        if($.type(response) === &quot;string&quot;)
+            var message = response; //dropzone sends it's own error messages in string
+        else
+            var message = response.message;
+        file.previewElement.classList.add(&quot;dz-error&quot;);
+        _ref = file.previewElement.querySelectorAll(&quot;[data-dz-errormessage]&quot;);
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i &amp;lt; _len; _i++) {
+            node = _ref[_i];
+            _results.push(node.textContent = message);
+        }
+        return _results;
+    },
+    success: function(file,done) {
+        photo_counter++;
+        $(&quot;#photoCounter&quot;).text( &quot;(&quot; + photo_counter + &quot;)&quot;);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在配置文件底部，当文件上传成功后，图片计数器会增加。&lt;/p&gt;
+
+&lt;h2 id=&quot;上传逻辑&quot;&gt;上传逻辑&lt;/h2&gt;
+
+&lt;p&gt;根据功能逻辑划分不同的实现类，在这个项目中，实现了一个__ImageRepository__类，将其放到目录app/Logic/Image/ImageRepository.php中。&lt;/p&gt;
+
+&lt;p&gt;迄今为止这个类只有2个功能，主要是负责上传单个文件和删除指定文件。在__ImageController__类文件中实现了这个类的实例。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App\Http\Controllers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App\Logic\Image\ImageRepository&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Support\Facades\Input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ImageController&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Controller&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ImageRepository&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$imageRepository&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$imageRepository&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getUpload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'pages.upload'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;postUpload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;upload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;deleteUpload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;因此这个控制器需要添加3个路由，一个用来显示上传表单，一个用来接收上传的文件，第三个用来发起删除请求。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Route::get('/', ['as' =&amp;gt; 'upload', 'uses' =&amp;gt; 'ImageController@getUpload']);
+Route::post('upload', ['as' =&amp;gt; 'upload-post', 'uses' =&amp;gt;'ImageController@postUpload']);
+Route::post('upload/delete', ['as' =&amp;gt; 'upload-remove', 'uses' =&amp;gt;'ImageController@deleteUpload']);
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在类文件__ImageController__ 的 &lt;strong&gt;postUpload&lt;/strong&gt; 方法中将用户的输入传入  &lt;strong&gt;ImageRepository&lt;/strong&gt; 类中的 &lt;strong&gt;upload&lt;/strong&gt; 方法中。&lt;/p&gt;
+
+&lt;p&gt;这个方法&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首先会验证输入的合法性&lt;/li&gt;
+  &lt;li&gt;然后会为上传的文件生成服务器唯一的文件名&lt;/li&gt;
+  &lt;li&gt;最后将文件按照原始尺寸和icon的尺寸分别存入服务器不同的目录。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同时，他也可以在数据库中创建完整的实体，从而Laravel可以轻松的掌控上传的图片。&lt;/p&gt;
+
+&lt;p&gt;首先，创建migration文件，并执行migrations。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Database\Schema\Blueprint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Database\Migrations\Migration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateImages&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Migration&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;sd&quot;&gt;/**
+     * Run the migrations.
+     *
+     * @return void
+     */&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;Schema&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'images'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Blueprint&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;increments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'original_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'filename'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;timestamps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;sd&quot;&gt;/**
+     * Reverse the migrations.
+     *
+     * @return void
+     */&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;down&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;Schema&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'images'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注意到上传的文件会被保存为两种格式，原始尺寸和icon尺寸。使用 &lt;strong&gt;Image Intervention package&lt;/strong&gt; 修改图片尺寸和编码。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App\Logic\Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Support\Facades\Validator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Support\Facades\Response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Support\Facades\Config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Support\Facades\File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Intervention\Image\ImageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App\Models\Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ImageRepository&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;upload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$form_data&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$validator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Validator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$form_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$rules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$validator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'error'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'message'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$validator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'code'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$form_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'file'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$originalName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClientOriginalName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClientOriginalExtension&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$originalNameWithoutExt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$originalName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$originalName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sanitize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$originalNameWithoutExt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$allowed_filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createUniqueFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$uploadSuccess1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;original&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$allowed_filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$uploadSuccess2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$allowed_filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$uploadSuccess1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$uploadSuccess2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'error'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'message'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Server error while uploading'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'code'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;filename&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$allowed_filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;original_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$originalName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;'error'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;'code'&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createUniqueFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$full_size_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'images.full_size'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$full_image_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$full_size_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$full_image_path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// Generate token for image&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$imageToken&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sha1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mt_rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'-'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$imageToken&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;sd&quot;&gt;/**
+     * Optimize Original Image
+     */&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;original&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$manager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ImageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$manager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'images.full_size'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;sd&quot;&gt;/**
+     * Create Icon From Original
+     */&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$manager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ImageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$manager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$photo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$constraint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$constraint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;aspectRatio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'images.icon_size'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;sd&quot;&gt;/**
+     * Delete Image From Session folder, based on original filename
+     */&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$originalFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$full_size_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'images.full_size'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$icon_size_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'images.icon_size'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'original_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'like'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$originalFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'error'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;'code'&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nv&quot;&gt;$full_path1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$full_size_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$full_path2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$icon_size_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$full_path1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$full_path1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$full_path2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$full_path2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$sessionImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;'error'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;'code'&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sanitize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$force_lowercase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$anal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$strip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;~&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;`&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;(&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;=&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;[&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;{&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&quot;}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;#8216;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;#8217;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;#8220;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;#8221;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;#8211;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;#8212;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&quot;â€”&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;â€“&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str_replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;strip_tags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;preg_replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/\s+/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$anal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;preg_replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/[^a-zA-Z0-9]/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$force_lowercase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;function_exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mb_strtolower'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;mb_strtolower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'UTF-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;strtolower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上传的方法中还会引用Image模型中验证规则验证图片类型，只有符合条件的图片可以上传。&lt;/p&gt;
+
+&lt;p&gt;然后，通过方法 &lt;strong&gt;createUniqueFilename&lt;/strong&gt; 检查下图片原始的文件名称在服务器上是否唯一。如果存在同名的文件，这个方法会在文件名后追加随机字符串。这是最简单的解决办法，当然了，你可以通过其他方法实现。&lt;/p&gt;
+
+&lt;p&gt;当获取到唯一的文件名称后，将图片和这个文件名传给方法original() ，这个方法负责保存全尺寸的图片，使用icon()方法保存小尺寸图片。&lt;/p&gt;
+
+&lt;p&gt;当这两个尺寸的图片被保存后，系统会在images表中插入新的记录。&lt;/p&gt;
+
+&lt;p&gt;图片上传的目录路径被保存在图片配置文件中。同时使用了自己的sanitize()方法，你也可以使用Laravel内部自建的sanitize().&lt;/p&gt;
+
+&lt;p&gt;为了项目能正常的工作，需要拷贝.env.example 到.env文件，并且修改其中的值。上传目录需要以”/”结束。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'full_size'&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'UPLOAD_FULL_SIZE'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'icon_size'&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'UPLOAD_ICON_SIZE'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;删除方法会接受文件名，并且检查这个图片是否存在数据库和对应的两个目录下。如果存在则将其删除。p&lt;/p&gt;
+
+&lt;h2 id=&quot;来源&quot;&gt;来源&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://tuts.codingo.me/laravel-5-1-and-dropzone-js-auto-image-uploads-with-removal-links#&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 29 Jun 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Laravel 环境安装和配置</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;h2 id=&quot;php环境的安装配置&quot;&gt;PHP环境的安装配置&lt;/h2&gt;
+
+&lt;h3 id=&quot;下载php源码&quot;&gt;下载PHP源码&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~$ wget &quot;http://cn2.php.net/get/php-7.1.4.tar.gz/from/this/mirror&quot; php714.tar.gz
+reasonpun@vultr:~$ tar xvzf php70.tar.gz
+reasonpun@vultr:~$ cd php-7.0.7/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;更新环境&quot;&gt;更新环境&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~/php-7.0.7$ sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;安装组件&quot;&gt;安装组件&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# debain
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libxml2-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install build-essential
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install openssl
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libssl-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install make curl
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libcurl4-gnutls-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libjpeg-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libpng-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libmcrypt-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libreadline6
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libreadline6-dev
+# centos 7
+[root@i-d5n1vxda data]# yum groupinstall 'Development Tools'
+[root@i-d5n1vxda data]# yum install gd.x86_64
+[root@i-d5n1vxda data]# yum install readline.x86_64 readline-devel.x86_64
+[root@i-d5n1vxda data]# yum install php-mysql.x86_64
+[root@i-d5n1vxda php-7.1.4]# yum install libwebp.x86_64 libwebp-devel.x86_64
+# centos7下需要源码安装libmcrypt
+[root@i-d5n1vxda data]# wget ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz
+[root@i-d5n1vxda libmcrypt-2.5.7]# make &amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;编译安装php&quot;&gt;编译&amp;amp;安装PHP&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~/php-7.0.7$ ./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --without-pear --with-gettext --disable-fileinfo --enable-maintainer-zts
+
+reasonpun@vultr:~/php-7.0.7$ make &amp;amp;&amp;amp; sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;设置php-fpm运行用户&quot;&gt;设置php-fpm运行用户&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~/php-7.0.7$ cd /usr/local/php/etc
+reasonpun@vultr:/usr/local/php/etc$ sudo cp php-fpm.conf.default php-fpm.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 切换到配置文件目录
+reasonpun@vultr:/usr/local/php/etc$ cd /usr/local/php/etc/php-fpm.d/
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ sudo vim www.conf.default
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ sudo mv www.conf.default www.conf
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 修改运行用户
+user = www-data
+group = www-data
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 启动php-fpm
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ sudo /usr/local/php/sbin/php-fpm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 加入系统变量
+sudo echo &quot;PATH=$PATH:/usr/local/php/bin&quot;&amp;gt;&amp;gt; /etc/profile
+sudo echo &quot;export PATH&quot;&amp;gt;&amp;gt; /etc/profile
+source /etc/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 现在看看版本信息吧
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ php -v
+PHP 7.0.7 (cli) (built: Jun 13 2016 16:12:37) ( ZTS )
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;composer-安装&quot;&gt;Composer 安装&lt;/h2&gt;
+
+&lt;h3 id=&quot;下载安装文件&quot;&gt;下载安装文件&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ ls
+reasonpun@vultr:/data/web/17tu$ php -r &quot;copy('https://getcomposer.org/installer','composer-setup.php');&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;验证文件合法性&quot;&gt;验证文件合法性&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ php -r &quot;if (hash_file('SHA384', 'composer-setup.php') === 'bf16ac69bd8b807bc6e4499b28968ee87456e29a3894767b60c2d4dafa3d10d045ffef2aeb2e78827fa5f024fbe93ca2') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;&quot;
+Installer verified
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;执行安装&quot;&gt;执行安装&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ php composer-setup.php
+All settings correct for using Composer
+Downloading 1.1.2...
+
+Composer successfully installed to: /data/web/17tu/composer.phar
+Use it: php composer.phar
+reasonpun@vultr:/data/web/17tu$ ls
+composer.phar  composer-setup.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;删除安装文件&quot;&gt;删除安装文件&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ php -r &quot;unlink('composer-setup.php');&quot;
+reasonpun@vultr:/data/web/17tu$ ls
+composer.phar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;将composer执行脚本移动到bin目录下&quot;&gt;将composer执行脚本移动到bin目录下&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ mv composer.phar /usr/local/bin/composer
+mv: cannot move ‘composer.phar’ to ‘/usr/local/bin/composer’: Permission denied
+reasonpun@vultr:/data/web/17tu$ sudo mv composer.phar /usr/local/bin/composer
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;查看命令的可用性&quot;&gt;查看命令的可用性&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ composer
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 1.1.2 2016-05-31 19:48:11
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display this help message
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi                     Force ANSI output
+      --no-ansi                  Disable ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about           Short information about Composer
+  archive         Create an archive of this composer package
+  browse          Opens the package's repository URL or homepage in your browser.
+  clear-cache     Clears composer's internal package cache.
+  clearcache      Clears composer's internal package cache.
+  config          Set config options
+  create-project  Create new project from a package into given directory.
+  depends         Shows which packages cause the given package to be installed
+  diagnose        Diagnoses the system to identify common errors.
+  dump-autoload   Dumps the autoloader
+  dumpautoload    Dumps the autoloader
+  exec            Execute a vendored binary/script
+  global          Allows running commands in the global composer dir ($COMPOSER_HOME).
+  help            Displays help for a command
+  home            Opens the package's repository URL or homepage in your browser.
+  info            Show information about packages
+  init            Creates a basic composer.json file in current directory.
+  install         Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json.
+  licenses        Show information about licenses of dependencies
+  list            Lists commands
+  outdated        Shows a list of installed packages that have updates available, including their latest version.
+  prohibits       Shows which packages prevent the given package from being installed
+  remove          Removes a package from the require or require-dev
+  require         Adds required packages to your composer.json and installs them
+  run-script      Run the scripts defined in composer.json.
+  search          Search for packages
+  self-update     Updates composer.phar to the latest version.
+  selfupdate      Updates composer.phar to the latest version.
+  show            Show information about packages
+  status          Show a list of locally modified packages
+  suggests        Show package suggestions
+  update          Updates your dependencies to the latest version according to composer.json, and updates the composer.lock file.
+  validate        Validates a composer.json and composer.lock
+  why             Shows which packages cause the given package to be installed
+  why-not         Shows which packages prevent the given package from being installed
+reasonpun@vultr:/data/web/17tu$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;lavarel-安装配置&quot;&gt;Lavarel 安装配置&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ composer global require &quot;laravel/installer&quot;
+Changed current directory to /home/reasonpun/.composer
+Using version ^1.3 for laravel/installer
+./composer.json has been created
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing symfony/process (v3.1.1)
+    Downloading: 100%
+
+  - Installing symfony/polyfill-mbstring (v1.2.0)
+    Downloading: 100%
+
+  - Installing symfony/console (v3.1.1)
+    Downloading: 100%
+
+  - Installing guzzlehttp/promises (1.2.0)
+    Downloading: 100%
+
+  - Installing psr/http-message (1.0)
+    Downloading: 100%
+
+  - Installing guzzlehttp/psr7 (1.3.0)
+    Downloading: Connecting...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;nginx配置&quot;&gt;Nginx配置&lt;/h2&gt;
+
+&lt;h3 id=&quot;编译nginx源码&quot;&gt;编译Nginx源码&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-http_ssl_module --with-pcre=../pcre-8.40 --with-zlib=../zlib-1.2.11 --lock-path=/var/run/nginx.lock --user=nginx --group=nginx --with-http_ssl_module --with-http_gunzip_module  --with-http_gzip_static_module --with-http_auth_request_module --with-http_v2_module
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;nginx配置-1&quot;&gt;nginx配置&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    root /your/path/to/lavarel_code;
+    index index.php index.html index.htm;
+
+    server_name 45.32.16.180;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    # PHP 支持
+    location ~ \.php$ {
+        try_files $uri /index.php =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;更改目录权限&quot;&gt;更改目录权限&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 bootstrap/cache
+reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 storage/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://www.oschina.net/question/2010961_242272?fromerr=PD31w5Kw&lt;/li&gt;
+  &lt;li&gt;https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>玩转 Oryx2 （一）</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;h2 id=&quot;准备&quot;&gt;准备&lt;/h2&gt;
+
+&lt;h3 id=&quot;环境&quot;&gt;环境&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;CDH 5.5.2, Parcel
+    &lt;ul&gt;
+      &lt;li&gt;HDFS&lt;/li&gt;
+      &lt;li&gt;YARN&lt;/li&gt;
+      &lt;li&gt;Zookeeper&lt;/li&gt;
+      &lt;li&gt;Kafka&lt;/li&gt;
+      &lt;li&gt;Spark (on YARN)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;下载最新版本&quot;&gt;下载最新版本&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;进入&lt;a href=&quot;https://github.com/OryxProject/oryx/releases/tag/oryx-2.1.2&quot;&gt;下载页面&lt;/a&gt;，分别下载&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;compute-classpath.sh&lt;/li&gt;
+      &lt;li&gt;oryx-batch-2.1.2.jar&lt;/li&gt;
+      &lt;li&gt;oryx-run.sh&lt;/li&gt;
+      &lt;li&gt;oryx-serving-2.1.2.jar&lt;/li&gt;
+      &lt;li&gt;oryx-speed-2.1.2.jar&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载conf文件&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;以ALS为例，在源码目录oryx/app/conf下&lt;a href=&quot;https://github.com/OryxProject/oryx/blob/master/app%2Fconf%2Fals-example.conf&quot;&gt;als-example.conf&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;并将其重命名为oryx.conf（注：文件需要和每个层的JAR文件放在同一个目录下）&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;修改conf文件&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  # 现阶段只需要修改这么几个字段就OK了
+  kafka-brokers = &quot;data-mining-46.slave:9092,data-mining-47.slave:9092,data-mining-48.slave:9092,data-mining-49.master:9092&quot;
+  zk-servers = &quot;data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka&quot;
+  hdfs-base = &quot;hdfs:///Oryx&quot;
+
+  oryx {
+  id = &quot;ALSExample&quot;
+  als {
+    rescorer-provider-class = null
+  }
+  input-topic {
+    broker = ${kafka-brokers}
+    lock = {
+      master = ${zk-servers}
+    }
+  ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;开始&quot;&gt;开始&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 oryx]# ./oryx-run.sh kafka-setup
+Input   ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-46.slave:9092,data-mining-47.slave:9092,data-mining-48.slave:9092,data-mining-49.master:9092
+        topic   OryxInput
+Update  ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-46.slave:9092,data-mining-47.slave:9092,data-mining-48.slave:9092,data-mining-49.master:9092
+        topic   OryxUpdate
+
+All available topics:
+
+
+Input topic OryxInput does not exist. Create it? y
+Creating topic OryxInput
+Error while executing topic command : org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+[2016-04-08 16:53:09,383] ERROR org.I0Itec.zkclient.exception.ZkNoNodeException: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode =
+NoNode for /brokers/ids
+        at org.I0Itec.zkclient.exception.ZkException.create(ZkException.java:47)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:995)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:671)
+        at kafka.utils.ZkUtils.getChildren(ZkUtils.scala:537)
+        at kafka.utils.ZkUtils.getSortedBrokerList(ZkUtils.scala:172)
+        at kafka.admin.AdminUtils$.createTopic(AdminUtils.scala:243)
+        at kafka.admin.TopicCommand$.createTopic(TopicCommand.scala:107)
+        at kafka.admin.TopicCommand$.main(TopicCommand.scala:60)
+        at kafka.admin.TopicCommand.main(TopicCommand.scala)
+Caused by: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:111)
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1468)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1496)
+        at org.I0Itec.zkclient.ZkConnection.getChildren(ZkConnection.java:114)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:678)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:985)
+        ... 8 more
+ (kafka.admin.TopicCommand$)
+Status of topic OryxInput:
+y
+Update topic OryxUpdate does not exist. Create it?
+Creating topic OryxUpdate
+Error while executing topic command : org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+[2016-04-08 16:53:11,094] ERROR org.I0Itec.zkclient.exception.ZkNoNodeException: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+        at org.I0Itec.zkclient.exception.ZkException.create(ZkException.java:47)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:995)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:671)
+        at kafka.utils.ZkUtils.getChildren(ZkUtils.scala:537)
+        at kafka.utils.ZkUtils.getSortedBrokerList(ZkUtils.scala:172)
+        at kafka.admin.AdminUtils$.createTopic(AdminUtils.scala:243)
+        at kafka.admin.TopicCommand$.createTopic(TopicCommand.scala:107)
+        at kafka.admin.TopicCommand$.main(TopicCommand.scala:60)
+        at kafka.admin.TopicCommand.main(TopicCommand.scala)
+Caused by: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:111)
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1468)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1496)
+        at org.I0Itec.zkclient.ZkConnection.getChildren(ZkConnection.java:114)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:678)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:985)
+        ... 8 more
+ (kafka.admin.TopicCommand$)
+Error while executing topic command : Topic OryxUpdate does not exist on ZK path data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+[2016-04-08 16:53:11,833] ERROR java.lang.IllegalArgumentException: Topic OryxUpdate does not exist on ZK path data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        at kafka.admin.TopicCommand$.alterTopic(TopicCommand.scala:119)
+        at kafka.admin.TopicCommand$.main(TopicCommand.scala:62)
+        at kafka.admin.TopicCommand.main(TopicCommand.scala)
+ (kafka.admin.TopicCommand$)
+Status of topic OryxUpdate:
+
+[root@data-mining-49 oryx]#
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;此时出现了一个问题&quot;&gt;此时出现了一个问题：&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error while executing topic command : org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这个问题应该是：CDH没有启动Kafka服务没有启动。通过CDH后台启动Kafka服务（如果没有添加Kafka服务，则需要先添加）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/oryx/add-kafka-service.png&quot; alt=&quot;Kafka Service&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;此时重新执行setup命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 oryx]# ./oryx-run.sh kafka-setup
+Input   ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxInput
+Update  ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxUpdate
+
+All available topics:
+
+
+Input topic OryxInput does not exist. Create it? y
+Creating topic OryxInput
+Created topic &quot;OryxInput&quot;.
+Status of topic OryxInput:
+Topic:OryxInput PartitionCount:4        ReplicationFactor:1     Configs:
+        Topic: OryxInput        Partition: 0    Leader: 140     Replicas: 140   Isr: 140
+        Topic: OryxInput        Partition: 1    Leader: 141     Replicas: 141   Isr: 141
+        Topic: OryxInput        Partition: 2    Leader: 140     Replicas: 140   Isr: 140
+        Topic: OryxInput        Partition: 3    Leader: 141     Replicas: 141   Isr: 141
+
+Update topic OryxUpdate does not exist. Create it? y
+Creating topic OryxUpdate
+Created topic &quot;OryxUpdate&quot;.
+Updated config for topic &quot;OryxUpdate&quot;.
+Status of topic OryxUpdate:
+Topic:OryxUpdate        PartitionCount:1        ReplicationFactor:1     Configs:retention.ms=86400000,max.message.bytes=16777216
+        Topic: OryxUpdate       Partition: 0    Leader: 140     Replicas: 140   Isr: 140
+
+[root@data-mining-49 oryx]#
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;OK！&lt;/p&gt;
+
+&lt;h3 id=&quot;需要将如上的二进制脚本都同步到其他集群的节点上了&quot;&gt;需要将如上的二进制脚本都同步到其他集群的节点上了&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 data]# scp -r oryx/ root@192.168.1.48:/data/
+compute-classpath.sh    100% 1893     1.9KB/s   00:00
+oryx-run.sh             100%   13KB  13.2KB/s   00:00
+oryx-batch-2.1.2.jar    100%   26MB  26.0MB/s   00:00
+oryx-serving-2.1.2.jar  100%   33MB  33.0MB/s   00:01
+oryx-speed-2.1.2.jar    100%   26MB  26.0MB/s   00:00
+oryx.conf               100%   1884  1.8KB/s    00:00
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;接下来我们需要找一个可用的数据集&quot;&gt;接下来我们需要找一个可用的数据集：&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://files.grouplens.org/datasets/movielens/ml-100k.zip&quot;&gt;MovieLens 100K Dataset&lt;/a&gt;，&lt;/p&gt;
+
+&lt;p&gt;将这个数据集的格式修改下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 ml-100k]# tr '\t' ',' &amp;lt; u.data &amp;gt; data.csv
+[root@data-mining-49 ml-100k]# tail data.csv
+806,421,4,882388897
+676,538,4,892685437
+721,262,3,877137285
+913,209,2,881367150
+378,78,3,880056976
+880,476,3,880175444
+716,204,5,879795543
+276,1090,1,874795795
+13,225,2,882399156
+12,203,3,879959583
+[root@data-mining-49 ml-100k]#
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;数据准备完毕，我们可以通过&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 oryx]# ./oryx-run.sh kafka-input --input-file data.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;命令导入系统， 同时打开另一个终端窗口，通过命令&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 oryx]# ./oryx-run.sh kafka-tail
+Input   ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxInput
+Update  ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxUpdate
+
+279,64,1,875308510
+646,750,3,888528902
+654,370,2,887863914
+617,582,4,883789294
+913,690,3,880824288
+660,229,2,891406212
+421,498,4,892241344
+495,1091,4,888637503
+806,421,4,882388897
+676,538,4,892685437
+721,262,3,877137285
+913,209,2,881367150
+378,78,3,880056976
+880,476,3,880175444
+716,204,5,879795543
+276,1090,1,874795795
+13,225,2,882399156
+12,203,3,879959583
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;实时跟踪输入导入情况，当数据全部导入完毕后，用户可以手动的通过Ctrl-C关闭这个命令。&lt;/p&gt;
+
+&lt;p&gt;如果以上全部成功了，可以关闭这些进程。集群至此已经准备好运行Oryx了。&lt;/p&gt;
+
+&lt;h3 id=&quot;启动服务&quot;&gt;启动服务&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./oryx-run.sh batch
+./oryx-run.sh speed
+./oryx-run.sh serving
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;blablabla…..好多输出，先不要管他。&lt;/p&gt;
+
+&lt;p&gt;确认服务层启动成功以后，可以导入数据（难道刚才导数据是测试用的？）&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget --quiet --post-file data.csv --output-document -  --header &quot;Content-Type: text/csv&quot; http://192.168.1.49:8080/ingest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;批处理层已经开始触发一个新的计算了。&lt;/p&gt;
+
+&lt;p&gt;此时看看HDFS中的数据是这样的：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 oryx]# hdfs dfs -ls /Oryx
+Found 2 items
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/data
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/model
+^[[A[root@data-mining-49 oryx]# hdfs dfs -ls /Oryx/data
+Found 1 items
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/data/oryx-1460112000000.data
+[root@data-mining-49 oryx]# hdfs dfs -ls /Oryx/model
+Found 3 items
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:41 /Oryx/model/.checkpoint
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/model/.temporary
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/model/1460112018440
+[root@data-mining-49 oryx]#
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;表明数据已经ok了，通过API确认计算是否完成&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 ~]# wget --quiet --output-document - --server-response http://192.168.1.49:8080/ready
+  HTTP/1.1 200 OK
+  Content-Length: 0
+  Date: Fri, 08 Apr 2016 10:43:27 GMT
+  Server: Oryx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;OK！&lt;/p&gt;
+
+&lt;h3 id=&quot;我们来查看下推荐结果&quot;&gt;我们来查看下推荐结果&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[root@data-mining-49 ~]# wget --quiet --output-document -  http://192.168.1.49:8080/recommend/17
+50,0.8234792673029006
+127,0.7889597890898585
+181,0.7442612769082189
+275,0.7263787714764476
+258,0.7164891492575407
+121,0.7006391943432391
+15,0.697495789732784
+288,0.6787936894688755
+285,0.6696474105119705
+25,0.6603603088587988
+[root@data-mining-49 ~]# wget --quiet --output-document -  http://192.168.1.49:8080/recommend/806
+173,1.084704713546671
+64,1.0142679414711893
+7,0.9939510896801949
+183,0.9918235178338364
+22,0.9644620651379228
+69,0.945814429782331
+202,0.9420167971402407
+11,0.9270770070143044
+135,0.9227914617804345
+191,0.9215727103874087
+[root@data-mining-49 ~]#
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;完美结束。&lt;/p&gt;
+
+&lt;p&gt;这貌似是走的批处理逻辑，中途实时计算层挂鸟&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;16/04/08 18:42:38 INFO SparkContext: Successfully stopped SparkContext
+16/04/08 18:42:38 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+Exception in thread &quot;main&quot; org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 4 times, most recent failure: Lost task 0.3 in stage 0.0 (TID 3, data-mining-47.slave): java.io.IOException: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of broadcast_0
+        at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:1177)
+        at org.apache.spark.broadcast.TorrentBroadcast.readBroadcastBlock(TorrentBroadcast.scala:165)
+        at org.apache.spark.broadcast.TorrentBroadcast._value$lzycompute(TorrentBroadcast.scala:64)
+        at org.apache.spark.broadcast.TorrentBroadcast._value(TorrentBroadcast.scala:64)
+        at org.apache.spark.broadcast.TorrentBroadcast.getValue(TorrentBroadcast.scala:88)
+        at org.apache.spark.broadcast.Broadcast.value(Broadcast.scala:70)
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:62)
+        at org.apache.spark.scheduler.Task.run(Task.scala:88)
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:214)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of broadcast_0
+        at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$org$apache$spark$broadcast$TorrentBroadcast$$readBlocks$1$$anonfun$2.apply(TorrentBroadcast.scala:138)
+        at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$org$apache$spark$broadcast$TorrentBroadcast$$readBlocks$1$$anonfun$2.apply(TorrentBroadcast.scala:138)
+        at scala.Option.getOrElse(Option.scala:120)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;咱们下一篇再找找原因吧。&lt;/p&gt;
+
+&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://oryx.io/docs/admin.html&lt;/li&gt;
+  &lt;li&gt;http://oryx.io/docs/endusers.html&lt;/li&gt;
+  &lt;li&gt;http://oryx.io/docs/developer.html&lt;/li&gt;
+  &lt;li&gt;http://oryx.io/docs/performance.html&lt;/li&gt;
+  &lt;li&gt;http://oryx.io/apidocs/index.html&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 08 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/04/08/set-up-oryx-env.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/08/set-up-oryx-env.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Oryx2 性能优化文档</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;p&gt;这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。&lt;/p&gt;
+
+&lt;h2 id=&quot;硬件和集群设计&quot;&gt;硬件和集群设计&lt;/h2&gt;
+
+&lt;p&gt;一般情况下，对硬件或者集群没有特别的要求。集群资源的需求主要取决于基于Spark的作业，这些往往是内存密集型和CPU密集型的，但是一般不会是I/O绑定的。如果数据的采集率非常的高，Kafka可能需要一些特殊的考虑。在这两种情况下，针对其他任何的Kafka或者Spark作业并没有不同的标准。&lt;/p&gt;
+
+&lt;h3 id=&quot;数据传输&quot;&gt;数据传输&lt;/h3&gt;
+
+&lt;p&gt;因为Kafka是底层传输数据的，存储要求的采集和存放数据对于Kafka也就是这样的。查看&lt;a href=&quot;http://kafka.apache.org/performance.html&quot;&gt;Kafka 性能&lt;/a&gt;中提到的内容。一般情况下，Kafka并不会接近瓶颈，也能够像其他Kafka的使用一样调整资源占用大小。&lt;/p&gt;
+
+&lt;h3 id=&quot;批处理层&quot;&gt;批处理层&lt;/h3&gt;
+
+&lt;p&gt;批处理层独特的地方是模型的构建, and the element that is of most interest to benchmark are likely the model building processes implemented in the app tier, on top of MLlib. Here again, the resources required to build a model over a certain amount of data are just that of the underlying MLlib implementations of ALS, k-means and decision forests.&lt;/p&gt;
+
+&lt;p&gt;MLlib的任何性能优化或者是基准测试都适用于这些基于MLlib预制的实现的批处理层，这对于Oryx也是一样的。&lt;/p&gt;
+
+&lt;h3 id=&quot;jvm-优化&quot;&gt;JVM 优化&lt;/h3&gt;
+
+&lt;p&gt;Choosing the number of Spark executors, cores and memory is a topic in its own right.&lt;/p&gt;
+
+&lt;p&gt;很自然的，更多的executors意味着更多的核心和内存。但是数量是不能超多集群上机器的总数量的；请查看：oryx.batch.streaming.num-executors。&lt;/p&gt;
+
+&lt;p&gt;更多的核，意味着可能会有更多的并发进程。在典型的模型构建进程中，如果能达到任务总数的三分之一或者2分之一的话，这将是非常有用的。你可以观察到任务的数量，以及Spark UI中批处理层固有的并发情况。在这数量之下，核数再多也无法增加更多的并发了。少一些是可以的，无非就是增加了点运行时间。当然，在批处理的时间间隔内，充足的核数可以保证批处理的顺利完成。核的数量可以通过oryx.batch.streaming.executor-cores进行配置。&lt;/p&gt;
+
+&lt;p&gt;如果你的作业发生了内存溢出，驱动器和executors可能需要更多的内存。如果你注意到在批处理层的”存储”标签页中并不是100%的RDD被缓存住了，那么更多的内存可能会有所帮助。查看：oryx.batch.streaming.executor-memory。&lt;/p&gt;
+
+&lt;p&gt;oryx-run.sh脚本的–jvm-args参数是用来为所有的JVM进程设置内存参数的。举个例子，通过设置 -XX:+UseG1GC ，会达到一个比较合理的效果。&lt;/p&gt;
+&lt;h3 id=&quot;服务层&quot;&gt;服务层&lt;/h3&gt;
+
+&lt;p&gt;REST API 后端服务器是Tomcat。配置文件是没有暴露给用户的，但是对于他的负载已经做了合理的调整。Tomcat容器本身开销很小，不需要担心性能问题。&lt;/p&gt;
+
+&lt;p&gt;最可能感兴趣的是项目中提供的关于CPU密集型程序实现的性能问题，而不是框架本身。&lt;/p&gt;
+
+&lt;h3 id=&quot;基准测试-交替最小二乘法推荐&quot;&gt;基准测试: 交替最小二乘法推荐&lt;/h3&gt;
+
+&lt;p&gt;由于ALS实现的程序的服务层的大多数的操作是，会在内存中实时的计算一个非常大的矩阵，所以这个程序是最具有挑战性的了。大概其的规则如下：&lt;/p&gt;
+
+&lt;p&gt;如果需要运行类似的基准测试，可以使用LoadBenchmark，可以按照如下的配置：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn -DskipTests clean install
+cd app/oryx-app-serving
+...
+mvn -Pbenchmark \
+ -Doryx.test.als.benchmark.users=1000000 \
+ -Doryx.test.als.benchmark.items=5000000 \
+ -Doryx.test.als.benchmark.features=250 \
+ -Doryx.test.als.benchmark.lshSampleRate=0.3 \
+ -Doryx.test.als.benchmark.workers=2 \
+ integration-test
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;内存&quot;&gt;内存&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;内存需求是成线性的：(users + items) x features&lt;/li&gt;
+  &lt;li&gt;-XX:+UseStringDeduplication 在 Java 8中是非常有用的 (reflected below)&lt;/li&gt;
+  &lt;li&gt;At scale, 1M users or items ~= 500-1000M of heap required, depending on features&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example steady-state heap usage (Java 8):&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Features&lt;/th&gt;
+      &lt;th&gt;Users+Items (M)&lt;/th&gt;
+      &lt;th&gt;Heap (MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1400&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;2600&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;7500&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7500&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;25800&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;请求延迟吞吐量&quot;&gt;请求延迟，吞吐量&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Recommend and similarity computation time scales linearly with items x features&lt;/li&gt;
+  &lt;li&gt;A single request is parallelized across CPUs; max throughput and minimum latency is already achieved at about 1-2 concurrent requests&lt;/li&gt;
+  &lt;li&gt;Locality sensitive hashing decreases processing time roughly linearly; 0.33 ~= 1/0.33 ~= 3x faster (setting too low adversely affects result quality)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below are representative throughput / latency measurements for the /recommend endpoint using
+  a 32-core Intel Xeon 2.3GHz (Haswell), OpenJDK 8 and flags -XX:+UseG1GC -XX:+UseStringDeduplication. Heap size was comfortably large enough for the data set in each case. The tests were run with 1-3 concurrent request at a time, as necessary to achieve near-full CPU utilization.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;With LSH (sample rate = 0.3)&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Features&lt;/th&gt;
+      &lt;th&gt;Items (M)&lt;/th&gt;
+      &lt;th&gt;Throughput (qps)&lt;/th&gt;
+      &lt;th&gt;Latency (ms)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;437&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;151&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+      &lt;td&gt;24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;56&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;162&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Without LSH (sample rate = 1.0)&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Features&lt;/th&gt;
+      &lt;th&gt;Items (M)&lt;/th&gt;
+      &lt;th&gt;Throughput (qps)&lt;/th&gt;
+      &lt;th&gt;Latency (ms)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;74&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+      &lt;td&gt;44&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;191&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;282&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;250&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;708&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;jvm-优化-1&quot;&gt;JVM 优化&lt;/h3&gt;
+
+&lt;p&gt;机器上运行（多个）服务层，使用越多的可用的核，意味着可以提供更多的并发请求处理能力。在ALS中，一些请求，比如/recommend 可以在一个请求中通过多核计算完成。&lt;/p&gt;
+
+&lt;p&gt;内存的需求主要是由加载进内存的模型的需求控制的。对于大的模型，比如ALS，这就意味着需要确保服务层有足够的内存以保证不会导致GC崩溃。查看oryx.serving.memory。&lt;/p&gt;
+
+&lt;p&gt;-XX:+UseG1GC remains a good garbage collection setting to supply with –jvm-args. In Java 8, -XX:+UseStringDeduplication can reduce memory requirements by about 20%.&lt;/p&gt;
+
+&lt;h3 id=&quot;实时计算层&quot;&gt;实时计算层&lt;/h3&gt;
+
+&lt;p&gt;实时计算层驱动进程类似服务层那样也是需要大量内存的，因为他也是需要加载一个模型到内存中的。驱动进程的内存是通过oryx.speed.streaming.driver-memory控制的，也需要和服务层内存一样设置，并且也需要JVM的一些flags支持。&lt;/p&gt;
+
+&lt;p&gt;这也是一个Spark Streaming 作业，也需要想批处理层那样配置executors。一般情况下，需要更少的处理和更低的时间延迟。&lt;/p&gt;
+
+&lt;p&gt;Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/04/07/Oryx2-performance-doc.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/07/Oryx2-performance-doc.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Oryx2 终端用户文档</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;h3 id=&quot;运行&quot;&gt;运行&lt;/h3&gt;
+
+&lt;p&gt;注意：你必须已经按照&lt;a href=&quot;http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/&quot;&gt;管理员文档&lt;/a&gt;中提到的配置好了你的集群。&lt;/p&gt;
+
+&lt;p&gt;下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。&lt;/p&gt;
+
+&lt;p&gt;或者，源码编译他们并从deploy/bin/获取最新的脚本。&lt;/p&gt;
+
+&lt;p&gt;拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。&lt;/p&gt;
+
+&lt;p&gt;创建一个配置文件，可以简单的拷贝例子中的conf/als-example.conf。并修改host名称，端口和目录。实际上，选择hdfs上已经存在的数据和模型目录便于用户运行Oryx 二进制命令。&lt;/p&gt;
+
+&lt;p&gt;拷贝该配置文件，并重命名为oryx.conf，将他放到每个机器的上二进制命令和脚本相同的目录下。&lt;/p&gt;
+
+&lt;p&gt;执行如下命令开始这3个层的运行：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./oryx-run.sh batch
+./oryx-run.sh speed
+./oryx-run.sh serving
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;参数–layer-jar your-layer.jar and –conf your-config.conf可以指定某一层特定位置的jar文件和配置文件。也可以使用–jvm-args直接传递更多的参数给Spark驱动程序，比如：–jvm-args=”-Dkey=value”&lt;/p&gt;
+
+&lt;p&gt;这都不需要在同一台机器上，但是也不一定（如果配置特殊指定批处理和实时处理层，服务层API不同的端口）。服务层可以运行在多个机器上。&lt;/p&gt;
+
+&lt;p&gt;举个例子，批处理层SparkUI运行在启动脚本所在的机器的4040端口（除非通过配置更改）。一个简单的基于web端的控制台的服务层默认是运行在8080端口的。&lt;/p&gt;
+
+&lt;p&gt;完美！&lt;/p&gt;
+
+&lt;h3 id=&quot;尝试下als的例子吧&quot;&gt;尝试下ALS的例子吧&lt;/h3&gt;
+
+&lt;p&gt;如果你已经使用了上述的配置，你就已经可以运行一个基于ALS的推荐程序实例。
+自获取GroupLens 100K的数据集，并且找到u.data文件，这个文件的内容需要转换成csv格式：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tr '\t' ',' &amp;lt; u.data &amp;gt; data.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;将这些数据放入服务层，使用本地的命令行工具，如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget --quiet --post-file data.csv --output-document - \
+  --header &quot;Content-Type: text/csv&quot; \
+  http://your-serving-layer:8080/ingest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果你使用tail命令查看输入的内容，可以看到如下数据：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;196,242,3.0,881250949186
+196,242,3.0,881250949
+186,302,3.0,891717742
+22,377,1.0,878887116
+244,51,2.0,880606923
+166,346,1.0,886397596
+298,474,4.0,884182806
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;很快的，你也可以看到批处理层已经开始触发一个新的计算了。这个例子被配置为5分钟一个周期。&lt;/p&gt;
+
+&lt;p&gt;数据首先会被写入HDFS。默认配置被写入hdfs:///user/example/Oryx/data/目录下。且目录以时间戳命名，每一部分都包含Hadoop part-r-* 文件，都是以文本的序列话文件的方式存储。虽然不是纯文本，打印出来的话，还是有一部分是可以识别的，因为这其实真的是文本。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SEQorg.apache.hadoop.io.Textorg.apache.hadoop.io.Text����^�]�XسN�22,377,1.0,87888711662...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;模型计算开始。这些批处理层会以大量的新的分布式的作业形式展现。在这个例子中，Spark UI可以通过http://your-batch-layer:4040访问。&lt;/p&gt;
+
+&lt;p&gt;模型计算是非常快的，执行完毕以后会合并PMML和支持数据文件并存储到目录hdfs:///user/example/Oryx/model/下。举个例子，model.pmml 的内容如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;PMML&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.dmg.org/PMML-4_2&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4.2.1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Header&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;Application&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Oryx&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;Timestamp&amp;gt;&lt;/span&gt;2014-12-18T04:48:54-0800&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Timestamp&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/Header&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Extension&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Extension&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Y&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Y/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Extension&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;features&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Extension&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lambda&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.001&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Extension&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;implicit&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Extension&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;alpha&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Extension&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;XIDs&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;56 168 222 343 397 ...
+     ...
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The X/ and Y/ subdirectories next to it contain feature vectors, like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[56,[0.5746282834154238,-0.08896614131333057,-0.029456222765775263,
+  0.6039821219690552,0.1497901814774658,-0.018654312114339863,
+  -0.37342063488340266,-0.2370768843521807,1.148260034028485,
+  1.0645643656769153]]
+[168,[0.8722769882777296,0.4370416943031704,0.27402044461549885,
+  -0.031252701117490456,-0.7241385753098256,0.026079081002582338,
+  0.42050973702065714,0.27766923396205817,0.6241033215856671,
+  -0.48530795198811266]]
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果使用tail命令查看更新的内容。
+这些数据会很快放入服务层，此时访问/ready会返回200 OK。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget --quiet --output-document - --server-response \
+  http://your-serving-layer:8080/ready
+...
+  HTTP/1.1 200 OK
+  Content-Length: 0
+  Date: Tue, 1 Sep 2015 13:26:53 GMT
+  Server: Oryx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget --quiet --output-document -  http://your-serving-layer:8080/recommend/17
+...
+50,0.7749542842056966
+275,0.7373013861581563
+258,0.731818692628511
+181,0.7049967175706345
+127,0.704518989947498
+121,0.7014631029793741
+15,0.6954683387287907
+288,0.6774889711024022
+25,0.6663619887033064
+285,0.6398968471343595
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;恭喜！实时推荐系统搭建完毕！可以通过Ctrl-C关闭。&lt;/p&gt;
+
+&lt;h3 id=&quot;api手册&quot;&gt;API手册&lt;/h3&gt;
+
+&lt;p&gt;Oryx 支持多种端到端的程序，包括服务层的REST 接口。&lt;/p&gt;
+
+&lt;h3 id=&quot;协同过滤和推荐&quot;&gt;协同过滤和推荐&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Recommend.html&quot;&gt;/recommend&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToMany.html&quot;&gt;/recommendToMany&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToAnonymous.html&quot;&gt;/recommendToAnonymous&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendWithContext.html&quot;&gt;/recommendWithContext&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Similarity.html&quot;&gt;/similarity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/SimilarityToItem.html&quot;&gt;/similarityToItem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/KnownItems.html&quot;&gt;/knownItems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Estimate.html&quot;&gt;/estimate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/EstimateForAnonymous.html&quot;&gt;/estimateForAnonymous&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Because.html&quot;&gt;/because&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostSurprising.html&quot;&gt;/mostSurprising&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/PopularRepresentativeItems.html&quot;&gt;/popularRepresentativeItems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html&quot;&gt;/mostActiveUsers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostPopularItems.html&quot;&gt;/mostPopularItems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html&quot;&gt;/mostActiveUsers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/AllItemIDs.html&quot;&gt;/item/allIDs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ready.html&quot;&gt;/ready&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Preference.html&quot;&gt;/pref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ingest.html&quot;&gt;/ingest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;分类--回归&quot;&gt;分类 / 回归&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Predict.html&quot;&gt;/predict&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/ClassificationDistribution.html&quot;&gt;/classificationDistribution&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Ready.html&quot;&gt;/ready&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Train.html&quot;&gt;/train&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;聚类&quot;&gt;聚类&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Assign.html&quot;&gt;/assign&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/DistanceToNearest.html&quot;&gt;/distanceToNearest&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Ready.html&quot;&gt;/ready&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Add.html&quot;&gt;/add&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;配置&quot;&gt;配置&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/OryxProject/oryx/blob/master/app/conf/als-example.conf&quot;&gt;app/conf/als-example.conf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/OryxProject/oryx/blob/master/app/conf/kmeans-example.conf&quot;&gt;app/conf/kmeans-example.conf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/OryxProject/oryx/blob/master/app/conf/rdf-example.conf&quot;&gt;app/conf/rdf-example.conf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/04/06/Oryx2-end-user-doc.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/06/Oryx2-end-user-doc.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Oryx2 开发者文档</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;h3 id=&quot;环境需求&quot;&gt;环境需求&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;git&lt;/a&gt;, 或者一个支持git的IDE&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://maven.apache.org/&quot;&gt;Apache Maven&lt;/a&gt; 3.2.1 或者更新版本&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;Java JDK&lt;/a&gt; (不能只有JRE) 7 或者更新版本&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以上需要已经安装到了你的开发环境中。&lt;/p&gt;
+
+&lt;h2 id=&quot;building&quot;&gt;Building&lt;/h2&gt;
+
+&lt;p&gt;克隆代码到你本地，并且编译：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/OryxProject/oryx.git oryx
+cd oryx
+mvn -DskipTests package
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;会编译出如下的二进制的jar文件：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;批处理层: deploy/oryx-batch/target/oryx-batch-2.1.2.jar&lt;/li&gt;
+  &lt;li&gt;实时处理层: deploy/oryx-speed/target/oryx-speed-2.1.2.jar&lt;/li&gt;
+  &lt;li&gt;服务层: deploy/oryx-serving/target/oryx-serving-2.1.2.jar&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;友情提醒，如果你对开发Oryx感兴趣，可以根据这个&lt;a href=&quot;https://help.github.com/articles/fork-a-repo&quot;&gt;分支&lt;/a&gt;克隆自己的分支，然后就可以提交修改了。&lt;/p&gt;
+
+&lt;h3 id=&quot;java-8&quot;&gt;Java 8&lt;/h3&gt;
+
+&lt;p&gt;如果使用Java8编译，需要添加参数-Pjava8 并且测试这里的指令。&lt;/p&gt;
+
+&lt;h3 id=&quot;platform-only&quot;&gt;Platform Only&lt;/h3&gt;
+
+&lt;p&gt;默认的编译包括基于Spark MLlib和其他库的端到端的ML程序。如果只是编译lambda和ML层，需要通过参数-P!app-tier关闭其他的选项。注意，在bash中，！需要转义： -P!app-tier。&lt;/p&gt;
+
+&lt;h3 id=&quot;测试&quot;&gt;测试&lt;/h3&gt;
+
+&lt;p&gt;mvn 测试会执行所有的但愿测试用例。也同时会执行所有的集成测试，这个可能会需要稍微长点的时间。&lt;/p&gt;
+
+&lt;h2 id=&quot;模型对应表&quot;&gt;模型对应表&lt;/h2&gt;
+
+&lt;p&gt;主要的模型和他们对应的层：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Serving&lt;/th&gt;
+      &lt;th&gt;Speed&lt;/th&gt;
+      &lt;th&gt;Batch&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Binary&lt;/td&gt;
+      &lt;td&gt;oryx-serving&lt;/td&gt;
+      &lt;td&gt;oryx-speed&lt;/td&gt;
+      &lt;td&gt;oryx-batch&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;App&lt;/td&gt;
+      &lt;td&gt;oryx-app-serving&lt;/td&gt;
+      &lt;td&gt;oryx-app-mllib oryx-app&lt;/td&gt;
+      &lt;td&gt;oryx-app-mllib oryx-app&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ML&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;oryx-ml&lt;/td&gt;
+      &lt;td&gt;oryx-ml&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lambda&lt;/td&gt;
+      &lt;td&gt;oryx-lambda-serving&lt;/td&gt;
+      &lt;td&gt;oryx-lambda&lt;/td&gt;
+      &lt;td&gt;oryx-lambda&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;支持的模型，比如：&lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/framework/oryx-common&quot;&gt;oryx-common&lt;/a&gt;, &lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/app/oryx-app-common&quot;&gt;oryx-app-common&lt;/a&gt;, &lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/framework/oryx-api&quot;&gt;oryx-api&lt;/a&gt;, and &lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/app/oryx-app-api&quot;&gt;oryx-app-api&lt;/a&gt; 没有在这里列出了。&lt;/p&gt;
+
+&lt;h2 id=&quot;实现一个oryx-程序&quot;&gt;实现一个Oryx 程序&lt;/h2&gt;
+
+&lt;p&gt;Oryx 中的“app 层”，是实现了推荐的真实的批处理，实时，服务层逻辑，集群和分类。然而，任何实现都需要使用到Oryx。他们也可以混合和匹配。举个例子，你可以重新实现ALS-related推荐的批处理层，但是仍然使用原来的ALS的服务层和实时计算层。&lt;/p&gt;
+
+&lt;h3 id=&quot;创建一个程序&quot;&gt;创建一个程序&lt;/h3&gt;
+
+&lt;p&gt;在每个例子中，创建一个自定义的批处理层，实时计算层或者服务层的程序都需要实现com.cloudera.oryx.api中的几个关键的Java接口或者Scala的特性。这些接口/特性可以在项目的oryx-api模型中找到。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Java&lt;/th&gt;
+      &lt;th&gt;Scala&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Batch&lt;/td&gt;
+      &lt;td&gt;batch.BatchLayerUpdate&lt;/td&gt;
+      &lt;td&gt;batch.ScalaBatchLayerUpdate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Speed&lt;/td&gt;
+      &lt;td&gt;speed.SpeedModelManager&lt;/td&gt;
+      &lt;td&gt;speed.ScalaSpeedModelManager&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Serving&lt;/td&gt;
+      &lt;td&gt;serving.ServingModelManager&lt;/td&gt;
+      &lt;td&gt;serving.ScalaServingModelManager&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;com.cloudera.oryx.api也包含大量的关键的类和接口，举个例子，&lt;a href=&quot;https://github.com/OryxProject/oryx/blob/master/framework/oryx-api/src/main/java/com/cloudera/oryx/api/serving/OryxResource.java&quot;&gt;serving.OryxResource&lt;/a&gt;  是一个入口，用来编译自定义的JAX-RS 端点，但是不需要使用。&lt;/p&gt;
+
+&lt;h3 id=&quot;编译程序&quot;&gt;编译程序&lt;/h3&gt;
+
+&lt;p&gt;进入你的程序的这些接口/特性，添加一个com.cloudera.oryx:oryx-api的依赖，scope字段需要填写“provided”，在Maven中，需要添加如下依赖：
+In Maven, this would mean adding a dependency like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+  &amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.cloudera.oryx&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;oryx-api&amp;lt;/artifactId&amp;gt;
+    &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt;
+    &amp;lt;version&amp;gt;2.1.2&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这些artifacts被放在了&lt;a href=&quot;https://repository.cloudera.com/artifactory/cloudera-repos/&quot;&gt;Cloudera&lt;/a&gt;这个分支下，因此在编译的时候需要引用这个分支：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;repositories&amp;gt;
+  &amp;lt;repository&amp;gt;
+    &amp;lt;id&amp;gt;cloudera&amp;lt;/id&amp;gt;
+    &amp;lt;url&amp;gt;https://repository.cloudera.com/artifactory/cloudera-repos/&amp;lt;/url&amp;gt;
+  &amp;lt;/repository&amp;gt;
+&amp;lt;/repositories&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;一个最小的实例可以访问&lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/app/example&quot;&gt;example/&lt;/a&gt; 这里。&lt;/p&gt;
+
+&lt;p&gt;”Word Count” 这个程序是按照空格将行分割成独立的单词，然后统计出排重后的单词出现的次数。&lt;/p&gt;
+
+&lt;p&gt;编译代码后生成一个JAR文件，包含了程序实现和所有第三方的diam，如果使用Maven，可以通过mvn package命令。&lt;/p&gt;
+
+&lt;h3 id=&quot;编译-word-count-例子&quot;&gt;编译 Word Count 例子&lt;/h3&gt;
+
+&lt;p&gt;举例：编译样例代码如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd app/example
+mvn package
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;生成的JAR包在target/example-2.1.2.jar。&lt;/p&gt;
+
+&lt;h3 id=&quot;自定义oryx程序&quot;&gt;自定义Oryx程序&lt;/h3&gt;
+
+&lt;p&gt;当发布一个源自Oryx的预打包程序，在某些情况下，有可能会提供一个扩展的实现，从而可以自定义他们的行为。举例，ALS推荐程序暴露了com.cloudera.oryx.app.als.RescorerProvider接口。这些特定程序API类可以在模块oryx-app-api中找到。这些接口的实现也可以在独立模式下被编译，打包，部署。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+  &amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.cloudera.oryx&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;oryx-app-api&amp;lt;/artifactId&amp;gt;
+    &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt;
+    &amp;lt;version&amp;gt;2.1.2&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+&amp;lt;/dependencies&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;发布程序&quot;&gt;发布程序&lt;/h2&gt;
+
+&lt;p&gt;拷贝生成的JAR文件–myapp.jar，放到需要执行的Oryx 二进制JAR文件相同的目录下。&lt;/p&gt;
+
+&lt;p&gt;修改Oryx的配置文件，以便于引用自定义的批处理，实时计算和服务层的实现。
+当执行批处理，实时计算和服务层时，需要添加–app-jar myapp.jar到oryx-run.sh命令行中。&lt;/p&gt;
+
+&lt;h3 id=&quot;发布-word-count-例子&quot;&gt;发布 Word Count 例子&lt;/h3&gt;
+
+&lt;p&gt;举例，如果已经编译好了上述的“word count”的程序，你可以执行这个程序，直接引用wordcount-example.conf这个配置文件：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./oryx-run.sh batch --conf wordcount-example.conf --app-jar example-2.1.2.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;… 对于实时计算和服务层也是同样的。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -X POST http://.../add/foo%20bar%20baz
+...
+curl http://.../distinct
+{&quot;foo&quot;:2,&quot;bar&quot;:2,&quot;baz&quot;:2}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;配置文件本身已经配置好了主机名称和&lt;a href=&quot;http://www.cloudera.com/content/www/en-us/downloads/quickstart_vms.html&quot;&gt;Cloudera Quickstart VM&lt;/a&gt;的参数。事实上，这个例子可以作为一个集群配置的例子：&lt;a href=&quot;http://oryx.io/docs/admin.html#cloudera_quickstart_vm_setup&quot;&gt;Cloudera Quickstart VM Setup&lt;/a&gt;。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/04/06/Oryx2-developer-doc.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/06/Oryx2-developer-doc.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Java关键字volatile</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;p&gt;翻译自：http://tutorials.jenkov.com/java-concurrency/volatile.html&lt;/p&gt;
+
+&lt;h3 id=&quot;java-volatile-关键字&quot;&gt;Java Volatile 关键字&lt;/h3&gt;
+
+&lt;p&gt;Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。&lt;/p&gt;
+
+&lt;p&gt;实际上，自Java5开始，volatile关键字保证的是volatile声明的变量都是写入和读取自主内存的。以下将会详细讲解。&lt;/p&gt;
+
+&lt;h3 id=&quot;java-volatile保证可见性&quot;&gt;Java volatile保证可见性&lt;/h3&gt;
+
+&lt;p&gt;Java中volatile关键字保证了线程之间变量修改的可见性。这个可能会有点抽象，因此让我详细讲解下。&lt;/p&gt;
+
+&lt;p&gt;在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-1.png&quot; alt=&quot;volatile&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用非volatile变量，当JVM自主内存读取数据到CPU缓存，或者自CPU缓存写入主内存时，是没有保证的。这可能会引起很多问题，接下来章节中会降到。&lt;/p&gt;
+
+&lt;p&gt;设想一种情况，多个线程可以访问类似如下的同一个共享对象，这个对象包含一个计数器变量：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class SharedObject {
+
+    public int counter = 0;
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;另一个设想，只有线程1改变计数变量，但是线程1和线程2都可能经常读取这个计数变量。&lt;/p&gt;
+
+&lt;p&gt;如果计数变量没有被声明为volatile，那么自CPU缓存回写到主内存的过程中，就无法保证这个计数变量的值了。也就是说，技术变量的值在通过CPU缓存写会主内存的过程中发生了改变。如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-2.png&quot; alt=&quot;volatile 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这个问题是因为线程并没有得到最新的值，另外那个线程并没有将最新的变量写回主内存，这就是所谓的“可见”问题。某一个线程的更新并没有被另外的线程获取。&lt;/p&gt;
+
+&lt;p&gt;通过声明计数变量为volatile，那么这个计数变量所有的更新都会立即被写回主内存。同时，所有的读操作都会直接通过主内存。如下既是如何声明计数变量为volatile类型：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class SharedObject {
+
+    public volatile int counter = 0;
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;声明一个变量为volatile由此可以保证了变量的写操作对于其他线程都是可见的。&lt;/p&gt;
+
+&lt;h3 id=&quot;the-java-volatile-happens-before-guarantee&quot;&gt;The Java volatile Happens-Before Guarantee&lt;/h3&gt;
+
+&lt;p&gt;自Java5开始，volatile关键字保证的不止是变量的主内存读和写，实际上还包含：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果线程A写入一个volatile变量，此时线程B读取了相同的volatile变量，那么此时所有的变量在写入volatile变量前对线程A是可见的，同时也对线程B在读取了volatile变量后也是可见的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;volatile变量的读写指令不能促使JVM重新排序（只要JVM发现排序不会改变程序的行为，基于性能的原因，JVM会进行排序）。前后的指令会被排序，但是volatile得读写不会混入这些指令。无论如何，指令都会follow一个volatile变量的读写，并且保证这种操作发生在读或者写之后。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个需要更深入的解释。&lt;/p&gt;
+
+&lt;p&gt;当一个线程写入一个volatile变量时，并不止这个volatile变量自己写入了主内存。同时所有被线程修改的变量在写入volatile变量之前都会被回写到主内存。当一个线程读取一个volatile变量时，他会同时读取主内存中所有其他的变量，这些变量都是和volatile变量一同写入主内存的。&lt;/p&gt;
+
+&lt;p&gt;看例子：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Thread A:
+    sharedObject.nonVolatile = 123;
+    sharedObject.counter     = sharedObject.counter + 1;
+
+Thread B:
+    int counter     = sharedObject.counter;
+    int nonVolatile = sharedObject.nonVolatile;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;因为线程A在写入volatile变量sharedObject.counter之前写入了非volatile变量sharedObject.nonVolatile，那么当线程A写入sharedObject.counter时，sharedObject.nonVolatile 和 sharedObject.counter 都会被写入主内存。&lt;/p&gt;
+
+&lt;p&gt;由于线程B开始的时候读取volatile类型的sharedObject.counter，那么sharedObject.counter and sharedObject.nonVolatile都会使用线程B自主内存读取到CPU缓存。等到线程B读取sharedObject.nonVolatile时，就会看到线程A写入的值。&lt;/p&gt;
+
+&lt;p&gt;开发者可能会使用这种扩展的可见性，保证了线程之间变量的可见性。只需要声明一个或者非常少的volatile变量替换掉每个变量都声明为volatile。如下是一个例子：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class Exchanger {
+
+    private Object   object       = null;
+    private volatile hasNewObject = false;
+
+    public void put(Object newObject) {
+        while(hasNewObject) {
+            //wait - do not overwrite existing new object
+        }
+        object = newObject;
+        hasNewObject = true; //volatile write
+    }
+
+    public Object take(){
+        while(!hasNewObject){ //volatile read
+            //wait - don't take old object (or null)
+        }
+        Object obj = object;
+        hasNewObject = false; //volatile write
+        return obj;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;线程A通过调用put()持续的写入对象。线程B通过take()持续的获取对象。这个类只有在线程A调用put()和线程B调用take()时，通过使用volatile变量才能工作正常。&lt;/p&gt;
+
+&lt;p&gt;如果JVM在不改变排序指令的语义的基础上实现，那么JVM则会通过记录JAVA指令优化性能。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while(hasNewObject) {
+    //wait - do not overwrite existing new object
+}
+hasNewObject = true; //volatile write
+object = newObject;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注意到volatile变量hasNewObject在被实际设置前已经被执行。对于JVM，这看上去完全合法。这两个写入变量的值相对于另外一个是独立的。&lt;/p&gt;
+
+&lt;p&gt;然而，排序执行的指令会有损对象变量的可见性。首先，线程B可能在线程A设置新值之前将hasNewObject设置为true。其次，甚至没法保证当新值写入对象后回写到主内存。&lt;/p&gt;
+
+&lt;p&gt;为了防止如上述情况的发生，volatile关键字采用“发生前保证”机制。”发生前保证“机制保证读和写volatile变量的指令不能被排序。前后指令可以被排序，但是volatile读或者写指令发生前后不能被排序。&lt;/p&gt;
+
+&lt;p&gt;举个例子：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sharedObject.nonVolatile1 = 123;
+sharedObject.nonVolatile2 = 456;
+sharedObject.nonVolatile3 = 789;
+
+sharedObject.volatile     = true; //a volatile variable
+
+int someValue1 = sharedObject.nonVolatile4;
+int someValue2 = sharedObject.nonVolatile5;
+int someValue3 = sharedObject.nonVolatile6;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;JVM会排序前3个指令，只要他们在volatile写指令之前。&lt;/p&gt;
+
+&lt;p&gt;同样的，只要volatile写入质量发生在后三个指令之前，那么后三个指令就会被排序。在此之前，这三个指令中任何一个指令都不会被排序。
+That is basically the meaning of the Java volatile happens before guarantee.&lt;/p&gt;
+
+&lt;h3 id=&quot;volatile-并不总是适用的&quot;&gt;volatile 并不总是适用的&lt;/h3&gt;
+
+&lt;p&gt;即使volatile关键字保证了所有的volatile变量直接从主内存读取，所有的写操作都是直接写入主内存，但是存在声明了volatile而仍然不够的情况。&lt;/p&gt;
+
+&lt;p&gt;之前提过的，只有线程1写入共享的counter变量，声明为volatile的时候才能确保线程2总是能获取最新的写入值。&lt;/p&gt;
+
+&lt;p&gt;事实上，多线程甚至能写入一个共享的volatile变量，如果这个新写入的值不依赖于旧数据的话就将正确的值存入主内存。换句话说, 如果一个线程写入一个值到共享的volatile变量，并不会马上将读取的值用于下一个值得话。&lt;/p&gt;
+
+&lt;p&gt;一旦一个线程首次读取一个volatile变量的值，并且需要基于这个值生成一个新的共享volatile变量值，那么这个volatile变量就不能保证正确的可见性。读取volatile变量的值并且写入新值得很短的间隙，就会创建一个竞争的条件：多个线程会读取同一个volatile变量的值，并且生成一个新的值，当回写进主内存后就会覆盖掉其他的值。&lt;/p&gt;
+
+&lt;p&gt;多线程增加相同的计数器值得这种情况，准确的说对于volatile变量是不适用的。一下片段讲话详细讲述这种情况。&lt;/p&gt;
+
+&lt;p&gt;设想，如果线程1读取共享计数变量，他的值是0，并放入CPU的缓存，使其加1，但是这样的改变并不会回写如主内存。线程2此时可以自主内存读取相同的计数器变量，但是读到的值仍然是0，并将这个值放入了自己的CPU缓存。线程2也可以对其加1，并且可以回写到主内存。这种情况详见下图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-3.png&quot; alt=&quot;volatile 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;线程1和线程2此时并不是同步的。这个共享计数器的值应该是2，但是每个线程在自己的CPU缓存中存放的值却是1，在主内存中的值是0.这已经完全乱了！即使最后每个线程回写这个共享计数变量的值到主内存，这个值也是错误的。&lt;/p&gt;
+
+&lt;h3 id=&quot;volatile在什么时候是适用的&quot;&gt;volatile在什么时候是适用的?&lt;/h3&gt;
+
+&lt;p&gt;就像之前提到过的，如果是两个线程都需要读取和写入一个共享变量，那么此时适用volatile关键字是不适用的。那么就需要使用synchronized来保证读和写的原子性。读写volatile变量不会阻塞线程的读写。为了实现这一点，你必须使用synchronized关键字。&lt;/p&gt;
+
+&lt;p&gt;作为synchronized可供选择，需要采用java.util.concurrent包中的某一个。比如AtomicLong，AtomicReference或者其他的任意一个。&lt;/p&gt;
+
+&lt;p&gt;在这种情况下，只有一个线程读写volatile变量的值，其他线程只是读取变量，那么读取线程就可以通过volatile变量保证可以读取到最新的写入值。如果没有volatile变量，则这个过程就不能被保证。&lt;/p&gt;
+
+&lt;p&gt;volatile关键字可以被用在32和64位变量中。&lt;/p&gt;
+
+&lt;h3 id=&quot;volatile-性能注意事项&quot;&gt;volatile 性能注意事项&lt;/h3&gt;
+
+&lt;p&gt;volatile变量的读写会触发变量在主内存中的读写。主内存中的读写会比CPU缓存消耗的代价高。使用volatile变量同样会阻止普通性能增强指令的排序。因此，只能在确实需要增加变量可见性基础上使用volatile变量。&lt;/p&gt;
+
+&lt;h3 id=&quot;参考文献&quot;&gt;参考文献&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://www.ibm.com/developerworks/cn/java/j-jtp06197.html&lt;/li&gt;
+  &lt;li&gt;http://www.infoq.com/cn/articles/ftf-java-volatile&lt;/li&gt;
+  &lt;li&gt;http://www.infoq.com/cn/articles/java-memory-model-4&lt;/li&gt;
+  &lt;li&gt;http://sakyone.iteye.com/blog/668091&lt;/li&gt;
+  &lt;li&gt;https://zh.wikipedia.org/wiki/Volatile%E5%8F%98%E9%87%8F&lt;/li&gt;
+  &lt;li&gt;http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/03/08/Java-keyword-volatile.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/03/08/Java-keyword-volatile.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>正则表达式处理Nginx</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;h1 id=&quot;nginx-日志配置格式&quot;&gt;Nginx 日志配置格式&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;log_format  main
+        '[$upstream_addr] $remote_addr [$time_local] &quot;$request&quot; $status '
+        '&quot;$request_body&quot; $body_bytes_sent &quot;$http_referer&quot; &quot;$http_user_agent&quot; '
+        'RESP:$upstream_response_time '
+        'REQ:$request_time';
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;样例&quot;&gt;样例&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[192.168.1.5:80] 19.78.22.51 [31/Dec/2015:13:59:02 +0800] &quot;POST /api/mbbb/dup_msg_send?pallow_dubbing=0&amp;amp;partner_msgs_id=279&amp;amp;roles_id=23&amp;amp;score=6700&amp;amp;section_id=512&amp;amp;whole_audio=200.m4a&amp;amp;d
+evice_id=112222f0fc3&amp;amp;lang=zh-CN&amp;amp;trigger=user&amp;amp;user_id=516487&amp;amp;v=ios_7.0.3 HTTP/1.1&quot; 200 &quot;audio_fragment=00280%22%3A%7B%22pitch%22%3A47%2C%22rhythm%22%3A95%2C%22tone%22%3A75%7D%2C%226800278%22%3A%7B%22pitch%22%3A70%2C%22rhythm%22%3A90%2%7D%2C%226800276%22
+%3A%7B%22pitch%22%3A60%2C%22rhythm%22%3A82%2C%22tone%22D&amp;amp;content=hhhhhh%E5%B0%8F%E5%AB%A9%E8%8D%89&quot; 51 &quot;-&quot; &quot;paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)&quot; RESP:0.166 REQ:0.167
+[192.168.1.5:80, 192.169.1.33:88] 60.12.246.5 [31/Dec/2015:23:59:02 +0800] &quot;GET /api/mppb/notice/list?device_id=112233fe6a6d991f&amp;amp;lang=zh-CN&amp;amp;user_id=6120&amp;amp;v=ios_7.0.3 HTTP/1.1&quot; 200 &quot;-&quot; 54 &quot;-&quot; &quot;paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)&quot; RESP:0.006 REQ:0.006
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;正则表达式&quot;&gt;正则表达式&lt;/h1&gt;
+
+&lt;h2 id=&quot;python版本&quot;&gt;Python版本&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;p = re.compile(
+            r&quot;\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \&quot;(\S+)\ (\S+)\ .*?\&quot;\ (\d+)\ \&quot;(.*?)\&quot;\ (\d+)\ \&quot;([^\&quot;]*)\&quot;\ \&quot;.*?\&quot; .*?&quot;)
+m = re.findall(p, line)
+day = m[0][0]
+month = m[0][1]
+year = m[0][2]
+ttime = m[0][3]
+method = m[0][4]
+request = m[0][5]
+status = m[0][6]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;scala版本&quot;&gt;Scala版本&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val regex = new Regex( &quot;&quot;&quot;\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \&quot;(\S+)\ (\S+)\ .*?\&quot;\ (\d+)\ \&quot;(.*?)\&quot;\ (\d+)\ \&quot;([^\&quot;]*)\&quot;\ \&quot;.*?\&quot; .*?&quot;&quot;&quot;)
+val regex(day, month, year, time, method, request, status, postData, bytes, refer) = line
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://www.jianshu.com/p/5d8c802be13d&lt;/li&gt;
+  &lt;li&gt;https://segmentfault.com/a/1190000002727070&lt;/li&gt;
+  &lt;li&gt;http://desert3.iteye.com/blog/1001568&lt;/li&gt;
+  &lt;li&gt;http://stackoverflow.com/questions/996536/regex-in-python&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 24 Jan 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/01/24/Reg-Nginx.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/01/24/Reg-Nginx.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  
+  <title>Oryx2 简介</title>
+  <meta name="description" content="">
+  <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Tensor Cell" href="/feed.xml">
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+  <body>
+    <div class="body_container">
+      <div id="header">
+        <div class="site-name">
+          <h1 class="hidden">Oryx2 简介</h1>
+          <a id="logo" href="/.">Tensor Cell</a>
+          <p class="description">还要再走500里</p>
+        </div>
+        <div id="nav-menu">
+          
+            <a href="//"><i class="icon-home"> 首页</i></a>
+          
+            <a href="/archives/"><i class="icon-archive"> 归档</i></a>
+          
+            <a href="/about/"><i class="icon-about"> 关于</i></a>
+          
+            <a href="/history/"><i class="icon-history"> 历史</i></a>
+          
+            <a href="/feed.xml"><i class="icon-rss"> 订阅</i></a>
+          
+        </div>
+      <script type="text/javascript">
+      var menus=document.getElementById('nav-menu');
+      var ishome = true;
+      for (var i=1;i<menus.childElementCount;i++) {
+        var path = location.href;
+        var current = path.startsWith(menus.children[i].href);
+        if (current) {
+          menus.children[i].className ='current';
+          ishome = false;
+          break;
+        }
+      }
+      if (ishome) {
+      	menus.children[0].className ='current';
+      }
+      </script>
+      </div>
+
+      <div id="layout" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+          <div class="content_container">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Oryx2 简介</h1>
+    <p class="post-meta"><time datetime="2015-12-21T00:00:00+08:00" itemprop="datePublished">Dec 21, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+
+<h3 id="简介">简介</h3>
+
+<p><img src="http://localhost:4000/assets/oryx/OryxLogoMedium.png" alt="Oryx2" /></p>
+
+<p>Oryx2是专注于进行大规模，实时机器学习框架，遵循lambda规则，基于Apache Spark和Apache Kafka构建。</p>
+
+<p>Oryx 不仅是构建应用程序的框架，而且包含 协同过滤，分类，回归和聚类的打包的端到端的应用。</p>
+
+<p>包含3层</p>
+<ul>
+  <li>lambda层
+    <ul>
+      <li>批量处理</li>
+      <li>快速处理</li>
+      <li>服务</li>
+    </ul>
+  </li>
+  <li>ML抽象层</li>
+  <li>端到端实现层</li>
+</ul>
+
+<p>从另一个角度，可以看成是一系列链接的元素</p>
+<ul>
+  <li>批处理层：依据历史数据进行离线处理</li>
+  <li>实时处理层：通过增量数据流，实时更新结果</li>
+  <li>服务层：通过模型的传递实现异步查询API</li>
+  <li>数据传输层：在外部数据源与处理层之间传输数据</li>
+</ul>
+
+<p>The project</p>
+<ul>
+  <li>may be reused tier by tier for example, the packaged app tier can be ignored, and it can be a framework for building new ML applications.</li>
+  <li>It can be reused layer by layer too: for example, the Speed Layer can be omitted if a deployment does not need incremental updates.</li>
+  <li>It can be modified piece-by-piece too: the collaborative filtering application’s model-building batch layer could be swapped for a custom implementation based on a new algorithm outside Spark MLlib while retaining the serving and speed layer implementations.</li>
+</ul>
+
+<p><img src="http://localhost:4000/assets/oryx/Architecture.png" alt="Architecture" /></p>
+
+<h3 id="lambda层实现">Lambda层实现</h3>
+
+<h4 id="数据传输">数据传输</h4>
+
+<p>数据传输机制其实就是一个Kafka的Topic。任何一个进程（包含且不局限与服务层）都可以向topic中写入数据，并通过实时处理和批处理层查看。
+  Kafka Topic也可以用来模型和模型之间的更新，并被实时处理层和服务层消费。</p>
+
+<h4 id="批处理层">批处理层</h4>
+
+<p>批处理层是以Spark Streaming进程的方式实现的，运行在Hadoop Cluster节点上，并读取来自Kafka topic的输入数据。 Streaming 进程会有一个很长的运行周期-若干小时甚至一天。会使用Spark存储当前会话数据到HDFS中，然后合并HDFS上的所有历史数据，之后重新初始化构建新的结果数据。并将新的结果重新写入HDFS，同时发不到Kafka更新topic中。</p>
+
+<h4 id="实时处理层">实时处理层</h4>
+
+<p>实时处理层也是由Spark Streaming进程实现的，同样读取Kafka topic输入数据。但是他存在比较短的运行周期，比如秒级别。会持续消费更新topic中的新模型，并生产新的模型。也会回写更新topic。</p>
+
+<h4 id="服务层">服务层</h4>
+
+<p>服务层监听更新topic上的模型以及模型更新。在内存中持久化模型状态。
+  会暴露顶层方法的 HTTP REST API 用于查询内存中的模型。大部分接口都支持大规模的部署。
+  每个接口都可以接收新的数据并写入Kafka，以此在实时处理层和批处理层可见。</p>
+
+<h4 id="配置和部署">配置和部署</h4>
+
+<p>程序是基于Java实现的，依赖
+    * Spark 1.3.x+
+    * Hadoop 2.6.x+
+    * Tomcat 8.x+
+    * Kafka 0.8.2+
+    * Zookeeper 等。</p>
+
+<p>配置文件通过 <a href="https://github.com/typesafehub/config">Typesafe Config</a> 的方式实现整个系统的部署配置。
+  包括： 批处理，实时处理，服务层逻辑关键的接口类的实现</p>
+
+<p>每个层的二进制形式分开进行打包和部署的，每个都是以可执行的Java的jar包的形式存在并包含所有必须的服务。</p>
+
+<h3 id="ml层实现">ML层实现</h3>
+
+<p>ML层对上述通用接口方法做了简单的专一话的实现，实现了通用ML需求，并且对应用暴露了机器学习特有的接入接口。</p>
+
+<p>举个例子，实现了批量处理层，用于自动更新测试集和训练集进程。可以调用应用提供的函数来评估测试机模型。通过尝试不同的超参数值，选择出最佳结果。通过PMML管理模型的序列号。</p>
+
+<h3 id="端到端应用实现">端到端应用实现</h3>
+
+<p>除了作为一种框架，Oryx2 包含完整的三中机器学习需要的批处理层，实时处理层，服务层。
+  开箱即用，或者作为自定义程序的基础：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 基于最小二乘法的协同过滤/推荐
+* 基于k-means的聚类
+* 基于随机决策森林的分类和回归
+</code></pre></div></div>
+
+<h3 id="参考文献">参考文献</h3>
+
+<ul>
+  <li>http://oryx.io/index.html</li>
+  <li>http://www.ivanopt.com/oryx-document%E7%BF%BB%E8%AF%91/</li>
+  <li>http://jameskinley.tumblr.com/post/37398560534/the-lambda-architecture-principles-for</li>
+  <li>http://dmg.org/pmml/v4-1/GeneralStructure.html</li>
+  <li>http://blog.csdn.net/nxcjh321/article/details/24796879</li>
+  <li>http://youngfor.me/post/recsys/oryx-tui-jian-xi-tong-chu-ti-yan</li>
+  <li>https://github.com/OryxProject/oryx</li>
+</ul>
+
+  </div>
+
+</article>
+
+          </div>
+        </div>
+        
+        <div class="pure-u-1-4">
+          <div id="sidebar">
+            <div class="widget">
+              
+                <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                  <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+                  <input type="hidden" name="q6" value="http://localhost:4000">
+                </form>
+              
+              
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">分类</div>
+                <ul class="category-list">
+                  
+                </ul>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">标签</div>
+                <div class="tagcloud">
+                  
+                    <a href="/tag/Emacs" style="font-size: 15px;">Emacs</a>
+                  
+                </div>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">相关推荐</div>
+                <ul class="post-list">
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Emacs-STEP-1.html"> Emacs STEP-1 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Using-Vagrant-for-Rails-Development.html"> 使用Vagrant部署Rails项目 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html"> Laravel 环境安装和配置 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/08/set-up-oryx-env.html"> 玩转 Oryx2 （一） </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/07/Oryx2-performance-doc.html"> Oryx2 性能优化文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-end-user-doc.html"> Oryx2 终端用户文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-developer-doc.html"> Oryx2 开发者文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/03/08/Java-keyword-volatile.html"> Java关键字volatile </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/01/24/Reg-Nginx.html"> 正则表达式处理Nginx </a></li>
+                
+                </ul>
+            </div>
+              
+            <div class="widget">
+              <div class="widget-title">友情链接</div>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="http://people.csail.mit.edu/matei/" title="Matei Zaharia" target="_blank">Matei Zaharia</a>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="https://github.com/tensorflow/tensorflow" title="tensorflow" target="_blank">tensorflow</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">© 2019 
+        <a href="/." rel="nofollow">Tensor Cell.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
+        
+      </div>
+      
+
+      <a id="rocket" href="#top" class="show"></a>
+      
+      <script src="/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/js/totop.js" type="text/javascript"></script>
+      <script src="/js/fancybox.pack.js" type="text/javascript"></script>
+      <script src="/js/jquery.fancybox.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
+      
+    </div>
+
+    
+
+  </body>
+
+</html>

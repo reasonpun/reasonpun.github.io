@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  
+  <title>Oryx2 终端用户文档</title>
+  <meta name="description" content="">
+  <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Tensor Cell" href="/feed.xml">
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+  <body>
+    <div class="body_container">
+      <div id="header">
+        <div class="site-name">
+          <h1 class="hidden">Oryx2 终端用户文档</h1>
+          <a id="logo" href="/.">Tensor Cell</a>
+          <p class="description">还要再走500里</p>
+        </div>
+        <div id="nav-menu">
+          
+            <a href="//"><i class="icon-home"> 首页</i></a>
+          
+            <a href="/archives/"><i class="icon-archive"> 归档</i></a>
+          
+            <a href="/about/"><i class="icon-about"> 关于</i></a>
+          
+            <a href="/history/"><i class="icon-history"> 历史</i></a>
+          
+            <a href="/feed.xml"><i class="icon-rss"> 订阅</i></a>
+          
+        </div>
+      <script type="text/javascript">
+      var menus=document.getElementById('nav-menu');
+      var ishome = true;
+      for (var i=1;i<menus.childElementCount;i++) {
+        var path = location.href;
+        var current = path.startsWith(menus.children[i].href);
+        if (current) {
+          menus.children[i].className ='current';
+          ishome = false;
+          break;
+        }
+      }
+      if (ishome) {
+      	menus.children[0].className ='current';
+      }
+      </script>
+      </div>
+
+      <div id="layout" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+          <div class="content_container">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Oryx2 终端用户文档</h1>
+    <p class="post-meta"><time datetime="2016-04-06T00:00:00+08:00" itemprop="datePublished">Apr 6, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <!--  -->
+<!--  -->
+<!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     -->
+<!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   -->
+<!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  -->
+<!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ -->
+<!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ -->
+<!--                                                 \ \_\                   -->
+<!--                                                  \/_/                   -->
+<!--  -->
+
+<h3 id="运行">运行</h3>
+
+<p>注意：你必须已经按照<a href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/">管理员文档</a>中提到的配置好了你的集群。</p>
+
+<p>下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。</p>
+
+<p>或者，源码编译他们并从deploy/bin/获取最新的脚本。</p>
+
+<p>拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。</p>
+
+<p>创建一个配置文件，可以简单的拷贝例子中的conf/als-example.conf。并修改host名称，端口和目录。实际上，选择hdfs上已经存在的数据和模型目录便于用户运行Oryx 二进制命令。</p>
+
+<p>拷贝该配置文件，并重命名为oryx.conf，将他放到每个机器的上二进制命令和脚本相同的目录下。</p>
+
+<p>执行如下命令开始这3个层的运行：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./oryx-run.sh batch
+./oryx-run.sh speed
+./oryx-run.sh serving
+</code></pre></div></div>
+
+<p>参数–layer-jar your-layer.jar and –conf your-config.conf可以指定某一层特定位置的jar文件和配置文件。也可以使用–jvm-args直接传递更多的参数给Spark驱动程序，比如：–jvm-args=”-Dkey=value”</p>
+
+<p>这都不需要在同一台机器上，但是也不一定（如果配置特殊指定批处理和实时处理层，服务层API不同的端口）。服务层可以运行在多个机器上。</p>
+
+<p>举个例子，批处理层SparkUI运行在启动脚本所在的机器的4040端口（除非通过配置更改）。一个简单的基于web端的控制台的服务层默认是运行在8080端口的。</p>
+
+<p>完美！</p>
+
+<h3 id="尝试下als的例子吧">尝试下ALS的例子吧</h3>
+
+<p>如果你已经使用了上述的配置，你就已经可以运行一个基于ALS的推荐程序实例。
+自获取GroupLens 100K的数据集，并且找到u.data文件，这个文件的内容需要转换成csv格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr '\t' ',' &lt; u.data &gt; data.csv
+</code></pre></div></div>
+
+<p>将这些数据放入服务层，使用本地的命令行工具，如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget --quiet --post-file data.csv --output-document - \
+  --header "Content-Type: text/csv" \
+  http://your-serving-layer:8080/ingest
+</code></pre></div></div>
+
+<p>如果你使用tail命令查看输入的内容，可以看到如下数据：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>196,242,3.0,881250949186
+196,242,3.0,881250949
+186,302,3.0,891717742
+22,377,1.0,878887116
+244,51,2.0,880606923
+166,346,1.0,886397596
+298,474,4.0,884182806
+...
+</code></pre></div></div>
+
+<p>很快的，你也可以看到批处理层已经开始触发一个新的计算了。这个例子被配置为5分钟一个周期。</p>
+
+<p>数据首先会被写入HDFS。默认配置被写入hdfs:///user/example/Oryx/data/目录下。且目录以时间戳命名，每一部分都包含Hadoop part-r-* 文件，都是以文本的序列话文件的方式存储。虽然不是纯文本，打印出来的话，还是有一部分是可以识别的，因为这其实真的是文本。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SEQorg.apache.hadoop.io.Textorg.apache.hadoop.io.Text����^�]�XسN�22,377,1.0,87888711662...
+</code></pre></div></div>
+
+<p>模型计算开始。这些批处理层会以大量的新的分布式的作业形式展现。在这个例子中，Spark UI可以通过http://your-batch-layer:4040访问。</p>
+
+<p>模型计算是非常快的，执行完毕以后会合并PMML和支持数据文件并存储到目录hdfs:///user/example/Oryx/model/下。举个例子，model.pmml 的内容如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span>
+<span class="nt">&lt;PMML</span> <span class="na">xmlns=</span><span class="s">"http://www.dmg.org/PMML-4_2"</span> <span class="na">version=</span><span class="s">"4.2.1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Header&gt;</span>
+        <span class="nt">&lt;Application</span> <span class="na">name=</span><span class="s">"Oryx"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Timestamp&gt;</span>2014-12-18T04:48:54-0800<span class="nt">&lt;/Timestamp&gt;</span>
+    <span class="nt">&lt;/Header&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"X"</span> <span class="na">value=</span><span class="s">"X/"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"Y"</span> <span class="na">value=</span><span class="s">"Y/"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"features"</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"lambda"</span> <span class="na">value=</span><span class="s">"0.001"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"implicit"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"alpha"</span> <span class="na">value=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"XIDs"</span><span class="nt">&gt;</span>56 168 222 343 397 ...
+     ...
+
+</code></pre></div></div>
+
+<p>The X/ and Y/ subdirectories next to it contain feature vectors, like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[56,[0.5746282834154238,-0.08896614131333057,-0.029456222765775263,
+  0.6039821219690552,0.1497901814774658,-0.018654312114339863,
+  -0.37342063488340266,-0.2370768843521807,1.148260034028485,
+  1.0645643656769153]]
+[168,[0.8722769882777296,0.4370416943031704,0.27402044461549885,
+  -0.031252701117490456,-0.7241385753098256,0.026079081002582338,
+  0.42050973702065714,0.27766923396205817,0.6241033215856671,
+  -0.48530795198811266]]
+...
+</code></pre></div></div>
+
+<p>如果使用tail命令查看更新的内容。
+这些数据会很快放入服务层，此时访问/ready会返回200 OK。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget --quiet --output-document - --server-response \
+  http://your-serving-layer:8080/ready
+...
+  HTTP/1.1 200 OK
+  Content-Length: 0
+  Date: Tue, 1 Sep 2015 13:26:53 GMT
+  Server: Oryx
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget --quiet --output-document -  http://your-serving-layer:8080/recommend/17
+...
+50,0.7749542842056966
+275,0.7373013861581563
+258,0.731818692628511
+181,0.7049967175706345
+127,0.704518989947498
+121,0.7014631029793741
+15,0.6954683387287907
+288,0.6774889711024022
+25,0.6663619887033064
+285,0.6398968471343595
+</code></pre></div></div>
+
+<p>恭喜！实时推荐系统搭建完毕！可以通过Ctrl-C关闭。</p>
+
+<h3 id="api手册">API手册</h3>
+
+<p>Oryx 支持多种端到端的程序，包括服务层的REST 接口。</p>
+
+<h3 id="协同过滤和推荐">协同过滤和推荐</h3>
+
+<ul>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Recommend.html">/recommend</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToMany.html">/recommendToMany</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToAnonymous.html">/recommendToAnonymous</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendWithContext.html">/recommendWithContext</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Similarity.html">/similarity</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/SimilarityToItem.html">/similarityToItem</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/KnownItems.html">/knownItems</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Estimate.html">/estimate</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/EstimateForAnonymous.html">/estimateForAnonymous</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Because.html">/because</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostSurprising.html">/mostSurprising</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/PopularRepresentativeItems.html">/popularRepresentativeItems</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html">/mostActiveUsers</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostPopularItems.html">/mostPopularItems</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html">/mostActiveUsers</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/AllItemIDs.html">/item/allIDs</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ready.html">/ready</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Preference.html">/pref</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ingest.html">/ingest</a></li>
+</ul>
+
+<h3 id="分类--回归">分类 / 回归</h3>
+
+<ul>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Predict.html">/predict</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/ClassificationDistribution.html">/classificationDistribution</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Ready.html">/ready</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Train.html">/train</a></li>
+</ul>
+
+<h3 id="聚类">聚类</h3>
+
+<ul>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Assign.html">/assign</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/DistanceToNearest.html">/distanceToNearest</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Ready.html">/ready</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Add.html">/add</a></li>
+</ul>
+
+<h3 id="配置">配置</h3>
+
+<ul>
+  <li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/als-example.conf">app/conf/als-example.conf</a></li>
+  <li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/kmeans-example.conf">app/conf/kmeans-example.conf</a></li>
+  <li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/rdf-example.conf">app/conf/rdf-example.conf</a></li>
+</ul>
+
+  </div>
+
+</article>
+
+          </div>
+        </div>
+        
+        <div class="pure-u-1-4">
+          <div id="sidebar">
+            <div class="widget">
+              
+                <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                  <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+                  <input type="hidden" name="q6" value="http://localhost:4000">
+                </form>
+              
+              
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">分类</div>
+                <ul class="category-list">
+                  
+                </ul>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">标签</div>
+                <div class="tagcloud">
+                  
+                    <a href="/tag/Emacs" style="font-size: 15px;">Emacs</a>
+                  
+                </div>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">相关推荐</div>
+                <ul class="post-list">
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Emacs-STEP-1.html"> Emacs STEP-1 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Using-Vagrant-for-Rails-Development.html"> 使用Vagrant部署Rails项目 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html"> Laravel 环境安装和配置 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/08/set-up-oryx-env.html"> 玩转 Oryx2 （一） </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/07/Oryx2-performance-doc.html"> Oryx2 性能优化文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/06/Oryx2-developer-doc.html"> Oryx2 开发者文档 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/03/08/Java-keyword-volatile.html"> Java关键字volatile </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/01/24/Reg-Nginx.html"> 正则表达式处理Nginx </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/01/04/Spark-tuning.html"> Spark优化 </a></li>
+                
+                </ul>
+            </div>
+              
+            <div class="widget">
+              <div class="widget-title">友情链接</div>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="http://people.csail.mit.edu/matei/" title="Matei Zaharia" target="_blank">Matei Zaharia</a>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="https://github.com/tensorflow/tensorflow" title="tensorflow" target="_blank">tensorflow</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">© 2019 
+        <a href="/." rel="nofollow">Tensor Cell.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
+        
+      </div>
+      
+
+      <a id="rocket" href="#top" class="show"></a>
+      
+      <script src="/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/js/totop.js" type="text/javascript"></script>
+      <script src="/js/fancybox.pack.js" type="text/javascript"></script>
+      <script src="/js/jquery.fancybox.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
+      
+    </div>
+
+    
+
+  </body>
+
+</html>
