@@ -5,24 +5,13 @@
     <description>博客描述</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Mar 2019 00:36:49 +0800</pubDate>
-    <lastBuildDate>Tue, 05 Mar 2019 00:36:49 +0800</lastBuildDate>
+    <pubDate>Tue, 05 Mar 2019 00:44:56 +0800</pubDate>
+    <lastBuildDate>Tue, 05 Mar 2019 00:44:56 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>2019 Q1 OKR</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;p&gt;目标1&lt;/p&gt;
+        <description>&lt;p&gt;目标1&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;关键结果1.1&lt;/li&gt;
   &lt;li&gt;关键结果1.2
@@ -50,18 +39,7 @@
     
       <item>
         <title>Emacs STEP-1</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;h2 id=&quot;emacs学习入门-step1&quot;&gt;Emacs学习入门 STEP－1&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;emacs学习入门-step1&quot;&gt;Emacs学习入门 STEP－1&lt;/h2&gt;
 
 &lt;p&gt;摘自（ &lt;a href=&quot;http://blog.csdn.net/redguardtoo/article/details/7222501&quot;&gt;一年成为Emacs高手（像神一样使用编辑器）&lt;/a&gt; ）&lt;/p&gt;
 
@@ -138,18 +116,7 @@
     
       <item>
         <title>使用Vagrant部署Rails项目</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;h2 id=&quot;简述&quot;&gt;简述&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;简述&quot;&gt;简述&lt;/h2&gt;
 
 &lt;p&gt;Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。&lt;/p&gt;
 
@@ -429,18 +396,7 @@ error message for that particular provider.
     
       <item>
         <title>Laravel和Dropzone.js实现文件上传</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;p&gt;Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。&lt;/p&gt;
+        <description>&lt;p&gt;Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。&lt;/p&gt;
 
 &lt;p&gt;在Laravel项目中加入Dropzone对于没有经验的新手来说会有很多麻烦，所以在这里会讲些最靠谱的解决方法。&lt;/p&gt;
 
@@ -1029,18 +985,7 @@ Route::post('upload/delete', ['as' =&amp;gt; 'upload-remove', 'uses' =&amp;gt;'I
     
       <item>
         <title>Laravel 环境安装和配置</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;h2 id=&quot;php环境的安装配置&quot;&gt;PHP环境的安装配置&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;php环境的安装配置&quot;&gt;PHP环境的安装配置&lt;/h2&gt;
 
 &lt;h3 id=&quot;下载php源码&quot;&gt;下载PHP源码&lt;/h3&gt;
 
@@ -1160,12 +1105,6 @@ reasonpun@vultr:/data/web/17tu$ sudo mv composer.phar /usr/local/bin/composer
 
 &lt;h3 id=&quot;查看命令的可用性&quot;&gt;查看命令的可用性&lt;/h3&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ composer
-   ______
-  / ____/___  ____ ___  ____  ____  ________  _____
- / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
-\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
-                    /_/
 Composer version 1.1.2 2016-05-31 19:48:11
 
 Usage:
@@ -1304,18 +1243,7 @@ reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 storage/
     
       <item>
         <title>玩转 Oryx2 （一）</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;h2 id=&quot;准备&quot;&gt;准备&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;准备&quot;&gt;准备&lt;/h2&gt;
 
 &lt;h3 id=&quot;环境&quot;&gt;环境&lt;/h3&gt;
 &lt;ul&gt;
@@ -1688,18 +1616,7 @@ Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of 
     
       <item>
         <title>Oryx2 性能优化文档</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;p&gt;这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。&lt;/p&gt;
+        <description>&lt;p&gt;这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。&lt;/p&gt;
 
 &lt;h2 id=&quot;硬件和集群设计&quot;&gt;硬件和集群设计&lt;/h2&gt;
 
@@ -1941,18 +1858,7 @@ mvn -Pbenchmark \
     
       <item>
         <title>Oryx2 终端用户文档</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;h3 id=&quot;运行&quot;&gt;运行&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;运行&quot;&gt;运行&lt;/h3&gt;
 
 &lt;p&gt;注意：你必须已经按照&lt;a href=&quot;http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/&quot;&gt;管理员文档&lt;/a&gt;中提到的配置好了你的集群。&lt;/p&gt;
 
@@ -2140,18 +2046,7 @@ mvn -Pbenchmark \
     
       <item>
         <title>Oryx2 开发者文档</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;h3 id=&quot;环境需求&quot;&gt;环境需求&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;环境需求&quot;&gt;环境需求&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;git&lt;/a&gt;, 或者一个支持git的IDE&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://maven.apache.org/&quot;&gt;Apache Maven&lt;/a&gt; 3.2.1 或者更新版本&lt;/li&gt;
@@ -2359,18 +2254,7 @@ curl http://.../distinct
     
       <item>
         <title>Java关键字volatile</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;p&gt;翻译自：http://tutorials.jenkov.com/java-concurrency/volatile.html&lt;/p&gt;
+        <description>&lt;p&gt;翻译自：http://tutorials.jenkov.com/java-concurrency/volatile.html&lt;/p&gt;
 
 &lt;h3 id=&quot;java-volatile-关键字&quot;&gt;Java Volatile 关键字&lt;/h3&gt;
 
