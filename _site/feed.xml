@@ -3,10 +3,10 @@
   <channel>
     <title>Tensor Cell</title>
     <description>博客描述</description>
-    <link>pangz.me/</link>
-    <atom:link href="pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Mar 2019 00:34:31 +0800</pubDate>
-    <lastBuildDate>Tue, 05 Mar 2019 00:34:31 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 05 Mar 2019 00:36:49 +0800</pubDate>
+    <lastBuildDate>Tue, 05 Mar 2019 00:36:49 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -40,8 +40,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
-        <link>pangz.me/2019/01/01/2019_Q1_OKR.html</link>
-        <guid isPermaLink="true">pangz.me/2019/01/01/2019_Q1_OKR.html</guid>
+        <link>http://localhost:4000/2019/01/01/2019_Q1_OKR.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/01/01/2019_Q1_OKR.html</guid>
         
         <category>OKR</category>
         
@@ -128,8 +128,8 @@
 
 </description>
         <pubDate>Sat, 21 Jan 2017 00:00:00 +0800</pubDate>
-        <link>pangz.me/2017/01/21/Emacs-STEP-1.html</link>
-        <guid isPermaLink="true">pangz.me/2017/01/21/Emacs-STEP-1.html</guid>
+        <link>http://localhost:4000/2017/01/21/Emacs-STEP-1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/21/Emacs-STEP-1.html</guid>
         
         <category>Emacs</category>
         
@@ -421,8 +421,8 @@ error message for that particular provider.
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 04 Nov 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</link>
-        <guid isPermaLink="true">pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</guid>
+        <link>http://localhost:4000/2016/11/04/Using-Vagrant-for-Rails-Development.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/04/Using-Vagrant-for-Rails-Development.html</guid>
         
         
       </item>
@@ -464,7 +464,7 @@ error message for that particular provider.
 
 &lt;p&gt;实现的效果图如下&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;基本的项目配置&quot;&gt;基本的项目配置&lt;/h2&gt;
 
@@ -1021,8 +1021,8 @@ Route::post('upload/delete', ['as' =&amp;gt; 'upload-remove', 'uses' =&amp;gt;'I
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 29 Jun 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</link>
-        <guid isPermaLink="true">pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</guid>
+        <link>http://localhost:4000/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</guid>
         
         
       </item>
@@ -1296,8 +1296,8 @@ reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 storage/
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</link>
-        <guid isPermaLink="true">pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</guid>
+        <link>http://localhost:4000/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</guid>
         
         
       </item>
@@ -1463,7 +1463,7 @@ Status of topic OryxUpdate:
 
 &lt;p&gt;这个问题应该是：CDH没有启动Kafka服务没有启动。通过CDH后台启动Kafka服务（如果没有添加Kafka服务，则需要先添加）。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/oryx/add-kafka-service.png&quot; alt=&quot;Kafka Service&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/oryx/add-kafka-service.png&quot; alt=&quot;Kafka Service&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;此时重新执行setup命令：&lt;/p&gt;
 
@@ -1680,8 +1680,8 @@ Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 08 Apr 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/04/08/set-up-oryx-env.html</link>
-        <guid isPermaLink="true">pangz.me/2016/04/08/set-up-oryx-env.html</guid>
+        <link>http://localhost:4000/2016/04/08/set-up-oryx-env.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/08/set-up-oryx-env.html</guid>
         
         
       </item>
@@ -1933,8 +1933,8 @@ mvn -Pbenchmark \
 &lt;p&gt;Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.&lt;/p&gt;
 </description>
         <pubDate>Thu, 07 Apr 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/04/07/Oryx2-performance-doc.html</link>
-        <guid isPermaLink="true">pangz.me/2016/04/07/Oryx2-performance-doc.html</guid>
+        <link>http://localhost:4000/2016/04/07/Oryx2-performance-doc.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/07/Oryx2-performance-doc.html</guid>
         
         
       </item>
@@ -2132,8 +2132,8 @@ mvn -Pbenchmark \
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/04/06/Oryx2-end-user-doc.html</link>
-        <guid isPermaLink="true">pangz.me/2016/04/06/Oryx2-end-user-doc.html</guid>
+        <link>http://localhost:4000/2016/04/06/Oryx2-end-user-doc.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/06/Oryx2-end-user-doc.html</guid>
         
         
       </item>
@@ -2351,8 +2351,8 @@ curl http://.../distinct
 &lt;p&gt;配置文件本身已经配置好了主机名称和&lt;a href=&quot;http://www.cloudera.com/content/www/en-us/downloads/quickstart_vms.html&quot;&gt;Cloudera Quickstart VM&lt;/a&gt;的参数。事实上，这个例子可以作为一个集群配置的例子：&lt;a href=&quot;http://oryx.io/docs/admin.html#cloudera_quickstart_vm_setup&quot;&gt;Cloudera Quickstart VM Setup&lt;/a&gt;。&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/04/06/Oryx2-developer-doc.html</link>
-        <guid isPermaLink="true">pangz.me/2016/04/06/Oryx2-developer-doc.html</guid>
+        <link>http://localhost:4000/2016/04/06/Oryx2-developer-doc.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/06/Oryx2-developer-doc.html</guid>
         
         
       </item>
@@ -2384,7 +2384,7 @@ curl http://.../distinct
 
 &lt;p&gt;在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-1.png&quot; alt=&quot;volatile&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-1.png&quot; alt=&quot;volatile&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;使用非volatile变量，当JVM自主内存读取数据到CPU缓存，或者自CPU缓存写入主内存时，是没有保证的。这可能会引起很多问题，接下来章节中会降到。&lt;/p&gt;
 
@@ -2401,7 +2401,7 @@ curl http://.../distinct
 
 &lt;p&gt;如果计数变量没有被声明为volatile，那么自CPU缓存回写到主内存的过程中，就无法保证这个计数变量的值了。也就是说，技术变量的值在通过CPU缓存写会主内存的过程中发生了改变。如图：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-2.png&quot; alt=&quot;volatile 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-2.png&quot; alt=&quot;volatile 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这个问题是因为线程并没有得到最新的值，另外那个线程并没有将最新的变量写回主内存，这就是所谓的“可见”问题。某一个线程的更新并没有被另外的线程获取。&lt;/p&gt;
 
@@ -2523,7 +2523,7 @@ That is basically the meaning of the Java volatile happens before guarantee.&lt;
 
 &lt;p&gt;设想，如果线程1读取共享计数变量，他的值是0，并放入CPU的缓存，使其加1，但是这样的改变并不会回写如主内存。线程2此时可以自主内存读取相同的计数器变量，但是读到的值仍然是0，并将这个值放入了自己的CPU缓存。线程2也可以对其加1，并且可以回写到主内存。这种情况详见下图：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-3.png&quot; alt=&quot;volatile 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-3.png&quot; alt=&quot;volatile 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;线程1和线程2此时并不是同步的。这个共享计数器的值应该是2，但是每个线程在自己的CPU缓存中存放的值却是1，在主内存中的值是0.这已经完全乱了！即使最后每个线程回写这个共享计数变量的值到主内存，这个值也是错误的。&lt;/p&gt;
 
@@ -2552,8 +2552,8 @@ That is basically the meaning of the Java volatile happens before guarantee.&lt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/03/08/Java-keyword-volatile.html</link>
-        <guid isPermaLink="true">pangz.me/2016/03/08/Java-keyword-volatile.html</guid>
+        <link>http://localhost:4000/2016/03/08/Java-keyword-volatile.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/03/08/Java-keyword-volatile.html</guid>
         
         
       </item>
