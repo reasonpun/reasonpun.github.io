@@ -3,11 +3,50 @@
   <channel>
     <title>Tensor Cell</title>
     <description>博客描述</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Mar 2019 23:55:57 +0800</pubDate>
-    <lastBuildDate>Mon, 04 Mar 2019 23:55:57 +0800</lastBuildDate>
+    <link>pangz.me/</link>
+    <atom:link href="pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 05 Mar 2019 00:34:31 +0800</pubDate>
+    <lastBuildDate>Tue, 05 Mar 2019 00:34:31 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>2019 Q1 OKR</title>
+        <description>&lt;!--  --&gt;
+&lt;!--  --&gt;
+&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
+&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
+&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
+&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
+&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
+&lt;!--                                                 \ \_\                   --&gt;
+&lt;!--                                                  \/_/                   --&gt;
+&lt;!--  --&gt;
+
+&lt;p&gt;目标1&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;关键结果1.1&lt;/li&gt;
+  &lt;li&gt;关键结果1.2
+目标2&lt;/li&gt;
+  &lt;li&gt;关键结果2.1&lt;/li&gt;
+  &lt;li&gt;关键结果2.2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;接下来的调整&quot;&gt;接下来的调整&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1&lt;/li&gt;
+  &lt;li&gt;2&lt;/li&gt;
+  &lt;li&gt;3&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
+        <link>pangz.me/2019/01/01/2019_Q1_OKR.html</link>
+        <guid isPermaLink="true">pangz.me/2019/01/01/2019_Q1_OKR.html</guid>
+        
+        <category>OKR</category>
+        
+        
+      </item>
     
       <item>
         <title>Emacs STEP-1</title>
@@ -89,8 +128,8 @@
 
 </description>
         <pubDate>Sat, 21 Jan 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/01/21/Emacs-STEP-1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/01/21/Emacs-STEP-1.html</guid>
+        <link>pangz.me/2017/01/21/Emacs-STEP-1.html</link>
+        <guid isPermaLink="true">pangz.me/2017/01/21/Emacs-STEP-1.html</guid>
         
         <category>Emacs</category>
         
@@ -382,8 +421,8 @@ error message for that particular provider.
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 04 Nov 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/11/04/Using-Vagrant-for-Rails-Development.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/11/04/Using-Vagrant-for-Rails-Development.html</guid>
+        <link>pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</link>
+        <guid isPermaLink="true">pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</guid>
         
         
       </item>
@@ -425,7 +464,7 @@ error message for that particular provider.
 
 &lt;p&gt;实现的效果图如下&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;pangz.me/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;基本的项目配置&quot;&gt;基本的项目配置&lt;/h2&gt;
 
@@ -982,8 +1021,8 @@ Route::post('upload/delete', ['as' =&amp;gt; 'upload-remove', 'uses' =&amp;gt;'I
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 29 Jun 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</guid>
+        <link>pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</link>
+        <guid isPermaLink="true">pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</guid>
         
         
       </item>
@@ -1257,8 +1296,8 @@ reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 storage/
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</guid>
+        <link>pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</link>
+        <guid isPermaLink="true">pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</guid>
         
         
       </item>
@@ -1424,7 +1463,7 @@ Status of topic OryxUpdate:
 
 &lt;p&gt;这个问题应该是：CDH没有启动Kafka服务没有启动。通过CDH后台启动Kafka服务（如果没有添加Kafka服务，则需要先添加）。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/oryx/add-kafka-service.png&quot; alt=&quot;Kafka Service&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;pangz.me/assets/oryx/add-kafka-service.png&quot; alt=&quot;Kafka Service&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;此时重新执行setup命令：&lt;/p&gt;
 
@@ -1641,8 +1680,8 @@ Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 08 Apr 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/04/08/set-up-oryx-env.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/08/set-up-oryx-env.html</guid>
+        <link>pangz.me/2016/04/08/set-up-oryx-env.html</link>
+        <guid isPermaLink="true">pangz.me/2016/04/08/set-up-oryx-env.html</guid>
         
         
       </item>
@@ -1894,8 +1933,8 @@ mvn -Pbenchmark \
 &lt;p&gt;Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.&lt;/p&gt;
 </description>
         <pubDate>Thu, 07 Apr 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/04/07/Oryx2-performance-doc.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/07/Oryx2-performance-doc.html</guid>
+        <link>pangz.me/2016/04/07/Oryx2-performance-doc.html</link>
+        <guid isPermaLink="true">pangz.me/2016/04/07/Oryx2-performance-doc.html</guid>
         
         
       </item>
@@ -2093,8 +2132,8 @@ mvn -Pbenchmark \
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/04/06/Oryx2-end-user-doc.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/06/Oryx2-end-user-doc.html</guid>
+        <link>pangz.me/2016/04/06/Oryx2-end-user-doc.html</link>
+        <guid isPermaLink="true">pangz.me/2016/04/06/Oryx2-end-user-doc.html</guid>
         
         
       </item>
@@ -2312,8 +2351,8 @@ curl http://.../distinct
 &lt;p&gt;配置文件本身已经配置好了主机名称和&lt;a href=&quot;http://www.cloudera.com/content/www/en-us/downloads/quickstart_vms.html&quot;&gt;Cloudera Quickstart VM&lt;/a&gt;的参数。事实上，这个例子可以作为一个集群配置的例子：&lt;a href=&quot;http://oryx.io/docs/admin.html#cloudera_quickstart_vm_setup&quot;&gt;Cloudera Quickstart VM Setup&lt;/a&gt;。&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/04/06/Oryx2-developer-doc.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/06/Oryx2-developer-doc.html</guid>
+        <link>pangz.me/2016/04/06/Oryx2-developer-doc.html</link>
+        <guid isPermaLink="true">pangz.me/2016/04/06/Oryx2-developer-doc.html</guid>
         
         
       </item>
@@ -2345,7 +2384,7 @@ curl http://.../distinct
 
 &lt;p&gt;在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-1.png&quot; alt=&quot;volatile&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-1.png&quot; alt=&quot;volatile&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;使用非volatile变量，当JVM自主内存读取数据到CPU缓存，或者自CPU缓存写入主内存时，是没有保证的。这可能会引起很多问题，接下来章节中会降到。&lt;/p&gt;
 
@@ -2362,7 +2401,7 @@ curl http://.../distinct
 
 &lt;p&gt;如果计数变量没有被声明为volatile，那么自CPU缓存回写到主内存的过程中，就无法保证这个计数变量的值了。也就是说，技术变量的值在通过CPU缓存写会主内存的过程中发生了改变。如图：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-2.png&quot; alt=&quot;volatile 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-2.png&quot; alt=&quot;volatile 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这个问题是因为线程并没有得到最新的值，另外那个线程并没有将最新的变量写回主内存，这就是所谓的“可见”问题。某一个线程的更新并没有被另外的线程获取。&lt;/p&gt;
 
@@ -2484,7 +2523,7 @@ That is basically the meaning of the Java volatile happens before guarantee.&lt;
 
 &lt;p&gt;设想，如果线程1读取共享计数变量，他的值是0，并放入CPU的缓存，使其加1，但是这样的改变并不会回写如主内存。线程2此时可以自主内存读取相同的计数器变量，但是读到的值仍然是0，并将这个值放入了自己的CPU缓存。线程2也可以对其加1，并且可以回写到主内存。这种情况详见下图：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/volatile/java-volatile-3.png&quot; alt=&quot;volatile 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-3.png&quot; alt=&quot;volatile 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;线程1和线程2此时并不是同步的。这个共享计数器的值应该是2，但是每个线程在自己的CPU缓存中存放的值却是1，在主内存中的值是0.这已经完全乱了！即使最后每个线程回写这个共享计数变量的值到主内存，这个值也是错误的。&lt;/p&gt;
 
@@ -2513,76 +2552,8 @@ That is basically the meaning of the Java volatile happens before guarantee.&lt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/03/08/Java-keyword-volatile.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/03/08/Java-keyword-volatile.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>正则表达式处理Nginx</title>
-        <description>&lt;!--  --&gt;
-&lt;!--  --&gt;
-&lt;!--  _ __    __     __      ____    ___     ___   _____   __  __    ___     --&gt;
-&lt;!-- /\`'__\/'__`\ /'__`\   /',__\  / __`\ /' _ `\/\ '__`\/\ \/\ \ /' _ `\   --&gt;
-&lt;!-- \ \ \//\  __//\ \L\.\_/\__, `\/\ \L\ \/\ \/\ \ \ \L\ \ \ \_\ \/\ \/\ \  --&gt;
-&lt;!--  \ \_\\ \____\ \__/.\_\/\____/\ \____/\ \_\ \_\ \ ,__/\ \____/\ \_\ \_\ --&gt;
-&lt;!--   \/_/ \/____/\/__/\/_/\/___/  \/___/  \/_/\/_/\ \ \/  \/___/  \/_/\/_/ --&gt;
-&lt;!--                                                 \ \_\                   --&gt;
-&lt;!--                                                  \/_/                   --&gt;
-&lt;!--  --&gt;
-
-&lt;h1 id=&quot;nginx-日志配置格式&quot;&gt;Nginx 日志配置格式&lt;/h1&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;log_format  main
-        '[$upstream_addr] $remote_addr [$time_local] &quot;$request&quot; $status '
-        '&quot;$request_body&quot; $body_bytes_sent &quot;$http_referer&quot; &quot;$http_user_agent&quot; '
-        'RESP:$upstream_response_time '
-        'REQ:$request_time';
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;样例&quot;&gt;样例&lt;/h1&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[192.168.1.5:80] 19.78.22.51 [31/Dec/2015:13:59:02 +0800] &quot;POST /api/mbbb/dup_msg_send?pallow_dubbing=0&amp;amp;partner_msgs_id=279&amp;amp;roles_id=23&amp;amp;score=6700&amp;amp;section_id=512&amp;amp;whole_audio=200.m4a&amp;amp;d
-evice_id=112222f0fc3&amp;amp;lang=zh-CN&amp;amp;trigger=user&amp;amp;user_id=516487&amp;amp;v=ios_7.0.3 HTTP/1.1&quot; 200 &quot;audio_fragment=00280%22%3A%7B%22pitch%22%3A47%2C%22rhythm%22%3A95%2C%22tone%22%3A75%7D%2C%226800278%22%3A%7B%22pitch%22%3A70%2C%22rhythm%22%3A90%2%7D%2C%226800276%22
-%3A%7B%22pitch%22%3A60%2C%22rhythm%22%3A82%2C%22tone%22D&amp;amp;content=hhhhhh%E5%B0%8F%E5%AB%A9%E8%8D%89&quot; 51 &quot;-&quot; &quot;paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)&quot; RESP:0.166 REQ:0.167
-[192.168.1.5:80, 192.169.1.33:88] 60.12.246.5 [31/Dec/2015:23:59:02 +0800] &quot;GET /api/mppb/notice/list?device_id=112233fe6a6d991f&amp;amp;lang=zh-CN&amp;amp;user_id=6120&amp;amp;v=ios_7.0.3 HTTP/1.1&quot; 200 &quot;-&quot; 54 &quot;-&quot; &quot;paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)&quot; RESP:0.006 REQ:0.006
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;正则表达式&quot;&gt;正则表达式&lt;/h1&gt;
-
-&lt;h2 id=&quot;python版本&quot;&gt;Python版本&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;p = re.compile(
-            r&quot;\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \&quot;(\S+)\ (\S+)\ .*?\&quot;\ (\d+)\ \&quot;(.*?)\&quot;\ (\d+)\ \&quot;([^\&quot;]*)\&quot;\ \&quot;.*?\&quot; .*?&quot;)
-m = re.findall(p, line)
-day = m[0][0]
-month = m[0][1]
-year = m[0][2]
-ttime = m[0][3]
-method = m[0][4]
-request = m[0][5]
-status = m[0][6]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;scala版本&quot;&gt;Scala版本&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val regex = new Regex( &quot;&quot;&quot;\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \&quot;(\S+)\ (\S+)\ .*?\&quot;\ (\d+)\ \&quot;(.*?)\&quot;\ (\d+)\ \&quot;([^\&quot;]*)\&quot;\ \&quot;.*?\&quot; .*?&quot;&quot;&quot;)
-val regex(day, month, year, time, method, request, status, postData, bytes, refer) = line
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://www.jianshu.com/p/5d8c802be13d&lt;/li&gt;
-  &lt;li&gt;https://segmentfault.com/a/1190000002727070&lt;/li&gt;
-  &lt;li&gt;http://desert3.iteye.com/blog/1001568&lt;/li&gt;
-  &lt;li&gt;http://stackoverflow.com/questions/996536/regex-in-python&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 24 Jan 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/01/24/Reg-Nginx.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/01/24/Reg-Nginx.html</guid>
+        <link>pangz.me/2016/03/08/Java-keyword-volatile.html</link>
+        <guid isPermaLink="true">pangz.me/2016/03/08/Java-keyword-volatile.html</guid>
         
         
       </item>
