@@ -96,7 +96,7 @@
 
 <h4 id="架构图">架构图</h4>
 
-<p><img src="http://localhost:4000/assets/flume-ng/flume-ng-architecture.png" alt="flume-ng总体结构图" /></p>
+<p><img src="pangz.me/assets/flume-ng/flume-ng-architecture.png" alt="flume-ng总体结构图" /></p>
 
 <h4 id="基本流程">基本流程</h4>
 
@@ -153,19 +153,19 @@
 
 <h4 id="多个agent顺序连接">多个Agent顺序连接</h4>
 
-<p><img src="http://localhost:4000/assets/flume-ng/flume-multiseq-agents.png" alt="flume-ng 多个Agent顺序连接" /></p>
+<p><img src="pangz.me/assets/flume-ng/flume-multiseq-agents.png" alt="flume-ng 多个Agent顺序连接" /></p>
 
 <p>可以将多个Agent顺序连接起来，将最初的数据源经过收集，存储到最终的存储系统中。这是最简单的情况，一般情况下，应该控制这种顺序连接的Agent的数量，因为数据流经的路径变长了，如果不考虑failover的话，出现故障将影响整个Flow上的Agent收集服务。</p>
 
 <h4 id="多个agent的数据汇聚到同一个agent">多个Agent的数据汇聚到同一个Agent</h4>
 
-<p><img src="http://localhost:4000/assets/flume-ng/flume-join-agent.png" alt="flume-ng 多个Agent的数据汇聚到同一个Agent" /></p>
+<p><img src="pangz.me/assets/flume-ng/flume-join-agent.png" alt="flume-ng 多个Agent的数据汇聚到同一个Agent" /></p>
 
 <p>这种情况应用的场景比较多，比如要收集Web网站的用户行为日志，Web网站为了可用性使用的负载均衡的集群模式，每个节点都产生用户行为日志，可以为每个节点都配置一个Agent来单独收集日志数据，然后多个Agent将数据最终汇聚到一个用来存储数据存储系统，如HDFS上。</p>
 
 <h4 id="多路multiplexingagent">多路（Multiplexing）Agent</h4>
 
-<p><img src="http://localhost:4000/assets/flume-ng/flume-multiplexing-agent.png" alt="flume-ng 多路（Multiplexing）Agent" /></p>
+<p><img src="pangz.me/assets/flume-ng/flume-multiplexing-agent.png" alt="flume-ng 多路（Multiplexing）Agent" /></p>
 
 <p>这种模式，有两种方式</p>
 
@@ -218,7 +218,7 @@
 
 <h4 id="实现load-balance功能">实现load balance功能</h4>
 
-<p><img src="http://localhost:4000/assets/flume-ng/flume-load-balance-agents.png" alt="实现load balance功能" /></p>
+<p><img src="pangz.me/assets/flume-ng/flume-load-balance-agents.png" alt="实现load balance功能" /></p>
 
 <p>Load balancing Sink Processor能够实现load balance功能，上图Agent1是一个路由节点，
   负责将Channel暂存的Event均衡到对应的多个Sink组件上，而每个Sink组件分别连接到一个独立的Agent上</p>
@@ -397,7 +397,7 @@
               
                 <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
                   <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
-                  <input type="hidden" name="q6" value="http://localhost:4000">
+                  <input type="hidden" name="q6" value="pangz.me">
                 </form>
               
               
