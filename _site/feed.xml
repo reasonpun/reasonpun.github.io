@@ -5,20 +5,154 @@
     <description>博客描述</description>
     <link>pangz.me/</link>
     <atom:link href="pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Mar 2019 22:10:31 +0800</pubDate>
-    <lastBuildDate>Tue, 05 Mar 2019 22:10:31 +0800</lastBuildDate>
+    <pubDate>Tue, 12 Mar 2019 00:01:35 +0800</pubDate>
+    <lastBuildDate>Tue, 12 Mar 2019 00:01:35 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
+        <title>读吴军《硅谷来信》心得笔记 - 第一篇</title>
+        <description>&lt;p&gt;Google能够从一个小公司成长为全球巨无霸的IT，&lt;strong&gt;企业创始人&lt;/strong&gt;的作用非常大。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;** 首要掌握的技能：切忌固守在自己根深蒂固的思维模式中！ **&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;创始人可以从如下三步入手：&lt;/p&gt;
+
+&lt;h3 id=&quot;第一件事情是招人&quot;&gt;第一件事情是招人。&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;找合适的人，把重要的事情交给他们做，而不是事必躬亲，即不要做太多的细节管理（Micro Management）。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;作为一个公司的创始人，他需要花很多时间找到各个关键岗位最重要的人，一旦找到那样的人，就相信那些人的能力好了。Google到2002年已经有四百人的时候，包括创始人在内的几个高管还要面试每一位HR已经决定录取的员工，因为招人实在太重要了，面试占掉了他们四分之一的时间。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;人招不好，不仅耽误事情，而且常常是请神容易送神难，早去的员工常常占据了很重要的位置，除非他们能够和公司一同成长，否则公司长大之后，他们的工作很难安排。让他们当主管吧，他们又不具有相应的能力和潜力；继续让他们做非常具体的工作吧，他们会觉得创始人太薄情，甚至会纠集一些老员工对抗新来的主管。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ 1. 小公司招人的一个重要的原则，就是对方除了能力和品性能够胜任工作之外，还必须具有非常强的主动性。
+ 2. 录用的人应该高出现有员工的平均水平。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;第二件事情是起到刹车的作用而不是引擎的作用&quot;&gt;第二件事情是起到刹车的作用，而不是引擎的作用。&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;一个管理有序的公司，动力应该来自于底层，刹车应该来自于高层，这样公司既有活力，也有秩序。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Google公司在发展到一百人的规模时，创始人、CEO和几个其他高管，每周要花一天的时间听下面员工介绍自己的项目。他们只负责一件事情，就是确定员工做的事情是该做的事情，而不至于让公司的业务太分散。至于该怎么做，他们从来不发表什么建议，因为既然是精心挑选出来的员工，就相信他们有能力将要做的事情做好。如果用一个词概括这些高管们在审核项目时的作用，就是刹车。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;第三件事情是确立公司的价值观和企业文化&quot;&gt;第三件事情是确立公司的价值观和企业文化。&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;一个公司价值观的确立，企业文化的确立，是在它成立的初期。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+创始人自己的任务就是：找到适合公司自己的商业模式，在早期让整个公司都认可它的价值观。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;一个创始人如果能做好这样三件事情，已经不容易了，具体的事情应该让下面的人做，自己不要干预太多。当一个创始人能够找到称职的主管工程、销售和行政的负责人，并且足够信任他们，那么公司就步入正轨了。如果创始人像诸葛亮那样事必躬亲，不仅会把自己累死，还会把公司做死。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
+        <link>pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html</link>
+        <guid isPermaLink="true">pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html</guid>
+        
+        <category>硅谷来信</category>
+        
+        <category>读后感</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>2018年大兴区幼升小政策</title>
+        <description>&lt;p&gt;非本市户籍的适龄儿童少年，因父母或者其他法定监护人在本区工作或居住需要在本区接受义务教育的，由其父母或其他法定监护人持本人在京务工就业证明、在京实际住所居住证明、全家户口簿、北京市居住证（或有效期内居住登记卡）、户籍所在地乡镇人民政府或街道办事处出具的在当地没有监护条件的证明等相关材料，到居住地所在镇人民政府或者街道办事处审核，审核通过的参加学龄人口信息采集。属于镇属入学范围的由各镇负责解决；属于直属地区范围的，区教委根据各校可提供学位情况和本人相关条件情况统筹协调入学。&lt;/p&gt;
+
+&lt;p&gt;区镇两级政府建立非本市户籍适龄儿童少年接受义务教育证明证件材料联合审核机制。各镇人民政府、街道办事处依据本辖区非本市户籍适龄儿童少年接受义务教育证明证件材料审核要求对提出申请的进行联合审核。&lt;/p&gt;
+
+&lt;h3 id=&quot;2018年大兴区非京籍幼升小五证审核细则&quot;&gt;2018年大兴区非京籍幼升小五证审核细则&lt;/h3&gt;
+
+&lt;h4 id=&quot;一审核程序&quot;&gt;一、审核程序&lt;/h4&gt;
+
+&lt;p&gt;（一）街道办事处或镇人民政府受理审核申请。&lt;/p&gt;
+
+&lt;p&gt;非本市户籍适龄儿童少年父母或其他法定监护人（以下简称审核申请人）在规定时间内，到居住地所在街道办事处或镇人民政府提出审核申请，领取《××镇（街道）非本市户籍适龄儿童少年接受义务教育证明证件材料申请表》，按照街道办事处或镇人民政府审核实施细则和工作流程到相关部门审核“五证”。&lt;/p&gt;
+
+&lt;p&gt;（二）相关部门联合审核。&lt;/p&gt;
+
+&lt;p&gt;街道办事处和镇人民政府统筹辖区内“五证”审核工作，结合实际明确“五证”审核细则。各相关部门按照细则要求具体负责。&lt;/p&gt;
+
+&lt;p&gt;１.在大兴区务工就业证明由区人力社保、工商部门分别审核，签有劳动合同或聘用合同或劳动关系证明的由区人力社保部门审核，法定代表人、股东、合伙人和个体工商户由工商部门审核。&lt;/p&gt;
+
+&lt;p&gt;２.在大兴区实际住所居住证明：房产证（不动产权证书）或《北京市商品房预售合同》由区住建、规土等部门审核；租房材料由街道办事处或镇人民政府负责审核。&lt;/p&gt;
+
+&lt;p&gt;３.北京市居住证（或有效期内的居住登记卡）由居住地派出所进行审核。&lt;/p&gt;
+
+&lt;p&gt;４.全家户口簿由街道办事处或镇人民政府派出所负责审核，超龄儿童少年是否已在原籍入学由教育行政部门审核。&lt;/p&gt;
+
+&lt;p&gt;５.户籍所在地街道办事处或乡镇人民政府出具的在当地没有监护条件的证明，由居住地所在街道办事处或镇人民政府审核。&lt;/p&gt;
+
+&lt;p&gt;（三）街道办事处或镇人民政府反馈审核结果。&lt;/p&gt;
+
+&lt;p&gt;审核申请人居住地所在街道办事处或镇人民政府在规定时间内告知审核申请人审核结果，为符合条件的适龄儿童少年开具在京就读证明，并在学龄人口信息采集系统或初中入学服务系统上进行确认。&lt;/p&gt;
+
+&lt;h4 id=&quot;二审核标准&quot;&gt;二、审核标准&lt;/h4&gt;
+
+&lt;p&gt;（一）在京务工就业证明审核标准。&lt;/p&gt;
+
+&lt;p&gt;审核申请人及其配偶均需提供在大兴区务工就业证明，须符合下列条件之一：&lt;/p&gt;
+
+&lt;p&gt;３.审核申请人及其配偶为法定代表人的，应提供法人代码证书或营业执照原件及复印件等相关证明材料。&lt;/p&gt;
+
+&lt;p&gt;（二）在京实际住所居住证明审核标准。&lt;/p&gt;
+
+&lt;p&gt;在大兴区实际住所居住证明须符合下列条件之一：&lt;/p&gt;
+
+&lt;p&gt;１.审核申请人自有住房且正式入住的应提供区住建、规土等部门登记的《房屋所有权证》或《不动产权证书》；尚未取得《房屋所有权证》或《不动产权证书》的，提供商品房买卖网签合同及购房发票（期房以《北京市商品房预售合同》中交房日期在2018年8月31日前为准）。加强对过道房、车库房、空挂户等情况进行核查，凡不符合实际居住条件的，均不得作为入学资格条件。&lt;/p&gt;
+
+&lt;p&gt;（三）全家户口簿审核标准。&lt;/p&gt;
+
+&lt;p&gt;1.儿童少年年龄符合当年入学规定，户口簿上年龄与出生证明上年龄须保持一致。&lt;/p&gt;
+
+&lt;p&gt;2.超龄儿童应提供户籍所在地街道办事处或乡镇人民政府或县级人民政府教育行政部门出具的未在当地就读一年级的证明，并提供相关证明材料（如医院病历或幼儿园证明等）。说明未按时入学原因并填写《非本市户籍超龄儿童情况表》（此表采用大兴区统一印制的规范文本）。&lt;/p&gt;
+
+&lt;p&gt;（四）北京市居住证（或有效期内居住登记卡）审核标准。&lt;/p&gt;
+
+&lt;p&gt;1.截至2018年4月28日，审核申请人及其配偶均需连续持有居住地派出所制发的北京市居住证（或有效期内居住登记卡）。&lt;/p&gt;
+
+&lt;p&gt;2.北京市居住证（或有效期内居住登记卡）地址与在大兴区实际住所居住证明地址一致。&lt;/p&gt;
+
+&lt;p&gt;3.北京市居住证（或有效期内居住登记卡）信息应为机打，涂改无效。&lt;/p&gt;
+
+&lt;p&gt;（五）户籍所在地街道办事处或乡镇人民政府出具的在当地没有监护条件的证明审核标准。&lt;/p&gt;
+
+&lt;p&gt;审核申请人及其配偶均持北京市居住证（或有效期内居住登记卡）的可视为有此证明。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
+        <link>pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html</link>
+        <guid isPermaLink="true">pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>2019 Q1 OKR</title>
-        <description>&lt;p&gt;目标1 完成基于《军校MOOC系统》的Pyqt5项目知识点的梳理&lt;/p&gt;
+        <description>&lt;p&gt;目标1 听 吴军 老师《硅谷来信》逐篇文件&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;关键结果1.1 主要知识点功能详解&lt;/li&gt;
-  &lt;li&gt;关键结果1.2 博客文章排版发布
-目标2 更新博客&lt;/li&gt;
+  &lt;li&gt;关键结果1.1 深度认同的文章做梳理 - 至少5篇&lt;/li&gt;
+  &lt;li&gt;关键结果1.2 根据读后感，总结和反思过去行为&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目标2 更新博客&lt;/p&gt;
+&lt;ul&gt;
   &lt;li&gt;关键结果2.1 10篇Pyqt5系列文章&lt;/li&gt;
-  &lt;li&gt;关键结果2.2 10篇Flutter系列文章
-目标3 读完《稀缺》这本书&lt;/li&gt;
+  &lt;li&gt;关键结果2.2 10篇Flutter系列文章&lt;/li&gt;
+  &lt;li&gt;关键结果2.3 更新至少5篇其他类型的文章&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目标3 读完《稀缺》这本书&lt;/p&gt;
+&lt;ul&gt;
   &lt;li&gt;关键目标3.1 通读完毕&lt;/li&gt;
   &lt;li&gt;关键目标3.2 对知识点做出20处笔记&lt;/li&gt;
 &lt;/ul&gt;
@@ -2042,404 +2176,6 @@ mvn -Pbenchmark \
         <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
         <link>pangz.me/2016/04/06/Oryx2-end-user-doc.html</link>
         <guid isPermaLink="true">pangz.me/2016/04/06/Oryx2-end-user-doc.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Oryx2 开发者文档</title>
-        <description>&lt;h3 id=&quot;环境需求&quot;&gt;环境需求&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;git&lt;/a&gt;, 或者一个支持git的IDE&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://maven.apache.org/&quot;&gt;Apache Maven&lt;/a&gt; 3.2.1 或者更新版本&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;Java JDK&lt;/a&gt; (不能只有JRE) 7 或者更新版本&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;以上需要已经安装到了你的开发环境中。&lt;/p&gt;
-
-&lt;h2 id=&quot;building&quot;&gt;Building&lt;/h2&gt;
-
-&lt;p&gt;克隆代码到你本地，并且编译：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/OryxProject/oryx.git oryx
-cd oryx
-mvn -DskipTests package
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;会编译出如下的二进制的jar文件：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;批处理层: deploy/oryx-batch/target/oryx-batch-2.1.2.jar&lt;/li&gt;
-  &lt;li&gt;实时处理层: deploy/oryx-speed/target/oryx-speed-2.1.2.jar&lt;/li&gt;
-  &lt;li&gt;服务层: deploy/oryx-serving/target/oryx-serving-2.1.2.jar&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;友情提醒，如果你对开发Oryx感兴趣，可以根据这个&lt;a href=&quot;https://help.github.com/articles/fork-a-repo&quot;&gt;分支&lt;/a&gt;克隆自己的分支，然后就可以提交修改了。&lt;/p&gt;
-
-&lt;h3 id=&quot;java-8&quot;&gt;Java 8&lt;/h3&gt;
-
-&lt;p&gt;如果使用Java8编译，需要添加参数-Pjava8 并且测试这里的指令。&lt;/p&gt;
-
-&lt;h3 id=&quot;platform-only&quot;&gt;Platform Only&lt;/h3&gt;
-
-&lt;p&gt;默认的编译包括基于Spark MLlib和其他库的端到端的ML程序。如果只是编译lambda和ML层，需要通过参数-P!app-tier关闭其他的选项。注意，在bash中，！需要转义： -P!app-tier。&lt;/p&gt;
-
-&lt;h3 id=&quot;测试&quot;&gt;测试&lt;/h3&gt;
-
-&lt;p&gt;mvn 测试会执行所有的但愿测试用例。也同时会执行所有的集成测试，这个可能会需要稍微长点的时间。&lt;/p&gt;
-
-&lt;h2 id=&quot;模型对应表&quot;&gt;模型对应表&lt;/h2&gt;
-
-&lt;p&gt;主要的模型和他们对应的层：&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Serving&lt;/th&gt;
-      &lt;th&gt;Speed&lt;/th&gt;
-      &lt;th&gt;Batch&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Binary&lt;/td&gt;
-      &lt;td&gt;oryx-serving&lt;/td&gt;
-      &lt;td&gt;oryx-speed&lt;/td&gt;
-      &lt;td&gt;oryx-batch&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;App&lt;/td&gt;
-      &lt;td&gt;oryx-app-serving&lt;/td&gt;
-      &lt;td&gt;oryx-app-mllib oryx-app&lt;/td&gt;
-      &lt;td&gt;oryx-app-mllib oryx-app&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ML&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;oryx-ml&lt;/td&gt;
-      &lt;td&gt;oryx-ml&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Lambda&lt;/td&gt;
-      &lt;td&gt;oryx-lambda-serving&lt;/td&gt;
-      &lt;td&gt;oryx-lambda&lt;/td&gt;
-      &lt;td&gt;oryx-lambda&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;支持的模型，比如：&lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/framework/oryx-common&quot;&gt;oryx-common&lt;/a&gt;, &lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/app/oryx-app-common&quot;&gt;oryx-app-common&lt;/a&gt;, &lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/framework/oryx-api&quot;&gt;oryx-api&lt;/a&gt;, and &lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/app/oryx-app-api&quot;&gt;oryx-app-api&lt;/a&gt; 没有在这里列出了。&lt;/p&gt;
-
-&lt;h2 id=&quot;实现一个oryx-程序&quot;&gt;实现一个Oryx 程序&lt;/h2&gt;
-
-&lt;p&gt;Oryx 中的“app 层”，是实现了推荐的真实的批处理，实时，服务层逻辑，集群和分类。然而，任何实现都需要使用到Oryx。他们也可以混合和匹配。举个例子，你可以重新实现ALS-related推荐的批处理层，但是仍然使用原来的ALS的服务层和实时计算层。&lt;/p&gt;
-
-&lt;h3 id=&quot;创建一个程序&quot;&gt;创建一个程序&lt;/h3&gt;
-
-&lt;p&gt;在每个例子中，创建一个自定义的批处理层，实时计算层或者服务层的程序都需要实现com.cloudera.oryx.api中的几个关键的Java接口或者Scala的特性。这些接口/特性可以在项目的oryx-api模型中找到。&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Java&lt;/th&gt;
-      &lt;th&gt;Scala&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Batch&lt;/td&gt;
-      &lt;td&gt;batch.BatchLayerUpdate&lt;/td&gt;
-      &lt;td&gt;batch.ScalaBatchLayerUpdate&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Speed&lt;/td&gt;
-      &lt;td&gt;speed.SpeedModelManager&lt;/td&gt;
-      &lt;td&gt;speed.ScalaSpeedModelManager&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Serving&lt;/td&gt;
-      &lt;td&gt;serving.ServingModelManager&lt;/td&gt;
-      &lt;td&gt;serving.ScalaServingModelManager&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;com.cloudera.oryx.api也包含大量的关键的类和接口，举个例子，&lt;a href=&quot;https://github.com/OryxProject/oryx/blob/master/framework/oryx-api/src/main/java/com/cloudera/oryx/api/serving/OryxResource.java&quot;&gt;serving.OryxResource&lt;/a&gt;  是一个入口，用来编译自定义的JAX-RS 端点，但是不需要使用。&lt;/p&gt;
-
-&lt;h3 id=&quot;编译程序&quot;&gt;编译程序&lt;/h3&gt;
-
-&lt;p&gt;进入你的程序的这些接口/特性，添加一个com.cloudera.oryx:oryx-api的依赖，scope字段需要填写“provided”，在Maven中，需要添加如下依赖：
-In Maven, this would mean adding a dependency like:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
-  &amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;com.cloudera.oryx&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;oryx-api&amp;lt;/artifactId&amp;gt;
-    &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt;
-    &amp;lt;version&amp;gt;2.1.2&amp;lt;/version&amp;gt;
-  &amp;lt;/dependency&amp;gt;
-&amp;lt;/dependencies&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这些artifacts被放在了&lt;a href=&quot;https://repository.cloudera.com/artifactory/cloudera-repos/&quot;&gt;Cloudera&lt;/a&gt;这个分支下，因此在编译的时候需要引用这个分支：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;repositories&amp;gt;
-  &amp;lt;repository&amp;gt;
-    &amp;lt;id&amp;gt;cloudera&amp;lt;/id&amp;gt;
-    &amp;lt;url&amp;gt;https://repository.cloudera.com/artifactory/cloudera-repos/&amp;lt;/url&amp;gt;
-  &amp;lt;/repository&amp;gt;
-&amp;lt;/repositories&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;一个最小的实例可以访问&lt;a href=&quot;https://github.com/OryxProject/oryx/tree/master/app/example&quot;&gt;example/&lt;/a&gt; 这里。&lt;/p&gt;
-
-&lt;p&gt;”Word Count” 这个程序是按照空格将行分割成独立的单词，然后统计出排重后的单词出现的次数。&lt;/p&gt;
-
-&lt;p&gt;编译代码后生成一个JAR文件，包含了程序实现和所有第三方的diam，如果使用Maven，可以通过mvn package命令。&lt;/p&gt;
-
-&lt;h3 id=&quot;编译-word-count-例子&quot;&gt;编译 Word Count 例子&lt;/h3&gt;
-
-&lt;p&gt;举例：编译样例代码如下：&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd app/example
-mvn package
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;生成的JAR包在target/example-2.1.2.jar。&lt;/p&gt;
-
-&lt;h3 id=&quot;自定义oryx程序&quot;&gt;自定义Oryx程序&lt;/h3&gt;
-
-&lt;p&gt;当发布一个源自Oryx的预打包程序，在某些情况下，有可能会提供一个扩展的实现，从而可以自定义他们的行为。举例，ALS推荐程序暴露了com.cloudera.oryx.app.als.RescorerProvider接口。这些特定程序API类可以在模块oryx-app-api中找到。这些接口的实现也可以在独立模式下被编译，打包，部署。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
-  &amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;com.cloudera.oryx&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;oryx-app-api&amp;lt;/artifactId&amp;gt;
-    &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt;
-    &amp;lt;version&amp;gt;2.1.2&amp;lt;/version&amp;gt;
-  &amp;lt;/dependency&amp;gt;
-&amp;lt;/dependencies&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;发布程序&quot;&gt;发布程序&lt;/h2&gt;
-
-&lt;p&gt;拷贝生成的JAR文件–myapp.jar，放到需要执行的Oryx 二进制JAR文件相同的目录下。&lt;/p&gt;
-
-&lt;p&gt;修改Oryx的配置文件，以便于引用自定义的批处理，实时计算和服务层的实现。
-当执行批处理，实时计算和服务层时，需要添加–app-jar myapp.jar到oryx-run.sh命令行中。&lt;/p&gt;
-
-&lt;h3 id=&quot;发布-word-count-例子&quot;&gt;发布 Word Count 例子&lt;/h3&gt;
-
-&lt;p&gt;举例，如果已经编译好了上述的“word count”的程序，你可以执行这个程序，直接引用wordcount-example.conf这个配置文件：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./oryx-run.sh batch --conf wordcount-example.conf --app-jar example-2.1.2.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;… 对于实时计算和服务层也是同样的。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -X POST http://.../add/foo%20bar%20baz
-...
-curl http://.../distinct
-{&quot;foo&quot;:2,&quot;bar&quot;:2,&quot;baz&quot;:2}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;配置文件本身已经配置好了主机名称和&lt;a href=&quot;http://www.cloudera.com/content/www/en-us/downloads/quickstart_vms.html&quot;&gt;Cloudera Quickstart VM&lt;/a&gt;的参数。事实上，这个例子可以作为一个集群配置的例子：&lt;a href=&quot;http://oryx.io/docs/admin.html#cloudera_quickstart_vm_setup&quot;&gt;Cloudera Quickstart VM Setup&lt;/a&gt;。&lt;/p&gt;
-</description>
-        <pubDate>Wed, 06 Apr 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/04/06/Oryx2-developer-doc.html</link>
-        <guid isPermaLink="true">pangz.me/2016/04/06/Oryx2-developer-doc.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Java关键字volatile</title>
-        <description>&lt;p&gt;翻译自：http://tutorials.jenkov.com/java-concurrency/volatile.html&lt;/p&gt;
-
-&lt;h3 id=&quot;java-volatile-关键字&quot;&gt;Java Volatile 关键字&lt;/h3&gt;
-
-&lt;p&gt;Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。&lt;/p&gt;
-
-&lt;p&gt;实际上，自Java5开始，volatile关键字保证的是volatile声明的变量都是写入和读取自主内存的。以下将会详细讲解。&lt;/p&gt;
-
-&lt;h3 id=&quot;java-volatile保证可见性&quot;&gt;Java volatile保证可见性&lt;/h3&gt;
-
-&lt;p&gt;Java中volatile关键字保证了线程之间变量修改的可见性。这个可能会有点抽象，因此让我详细讲解下。&lt;/p&gt;
-
-&lt;p&gt;在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-1.png&quot; alt=&quot;volatile&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用非volatile变量，当JVM自主内存读取数据到CPU缓存，或者自CPU缓存写入主内存时，是没有保证的。这可能会引起很多问题，接下来章节中会降到。&lt;/p&gt;
-
-&lt;p&gt;设想一种情况，多个线程可以访问类似如下的同一个共享对象，这个对象包含一个计数器变量：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class SharedObject {
-
-    public int counter = 0;
-
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;另一个设想，只有线程1改变计数变量，但是线程1和线程2都可能经常读取这个计数变量。&lt;/p&gt;
-
-&lt;p&gt;如果计数变量没有被声明为volatile，那么自CPU缓存回写到主内存的过程中，就无法保证这个计数变量的值了。也就是说，技术变量的值在通过CPU缓存写会主内存的过程中发生了改变。如图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-2.png&quot; alt=&quot;volatile 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这个问题是因为线程并没有得到最新的值，另外那个线程并没有将最新的变量写回主内存，这就是所谓的“可见”问题。某一个线程的更新并没有被另外的线程获取。&lt;/p&gt;
-
-&lt;p&gt;通过声明计数变量为volatile，那么这个计数变量所有的更新都会立即被写回主内存。同时，所有的读操作都会直接通过主内存。如下既是如何声明计数变量为volatile类型：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class SharedObject {
-
-    public volatile int counter = 0;
-
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;声明一个变量为volatile由此可以保证了变量的写操作对于其他线程都是可见的。&lt;/p&gt;
-
-&lt;h3 id=&quot;the-java-volatile-happens-before-guarantee&quot;&gt;The Java volatile Happens-Before Guarantee&lt;/h3&gt;
-
-&lt;p&gt;自Java5开始，volatile关键字保证的不止是变量的主内存读和写，实际上还包含：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果线程A写入一个volatile变量，此时线程B读取了相同的volatile变量，那么此时所有的变量在写入volatile变量前对线程A是可见的，同时也对线程B在读取了volatile变量后也是可见的。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;volatile变量的读写指令不能促使JVM重新排序（只要JVM发现排序不会改变程序的行为，基于性能的原因，JVM会进行排序）。前后的指令会被排序，但是volatile得读写不会混入这些指令。无论如何，指令都会follow一个volatile变量的读写，并且保证这种操作发生在读或者写之后。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;这个需要更深入的解释。&lt;/p&gt;
-
-&lt;p&gt;当一个线程写入一个volatile变量时，并不止这个volatile变量自己写入了主内存。同时所有被线程修改的变量在写入volatile变量之前都会被回写到主内存。当一个线程读取一个volatile变量时，他会同时读取主内存中所有其他的变量，这些变量都是和volatile变量一同写入主内存的。&lt;/p&gt;
-
-&lt;p&gt;看例子：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Thread A:
-    sharedObject.nonVolatile = 123;
-    sharedObject.counter     = sharedObject.counter + 1;
-
-Thread B:
-    int counter     = sharedObject.counter;
-    int nonVolatile = sharedObject.nonVolatile;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;因为线程A在写入volatile变量sharedObject.counter之前写入了非volatile变量sharedObject.nonVolatile，那么当线程A写入sharedObject.counter时，sharedObject.nonVolatile 和 sharedObject.counter 都会被写入主内存。&lt;/p&gt;
-
-&lt;p&gt;由于线程B开始的时候读取volatile类型的sharedObject.counter，那么sharedObject.counter and sharedObject.nonVolatile都会使用线程B自主内存读取到CPU缓存。等到线程B读取sharedObject.nonVolatile时，就会看到线程A写入的值。&lt;/p&gt;
-
-&lt;p&gt;开发者可能会使用这种扩展的可见性，保证了线程之间变量的可见性。只需要声明一个或者非常少的volatile变量替换掉每个变量都声明为volatile。如下是一个例子：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class Exchanger {
-
-    private Object   object       = null;
-    private volatile hasNewObject = false;
-
-    public void put(Object newObject) {
-        while(hasNewObject) {
-            //wait - do not overwrite existing new object
-        }
-        object = newObject;
-        hasNewObject = true; //volatile write
-    }
-
-    public Object take(){
-        while(!hasNewObject){ //volatile read
-            //wait - don't take old object (or null)
-        }
-        Object obj = object;
-        hasNewObject = false; //volatile write
-        return obj;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;线程A通过调用put()持续的写入对象。线程B通过take()持续的获取对象。这个类只有在线程A调用put()和线程B调用take()时，通过使用volatile变量才能工作正常。&lt;/p&gt;
-
-&lt;p&gt;如果JVM在不改变排序指令的语义的基础上实现，那么JVM则会通过记录JAVA指令优化性能。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while(hasNewObject) {
-    //wait - do not overwrite existing new object
-}
-hasNewObject = true; //volatile write
-object = newObject;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;注意到volatile变量hasNewObject在被实际设置前已经被执行。对于JVM，这看上去完全合法。这两个写入变量的值相对于另外一个是独立的。&lt;/p&gt;
-
-&lt;p&gt;然而，排序执行的指令会有损对象变量的可见性。首先，线程B可能在线程A设置新值之前将hasNewObject设置为true。其次，甚至没法保证当新值写入对象后回写到主内存。&lt;/p&gt;
-
-&lt;p&gt;为了防止如上述情况的发生，volatile关键字采用“发生前保证”机制。”发生前保证“机制保证读和写volatile变量的指令不能被排序。前后指令可以被排序，但是volatile读或者写指令发生前后不能被排序。&lt;/p&gt;
-
-&lt;p&gt;举个例子：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sharedObject.nonVolatile1 = 123;
-sharedObject.nonVolatile2 = 456;
-sharedObject.nonVolatile3 = 789;
-
-sharedObject.volatile     = true; //a volatile variable
-
-int someValue1 = sharedObject.nonVolatile4;
-int someValue2 = sharedObject.nonVolatile5;
-int someValue3 = sharedObject.nonVolatile6;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;JVM会排序前3个指令，只要他们在volatile写指令之前。&lt;/p&gt;
-
-&lt;p&gt;同样的，只要volatile写入质量发生在后三个指令之前，那么后三个指令就会被排序。在此之前，这三个指令中任何一个指令都不会被排序。
-That is basically the meaning of the Java volatile happens before guarantee.&lt;/p&gt;
-
-&lt;h3 id=&quot;volatile-并不总是适用的&quot;&gt;volatile 并不总是适用的&lt;/h3&gt;
-
-&lt;p&gt;即使volatile关键字保证了所有的volatile变量直接从主内存读取，所有的写操作都是直接写入主内存，但是存在声明了volatile而仍然不够的情况。&lt;/p&gt;
-
-&lt;p&gt;之前提过的，只有线程1写入共享的counter变量，声明为volatile的时候才能确保线程2总是能获取最新的写入值。&lt;/p&gt;
-
-&lt;p&gt;事实上，多线程甚至能写入一个共享的volatile变量，如果这个新写入的值不依赖于旧数据的话就将正确的值存入主内存。换句话说, 如果一个线程写入一个值到共享的volatile变量，并不会马上将读取的值用于下一个值得话。&lt;/p&gt;
-
-&lt;p&gt;一旦一个线程首次读取一个volatile变量的值，并且需要基于这个值生成一个新的共享volatile变量值，那么这个volatile变量就不能保证正确的可见性。读取volatile变量的值并且写入新值得很短的间隙，就会创建一个竞争的条件：多个线程会读取同一个volatile变量的值，并且生成一个新的值，当回写进主内存后就会覆盖掉其他的值。&lt;/p&gt;
-
-&lt;p&gt;多线程增加相同的计数器值得这种情况，准确的说对于volatile变量是不适用的。一下片段讲话详细讲述这种情况。&lt;/p&gt;
-
-&lt;p&gt;设想，如果线程1读取共享计数变量，他的值是0，并放入CPU的缓存，使其加1，但是这样的改变并不会回写如主内存。线程2此时可以自主内存读取相同的计数器变量，但是读到的值仍然是0，并将这个值放入了自己的CPU缓存。线程2也可以对其加1，并且可以回写到主内存。这种情况详见下图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/volatile/java-volatile-3.png&quot; alt=&quot;volatile 3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;线程1和线程2此时并不是同步的。这个共享计数器的值应该是2，但是每个线程在自己的CPU缓存中存放的值却是1，在主内存中的值是0.这已经完全乱了！即使最后每个线程回写这个共享计数变量的值到主内存，这个值也是错误的。&lt;/p&gt;
-
-&lt;h3 id=&quot;volatile在什么时候是适用的&quot;&gt;volatile在什么时候是适用的?&lt;/h3&gt;
-
-&lt;p&gt;就像之前提到过的，如果是两个线程都需要读取和写入一个共享变量，那么此时适用volatile关键字是不适用的。那么就需要使用synchronized来保证读和写的原子性。读写volatile变量不会阻塞线程的读写。为了实现这一点，你必须使用synchronized关键字。&lt;/p&gt;
-
-&lt;p&gt;作为synchronized可供选择，需要采用java.util.concurrent包中的某一个。比如AtomicLong，AtomicReference或者其他的任意一个。&lt;/p&gt;
-
-&lt;p&gt;在这种情况下，只有一个线程读写volatile变量的值，其他线程只是读取变量，那么读取线程就可以通过volatile变量保证可以读取到最新的写入值。如果没有volatile变量，则这个过程就不能被保证。&lt;/p&gt;
-
-&lt;p&gt;volatile关键字可以被用在32和64位变量中。&lt;/p&gt;
-
-&lt;h3 id=&quot;volatile-性能注意事项&quot;&gt;volatile 性能注意事项&lt;/h3&gt;
-
-&lt;p&gt;volatile变量的读写会触发变量在主内存中的读写。主内存中的读写会比CPU缓存消耗的代价高。使用volatile变量同样会阻止普通性能增强指令的排序。因此，只能在确实需要增加变量可见性基础上使用volatile变量。&lt;/p&gt;
-
-&lt;h3 id=&quot;参考文献&quot;&gt;参考文献&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;http://www.ibm.com/developerworks/cn/java/j-jtp06197.html&lt;/li&gt;
-  &lt;li&gt;http://www.infoq.com/cn/articles/ftf-java-volatile&lt;/li&gt;
-  &lt;li&gt;http://www.infoq.com/cn/articles/java-memory-model-4&lt;/li&gt;
-  &lt;li&gt;http://sakyone.iteye.com/blog/668091&lt;/li&gt;
-  &lt;li&gt;https://zh.wikipedia.org/wiki/Volatile%E5%8F%98%E9%87%8F&lt;/li&gt;
-  &lt;li&gt;http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 08 Mar 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/03/08/Java-keyword-volatile.html</link>
-        <guid isPermaLink="true">pangz.me/2016/03/08/Java-keyword-volatile.html</guid>
         
         
       </item>
