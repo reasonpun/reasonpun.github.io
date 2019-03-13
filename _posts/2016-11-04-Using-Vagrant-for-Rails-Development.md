@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 使用Vagrant部署Rails项目
+excerpt: Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。
+tag: [Vagrant, Rails, Ruby]
 ---
 
 ## 简述
