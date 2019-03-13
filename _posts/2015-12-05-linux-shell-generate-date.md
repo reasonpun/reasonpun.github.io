@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Linux shell 获得以前日期
+excerpt: Linux shell 获取各种格式的日期
 ---
 
 

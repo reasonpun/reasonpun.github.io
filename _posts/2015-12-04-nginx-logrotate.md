@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Nginx Logrotate
+excerpt: logrotate is  designed to ease administration of systems that generatelarge numbers of log files.  It allows automatic rotation, compression,removal, and mailing of log files.  Each log file may be handled daily,weekly, monthly, or when it grows too large.
+tag: [nginx,logrotate]
 ---
 
 ### Centos Logrotate ###

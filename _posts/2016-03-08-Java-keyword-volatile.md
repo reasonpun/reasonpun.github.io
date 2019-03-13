@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Java关键字volatile
+excerpt: Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。
+tag: [Java]
 ---
 
 翻译自：http://tutorials.jenkov.com/java-concurrency/volatile.html
