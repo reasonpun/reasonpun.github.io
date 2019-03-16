@@ -84,7 +84,7 @@
 
 <p>在多线程程序中，由于性能的原因，在操作非volatile变量的时候，每个线程会将变量自主内存拷贝🈯️CPU缓存。如果你的计算机是多核的，每个线程就会运行在不同的CPU上。也就是说，每个线程会拷贝变量到不同的CPU缓存中。见插图：</p>
 
-<p><img src="pangz.me/assets/volatile/java-volatile-1.png" alt="volatile" /></p>
+<p><img src="https://pangz.me/assets/volatile/java-volatile-1.png" alt="volatile" /></p>
 
 <p>使用非volatile变量，当JVM自主内存读取数据到CPU缓存，或者自CPU缓存写入主内存时，是没有保证的。这可能会引起很多问题，接下来章节中会降到。</p>
 
@@ -101,7 +101,7 @@
 
 <p>如果计数变量没有被声明为volatile，那么自CPU缓存回写到主内存的过程中，就无法保证这个计数变量的值了。也就是说，技术变量的值在通过CPU缓存写会主内存的过程中发生了改变。如图：</p>
 
-<p><img src="pangz.me/assets/volatile/java-volatile-2.png" alt="volatile 2" /></p>
+<p><img src="https://pangz.me/assets/volatile/java-volatile-2.png" alt="volatile 2" /></p>
 
 <p>这个问题是因为线程并没有得到最新的值，另外那个线程并没有将最新的变量写回主内存，这就是所谓的“可见”问题。某一个线程的更新并没有被另外的线程获取。</p>
 
@@ -223,7 +223,7 @@ That is basically the meaning of the Java volatile happens before guarantee.</p>
 
 <p>设想，如果线程1读取共享计数变量，他的值是0，并放入CPU的缓存，使其加1，但是这样的改变并不会回写如主内存。线程2此时可以自主内存读取相同的计数器变量，但是读到的值仍然是0，并将这个值放入了自己的CPU缓存。线程2也可以对其加1，并且可以回写到主内存。这种情况详见下图：</p>
 
-<p><img src="pangz.me/assets/volatile/java-volatile-3.png" alt="volatile 3" /></p>
+<p><img src="https://pangz.me/assets/volatile/java-volatile-3.png" alt="volatile 3" /></p>
 
 <p>线程1和线程2此时并不是同步的。这个共享计数器的值应该是2，但是每个线程在自己的CPU缓存中存放的值却是1，在主内存中的值是0.这已经完全乱了！即使最后每个线程回写这个共享计数变量的值到主内存，这个值也是错误的。</p>
 
@@ -264,7 +264,7 @@ That is basically the meaning of the Java volatile happens before guarantee.</p>
               
                 <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
                   <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
-                  <input type="hidden" name="q6" value="pangz.me">
+                  <input type="hidden" name="q6" value="https://pangz.me">
                 </form>
               
               

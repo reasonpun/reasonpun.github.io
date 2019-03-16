@@ -3,10 +3,10 @@
   <channel>
     <title>Tensor Cell</title>
     <description>博客描述</description>
-    <link>pangz.me/</link>
-    <atom:link href="pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Mar 2019 10:52:36 +0800</pubDate>
-    <lastBuildDate>Sat, 16 Mar 2019 10:52:36 +0800</lastBuildDate>
+    <link>https://pangz.me/</link>
+    <atom:link href="https://pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 16 Mar 2019 10:56:53 +0800</pubDate>
+    <lastBuildDate>Sat, 16 Mar 2019 10:56:53 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -32,8 +32,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 16 Mar 2019 00:00:00 +0800</pubDate>
-        <link>pangz.me/2019/03/16/pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93.html</link>
-        <guid isPermaLink="true">pangz.me/2019/03/16/pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93.html</guid>
+        <link>https://pangz.me/2019/03/16/pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93.html</link>
+        <guid isPermaLink="true">https://pangz.me/2019/03/16/pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93.html</guid>
         
         <category>pyqt5</category>
         
@@ -93,8 +93,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 14 Mar 2019 00:00:00 +0800</pubDate>
-        <link>pangz.me/2019/03/14/%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83.html</link>
-        <guid isPermaLink="true">pangz.me/2019/03/14/%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83.html</guid>
+        <link>https://pangz.me/2019/03/14/%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83.html</link>
+        <guid isPermaLink="true">https://pangz.me/2019/03/14/%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83.html</guid>
         
         <category>硅谷来信</category>
         
@@ -149,8 +149,8 @@
 &lt;p&gt;一个创始人如果能做好这样三件事情，已经不容易了，具体的事情应该让下面的人做，自己不要干预太多。当一个创始人能够找到称职的主管工程、销售和行政的负责人，并且足够信任他们，那么公司就步入正轨了。如果创始人像诸葛亮那样事必躬亲，不仅会把自己累死，还会把公司做死。&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
-        <link>pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html</link>
-        <guid isPermaLink="true">pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html</guid>
+        <link>https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html</link>
+        <guid isPermaLink="true">https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html</guid>
         
         <category>硅谷来信</category>
         
@@ -224,8 +224,8 @@
 &lt;p&gt;审核申请人及其配偶均持北京市居住证（或有效期内居住登记卡）的可视为有此证明。&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
-        <link>pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html</link>
-        <guid isPermaLink="true">pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html</guid>
+        <link>https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html</link>
+        <guid isPermaLink="true">https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html</guid>
         
         
       </item>
@@ -268,8 +268,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
-        <link>pangz.me/2019/01/01/2019_Q1_OKR.html</link>
-        <guid isPermaLink="true">pangz.me/2019/01/01/2019_Q1_OKR.html</guid>
+        <link>https://pangz.me/2019/01/01/2019_Q1_OKR.html</link>
+        <guid isPermaLink="true">https://pangz.me/2019/01/01/2019_Q1_OKR.html</guid>
         
         <category>OKR</category>
         
@@ -345,8 +345,8 @@
 
 </description>
         <pubDate>Sat, 21 Jan 2017 00:00:00 +0800</pubDate>
-        <link>pangz.me/2017/01/21/Emacs-STEP-1.html</link>
-        <guid isPermaLink="true">pangz.me/2017/01/21/Emacs-STEP-1.html</guid>
+        <link>https://pangz.me/2017/01/21/Emacs-STEP-1.html</link>
+        <guid isPermaLink="true">https://pangz.me/2017/01/21/Emacs-STEP-1.html</guid>
         
         <category>Emacs</category>
         
@@ -627,8 +627,8 @@ error message for that particular provider.
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 04 Nov 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</link>
-        <guid isPermaLink="true">pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</guid>
+        <link>https://pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</link>
+        <guid isPermaLink="true">https://pangz.me/2016/11/04/Using-Vagrant-for-Rails-Development.html</guid>
         
         <category>Vagrant</category>
         
@@ -665,7 +665,7 @@ error message for that particular provider.
 
 &lt;p&gt;实现的效果图如下&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pangz.me/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;基本的项目配置&quot;&gt;基本的项目配置&lt;/h2&gt;
 
@@ -1222,8 +1222,8 @@ Route::post('upload/delete', ['as' =&amp;gt; 'upload-remove', 'uses' =&amp;gt;'I
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 29 Jun 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</link>
-        <guid isPermaLink="true">pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</guid>
+        <link>https://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</link>
+        <guid isPermaLink="true">https://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</guid>
         
         
       </item>
@@ -1480,8 +1480,8 @@ reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 storage/
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</link>
-        <guid isPermaLink="true">pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</guid>
+        <link>https://pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</link>
+        <guid isPermaLink="true">https://pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html</guid>
         
         <category>Laravel</category>
         
@@ -1640,7 +1640,7 @@ Status of topic OryxUpdate:
 
 &lt;p&gt;这个问题应该是：CDH没有启动Kafka服务没有启动。通过CDH后台启动Kafka服务（如果没有添加Kafka服务，则需要先添加）。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;pangz.me/assets/oryx/add-kafka-service.png&quot; alt=&quot;Kafka Service&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pangz.me/assets/oryx/add-kafka-service.png&quot; alt=&quot;Kafka Service&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;此时重新执行setup命令：&lt;/p&gt;
 
@@ -1857,8 +1857,8 @@ Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of 
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 08 Apr 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/04/08/set-up-oryx-env.html</link>
-        <guid isPermaLink="true">pangz.me/2016/04/08/set-up-oryx-env.html</guid>
+        <link>https://pangz.me/2016/04/08/set-up-oryx-env.html</link>
+        <guid isPermaLink="true">https://pangz.me/2016/04/08/set-up-oryx-env.html</guid>
         
         
       </item>
