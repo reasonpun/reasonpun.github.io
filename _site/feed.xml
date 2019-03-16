@@ -5,9 +5,42 @@
     <description>博客描述</description>
     <link>pangz.me/</link>
     <atom:link href="pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Mar 2019 10:24:50 +0800</pubDate>
-    <lastBuildDate>Sat, 16 Mar 2019 10:24:50 +0800</lastBuildDate>
+    <pubDate>Sat, 16 Mar 2019 10:52:36 +0800</pubDate>
+    <lastBuildDate>Sat, 16 Mar 2019 10:52:36 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Pyqt5 QSS</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;QSS(Qt Style Sheets) Qt样式表，是用来自定义空间外观的一种机制。QSS大量参考了CSS的内容，但是比它要弱得多，体现为选择器少，可以使用的属性也不多，并且并不是多有属性都可以应用到PyQt空间上。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;参考文献&quot;&gt;参考文献&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html#customizing-qscrollbar&lt;/li&gt;
+  &lt;li&gt;https://github.com/pyqt/examples&lt;/li&gt;
+  &lt;li&gt;https://blog.csdn.net/qq_20029329/article/details/73698617&lt;/li&gt;
+  &lt;li&gt;https://github.com/PyQt5/PyQt&lt;/li&gt;
+  &lt;li&gt;https://juejin.im/entry/5bd2c17ae51d457a944b6d88&lt;/li&gt;
+  &lt;li&gt;https://doc.qt.io/qt-5/stylesheet-reference.html&lt;/li&gt;
+  &lt;li&gt;https://zhuanlan.zhihu.com/p/47221211&lt;/li&gt;
+  &lt;li&gt;https://fishc.com.cn/thread-61195-1-1.html&lt;/li&gt;
+  &lt;li&gt;http://www.jyguagua.com/?p=2510&lt;/li&gt;
+  &lt;li&gt;https://www.cnblogs.com/skynet/p/4229556.html&lt;/li&gt;
+  &lt;li&gt;https://blog.csdn.net/u010525694/article/details/78452786&lt;/li&gt;
+  &lt;li&gt;http://dgovil.com/blog/2017/02/24/qt_stylesheets/&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 16 Mar 2019 00:00:00 +0800</pubDate>
+        <link>pangz.me/2019/03/16/pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93.html</link>
+        <guid isPermaLink="true">pangz.me/2019/03/16/pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93.html</guid>
+        
+        <category>pyqt5</category>
+        
+        <category>QSS</category>
+        
+        
+      </item>
     
       <item>
         <title>内田光子-关于一流水准的思考</title>
@@ -1826,248 +1859,6 @@ Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of 
         <pubDate>Fri, 08 Apr 2016 00:00:00 +0800</pubDate>
         <link>pangz.me/2016/04/08/set-up-oryx-env.html</link>
         <guid isPermaLink="true">pangz.me/2016/04/08/set-up-oryx-env.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Oryx2 性能优化文档</title>
-        <description>&lt;p&gt;这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。&lt;/p&gt;
-
-&lt;h2 id=&quot;硬件和集群设计&quot;&gt;硬件和集群设计&lt;/h2&gt;
-
-&lt;p&gt;一般情况下，对硬件或者集群没有特别的要求。集群资源的需求主要取决于基于Spark的作业，这些往往是内存密集型和CPU密集型的，但是一般不会是I/O绑定的。如果数据的采集率非常的高，Kafka可能需要一些特殊的考虑。在这两种情况下，针对其他任何的Kafka或者Spark作业并没有不同的标准。&lt;/p&gt;
-
-&lt;h3 id=&quot;数据传输&quot;&gt;数据传输&lt;/h3&gt;
-
-&lt;p&gt;因为Kafka是底层传输数据的，存储要求的采集和存放数据对于Kafka也就是这样的。查看&lt;a href=&quot;http://kafka.apache.org/performance.html&quot;&gt;Kafka 性能&lt;/a&gt;中提到的内容。一般情况下，Kafka并不会接近瓶颈，也能够像其他Kafka的使用一样调整资源占用大小。&lt;/p&gt;
-
-&lt;h3 id=&quot;批处理层&quot;&gt;批处理层&lt;/h3&gt;
-
-&lt;p&gt;批处理层独特的地方是模型的构建, and the element that is of most interest to benchmark are likely the model building processes implemented in the app tier, on top of MLlib. Here again, the resources required to build a model over a certain amount of data are just that of the underlying MLlib implementations of ALS, k-means and decision forests.&lt;/p&gt;
-
-&lt;p&gt;MLlib的任何性能优化或者是基准测试都适用于这些基于MLlib预制的实现的批处理层，这对于Oryx也是一样的。&lt;/p&gt;
-
-&lt;h3 id=&quot;jvm-优化&quot;&gt;JVM 优化&lt;/h3&gt;
-
-&lt;p&gt;Choosing the number of Spark executors, cores and memory is a topic in its own right.&lt;/p&gt;
-
-&lt;p&gt;很自然的，更多的executors意味着更多的核心和内存。但是数量是不能超多集群上机器的总数量的；请查看：oryx.batch.streaming.num-executors。&lt;/p&gt;
-
-&lt;p&gt;更多的核，意味着可能会有更多的并发进程。在典型的模型构建进程中，如果能达到任务总数的三分之一或者2分之一的话，这将是非常有用的。你可以观察到任务的数量，以及Spark UI中批处理层固有的并发情况。在这数量之下，核数再多也无法增加更多的并发了。少一些是可以的，无非就是增加了点运行时间。当然，在批处理的时间间隔内，充足的核数可以保证批处理的顺利完成。核的数量可以通过oryx.batch.streaming.executor-cores进行配置。&lt;/p&gt;
-
-&lt;p&gt;如果你的作业发生了内存溢出，驱动器和executors可能需要更多的内存。如果你注意到在批处理层的”存储”标签页中并不是100%的RDD被缓存住了，那么更多的内存可能会有所帮助。查看：oryx.batch.streaming.executor-memory。&lt;/p&gt;
-
-&lt;p&gt;oryx-run.sh脚本的–jvm-args参数是用来为所有的JVM进程设置内存参数的。举个例子，通过设置 -XX:+UseG1GC ，会达到一个比较合理的效果。&lt;/p&gt;
-&lt;h3 id=&quot;服务层&quot;&gt;服务层&lt;/h3&gt;
-
-&lt;p&gt;REST API 后端服务器是Tomcat。配置文件是没有暴露给用户的，但是对于他的负载已经做了合理的调整。Tomcat容器本身开销很小，不需要担心性能问题。&lt;/p&gt;
-
-&lt;p&gt;最可能感兴趣的是项目中提供的关于CPU密集型程序实现的性能问题，而不是框架本身。&lt;/p&gt;
-
-&lt;h3 id=&quot;基准测试-交替最小二乘法推荐&quot;&gt;基准测试: 交替最小二乘法推荐&lt;/h3&gt;
-
-&lt;p&gt;由于ALS实现的程序的服务层的大多数的操作是，会在内存中实时的计算一个非常大的矩阵，所以这个程序是最具有挑战性的了。大概其的规则如下：&lt;/p&gt;
-
-&lt;p&gt;如果需要运行类似的基准测试，可以使用LoadBenchmark，可以按照如下的配置：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn -DskipTests clean install
-cd app/oryx-app-serving
-...
-mvn -Pbenchmark \
- -Doryx.test.als.benchmark.users=1000000 \
- -Doryx.test.als.benchmark.items=5000000 \
- -Doryx.test.als.benchmark.features=250 \
- -Doryx.test.als.benchmark.lshSampleRate=0.3 \
- -Doryx.test.als.benchmark.workers=2 \
- integration-test
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;内存&quot;&gt;内存&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;内存需求是成线性的：(users + items) x features&lt;/li&gt;
-  &lt;li&gt;-XX:+UseStringDeduplication 在 Java 8中是非常有用的 (reflected below)&lt;/li&gt;
-  &lt;li&gt;At scale, 1M users or items ~= 500-1000M of heap required, depending on features&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Example steady-state heap usage (Java 8):&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Features&lt;/th&gt;
-      &lt;th&gt;Users+Items (M)&lt;/th&gt;
-      &lt;th&gt;Heap (MB)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;1400&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;2600&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;7500&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;3000&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;7500&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;25800&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;请求延迟吞吐量&quot;&gt;请求延迟，吞吐量&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Recommend and similarity computation time scales linearly with items x features&lt;/li&gt;
-  &lt;li&gt;A single request is parallelized across CPUs; max throughput and minimum latency is already achieved at about 1-2 concurrent requests&lt;/li&gt;
-  &lt;li&gt;Locality sensitive hashing decreases processing time roughly linearly; 0.33 ~= 1/0.33 ~= 3x faster (setting too low adversely affects result quality)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Below are representative throughput / latency measurements for the /recommend endpoint using
-  a 32-core Intel Xeon 2.3GHz (Haswell), OpenJDK 8 and flags -XX:+UseG1GC -XX:+UseStringDeduplication. Heap size was comfortably large enough for the data set in each case. The tests were run with 1-3 concurrent request at a time, as necessary to achieve near-full CPU utilization.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;With LSH (sample rate = 0.3)&lt;/em&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Features&lt;/th&gt;
-      &lt;th&gt;Items (M)&lt;/th&gt;
-      &lt;th&gt;Throughput (qps)&lt;/th&gt;
-      &lt;th&gt;Latency (ms)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;437&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;151&lt;/td&gt;
-      &lt;td&gt;13&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;84&lt;/td&gt;
-      &lt;td&gt;24&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;36&lt;/td&gt;
-      &lt;td&gt;56&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;69&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;162&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;em&gt;Without LSH (sample rate = 1.0)&lt;/em&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Features&lt;/th&gt;
-      &lt;th&gt;Items (M)&lt;/th&gt;
-      &lt;th&gt;Throughput (qps)&lt;/th&gt;
-      &lt;th&gt;Latency (ms)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;74&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;23&lt;/td&gt;
-      &lt;td&gt;44&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;13&lt;/td&gt;
-      &lt;td&gt;80&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;191&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;282&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;250&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;708&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;jvm-优化-1&quot;&gt;JVM 优化&lt;/h3&gt;
-
-&lt;p&gt;机器上运行（多个）服务层，使用越多的可用的核，意味着可以提供更多的并发请求处理能力。在ALS中，一些请求，比如/recommend 可以在一个请求中通过多核计算完成。&lt;/p&gt;
-
-&lt;p&gt;内存的需求主要是由加载进内存的模型的需求控制的。对于大的模型，比如ALS，这就意味着需要确保服务层有足够的内存以保证不会导致GC崩溃。查看oryx.serving.memory。&lt;/p&gt;
-
-&lt;p&gt;-XX:+UseG1GC remains a good garbage collection setting to supply with –jvm-args. In Java 8, -XX:+UseStringDeduplication can reduce memory requirements by about 20%.&lt;/p&gt;
-
-&lt;h3 id=&quot;实时计算层&quot;&gt;实时计算层&lt;/h3&gt;
-
-&lt;p&gt;实时计算层驱动进程类似服务层那样也是需要大量内存的，因为他也是需要加载一个模型到内存中的。驱动进程的内存是通过oryx.speed.streaming.driver-memory控制的，也需要和服务层内存一样设置，并且也需要JVM的一些flags支持。&lt;/p&gt;
-
-&lt;p&gt;这也是一个Spark Streaming 作业，也需要想批处理层那样配置executors。一般情况下，需要更少的处理和更低的时间延迟。&lt;/p&gt;
-
-&lt;p&gt;Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 07 Apr 2016 00:00:00 +0800</pubDate>
-        <link>pangz.me/2016/04/07/Oryx2-performance-doc.html</link>
-        <guid isPermaLink="true">pangz.me/2016/04/07/Oryx2-performance-doc.html</guid>
         
         
       </item>

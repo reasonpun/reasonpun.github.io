@@ -9,7 +9,11 @@ beian: # "备案号"
 email: reasonpun@gmail.com
 
 # Build settings
+highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 plugins: [jekyll-paginate]
 
 # Pageinate settings
