@@ -25,7 +25,7 @@ Java中volatile关键字保证了线程之间变量修改的可见性。这个�
 
 设想一种情况，多个线程可以访问类似如下的同一个共享对象，这个对象包含一个计数器变量：
 
-```
+```java
 public class SharedObject {
 
     public int counter = 0;
@@ -43,7 +43,7 @@ public class SharedObject {
 
 通过声明计数变量为volatile，那么这个计数变量所有的更新都会立即被写回主内存。同时，所有的读操作都会直接通过主内存。如下既是如何声明计数变量为volatile类型：
 
-```
+```java
 public class SharedObject {
 
     public volatile int counter = 0;
@@ -67,12 +67,12 @@ public class SharedObject {
 
 看例子：
 
-```
-Thread A:
+```java
+// Thread A:
     sharedObject.nonVolatile = 123;
     sharedObject.counter     = sharedObject.counter + 1;
 
-Thread B:
+// Thread B:
     int counter     = sharedObject.counter;
     int nonVolatile = sharedObject.nonVolatile;
 ```
@@ -83,7 +83,7 @@ Thread B:
 
 开发者可能会使用这种扩展的可见性，保证了线程之间变量的可见性。只需要声明一个或者非常少的volatile变量替换掉每个变量都声明为volatile。如下是一个例子：
 
-```
+```java
 public class Exchanger {
 
     private Object   object       = null;
@@ -112,7 +112,7 @@ public class Exchanger {
 
 如果JVM在不改变排序指令的语义的基础上实现，那么JVM则会通过记录JAVA指令优化性能。
 
-```
+```java
 while(hasNewObject) {
     //wait - do not overwrite existing new object
 }
@@ -128,7 +128,7 @@ object = newObject;
 
 举个例子：
 
-```
+```java
 sharedObject.nonVolatile1 = 123;
 sharedObject.nonVolatile2 = 456;
 sharedObject.nonVolatile3 = 789;
