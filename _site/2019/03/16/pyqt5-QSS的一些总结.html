@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  
+  <title>Pyqt5 QSS</title>
+  <meta name="description" content="QSS(Qt Style Sheets) Qt样式表，是用来自定义空间外观的一种机制。QSS大量参考了CSS的内容，但是比它要弱得多，体现为选择器少，可以使用的属性也不多，并且并不是多有属性都可以应用到PyQt空间上。">
+  <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Tensor Cell" href="/feed.xml">
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+</head>
+
+  <body>
+    <div class="body_container">
+      <div id="header">
+        <div class="site-name">
+          <h1 class="hidden">Pyqt5 QSS</h1>
+          <a id="logo" href="/.">Tensor Cell</a>
+          <p class="description">还要再走500里</p>
+        </div>
+        <div id="nav-menu">
+          
+            <a href="//"><i class="icon-home"> 首页</i></a>
+          
+            <a href="/archives/"><i class="icon-archive"> 归档</i></a>
+          
+            <a href="/about/"><i class="icon-about"> 关于</i></a>
+          
+            <a href="/history/"><i class="icon-history"> 历史</i></a>
+          
+            <a href="/feed.xml"><i class="icon-rss"> 订阅</i></a>
+          
+        </div>
+      <script type="text/javascript">
+      var menus=document.getElementById('nav-menu');
+      var ishome = true;
+      for (var i=1;i<menus.childElementCount;i++) {
+        var path = location.href;
+        var current = path.startsWith(menus.children[i].href);
+        if (current) {
+          menus.children[i].className ='current';
+          ishome = false;
+          break;
+        }
+      }
+      if (ishome) {
+      	menus.children[0].className ='current';
+      }
+      </script>
+      </div>
+
+      <div id="layout" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+          <div class="content_container">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Pyqt5 QSS</h1>
+    <p class="post-meta"><time datetime="2019-03-16T00:00:00+08:00" itemprop="datePublished">Mar 16, 2019</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p>QSS(Qt Style Sheets) Qt样式表，是用来自定义空间外观的一种机制。QSS大量参考了CSS的内容，但是比它要弱得多，体现为选择器少，可以使用的属性也不多，并且并不是多有属性都可以应用到PyQt空间上。</p>
+</blockquote>
+
+<h3 id="参考文献">参考文献</h3>
+<ul>
+  <li>https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html#customizing-qscrollbar</li>
+  <li>https://github.com/pyqt/examples</li>
+  <li>https://blog.csdn.net/qq_20029329/article/details/73698617</li>
+  <li>https://github.com/PyQt5/PyQt</li>
+  <li>https://juejin.im/entry/5bd2c17ae51d457a944b6d88</li>
+  <li>https://doc.qt.io/qt-5/stylesheet-reference.html</li>
+  <li>https://zhuanlan.zhihu.com/p/47221211</li>
+  <li>https://fishc.com.cn/thread-61195-1-1.html</li>
+  <li>http://www.jyguagua.com/?p=2510</li>
+  <li>https://www.cnblogs.com/skynet/p/4229556.html</li>
+  <li>https://blog.csdn.net/u010525694/article/details/78452786</li>
+  <li>http://dgovil.com/blog/2017/02/24/qt_stylesheets/</li>
+</ul>
+
+  </div>
+
+</article>
+
+          </div>
+        </div>
+        
+        <div class="pure-u-1-4">
+          <div id="sidebar">
+            <div class="widget">
+              
+                <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                  <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+                  <input type="hidden" name="q6" value="https://pangz.me">
+                </form>
+              
+              
+            </div>
+            
+            <div class="widget">
+                <div class="widget-title">分类</div>
+                <ul class="category-list">
+                  
+                </ul>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">标签</div>
+                <div class="tagcloud">
+                  
+                    <a href="/tag/nginx" style="font-size: 15px;">nginx</a>
+                  
+                    <a href="/tag/logrotate" style="font-size: 15px;">logrotate</a>
+                  
+                    <a href="/tag/Spark" style="font-size: 15px;">Spark</a>
+                  
+                    <a href="/tag/Docker" style="font-size: 15px;">Docker</a>
+                  
+                    <a href="/tag/Java" style="font-size: 15px;">Java</a>
+                  
+                    <a href="/tag/Laravel" style="font-size: 15px;">Laravel</a>
+                  
+                    <a href="/tag/PHP" style="font-size: 15px;">PHP</a>
+                  
+                    <a href="/tag/Vagrant" style="font-size: 15px;">Vagrant</a>
+                  
+                    <a href="/tag/Rails" style="font-size: 15px;">Rails</a>
+                  
+                    <a href="/tag/Ruby" style="font-size: 15px;">Ruby</a>
+                  
+                    <a href="/tag/Emacs" style="font-size: 15px;">Emacs</a>
+                  
+                    <a href="/tag/OKR" style="font-size: 15px;">OKR</a>
+                  
+                    <a href="/tag/硅谷来信" style="font-size: 15px;">硅谷来信</a>
+                  
+                    <a href="/tag/读后感" style="font-size: 15px;">读后感</a>
+                  
+                    <a href="/tag/艺术" style="font-size: 15px;">艺术</a>
+                  
+                    <a href="/tag/pyqt5" style="font-size: 15px;">pyqt5</a>
+                  
+                    <a href="/tag/QSS" style="font-size: 15px;">QSS</a>
+                  
+                </div>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">相关推荐</div>
+                <ul class="post-list">
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2019/03/14/%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83.html"> 内田光子-关于一流水准的思考 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html"> 读吴军《硅谷来信》心得笔记 - 第一篇 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html"> 2018年大兴区幼升小政策 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2019/01/01/2019_Q1_OKR.html"> 2019 Q1 OKR </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Emacs-STEP-1.html"> Emacs STEP-1 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Using-Vagrant-for-Rails-Development.html"> 使用Vagrant部署Rails项目 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html"> Laravel 环境安装和配置 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/08/set-up-oryx-env.html"> 玩转 Oryx2 （一） </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/07/Oryx2-performance-doc.html"> Oryx2 性能优化文档 </a></li>
+                
+                </ul>
+            </div>
+              
+            <div class="widget">
+              <div class="widget-title">友情链接</div>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="http://people.csail.mit.edu/matei/" title="Matei Zaharia" target="_blank">Matei Zaharia</a>
+              
+                <a href="/"><i class=""> </i></a>
+                <ul></ul><a href="https://github.com/tensorflow/tensorflow" title="tensorflow" target="_blank">tensorflow</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">© 2019 
+        <a href="/." rel="nofollow">Tensor Cell.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
+        
+      </div>
+      
+
+      <a id="rocket" href="#top" class="show"></a>
+      
+      <script src="/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/js/totop.js" type="text/javascript"></script>
+      <script src="/js/fancybox.pack.js" type="text/javascript"></script>
+      <script src="/js/jquery.fancybox.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
+      
+    </div>
+
+    
+
+  </body>
+
+</html>
