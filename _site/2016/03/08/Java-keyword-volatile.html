@@ -92,9 +92,7 @@
 <p>设想一种情况，多个线程可以访问类似如下的同一个共享对象，这个对象包含一个计数器变量：</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SharedObject</span> <span class="o">{</span>
-
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -109,9 +107,7 @@
 <p>通过声明计数变量为volatile，那么这个计数变量所有的更新都会立即被写回主内存。同时，所有的读操作都会直接通过主内存。如下既是如何声明计数变量为volatile类型：</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SharedObject</span> <span class="o">{</span>
-
     <span class="kd">public</span> <span class="kd">volatile</span> <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-
 <span class="o">}</span>
 </code></pre></div></div>
 

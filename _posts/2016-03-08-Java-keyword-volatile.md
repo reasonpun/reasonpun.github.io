@@ -27,9 +27,7 @@ Java中volatile关键字保证了线程之间变量修改的可见性。这个�
 
 ```java
 public class SharedObject {
-
     public int counter = 0;
-
 }
 ```
 
@@ -45,9 +43,7 @@ public class SharedObject {
 
 ```java
 public class SharedObject {
-
     public volatile int counter = 0;
-
 }
 ```
 
