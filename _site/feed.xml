@@ -5,8 +5,8 @@
     <description>博客描述</description>
     <link>https://pangz.me/</link>
     <atom:link href="https://pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Mar 2019 13:06:50 +0800</pubDate>
-    <lastBuildDate>Sun, 17 Mar 2019 13:06:50 +0800</lastBuildDate>
+    <pubDate>Sun, 17 Mar 2019 13:08:12 +0800</pubDate>
+    <lastBuildDate>Sun, 17 Mar 2019 13:08:12 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -661,7 +661,7 @@ error message for that particular provider.
 
 &lt;p&gt;实现的效果图如下&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://pangz.me/assets/aravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pangz.me/assets/laravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;基本的项目配置&quot;&gt;基本的项目配置&lt;/h2&gt;
 
