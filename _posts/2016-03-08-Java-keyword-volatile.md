@@ -26,9 +26,11 @@ Java中volatile关键字保证了线程之间变量修改的可见性。这个�
 设想一种情况，多个线程可以访问类似如下的同一个共享对象，这个对象包含一个计数器变量：
 
 ```java
+
 public class SharedObject {
     public int counter = 0;
 }
+
 ```
 
 另一个设想，只有线程1改变计数变量，但是线程1和线程2都可能经常读取这个计数变量。
@@ -42,9 +44,11 @@ public class SharedObject {
 通过声明计数变量为volatile，那么这个计数变量所有的更新都会立即被写回主内存。同时，所有的读操作都会直接通过主内存。如下既是如何声明计数变量为volatile类型：
 
 ```java
+
 public class SharedObject {
     public volatile int counter = 0;
 }
+
 ```
 
 声明一个变量为volatile由此可以保证了变量的写操作对于其他线程都是可见的。
@@ -64,6 +68,7 @@ public class SharedObject {
 看例子：
 
 ```java
+
 // Thread A:
     sharedObject.nonVolatile = 123;
     sharedObject.counter     = sharedObject.counter + 1;
@@ -71,6 +76,7 @@ public class SharedObject {
 // Thread B:
     int counter     = sharedObject.counter;
     int nonVolatile = sharedObject.nonVolatile;
+
 ```
 
 因为线程A在写入volatile变量sharedObject.counter之前写入了非volatile变量sharedObject.nonVolatile，那么当线程A写入sharedObject.counter时，sharedObject.nonVolatile 和 sharedObject.counter 都会被写入主内存。
@@ -80,6 +86,7 @@ public class SharedObject {
 开发者可能会使用这种扩展的可见性，保证了线程之间变量的可见性。只需要声明一个或者非常少的volatile变量替换掉每个变量都声明为volatile。如下是一个例子：
 
 ```java
+
 public class Exchanger {
 
     private Object   object       = null;
@@ -102,6 +109,7 @@ public class Exchanger {
         return obj;
     }
 }
+
 ```
 
 线程A通过调用put()持续的写入对象。线程B通过take()持续的获取对象。这个类只有在线程A调用put()和线程B调用take()时，通过使用volatile变量才能工作正常。
@@ -109,11 +117,13 @@ public class Exchanger {
 如果JVM在不改变排序指令的语义的基础上实现，那么JVM则会通过记录JAVA指令优化性能。
 
 ```java
+
 while(hasNewObject) {
     //wait - do not overwrite existing new object
 }
 hasNewObject = true; //volatile write
 object = newObject;
+
 ```
 
 注意到volatile变量hasNewObject在被实际设置前已经被执行。对于JVM，这看上去完全合法。这两个写入变量的值相对于另外一个是独立的。
@@ -125,6 +135,7 @@ object = newObject;
 举个例子：
 
 ```java
+
 sharedObject.nonVolatile1 = 123;
 sharedObject.nonVolatile2 = 456;
 sharedObject.nonVolatile3 = 789;
@@ -134,6 +145,7 @@ sharedObject.volatile     = true; //a volatile variable
 int someValue1 = sharedObject.nonVolatile4;
 int someValue2 = sharedObject.nonVolatile5;
 int someValue3 = sharedObject.nonVolatile6;
+
 ```
 
 JVM会排序前3个指令，只要他们在volatile写指令之前。
