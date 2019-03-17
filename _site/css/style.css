@@ -369,7 +369,10 @@ strong, b, em {
   font-weight: bold; }
 
 pre {
-  margin: 2em 0; }
+  margin: 2em 0; 
+  background: #F6F6F6;
+  padding: 2em 0;
+}
 
 .hidden1 {
   display: none; }
