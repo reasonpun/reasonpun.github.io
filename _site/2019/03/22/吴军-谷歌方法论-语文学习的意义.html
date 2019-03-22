@@ -7,8 +7,8 @@
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   
-  <title>Nginx Logrotate</title>
-  <meta name="description" content="logrotate is  designed to ease administration of systems that generatelarge numbers of log files.  It allows automatic rotation, compression,removal, and mai...">
+  <title>读 吴军《谷歌方法论》- 问什么学习语文</title>
+  <meta name="description" content="阅读理解能力在通讯上可以被看作是接受信息，而发送信息则是我们的表达能力">
   <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
@@ -25,7 +25,7 @@
     <div class="body_container">
       <div id="header">
         <div class="site-name">
-          <h1 class="hidden">Nginx Logrotate</h1>
+          <h1 class="hidden">读 吴军《谷歌方法论》- 问什么学习语文</h1>
           <a id="logo" href="/.">Tensor Cell</a>
           <p class="description">还要再走500里</p>
         </div>
@@ -66,150 +66,30 @@
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Nginx Logrotate</h1>
-    <p class="post-meta"><time datetime="2015-12-04T00:00:00+08:00" itemprop="datePublished">Dec 4, 2015</time></p>
+    <h1 class="post-title" itemprop="name headline">读 吴军《谷歌方法论》- 问什么学习语文</h1>
+    <p class="post-meta"><time datetime="2019-03-22T00:00:00+08:00" itemprop="datePublished">Mar 22, 2019</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="centos-logrotate">Centos Logrotate</h3>
+    <h3 id="为什么要学习语文">为什么要学习语文。</h3>
 
-<h4 id="关于">关于</h4>
-
-<p><em>logrotate</em> is  designed to ease administration of systems that generatelarge numbers of log files.  It allows automatic rotation, compression,removal, and mailing of log files.  Each log file may be handled daily,weekly, monthly, or when it grows too large. (<a href="http://linuxcommand.org/man_pages/logrotate8.html">Logrotate man page</a>)</p>
-
-<h4 id="配置文件">配置文件</h4>
-
-<h5 id="内容示例">内容示例</h5>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[reason@online_http:/etc/logrotate.d]$ cat nginx.logrotate.d
-#
-# author: reason@mofunsky.com
-# date:   2015-03-31 10:15
-# cron:
-#       59 23 * * * /usr/sbin/logrotate /etc/logrotate.conf &gt; /dev/null
-#
-# location:
-#       /etc/logrotate.d/nginx.logrotate.d
-#
-/local/nginx*.log {
-    daily
-    rotate 10
-    missingok
-    compress
-    notifempty
-    sharedscripts
-    postrotate
-        /bin/kill -USR1 $(cat /var/nginx.pid 2&gt;/dev/null) 2&gt;/dev/null || :
-    endscript
-}
-</code></pre></div></div>
-
-<h5 id="存放位置">存放位置</h5>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[reason@online_http:/etc/logrotate.d]$ pwd
-/etc/logrotate.d
-[reason@online_http:/etc/logrotate.d]$
-</code></pre></div></div>
-
-<h5 id="执行方式和时间">执行方式和时间</h5>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># add by reason @ 2015-04-05 20:41
-# logrotate nginx log daily
-59      23      *       *       *       root /usr/sbin/logrotate /etc/logrotate.conf &gt;/dev/null 2&gt;&amp;1
-</code></pre></div></div>
-
-<h5 id="执行效果">执行效果</h5>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 会按照日期，在每天的23：59分将改天日志转储压缩为*.gz文件
-[reason@online_http:/local/nginx_access_log]$ ls -lsh
-total 5.1G
-427M -rwxrwxrwx 1 nginx nginx 427M Oct 11 12:01 nginx_me_access.log
-259M -rwxrwxrwx 1 nginx nginx 259M Oct  1 23:59 nginx_me_access.log-20151001.gz
-233M -rwxrwxrwx 1 nginx nginx 233M Oct  2 23:59 nginx_me_access.log-20151002.gz
-228M -rwxrwxrwx 1 nginx nginx 228M Oct  3 23:59 nginx_me_access.log-20151003.gz
-225M -rwxrwxrwx 1 nginx nginx 225M Oct  4 23:59 nginx_me_access.log-20151004.gz
-232M -rwxrwxrwx 1 nginx nginx 232M Oct  5 23:59 nginx_me_access.log-20151005.gz
-</code></pre></div></div>
-
-<h5 id="另外一种执行方式">另外一种执行方式</h5>
-<p>logrotate 是linux系统的缺省安装命令，初始化状态下即存在缺省的配置信息，其中包括执行文件和时间</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[reason@online_http:/local/nginx_access_log]$ cd /etc/logrotate.d/
-[reason@online_http:/etc/logrotate.d]$ ls
-nginx.logrotate.d
-[reason@online_http:/etc/logrotate.d]$ pwd
-/etc/logrotate.d
-[reason@online_http:/etc/logrotate.d]$
-</code></pre></div></div>
-
-<p>比如在/etc/logrotate.d目录下会缺省放置一批需要转储的日志服务对应的配置文件，比如httpd，exim等，logrotate会按照配置文件信息按照既定时间对其产生的日志数据进行转储操作。</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[reason@online_http:/etc/logrotate.d]$ pwd
-/etc/logrotate.d
-[reason@online_http:/etc/logrotate.d]$ cat yum
-/var/log/yum.log {
-    missingok
-    notifempty
-    size 30k
-    yearly
-    create 0600 root root
-}
-[reason@online_http:/etc/logrotate.d]$
-</code></pre></div></div>
-<p>具体参数涵义可参考<a href="http://linuxcommand.org/man_pages/logrotate8.html">Logrotate man page</a></p>
-
-<p>缺省状态下，logrotate的自动执行分别被放入了如下几个文件中</p>
+<p>思考如下两个问题：</p>
 
 <ul>
-  <li>cron.daily</li>
-  <li>cron.weekly</li>
-  <li>cron.monthly</li>
+  <li>如果把语文放在所有的课程中，如何看待它的意义？</li>
+  <li>对比去年的语文水平，你觉得学习语文有什么意义？</li>
 </ul>
 
-<p>而对于不同的linux发行版本以上脚本可能被放置在/etc/crontab中
-或者</p>
+<p>通过以上两个问题的思考，我们可以得出以下四个结论：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@i-bntub2bp logrotate.d]# cat /etc/anacrontab
-# /etc/anacrontab: configuration file for anacron
-
-# See anacron(8) and anacrontab(5) for details.
-
-SHELL=/bin/sh
-PATH=/sbin:/bin:/usr/sbin:/usr/bin
-MAILTO=root
-# the maximal random delay added to the base delay of the jobs
-RANDOM_DELAY=45
-# the jobs will be started during the following hours only
-START_HOURS_RANGE=3-22
-
-#period in days   delay in minutes   job-identifier   command
-1       5       cron.daily              nice run-parts /etc/cron.daily
-7       25      cron.weekly             nice run-parts /etc/cron.weekly
-@monthly 45     cron.monthly            nice run-parts /etc/cron.monthly
-[root@i-bntub2bp logrotate.d]#
-</code></pre></div></div>
-<p>针对</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@i-bntub2bp logrotate.d]# cat /etc/redhat-release
-CentOS release 6.6 (Final)
-[root@i-bntub2bp logrotate.d]#
-</code></pre></div></div>
-<p>而言，可以直接在/etc/<a href="https://www.centos.org/docs/2/rhl-cg-en-7.2/anacron.html">anacrontab</a>中找到如上信息。</p>
-
-<p>大体解释下anacrontab的部分参数涵义</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>START_HOURS_RANGE=3-22  # 执行时间为3点到22点之间
-RANDOM_DELAY=45 # 时间处于可执行区间内随机延迟45分钟之内任意时间
-1       5       cron.daily              nice run-parts /etc/cron.daily
-# 执行时间为3点到22点之间执行/etc/cron.daily脚本 (after reboot and after the machine has been up for 5 minutes^^), 如果没有重启服务，则会在3：05之后执行。
-</code></pre></div></div>
-
-<h4 id="参考文献">参考文献</h4>
 <ul>
-  <li><a href="http://huoding.com/2013/04/21/246">http://huoding.com/2013/04/21/246</a></li>
-  <li><a href="http://serverfault.com/questions/135906/when-does-cron-daily-run">http://serverfault.com/questions/135906/when-does-cron-daily-run</a></li>
-  <li><a href="http://www.cyberciti.biz/faq/linux-when-does-cron-daily-weekly-monthly-run/">http://www.cyberciti.biz/faq/linux-when-does-cron-daily-weekly-monthly-run/</a></li>
-  <li><a href="http://linuxcommand.org/man_pages/logrotate8.html">http://linuxcommand.org/man_pages/logrotate8.html</a></li>
-  <li><a href="https://www.centos.org/docs/2/rhl-cg-en-7.2/anacron.html">https://www.centos.org/docs/2/rhl-cg-en-7.2/anacron.html</a></li>
+  <li>学习语文的目的是将其他学科（如数学，历史和科学学科）融会贯通，增加自己在这些学科的理解深度；</li>
+  <li>通过语文的学习，可以提升自己对已习得知识表述的准确性；通俗的讲就是增强自己的表达能力；</li>
+  <li>语文水平的提高，自己做的事情更加职业化、专业化，其他人更容易接受自己的见解；</li>
+  <li>语文的学习，可以提高个人的素养，提升个人的气质。</li>
 </ul>
+
+<p>一言以蔽之，语文的学习不仅能增加理解能力，还能增强表述能力，提升个人对其他学科的学习能力。</p>
 
   </div>
 
@@ -284,8 +164,6 @@ RANDOM_DELAY=45 # 时间处于可执行区间内随机延迟45分钟之内任意
                 <div class="widget-title">相关推荐</div>
                 <ul class="post-list">
                 
-                  <li class="post-list-item"><a class="post-list-link" href="/2019/03/22/%E5%90%B4%E5%86%9B-%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%84%8F%E4%B9%89.html"> 读 吴军《谷歌方法论》- 问什么学习语文 </a></li>
-                
                   <li class="post-list-item"><a class="post-list-link" href="/2019/03/16/pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93.html"> Pyqt5 QSS </a></li>
                 
                   <li class="post-list-item"><a class="post-list-link" href="/2019/03/14/%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83.html"> 内田光子-关于一流水准的思考 </a></li>
@@ -303,6 +181,8 @@ RANDOM_DELAY=45 # 时间处于可执行区间内随机延迟45分钟之内任意
                   <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
                 
                   <li class="post-list-item"><a class="post-list-link" href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE.html"> Laravel 环境安装和配置 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/04/08/set-up-oryx-env.html"> 玩转 Oryx2 （一） </a></li>
                 
                 </ul>
             </div>
