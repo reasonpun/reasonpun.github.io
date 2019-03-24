@@ -5,8 +5,8 @@
     <description>博客描述</description>
     <link>https://pangz.me/</link>
     <atom:link href="https://pangz.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Mar 2019 00:20:04 +0800</pubDate>
-    <lastBuildDate>Mon, 25 Mar 2019 00:20:04 +0800</lastBuildDate>
+    <pubDate>Mon, 25 Mar 2019 00:21:06 +0800</pubDate>
+    <lastBuildDate>Mon, 25 Mar 2019 00:21:06 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -57,13 +57,15 @@ https://support.apple.com/zh-cn/guide/mac-help/set-up-other-users-mtusr001/mac
 &lt;p&gt;这个解决方案虽然看着有些怪异，但是我真的没有精力和心情去深入理解，能解决眼前问题就好了。&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 Mar 2019 00:00:00 +0800</pubDate>
-        <link>https://pangz.me/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98.html</link>
-        <guid isPermaLink="true">https://pangz.me/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98.html</guid>
+        <link>https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98.html</link>
+        <guid isPermaLink="true">https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98.html</guid>
         
         <category>苹果账号</category>
         
         <category>使用总结</category>
         
+        
+        <category>iOS</category>
         
       </item>
     
@@ -360,11 +362,13 @@ https://support.apple.com/zh-cn/guide/mac-help/set-up-other-users-mtusr001/mac
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
-        <link>https://pangz.me/2019/01/01/2019_Q1_OKR.html</link>
-        <guid isPermaLink="true">https://pangz.me/2019/01/01/2019_Q1_OKR.html</guid>
+        <link>https://pangz.me/okr/2019/01/01/2019_Q1_OKR.html</link>
+        <guid isPermaLink="true">https://pangz.me/okr/2019/01/01/2019_Q1_OKR.html</guid>
         
         <category>OKR</category>
         
+        
+        <category>OKR</category>
         
       </item>
     
