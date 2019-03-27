@@ -7,8 +7,8 @@
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   
-  <title>Linux shell 获得以前日期</title>
-  <meta name="description" content="Linux shell 获取各种格式的日期">
+  <title>2019 Q2 OKR</title>
+  <meta name="description" content="2019年第二季度 ORK的自我鉴定">
   <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
@@ -25,7 +25,7 @@
     <div class="body_container">
       <div id="header">
         <div class="site-name">
-          <h1 class="hidden">Linux shell 获得以前日期</h1>
+          <h1 class="hidden">2019 Q2 OKR</h1>
           <a id="logo" href="/.">Tensor Cell</a>
           <p class="description">还要再走500里</p>
         </div>
@@ -66,140 +66,35 @@
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Linux shell 获得以前日期</h1>
-    <p class="post-meta"><time datetime="2015-12-05T00:00:00+08:00" itemprop="datePublished">Dec 5, 2015</time></p>
+    <h1 class="post-title" itemprop="name headline">2019 Q2 OKR</h1>
+    <p class="post-meta"><time datetime="2019-03-27T00:00:00+08:00" itemprop="datePublished">Mar 27, 2019</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="在linux-shell里我想获得以前的日期">在linux shell里，我想获得以前的日期</h3>
+    <p>目标1 吴军 老师《谷歌方法论》逐篇文件</p>
+<ul>
+  <li>关键结果1.1 深度认同的文章做梳理 - 至少5篇</li>
+  <li>关键结果1.2 待确定</li>
+</ul>
 
-<p>1、比如，去年的上个月的昨天的日期：（今天是2009年2月2日，也就是2008年1月1日）</p>
+<p>目标2 通读《时间简史》</p>
+<ul>
+  <li>关键结果2.1 待确定</li>
+  <li>关键结果2.2 待确定</li>
+</ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 year -1 month -1 day" "+%Y_%m_%d"`"
-reasonpun@reasonpun:~$ echo $logRecordDate
-2008_01_01
-reasonpun@reasonpun:~$
-</code></pre></div></div>
+<p>目标3 编写《pyqt5开发手记》一书的大纲</p>
+<ul>
+  <li>关键结果3.1 完成清晰的提纲列表</li>
+  <li>关键结果3.2 完成序言部分</li>
+</ul>
 
-<p>2、上个月的今天：</p>
+<h3 id="接下来的调整">接下来的调整</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 month" "+%Y_%m_%d"`"
-reasonpun@reasonpun:~$ echo $logRecordDate
-2009_01_02
-</code></pre></div></div>
-
-<p>3、去年的今天：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 year" "+%Y_%m_%d"`"
-reasonpun@reasonpun:~$ echo $logRecordDate
-2008_02_02
-</code></pre></div></div>
-
-<p>4、上个月的昨天：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reasonpun@reasonpun:~$ logRecordDate="`date -d "-1 month -1 day" "+%Y_%m_%d"`"
-reasonpun@reasonpun:~$ echo $logRecordDate
-2009_01_01
-</code></pre></div></div>
-
-<p>5、根据时间戳转换成日期</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mofun_mining@i-qe32ajmq ~]$ date -d @1434847028 "+%Y-%m-%d"
-2015-06-21
-</code></pre></div></div>
-
-<p>其他的类推～～呵呵，还是希望大家给测测其他日期会不会出错呵呵。多谢～～～
-鼓捣之环境：ubuntu8.04</p>
-
-<p>update @ 2016-12-19 15:48</p>
-
-<h3 id="php获取后一天日期的写法">PHP获取后一天日期的写法</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-$date = "04-15-2013";
-$date1 = str_replace('-', '/', $date);
-$tomorrow = date('m-d-Y', strtotime($date1 . "+1 days"));
-
-echo $tomorrow;
-
-</code></pre></div></div>
-
-<h3 id="另附上windows下获得前一天的日期">另附上windows下获得前一天的日期：</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
-set td=%date:~2,2%%date:~5,2%%date:~8,2%
-set dy=%date:~0,4%
-set dm=%date:~5,2%
-set dd=%date:~8,2%
-set da=%date:~8,2%
-if %dm%%dd%==0101 goto L01
-if %dm%%dd%==0201 goto L02
-if %dm%%dd%==0301 goto L07
-if %dm%%dd%==0401 goto L02
-if %dm%%dd%==0501 goto L04
-if %dm%%dd%==0601 goto L02
-if %dm%%dd%==0701 goto L04
-if %dm%%dd%==0801 goto L02
-if %dm%%dd%==0901 goto L02
-if %dm%%dd%==1001 goto L05
-if %dm%%dd%==1101 goto L03
-if %dm%%dd%==1201 goto L06
-if %dd%==02 goto L10
-if %dd%==03 goto L10
-if %dd%==04 goto L10
-if %dd%==05 goto L10
-if %dd%==06 goto L10
-if %dd%==07 goto L10
-if %dd%==08 goto L10
-if %dd%==09 goto L10
-if %dd%==10 goto L11
-set /A dd=dd-1
-set dt=%dy%-%dm%-%dd%
-goto END
-:L10
-set /A dd=%dd:~1,1%-1
-set dt=%dy%-%dm%-0%dd%
-goto END
-:L11
-set dt=%dy%-%dm%-09
-goto END
-:L02
-set /A dm=%dm:~1,1%-1
-set dt=%dy%-0%dm%-31
-goto END
-:L04
-set /A dm=dm-1
-set dt=%dy%-0%dm%-30
-goto END
-:L05
-set dt=%dy%-09-30
-goto END
-:L03
-set dt=%dy%-10-31
-goto END
-:L06
-set dt=%dy%-11-30
-goto END
-:L01
-set /A dy=dy-1
-set dt=%dy%-12-31
-goto END
-:L07
-set /A "dd=dy%%4"
-if not %dd%==0 goto L08
-set /A "dd=dy%%100"
-if not %dd%==0 goto L09
-set /A "dd=dy%%400"
-if %dd%==0 goto L09
-:L08
-set dt=%dy%-02-28
-goto END
-:L09
-set dt=%dy%-02-29
-goto END
-:END
-set dateTime=20%dt:~2,2%%dt:~5,2%%dt:~8,2%
-</code></pre></div></div>
+<ul>
+  <li>1 按照计划坚持健身</li>
+  <li>2 固定作息时间</li>
+</ul>
 
   </div>
 
@@ -286,8 +181,6 @@ set dateTime=20%dt:~2,2%%dt:~5,2%%dt:~8,2%
                 <div class="widget-title">相关推荐</div>
                 <ul class="post-list">
                 
-                  <li class="post-list-item"><a class="post-list-link" href="/okr/2019/03/27/2019_Q2_ORK.html"> 2019 Q2 OKR </a></li>
-                
                   <li class="post-list-item"><a class="post-list-link" href="/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98.html"> 关于苹果账号双重认证开启的一个问题 </a></li>
                 
                   <li class="post-list-item"><a class="post-list-link" href="/2019/03/22/%E5%90%B4%E5%86%9B-%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%84%8F%E4%B9%89.html"> 读 吴军《谷歌方法论》- 为什么学习语文 </a></li>
@@ -305,6 +198,8 @@ set dateTime=20%dt:~2,2%%dt:~5,2%%dt:~8,2%
                   <li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Emacs-STEP-1.html"> Emacs STEP-1 </a></li>
                 
                   <li class="post-list-item"><a class="post-list-link" href="/2016/11/04/Using-Vagrant-for-Rails-Development.html"> 使用Vagrant部署Rails项目 </a></li>
+                
+                  <li class="post-list-item"><a class="post-list-link" href="/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"> Laravel和Dropzone.js实现文件上传 </a></li>
                 
                 </ul>
             </div>
