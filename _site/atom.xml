@@ -1,39 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://pangz.me/atom.xml" rel="self" type="application/atom+xml" /><link href="https://pangz.me/" rel="alternate" type="text/html" /><updated>2019-04-02T09:26:43+08:00</updated><id>https://pangz.me/atom.xml</id><title type="html">Tensor Cell</title><subtitle>读万卷书，行万里路，胸中脱去尘浊</subtitle><author><name>Ken pang</name></author><entry><title type="html">2019 Q2 OKR</title><link href="https://pangz.me/okr/2019/03/27/2019_Q2_ORK/" rel="alternate" type="text/html" title="2019 Q2 OKR" /><published>2019-03-27T00:00:00+08:00</published><updated>2019-03-27T00:00:00+08:00</updated><id>https://pangz.me/okr/2019/03/27/2019_Q2_ORK</id><content type="html" xml:base="https://pangz.me/okr/2019/03/27/2019_Q2_ORK/">&lt;p&gt;目标1 吴军 老师《谷歌方法论》逐篇文件&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键结果1.1 深度认同的文章做梳理 - 至少5篇&lt;/li&gt;
-  &lt;li&gt;关键结果1.2 待确定&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目标2 通读《时间简史》&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键结果2.1 待确定&lt;/li&gt;
-  &lt;li&gt;关键结果2.2 待确定&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目标3 通读《启示录-打造用户喜爱的产品》&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键结果3.1 待确定&lt;/li&gt;
-  &lt;li&gt;关键结果3.2 待确定&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目标4 通读《如何有效阅读一本书》&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键结果4.1 待确定&lt;/li&gt;
-  &lt;li&gt;关键结果4.2 待确定&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目标5 编写《pyqt5开发手记》一书的大纲&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键结果5.1 完成清晰的提纲列表&lt;/li&gt;
-  &lt;li&gt;关键结果5.2 完成序言部分&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;接下来的调整&quot;&gt;接下来的调整&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1 按照计划坚持健身&lt;/li&gt;
-  &lt;li&gt;2 固定作息时间&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ken pang</name></author><category term="[&quot;OKR&quot;]" /><category term="OKR" /><summary type="html">2019年第二季度 ORK的自我鉴定</summary></entry><entry><title type="html">关于苹果账号双重认证开启的一个问题</title><link href="https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" rel="alternate" type="text/html" title="关于苹果账号双重认证开启的一个问题" /><published>2019-03-24T00:00:00+08:00</published><updated>2019-03-24T00:00:00+08:00</updated><id>https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98</id><content type="html" xml:base="https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/">&lt;h3 id=&quot;最近遇到一个问题&quot;&gt;最近遇到一个问题&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://pangz.me/atom.xml" rel="self" type="application/atom+xml" /><link href="https://pangz.me/" rel="alternate" type="text/html" /><updated>2019-04-02T09:39:58+08:00</updated><id>https://pangz.me/atom.xml</id><title type="html">Tensor Cell</title><subtitle>读万卷书，行万里路，胸中脱去尘浊</subtitle><author><name>Ken pang</name></author><entry><title type="html">关于苹果账号双重认证开启的一个问题</title><link href="https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" rel="alternate" type="text/html" title="关于苹果账号双重认证开启的一个问题" /><published>2019-03-24T00:00:00+08:00</published><updated>2019-03-24T00:00:00+08:00</updated><id>https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98</id><content type="html" xml:base="https://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/">&lt;h3 id=&quot;最近遇到一个问题&quot;&gt;最近遇到一个问题&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;我手上的一个苹果开发者账号在开启双重认证的时候忘记了安全提示问题，经过和苹果的多次斗智斗勇，终于得到了官方真传并比较完美的解决了开启双重认证的问题。&lt;/p&gt;
@@ -161,7 +126,48 @@ https://support.apple.com/zh-cn/guide/mac-help/set-up-other-users-mtusr001/mac
 
 &lt;blockquote&gt;
   &lt;p&gt;要有本事把小事情做好，并且一辈子都要不断努力。&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Ken pang</name></author><category term="硅谷来信" /><category term="艺术" /><summary type="html">品内田光子爵士钢琴曲 思考一流水准是如何养成的</summary></entry><entry><title type="html">2018年大兴区幼升小政策</title><link href="https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96/" rel="alternate" type="text/html" title="2018年大兴区幼升小政策" /><published>2019-03-11T00:00:00+08:00</published><updated>2019-03-11T00:00:00+08:00</updated><id>https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96</id><content type="html" xml:base="https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96/">&lt;p&gt;非本市户籍的适龄儿童少年，因父母或者其他法定监护人在本区工作或居住需要在本区接受义务教育的，由其父母或其他法定监护人持本人在京务工就业证明、在京实际住所居住证明、全家户口簿、北京市居住证（或有效期内居住登记卡）、户籍所在地乡镇人民政府或街道办事处出具的在当地没有监护条件的证明等相关材料，到居住地所在镇人民政府或者街道办事处审核，审核通过的参加学龄人口信息采集。属于镇属入学范围的由各镇负责解决；属于直属地区范围的，区教委根据各校可提供学位情况和本人相关条件情况统筹协调入学。&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Ken pang</name></author><category term="硅谷来信" /><category term="艺术" /><summary type="html">品内田光子爵士钢琴曲 思考一流水准是如何养成的</summary></entry><entry><title type="html">读吴军《硅谷来信》心得笔记 - 第一篇</title><link href="https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01/" rel="alternate" type="text/html" title="读吴军《硅谷来信》心得笔记 - 第一篇" /><published>2019-03-11T00:00:00+08:00</published><updated>2019-03-11T00:00:00+08:00</updated><id>https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01</id><content type="html" xml:base="https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01/">&lt;p&gt;Google能够从一个小公司成长为全球巨无霸的IT，&lt;strong&gt;企业创始人&lt;/strong&gt;的作用非常大。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;** 首要掌握的技能：切忌固守在自己根深蒂固的思维模式中！ **&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;创始人可以从如下三步入手：&lt;/p&gt;
+
+&lt;h3 id=&quot;第一件事情是招人&quot;&gt;第一件事情是招人。&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;找合适的人，把重要的事情交给他们做，而不是事必躬亲，即不要做太多的细节管理（Micro Management）。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;作为一个公司的创始人，他需要花很多时间找到各个关键岗位最重要的人，一旦找到那样的人，就相信那些人的能力好了。Google到2002年已经有四百人的时候，包括创始人在内的几个高管还要面试每一位HR已经决定录取的员工，因为招人实在太重要了，面试占掉了他们四分之一的时间。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;人招不好，不仅耽误事情，而且常常是请神容易送神难，早去的员工常常占据了很重要的位置，除非他们能够和公司一同成长，否则公司长大之后，他们的工作很难安排。让他们当主管吧，他们又不具有相应的能力和潜力；继续让他们做非常具体的工作吧，他们会觉得创始人太薄情，甚至会纠集一些老员工对抗新来的主管。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ 1. 小公司招人的一个重要的原则，就是对方除了能力和品性能够胜任工作之外，还必须具有非常强的主动性。
+ 2. 录用的人应该高出现有员工的平均水平。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;第二件事情是起到刹车的作用而不是引擎的作用&quot;&gt;第二件事情是起到刹车的作用，而不是引擎的作用。&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;一个管理有序的公司，动力应该来自于底层，刹车应该来自于高层，这样公司既有活力，也有秩序。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Google公司在发展到一百人的规模时，创始人、CEO和几个其他高管，每周要花一天的时间听下面员工介绍自己的项目。他们只负责一件事情，就是确定员工做的事情是该做的事情，而不至于让公司的业务太分散。至于该怎么做，他们从来不发表什么建议，因为既然是精心挑选出来的员工，就相信他们有能力将要做的事情做好。如果用一个词概括这些高管们在审核项目时的作用，就是刹车。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;第三件事情是确立公司的价值观和企业文化&quot;&gt;第三件事情是确立公司的价值观和企业文化。&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;一个公司价值观的确立，企业文化的确立，是在它成立的初期。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+创始人自己的任务就是：找到适合公司自己的商业模式，在早期让整个公司都认可它的价值观。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;一个创始人如果能做好这样三件事情，已经不容易了，具体的事情应该让下面的人做，自己不要干预太多。当一个创始人能够找到称职的主管工程、销售和行政的负责人，并且足够信任他们，那么公司就步入正轨了。如果创始人像诸葛亮那样事必躬亲，不仅会把自己累死，还会把公司做死。&lt;/p&gt;</content><author><name>Ken pang</name></author><category term="硅谷来信" /><category term="读后感" /><summary type="html">谷歌小时候的故事：给初创公司创始人的建议</summary></entry><entry><title type="html">2018年大兴区幼升小政策</title><link href="https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96/" rel="alternate" type="text/html" title="2018年大兴区幼升小政策" /><published>2019-03-11T00:00:00+08:00</published><updated>2019-03-11T00:00:00+08:00</updated><id>https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96</id><content type="html" xml:base="https://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96/">&lt;p&gt;非本市户籍的适龄儿童少年，因父母或者其他法定监护人在本区工作或居住需要在本区接受义务教育的，由其父母或其他法定监护人持本人在京务工就业证明、在京实际住所居住证明、全家户口簿、北京市居住证（或有效期内居住登记卡）、户籍所在地乡镇人民政府或街道办事处出具的在当地没有监护条件的证明等相关材料，到居住地所在镇人民政府或者街道办事处审核，审核通过的参加学龄人口信息采集。属于镇属入学范围的由各镇负责解决；属于直属地区范围的，区教委根据各校可提供学位情况和本人相关条件情况统筹协调入学。&lt;/p&gt;
 
 &lt;p&gt;区镇两级政府建立非本市户籍适龄儿童少年接受义务教育证明证件材料联合审核机制。各镇人民政府、街道办事处依据本辖区非本市户籍适龄儿童少年接受义务教育证明证件材料审核要求对提出申请的进行联合审核。&lt;/p&gt;
 
@@ -221,83 +227,7 @@ https://support.apple.com/zh-cn/guide/mac-help/set-up-other-users-mtusr001/mac
 
 &lt;p&gt;（五）户籍所在地街道办事处或乡镇人民政府出具的在当地没有监护条件的证明审核标准。&lt;/p&gt;
 
-&lt;p&gt;审核申请人及其配偶均持北京市居住证（或有效期内居住登记卡）的可视为有此证明。&lt;/p&gt;</content><author><name>Ken pang</name></author><summary type="html">大兴区2018年义务教育非京籍入学政策</summary></entry><entry><title type="html">读吴军《硅谷来信》心得笔记 - 第一篇</title><link href="https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01/" rel="alternate" type="text/html" title="读吴军《硅谷来信》心得笔记 - 第一篇" /><published>2019-03-11T00:00:00+08:00</published><updated>2019-03-11T00:00:00+08:00</updated><id>https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01</id><content type="html" xml:base="https://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01/">&lt;p&gt;Google能够从一个小公司成长为全球巨无霸的IT，&lt;strong&gt;企业创始人&lt;/strong&gt;的作用非常大。&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;** 首要掌握的技能：切忌固守在自己根深蒂固的思维模式中！ **&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;创始人可以从如下三步入手：&lt;/p&gt;
-
-&lt;h3 id=&quot;第一件事情是招人&quot;&gt;第一件事情是招人。&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;找合适的人，把重要的事情交给他们做，而不是事必躬亲，即不要做太多的细节管理（Micro Management）。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;作为一个公司的创始人，他需要花很多时间找到各个关键岗位最重要的人，一旦找到那样的人，就相信那些人的能力好了。Google到2002年已经有四百人的时候，包括创始人在内的几个高管还要面试每一位HR已经决定录取的员工，因为招人实在太重要了，面试占掉了他们四分之一的时间。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;人招不好，不仅耽误事情，而且常常是请神容易送神难，早去的员工常常占据了很重要的位置，除非他们能够和公司一同成长，否则公司长大之后，他们的工作很难安排。让他们当主管吧，他们又不具有相应的能力和潜力；继续让他们做非常具体的工作吧，他们会觉得创始人太薄情，甚至会纠集一些老员工对抗新来的主管。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
- 1. 小公司招人的一个重要的原则，就是对方除了能力和品性能够胜任工作之外，还必须具有非常强的主动性。
- 2. 录用的人应该高出现有员工的平均水平。
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;第二件事情是起到刹车的作用而不是引擎的作用&quot;&gt;第二件事情是起到刹车的作用，而不是引擎的作用。&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;一个管理有序的公司，动力应该来自于底层，刹车应该来自于高层，这样公司既有活力，也有秩序。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Google公司在发展到一百人的规模时，创始人、CEO和几个其他高管，每周要花一天的时间听下面员工介绍自己的项目。他们只负责一件事情，就是确定员工做的事情是该做的事情，而不至于让公司的业务太分散。至于该怎么做，他们从来不发表什么建议，因为既然是精心挑选出来的员工，就相信他们有能力将要做的事情做好。如果用一个词概括这些高管们在审核项目时的作用，就是刹车。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;第三件事情是确立公司的价值观和企业文化&quot;&gt;第三件事情是确立公司的价值观和企业文化。&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;一个公司价值观的确立，企业文化的确立，是在它成立的初期。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-创始人自己的任务就是：找到适合公司自己的商业模式，在早期让整个公司都认可它的价值观。
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;一个创始人如果能做好这样三件事情，已经不容易了，具体的事情应该让下面的人做，自己不要干预太多。当一个创始人能够找到称职的主管工程、销售和行政的负责人，并且足够信任他们，那么公司就步入正轨了。如果创始人像诸葛亮那样事必躬亲，不仅会把自己累死，还会把公司做死。&lt;/p&gt;</content><author><name>Ken pang</name></author><category term="硅谷来信" /><category term="读后感" /><summary type="html">谷歌小时候的故事：给初创公司创始人的建议</summary></entry><entry><title type="html">2019 Q1 OKR</title><link href="https://pangz.me/okr/2019/01/01/2019_Q1_OKR/" rel="alternate" type="text/html" title="2019 Q1 OKR" /><published>2019-01-01T00:00:00+08:00</published><updated>2019-01-01T00:00:00+08:00</updated><id>https://pangz.me/okr/2019/01/01/2019_Q1_OKR</id><content type="html" xml:base="https://pangz.me/okr/2019/01/01/2019_Q1_OKR/">&lt;p&gt;目标1 听 吴军 老师《硅谷来信》逐篇文件&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键结果1.1 深度认同的文章做梳理 - 至少5篇
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://pangz.me/2019/03/11/%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01.html&quot;&gt;读吴军《硅谷来信》心得笔记 - 第一篇&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;关键结果1.2 根据读后感，总结和反思过去行为&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目标2 更新博客&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键结果2.1 10篇Pyqt5系列文章&lt;/li&gt;
-  &lt;li&gt;关键结果2.2 10篇Flutter系列文章&lt;/li&gt;
-  &lt;li&gt;关键结果2.3 更新至少5篇其他类型的文章
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://pangz.me/2019/03/11/2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96.html&quot;&gt;2018年大兴区幼升小政策&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://pangz.me/2019/03/14/%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83.html&quot;&gt;内田光子-关于一流水准的思考&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://pangz.me/2019/03/22/%E5%90%B4%E5%86%9B-%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%84%8F%E4%B9%89.html&quot;&gt;读 吴军《谷歌方法论》- 为什么学习语文&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://pangz.me/ios/2019/03/24/%E5%85%B3%E4%BA%8E%E8%8B%B9%E6%9E%9C%E5%8F%8C%E9%87%8D%E8%AE%A4%E8%AF%81%E5%BC%80%E5%90%AF%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98.html&quot;&gt;关于苹果账号双重认证开启的一个问题&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目标3 读完《稀缺》这本书&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;关键目标3.1 通读完毕&lt;/li&gt;
-  &lt;li&gt;关键目标3.2 对知识点做出20处笔记&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;接下来的调整&quot;&gt;接下来的调整&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1 按照计划坚持健身&lt;/li&gt;
-  &lt;li&gt;2 固定作息时间&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ken pang</name></author><category term="[&quot;OKR&quot;]" /><category term="OKR" /><summary type="html">2019年第一季度 ORK的自我鉴定</summary></entry><entry><title type="html">Emacs STEP-1</title><link href="https://pangz.me/2017/01/21/Emacs-STEP-1/" rel="alternate" type="text/html" title="Emacs STEP-1" /><published>2017-01-21T00:00:00+08:00</published><updated>2017-01-21T00:00:00+08:00</updated><id>https://pangz.me/2017/01/21/Emacs-STEP-1</id><content type="html" xml:base="https://pangz.me/2017/01/21/Emacs-STEP-1/">&lt;h2 id=&quot;emacs学习入门-step1&quot;&gt;Emacs学习入门 STEP－1&lt;/h2&gt;
+&lt;p&gt;审核申请人及其配偶均持北京市居住证（或有效期内居住登记卡）的可视为有此证明。&lt;/p&gt;</content><author><name>Ken pang</name></author><summary type="html">大兴区2018年义务教育非京籍入学政策</summary></entry><entry><title type="html">Emacs STEP-1</title><link href="https://pangz.me/2017/01/21/Emacs-STEP-1/" rel="alternate" type="text/html" title="Emacs STEP-1" /><published>2017-01-21T00:00:00+08:00</published><updated>2017-01-21T00:00:00+08:00</updated><id>https://pangz.me/2017/01/21/Emacs-STEP-1</id><content type="html" xml:base="https://pangz.me/2017/01/21/Emacs-STEP-1/">&lt;h2 id=&quot;emacs学习入门-step1&quot;&gt;Emacs学习入门 STEP－1&lt;/h2&gt;
 
 &lt;p&gt;摘自（ &lt;a href=&quot;http://blog.csdn.net/redguardtoo/article/details/7222501&quot;&gt;一年成为Emacs高手（像神一样使用编辑器）&lt;/a&gt; ）&lt;/p&gt;
 
@@ -629,4 +559,829 @@ error message for that particular provider.
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libpq-dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ken pang</name></author><category term="Vagrant" /><category term="Rails" /><category term="Ruby" /><summary type="html">Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Ken pang</name></author><category term="Vagrant" /><category term="Rails" /><category term="Ruby" /><summary type="html">Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。</summary></entry><entry><title type="html">Laravel和Dropzone.js实现文件上传</title><link href="https://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="alternate" type="text/html" title="Laravel和Dropzone.js实现文件上传" /><published>2016-06-29T00:00:00+08:00</published><updated>2016-06-29T00:00:00+08:00</updated><id>https://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0</id><content type="html" xml:base="https://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">&lt;p&gt;Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。&lt;/p&gt;
+
+&lt;p&gt;在Laravel项目中加入Dropzone对于没有经验的新手来说会有很多麻烦，所以在这里会讲些最靠谱的解决方法。&lt;/p&gt;
+
+&lt;p&gt;这篇引导会讲到：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;文件自动上传（上传队列自动处理）&lt;/li&gt;
+  &lt;li&gt;在预览页面通过ajax直接删除图片&lt;/li&gt;
+  &lt;li&gt;还可以统计上传的图片数量&lt;/li&gt;
+  &lt;li&gt;保存两种图片尺寸：原始尺寸和icon尺寸&lt;/li&gt;
+  &lt;li&gt;Using Image Intervention package for resizing and image encoding&lt;/li&gt;
+  &lt;li&gt;保存图片数据到数据库&lt;/li&gt;
+  &lt;li&gt;服务器端保存唯一的文件名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果正在找一种上传和编辑图片的最贱的方法，可以checkout&lt;a href=&quot;http://www.croppic.net/&quot;&gt;Croppic jQuery plugin&lt;/a&gt;。Croppic是一个简单的类似Facebook，Twitter或者LinkedIn的照片属性编辑组件。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;整个项目可以从 https://github.com/codingo-me/dropzone-laravel-image-upload 获取&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;实现的效果图如下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pangz.me/assets/images/posts/laravel/dropzoneLaravelImg.png&quot; alt=&quot;Dropzone Laravel&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;基本的项目配置&quot;&gt;基本的项目配置&lt;/h2&gt;
+
+&lt;p&gt;我将会使用Laravel安装器安装一版纯净的Laravel环境 and create environment file with database credentials.&lt;/p&gt;
+
+&lt;p&gt;首先从 https://github.com/enyo/dropzone/tree/master/dist 下载最新的js和styles文件。然后放到项目的public/packages/dropzone文件夹下。&lt;/p&gt;
+
+&lt;p&gt;前端使用Bootstrap。 把相关文件放到public/packages/bootstrap。&lt;/p&gt;
+
+&lt;p&gt;需要用到两个第三方包：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;......
+    &quot;require&quot;: {
+        &quot;php&quot;: &quot;&amp;gt;=5.5.9&quot;,
+        &quot;laravel/framework&quot;: &quot;5.2.*&quot;,
+        &quot;laravelcollective/html&quot;: &quot;5.2.*&quot;,
+        &quot;intervention/image&quot;: &quot;^2.3&quot;
+    },
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;通过composer install/update安装完成后，需要在同一个文件中添加：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Intervention\Image\ImageServiceProvider::class,
+Collective\Html\HtmlServiceProvider::class,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;和facades&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    'Form'      =&amp;gt; Collective\Html\FormFacade::class,
+    'HTML'      =&amp;gt; Collective\Html\HtmlFacade::class,
+    'Image'     =&amp;gt; Intervention\Image\Facades\Image::class
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;视图&quot;&gt;视图&lt;/h2&gt;
+
+&lt;p&gt;这个引导只包含一个用来上传图片的页面。但是最好能分割成不同的模块：主布局文件和独立的文件；&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Image upload in Laravel 5.2 with Dropzone.js&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    {!! HTML::style('/packages/bootstrap/css/bootstrap.min.css') !!}
+    {!! HTML::style('/assets/css/style.css') !!}
+    {!! HTML::script('https://code.jquery.com/jquery-2.1.4.min.js') !!}
+
+    @yield('head')
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar navbar-default&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;button&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-toggle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-toggle=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;collapse&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.navbar-collapse&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon-bar&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon-bar&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon-bar&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-brand&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Dropzone + Laravel&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navbar-collapse collapse&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nav navbar-nav&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Upload&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+
+@yield('content')
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+@yield('footer')
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;主要的布局文件非常简单，只是包含底部导航栏和多个balde的section。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@extends('layout')
+
+@section('head')
+    {!! HTML::style('/packages/dropzone/dropzone.css') !!}
+@stop
+
+@section('footer')
+    {!! HTML::script('/packages/dropzone/dropzone.js') !!}
+    {!! HTML::script('/assets/js/dropzone-config.js') !!}
+@stop
+
+@section('content')
+
+    &amp;lt;div class=&quot;row&quot;&amp;gt;
+        &amp;lt;div class=&quot;col-md-offset-1 col-md-10&quot;&amp;gt;
+            &amp;lt;div class=&quot;jumbotron how-to-create&quot; &amp;gt;
+
+                &amp;lt;h3&amp;gt;Images &amp;lt;span id=&quot;photoCounter&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/h3&amp;gt;
+                &amp;lt;br /&amp;gt;
+
+                {!! Form::open(['url' =&amp;gt; route('upload-post'), 'class' =&amp;gt; 'dropzone', 'files'=&amp;gt;true, 'id'=&amp;gt;'real-dropzone']) !!}
+
+                &amp;lt;div class=&quot;dz-message&quot;&amp;gt;
+
+                &amp;lt;/div&amp;gt;
+
+                &amp;lt;div class=&quot;fallback&quot;&amp;gt;
+                    &amp;lt;input name=&quot;file&quot; type=&quot;file&quot; multiple /&amp;gt;
+                &amp;lt;/div&amp;gt;
+
+                &amp;lt;div class=&quot;dropzone-previews&quot; id=&quot;dropzonePreview&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+                &amp;lt;h4 style=&quot;text-align: center;color:#428bca;&quot;&amp;gt;Drop images in this area  &amp;lt;span class=&quot;glyphicon glyphicon-hand-down&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/h4&amp;gt;
+
+                {!! Form::close() !!}
+
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;jumbotron how-to-create&quot;&amp;gt;
+                &amp;lt;ul&amp;gt;
+                    &amp;lt;li&amp;gt;Images are uploaded as soon as you drop them&amp;lt;/li&amp;gt;
+                    &amp;lt;li&amp;gt;Maximum allowed size of image is 8MB&amp;lt;/li&amp;gt;
+                &amp;lt;/ul&amp;gt;
+
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;!-- Dropzone Preview Template --&amp;gt;
+    &amp;lt;div id=&quot;preview-template&quot; style=&quot;display: none;&quot;&amp;gt;
+
+        &amp;lt;div class=&quot;dz-preview dz-file-preview&quot;&amp;gt;
+            &amp;lt;div class=&quot;dz-image&quot;&amp;gt;&amp;lt;img data-dz-thumbnail=&quot;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+            &amp;lt;div class=&quot;dz-details&quot;&amp;gt;
+                &amp;lt;div class=&quot;dz-size&quot;&amp;gt;&amp;lt;span data-dz-size=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;dz-filename&quot;&amp;gt;&amp;lt;span data-dz-name=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;dz-progress&quot;&amp;gt;&amp;lt;span class=&quot;dz-upload&quot; data-dz-uploadprogress=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;dz-error-message&quot;&amp;gt;&amp;lt;span data-dz-errormessage=&quot;&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+
+            &amp;lt;div class=&quot;dz-success-mark&quot;&amp;gt;
+                &amp;lt;svg width=&quot;54px&quot; height=&quot;54px&quot; viewBox=&quot;0 0 54 54&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:sketch=&quot;http://www.bohemiancoding.com/sketch/ns&quot;&amp;gt;
+                    &amp;lt;!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch --&amp;gt;
+                    &amp;lt;title&amp;gt;Check&amp;lt;/title&amp;gt;
+                    &amp;lt;desc&amp;gt;Created with Sketch.&amp;lt;/desc&amp;gt;
+                    &amp;lt;defs&amp;gt;&amp;lt;/defs&amp;gt;
+                    &amp;lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; sketch:type=&quot;MSPage&quot;&amp;gt;
+                        &amp;lt;path d=&quot;M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z&quot; id=&quot;Oval-2&quot; stroke-opacity=&quot;0.198794158&quot; stroke=&quot;#747474&quot; fill-opacity=&quot;0.816519475&quot; fill=&quot;#FFFFFF&quot; sketch:type=&quot;MSShapeGroup&quot;&amp;gt;&amp;lt;/path&amp;gt;
+                    &amp;lt;/g&amp;gt;
+                &amp;lt;/svg&amp;gt;
+            &amp;lt;/div&amp;gt;
+
+            &amp;lt;div class=&quot;dz-error-mark&quot;&amp;gt;
+                &amp;lt;svg width=&quot;54px&quot; height=&quot;54px&quot; viewBox=&quot;0 0 54 54&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:sketch=&quot;http://www.bohemiancoding.com/sketch/ns&quot;&amp;gt;
+                    &amp;lt;!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch --&amp;gt;
+                    &amp;lt;title&amp;gt;error&amp;lt;/title&amp;gt;
+                    &amp;lt;desc&amp;gt;Created with Sketch.&amp;lt;/desc&amp;gt;
+                    &amp;lt;defs&amp;gt;&amp;lt;/defs&amp;gt;
+                    &amp;lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; sketch:type=&quot;MSPage&quot;&amp;gt;
+                        &amp;lt;g id=&quot;Check-+-Oval-2&quot; sketch:type=&quot;MSLayerGroup&quot; stroke=&quot;#747474&quot; stroke-opacity=&quot;0.198794158&quot; fill=&quot;#FFFFFF&quot; fill-opacity=&quot;0.816519475&quot;&amp;gt;
+                            &amp;lt;path d=&quot;M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z&quot; id=&quot;Oval-2&quot; sketch:type=&quot;MSShapeGroup&quot;&amp;gt;&amp;lt;/path&amp;gt;
+                        &amp;lt;/g&amp;gt;
+                    &amp;lt;/g&amp;gt;
+                &amp;lt;/svg&amp;gt;
+            &amp;lt;/div&amp;gt;
+
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;!-- End Dropzone Preview Template --&amp;gt;
+
+{!! Form::hidden('csrf-token', csrf_token(), ['id' =&amp;gt; 'csrf-token']) !!}
+@stop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在上传视图的 &lt;strong&gt;头部部分&lt;/strong&gt; 加入Dropzone的缺省样式，在 &lt;strong&gt;底部部分&lt;/strong&gt; 加入Dropzone缺省的js文件，和自己的Dropzone配置文件。&lt;/p&gt;
+
+&lt;p&gt;内容部分包含两个，第一个是上传表单部分，第二部分是隐藏的预览模板部分。在Dropzone下载了预览模板的代码。配置文件中的模板部分用来显示上传文件的预览。&lt;/p&gt;
+
+&lt;p&gt;因为需要使用token完成提交和删除路由，所以在内容的底部部分，加入隐藏的csrf字段。&lt;/p&gt;
+
+&lt;h2 id=&quot;dropzone的配置&quot;&gt;Dropzone的配置&lt;/h2&gt;
+
+&lt;p&gt;Dropzone具有很多可用的配置选项。对于这个项目来说，使用Dropzone实现文件的批量顺序上传，就可以避免重复选择需要上传的文件。并行的上传数最大100个，单个文件的尺寸最大设置为8MB。同时上传成功的文件可以在模板html页面中显示预览。&lt;/p&gt;
+
+&lt;p&gt;每个预览的图片都可以通过点击下方的删除链接删除，这个操作会触发删除文件事件。这个事件会创建一个ajax发起一个删除请求，并且会返回200状态码，图片数也会相应的减少。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var photo_counter = 0;
+Dropzone.options.realDropzone = {
+
+    uploadMultiple: false,
+    parallelUploads: 100,
+    maxFilesize: 8,
+    previewsContainer: '#dropzonePreview',
+    previewTemplate: document.querySelector('#preview-template').innerHTML,
+    addRemoveLinks: true,
+    dictRemoveFile: 'Remove',
+    dictFileTooBig: 'Image is bigger than 8MB',
+
+    // The setting up of the dropzone
+    init:function() {
+
+        this.on(&quot;removedfile&quot;, function(file) {
+
+            $.ajax({
+                type: 'POST',
+                url: 'upload/delete',
+                data: {id: file.name, _token: $('#csrf-token').val()},
+                dataType: 'html',
+                success: function(data){
+                    var rep = JSON.parse(data);
+                    if(rep.code == 200)
+                    {
+                        photo_counter--;
+                        $(&quot;#photoCounter&quot;).text( &quot;(&quot; + photo_counter + &quot;)&quot;);
+                    }
+
+                }
+            });
+
+        } );
+    },
+    error: function(file, response) {
+        if($.type(response) === &quot;string&quot;)
+            var message = response; //dropzone sends it's own error messages in string
+        else
+            var message = response.message;
+        file.previewElement.classList.add(&quot;dz-error&quot;);
+        _ref = file.previewElement.querySelectorAll(&quot;[data-dz-errormessage]&quot;);
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i &amp;lt; _len; _i++) {
+            node = _ref[_i];
+            _results.push(node.textContent = message);
+        }
+        return _results;
+    },
+    success: function(file,done) {
+        photo_counter++;
+        $(&quot;#photoCounter&quot;).text( &quot;(&quot; + photo_counter + &quot;)&quot;);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在配置文件底部，当文件上传成功后，图片计数器会增加。&lt;/p&gt;
+
+&lt;h2 id=&quot;上传逻辑&quot;&gt;上传逻辑&lt;/h2&gt;
+
+&lt;p&gt;根据功能逻辑划分不同的实现类，在这个项目中，实现了一个__ImageRepository__类，将其放到目录app/Logic/Image/ImageRepository.php中。&lt;/p&gt;
+
+&lt;p&gt;迄今为止这个类只有2个功能，主要是负责上传单个文件和删除指定文件。在__ImageController__类文件中实现了这个类的实例。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Logic\Image\ImageRepository;
+use Illuminate\Support\Facades\Input;
+
+class ImageController extends Controller
+{
+    protected $image;
+
+    public function __construct(ImageRepository $imageRepository)
+    {
+        $this-&amp;gt;image = $imageRepository;
+    }
+
+    public function getUpload()
+    {
+        return view('pages.upload');
+    }
+
+    public function postUpload()
+    {
+        $photo = Input::all();
+        $response = $this-&amp;gt;image-&amp;gt;upload($photo);
+        return $response;
+
+    }
+
+    public function deleteUpload()
+    {
+
+        $filename = Input::get('id');
+
+        if(!$filename)
+        {
+            return 0;
+        }
+
+        $response = $this-&amp;gt;image-&amp;gt;delete( $filename );
+
+        return $response;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;因此这个控制器需要添加3个路由，一个用来显示上传表单，一个用来接收上传的文件，第三个用来发起删除请求。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Route::get('/', ['as' =&amp;gt; 'upload', 'uses' =&amp;gt; 'ImageController@getUpload']);
+Route::post('upload', ['as' =&amp;gt; 'upload-post', 'uses' =&amp;gt;'ImageController@postUpload']);
+Route::post('upload/delete', ['as' =&amp;gt; 'upload-remove', 'uses' =&amp;gt;'ImageController@deleteUpload']);
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在类文件__ImageController__ 的 &lt;strong&gt;postUpload&lt;/strong&gt; 方法中将用户的输入传入  &lt;strong&gt;ImageRepository&lt;/strong&gt; 类中的 &lt;strong&gt;upload&lt;/strong&gt; 方法中。&lt;/p&gt;
+
+&lt;p&gt;这个方法&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首先会验证输入的合法性&lt;/li&gt;
+  &lt;li&gt;然后会为上传的文件生成服务器唯一的文件名&lt;/li&gt;
+  &lt;li&gt;最后将文件按照原始尺寸和icon的尺寸分别存入服务器不同的目录。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同时，他也可以在数据库中创建完整的实体，从而Laravel可以轻松的掌控上传的图片。&lt;/p&gt;
+
+&lt;p&gt;首先，创建migration文件，并执行migrations。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateImages extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('images', function (Blueprint $table) {
+            $table-&amp;gt;increments('id');
+            $table-&amp;gt;text('original_name');
+            $table-&amp;gt;text('filename');
+            $table-&amp;gt;timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('images');
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注意到上传的文件会被保存为两种格式，原始尺寸和icon尺寸。使用 &lt;strong&gt;Image Intervention package&lt;/strong&gt; 修改图片尺寸和编码。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?php
+
+namespace App\Logic\Image;
+
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\ImageManager;
+use App\Models\Image;
+
+
+class ImageRepository
+{
+    public function upload( $form_data )
+    {
+
+        $validator = Validator::make($form_data, Image::$rules, Image::$messages);
+
+        if ($validator-&amp;gt;fails()) {
+
+            return Response::json([
+                'error' =&amp;gt; true,
+                'message' =&amp;gt; $validator-&amp;gt;messages()-&amp;gt;first(),
+                'code' =&amp;gt; 400
+            ], 400);
+
+        }
+
+        $photo = $form_data['file'];
+
+        $originalName = $photo-&amp;gt;getClientOriginalName();
+        $extension = $photo-&amp;gt;getClientOriginalExtension();
+        $originalNameWithoutExt = substr($originalName, 0, strlen($originalName) - strlen($extension) - 1);
+
+        $filename = $this-&amp;gt;sanitize($originalNameWithoutExt);
+        $allowed_filename = $this-&amp;gt;createUniqueFilename( $filename, $extension );
+
+        $uploadSuccess1 = $this-&amp;gt;original( $photo, $allowed_filename );
+
+        $uploadSuccess2 = $this-&amp;gt;icon( $photo, $allowed_filename );
+
+        if( !$uploadSuccess1 || !$uploadSuccess2 ) {
+
+            return Response::json([
+                'error' =&amp;gt; true,
+                'message' =&amp;gt; 'Server error while uploading',
+                'code' =&amp;gt; 500
+            ], 500);
+
+        }
+
+        $sessionImage = new Image;
+        $sessionImage-&amp;gt;filename      = $allowed_filename;
+        $sessionImage-&amp;gt;original_name = $originalName;
+        $sessionImage-&amp;gt;save();
+
+        return Response::json([
+            'error' =&amp;gt; false,
+            'code'  =&amp;gt; 200
+        ], 200);
+
+    }
+
+    public function createUniqueFilename( $filename, $extension )
+    {
+        $full_size_dir = Config::get('images.full_size');
+        $full_image_path = $full_size_dir . $filename . '.' . $extension;
+
+        if ( File::exists( $full_image_path ) )
+        {
+            // Generate token for image
+            $imageToken = substr(sha1(mt_rand()), 0, 5);
+            return $filename . '-' . $imageToken . '.' . $extension;
+        }
+
+        return $filename . '.' . $extension;
+    }
+
+    /**
+     * Optimize Original Image
+     */
+    public function original( $photo, $filename )
+    {
+        $manager = new ImageManager();
+        $image = $manager-&amp;gt;make( $photo )-&amp;gt;save(Config::get('images.full_size') . $filename );
+
+        return $image;
+    }
+
+    /**
+     * Create Icon From Original
+     */
+    public function icon( $photo, $filename )
+    {
+        $manager = new ImageManager();
+        $image = $manager-&amp;gt;make( $photo )-&amp;gt;resize(200, null, function ($constraint) {
+            $constraint-&amp;gt;aspectRatio();
+            })
+            -&amp;gt;save( Config::get('images.icon_size')  . $filename );
+
+        return $image;
+    }
+
+    /**
+     * Delete Image From Session folder, based on original filename
+     */
+    public function delete( $originalFilename)
+    {
+
+        $full_size_dir = Config::get('images.full_size');
+        $icon_size_dir = Config::get('images.icon_size');
+
+        $sessionImage = Image::where('original_name', 'like', $originalFilename)-&amp;gt;first();
+
+
+        if(empty($sessionImage))
+        {
+            return Response::json([
+                'error' =&amp;gt; true,
+                'code'  =&amp;gt; 400
+            ], 400);
+
+        }
+
+        $full_path1 = $full_size_dir . $sessionImage-&amp;gt;filename;
+        $full_path2 = $icon_size_dir . $sessionImage-&amp;gt;filename;
+
+        if ( File::exists( $full_path1 ) )
+        {
+            File::delete( $full_path1 );
+        }
+
+        if ( File::exists( $full_path2 ) )
+        {
+            File::delete( $full_path2 );
+        }
+
+        if( !empty($sessionImage))
+        {
+            $sessionImage-&amp;gt;delete();
+        }
+
+        return Response::json([
+            'error' =&amp;gt; false,
+            'code'  =&amp;gt; 200
+        ], 200);
+    }
+
+    function sanitize($string, $force_lowercase = true, $anal = false)
+    {
+        $strip = array(&quot;~&quot;, &quot;`&quot;, &quot;!&quot;, &quot;@&quot;, &quot;#&quot;, &quot;$&quot;, &quot;%&quot;, &quot;^&quot;, &quot;&amp;amp;&quot;, &quot;*&quot;, &quot;(&quot;, &quot;)&quot;, &quot;_&quot;, &quot;=&quot;, &quot;+&quot;, &quot;[&quot;, &quot;{&quot;, &quot;]&quot;,
+            &quot;}&quot;, &quot;\\&quot;, &quot;|&quot;, &quot;;&quot;, &quot;:&quot;, &quot;\&quot;&quot;, &quot;'&quot;, &quot;&amp;amp;#8216;&quot;, &quot;&amp;amp;#8217;&quot;, &quot;&amp;amp;#8220;&quot;, &quot;&amp;amp;#8221;&quot;, &quot;&amp;amp;#8211;&quot;, &quot;&amp;amp;#8212;&quot;,
+            &quot;â€”&quot;, &quot;â€“&quot;, &quot;,&quot;, &quot;&amp;lt;&quot;, &quot;.&quot;, &quot;&amp;gt;&quot;, &quot;/&quot;, &quot;?&quot;);
+        $clean = trim(str_replace($strip, &quot;&quot;, strip_tags($string)));
+        $clean = preg_replace('/\s+/', &quot;-&quot;, $clean);
+        $clean = ($anal) ? preg_replace(&quot;/[^a-zA-Z0-9]/&quot;, &quot;&quot;, $clean) : $clean ;
+
+        return ($force_lowercase) ?
+            (function_exists('mb_strtolower')) ?
+                mb_strtolower($clean, 'UTF-8') :
+                strtolower($clean) :
+            $clean;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上传的方法中还会引用Image模型中验证规则验证图片类型，只有符合条件的图片可以上传。&lt;/p&gt;
+
+&lt;p&gt;然后，通过方法 &lt;strong&gt;createUniqueFilename&lt;/strong&gt; 检查下图片原始的文件名称在服务器上是否唯一。如果存在同名的文件，这个方法会在文件名后追加随机字符串。这是最简单的解决办法，当然了，你可以通过其他方法实现。&lt;/p&gt;
+
+&lt;p&gt;当获取到唯一的文件名称后，将图片和这个文件名传给方法original() ，这个方法负责保存全尺寸的图片，使用icon()方法保存小尺寸图片。&lt;/p&gt;
+
+&lt;p&gt;当这两个尺寸的图片被保存后，系统会在images表中插入新的记录。&lt;/p&gt;
+
+&lt;p&gt;图片上传的目录路径被保存在图片配置文件中。同时使用了自己的sanitize()方法，你也可以使用Laravel内部自建的sanitize().&lt;/p&gt;
+
+&lt;p&gt;为了项目能正常的工作，需要拷贝.env.example 到.env文件，并且修改其中的值。上传目录需要以”/”结束。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?php
+
+return [
+    'full_size'   =&amp;gt; env('UPLOAD_FULL_SIZE'),
+    'icon_size'   =&amp;gt; env('UPLOAD_ICON_SIZE'),
+];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;删除方法会接受文件名，并且检查这个图片是否存在数据库和对应的两个目录下。如果存在则将其删除。p&lt;/p&gt;
+
+&lt;h2 id=&quot;来源&quot;&gt;来源&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://tuts.codingo.me/laravel-5-1-and-dropzone-js-auto-image-uploads-with-removal-links#&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Ken pang</name></author><summary type="html">Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。</summary></entry><entry><title type="html">Laravel 环境安装和配置</title><link href="https://pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/" rel="alternate" type="text/html" title="Laravel 环境安装和配置" /><published>2016-06-13T00:00:00+08:00</published><updated>2016-06-13T00:00:00+08:00</updated><id>https://pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="https://pangz.me/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">&lt;h2 id=&quot;php环境的安装配置&quot;&gt;PHP环境的安装配置&lt;/h2&gt;
+
+&lt;h3 id=&quot;下载php源码&quot;&gt;下载PHP源码&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~$ wget &quot;http://cn2.php.net/get/php-7.1.4.tar.gz/from/this/mirror&quot; php714.tar.gz
+reasonpun@vultr:~$ tar xvzf php70.tar.gz
+reasonpun@vultr:~$ cd php-7.0.7/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;更新环境&quot;&gt;更新环境&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~/php-7.0.7$ sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;安装组件&quot;&gt;安装组件&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# debain
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libxml2-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install build-essential
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install openssl
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libssl-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install make curl
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libcurl4-gnutls-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libjpeg-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libpng-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libmcrypt-dev
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libreadline6
+reasonpun@vultr:~/php-7.0.7$ sudo apt-get install libreadline6-dev
+# centos 7
+[root@i-d5n1vxda data]# yum groupinstall 'Development Tools'
+[root@i-d5n1vxda data]# yum install gd.x86_64
+[root@i-d5n1vxda data]# yum install readline.x86_64 readline-devel.x86_64
+[root@i-d5n1vxda data]# yum install php-mysql.x86_64
+[root@i-d5n1vxda php-7.1.4]# yum install libwebp.x86_64 libwebp-devel.x86_64
+# centos7下需要源码安装libmcrypt
+[root@i-d5n1vxda data]# wget ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz
+[root@i-d5n1vxda libmcrypt-2.5.7]# make &amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;编译安装php&quot;&gt;编译&amp;amp;安装PHP&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~/php-7.0.7$ ./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --without-pear --with-gettext --disable-fileinfo --enable-maintainer-zts
+
+reasonpun@vultr:~/php-7.0.7$ make &amp;amp;&amp;amp; sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;设置php-fpm运行用户&quot;&gt;设置php-fpm运行用户&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:~/php-7.0.7$ cd /usr/local/php/etc
+reasonpun@vultr:/usr/local/php/etc$ sudo cp php-fpm.conf.default php-fpm.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 切换到配置文件目录
+reasonpun@vultr:/usr/local/php/etc$ cd /usr/local/php/etc/php-fpm.d/
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ sudo vim www.conf.default
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ sudo mv www.conf.default www.conf
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 修改运行用户
+user = www-data
+group = www-data
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 启动php-fpm
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ sudo /usr/local/php/sbin/php-fpm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 加入系统变量
+sudo echo &quot;PATH=$PATH:/usr/local/php/bin&quot;&amp;gt;&amp;gt; /etc/profile
+sudo echo &quot;export PATH&quot;&amp;gt;&amp;gt; /etc/profile
+source /etc/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 现在看看版本信息吧
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$ php -v
+PHP 7.0.7 (cli) (built: Jun 13 2016 16:12:37) ( ZTS )
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
+reasonpun@vultr:/usr/local/php/etc/php-fpm.d$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;composer-安装&quot;&gt;Composer 安装&lt;/h2&gt;
+
+&lt;h3 id=&quot;下载安装文件&quot;&gt;下载安装文件&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ ls
+reasonpun@vultr:/data/web/17tu$ php -r &quot;copy('https://getcomposer.org/installer','composer-setup.php');&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;验证文件合法性&quot;&gt;验证文件合法性&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ php -r &quot;if (hash_file('SHA384', 'composer-setup.php') === 'bf16ac69bd8b807bc6e4499b28968ee87456e29a3894767b60c2d4dafa3d10d045ffef2aeb2e78827fa5f024fbe93ca2') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;&quot;
+Installer verified
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;执行安装&quot;&gt;执行安装&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ php composer-setup.php
+All settings correct for using Composer
+Downloading 1.1.2...
+
+Composer successfully installed to: /data/web/17tu/composer.phar
+Use it: php composer.phar
+reasonpun@vultr:/data/web/17tu$ ls
+composer.phar  composer-setup.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;删除安装文件&quot;&gt;删除安装文件&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ php -r &quot;unlink('composer-setup.php');&quot;
+reasonpun@vultr:/data/web/17tu$ ls
+composer.phar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;将composer执行脚本移动到bin目录下&quot;&gt;将composer执行脚本移动到bin目录下&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ mv composer.phar /usr/local/bin/composer
+mv: cannot move ‘composer.phar’ to ‘/usr/local/bin/composer’: Permission denied
+reasonpun@vultr:/data/web/17tu$ sudo mv composer.phar /usr/local/bin/composer
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;查看命令的可用性&quot;&gt;查看命令的可用性&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ composer
+Composer version 1.1.2 2016-05-31 19:48:11
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display this help message
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi                     Force ANSI output
+      --no-ansi                  Disable ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about           Short information about Composer
+  archive         Create an archive of this composer package
+  browse          Opens the package's repository URL or homepage in your browser.
+  clear-cache     Clears composer's internal package cache.
+  clearcache      Clears composer's internal package cache.
+  config          Set config options
+  create-project  Create new project from a package into given directory.
+  depends         Shows which packages cause the given package to be installed
+  diagnose        Diagnoses the system to identify common errors.
+  dump-autoload   Dumps the autoloader
+  dumpautoload    Dumps the autoloader
+  exec            Execute a vendored binary/script
+  global          Allows running commands in the global composer dir ($COMPOSER_HOME).
+  help            Displays help for a command
+  home            Opens the package's repository URL or homepage in your browser.
+  info            Show information about packages
+  init            Creates a basic composer.json file in current directory.
+  install         Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json.
+  licenses        Show information about licenses of dependencies
+  list            Lists commands
+  outdated        Shows a list of installed packages that have updates available, including their latest version.
+  prohibits       Shows which packages prevent the given package from being installed
+  remove          Removes a package from the require or require-dev
+  require         Adds required packages to your composer.json and installs them
+  run-script      Run the scripts defined in composer.json.
+  search          Search for packages
+  self-update     Updates composer.phar to the latest version.
+  selfupdate      Updates composer.phar to the latest version.
+  show            Show information about packages
+  status          Show a list of locally modified packages
+  suggests        Show package suggestions
+  update          Updates your dependencies to the latest version according to composer.json, and updates the composer.lock file.
+  validate        Validates a composer.json and composer.lock
+  why             Shows which packages cause the given package to be installed
+  why-not         Shows which packages prevent the given package from being installed
+reasonpun@vultr:/data/web/17tu$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;lavarel-安装配置&quot;&gt;Lavarel 安装配置&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ composer global require &quot;laravel/installer&quot;
+Changed current directory to /home/reasonpun/.composer
+Using version ^1.3 for laravel/installer
+./composer.json has been created
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing symfony/process (v3.1.1)
+    Downloading: 100%
+
+  - Installing symfony/polyfill-mbstring (v1.2.0)
+    Downloading: 100%
+
+  - Installing symfony/console (v3.1.1)
+    Downloading: 100%
+
+  - Installing guzzlehttp/promises (1.2.0)
+    Downloading: 100%
+
+  - Installing psr/http-message (1.0)
+    Downloading: 100%
+
+  - Installing guzzlehttp/psr7 (1.3.0)
+    Downloading: Connecting...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;nginx配置&quot;&gt;Nginx配置&lt;/h2&gt;
+
+&lt;h3 id=&quot;编译nginx源码&quot;&gt;编译Nginx源码&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-http_ssl_module --with-pcre=../pcre-8.40 --with-zlib=../zlib-1.2.11 --lock-path=/var/run/nginx.lock --user=nginx --group=nginx --with-http_ssl_module --with-http_gunzip_module  --with-http_gzip_static_module --with-http_auth_request_module --with-http_v2_module
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;nginx配置-1&quot;&gt;nginx配置&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    root /your/path/to/lavarel_code;
+    index index.php index.html index.htm;
+
+    server_name 45.32.16.180;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    # PHP 支持
+    location ~ \.php$ {
+        try_files $uri /index.php =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;更改目录权限&quot;&gt;更改目录权限&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 bootstrap/cache
+reasonpun@vultr:/data/web/17tu$ sudo chmod -R 777 storage/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://www.oschina.net/question/2010961_242272?fromerr=PD31w5Kw&lt;/li&gt;
+  &lt;li&gt;https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Ken pang</name></author><category term="Laravel" /><category term="PHP" /><summary type="html">Larvel开发环境的搭建和配置，PHP，Nginx及Composer</summary></entry></feed>
