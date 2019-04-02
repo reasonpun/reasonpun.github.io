@@ -1,0 +1,1014 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tensor Cell" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="环境需求 git, 或者一个支持git的IDE Apache Maven 3.2.1 或者更新版本 Java JDK (不能只有JRE) 7 或者更新版本">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oryx2 开发者文档">
+<meta property="og:url" content="https://pangz.me/2016/04/06/Oryx2-developer-doc/">
+<meta property="og:site_name" content="Tensor Cell">
+<meta property="og:description" content="环境需求 git, 或者一个支持git的IDE Apache Maven 3.2.1 或者更新版本 Java JDK (不能只有JRE) 7 或者更新版本">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oryx2 开发者文档">
+<meta name="twitter:description" content="环境需求 git, 或者一个支持git的IDE Apache Maven 3.2.1 或者更新版本 Java JDK (不能只有JRE) 7 或者更新版本">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://pangz.me/"/>
+
+
+
+
+
+  <title>Oryx2 开发者文档 | Tensor Cell</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tensor Cell</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">还要再走500里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://pangz.me/2016/04/06/Oryx2-developer-doc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ken pang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tensor Cell">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Oryx2 开发者文档
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-06T00:00:00+08:00">
+                2016-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="环境需求">环境需求</h3>
+<ul>
+  <li><a href="http://git-scm.com/">git</a>, 或者一个支持git的IDE</li>
+  <li><a href="http://maven.apache.org/">Apache Maven</a> 3.2.1 或者更新版本</li>
+  <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK</a> (不能只有JRE) 7 或者更新版本</li>
+</ul>
+
+<p>以上需要已经安装到了你的开发环境中。</p>
+
+<h2 id="building">Building</h2>
+
+<p>克隆代码到你本地，并且编译：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code>git clone https://github.com/OryxProject/oryx.git oryx
+cd oryx
+mvn -DskipTests package
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>会编译出如下的二进制的jar文件：</p>
+
+<ul>
+  <li>批处理层: deploy/oryx-batch/target/oryx-batch-2.1.2.jar</li>
+  <li>实时处理层: deploy/oryx-speed/target/oryx-speed-2.1.2.jar</li>
+  <li>服务层: deploy/oryx-serving/target/oryx-serving-2.1.2.jar</li>
+</ul>
+
+<p>友情提醒，如果你对开发Oryx感兴趣，可以根据这个<a href="https://help.github.com/articles/fork-a-repo">分支</a>克隆自己的分支，然后就可以提交修改了。</p>
+
+<h3 id="java-8">Java 8</h3>
+
+<p>如果使用Java8编译，需要添加参数-Pjava8 并且测试这里的指令。</p>
+
+<h3 id="platform-only">Platform Only</h3>
+
+<p>默认的编译包括基于Spark MLlib和其他库的端到端的ML程序。如果只是编译lambda和ML层，需要通过参数-P!app-tier关闭其他的选项。注意，在bash中，！需要转义： -P!app-tier。</p>
+
+<h3 id="测试">测试</h3>
+
+<p>mvn 测试会执行所有的但愿测试用例。也同时会执行所有的集成测试，这个可能会需要稍微长点的时间。</p>
+
+<h2 id="模型对应表">模型对应表</h2>
+
+<p>主要的模型和他们对应的层：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Serving</th>
+      <th>Speed</th>
+      <th>Batch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Binary</td>
+      <td>oryx-serving</td>
+      <td>oryx-speed</td>
+      <td>oryx-batch</td>
+    </tr>
+    <tr>
+      <td>App</td>
+      <td>oryx-app-serving</td>
+      <td>oryx-app-mllib oryx-app</td>
+      <td>oryx-app-mllib oryx-app</td>
+    </tr>
+    <tr>
+      <td>ML</td>
+      <td> </td>
+      <td>oryx-ml</td>
+      <td>oryx-ml</td>
+    </tr>
+    <tr>
+      <td>Lambda</td>
+      <td>oryx-lambda-serving</td>
+      <td>oryx-lambda</td>
+      <td>oryx-lambda</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>支持的模型，比如：<a href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-common">oryx-common</a>, <a href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-common">oryx-app-common</a>, <a href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-api">oryx-api</a>, and <a href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-api">oryx-app-api</a> 没有在这里列出了。</p>
+
+<h2 id="实现一个oryx-程序">实现一个Oryx 程序</h2>
+
+<p>Oryx 中的“app 层”，是实现了推荐的真实的批处理，实时，服务层逻辑，集群和分类。然而，任何实现都需要使用到Oryx。他们也可以混合和匹配。举个例子，你可以重新实现ALS-related推荐的批处理层，但是仍然使用原来的ALS的服务层和实时计算层。</p>
+
+<h3 id="创建一个程序">创建一个程序</h3>
+
+<p>在每个例子中，创建一个自定义的批处理层，实时计算层或者服务层的程序都需要实现com.cloudera.oryx.api中的几个关键的Java接口或者Scala的特性。这些接口/特性可以在项目的oryx-api模型中找到。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Java</th>
+      <th>Scala</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Batch</td>
+      <td>batch.BatchLayerUpdate</td>
+      <td>batch.ScalaBatchLayerUpdate</td>
+    </tr>
+    <tr>
+      <td>Speed</td>
+      <td>speed.SpeedModelManager</td>
+      <td>speed.ScalaSpeedModelManager</td>
+    </tr>
+    <tr>
+      <td>Serving</td>
+      <td>serving.ServingModelManager</td>
+      <td>serving.ScalaServingModelManager</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>com.cloudera.oryx.api也包含大量的关键的类和接口，举个例子，<a href="https://github.com/OryxProject/oryx/blob/master/framework/oryx-api/src/main/java/com/cloudera/oryx/api/serving/OryxResource.java">serving.OryxResource</a>  是一个入口，用来编译自定义的JAX-RS 端点，但是不需要使用。</p>
+
+<h3 id="编译程序">编译程序</h3>
+
+<p>进入你的程序的这些接口/特性，添加一个com.cloudera.oryx:oryx-api的依赖，scope字段需要填写“provided”，在Maven中，需要添加如下依赖：
+In Maven, this would mean adding a dependency like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8</pre></td><td class="code"><pre class="highlight"><code>&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;com.cloudera.oryx&lt;/groupId&gt;
+    &lt;artifactId&gt;oryx-api&lt;/artifactId&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;version&gt;2.1.2&lt;/version&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>这些artifacts被放在了<a href="https://repository.cloudera.com/artifactory/cloudera-repos/">Cloudera</a>这个分支下，因此在编译的时候需要引用这个分支：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6</pre></td><td class="code"><pre class="highlight"><code>&lt;repositories&gt;
+  &lt;repository&gt;
+    &lt;id&gt;cloudera&lt;/id&gt;
+    &lt;url&gt;https://repository.cloudera.com/artifactory/cloudera-repos/&lt;/url&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>一个最小的实例可以访问<a href="https://github.com/OryxProject/oryx/tree/master/app/example">example/</a> 这里。</p>
+
+<p>”Word Count” 这个程序是按照空格将行分割成独立的单词，然后统计出排重后的单词出现的次数。</p>
+
+<p>编译代码后生成一个JAR文件，包含了程序实现和所有第三方的diam，如果使用Maven，可以通过mvn package命令。</p>
+
+<h3 id="编译-word-count-例子">编译 Word Count 例子</h3>
+
+<p>举例：编译样例代码如下：</p>
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code>cd app/example
+mvn package
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>生成的JAR包在target/example-2.1.2.jar。</p>
+
+<h3 id="自定义oryx程序">自定义Oryx程序</h3>
+
+<p>当发布一个源自Oryx的预打包程序，在某些情况下，有可能会提供一个扩展的实现，从而可以自定义他们的行为。举例，ALS推荐程序暴露了com.cloudera.oryx.app.als.RescorerProvider接口。这些特定程序API类可以在模块oryx-app-api中找到。这些接口的实现也可以在独立模式下被编译，打包，部署。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9</pre></td><td class="code"><pre class="highlight"><code>&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;com.cloudera.oryx&lt;/groupId&gt;
+    &lt;artifactId&gt;oryx-app-api&lt;/artifactId&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;version&gt;2.1.2&lt;/version&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+
+</code></pre></td></tr></tbody></table></div></div>
+
+<h2 id="发布程序">发布程序</h2>
+
+<p>拷贝生成的JAR文件–myapp.jar，放到需要执行的Oryx 二进制JAR文件相同的目录下。</p>
+
+<p>修改Oryx的配置文件，以便于引用自定义的批处理，实时计算和服务层的实现。
+当执行批处理，实时计算和服务层时，需要添加–app-jar myapp.jar到oryx-run.sh命令行中。</p>
+
+<h3 id="发布-word-count-例子">发布 Word Count 例子</h3>
+
+<p>举例，如果已经编译好了上述的“word count”的程序，你可以执行这个程序，直接引用wordcount-example.conf这个配置文件：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>./oryx-run.sh batch --conf wordcount-example.conf --app-jar example-2.1.2.jar
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>… 对于实时计算和服务层也是同样的。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><pre class="highlight"><code>curl -X POST http://.../add/foo%20bar%20baz
+...
+curl http://.../distinct
+{"foo":2,"bar":2,"baz":2}
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>配置文件本身已经配置好了主机名称和<a href="http://www.cloudera.com/content/www/en-us/downloads/quickstart_vms.html">Cloudera Quickstart VM</a>的参数。事实上，这个例子可以作为一个集群配置的例子：<a href="http://oryx.io/docs/admin.html#cloudera_quickstart_vm_setup">Cloudera Quickstart VM Setup</a>。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/06/Oryx2-end-user-doc/" rel="next" title="Oryx2 终端用户文档">
+                <i class="fa fa-chevron-left"></i> Oryx2 终端用户文档
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/08/Java-keyword-volatile/" rel="prev" title="Java关键字volatile">
+                Java关键字volatile <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Ken pang" />
+          <p class="site-author-name" itemprop="name">Ken pang</p>
+           
+              <p class="site-description motion-element" itemprop="description">读万卷书，行万里路，胸中脱去尘浊</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#building"> <span class="nav-number">1</span> <span class="nav-text">Building</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#java-8"> <span class="nav-number">1.1</span> <span class="nav-text">Java 8</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#platform-only"> <span class="nav-number">1.2</span> <span class="nav-text">Platform Only</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#测试"> <span class="nav-number">1.3</span> <span class="nav-text">测试</span> </a> </li> </ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#模型对应表"> <span class="nav-number">2</span> <span class="nav-text">模型对应表</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#实现一个oryx-程序"> <span class="nav-number">3</span> <span class="nav-text">实现一个Oryx 程序</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#创建一个程序"> <span class="nav-number">3.1</span> <span class="nav-text">创建一个程序</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#编译程序"> <span class="nav-number">3.2</span> <span class="nav-text">编译程序</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#编译-word-count-例子"> <span class="nav-number">3.3</span> <span class="nav-text">编译 Word Count 例子</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#自定义oryx程序"> <span class="nav-number">3.4</span> <span class="nav-text">自定义Oryx程序</span> </a> </li> </ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#发布程序"> <span class="nav-number">4</span> <span class="nav-text">发布程序</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#发布-word-count-例子"> <span class="nav-number">4.1</span> <span class="nav-text">发布 Word Count 例子</span> </a> </li> </ol> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ken pang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

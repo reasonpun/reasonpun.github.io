@@ -23,7 +23,7 @@ Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。
 
 实现的效果图如下
 
-![Dropzone Laravel]({{ site.url }}/assets/laravel/dropzoneLaravelImg.png)
+![Dropzone Laravel]({{ site.url }}/assets/images/posts/laravel/dropzoneLaravelImg.png)
 
 ## 基本的项目配置
 

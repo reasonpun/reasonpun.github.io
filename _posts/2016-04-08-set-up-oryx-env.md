@@ -136,7 +136,7 @@ Error while executing topic command : org.apache.zookeeper.KeeperException$NoNod
 
 这个问题应该是：CDH没有启动Kafka服务没有启动。通过CDH后台启动Kafka服务（如果没有添加Kafka服务，则需要先添加）。
 
-![Kafka Service]({{ site.url }}/assets/oryx/add-kafka-service.png)
+![Kafka Service]({{ site.url }}/assets/images/posts/oryx/add-kafka-service.png)
 
 此时重新执行setup命令：
 

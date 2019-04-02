@@ -28,7 +28,7 @@ title: Apache Kafka Structure
 
     * 总体结构
 
-![kafka总体结构图]({{ site.url }}/assets/kafka.0.9.0/structure.png)
+![kafka总体结构图]({{ site.url }}/assets/images/posts/kafka.0.9.0/structure.png)
 
 
   * 名词解释
@@ -192,7 +192,7 @@ title: Apache Kafka Structure
 
   * 结构图
 
-![kafka在ZK中的存储结构图]({{ site.url }}/assets/kafka.0.9.0/kafka_in_zk.png)
+![kafka在ZK中的存储结构图]({{ site.url }}/assets/images/posts/kafka.0.9.0/kafka_in_zk.png)
 
 #### Kafka 安装和配置
 

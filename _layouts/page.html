@@ -1,5 +1,6 @@
 ---
-layout: base
+layout: layout
 ---
 
-{{ content }}
+{% assign __ = site.data.languages[site.language] %}
+{% include page.html %}

@@ -1,0 +1,1397 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tensor Cell" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel和Dropzone.js实现文件上传">
+<meta property="og:url" content="https://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+<meta property="og:site_name" content="Tensor Cell">
+<meta property="og:description" content="Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pangz.me/assets/images/posts/laravel/dropzoneLaravelImg.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Laravel和Dropzone.js实现文件上传">
+<meta name="twitter:description" content="Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。">
+<meta name="twitter:image" content="https://pangz.me/assets/images/posts/laravel/dropzoneLaravelImg.png">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://pangz.me/"/>
+
+
+
+
+
+  <title>Laravel和Dropzone.js实现文件上传 | Tensor Cell</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tensor Cell</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">还要再走500里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://pangz.me/2016/06/29/Laravel%E5%92%8CDropzone-js%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ken pang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tensor Cell">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Laravel和Dropzone.js实现文件上传
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-29T00:00:00+08:00">
+                2016-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <p>Dropzone是一个最好的免费库，可以通过拖拽实现文件的上传。拥有很多特性和选项，可以通过多种方式定制开发。</p>
+
+<p>在Laravel项目中加入Dropzone对于没有经验的新手来说会有很多麻烦，所以在这里会讲些最靠谱的解决方法。</p>
+
+<p>这篇引导会讲到：</p>
+
+<ul>
+  <li>文件自动上传（上传队列自动处理）</li>
+  <li>在预览页面通过ajax直接删除图片</li>
+  <li>还可以统计上传的图片数量</li>
+  <li>保存两种图片尺寸：原始尺寸和icon尺寸</li>
+  <li>Using Image Intervention package for resizing and image encoding</li>
+  <li>保存图片数据到数据库</li>
+  <li>服务器端保存唯一的文件名</li>
+</ul>
+
+<p>如果正在找一种上传和编辑图片的最贱的方法，可以checkout<a href="http://www.croppic.net/">Croppic jQuery plugin</a>。Croppic是一个简单的类似Facebook，Twitter或者LinkedIn的照片属性编辑组件。</p>
+
+<blockquote>
+  <p>整个项目可以从 https://github.com/codingo-me/dropzone-laravel-image-upload 获取</p>
+</blockquote>
+
+<p>实现的效果图如下</p>
+
+<p><img src="https://pangz.me/assets/images/posts/laravel/dropzoneLaravelImg.png" alt="Dropzone Laravel" /></p>
+
+<h2 id="基本的项目配置">基本的项目配置</h2>
+
+<p>我将会使用Laravel安装器安装一版纯净的Laravel环境 and create environment file with database credentials.</p>
+
+<p>首先从 https://github.com/enyo/dropzone/tree/master/dist 下载最新的js和styles文件。然后放到项目的public/packages/dropzone文件夹下。</p>
+
+<p>前端使用Bootstrap。 把相关文件放到public/packages/bootstrap。</p>
+
+<p>需要用到两个第三方包：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8</pre></td><td class="code"><pre class="highlight"><code>......
+    "require": {
+        "php": "&gt;=5.5.9",
+        "laravel/framework": "5.2.*",
+        "laravelcollective/html": "5.2.*",
+        "intervention/image": "^2.3"
+    },
+......
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>通过composer install/update安装完成后，需要在同一个文件中添加：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code>Intervention\Image\ImageServiceProvider::class,
+Collective\Html\HtmlServiceProvider::class,
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>和facades</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code>    'Form'      =&gt; Collective\Html\FormFacade::class,
+    'HTML'      =&gt; Collective\Html\HtmlFacade::class,
+    'Image'     =&gt; Intervention\Image\Facades\Image::class
+</code></pre></td></tr></tbody></table></div></div>
+
+<h2 id="视图">视图</h2>
+
+<p>这个引导只包含一个用来上传图片的页面。但是最好能分割成不同的模块：主布局文件和独立的文件；</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44</pre></td><td class="code"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Image upload in Laravel 5.2 with Dropzone.js<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+
+    {!! HTML::style('/packages/bootstrap/css/bootstrap.min.css') !!}
+    {!! HTML::style('/assets/css/style.css') !!}
+    {!! HTML::script('https://code.jquery.com/jquery-2.1.4.min.js') !!}
+
+    @yield('head')
+
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar navbar-default"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">".navbar-collapse"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Dropzone + Laravel<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapse collapse"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Upload<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+
+@yield('content')
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+
+@yield('footer')
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>主要的布局文件非常简单，只是包含底部导航栏和多个balde的section。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44<br/>45<br/>46<br/>47<br/>48<br/>49<br/>50<br/>51<br/>52<br/>53<br/>54<br/>55<br/>56<br/>57<br/>58<br/>59<br/>60<br/>61<br/>62<br/>63<br/>64<br/>65<br/>66<br/>67<br/>68<br/>69<br/>70<br/>71<br/>72<br/>73<br/>74<br/>75<br/>76<br/>77<br/>78<br/>79<br/>80<br/>81<br/>82<br/>83<br/>84<br/>85<br/>86<br/>87<br/>88<br/>89<br/>90<br/>91<br/>92</pre></td><td class="code"><pre class="highlight"><code>@extends('layout')
+
+@section('head')
+    {!! HTML::style('/packages/dropzone/dropzone.css') !!}
+@stop
+
+@section('footer')
+    {!! HTML::script('/packages/dropzone/dropzone.js') !!}
+    {!! HTML::script('/assets/js/dropzone-config.js') !!}
+@stop
+
+@section('content')
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-offset-1 col-md-10"&gt;
+            &lt;div class="jumbotron how-to-create" &gt;
+
+                &lt;h3&gt;Images &lt;span id="photoCounter"&gt;&lt;/span&gt;&lt;/h3&gt;
+                &lt;br /&gt;
+
+                {!! Form::open(['url' =&gt; route('upload-post'), 'class' =&gt; 'dropzone', 'files'=&gt;true, 'id'=&gt;'real-dropzone']) !!}
+
+                &lt;div class="dz-message"&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class="fallback"&gt;
+                    &lt;input name="file" type="file" multiple /&gt;
+                &lt;/div&gt;
+
+                &lt;div class="dropzone-previews" id="dropzonePreview"&gt;&lt;/div&gt;
+
+                &lt;h4 style="text-align: center;color:#428bca;"&gt;Drop images in this area  &lt;span class="glyphicon glyphicon-hand-down"&gt;&lt;/span&gt;&lt;/h4&gt;
+
+                {!! Form::close() !!}
+
+            &lt;/div&gt;
+            &lt;div class="jumbotron how-to-create"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Images are uploaded as soon as you drop them&lt;/li&gt;
+                    &lt;li&gt;Maximum allowed size of image is 8MB&lt;/li&gt;
+                &lt;/ul&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Dropzone Preview Template --&gt;
+    &lt;div id="preview-template" style="display: none;"&gt;
+
+        &lt;div class="dz-preview dz-file-preview"&gt;
+            &lt;div class="dz-image"&gt;&lt;img data-dz-thumbnail=""&gt;&lt;/div&gt;
+
+            &lt;div class="dz-details"&gt;
+                &lt;div class="dz-size"&gt;&lt;span data-dz-size=""&gt;&lt;/span&gt;&lt;/div&gt;
+                &lt;div class="dz-filename"&gt;&lt;span data-dz-name=""&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="dz-progress"&gt;&lt;span class="dz-upload" data-dz-uploadprogress=""&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;div class="dz-error-message"&gt;&lt;span data-dz-errormessage=""&gt;&lt;/span&gt;&lt;/div&gt;
+
+            &lt;div class="dz-success-mark"&gt;
+                &lt;svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"&gt;
+                    &lt;!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch --&gt;
+                    &lt;title&gt;Check&lt;/title&gt;
+                    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;
+                    &lt;defs&gt;&lt;/defs&gt;
+                    &lt;g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"&gt;
+                        &lt;path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF" sketch:type="MSShapeGroup"&gt;&lt;/path&gt;
+                    &lt;/g&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+
+            &lt;div class="dz-error-mark"&gt;
+                &lt;svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"&gt;
+                    &lt;!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch --&gt;
+                    &lt;title&gt;error&lt;/title&gt;
+                    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;
+                    &lt;defs&gt;&lt;/defs&gt;
+                    &lt;g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"&gt;
+                        &lt;g id="Check-+-Oval-2" sketch:type="MSLayerGroup" stroke="#747474" stroke-opacity="0.198794158" fill="#FFFFFF" fill-opacity="0.816519475"&gt;
+                            &lt;path d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" sketch:type="MSShapeGroup"&gt;&lt;/path&gt;
+                        &lt;/g&gt;
+                    &lt;/g&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- End Dropzone Preview Template --&gt;
+
+{!! Form::hidden('csrf-token', csrf_token(), ['id' =&gt; 'csrf-token']) !!}
+@stop
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>在上传视图的 <strong>头部部分</strong> 加入Dropzone的缺省样式，在 <strong>底部部分</strong> 加入Dropzone缺省的js文件，和自己的Dropzone配置文件。</p>
+
+<p>内容部分包含两个，第一个是上传表单部分，第二部分是隐藏的预览模板部分。在Dropzone下载了预览模板的代码。配置文件中的模板部分用来显示上传文件的预览。</p>
+
+<p>因为需要使用token完成提交和删除路由，所以在内容的底部部分，加入隐藏的csrf字段。</p>
+
+<h2 id="dropzone的配置">Dropzone的配置</h2>
+
+<p>Dropzone具有很多可用的配置选项。对于这个项目来说，使用Dropzone实现文件的批量顺序上传，就可以避免重复选择需要上传的文件。并行的上传数最大100个，单个文件的尺寸最大设置为8MB。同时上传成功的文件可以在模板html页面中显示预览。</p>
+
+<p>每个预览的图片都可以通过点击下方的删除链接删除，这个操作会触发删除文件事件。这个事件会创建一个ajax发起一个删除请求，并且会返回200状态码，图片数也会相应的减少。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44<br/>45<br/>46<br/>47<br/>48<br/>49<br/>50<br/>51<br/>52<br/>53<br/>54<br/>55</pre></td><td class="code"><pre class="highlight"><code>var photo_counter = 0;
+Dropzone.options.realDropzone = {
+
+    uploadMultiple: false,
+    parallelUploads: 100,
+    maxFilesize: 8,
+    previewsContainer: '#dropzonePreview',
+    previewTemplate: document.querySelector('#preview-template').innerHTML,
+    addRemoveLinks: true,
+    dictRemoveFile: 'Remove',
+    dictFileTooBig: 'Image is bigger than 8MB',
+
+    // The setting up of the dropzone
+    init:function() {
+
+        this.on("removedfile", function(file) {
+
+            $.ajax({
+                type: 'POST',
+                url: 'upload/delete',
+                data: {id: file.name, _token: $('#csrf-token').val()},
+                dataType: 'html',
+                success: function(data){
+                    var rep = JSON.parse(data);
+                    if(rep.code == 200)
+                    {
+                        photo_counter--;
+                        $("#photoCounter").text( "(" + photo_counter + ")");
+                    }
+
+                }
+            });
+
+        } );
+    },
+    error: function(file, response) {
+        if($.type(response) === "string")
+            var message = response; //dropzone sends it's own error messages in string
+        else
+            var message = response.message;
+        file.previewElement.classList.add("dz-error");
+        _ref = file.previewElement.querySelectorAll("[data-dz-errormessage]");
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {
+            node = _ref[_i];
+            _results.push(node.textContent = message);
+        }
+        return _results;
+    },
+    success: function(file,done) {
+        photo_counter++;
+        $("#photoCounter").text( "(" + photo_counter + ")");
+    }
+}
+
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>在配置文件底部，当文件上传成功后，图片计数器会增加。</p>
+
+<h2 id="上传逻辑">上传逻辑</h2>
+
+<p>根据功能逻辑划分不同的实现类，在这个项目中，实现了一个__ImageRepository__类，将其放到目录app/Logic/Image/ImageRepository.php中。</p>
+
+<p>迄今为止这个类只有2个功能，主要是负责上传单个文件和删除指定文件。在__ImageController__类文件中实现了这个类的实例。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44</pre></td><td class="code"><pre class="highlight"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Logic\Image\ImageRepository;
+use Illuminate\Support\Facades\Input;
+
+class ImageController extends Controller
+{
+    protected $image;
+
+    public function __construct(ImageRepository $imageRepository)
+    {
+        $this-&gt;image = $imageRepository;
+    }
+
+    public function getUpload()
+    {
+        return view('pages.upload');
+    }
+
+    public function postUpload()
+    {
+        $photo = Input::all();
+        $response = $this-&gt;image-&gt;upload($photo);
+        return $response;
+
+    }
+
+    public function deleteUpload()
+    {
+
+        $filename = Input::get('id');
+
+        if(!$filename)
+        {
+            return 0;
+        }
+
+        $response = $this-&gt;image-&gt;delete( $filename );
+
+        return $response;
+    }
+}
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>因此这个控制器需要添加3个路由，一个用来显示上传表单，一个用来接收上传的文件，第三个用来发起删除请求。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><pre class="highlight"><code>Route::get('/', ['as' =&gt; 'upload', 'uses' =&gt; 'ImageController@getUpload']);
+Route::post('upload', ['as' =&gt; 'upload-post', 'uses' =&gt;'ImageController@postUpload']);
+Route::post('upload/delete', ['as' =&gt; 'upload-remove', 'uses' =&gt;'ImageController@deleteUpload']);
+
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>在类文件__ImageController__ 的 <strong>postUpload</strong> 方法中将用户的输入传入  <strong>ImageRepository</strong> 类中的 <strong>upload</strong> 方法中。</p>
+
+<p>这个方法</p>
+
+<ul>
+  <li>首先会验证输入的合法性</li>
+  <li>然后会为上传的文件生成服务器唯一的文件名</li>
+  <li>最后将文件按照原始尺寸和icon的尺寸分别存入服务器不同的目录。</li>
+</ul>
+
+<p>同时，他也可以在数据库中创建完整的实体，从而Laravel可以轻松的掌控上传的图片。</p>
+
+<p>首先，创建migration文件，并执行migrations。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32</pre></td><td class="code"><pre class="highlight"><code>&lt;?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateImages extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('images', function (Blueprint $table) {
+            $table-&gt;increments('id');
+            $table-&gt;text('original_name');
+            $table-&gt;text('filename');
+            $table-&gt;timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('images');
+    }
+}
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>注意到上传的文件会被保存为两种格式，原始尺寸和icon尺寸。使用 <strong>Image Intervention package</strong> 修改图片尺寸和编码。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44<br/>45<br/>46<br/>47<br/>48<br/>49<br/>50<br/>51<br/>52<br/>53<br/>54<br/>55<br/>56<br/>57<br/>58<br/>59<br/>60<br/>61<br/>62<br/>63<br/>64<br/>65<br/>66<br/>67<br/>68<br/>69<br/>70<br/>71<br/>72<br/>73<br/>74<br/>75<br/>76<br/>77<br/>78<br/>79<br/>80<br/>81<br/>82<br/>83<br/>84<br/>85<br/>86<br/>87<br/>88<br/>89<br/>90<br/>91<br/>92<br/>93<br/>94<br/>95<br/>96<br/>97<br/>98<br/>99<br/>100<br/>101<br/>102<br/>103<br/>104<br/>105<br/>106<br/>107<br/>108<br/>109<br/>110<br/>111<br/>112<br/>113<br/>114<br/>115<br/>116<br/>117<br/>118<br/>119<br/>120<br/>121<br/>122<br/>123<br/>124<br/>125<br/>126<br/>127<br/>128<br/>129<br/>130<br/>131<br/>132<br/>133<br/>134<br/>135<br/>136<br/>137<br/>138<br/>139<br/>140<br/>141<br/>142<br/>143<br/>144<br/>145<br/>146<br/>147<br/>148<br/>149<br/>150<br/>151<br/>152<br/>153<br/>154<br/>155<br/>156<br/>157<br/>158<br/>159<br/>160<br/>161<br/>162<br/>163<br/>164<br/>165</pre></td><td class="code"><pre class="highlight"><code>&lt;?php
+
+namespace App\Logic\Image;
+
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\ImageManager;
+use App\Models\Image;
+
+
+class ImageRepository
+{
+    public function upload( $form_data )
+    {
+
+        $validator = Validator::make($form_data, Image::$rules, Image::$messages);
+
+        if ($validator-&gt;fails()) {
+
+            return Response::json([
+                'error' =&gt; true,
+                'message' =&gt; $validator-&gt;messages()-&gt;first(),
+                'code' =&gt; 400
+            ], 400);
+
+        }
+
+        $photo = $form_data['file'];
+
+        $originalName = $photo-&gt;getClientOriginalName();
+        $extension = $photo-&gt;getClientOriginalExtension();
+        $originalNameWithoutExt = substr($originalName, 0, strlen($originalName) - strlen($extension) - 1);
+
+        $filename = $this-&gt;sanitize($originalNameWithoutExt);
+        $allowed_filename = $this-&gt;createUniqueFilename( $filename, $extension );
+
+        $uploadSuccess1 = $this-&gt;original( $photo, $allowed_filename );
+
+        $uploadSuccess2 = $this-&gt;icon( $photo, $allowed_filename );
+
+        if( !$uploadSuccess1 || !$uploadSuccess2 ) {
+
+            return Response::json([
+                'error' =&gt; true,
+                'message' =&gt; 'Server error while uploading',
+                'code' =&gt; 500
+            ], 500);
+
+        }
+
+        $sessionImage = new Image;
+        $sessionImage-&gt;filename      = $allowed_filename;
+        $sessionImage-&gt;original_name = $originalName;
+        $sessionImage-&gt;save();
+
+        return Response::json([
+            'error' =&gt; false,
+            'code'  =&gt; 200
+        ], 200);
+
+    }
+
+    public function createUniqueFilename( $filename, $extension )
+    {
+        $full_size_dir = Config::get('images.full_size');
+        $full_image_path = $full_size_dir . $filename . '.' . $extension;
+
+        if ( File::exists( $full_image_path ) )
+        {
+            // Generate token for image
+            $imageToken = substr(sha1(mt_rand()), 0, 5);
+            return $filename . '-' . $imageToken . '.' . $extension;
+        }
+
+        return $filename . '.' . $extension;
+    }
+
+    /**
+     * Optimize Original Image
+     */
+    public function original( $photo, $filename )
+    {
+        $manager = new ImageManager();
+        $image = $manager-&gt;make( $photo )-&gt;save(Config::get('images.full_size') . $filename );
+
+        return $image;
+    }
+
+    /**
+     * Create Icon From Original
+     */
+    public function icon( $photo, $filename )
+    {
+        $manager = new ImageManager();
+        $image = $manager-&gt;make( $photo )-&gt;resize(200, null, function ($constraint) {
+            $constraint-&gt;aspectRatio();
+            })
+            -&gt;save( Config::get('images.icon_size')  . $filename );
+
+        return $image;
+    }
+
+    /**
+     * Delete Image From Session folder, based on original filename
+     */
+    public function delete( $originalFilename)
+    {
+
+        $full_size_dir = Config::get('images.full_size');
+        $icon_size_dir = Config::get('images.icon_size');
+
+        $sessionImage = Image::where('original_name', 'like', $originalFilename)-&gt;first();
+
+
+        if(empty($sessionImage))
+        {
+            return Response::json([
+                'error' =&gt; true,
+                'code'  =&gt; 400
+            ], 400);
+
+        }
+
+        $full_path1 = $full_size_dir . $sessionImage-&gt;filename;
+        $full_path2 = $icon_size_dir . $sessionImage-&gt;filename;
+
+        if ( File::exists( $full_path1 ) )
+        {
+            File::delete( $full_path1 );
+        }
+
+        if ( File::exists( $full_path2 ) )
+        {
+            File::delete( $full_path2 );
+        }
+
+        if( !empty($sessionImage))
+        {
+            $sessionImage-&gt;delete();
+        }
+
+        return Response::json([
+            'error' =&gt; false,
+            'code'  =&gt; 200
+        ], 200);
+    }
+
+    function sanitize($string, $force_lowercase = true, $anal = false)
+    {
+        $strip = array("~", "`", "!", "@", "#", "$", "%", "^", "&amp;", "*", "(", ")", "_", "=", "+", "[", "{", "]",
+            "}", "\", "|", ";", ":", "\"", "'", "&amp;#8216;", "&amp;#8217;", "&amp;#8220;", "&amp;#8221;", "&amp;#8211;", "&amp;#8212;",
+            "â€”", "â€“", ",", "&lt;", ".", "&gt;", "/", "?");
+        $clean = trim(str_replace($strip, "", strip_tags($string)));
+        $clean = preg_replace('/\s+/', "-", $clean);
+        $clean = ($anal) ? preg_replace("/[^a-zA-Z0-9]/", "", $clean) : $clean ;
+
+        return ($force_lowercase) ?
+            (function_exists('mb_strtolower')) ?
+                mb_strtolower($clean, 'UTF-8') :
+                strtolower($clean) :
+            $clean;
+    }
+}
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>上传的方法中还会引用Image模型中验证规则验证图片类型，只有符合条件的图片可以上传。</p>
+
+<p>然后，通过方法 <strong>createUniqueFilename</strong> 检查下图片原始的文件名称在服务器上是否唯一。如果存在同名的文件，这个方法会在文件名后追加随机字符串。这是最简单的解决办法，当然了，你可以通过其他方法实现。</p>
+
+<p>当获取到唯一的文件名称后，将图片和这个文件名传给方法original() ，这个方法负责保存全尺寸的图片，使用icon()方法保存小尺寸图片。</p>
+
+<p>当这两个尺寸的图片被保存后，系统会在images表中插入新的记录。</p>
+
+<p>图片上传的目录路径被保存在图片配置文件中。同时使用了自己的sanitize()方法，你也可以使用Laravel内部自建的sanitize().</p>
+
+<p>为了项目能正常的工作，需要拷贝.env.example 到.env文件，并且修改其中的值。上传目录需要以”/”结束。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6</pre></td><td class="code"><pre class="highlight"><code>&lt;?php
+
+return [
+    'full_size'   =&gt; env('UPLOAD_FULL_SIZE'),
+    'icon_size'   =&gt; env('UPLOAD_ICON_SIZE'),
+];
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>删除方法会接受文件名，并且检查这个图片是否存在数据库和对应的两个目录下。如果存在则将其删除。p</p>
+
+<h2 id="来源">来源</h2>
+<ul>
+  <li>https://tuts.codingo.me/laravel-5-1-and-dropzone-js-auto-image-uploads-with-removal-links#</li>
+</ul>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/04/Using-Vagrant-for-Rails-Development/" rel="next" title="使用Vagrant部署Rails项目">
+                <i class="fa fa-chevron-left"></i> 使用Vagrant部署Rails项目
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/" rel="prev" title="Laravel 环境安装和配置">
+                Laravel 环境安装和配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Ken pang" />
+          <p class="site-author-name" itemprop="name">Ken pang</p>
+           
+              <p class="site-description motion-element" itemprop="description">读万卷书，行万里路，胸中脱去尘浊</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#基本的项目配置"> <span class="nav-number">1</span> <span class="nav-text">基本的项目配置</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#视图"> <span class="nav-number">2</span> <span class="nav-text">视图</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#dropzone的配置"> <span class="nav-number">3</span> <span class="nav-text">Dropzone的配置</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#上传逻辑"> <span class="nav-number">4</span> <span class="nav-text">上传逻辑</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#来源"> <span class="nav-number">5</span> <span class="nav-text">来源</span> </a> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ken pang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

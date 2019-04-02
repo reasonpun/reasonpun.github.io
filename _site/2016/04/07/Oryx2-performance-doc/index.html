@@ -1,0 +1,1048 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tensor Cell" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oryx2 性能优化文档">
+<meta property="og:url" content="https://pangz.me/2016/04/07/Oryx2-performance-doc/">
+<meta property="og:site_name" content="Tensor Cell">
+<meta property="og:description" content="这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oryx2 性能优化文档">
+<meta name="twitter:description" content="这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://pangz.me/"/>
+
+
+
+
+
+  <title>Oryx2 性能优化文档 | Tensor Cell</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tensor Cell</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">还要再走500里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://pangz.me/2016/04/07/Oryx2-performance-doc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ken pang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tensor Cell">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Oryx2 性能优化文档
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-07T00:00:00+08:00">
+                2016-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <p>这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。</p>
+
+<h2 id="硬件和集群设计">硬件和集群设计</h2>
+
+<p>一般情况下，对硬件或者集群没有特别的要求。集群资源的需求主要取决于基于Spark的作业，这些往往是内存密集型和CPU密集型的，但是一般不会是I/O绑定的。如果数据的采集率非常的高，Kafka可能需要一些特殊的考虑。在这两种情况下，针对其他任何的Kafka或者Spark作业并没有不同的标准。</p>
+
+<h3 id="数据传输">数据传输</h3>
+
+<p>因为Kafka是底层传输数据的，存储要求的采集和存放数据对于Kafka也就是这样的。查看<a href="http://kafka.apache.org/performance.html">Kafka 性能</a>中提到的内容。一般情况下，Kafka并不会接近瓶颈，也能够像其他Kafka的使用一样调整资源占用大小。</p>
+
+<h3 id="批处理层">批处理层</h3>
+
+<p>批处理层独特的地方是模型的构建, and the element that is of most interest to benchmark are likely the model building processes implemented in the app tier, on top of MLlib. Here again, the resources required to build a model over a certain amount of data are just that of the underlying MLlib implementations of ALS, k-means and decision forests.</p>
+
+<p>MLlib的任何性能优化或者是基准测试都适用于这些基于MLlib预制的实现的批处理层，这对于Oryx也是一样的。</p>
+
+<h3 id="jvm-优化">JVM 优化</h3>
+
+<p>Choosing the number of Spark executors, cores and memory is a topic in its own right.</p>
+
+<p>很自然的，更多的executors意味着更多的核心和内存。但是数量是不能超多集群上机器的总数量的；请查看：oryx.batch.streaming.num-executors。</p>
+
+<p>更多的核，意味着可能会有更多的并发进程。在典型的模型构建进程中，如果能达到任务总数的三分之一或者2分之一的话，这将是非常有用的。你可以观察到任务的数量，以及Spark UI中批处理层固有的并发情况。在这数量之下，核数再多也无法增加更多的并发了。少一些是可以的，无非就是增加了点运行时间。当然，在批处理的时间间隔内，充足的核数可以保证批处理的顺利完成。核的数量可以通过oryx.batch.streaming.executor-cores进行配置。</p>
+
+<p>如果你的作业发生了内存溢出，驱动器和executors可能需要更多的内存。如果你注意到在批处理层的”存储”标签页中并不是100%的RDD被缓存住了，那么更多的内存可能会有所帮助。查看：oryx.batch.streaming.executor-memory。</p>
+
+<p>oryx-run.sh脚本的–jvm-args参数是用来为所有的JVM进程设置内存参数的。举个例子，通过设置 -XX:+UseG1GC ，会达到一个比较合理的效果。</p>
+<h3 id="服务层">服务层</h3>
+
+<p>REST API 后端服务器是Tomcat。配置文件是没有暴露给用户的，但是对于他的负载已经做了合理的调整。Tomcat容器本身开销很小，不需要担心性能问题。</p>
+
+<p>最可能感兴趣的是项目中提供的关于CPU密集型程序实现的性能问题，而不是框架本身。</p>
+
+<h3 id="基准测试-交替最小二乘法推荐">基准测试: 交替最小二乘法推荐</h3>
+
+<p>由于ALS实现的程序的服务层的大多数的操作是，会在内存中实时的计算一个非常大的矩阵，所以这个程序是最具有挑战性的了。大概其的规则如下：</p>
+
+<p>如果需要运行类似的基准测试，可以使用LoadBenchmark，可以按照如下的配置：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11</pre></td><td class="code"><pre class="highlight"><code>mvn -DskipTests clean install
+cd app/oryx-app-serving
+...
+mvn -Pbenchmark \
+ -Doryx.test.als.benchmark.users=1000000 \
+ -Doryx.test.als.benchmark.items=5000000 \
+ -Doryx.test.als.benchmark.features=250 \
+ -Doryx.test.als.benchmark.lshSampleRate=0.3 \
+ -Doryx.test.als.benchmark.workers=2 \
+ integration-test
+
+</code></pre></td></tr></tbody></table></div></div>
+
+<h3 id="内存">内存</h3>
+
+<ul>
+  <li>内存需求是成线性的：(users + items) x features</li>
+  <li>-XX:+UseStringDeduplication 在 Java 8中是非常有用的 (reflected below)</li>
+  <li>At scale, 1M users or items ~= 500-1000M of heap required, depending on features</li>
+</ul>
+
+<p>Example steady-state heap usage (Java 8):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Features</th>
+      <th>Users+Items (M)</th>
+      <th>Heap (MB)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>2</td>
+      <td>1400</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>6</td>
+      <td>2600</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>21</td>
+      <td>7500</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>2</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>6</td>
+      <td>7500</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>21</td>
+      <td>25800</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="请求延迟吞吐量">请求延迟，吞吐量</h3>
+
+<ul>
+  <li>Recommend and similarity computation time scales linearly with items x features</li>
+  <li>A single request is parallelized across CPUs; max throughput and minimum latency is already achieved at about 1-2 concurrent requests</li>
+  <li>Locality sensitive hashing decreases processing time roughly linearly; 0.33 ~= 1/0.33 ~= 3x faster (setting too low adversely affects result quality)</li>
+</ul>
+
+<p>Below are representative throughput / latency measurements for the /recommend endpoint using
+  a 32-core Intel Xeon 2.3GHz (Haswell), OpenJDK 8 and flags -XX:+UseG1GC -XX:+UseStringDeduplication. Heap size was comfortably large enough for the data set in each case. The tests were run with 1-3 concurrent request at a time, as necessary to achieve near-full CPU utilization.</p>
+
+<p><em>With LSH (sample rate = 0.3)</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Features</th>
+      <th>Items (M)</th>
+      <th>Throughput (qps)</th>
+      <th>Latency (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>1</td>
+      <td>437</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>1</td>
+      <td>151</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>5</td>
+      <td>84</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>5</td>
+      <td>36</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>20</td>
+      <td>14</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>20</td>
+      <td>6</td>
+      <td>162</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Without LSH (sample rate = 1.0)</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Features</th>
+      <th>Items (M)</th>
+      <th>Throughput (qps)</th>
+      <th>Latency (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>1</td>
+      <td>74</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>1</td>
+      <td>23</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>5</td>
+      <td>13</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>5</td>
+      <td>5</td>
+      <td>191</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>20</td>
+      <td>4</td>
+      <td>282</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>20</td>
+      <td>1</td>
+      <td>708</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="jvm-优化-1">JVM 优化</h3>
+
+<p>机器上运行（多个）服务层，使用越多的可用的核，意味着可以提供更多的并发请求处理能力。在ALS中，一些请求，比如/recommend 可以在一个请求中通过多核计算完成。</p>
+
+<p>内存的需求主要是由加载进内存的模型的需求控制的。对于大的模型，比如ALS，这就意味着需要确保服务层有足够的内存以保证不会导致GC崩溃。查看oryx.serving.memory。</p>
+
+<p>-XX:+UseG1GC remains a good garbage collection setting to supply with –jvm-args. In Java 8, -XX:+UseStringDeduplication can reduce memory requirements by about 20%.</p>
+
+<h3 id="实时计算层">实时计算层</h3>
+
+<p>实时计算层驱动进程类似服务层那样也是需要大量内存的，因为他也是需要加载一个模型到内存中的。驱动进程的内存是通过oryx.speed.streaming.driver-memory控制的，也需要和服务层内存一样设置，并且也需要JVM的一些flags支持。</p>
+
+<p>这也是一个Spark Streaming 作业，也需要想批处理层那样配置executors。一般情况下，需要更少的处理和更低的时间延迟。</p>
+
+<p>Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/08/set-up-oryx-env/" rel="next" title="玩转 Oryx2 （一）">
+                <i class="fa fa-chevron-left"></i> 玩转 Oryx2 （一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/06/Oryx2-end-user-doc/" rel="prev" title="Oryx2 终端用户文档">
+                Oryx2 终端用户文档 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Ken pang" />
+          <p class="site-author-name" itemprop="name">Ken pang</p>
+           
+              <p class="site-description motion-element" itemprop="description">读万卷书，行万里路，胸中脱去尘浊</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#硬件和集群设计"> <span class="nav-number">1</span> <span class="nav-text">硬件和集群设计</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#数据传输"> <span class="nav-number">1.1</span> <span class="nav-text">数据传输</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#批处理层"> <span class="nav-number">1.2</span> <span class="nav-text">批处理层</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#jvm-优化"> <span class="nav-number">1.3</span> <span class="nav-text">JVM 优化</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#服务层"> <span class="nav-number">1.4</span> <span class="nav-text">服务层</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#基准测试-交替最小二乘法推荐"> <span class="nav-number">1.5</span> <span class="nav-text">基准测试: 交替最小二乘法推荐</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#内存"> <span class="nav-number">1.6</span> <span class="nav-text">内存</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#请求延迟吞吐量"> <span class="nav-number">1.7</span> <span class="nav-text">请求延迟，吞吐量</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#jvm-优化-1"> <span class="nav-number">1.8</span> <span class="nav-text">JVM 优化</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#实时计算层"> <span class="nav-number">1.9</span> <span class="nav-text">实时计算层</span> </a> </li> </ol> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ken pang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

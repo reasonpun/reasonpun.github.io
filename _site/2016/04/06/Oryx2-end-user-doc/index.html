@@ -1,0 +1,994 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tensor Cell" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="运行">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oryx2 终端用户文档">
+<meta property="og:url" content="https://pangz.me/2016/04/06/Oryx2-end-user-doc/">
+<meta property="og:site_name" content="Tensor Cell">
+<meta property="og:description" content="运行">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oryx2 终端用户文档">
+<meta name="twitter:description" content="运行">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://pangz.me/"/>
+
+
+
+
+
+  <title>Oryx2 终端用户文档 | Tensor Cell</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tensor Cell</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">还要再走500里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://pangz.me/2016/04/06/Oryx2-end-user-doc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ken pang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tensor Cell">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Oryx2 终端用户文档
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-06T00:00:00+08:00">
+                2016-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="运行">运行</h3>
+
+<p>注意：你必须已经按照<a href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/">管理员文档</a>中提到的配置好了你的集群。</p>
+
+<p>下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。</p>
+
+<p>或者，源码编译他们并从deploy/bin/获取最新的脚本。</p>
+
+<p>拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。</p>
+
+<p>创建一个配置文件，可以简单的拷贝例子中的conf/als-example.conf。并修改host名称，端口和目录。实际上，选择hdfs上已经存在的数据和模型目录便于用户运行Oryx 二进制命令。</p>
+
+<p>拷贝该配置文件，并重命名为oryx.conf，将他放到每个机器的上二进制命令和脚本相同的目录下。</p>
+
+<p>执行如下命令开始这3个层的运行：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code>./oryx-run.sh batch
+./oryx-run.sh speed
+./oryx-run.sh serving
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>参数–layer-jar your-layer.jar and –conf your-config.conf可以指定某一层特定位置的jar文件和配置文件。也可以使用–jvm-args直接传递更多的参数给Spark驱动程序，比如：–jvm-args=”-Dkey=value”</p>
+
+<p>这都不需要在同一台机器上，但是也不一定（如果配置特殊指定批处理和实时处理层，服务层API不同的端口）。服务层可以运行在多个机器上。</p>
+
+<p>举个例子，批处理层SparkUI运行在启动脚本所在的机器的4040端口（除非通过配置更改）。一个简单的基于web端的控制台的服务层默认是运行在8080端口的。</p>
+
+<p>完美！</p>
+
+<h3 id="尝试下als的例子吧">尝试下ALS的例子吧</h3>
+
+<p>如果你已经使用了上述的配置，你就已经可以运行一个基于ALS的推荐程序实例。
+自获取GroupLens 100K的数据集，并且找到u.data文件，这个文件的内容需要转换成csv格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>tr '\t' ',' &lt; u.data &gt; data.csv
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>将这些数据放入服务层，使用本地的命令行工具，如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code>wget --quiet --post-file data.csv --output-document - \
+  --header "Content-Type: text/csv" \
+  http://your-serving-layer:8080/ingest
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>如果你使用tail命令查看输入的内容，可以看到如下数据：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8</pre></td><td class="code"><pre class="highlight"><code>196,242,3.0,881250949186
+196,242,3.0,881250949
+186,302,3.0,891717742
+22,377,1.0,878887116
+244,51,2.0,880606923
+166,346,1.0,886397596
+298,474,4.0,884182806
+...
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>很快的，你也可以看到批处理层已经开始触发一个新的计算了。这个例子被配置为5分钟一个周期。</p>
+
+<p>数据首先会被写入HDFS。默认配置被写入hdfs:///user/example/Oryx/data/目录下。且目录以时间戳命名，每一部分都包含Hadoop part-r-* 文件，都是以文本的序列话文件的方式存储。虽然不是纯文本，打印出来的话，还是有一部分是可以识别的，因为这其实真的是文本。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>SEQorg.apache.hadoop.io.Textorg.apache.hadoop.io.Text����^�]�XسN�22,377,1.0,87888711662...
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>模型计算开始。这些批处理层会以大量的新的分布式的作业形式展现。在这个例子中，Spark UI可以通过http://your-batch-layer:4040访问。</p>
+
+<p>模型计算是非常快的，执行完毕以后会合并PMML和支持数据文件并存储到目录hdfs:///user/example/Oryx/model/下。举个例子，model.pmml 的内容如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15</pre></td><td class="code"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span>
+<span class="nt">&lt;PMML</span> <span class="na">xmlns=</span><span class="s">"http://www.dmg.org/PMML-4_2"</span> <span class="na">version=</span><span class="s">"4.2.1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Header&gt;</span>
+        <span class="nt">&lt;Application</span> <span class="na">name=</span><span class="s">"Oryx"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Timestamp&gt;</span>2014-12-18T04:48:54-0800<span class="nt">&lt;/Timestamp&gt;</span>
+    <span class="nt">&lt;/Header&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"X"</span> <span class="na">value=</span><span class="s">"X/"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"Y"</span> <span class="na">value=</span><span class="s">"Y/"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"features"</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"lambda"</span> <span class="na">value=</span><span class="s">"0.001"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"implicit"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"alpha"</span> <span class="na">value=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Extension</span> <span class="na">name=</span><span class="s">"XIDs"</span><span class="nt">&gt;</span>56 168 222 343 397 ...
+     ...
+
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>The X/ and Y/ subdirectories next to it contain feature vectors, like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9</pre></td><td class="code"><pre class="highlight"><code>[56,[0.5746282834154238,-0.08896614131333057,-0.029456222765775263,
+  0.6039821219690552,0.1497901814774658,-0.018654312114339863,
+  -0.37342063488340266,-0.2370768843521807,1.148260034028485,
+  1.0645643656769153]]
+[168,[0.8722769882777296,0.4370416943031704,0.27402044461549885,
+  -0.031252701117490456,-0.7241385753098256,0.026079081002582338,
+  0.42050973702065714,0.27766923396205817,0.6241033215856671,
+  -0.48530795198811266]]
+...
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>如果使用tail命令查看更新的内容。
+这些数据会很快放入服务层，此时访问/ready会返回200 OK。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7</pre></td><td class="code"><pre class="highlight"><code>wget --quiet --output-document - --server-response \
+  http://your-serving-layer:8080/ready
+...
+  HTTP/1.1 200 OK
+  Content-Length: 0
+  Date: Tue, 1 Sep 2015 13:26:53 GMT
+  Server: Oryx
+</code></pre></td></tr></tbody></table></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12</pre></td><td class="code"><pre class="highlight"><code>wget --quiet --output-document -  http://your-serving-layer:8080/recommend/17
+...
+50,0.7749542842056966
+275,0.7373013861581563
+258,0.731818692628511
+181,0.7049967175706345
+127,0.704518989947498
+121,0.7014631029793741
+15,0.6954683387287907
+288,0.6774889711024022
+25,0.6663619887033064
+285,0.6398968471343595
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>恭喜！实时推荐系统搭建完毕！可以通过Ctrl-C关闭。</p>
+
+<h3 id="api手册">API手册</h3>
+
+<p>Oryx 支持多种端到端的程序，包括服务层的REST 接口。</p>
+
+<h3 id="协同过滤和推荐">协同过滤和推荐</h3>
+
+<ul>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Recommend.html">/recommend</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToMany.html">/recommendToMany</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToAnonymous.html">/recommendToAnonymous</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendWithContext.html">/recommendWithContext</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Similarity.html">/similarity</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/SimilarityToItem.html">/similarityToItem</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/KnownItems.html">/knownItems</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Estimate.html">/estimate</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/EstimateForAnonymous.html">/estimateForAnonymous</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Because.html">/because</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostSurprising.html">/mostSurprising</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/PopularRepresentativeItems.html">/popularRepresentativeItems</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html">/mostActiveUsers</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostPopularItems.html">/mostPopularItems</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html">/mostActiveUsers</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/AllItemIDs.html">/item/allIDs</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ready.html">/ready</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Preference.html">/pref</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ingest.html">/ingest</a></li>
+</ul>
+
+<h3 id="分类--回归">分类 / 回归</h3>
+
+<ul>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Predict.html">/predict</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/ClassificationDistribution.html">/classificationDistribution</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Ready.html">/ready</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Train.html">/train</a></li>
+</ul>
+
+<h3 id="聚类">聚类</h3>
+
+<ul>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Assign.html">/assign</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/DistanceToNearest.html">/distanceToNearest</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Ready.html">/ready</a></li>
+  <li><a href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Add.html">/add</a></li>
+</ul>
+
+<h3 id="配置">配置</h3>
+
+<ul>
+  <li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/als-example.conf">app/conf/als-example.conf</a></li>
+  <li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/kmeans-example.conf">app/conf/kmeans-example.conf</a></li>
+  <li><a href="https://github.com/OryxProject/oryx/blob/master/app/conf/rdf-example.conf">app/conf/rdf-example.conf</a></li>
+</ul>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/07/Oryx2-performance-doc/" rel="next" title="Oryx2 性能优化文档">
+                <i class="fa fa-chevron-left"></i> Oryx2 性能优化文档
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/06/Oryx2-developer-doc/" rel="prev" title="Oryx2 开发者文档">
+                Oryx2 开发者文档 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Ken pang" />
+          <p class="site-author-name" itemprop="name">Ken pang</p>
+           
+              <p class="site-description motion-element" itemprop="description">读万卷书，行万里路，胸中脱去尘浊</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-3"> <a class="nav-link" href="#运行"> <span class="nav-number">1</span> <span class="nav-text">运行</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#尝试下als的例子吧"> <span class="nav-number">2</span> <span class="nav-text">尝试下ALS的例子吧</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#api手册"> <span class="nav-number">3</span> <span class="nav-text">API手册</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#协同过滤和推荐"> <span class="nav-number">4</span> <span class="nav-text">协同过滤和推荐</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#分类--回归"> <span class="nav-number">5</span> <span class="nav-text">分类 / 回归</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#聚类"> <span class="nav-number">6</span> <span class="nav-text">聚类</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#配置"> <span class="nav-number">7</span> <span class="nav-text">配置</span> </a> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ken pang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

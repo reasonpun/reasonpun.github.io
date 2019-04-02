@@ -28,7 +28,7 @@ title: Apache Flume-ng Structure
 
 #### 架构图
 
-![flume-ng总体结构图]({{ site.url }}/assets/flume-ng/flume-ng-architecture.png)
+![flume-ng总体结构图]({{ site.url }}/assets/images/posts/flume-ng/flume-ng-architecture.png)
 
 #### 基本流程
 
@@ -70,19 +70,19 @@ title: Apache Flume-ng Structure
 
 #### 多个Agent顺序连接
 
-![flume-ng 多个Agent顺序连接]({{ site.url }}/assets/flume-ng/flume-multiseq-agents.png)
+![flume-ng 多个Agent顺序连接]({{ site.url }}/assets/images/posts/flume-ng/flume-multiseq-agents.png)
 
   可以将多个Agent顺序连接起来，将最初的数据源经过收集，存储到最终的存储系统中。这是最简单的情况，一般情况下，应该控制这种顺序连接的Agent的数量，因为数据流经的路径变长了，如果不考虑failover的话，出现故障将影响整个Flow上的Agent收集服务。
 
 #### 多个Agent的数据汇聚到同一个Agent
 
-![flume-ng 多个Agent的数据汇聚到同一个Agent]({{ site.url }}/assets/flume-ng/flume-join-agent.png)
+![flume-ng 多个Agent的数据汇聚到同一个Agent]({{ site.url }}/assets/images/posts/flume-ng/flume-join-agent.png)
 
   这种情况应用的场景比较多，比如要收集Web网站的用户行为日志，Web网站为了可用性使用的负载均衡的集群模式，每个节点都产生用户行为日志，可以为每个节点都配置一个Agent来单独收集日志数据，然后多个Agent将数据最终汇聚到一个用来存储数据存储系统，如HDFS上。
 
 #### 多路（Multiplexing）Agent
 
-![flume-ng 多路（Multiplexing）Agent]({{ site.url }}/assets/flume-ng/flume-multiplexing-agent.png)
+![flume-ng 多路（Multiplexing）Agent]({{ site.url }}/assets/images/posts/flume-ng/flume-multiplexing-agent.png)
 
   这种模式，有两种方式
 
@@ -126,7 +126,7 @@ title: Apache Flume-ng Structure
 
 #### 实现load balance功能
 
-![实现load balance功能]({{ site.url }}/assets/flume-ng/flume-load-balance-agents.png)
+![实现load balance功能]({{ site.url }}/assets/images/posts/flume-ng/flume-load-balance-agents.png)
 
   Load balancing Sink Processor能够实现load balance功能，上图Agent1是一个路由节点，
   负责将Channel暂存的Event均衡到对应的多个Sink组件上，而每个Sink组件分别连接到一个独立的Agent上

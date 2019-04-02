@@ -6,7 +6,7 @@ title: Oryx2 简介
 
 ### 简介
 
-![Oryx2]({{ site.url }}/assets/oryx/OryxLogoMedium.png)
+![Oryx2]({{ site.url }}/assets/images/posts/oryx/OryxLogoMedium.png)
 
 
 Oryx2是专注于进行大规模，实时机器学习框架，遵循lambda规则，基于Apache Spark和Apache Kafka构建。
@@ -32,7 +32,7 @@ The project
   * It can be reused layer by layer too: for example, the Speed Layer can be omitted if a deployment does not need incremental updates.
   * It can be modified piece-by-piece too: the collaborative filtering application’s model-building batch layer could be swapped for a custom implementation based on a new algorithm outside Spark MLlib while retaining the serving and speed layer implementations.
 
-![Architecture]({{ site.url }}/assets/oryx/Architecture.png)
+![Architecture]({{ site.url }}/assets/images/posts/oryx/Architecture.png)
 
 ### Lambda层实现
 

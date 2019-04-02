@@ -1,0 +1,1181 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tensor Cell" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="准备">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="玩转 Oryx2 （一）">
+<meta property="og:url" content="https://pangz.me/2016/04/08/set-up-oryx-env/">
+<meta property="og:site_name" content="Tensor Cell">
+<meta property="og:description" content="准备">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pangz.me/assets/images/posts/oryx/add-kafka-service.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="玩转 Oryx2 （一）">
+<meta name="twitter:description" content="准备">
+<meta name="twitter:image" content="https://pangz.me/assets/images/posts/oryx/add-kafka-service.png">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://pangz.me/"/>
+
+
+
+
+
+  <title>玩转 Oryx2 （一） | Tensor Cell</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tensor Cell</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">还要再走500里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://pangz.me/2016/04/08/set-up-oryx-env/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ken pang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tensor Cell">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            玩转 Oryx2 （一）
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-08T00:00:00+08:00">
+                2016-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="准备">准备</h2>
+
+<h3 id="环境">环境</h3>
+<ul>
+  <li>CDH 5.5.2, Parcel
+    <ul>
+      <li>HDFS</li>
+      <li>YARN</li>
+      <li>Zookeeper</li>
+      <li>Kafka</li>
+      <li>Spark (on YARN)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="下载最新版本">下载最新版本</h3>
+
+<ul>
+  <li>
+    <p>进入<a href="https://github.com/OryxProject/oryx/releases/tag/oryx-2.1.2">下载页面</a>，分别下载</p>
+
+    <ul>
+      <li>compute-classpath.sh</li>
+      <li>oryx-batch-2.1.2.jar</li>
+      <li>oryx-run.sh</li>
+      <li>oryx-serving-2.1.2.jar</li>
+      <li>oryx-speed-2.1.2.jar</li>
+    </ul>
+  </li>
+  <li>
+    <p>下载conf文件</p>
+
+    <ul>
+      <li>
+        <p>以ALS为例，在源码目录oryx/app/conf下<a href="https://github.com/OryxProject/oryx/blob/master/app%2Fconf%2Fals-example.conf">als-example.conf</a></p>
+      </li>
+      <li>
+        <p>并将其重命名为oryx.conf（注：文件需要和每个层的JAR文件放在同一个目录下）</p>
+      </li>
+      <li>
+        <p>修改conf文件</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16</pre></td><td class="code"><pre class="highlight"><code>  # 现阶段只需要修改这么几个字段就OK了
+  kafka-brokers = "data-mining-46.slave:9092,data-mining-47.slave:9092,data-mining-48.slave:9092,data-mining-49.master:9092"
+  zk-servers = "data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka"
+  hdfs-base = "hdfs:///Oryx"
+
+  oryx {
+  id = "ALSExample"
+  als {
+    rescorer-provider-class = null
+  }
+  input-topic {
+    broker = ${kafka-brokers}
+    lock = {
+      master = ${zk-servers}
+    }
+  ...
+</code></pre></td></tr></tbody></table></div></div>
+
+<h3 id="开始">开始</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44<br/>45<br/>46<br/>47<br/>48<br/>49<br/>50<br/>51<br/>52<br/>53<br/>54<br/>55<br/>56<br/>57<br/>58<br/>59<br/>60<br/>61<br/>62<br/>63<br/>64<br/>65<br/>66<br/>67<br/>68<br/>69<br/>70<br/>71<br/>72<br/>73</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 oryx]# ./oryx-run.sh kafka-setup
+Input   ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-46.slave:9092,data-mining-47.slave:9092,data-mining-48.slave:9092,data-mining-49.master:9092
+        topic   OryxInput
+Update  ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-46.slave:9092,data-mining-47.slave:9092,data-mining-48.slave:9092,data-mining-49.master:9092
+        topic   OryxUpdate
+
+All available topics:
+
+
+Input topic OryxInput does not exist. Create it? y
+Creating topic OryxInput
+Error while executing topic command : org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+[2016-04-08 16:53:09,383] ERROR org.I0Itec.zkclient.exception.ZkNoNodeException: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode =
+NoNode for /brokers/ids
+        at org.I0Itec.zkclient.exception.ZkException.create(ZkException.java:47)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:995)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:671)
+        at kafka.utils.ZkUtils.getChildren(ZkUtils.scala:537)
+        at kafka.utils.ZkUtils.getSortedBrokerList(ZkUtils.scala:172)
+        at kafka.admin.AdminUtils$.createTopic(AdminUtils.scala:243)
+        at kafka.admin.TopicCommand$.createTopic(TopicCommand.scala:107)
+        at kafka.admin.TopicCommand$.main(TopicCommand.scala:60)
+        at kafka.admin.TopicCommand.main(TopicCommand.scala)
+Caused by: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:111)
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1468)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1496)
+        at org.I0Itec.zkclient.ZkConnection.getChildren(ZkConnection.java:114)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:678)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:985)
+        ... 8 more
+ (kafka.admin.TopicCommand$)
+Status of topic OryxInput:
+y
+Update topic OryxUpdate does not exist. Create it?
+Creating topic OryxUpdate
+Error while executing topic command : org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+[2016-04-08 16:53:11,094] ERROR org.I0Itec.zkclient.exception.ZkNoNodeException: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+        at org.I0Itec.zkclient.exception.ZkException.create(ZkException.java:47)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:995)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.getChildren(ZkClient.java:671)
+        at kafka.utils.ZkUtils.getChildren(ZkUtils.scala:537)
+        at kafka.utils.ZkUtils.getSortedBrokerList(ZkUtils.scala:172)
+        at kafka.admin.AdminUtils$.createTopic(AdminUtils.scala:243)
+        at kafka.admin.TopicCommand$.createTopic(TopicCommand.scala:107)
+        at kafka.admin.TopicCommand$.main(TopicCommand.scala:60)
+        at kafka.admin.TopicCommand.main(TopicCommand.scala)
+Caused by: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:111)
+        at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1468)
+        at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1496)
+        at org.I0Itec.zkclient.ZkConnection.getChildren(ZkConnection.java:114)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:678)
+        at org.I0Itec.zkclient.ZkClient$4.call(ZkClient.java:675)
+        at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:985)
+        ... 8 more
+ (kafka.admin.TopicCommand$)
+Error while executing topic command : Topic OryxUpdate does not exist on ZK path data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+[2016-04-08 16:53:11,833] ERROR java.lang.IllegalArgumentException: Topic OryxUpdate does not exist on ZK path data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        at kafka.admin.TopicCommand$.alterTopic(TopicCommand.scala:119)
+        at kafka.admin.TopicCommand$.main(TopicCommand.scala:62)
+        at kafka.admin.TopicCommand.main(TopicCommand.scala)
+ (kafka.admin.TopicCommand$)
+Status of topic OryxUpdate:
+
+[root@data-mining-49 oryx]#
+</code></pre></td></tr></tbody></table></div></div>
+
+<h3 id="此时出现了一个问题">此时出现了一个问题：</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>Error while executing topic command : org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /brokers/ids
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>这个问题应该是：CDH没有启动Kafka服务没有启动。通过CDH后台启动Kafka服务（如果没有添加Kafka服务，则需要先添加）。</p>
+
+<p><img src="https://pangz.me/assets/images/posts/oryx/add-kafka-service.png" alt="Kafka Service" /></p>
+
+<p>此时重新执行setup命令：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 oryx]# ./oryx-run.sh kafka-setup
+Input   ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxInput
+Update  ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxUpdate
+
+All available topics:
+
+
+Input topic OryxInput does not exist. Create it? y
+Creating topic OryxInput
+Created topic "OryxInput".
+Status of topic OryxInput:
+Topic:OryxInput PartitionCount:4        ReplicationFactor:1     Configs:
+        Topic: OryxInput        Partition: 0    Leader: 140     Replicas: 140   Isr: 140
+        Topic: OryxInput        Partition: 1    Leader: 141     Replicas: 141   Isr: 141
+        Topic: OryxInput        Partition: 2    Leader: 140     Replicas: 140   Isr: 140
+        Topic: OryxInput        Partition: 3    Leader: 141     Replicas: 141   Isr: 141
+
+Update topic OryxUpdate does not exist. Create it? y
+Creating topic OryxUpdate
+Created topic "OryxUpdate".
+Updated config for topic "OryxUpdate".
+Status of topic OryxUpdate:
+Topic:OryxUpdate        PartitionCount:1        ReplicationFactor:1     Configs:retention.ms=86400000,max.message.bytes=16777216
+        Topic: OryxUpdate       Partition: 0    Leader: 140     Replicas: 140   Isr: 140
+
+[root@data-mining-49 oryx]#
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>OK！</p>
+
+<h3 id="需要将如上的二进制脚本都同步到其他集群的节点上了">需要将如上的二进制脚本都同步到其他集群的节点上了</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 data]# scp -r oryx/ root@192.168.1.48:/data/
+compute-classpath.sh    100% 1893     1.9KB/s   00:00
+oryx-run.sh             100%   13KB  13.2KB/s   00:00
+oryx-batch-2.1.2.jar    100%   26MB  26.0MB/s   00:00
+oryx-serving-2.1.2.jar  100%   33MB  33.0MB/s   00:01
+oryx-speed-2.1.2.jar    100%   26MB  26.0MB/s   00:00
+oryx.conf               100%   1884  1.8KB/s    00:00
+</code></pre></td></tr></tbody></table></div></div>
+
+<h3 id="接下来我们需要找一个可用的数据集">接下来我们需要找一个可用的数据集：</h3>
+
+<p><a href="http://files.grouplens.org/datasets/movielens/ml-100k.zip">MovieLens 100K Dataset</a>，</p>
+
+<p>将这个数据集的格式修改下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 ml-100k]# tr '\t' ',' &lt; u.data &gt; data.csv
+[root@data-mining-49 ml-100k]# tail data.csv
+806,421,4,882388897
+676,538,4,892685437
+721,262,3,877137285
+913,209,2,881367150
+378,78,3,880056976
+880,476,3,880175444
+716,204,5,879795543
+276,1090,1,874795795
+13,225,2,882399156
+12,203,3,879959583
+[root@data-mining-49 ml-100k]#
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>数据准备完毕，我们可以通过</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 oryx]# ./oryx-run.sh kafka-input --input-file data.csv
+</code></pre></td></tr></tbody></table></div></div>
+<p>命令导入系统， 同时打开另一个终端窗口，通过命令</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 oryx]# ./oryx-run.sh kafka-tail
+Input   ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxInput
+Update  ZK      data-mining-46.slave:2181,data-mining-47.slave:2181,data-mining-48.slave:2181/kafka
+        Kafka   data-mining-47.slave:9092,data-mining-48.slave:9092
+        topic   OryxUpdate
+
+279,64,1,875308510
+646,750,3,888528902
+654,370,2,887863914
+617,582,4,883789294
+913,690,3,880824288
+660,229,2,891406212
+421,498,4,892241344
+495,1091,4,888637503
+806,421,4,882388897
+676,538,4,892685437
+721,262,3,877137285
+913,209,2,881367150
+378,78,3,880056976
+880,476,3,880175444
+716,204,5,879795543
+276,1090,1,874795795
+13,225,2,882399156
+12,203,3,879959583
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>实时跟踪输入导入情况，当数据全部导入完毕后，用户可以手动的通过Ctrl-C关闭这个命令。</p>
+
+<p>如果以上全部成功了，可以关闭这些进程。集群至此已经准备好运行Oryx了。</p>
+
+<h3 id="启动服务">启动服务</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><pre class="highlight"><code>./oryx-run.sh batch
+./oryx-run.sh speed
+./oryx-run.sh serving
+
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>blablabla…..好多输出，先不要管他。</p>
+
+<p>确认服务层启动成功以后，可以导入数据（难道刚才导数据是测试用的？）</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>wget --quiet --post-file data.csv --output-document -  --header "Content-Type: text/csv" http://192.168.1.49:8080/ingest
+</code></pre></td></tr></tbody></table></div></div>
+<p>批处理层已经开始触发一个新的计算了。</p>
+
+<p>此时看看HDFS中的数据是这样的：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 oryx]# hdfs dfs -ls /Oryx
+Found 2 items
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/data
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/model
+^[[A[root@data-mining-49 oryx]# hdfs dfs -ls /Oryx/data
+Found 1 items
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/data/oryx-1460112000000.data
+[root@data-mining-49 oryx]# hdfs dfs -ls /Oryx/model
+Found 3 items
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:41 /Oryx/model/.checkpoint
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/model/.temporary
+drwxr-xr-x   - hdfs supergroup          0 2016-04-08 18:40 /Oryx/model/1460112018440
+[root@data-mining-49 oryx]#
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>表明数据已经ok了，通过API确认计算是否完成</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 ~]# wget --quiet --output-document - --server-response http://192.168.1.49:8080/ready
+  HTTP/1.1 200 OK
+  Content-Length: 0
+  Date: Fri, 08 Apr 2016 10:43:27 GMT
+  Server: Oryx
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>OK！</p>
+
+<h3 id="我们来查看下推荐结果">我们来查看下推荐结果</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23</pre></td><td class="code"><pre class="highlight"><code>[root@data-mining-49 ~]# wget --quiet --output-document -  http://192.168.1.49:8080/recommend/17
+50,0.8234792673029006
+127,0.7889597890898585
+181,0.7442612769082189
+275,0.7263787714764476
+258,0.7164891492575407
+121,0.7006391943432391
+15,0.697495789732784
+288,0.6787936894688755
+285,0.6696474105119705
+25,0.6603603088587988
+[root@data-mining-49 ~]# wget --quiet --output-document -  http://192.168.1.49:8080/recommend/806
+173,1.084704713546671
+64,1.0142679414711893
+7,0.9939510896801949
+183,0.9918235178338364
+22,0.9644620651379228
+69,0.945814429782331
+202,0.9420167971402407
+11,0.9270770070143044
+135,0.9227914617804345
+191,0.9215727103874087
+[root@data-mining-49 ~]#
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>完美结束。</p>
+
+<p>这貌似是走的批处理逻辑，中途实时计算层挂鸟</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20</pre></td><td class="code"><pre class="highlight"><code>16/04/08 18:42:38 INFO SparkContext: Successfully stopped SparkContext
+16/04/08 18:42:38 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+Exception in thread "main" org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 4 times, most recent failure: Lost task 0.3 in stage 0.0 (TID 3, data-mining-47.slave): java.io.IOException: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of broadcast_0
+        at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:1177)
+        at org.apache.spark.broadcast.TorrentBroadcast.readBroadcastBlock(TorrentBroadcast.scala:165)
+        at org.apache.spark.broadcast.TorrentBroadcast._value$lzycompute(TorrentBroadcast.scala:64)
+        at org.apache.spark.broadcast.TorrentBroadcast._value(TorrentBroadcast.scala:64)
+        at org.apache.spark.broadcast.TorrentBroadcast.getValue(TorrentBroadcast.scala:88)
+        at org.apache.spark.broadcast.Broadcast.value(Broadcast.scala:70)
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:62)
+        at org.apache.spark.scheduler.Task.run(Task.scala:88)
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:214)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of broadcast_0
+        at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$org$apache$spark$broadcast$TorrentBroadcast$$readBlocks$1$$anonfun$2.apply(TorrentBroadcast.scala:138)
+        at org.apache.spark.broadcast.TorrentBroadcast$$anonfun$org$apache$spark$broadcast$TorrentBroadcast$$readBlocks$1$$anonfun$2.apply(TorrentBroadcast.scala:138)
+        at scala.Option.getOrElse(Option.scala:120)
+
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>咱们下一篇再找找原因吧。</p>
+
+<h2 id="参考文献">参考文献</h2>
+<ul>
+  <li>http://oryx.io/docs/admin.html</li>
+  <li>http://oryx.io/docs/endusers.html</li>
+  <li>http://oryx.io/docs/developer.html</li>
+  <li>http://oryx.io/docs/performance.html</li>
+  <li>http://oryx.io/apidocs/index.html</li>
+</ul>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/13/Laravel-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/" rel="next" title="Laravel 环境安装和配置">
+                <i class="fa fa-chevron-left"></i> Laravel 环境安装和配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/07/Oryx2-performance-doc/" rel="prev" title="Oryx2 性能优化文档">
+                Oryx2 性能优化文档 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Ken pang" />
+          <p class="site-author-name" itemprop="name">Ken pang</p>
+           
+              <p class="site-description motion-element" itemprop="description">读万卷书，行万里路，胸中脱去尘浊</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#准备"> <span class="nav-number">1</span> <span class="nav-text">准备</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#环境"> <span class="nav-number">1.1</span> <span class="nav-text">环境</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#下载最新版本"> <span class="nav-number">1.2</span> <span class="nav-text">下载最新版本</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#开始"> <span class="nav-number">1.3</span> <span class="nav-text">开始</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#此时出现了一个问题"> <span class="nav-number">1.4</span> <span class="nav-text">此时出现了一个问题：</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#需要将如上的二进制脚本都同步到其他集群的节点上了"> <span class="nav-number">1.5</span> <span class="nav-text">需要将如上的二进制脚本都同步到其他集群的节点上了</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#接下来我们需要找一个可用的数据集"> <span class="nav-number">1.6</span> <span class="nav-text">接下来我们需要找一个可用的数据集：</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#启动服务"> <span class="nav-number">1.7</span> <span class="nav-text">启动服务</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#我们来查看下推荐结果"> <span class="nav-number">1.8</span> <span class="nav-text">我们来查看下推荐结果</span> </a> </li> </ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#参考文献"> <span class="nav-number">2</span> <span class="nav-text">参考文献</span> </a> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ken pang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
