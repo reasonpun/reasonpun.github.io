@@ -30,6 +30,7 @@
     "hexo-theme-icarus": "^5.0.0-rc.1",
     "hexo-theme-landscape": "^0.0.3",
     "hexo-theme-next": "^8.9.0",
+    "hexo-word-counter": "^0.0.3",
     "hexo-wordcount": "^6.0.1",
     "marked": ">=4.0.10",
     "yargs-parser": ">=13.1.2"

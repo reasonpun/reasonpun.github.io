@@ -1,6 +1,8 @@
 ---
-title: about
+title: 关于我自己
 date: 2022-01-30 17:35:31
 type: "about"
 layout: "about"
 ---
+
+不知道要说些什么，那么就先留白吧，等着你们去慢慢发现真实的我。
