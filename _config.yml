@@ -152,6 +152,16 @@ feed:
   content_limit_delim: ' '
   order_by: -date
 
+socialLink:
+  github:  https://github.com/reasonpun
+  email: reasonpun@gmail.com
+  facebook: # https://www.facebook.com/xxx
+  twitter: # https://twitter.com/xxx
+  qq: 540193015
+  weibo: # https://weibo.com/xxx
+  zhihu: # https://www.zhihu.com/xxx
+  rss: true # true、false
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
