@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>正则表达式处理Nginx | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Nginx 日志配置格式12345log_format  main        &amp;#x27;[$upstream_addr] $remote_addr [$time_local] &quot;$request&quot; $status &amp;#x27;        &amp;#x27;&quot;$request_body&quot; $body_bytes_sent &quot;$http_refer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式处理Nginx">
+<meta property="og:url" content="http://example.com/2022/01/30/2016-01-24-Reg-Nginx/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Nginx 日志配置格式12345log_format  main        &amp;#x27;[$upstream_addr] $remote_addr [$time_local] &quot;$request&quot; $status &amp;#x27;        &amp;#x27;&quot;$request_body&quot; $body_bytes_sent &quot;$http_refer">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-01-30T04:24:01.498Z">
+<meta property="article:modified_time" content="2022-01-30T03:40:55.630Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2016-01-24-Reg-Nginx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/30/2016-01-24-Reg-Nginx/" class="article-date">
+  <time class="dt-published" datetime="2022-01-30T04:24:01.498Z" itemprop="datePublished">2022-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      正则表达式处理Nginx
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Nginx-日志配置格式"><a href="#Nginx-日志配置格式" class="headerlink" title="Nginx 日志配置格式"></a>Nginx 日志配置格式</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">log_format  main</span><br><span class="line">        &#x27;[$upstream_addr] $remote_addr [$time_local] &quot;$request&quot; $status &#x27;</span><br><span class="line">        &#x27;&quot;$request_body&quot; $body_bytes_sent &quot;$http_referer&quot; &quot;$http_user_agent&quot; &#x27;</span><br><span class="line">        &#x27;RESP:$upstream_response_time &#x27;</span><br><span class="line">        &#x27;REQ:$request_time&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[192.168.1.5:80] 19.78.22.51 [31/Dec/2015:13:59:02 +0800] &quot;POST /api/mbbb/dup_msg_send?pallow_dubbing=0&amp;partner_msgs_id=279&amp;roles_id=23&amp;score=6700&amp;section_id=512&amp;whole_audio=200.m4a&amp;d</span><br><span class="line">evice_id=112222f0fc3&amp;lang=zh-CN&amp;trigger=user&amp;user_id=516487&amp;v=ios_7.0.3 HTTP/1.1&quot; 200 &quot;audio_fragment=00280%22%3A%7B%22pitch%22%3A47%2C%22rhythm%22%3A95%2C%22tone%22%3A75%7D%2C%226800278%22%3A%7B%22pitch%22%3A70%2C%22rhythm%22%3A90%2%7D%2C%226800276%22</span><br><span class="line">%3A%7B%22pitch%22%3A60%2C%22rhythm%22%3A82%2C%22tone%22D&amp;content=hhhhhh%E5%B0%8F%E5%AB%A9%E8%8D%89&quot; 51 &quot;-&quot; &quot;paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)&quot; RESP:0.166 REQ:0.167</span><br><span class="line">[192.168.1.5:80, 192.169.1.33:88] 60.12.246.5 [31/Dec/2015:23:59:02 +0800] &quot;GET /api/mppb/notice/list?device_id=112233fe6a6d991f&amp;lang=zh-CN&amp;user_id=6120&amp;v=ios_7.0.3 HTTP/1.1&quot; 200 &quot;-&quot; 54 &quot;-&quot; &quot;paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)&quot; RESP:0.006 REQ:0.006</span><br></pre></td></tr></table></figure>
+
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="Python版本"><a href="#Python版本" class="headerlink" title="Python版本"></a>Python版本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">p = re.compile(</span><br><span class="line">            r&quot;\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \&quot;(\S+)\ (\S+)\ .*?\&quot;\ (\d+)\ \&quot;(.*?)\&quot;\ (\d+)\ \&quot;([^\&quot;]*)\&quot;\ \&quot;.*?\&quot; .*?&quot;)</span><br><span class="line">m = re.findall(p, line)</span><br><span class="line">day = m[0][0]</span><br><span class="line">month = m[0][1]</span><br><span class="line">year = m[0][2]</span><br><span class="line">ttime = m[0][3]</span><br><span class="line">method = m[0][4]</span><br><span class="line">request = m[0][5]</span><br><span class="line">status = m[0][6]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Scala版本"><a href="#Scala版本" class="headerlink" title="Scala版本"></a>Scala版本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val regex = new Regex( &quot;&quot;&quot;\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \&quot;(\S+)\ (\S+)\ .*?\&quot;\ (\d+)\ \&quot;(.*?)\&quot;\ (\d+)\ \&quot;([^\&quot;]*)\&quot;\ \&quot;.*?\&quot; .*?&quot;&quot;&quot;)</span><br><span class="line">val regex(day, month, year, time, method, request, status, postData, bytes, refer) = line</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/5d8c802be13d">http://www.jianshu.com/p/5d8c802be13d</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000002727070">https://segmentfault.com/a/1190000002727070</a></li>
+<li><a target="_blank" rel="noopener" href="http://desert3.iteye.com/blog/1001568">http://desert3.iteye.com/blog/1001568</a></li>
+<li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/996536/regex-in-python">http://stackoverflow.com/questions/996536/regex-in-python</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/30/2016-01-24-Reg-Nginx/" data-id="ckz0rdm4d000c94uthi6t66ay" data-title="正则表达式处理Nginx" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/01/30/2016-03-08-Java-keyword-volatile/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java关键字volatile
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/01/30/2016-01-04-Spark-tuning/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Spark优化</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Emacs/" rel="tag">Emacs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/" rel="tag">Laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QSS/" rel="tag">QSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rails/" rel="tag">Rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spark/" rel="tag">Spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vagrant/" rel="tag">Vagrant</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logrotate/" rel="tag">logrotate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pyqt5/" rel="tag">pyqt5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="tag">使用总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1/" rel="tag">硅谷来信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%89%BA%E6%9C%AF/" rel="tag">艺术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B9%E6%9E%9C%E8%B4%A6%E5%8F%B7/" rel="tag">苹果账号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" rel="tag">读后感</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA/" rel="tag">谷歌方法论</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Emacs/" style="font-size: 10px;">Emacs</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/QSS/" style="font-size: 10px;">QSS</a> <a href="/tags/Rails/" style="font-size: 10px;">Rails</a> <a href="/tags/Ruby/" style="font-size: 10px;">Ruby</a> <a href="/tags/Spark/" style="font-size: 10px;">Spark</a> <a href="/tags/Vagrant/" style="font-size: 10px;">Vagrant</a> <a href="/tags/logrotate/" style="font-size: 10px;">logrotate</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/pyqt5/" style="font-size: 10px;">pyqt5</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" style="font-size: 10px;">使用总结</a> <a href="/tags/%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1/" style="font-size: 20px;">硅谷来信</a> <a href="/tags/%E8%89%BA%E6%9C%AF/" style="font-size: 10px;">艺术</a> <a href="/tags/%E8%8B%B9%E6%9E%9C%E8%B4%A6%E5%8F%B7/" style="font-size: 10px;">苹果账号</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" style="font-size: 20px;">读后感</a> <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA/" style="font-size: 10px;">谷歌方法论</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/01/30/2019-03-22-%E5%90%B4%E5%86%9B-%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%84%8F%E4%B9%89/">读 吴军《谷歌方法论》- 为什么学习语文</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/30/2019-03-16-pyqt5-QSS%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/">Pyqt5 QSS</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/30/2019-03-14-%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83/">内田光子-关于一流水准的思考</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/30/2019-03-11-%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01/">读吴军《硅谷来信》心得笔记 - 第一篇</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/30/2019-03-11-2018%E5%B9%B4%E5%A4%A7%E5%85%B4%E5%8C%BA%E5%B9%BC%E5%8D%87%E5%B0%8F%E6%94%BF%E7%AD%96/">2018年大兴区幼升小政策</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
