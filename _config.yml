@@ -99,13 +99,6 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-matery
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repository: https://github.com/reasonpun/reasonpun.github.io
-  branch: gh-pages
-
 menu:
   Index:
     url: /
@@ -158,3 +151,10 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repository: https://github.com/reasonpun/reasonpun.github.io
+  branch: gh-pages
