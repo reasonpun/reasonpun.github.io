@@ -163,7 +163,7 @@ links_settings:
 
 links:
   #Title: https://example.com
-  reuixiy：https://io-oi.me
+  reuixiy: https://io-oi.me
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
