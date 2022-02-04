@@ -168,7 +168,7 @@ await Flame.device.setOrientation(DeviceOrientation.portraitUp);
 ```
 
 注意：Futures、async 和 await 是编码实践，允许您“等待”一个较长的进程完成而不会阻塞其他所有内容。如果您有兴趣了解它们，
-{% https://www.dartlang.org/tutorials/language/futures 可以从 Dart 的官方网站阅读此页面 %} 。
+{% link https://www.dartlang.org/tutorials/language/futures 可以从 Dart 的官方网站阅读此页面 %} 。
 
 为了能够等待 Futures，上下文必须在异步函数中。所以让我们把 main 函数转换成一个异步函数。
 
