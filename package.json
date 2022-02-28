@@ -33,6 +33,6 @@
     "hexo-word-counter": "^0.0.3",
     "hexo-wordcount": "^6.0.1",
     "marked": ">=4.0.10",
-    "yargs-parser": ">=13.1.2"
+    "yargs-parser": ">=21.0.1"
   }
 }
