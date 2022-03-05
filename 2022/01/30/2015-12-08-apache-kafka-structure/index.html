@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"reasonpun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Apache Kafka消息服务 参考地址 http:&#x2F;&#x2F;kafka.apache.org&#x2F;documentation.html  消息队列的分类  点对点 生产者生产消息发送到Queue中，消费者消费Queue中的消息，其中：  Queue中不再存储已经被消费的消息 Queue支持多个消费者，但是同一个消息，只能被一个消费者消费   发布&#x2F;订阅 生产者（生产）将消息发布到topic中，同时多个消">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"reasonpun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Apache Kafka消息服务 参考地址 http:&#x2F;&#x2F;kafka.apache.org&#x2F;documentation.html  消息队列的分类  点对点 生产者生产消息发送到Queue中，消费者消费Queue中的消息，其中：  Queue中不再存储已经被消费的消息 Queue支持多个消费者，但是同一个消息，只能被一个消费者消费   发布&#x2F;订阅 生产者（生产）将消息发布到topic中，同时多个消">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Apache Kafka Structure">
 <meta property="og:url" content="https://reasonpun.github.io/2022/01/30/2015-12-08-apache-kafka-structure/index.html">
@@ -42,6 +42,7 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Apache Kafka Structure | 酷学小栈</title>
   
+
 
 
 
@@ -202,11 +203,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="庞木辛">
-      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Apache Kafka Structure | 酷学小栈">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -503,14 +509,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">105k</span>
+    <span title="站点总字数">107k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:36</span>
+    <span title="站点阅读时长">1:37</span>
   </span>
 </div>
 <div class="busuanzi-count">
