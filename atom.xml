@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-02-08T03:14:55.794Z</updated>
+  <updated>2022-03-07T08:20:22.598Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS开发者们，你们也许需要这5个神奇的工具</title>
+    <link href="https://reasonpun.github.io/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/"/>
+    <id>https://reasonpun.github.io/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/</id>
+    <published>2022-03-07T07:42:12.000Z</published>
+    <updated>2022-03-07T08:20:22.598Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;世上有着数以万计的工具，这些工具都不同程度上为我们的开发提供了很大的帮助，也许你正在使用着这样的工具，不过，你想不想来看看我今天给你们推荐的这5款相当神奇的工具捏？&lt;/p&gt;
+&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="工具篇" scheme="https://reasonpun.github.io/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/"/>
+    
+    
+    <category term="iOS" scheme="https://reasonpun.github.io/tags/iOS/"/>
+    
+    <category term="Xcode" scheme="https://reasonpun.github.io/tags/Xcode/"/>
+    
+  </entry>
   
   <entry>
     <title>从0开始使用flutter和flame创建手机游戏</title>
@@ -397,27 +425,6 @@ Python 2.7.10 (default, Oct 23 2015,</summary>
         
     <summary type="html">&lt;h4 id=&quot;Apache-Kafka消息服务&quot;&gt;&lt;a href=&quot;#Apache-Kafka消息服务&quot; class=&quot;headerlink&quot; title=&quot;Apache Kafka消息服务&quot;&gt;&lt;/a&gt;Apache Kafka消息服务&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;参考地址</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Flume-ng Structure</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2015-12-10-apache-flume-ng-structure/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2015-12-10-apache-flume-ng-structure/</id>
-    <published>2022-01-30T15:11:00.376Z</published>
-    <updated>2022-01-30T15:11:00.376Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Apache-flume-NG-配置&quot;&gt;&lt;a href=&quot;#Apache-flume-NG-配置&quot; class=&quot;headerlink&quot; title=&quot;Apache-flume NG 配置&quot;&gt;&lt;/a&gt;Apache-flume NG 配置&lt;/h2&gt;&lt;h3</summary>
         
       
     

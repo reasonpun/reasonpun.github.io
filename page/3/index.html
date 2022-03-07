@@ -135,18 +135,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -185,6 +185,315 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/01/30/2015-12-10-apache-flume-ng-structure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="庞木辛">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 酷学小栈">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/30/2015-12-10-apache-flume-ng-structure/" class="post-title-link" itemprop="url">Apache Flume-ng Structure</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Apache-flume-NG-配置"><a href="#Apache-flume-NG-配置" class="headerlink" title="Apache-flume NG 配置"></a>Apache-flume NG 配置</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>  Flume NG是一个分布式、可靠、可用的系统，它能够将不同数据源的海量日志数据进行高效收集、聚合、移动，最后存储到一个中心化数据存储系统中。</p>
+<p>  由原来的Flume OG到现在的Flume NG，进行了架构重构，并且现在NG版本完全不兼容原来的OG版本。</p>
+<p>  经过架构重构后，Flume NG更像是一个轻量的小工具，非常简单，容易适应各种方式日志收集，并支持failover和负载均衡。</p>
+<h3 id="架构设计要点"><a href="#架构设计要点" class="headerlink" title="架构设计要点"></a>架构设计要点</h3><h4 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h4><ul>
+<li>Event：一个数据单元，带有一个可选的消息头</li>
+<li>Flow：Event从源点到达目的点的迁移的抽象</li>
+<li>Client：操作位于源点处的Event，将其发送到Flume Agent</li>
+<li>Agent：一个独立的Flume进程，包含组件Source、Channel、Sink</li>
+<li>Source：用来消费传递到该组件的Event</li>
+<li>Channel：中转Event的一个临时存储，保存有Source组件传递过来的Event</li>
+<li>Sink：从Channel中读取并移除Event，将Event传递到Flow Pipeline中的下一个Agent（如果有的话）</li>
+</ul>
+<h4 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h4><p>![flume-ng总体结构图](/assets/images/posts/flume-ng/flume-ng-architecture.png)</p>
+<h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><p>外部系统产生日志，直接通过Flume的Agent的Source组件将事件（如日志行）发送到中间临时的channel组件，最后传递给Sink组件，HDFS Sink组件可以直接把数据存储到HDFS集群上。</p>
+<h4 id="单Agent"><a href="#单Agent" class="headerlink" title="单Agent"></a>单Agent</h4><p>  一个最基本Flow的配置，格式如下：</p>
+  <pre class="line-numbers language-none"><code class="language-none"># list the sources, sinks and channels for the agent
+&lt;Agent&gt;.sources = &lt;Source1&gt; &lt;Source2&gt;
+&lt;Agent&gt;.sinks = &lt;Sink1&gt; &lt;Sink2&gt;
+&lt;Agent&gt;.channels = &lt;Channel1&gt; &lt;Channel2&gt;
+
+# set channel for source
+&lt;Agent&gt;.sources.&lt;Source1&gt;.channels = &lt;Channel1&gt; &lt;Channel2&gt; ...
+&lt;Agent&gt;.sources.&lt;Source2&gt;.channels = &lt;Channel1&gt; &lt;Channel2&gt; ...
+
+# set channel for sink
+&lt;Agent&gt;.sinks.&lt;Sink1&gt;.channel = &lt;Channel1&gt;
+&lt;Agent&gt;.sinks.&lt;Sink2&gt;.channel = &lt;Channel2&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  尖括号里面的，我们可以根据实际需求或业务来修改名称。</p>
+<p>  下面详细说明：</p>
+<ul>
+<li><agent> 表示配置一个Agent的名称，一个Agent肯定有一个名称。</agent></li>
+<li><source1>和<source2>是Agent的Source组件的名称，消费传递过来的Event。</source2></source1></li>
+<li><channel1>和<channel2>是Agent的Channel组件的名称。</channel2></channel1></li>
+<li><sink1>与<sink2>是Agent的Sink组件的名称，从Channel中消费（移除）Event。</sink2></sink1></li>
+</ul>
+<p>  上面配置内容中</p>
+<ul>
+<li>第一组中配置Source、Sink、Channel，它们的值可以有1个或者多个；</li>
+<li>第二组中配置Source将把数据存储（Put）到哪一个Channel中，可以存储到1个或多个Channel中，<br>同一个Source将数据存储到多个Channel中，实际上是Replication；</li>
+<li>第三组中配置Sink从哪一个Channel中取（Task）数据，一个Sink只能从一个Channel中取数据。</li>
+</ul>
+<h4 id="多个Agent顺序连接"><a href="#多个Agent顺序连接" class="headerlink" title="多个Agent顺序连接"></a>多个Agent顺序连接</h4><p>![flume-ng 多个Agent顺序连接](/assets/images/posts/flume-ng/flume-multiseq-agents.png)</p>
+<p>  可以将多个Agent顺序连接起来，将最初的数据源经过收集，存储到最终的存储系统中。这是最简单的情况，一般情况下，应该控制这种顺序连接的Agent的数量，因为数据流经的路径变长了，如果不考虑failover的话，出现故障将影响整个Flow上的Agent收集服务。</p>
+<h4 id="多个Agent的数据汇聚到同一个Agent"><a href="#多个Agent的数据汇聚到同一个Agent" class="headerlink" title="多个Agent的数据汇聚到同一个Agent"></a>多个Agent的数据汇聚到同一个Agent</h4><p>![flume-ng 多个Agent的数据汇聚到同一个Agent](/assets/images/posts/flume-ng/flume-join-agent.png)</p>
+<p>  这种情况应用的场景比较多，比如要收集Web网站的用户行为日志，Web网站为了可用性使用的负载均衡的集群模式，每个节点都产生用户行为日志，可以为每个节点都配置一个Agent来单独收集日志数据，然后多个Agent将数据最终汇聚到一个用来存储数据存储系统，如HDFS上。</p>
+<h4 id="多路（Multiplexing）Agent"><a href="#多路（Multiplexing）Agent" class="headerlink" title="多路（Multiplexing）Agent"></a>多路（Multiplexing）Agent</h4><p>![flume-ng 多路（Multiplexing）Agent](/assets/images/posts/flume-ng/flume-multiplexing-agent.png)</p>
+<p>  这种模式，有两种方式</p>
+<ul>
+<li><p>一种是用来复制（Replication）</p>
+<ul>
+<li><p>Replication方式，可以将最前端的数据源复制多份，分别传递到多个channel中，每个channel接收到的数据都是相同的，配置格式</p>
+<pre class="line-numbers language-none"><code class="language-none"># List the sources, sinks and channels for the agent
+&lt;Agent&gt;.sources = &lt;Source1&gt;
+&lt;Agent&gt;.sinks = &lt;Sink1&gt; &lt;Sink2&gt;
+&lt;Agent&gt;.channels = &lt;Channel1&gt; &lt;Channel2&gt;
+
+# set list of channels for source (separated by space)
+&lt;Agent&gt;.sources.&lt;Source1&gt;.channels = &lt;Channel1&gt; &lt;Channel2&gt;
+
+# set channel for sinks
+&lt;Agent&gt;.sinks.&lt;Sink1&gt;.channel = &lt;Channel1&gt;
+&lt;Agent&gt;.sinks.&lt;Sink2&gt;.channel = &lt;Channel2&gt;
+
+&lt;Agent&gt;.sources.&lt;Source1&gt;.selector.type = replicating<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用的Replication方式，Source1会将数据分别存储到Channel1和Channel2，这两个channel里面存储的数据是相同的，然后数据被传递到Sink1和Sink2。</p>
+</li>
+</ul>
+</li>
+<li><p>另一种是用来分流（Multiplexing）</p>
+<ul>
+<li><p>Multiplexing方式，selector可以根据header的值来确定数据传递到哪一个channel</p>
+<pre class="line-numbers language-none"><code class="language-none"># Mapping for multiplexing selector
+&lt;Agent&gt;.sources.&lt;Source1&gt;.selector.type = multiplexing
+&lt;Agent&gt;.sources.&lt;Source1&gt;.selector.header = &lt;someHeader&gt;
+&lt;Agent&gt;.sources.&lt;Source1&gt;.selector.mapping.&lt;Value1&gt; = &lt;Channel1&gt;
+&lt;Agent&gt;.sources.&lt;Source1&gt;.selector.mapping.&lt;Value2&gt; = &lt;Channel1&gt; &lt;Channel2&gt;
+&lt;Agent&gt;.sources.&lt;Source1&gt;.selector.mapping.&lt;Value3&gt; = &lt;Channel2&gt;
+#...
+
+&lt;Agent&gt;.sources.&lt;Source1&gt;.selector.default = &lt;Channel2&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面selector的type的值为multiplexing，同时配置selector的header信息，还配置了多个selector的mapping的值，即header的值：如果header的值为Value1、Value2，数据从Source1路由到Channel1；如果header的值为Value2、Value3，数据从Source1路由到Channel2。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="实现load-balance功能"><a href="#实现load-balance功能" class="headerlink" title="实现load balance功能"></a>实现load balance功能</h4><p>![实现load balance功能](/assets/images/posts/flume-ng/flume-load-balance-agents.png)</p>
+<p>  Load balancing Sink Processor能够实现load balance功能，上图Agent1是一个路由节点，<br>  负责将Channel暂存的Event均衡到对应的多个Sink组件上，而每个Sink组件分别连接到一个独立的Agent上</p>
+  <pre class="line-numbers language-none"><code class="language-none">a1.sinkgroups = g1
+a1.sinkgroups.g1.sinks = k1 k2 k3
+a1.sinkgroups.g1.processor.type = load_balance
+a1.sinkgroups.g1.processor.backoff = true
+a1.sinkgroups.g1.processor.selector = round_robin
+a1.sinkgroups.g1.processor.selector.maxTimeOut=10000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="实现failover能"><a href="#实现failover能" class="headerlink" title="实现failover能"></a>实现failover能</h4><p>  Failover Sink Processor能够实现failover功能，具体流程类似load balance，<br>  但是内部处理机制与load balance完全不同：Failover Sink Processor维护一个优先级Sink组件列表，只要有一个Sink组件可用，<br>  Event就被传递到下一个组件。如果一个Sink能够成功处理Event，则会加入到一个Pool中，否则会被移出Pool并计算失败次数，设置一个惩罚因子</p>
+  <pre class="line-numbers language-none"><code class="language-none">a1.sinkgroups = g1
+a1.sinkgroups.g1.sinks = k1 k2 k3
+a1.sinkgroups.g1.processor.type = failover
+a1.sinkgroups.g1.processor.priority.k1 = 5
+a1.sinkgroups.g1.processor.priority.k2 = 7
+a1.sinkgroups.g1.processor.priority.k3 = 6
+a1.sinkgroups.g1.processor.maxpenalty = 20000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><pre class="line-numbers language-none"><code class="language-none"># 下载二进制包
+[mofun_mining@i-tev02vc1 ~]$ wget "http://apache.arvixe.com/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz"
+[mofun_mining@i-tev02vc1 ~]$ tar xvzf apache-flume-1.6.0-bin.tar.gz
+[mofun_mining@i-tev02vc1 ~]$ mv apache-flume-1.6.0-bin /usr/local/
+# 修改配置文件
+[mofun_mining@i-qe32ajmq conf]$ pwd
+/usr/local/apache-flume-1.6.0-bin/conf
+[mofun_mining@i-qe32ajmq conf]$ sudo cp flume-conf.properties.template flume-conf.properties<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>采用 Avro Source+Memory Channel+HDFS Sink 方式</p>
+<ul>
+<li>服务器（日志汇总服务器agent）端配置文件</li>
+</ul>
+  <pre class="line-numbers language-none"><code class="language-none">[mofun_mining@i-tev02vc1 ~]$ cd /usr/local/apache-flume-1.6.0-bin/conf/
+[mofun_mining@i-tev02vc1 conf]$ ls
+flume-conf.properties  flume-conf.properties.template  flume-env.ps1.template  flume-env.sh  flume-env.sh.template  log4j.properties
+[mofun_mining@i-tev02vc1 conf]$ pwd
+/usr/local/apache-flume-1.6.0-bin/conf
+[mofun_mining@i-tev02vc1 conf]$ sudo vim flume-conf.properties
+# example.conf: A single-node Flume configuration
+
+# Name the components on this agent
+agent1.sources = r1
+agent1.sinks = k1
+agent1.channels = c1
+
+# Describe/configure the source
+agent1.sources.r1.type = avro
+agent1.sources.r1.bind = 192.168.1.33
+agent1.sources.r1.port = 41414
+agent1.sources.r1.channels = c1
+
+# Describe the sink
+agent1.sinks.k1.type = hdfs
+agent1.sinks.k1.channel = c1
+agent1.sinks.k1.hdfs.fileType = DataStream
+agent1.sinks.k1.hdfs.useLocalTimeStamp = true
+agent1.sinks.k1.hdfs.path = /flume/events/%Y-%m-%d
+#agent1.sinks.k1.hdfs.round = true
+#agent1.sinks.k1.hdfs.roundValue = 10
+#agent1.sinks.k1.hdfs.roundUnit = minute
+agent1.sinks.k1.hdfs.rollCount = 5000
+agent1.sinks.k1.hdfs.rollSize = 0
+agent1.sinks.k1.hdfs.rollInterval= 0
+
+# Use a channel which buffers events in memory
+agent1.channels.c1.type = memory
+agent1.channels.c1.capacity = 10000
+agent1.channels.c1.transactionCapacity = 1000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>客户端（日志收集agent）</li>
+</ul>
+  <pre class="line-numbers language-none"><code class="language-none">[reason@i-qunray9x conf]$ cd /usr/local/apache-flume-1.6.0-bin/conf/
+[reason@i-qunray9x conf]$ pwd
+/usr/local/apache-flume-1.6.0-bin/conf
+[reason@i-qunray9x conf]$ sudo vim flume-conf.properties
+
+# example.conf: A single-node Flume configuration
+
+# Name the components on this agent
+agent1.sources = r1
+agent1.sinks = k1
+agent1.channels = c1
+
+# Describe/configure the source
+agent1.sources.r1.type = exec
+agent1.sources.r1.command = tail -n 0 -F /home/reason/1.txt
+agent1.sources.r1.channels = c1
+
+# Describe the sink
+agent1.sinks.k1.type = avro
+agent1.sinks.k1.channel = c1
+agent1.sinks.k1.hdfs.useLocalTimeStamp = true
+agent1.sinks.k1.hdfs.path = /flume/events/%Y-%m-%d
+agent1.sinks.k1.hostname=192.168.1.33
+agent1.sinks.k1.port = 41414
+
+# Use a channel which buffers events in memory
+agent1.channels.c1.type = memory
+agent1.channels.c1.capacity = 5000
+agent1.channels.c1.transactionCapacity = 500<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>启动服务器</li>
+</ul>
+  <pre class="line-numbers language-none"><code class="language-none">[mofun_mining@i-tev02vc1 conf]$
+/usr/local/apache-flume-1.6.0-bin/bin/flume-ng agent -c ./conf/ -f /usr/local/apache-flume-1.6.0-bin/conf/flume-conf.properties -n agent1 -Dflume.root.logger=INFO,console<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>启动客户端</li>
+</ul>
+  <pre class="line-numbers language-none"><code class="language-none">[reason@i-qunray9x conf]$
+/usr/local/apache-flume-1.6.0-bin/bin/flume-ng agent -c conf -f /usr/local/apache-flume-1.6.0-bin/conf/flume-conf.properties -n agent1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>测试</li>
+</ul>
+  <pre class="line-numbers language-none"><code class="language-none">[mofun_mining@i-r6cuv8iq ~]$ hdfs dfs -ls /flume/events/2015-12-15
+Found 40 items
+-rw-r--r--   2 mofun_mining supergroup      34844 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340281
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340282
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340283
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340284
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340285
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340286
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340287
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340288
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39 /flume/events/2015-12-15/FlumeData.1450172340289
+-rw-r--r--   2 mofun_mining supergroup      34850 2015-12-15 17:39
+...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  此时，通过nginx实时产生的日志，即可实时插入到hdfs中了。</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://shiyanjun.cn/archives/915.html">http://shiyanjun.cn/archives/915.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://my.oschina.net/leejun2005/blog/288136">http://my.oschina.net/leejun2005/blog/288136</a></li>
+<li><a target="_blank" rel="noopener" href="http://tech.meituan.com/mt-log-system-optimization.html">http://tech.meituan.com/mt-log-system-optimization.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ixirong.com/2015/05/18/how-to-install-flume-ng/">http://www.ixirong.com/2015/05/18/how-to-install-flume-ng/</a></li>
+<li><a target="_blank" rel="noopener" href="https://flume.apache.org/FlumeUserGuide.html#setting-up-an-agent">https://flume.apache.org/FlumeUserGuide.html#setting-up-an-agent</a></li>
+<li><a target="_blank" rel="noopener" href="http://m.blog.csdn.net/blog/xueliang1029/24039459">http://m.blog.csdn.net/blog/xueliang1029/24039459</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -387,14 +696,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">107k</span>
+    <span title="站点总字数">108k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:37</span>
+    <span title="站点阅读时长">1:38</span>
   </span>
 </div>
 <div class="busuanzi-count">
