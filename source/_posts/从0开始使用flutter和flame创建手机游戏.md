@@ -179,3 +179,90 @@ void main() async {
 最后，您应该有如下所示的内容：
 
 {% asset_img 4.png 使用flame %}
+
+要利用 Flame 插件提供的游戏循环机制，我们必须创建一个 Flame 的 Game 类的子类。为此，请在 ./lib 下创建一个新文件并将其命名为 box-game.dart。
+
+然后我们将编写一个名为 BoxGame 的类（如果你知道类是如何工作的，你可以使用任何类）来扩展 Flame 的 Game 类。
+
+```
+import 'dart:ui';
+
+import 'package:flame/game.dart';
+
+class BoxGame extends Game {
+  void render(Canvas canvas) {
+    // TODO: implement render
+  }
+
+  void update(double t) {
+    // TODO: implement update
+  }
+}
+```
+
+让我们分解一下：我们导入 Dart 的 ui 库，这样就可以使用 Canvas 类，然后使用 Size 类。
+我们导入 Flame 的游戏库，其中包括正在扩展的 Game 类。其他所有内容都是具有两种方法的类定义：更新和渲染。这些方法会覆盖父类（也称为超类）的同名方法。
+
+```
+注意：@override 注释在 Dart 2 中是可选的，所以，如果你找不到它也不找着急，这是正常的。 
+new 关键字也是可选的，所以我们也不会使用它。
+```
+
+下一步是创建此 BoxGame 类的实例并将其小部件属性传递给 runApp。
+
+让我们回到 ./lib/main.dart 并在文件的最顶部插入以下行：
+
+```
+import 'package:boxgame/box-game.dart';
+```
+
+该行确保 BoxGame 类可以在 main.dart 中使用。
+接下来，创建 BoxGame 类的实例并将其小部件属性传递给 runApp 函数。
+在 main 函数的末尾（右大括号 } 上方）插入以下行。
+
+```
+BoxGame game = BoxGame();
+runApp(game.widget);
+```
+
+现在我们的移动应用程序就可以称作是一个游戏啦！
+
+如果你运行游戏，你只会看到一个空白/黑屏，因为屏幕上还没有绘制任何东西。
+
+您的 main.dart 文件应如下所示：
+
+{% asset_img 5.png run_app %}
+
+## 第四步：绘制界面
+
+在屏幕上绘图之前，我们必须提前知道屏幕的大小。
+Flutter 在屏幕上绘图时使用逻辑像素，因此您不必担心调整游戏对象的大小。
+
+一英寸的设备包含大约 96 个逻辑像素。因此，假设我们将手机作为我们的发布平台。大多数现代和主流手机的尺寸都差不多，因为我们的游戏非常简单，我们不必担心尺寸。
+
+Flame 建立在这个大小系统之上，而 Game 类实际上有一个我们可以覆盖的调整大小的函数。这个函数接受一个 Size 参数，我们可以通过这个参数确定屏幕的大小（以逻辑像素为单位）。
+
+首先，让我们在类级别声明一个变量。这个变量（也称为实例变量）将保存屏幕的大小，并且仅在屏幕改变大小时更新（对于我们的游戏应该只发生一次）。这也是在屏幕上绘制对象时的基础。这个变量的类型应该是 Size。与传递给 resize 函数的内容相同。
+
+```
+class BoxGame extends Game {
+  Size screenSize;
+```
+
+screenSize 变量将被初始化为 null。在检查我们是否知道渲染过程中的屏幕大小时，这将很有帮助。稍后再谈。
+
+接下来，让我们在 ./lib/box-game.dart 中添加重载函数resize()。
+
+```
+void resize(Size size) {
+  screenSize = size;
+  super.resize(size);
+}
+```
+
+注意：超类的 resize 函数实际上是空的，但调用我们要覆盖的超类的超函数是个好主意。除非我们完全想重写该函数。所以，让我们先把它留在这里吧。
+
+另一个需要注意的地方：实例变量是可以从类的所有方法/函数访问的变量。例如，您可以在调整大小时设置它，然后在渲染时获取它的值。
+
+您的代码应如下所示：
+

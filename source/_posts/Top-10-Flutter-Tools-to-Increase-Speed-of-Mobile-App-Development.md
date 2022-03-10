@@ -65,7 +65,7 @@ Screenshot是一个命令行程序，可以让你截取屏幕截图，是 Flutte
 下载和安装了Android Studio 之后，你就不需要有额外的担心了，因为它还支持您在 Android 设备或模拟器上设计和启动应用程序。
 
 ### Push Notifications:
-{% asset_img 7.jpeg 示意图 width="400" %}
+{% asset_img 7.jpg 示意图 width="400" %}
 Push Notifications非常适合提高用户参与度并提醒用户关注最新信息。 Google 的 Firebase Cloud Messaging (FCM) 是一项免费（是的，免费！）跨平台消息服务。它使得向一系列平台上的特定用户组发送通知变得简单。我将在本文中向您展示如何在 Android 和 iOS 上设置推送通知；如果您只想在其中一个平台上进行设置，则可以跳过特定于平台的部分。
 
 ### Panache:
@@ -76,7 +76,7 @@ Panache 是完全免费和开源的，允许您评估代码。
 Panache 目前被超过 4000 万开发人员和测试人员使用。
 
 ### Flutter Stripe:
-{% asset_img 9.jpeg 示意图 width="400" %}
+{% asset_img 9.jpg 示意图 width="400" %}
 Stripe 会为您收集所有付款数据。
 通常，Stripe、Square 或 Braintree 等服务会为您提供存储应用程序收集的所有付款信息，但它们会将 UI 部分留给开发人员。
 这意味着必须处理所有那些无聊的事情，比如卡片验证、3D 身份验证等。

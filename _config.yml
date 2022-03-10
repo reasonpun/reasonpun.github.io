@@ -7,7 +7,7 @@ title: 酷学小栈
 subtitle: 还要再走500里
 description: 读万卷书，行万里路，胸中脱去尘浊
 keywords:
-author: 庞木辛
+author: 木辛念做梓
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -128,5 +128,6 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/reasonpun/reasonpun.github.io
+  #repository: https://github.com/reasonpun/reasonpun.github.io
+  repository: git@github.com:reasonpun/reasonpun.github.io.git
   branch: gh-pages
