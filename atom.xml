@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-07T08:20:22.598Z</updated>
+  <updated>2022-03-12T14:11:35.252Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>An Introduction to MVVM in Flutter</title>
+    <link href="https://reasonpun.github.io/2022/03/12/An-Introduction-to-MVVM-in-Flutter/"/>
+    <id>https://reasonpun.github.io/2022/03/12/An-Introduction-to-MVVM-in-Flutter/</id>
+    <published>2022-03-12T13:35:03.000Z</published>
+    <updated>2022-03-12T14:11:35.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;在这篇文章中，我们将使用 MVVM 设计模式来编写一个完整的 Flutter 应用程序&lt;span aria-hidden=&quot;true&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="MVVM" scheme="https://reasonpun.github.io/tags/MVVM/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS开发者们，你们也许需要这5个神奇的工具</title>
@@ -405,28 +432,6 @@ Python 2.7.10 (default, Oct 23 2015,</summary>
     
     
     <summary type="html">Linux shell 获取各种格式的日期</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Kafka Structure</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2015-12-08-apache-kafka-structure/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2015-12-08-apache-kafka-structure/</id>
-    <published>2022-01-30T15:11:00.376Z</published>
-    <updated>2022-01-30T15:11:00.376Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;Apache-Kafka消息服务&quot;&gt;&lt;a href=&quot;#Apache-Kafka消息服务&quot; class=&quot;headerlink&quot; title=&quot;Apache Kafka消息服务&quot;&gt;&lt;/a&gt;Apache Kafka消息服务&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;参考地址</summary>
-        
-      
     
     
     
