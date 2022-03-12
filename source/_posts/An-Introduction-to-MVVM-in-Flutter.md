@@ -149,7 +149,7 @@ class MovieListViewModel extends ChangeNotifier {
 ```
 
 我们更新了 MovieListViewModel 以从 ChangeNotifier 继承。 ChangeNotifier 允许我们发布更改通知，视图可以使用它来更新自身。
-在我们使用网络服务获取电影后，我们调用 notifyListeners 函数，通知所有订阅者/听众。目前没有人收听，所以没有人通知电影已经下载。
+在我们使用网络服务获取电影后，我们调用 notifyListeners 函数，通知所有订阅者/听众。目前没有人收听，所以没有人得到消息：电影已经下载完毕。
 
 为了用更新的 MovieListViewModel 通知视图，我们必须使用 ChangeNotifierProvider，它是 Provider 包的一部分。通过在pubspec.yaml文件中添加依赖来添加provider包，如下图：
 
