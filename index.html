@@ -224,7 +224,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-12 21:35:03 / 修改时间：22:20:41" itemprop="dateCreated datePublished" datetime="2022-03-12T21:35:03+08:00">2022-03-12</time>
+      <time title="创建时间：2022-03-12 21:35:03 / 修改时间：22:22:12" itemprop="dateCreated datePublished" datetime="2022-03-12T21:35:03+08:00">2022-03-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,7 +358,7 @@ class MovieViewModel {
 
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>我们更新了 MovieListViewModel 以从 ChangeNotifier 继承。 ChangeNotifier 允许我们发布更改通知，视图可以使用它来更新自身。<br>在我们使用网络服务获取电影后，我们调用 notifyListeners 函数，通知所有订阅者/听众。目前没有人收听，所以没有人通知电影已经下载。</p>
+<p>我们更新了 MovieListViewModel 以从 ChangeNotifier 继承。 ChangeNotifier 允许我们发布更改通知，视图可以使用它来更新自身。<br>在我们使用网络服务获取电影后，我们调用 notifyListeners 函数，通知所有订阅者/听众。目前没有人收听，所以没有人得到消息：电影已经下载完毕。</p>
 <p>为了用更新的 MovieListViewModel 通知视图，我们必须使用 ChangeNotifierProvider，它是 Provider 包的一部分。通过在pubspec.yaml文件中添加依赖来添加provider包，如下图：</p>
 <pre class="line-numbers language-none"><code class="language-none">dependencies:
   flutter:
