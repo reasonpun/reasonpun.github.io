@@ -64,7 +64,6 @@ class Webservice {
     }
   }
 }
-view raw
 ```
 电影模型实现如下：
 
@@ -131,7 +130,7 @@ MovieListViewModel 由 movies 属性组成，该属性将返回 MovieViewModel �
 
 ### 设置 ChangeNotifier 和 ChangeNotifierProvider
 
-MovieListViewModel 中的 fetchMovies 方法负责通过 Web 服务的帮助从 OMDb API 检索电影。
+MovieListViewModel 中的 fetchMovies 方法会通过使用Web服务，从 OMDb API 检索电影。
 实现如下图所示：
 
 ```
