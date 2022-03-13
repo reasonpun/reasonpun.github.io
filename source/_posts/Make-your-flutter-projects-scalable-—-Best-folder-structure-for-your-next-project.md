@@ -1,7 +1,5 @@
 ---
-title: >-
-  Make your flutter projects scalable — Best folder structure for your next
-  project
+title: 试一下这个极佳的文件夹结构吧
 date: 2022-03-13 22:34:28
 categories:
 - 设计模式

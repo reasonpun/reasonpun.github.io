@@ -1,5 +1,5 @@
 ---
-title: 'Flutter: MVVM Architecture'
+title: Flutter的MVVM设计模式
 date: 2022-03-12 23:08:44
 categories:
 - 设计模式
