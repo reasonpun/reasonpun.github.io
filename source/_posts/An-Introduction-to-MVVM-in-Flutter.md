@@ -1,5 +1,5 @@
 ---
-title: An Introduction to MVVM in Flutter
+title: 简单的介绍Flutter的MVVM设计模式
 date: 2022-03-12 21:35:03
 categories:
 - 设计模式
