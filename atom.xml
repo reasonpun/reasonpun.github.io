@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-12T14:22:12.908Z</updated>
+  <updated>2022-03-13T01:05:14.354Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter: MVVM Architecture</title>
+    <link href="https://reasonpun.github.io/2022/03/12/Flutter-MVVM-Architecture/"/>
+    <id>https://reasonpun.github.io/2022/03/12/Flutter-MVVM-Architecture/</id>
+    <published>2022-03-12T15:08:44.000Z</published>
+    <updated>2022-03-13T01:05:14.354Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2022/03/12/Flutter-MVVM-Architecture/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;模型-视图-视图模型 (MVVM) 在软件开发方面是一种非常成熟的架构模式。 MVVM</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="MVVM" scheme="https://reasonpun.github.io/tags/MVVM/"/>
+    
+  </entry>
   
   <entry>
     <title>An Introduction to MVVM in Flutter</title>
@@ -420,21 +449,6 @@ Python 2.7.10 (default, Oct 23 2015,</summary>
     <category term="nginx" scheme="https://reasonpun.github.io/tags/nginx/"/>
     
     <category term="logrotate" scheme="https://reasonpun.github.io/tags/logrotate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux shell 获得以前日期</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2015-12-05-linux-shell-generate-date/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2015-12-05-linux-shell-generate-date/</id>
-    <published>2022-01-30T15:11:00.376Z</published>
-    <updated>2022-01-30T15:11:00.376Z</updated>
-    
-    
-    <summary type="html">Linux shell 获取各种格式的日期</summary>
-    
-    
-    
     
   </entry>
   
