@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -146,7 +146,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -185,6 +185,152 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="木辛念做梓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 酷学小栈">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/" class="post-title-link" itemprop="url">Make your flutter projects scalable — Best folder structure for your next project</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-13 22:34:28 / 修改时间：22:51:52" itemprop="dateCreated datePublished" datetime="2022-03-13T22:34:28+08:00">2022-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>878</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/1.png" class="" title="示意图 width=400">
+
+<p>一个快速发展且计划不断变化的项目对于每个开发人员来说都是一场噩梦。<br>摆脱这种情况的唯一方法是有一个合理的规划。</p>
+<p>由于愚蠢的文件夹结构，我一直在挣扎。而且我不希望你们再经历所有这些无谓的挣扎。<br>在本文中，我将向您介绍我的文件夹结构，您也可以在项目中使用它。</p>
+<p>我期望建立一个能够满足如下需求的目录结构：</p>
+<ul>
+<li>如果我想添加功能，易于扩展。</li>
+<li>将我的业务逻辑与我的视图 (UI) 分开。</li>
+<li>轻松移除任何模块。</li>
+<li>易于识别我的组件在哪里。</li>
+<li>如果需要，可以轻松更改任何路线。</li>
+<li>易于更新我的主题。</li>
+<li>如果需要，可以轻松连接到新的后端。</li>
+</ul>
+<p>就是这样，我们想要一些简单而灵活的东西。所以，请看我接下来的表演。</p>
+<h3 id="让我们试试这个方法"><a href="#让我们试试这个方法" class="headerlink" title="让我们试试这个方法"></a>让我们试试这个方法</h3><p>我只是想让它变得简单。所以没有技术术语，只有一个简单的解释。</p>
+<img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/2.png" class="" title="示意图 width=400">
+
+<ul>
+<li>视图：让我们将所有视图（屏幕）分组到一个文件夹中。进一步将视图分组到单独的模块中。您可能有身份验证、个人资料、入职培训等模块……</li>
+</ul>
+<img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/3.png" class="" title="示意图 width=400">
+
+<ul>
+<li>控制器：所有的业务逻辑和状态管理逻辑都在这里。您可以将您的提供者、块或任何其他状态管理逻辑的逻辑放入此文件夹。您甚至可以将其重命名为您的状态管理架构，如providers、 blocs、……</li>
+</ul>
+<img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/4.png" class="" title="示意图 width=400">
+
+<ul>
+<li>服务：进入您的应用程序的任何数据都必须来自这里。它可能正在连接 REST API 或任何数据库连接。</li>
+</ul>
+<img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/5.png" class="" title="示意图 width=400">
+
+<ul>
+<li>模型：将所有模型都放在这里，例如 user_model.dart、product_model.dart 或其他任何模型。我将发表另一篇关于如何使用模型使您的项目更有条理的文章。</li>
+</ul>
+<img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/6.png" class="" title="示意图 width=400">
+
+<ul>
+<li>配置：这里有所有控制你的应用程序的东西，比如常量、路由、主题……</li>
+</ul>
+<img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/7.png" class="" title="示意图 width=400">
+
+<ul>
+<li>Assets：在项目级别创建一个文件夹“assets”。通常将其命名为“assets”。当然了没有任何强制命名的要求。但一定要在整个项目中保持一致。<br> 此外，您可以根据assets类型（如图像、Html、字体……）对资源进行分组。</li>
+</ul>
+<img src="/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/8.png" class="" title="示意图 width=400">
+
+<h3 id="这是唯一的方法吗？"><a href="#这是唯一的方法吗？" class="headerlink" title="这是唯一的方法吗？"></a>这是唯一的方法吗？</h3><p>一点都不！</p>
+<p>您可以使用最适合您的任何架构或文件夹结构。</p>
+<p>因为我觉得这个对我有用。所以，我希望它也对你们有用。</p>
+<p>要不试一试？<br>看看它是否适合你。</p>
+<p>随心所欲地做出改变，直到找到适合自己的东西。<br>如果你发现了比这更好的东西。请一定要告诉我，并分享给其他人哈！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -2186,97 +2332,6 @@ Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of 
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/01/30/2016-11-04-Using-Vagrant-for-Rails-Development/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="木辛念做梓">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="酷学小栈">
-      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 酷学小栈">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/01/30/2016-11-04-Using-Vagrant-for-Rails-Development/" class="post-title-link" itemprop="url">使用Vagrant部署Rails项目</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/30/2016-11-04-Using-Vagrant-for-Rails-Development/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2302,14 +2357,14 @@ Caused by: org.apache.spark.SparkException: Failed to get broadcast_0_piece0 of 
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">119k</span>
+    <span title="站点总字数">120k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:48</span>
+    <span title="站点阅读时长">1:49</span>
   </span>
 </div>
 <div class="busuanzi-count">
