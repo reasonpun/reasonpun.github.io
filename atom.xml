@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-14T01:40:16.630Z</updated>
+  <updated>2022-03-14T01:42:01.948Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Architecture patterns in Flutter</title>
+    <title>Flutter中的架构模式</title>
     <link href="https://reasonpun.github.io/2022/03/14/Architecture-patterns-in-Flutter/"/>
     <id>https://reasonpun.github.io/2022/03/14/Architecture-patterns-in-Flutter/</id>
     <published>2022-03-14T01:09:08.000Z</published>
-    <updated>2022-03-14T01:40:16.630Z</updated>
+    <updated>2022-03-14T01:42:01.948Z</updated>
     
     
       
