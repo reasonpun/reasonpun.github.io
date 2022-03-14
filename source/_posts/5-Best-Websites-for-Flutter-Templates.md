@@ -8,6 +8,8 @@ tags:
 - Templates
 ---
 
+{% asset_img 0.png 示意图 width="400" %}
+
 模板使 Flutter 开发变得简单快捷。您还可以从模板中获得一些设计灵感。
 今天我将分享一些令人惊叹的网站，您可以获得免费的 Flutter 模板。
 
@@ -19,7 +21,7 @@ tags:
 
 ### Get Widget
 
-GetWidget 将您的整体应用程序开发时间减少到至少 40%，因为它预先构建了干净的 UI 小部件组件，您可以在 Flutter 应用程序中使用它。
+[GetWidget](https://www.getwidget.dev/) 将您的整体应用程序开发时间减少到至少 40%，因为它预先构建了干净的 UI 小部件组件，您可以在 Flutter 应用程序中使用它。
 
 {% asset_img 2.png 示意图 width="400" %}
 
