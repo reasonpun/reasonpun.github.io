@@ -135,18 +135,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -185,6 +185,283 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/03/14/Architecture-patterns-in-Flutter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="木辛念做梓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 酷学小栈">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/14/Architecture-patterns-in-Flutter/" class="post-title-link" itemprop="url">Architecture patterns in Flutter</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-14 09:09:08 / 修改时间：09:40:16" itemprop="dateCreated datePublished" datetime="2022-03-14T09:09:08+08:00">2022-03-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Architecture/" itemprop="url" rel="index"><span itemprop="name">Architecture</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <img src="/2022/03/14/Architecture-patterns-in-Flutter/1.png" class="" title="示意图 width=400">
+
+<p>Flutter 拥有一个不断增长的状态管理解决方案生态系统。 <a target="_blank" rel="noopener" href="https://flutter.dev/docs/development/data-and-backend/state-mgmt/options">Flutter文档</a>本身列出了 10 多个选项！弄清楚选择哪种解决方案是一项艰巨的任务。</p>
+<p>在我们进入更多细节之前，让我们首先了解一个非常基本的概念。<br>Flutter 是一个声明式 UI 框架。这意味着我们需要呈现在特定的状态下Flutter UI效果。</p>
+<pre class="line-numbers language-none"><code class="language-none">UI = *f(*state*)*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>牢记这一点有助于编写更好的与框架配合使用的Flutter代码。</p>
+<p>现在让我们看一下最广泛采用的两种状态管理模式。</p>
+<ul>
+<li>业务逻辑组件 (BLoC) 模式</li>
+<li>提供者模式</li>
+</ul>
+<p>注意：本文假设您熟悉 Flutter 和 dart 编程语言。</p>
+<h2 id="Business-Logic-Component-BLoC"><a href="#Business-Logic-Component-BLoC" class="headerlink" title="Business Logic Component (BLoC)"></a>Business Logic Component (BLoC)</h2><h3 id="为什么要创建-BLoC？"><a href="#为什么要创建-BLoC？" class="headerlink" title="为什么要创建 BLoC？"></a>为什么要创建 BLoC？</h3><p>谷歌在 2018 年谷歌 I/O 开发者大会上介绍了 BLoC 模式。这种模式最初是由 Google Ads 团队在他们的 Flutter 应用中使用的。它的创建是为了处理复杂的状态变化，而这在当时的解决方案中是很难做到的。</p>
+<h3 id="什么是-BLoC？"><a href="#什么是-BLoC？" class="headerlink" title="什么是 BLoC？"></a>什么是 BLoC？</h3><p>BLoC 是 UI = f(state) 概念的直接实现。它将这一概念与 dart 语言的基本部分 - Streams 结合在一起。</p>
+<p>流是一系列异步事件。我们也可以将应用程序中的 UI 交互视为事件流。</p>
+<p>BLoC 接收这些事件，对这些事件进行一些处理，并输出一个状态流。</p>
+<p>flutter_bloc 就是这样一种状态管理包，它可以轻松实现 BLoC 模式。由于一切都建立在 dart 流之上，因此它对测试有很好的支持。</p>
+<p>Flutter bloc 包还有一些配套包，可以帮助实现一些复杂的用例，例如恢复状态和添加 undo-redo 功能。</p>
+<p>需要注意的一点是，BLoC 只是一个消耗事件并发出状态的组件。我们仍然需要使用一些东西在小部件树中提供这个 BLoC。通常，提供程序用于此目的。</p>
+<h3 id="BLoC-是如何工作的？"><a href="#BLoC-是如何工作的？" class="headerlink" title="BLoC 是如何工作的？"></a>BLoC 是如何工作的？</h3><p>让我们创建一个 BLoC 来搜索城市并显示搜索结果列表。</p>
+<ol>
+<li>首先，我们创建 BLoC 将消费的事件。</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">abstract class CitiesEvent {}
+
+class SearchCities extends CitiesEvent {
+  String searchTerm;
+
+  SearchCities({
+    required this.searchTerm,
+  });
+}
+
+class SelectCity extends CitiesEvent {
+  int cityId;
+  
+  SelectCity({
+    required this.cityId,
+  });
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>创建 UI 将使用的状态</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">abstract class CitiesState {}
+
+class CitiesLoading extends CitiesState {}
+
+class CitiesLoaded extends CitiesState {
+  List&lt;City&gt; cities;
+  
+  CitiesLoaded({
+    required this.cities,
+  });
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>创建 BLoC。这里我们处理传入的事件并返回状态。</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">class CitiesBloc extends Bloc&lt;CitiesEvent, CitiesState&gt; {
+
+	@override
+	Stream&lt;CitiesState&gt; mapEventToState(
+	  CitiesEvent event,
+	) async* {
+	  if (event is SearchCities) {
+      
+	    // Set state to Loading
+	    yield CitiesLoading();
+      
+	    // Process the event
+	    final citiesSearchResults = await fetchCities(event.searchTerm);
+      
+	    // Set the state to Loaded with the search results
+	    yield CitiesLoaded(cities: citiesSearchResults);
+	  }
+	  // Handle other states
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>要访问小部件树中的块，我们提供了 BlocProvider</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">BlocProvider(
+  create: (_) =&gt; CitiesBloc(),
+  child: Column(
+    children: const [
+      CitiesSearchBar(),
+      CitiesListPage(),
+    ],
+  ),
+),<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="5">
+<li>我们检索上面提供的 bloc。从 UI 向 BLoC 添加新状态。 BLoC 将处理这些事件并返回状态。</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">@override
+Widget build(BuildContext context) {
+  final CitiesBloc citiesBloc = Provider.of&lt;CitiesBloc&gt;(context);
+  return Padding(
+    padding: const EdgeInsets.only(left: 10.0),
+    child: TextFormField(
+      onChanged: (searchTerm) =&gt;
+          citiesBloc.add(CitiesEvent.searchCities(searchTerm)),
+    ),
+  );
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="6">
+<li>UI 将消费这些状态并更新视图</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">BlocBuilder&lt;CitiesBloc, CitiesState&gt;(
+  builder: (context, state) {
+    if (state is CitiesLoading) return CircularProgressIndicator()
+    if (state is CitiesLoaded) return CitiesList(state.cities)
+  },
+),<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>首先，我们定义可以在应用程序中发生的事件。我们还定义了应用程序应该显示的状态。然后当用户与应用程序交互时，事件被添加到执行必要操作的 BLoC。 BLoC 然后发出由 UI 接收的状态。</p>
+<p>简而言之，事件进入 BLoC，状态从 BLoC 出来。</p>
+<h2 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h2><h3 id="为什么要创建提供者模式？"><a href="#为什么要创建提供者模式？" class="headerlink" title="为什么要创建提供者模式？"></a>为什么要创建提供者模式？</h3><p>BLoC 对许多人来说很难理解。在大多数用例中，总是使用数据流似乎不是一个优雅的解决方案。需要一个更简单的解决方案来处理Flutter中的状态。</p>
+<p>第二个问题是使用 <strong>InheritedWidget</strong> 很难在小部件树下提供一些数据。</p>
+<h3 id="什么是提供者模式？"><a href="#什么是提供者模式？" class="headerlink" title="什么是提供者模式？"></a>什么是提供者模式？</h3><p>虽然，我们将这种方法称为提供者模式，但提供者包本身只是 <strong>InheritedWidget</strong> 的一个包装器，具有一些附加功能。它可以在小部件树下提供任何类型的对象。提供者本身不保持或改变状态。为此，我们可以使用 ChangeNotifier。 ChangeNotifier 是一个类，它为任何扩展它或将其用作 mixin 的类提供侦听功能。</p>
+<h3 id="ChangeNotifier-的替代方案"><a href="#ChangeNotifier-的替代方案" class="headerlink" title="ChangeNotifier 的替代方案"></a>ChangeNotifier 的替代方案</h3><p>将侦听器添加到更改通知器是 O(1) 操作。移除侦听器并向其侦听器发送更新是一个 O(n) 操作。</p>
+<p>除了更改通知器，我们还可以使用状态通知器。 state_notifier 是由创建提供程序包的同一作者创建的包，因此二者的集成非常好。它比更改通知器更有效，并且使测试更容易。</p>
+<h3 id="提供者模式是如何工作的？"><a href="#提供者模式是如何工作的？" class="headerlink" title="提供者模式是如何工作的？"></a>提供者模式是如何工作的？</h3><p>让我们实现相同的城市搜索用例</p>
+<p>1.首先我们创建一个扩展 <strong>ChangeNotifier</strong> 的类。</p>
+<pre class="line-numbers language-none"><code class="language-none">class CitiesSearchModel extends ChangeNotifier {
+	List&lt;City&gt; citiesList = [];
+
+	void searchCities(String searchTerm) async {
+		citiesList = await fetchCities(searchTerm);
+		notifyListeners();
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>与 BLoC 类似，我们首先需要在小部件树中提供此类。一种称为 <strong>ChangeNotifierProvider</strong> 的特殊类型的提供程序用于此目的。</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">ChangeNotifierProvider&lt;CitiesSearchModel&gt;(
+  builder: (context) =&gt; CitiesSearchModel(),
+  child: CitiesListPage(),
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>然后我们检索我们需要的模型类并调用 <strong>searchCities</strong> 函数。该模型将执行必要的数据获取，然后调用 **notifyListeners()**。</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">@override
+Widget build(BuildContext context) {
+  final CitiesBloc citiesBloc = Provider.of&lt;CitiesSearchModel&gt;(context);
+  return Padding(
+    padding: const EdgeInsets.only(left: 10.0),
+    child: TextFormField(
+      onChanged: (searchTerm) =&gt;
+          citiesBloc.searchCities(searchTerm),
+    ),
+  );
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>UI 将监听模型并更新视图。消费者小部件向模型添加了一个侦听器。每当调用 notifyListeners() 时，都会再次调用构建器并更新视图。</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">Consumer&lt;CitiesSearchModel&gt;(
+  builder: (context, model, child) {
+    return CitiesList(model.citiesList);
+  },
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="什么时候用什么"><a href="#什么时候用什么" class="headerlink" title="什么时候用什么"></a>什么时候用什么</h2><p>任何好的状态管理解决方案都应该满足这些基本要求</p>
+<ul>
+<li>分离 UI 和业务逻辑</li>
+<li>让代码更容易测试</li>
+<li>使代码更具可读性</li>
+</ul>
+<p>这两种方法都满足所有三个要求。但每个都有自己的缺点。</p>
+<p>BLoC 模式具有陡峭的学习曲线。它为代码库添加了很多样板。</p>
+<p>随着我们添加更多的侦听器，提供者模式变得更慢。理想的解决方案是两者的结合。我们需要为手头的工作选择正确的工具。</p>
+<p>BLoC 非常强大，以流为骨干。但是，切记不可大材小用哟！</p>
+<p>在需要 BLoC 提供的功能的情况下使用它。例如，一次有 2-3 个以上的侦听器处于活动状态，或者维护和浏览状态更改的历史记录，或者对传入事件进行去抖动和转换。</p>
+<p>将提供者模式用于大多数（如果不是全部）状态管理需求。这是一个功能强大的解决方案，您可能永远不需要使用 BLoC。</p>
+<h2 id="近期发展"><a href="#近期发展" class="headerlink" title="近期发展"></a>近期发展</h2><p>随着这两种方法在过去几年中变得更加成熟，对这些模式进行了一些更新，使其更易于使用。</p>
+<p>BLoC 现在是 Cubit 类的子类。 Cubit 的工作方式与 BLoC 相同，但它试图通过用简单的函数替换事件类来减少我们需要用 BLoC 编写的一些样板。</p>
+<p>提供程序包的创建者创建了一个名为riverpod 的新包。其网站上的标语为“提供者，但不同”。它的工作原理与提供程序相同，但试图修复原始包的一些缺陷。但原始的 provider 包仍然是 Flutter 官方文档中最受欢迎和推荐的解决方案。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1805,266 +2082,6 @@ runApp(game.widget);<span aria-hidden="true" class="line-numbers-rows"><span></s
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/01/30/2016-04-07-Oryx2-performance-doc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="木辛念做梓">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="酷学小栈">
-      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 酷学小栈">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/01/30/2016-04-07-Oryx2-performance-doc/" class="post-title-link" itemprop="url">Oryx2 性能优化文档</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。</p>
-<h2 id="硬件和集群设计"><a href="#硬件和集群设计" class="headerlink" title="硬件和集群设计"></a>硬件和集群设计</h2><p>一般情况下，对硬件或者集群没有特别的要求。集群资源的需求主要取决于基于Spark的作业，这些往往是内存密集型和CPU密集型的，但是一般不会是I/O绑定的。如果数据的采集率非常的高，Kafka可能需要一些特殊的考虑。在这两种情况下，针对其他任何的Kafka或者Spark作业并没有不同的标准。</p>
-<h3 id="数据传输"><a href="#数据传输" class="headerlink" title="数据传输"></a>数据传输</h3><p>因为Kafka是底层传输数据的，存储要求的采集和存放数据对于Kafka也就是这样的。查看<a target="_blank" rel="noopener" href="http://kafka.apache.org/performance.html">Kafka 性能</a>中提到的内容。一般情况下，Kafka并不会接近瓶颈，也能够像其他Kafka的使用一样调整资源占用大小。</p>
-<h3 id="批处理层"><a href="#批处理层" class="headerlink" title="批处理层"></a>批处理层</h3><p>批处理层独特的地方是模型的构建, and the element that is of most interest to benchmark are likely the model building processes implemented in the app tier, on top of MLlib. Here again, the resources required to build a model over a certain amount of data are just that of the underlying MLlib implementations of ALS, k-means and decision forests.</p>
-<p>MLlib的任何性能优化或者是基准测试都适用于这些基于MLlib预制的实现的批处理层，这对于Oryx也是一样的。</p>
-<h3 id="JVM-优化"><a href="#JVM-优化" class="headerlink" title="JVM 优化"></a>JVM 优化</h3><p>Choosing the number of Spark executors, cores and memory is a topic in its own right.</p>
-<p>很自然的，更多的executors意味着更多的核心和内存。但是数量是不能超多集群上机器的总数量的；请查看：oryx.batch.streaming.num-executors。</p>
-<p>更多的核，意味着可能会有更多的并发进程。在典型的模型构建进程中，如果能达到任务总数的三分之一或者2分之一的话，这将是非常有用的。你可以观察到任务的数量，以及Spark UI中批处理层固有的并发情况。在这数量之下，核数再多也无法增加更多的并发了。少一些是可以的，无非就是增加了点运行时间。当然，在批处理的时间间隔内，充足的核数可以保证批处理的顺利完成。核的数量可以通过oryx.batch.streaming.executor-cores进行配置。</p>
-<p>如果你的作业发生了内存溢出，驱动器和executors可能需要更多的内存。如果你注意到在批处理层的”存储”标签页中并不是100%的RDD被缓存住了，那么更多的内存可能会有所帮助。查看：oryx.batch.streaming.executor-memory。</p>
-<p>oryx-run.sh脚本的–jvm-args参数是用来为所有的JVM进程设置内存参数的。举个例子，通过设置 -XX:+UseG1GC ，会达到一个比较合理的效果。</p>
-<h3 id="服务层"><a href="#服务层" class="headerlink" title="服务层"></a>服务层</h3><p>REST API 后端服务器是Tomcat。配置文件是没有暴露给用户的，但是对于他的负载已经做了合理的调整。Tomcat容器本身开销很小，不需要担心性能问题。</p>
-<p>最可能感兴趣的是项目中提供的关于CPU密集型程序实现的性能问题，而不是框架本身。</p>
-<h3 id="基准测试-交替最小二乘法推荐"><a href="#基准测试-交替最小二乘法推荐" class="headerlink" title="基准测试: 交替最小二乘法推荐"></a>基准测试: 交替最小二乘法推荐</h3><p>由于ALS实现的程序的服务层的大多数的操作是，会在内存中实时的计算一个非常大的矩阵，所以这个程序是最具有挑战性的了。大概其的规则如下：</p>
-<p>如果需要运行类似的基准测试，可以使用LoadBenchmark，可以按照如下的配置：</p>
-<pre class="line-numbers language-none"><code class="language-none">mvn -DskipTests clean install
-cd app/oryx-app-serving
-...
-mvn -Pbenchmark \
- -Doryx.test.als.benchmark.users=1000000 \
- -Doryx.test.als.benchmark.items=5000000 \
- -Doryx.test.als.benchmark.features=250 \
- -Doryx.test.als.benchmark.lshSampleRate=0.3 \
- -Doryx.test.als.benchmark.workers=2 \
- integration-test
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><ul>
-<li>内存需求是成线性的：(users + items) x features</li>
-<li>-XX:+UseStringDeduplication 在 Java 8中是非常有用的 (reflected below)</li>
-<li>At scale, 1M users or items ~= 500-1000M of heap required, depending on features</li>
-</ul>
-<p>  Example steady-state heap usage (Java 8):</p>
-<table>
-<thead>
-<tr>
-<th>Features</th>
-<th>Users+Items (M)</th>
-<th>Heap (MB)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>50</td>
-<td>2</td>
-<td>1400</td>
-</tr>
-<tr>
-<td>50</td>
-<td>6</td>
-<td>2600</td>
-</tr>
-<tr>
-<td>50</td>
-<td>21</td>
-<td>7500</td>
-</tr>
-<tr>
-<td>250</td>
-<td>2</td>
-<td>3000</td>
-</tr>
-<tr>
-<td>250</td>
-<td>6</td>
-<td>7500</td>
-</tr>
-<tr>
-<td>250</td>
-<td>21</td>
-<td>25800</td>
-</tr>
-</tbody></table>
-<h3 id="请求延迟，吞吐量"><a href="#请求延迟，吞吐量" class="headerlink" title="请求延迟，吞吐量"></a>请求延迟，吞吐量</h3><ul>
-<li>Recommend and similarity computation time scales linearly with items x features</li>
-<li>A single request is parallelized across CPUs; max throughput and minimum latency is already achieved at about 1-2 concurrent requests</li>
-<li>Locality sensitive hashing decreases processing time roughly linearly; 0.33 ~= 1/0.33 ~= 3x faster (setting too low adversely affects result quality)</li>
-</ul>
-<p>  Below are representative throughput / latency measurements for the /recommend endpoint using<br>  a 32-core Intel Xeon 2.3GHz (Haswell), OpenJDK 8 and flags -XX:+UseG1GC -XX:+UseStringDeduplication. Heap size was comfortably large enough for the data set in each case. The tests were run with 1-3 concurrent request at a time, as necessary to achieve near-full CPU utilization.</p>
-<p><em>With LSH (sample rate = 0.3)</em></p>
-<table>
-<thead>
-<tr>
-<th>Features</th>
-<th>Items (M)</th>
-<th>Throughput (qps)</th>
-<th>Latency (ms)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>50</td>
-<td>1</td>
-<td>437</td>
-<td>7</td>
-</tr>
-<tr>
-<td>250</td>
-<td>1</td>
-<td>151</td>
-<td>13</td>
-</tr>
-<tr>
-<td>50</td>
-<td>5</td>
-<td>84</td>
-<td>24</td>
-</tr>
-<tr>
-<td>250</td>
-<td>5</td>
-<td>36</td>
-<td>56</td>
-</tr>
-<tr>
-<td>50</td>
-<td>20</td>
-<td>14</td>
-<td>69</td>
-</tr>
-<tr>
-<td>250</td>
-<td>20</td>
-<td>6</td>
-<td>162</td>
-</tr>
-</tbody></table>
-<p><em>Without LSH (sample rate = 1.0)</em></p>
-<table>
-<thead>
-<tr>
-<th>Features</th>
-<th>Items (M)</th>
-<th>Throughput (qps)</th>
-<th>Latency (ms)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>50</td>
-<td>1</td>
-<td>74</td>
-<td>27</td>
-</tr>
-<tr>
-<td>250</td>
-<td>1</td>
-<td>23</td>
-<td>44</td>
-</tr>
-<tr>
-<td>50</td>
-<td>5</td>
-<td>13</td>
-<td>80</td>
-</tr>
-<tr>
-<td>250</td>
-<td>5</td>
-<td>5</td>
-<td>191</td>
-</tr>
-<tr>
-<td>50</td>
-<td>20</td>
-<td>4</td>
-<td>282</td>
-</tr>
-<tr>
-<td>250</td>
-<td>20</td>
-<td>1</td>
-<td>708</td>
-</tr>
-</tbody></table>
-<h3 id="JVM-优化-1"><a href="#JVM-优化-1" class="headerlink" title="JVM 优化"></a>JVM 优化</h3><p>机器上运行（多个）服务层，使用越多的可用的核，意味着可以提供更多的并发请求处理能力。在ALS中，一些请求，比如/recommend 可以在一个请求中通过多核计算完成。</p>
-<p>内存的需求主要是由加载进内存的模型的需求控制的。对于大的模型，比如ALS，这就意味着需要确保服务层有足够的内存以保证不会导致GC崩溃。查看oryx.serving.memory。</p>
-<p>-XX:+UseG1GC remains a good garbage collection setting to supply with –jvm-args. In Java 8, -XX:+UseStringDeduplication can reduce memory requirements by about 20%.</p>
-<h3 id="实时计算层"><a href="#实时计算层" class="headerlink" title="实时计算层"></a>实时计算层</h3><p>实时计算层驱动进程类似服务层那样也是需要大量内存的，因为他也是需要加载一个模型到内存中的。驱动进程的内存是通过oryx.speed.streaming.driver-memory控制的，也需要和服务层内存一样设置，并且也需要JVM的一些flags支持。</p>
-<p>这也是一个Spark Streaming 作业，也需要想批处理层那样配置executors。一般情况下，需要更少的处理和更低的时间延迟。</p>
-<p>Executors will have to be sized to consume input Kafka partitions fully in parallel; the number of cores times number of executors should be at least the number of Kafka partitions.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2090,14 +2107,14 @@ mvn -Pbenchmark \
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">120k</span>
+    <span title="站点总字数">125k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:49</span>
+    <span title="站点阅读时长">1:54</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-14T00:39:53.503Z</updated>
+  <updated>2022-03-14T01:40:16.630Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Architecture patterns in Flutter</title>
+    <link href="https://reasonpun.github.io/2022/03/14/Architecture-patterns-in-Flutter/"/>
+    <id>https://reasonpun.github.io/2022/03/14/Architecture-patterns-in-Flutter/</id>
+    <published>2022-03-14T01:09:08.000Z</published>
+    <updated>2022-03-14T01:40:16.630Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2022/03/14/Architecture-patterns-in-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;Flutter 拥有一个不断增长的状态管理解决方案生态系统。 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Architecture" scheme="https://reasonpun.github.io/categories/Architecture/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="Patterns" scheme="https://reasonpun.github.io/tags/Patterns/"/>
+    
+  </entry>
   
   <entry>
     <title>寻找Flutter模板的5个最佳网站</title>
@@ -447,23 +476,6 @@ Python 2.7.10 (default, Oct 23 2015,</summary>
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Java关键字volatile</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2016-03-08-Java-keyword-volatile/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2016-03-08-Java-keyword-volatile/</id>
-    <published>2022-01-30T15:11:00.377Z</published>
-    <updated>2022-01-30T15:11:00.377Z</updated>
-    
-    
-    <summary type="html">Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。</summary>
-    
-    
-    
-    
-    <category term="Java" scheme="https://reasonpun.github.io/tags/Java/"/>
     
   </entry>
   
