@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -146,7 +146,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -185,6 +185,120 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/01/30/2016-01-24-Reg-Nginx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="木辛念做梓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 酷学小栈">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/30/2016-01-24-Reg-Nginx/" class="post-title-link" itemprop="url">正则表达式处理Nginx</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Nginx-日志配置格式"><a href="#Nginx-日志配置格式" class="headerlink" title="Nginx 日志配置格式"></a>Nginx 日志配置格式</h1><pre class="line-numbers language-none"><code class="language-none">log_format  main
+        '[$upstream_addr] $remote_addr [$time_local] "$request" $status '
+        '"$request_body" $body_bytes_sent "$http_referer" "$http_user_agent" '
+        'RESP:$upstream_response_time '
+        'REQ:$request_time';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h1><pre class="line-numbers language-none"><code class="language-none">[192.168.1.5:80] 19.78.22.51 [31/Dec/2015:13:59:02 +0800] "POST /api/mbbb/dup_msg_send?pallow_dubbing=0&amp;partner_msgs_id=279&amp;roles_id=23&amp;score=6700&amp;section_id=512&amp;whole_audio=200.m4a&amp;d
+evice_id=112222f0fc3&amp;lang=zh-CN&amp;trigger=user&amp;user_id=516487&amp;v=ios_7.0.3 HTTP/1.1" 200 "audio_fragment=00280%22%3A%7B%22pitch%22%3A47%2C%22rhythm%22%3A95%2C%22tone%22%3A75%7D%2C%226800278%22%3A%7B%22pitch%22%3A70%2C%22rhythm%22%3A90%2%7D%2C%226800276%22
+%3A%7B%22pitch%22%3A60%2C%22rhythm%22%3A82%2C%22tone%22D&amp;content=hhhhhh%E5%B0%8F%E5%AB%A9%E8%8D%89" 51 "-" "paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)" RESP:0.166 REQ:0.167
+[192.168.1.5:80, 192.169.1.33:88] 60.12.246.5 [31/Dec/2015:23:59:02 +0800] "GET /api/mppb/notice/list?device_id=112233fe6a6d991f&amp;lang=zh-CN&amp;user_id=6120&amp;v=ios_7.0.3 HTTP/1.1" 200 "-" 54 "-" "paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)" RESP:0.006 REQ:0.006<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="Python版本"><a href="#Python版本" class="headerlink" title="Python版本"></a>Python版本</h2><pre class="line-numbers language-none"><code class="language-none">p = re.compile(
+            r"\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \"(\S+)\ (\S+)\ .*?\"\ (\d+)\ \"(.*?)\"\ (\d+)\ \"([^\"]*)\"\ \".*?\" .*?")
+m = re.findall(p, line)
+day = m[0][0]
+month = m[0][1]
+year = m[0][2]
+ttime = m[0][3]
+method = m[0][4]
+request = m[0][5]
+status = m[0][6]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Scala版本"><a href="#Scala版本" class="headerlink" title="Scala版本"></a>Scala版本</h2><pre class="line-numbers language-none"><code class="language-none">val regex = new Regex( """\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \"(\S+)\ (\S+)\ .*?\"\ (\d+)\ \"(.*?)\"\ (\d+)\ \"([^\"]*)\"\ \".*?\" .*?""")
+val regex(day, month, year, time, method, request, status, postData, bytes, refer) = line<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/5d8c802be13d">http://www.jianshu.com/p/5d8c802be13d</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000002727070">https://segmentfault.com/a/1190000002727070</a></li>
+<li><a target="_blank" rel="noopener" href="http://desert3.iteye.com/blog/1001568">http://desert3.iteye.com/blog/1001568</a></li>
+<li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/996536/regex-in-python">http://stackoverflow.com/questions/996536/regex-in-python</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1462,14 +1576,14 @@ Found 40 items
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">147k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:54</span>
+    <span title="站点阅读时长">2:14</span>
   </span>
 </div>
 <div class="busuanzi-count">

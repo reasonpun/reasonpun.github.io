@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-14T01:42:01.948Z</updated>
+  <updated>2022-03-15T08:06:52.770Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>适合初学者的Flutter Bloc模式</title>
+    <link href="https://reasonpun.github.io/2022/03/15/Flutter-bloc-for-beginners/"/>
+    <id>https://reasonpun.github.io/2022/03/15/Flutter-bloc-for-beginners/</id>
+    <published>2022-03-15T07:06:52.000Z</published>
+    <updated>2022-03-15T08:06:52.770Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2022/03/15/Flutter-bloc-for-beginners/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;h3 id=&quot;什么是Flutter-的Bocl模式&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Architecture" scheme="https://reasonpun.github.io/categories/Architecture/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="Patterns" scheme="https://reasonpun.github.io/tags/Patterns/"/>
+    
+    <category term="Beginners" scheme="https://reasonpun.github.io/tags/Beginners/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter中的架构模式</title>
@@ -450,27 +481,6 @@ Python 2.7.10 (default, Oct 23 2015,</summary>
         
         
     <summary type="html">&lt;h2 id=&quot;Spark-优化&quot;&gt;&lt;a href=&quot;#Spark-优化&quot; class=&quot;headerlink&quot; title=&quot;Spark 优化&quot;&gt;&lt;/a&gt;Spark</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式处理Nginx</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2016-01-24-Reg-Nginx/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2016-01-24-Reg-Nginx/</id>
-    <published>2022-01-30T15:11:00.377Z</published>
-    <updated>2022-01-30T15:11:00.377Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Nginx-日志配置格式&quot;&gt;&lt;a href=&quot;#Nginx-日志配置格式&quot; class=&quot;headerlink&quot; title=&quot;Nginx 日志配置格式&quot;&gt;&lt;/a&gt;Nginx 日志配置格式&lt;/h1&gt;&lt;pre class=&quot;line-numbers</summary>
         
       
     
