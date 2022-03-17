@@ -3,6 +3,7 @@ title: Flutter中的架构模式
 date: 2022-03-14 09:09:08
 categories:
 - Architecture
+- Flutter
 tags:
 - Flutter
 - Patterns

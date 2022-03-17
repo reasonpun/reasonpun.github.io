@@ -3,6 +3,7 @@ title: 从0开始使用flutter和flame创建手机游戏
 date: 2022-01-31 09:02:04
 categories:
 - 深入浅出系列
+- Flutter
 tags:
 - Flutter
 - Flame

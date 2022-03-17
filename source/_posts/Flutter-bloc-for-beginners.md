@@ -3,6 +3,7 @@ title: 适合初学者的Flutter Bloc模式
 date: 2022-03-15 15:06:52
 categories:
 - Architecture
+- Flutter
 tags:
 - Flutter
 - Patterns
