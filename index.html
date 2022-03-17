@@ -48,9 +48,9 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml">
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -135,18 +135,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -194,6 +194,429 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="木辛念做梓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 酷学小栈">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/" class="post-title-link" itemprop="url">使用 Firebase 在后台和前台推送通知</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-17 21:50:00 / 修改时间：22:29:18" itemprop="dateCreated datePublished" datetime="2022-03-17T21:50:00+08:00">2022-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <img src="/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/1.png" class="" title="示意图 width=400">
+
+<p>在应用程序中，我们需要集成推送通知。<br>虽然我们成功集成了它，但有时在应用程序未运行或在后台打开时发送推送通知会出现问题或者导致应用程序的崩溃。<br>所以，本篇内容中我们将在Flutter中使用 firebase ，使用它的通知适用于所有状态：前台、后台，甚至在应用程序关闭（未运行）时。</p>
+<p>开始吧：）</p>
+<pre class="line-numbers language-none"><code class="language-none">Firebase 和推送通知设置<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><ul>
+<li>为您的应用创建 firebase 项目并在 android/app 文件夹中添加googleservices.json 文件。</li>
+<li>在你的 Flutter 项目中安装 firebase_messaging 和 firebase_core。</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">firebase_messaging: ^11.2.11
+firebase_core: any<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>像往常一样在 build.gradle（在应用程序级别和 android 级别）文件中进行 firebase 初始化设置。</li>
+<li>对于推送通知，请在应用级 build.gradle 文件的依赖项下添加以下行（有时我们会遇到 multidex 问题，因此最好在 defaultConfig{} 中添加 multidex）<br>默认配置下：</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">multiDexEnabled true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在依赖项下添加如下内容：</p>
+<pre class="line-numbers language-none"><code class="language-none">...
+dependencies{
+...
+implementation ‘com.google.firebase:firebase-inappmessaging-display:19.1.5’
+implementation 'com.android.support:multidex:1.0.3'
+...
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在 android/app/src/main/kotlin 中创建 Application.kt 文件（简单地说您在该文件夹中看到 MainActivity.kt 文件的位置创建 Application.kt 文件）并复制并粘贴以下代码：</p>
+<pre class="line-numbers language-none"><code class="language-none">package &lt;your_package_name&gt;
+import io.flutter.app.FlutterApplication
+import io.flutter.plugin.common.PluginRegistry
+import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
+import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingPlugin
+
+class Application: FlutterApplication(), PluginRegistry.PluginRegistrantCallback {
+  override fun onCreate() {
+    super.onCreate()FlutterFirebaseMessagingBackgroundService.setPluginRegistrant(this)
+  }
+  override fun registerWith(registry:PluginRegistry) {
+    FlutterFirebaseMessagingPlugin.registerWith(registry?.registrarFor(“io.flutter.plugins.firebasemessaging.FirebaseMessagingPlugin”))
+  }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在 pubspec.yaml 文件中添加 flutter_local_notifications 包</p>
+<pre class="line-numbers language-none"><code class="language-none">flutter_local_notifications:<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>在 android/app/src/main/res/AndroidManifest.xml 中添加以下行</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;application
+  android:name=".Application"
+  ...&gt;
+  &lt;activity
+     ....&gt;
+       .....
+       &lt;intent-filter&gt;
+         &lt;action android:name="FLUTTER_NOTIFICATION_CLICK"/&gt;
+         &lt;category android:name="android.intent.category.DEFAULT"/&gt;
+       &lt;/intent-filter&gt;
+  &lt;/activity&gt;
+...
+&lt;/application&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">到目前为止，推送通知已完成，我们将开始编码部分。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>在 main.dart 文件的 main 函数中添加这些行。</p>
+<pre class="line-numbers language-none"><code class="language-none">WidgetsFlutterBinding.ensureInitialized();
+await Firebase.initializeApp();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>创建一个页面并通过分别导入这些包来初始化 firebase_messaging 和 flutter_local_notifications。</p>
+<pre class="line-numbers language-none"><code class="language-none">import ‘package:firebase_messaging/firebase_messaging.dart’;
+import ‘package:flutter_local_notifications/flutter_local_notifications.dart’;
+// create an instance 
+FirebaseMessaging messaging = FirebaseMessaging.instance;
+FlutterLocalNotificationsPlugin fltNotification;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>在这里，我们编写了在终端中获取 fcm 令牌的代码，以便我们可以在步骤 I 中创建的 firebase 项目中的云消息传递下使用这些令牌。</p>
+<pre class="line-numbers language-none"><code class="language-none">void pushFCMtoken() async {
+  String token=await messaging.getToken();
+  print(token);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第八步"><a href="#第八步" class="headerlink" title="第八步"></a>第八步</h3><p>在这一步中，我们编写用于接收通知格式和设置的代码。</p>
+<pre class="line-numbers language-none"><code class="language-none">void initMessaging() {
+  var androiInit = AndroidInitializationSettings(‘@mipmap/ic_launcher’);//for logo
+  var iosInit = IOSInitializationSettings();
+  var initSetting=InitializationSettings(android: androiInit,iOS:
+   iosInit);
+  fltNotification = FlutterLocalNotificationsPlugin();
+  fltNotification.initialize(initSetting);
+  var androidDetails =
+   AndroidNotificationDetails(‘1’, ‘channelName’, ‘channel 
+    Description’);
+  var iosDetails = IOSNotificationDetails();
+  var generalNotificationDetails =
+   NotificationDetails(android: androidDetails, iOS: iosDetails);
+FirebaseMessaging.onMessage.listen((RemoteMessage message) {     RemoteNotification notification=message.notification;
+   AndroidNotification android=message.notification?.android;
+   if(notification!=null &amp;&amp; android!=null){
+     fltNotification.show(
+       notification.hashCode, notification.title, notification.
+       body, generalNotificationDetails);
+}
+});
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第九步"><a href="#第九步" class="headerlink" title="第九步"></a>第九步</h3><p>最终代码将是：</p>
+<pre class="line-numbers language-none"><code class="language-none">import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+
+class selClass extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: sel(),
+    );
+  }
+}
+
+class sel extends StatefulWidget {
+  @override
+  _selState createState() =&gt; _selState();
+}
+
+class _selState extends State&lt;sel&gt; {
+  String _date = "Not set";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(child:SingleChildScrollView(
+    child: Column(
+    children: &lt;Widget&gt;[
+    Container(
+    color: Colors.grey,
+      width: MediaQuery
+          .of(context)
+          .size
+          .width,
+      height: MediaQuery
+          .of(context)
+          .size
+          .height / 10,
+      child: Center(child: Text("Attendance",
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),),),
+    ),
+    SizedBox(height: 30.0,),
+    Padding(
+    padding: const EdgeInsets.all(16.0),
+    child: Container(
+    child: Column(
+    mainAxisSize: MainAxisSize.max,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: &lt;Widget&gt;[
+    RaisedButton(
+    shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(5.0)),
+    elevation: 4.0,
+    onPressed: () {
+    DatePicker.showDatePicker(context,
+    theme: DatePickerTheme(
+    containerHeight: 210.0,
+    ),
+    showTitleActions: true,
+    minTime: DateTime(2000, 1, 1),
+    maxTime: DateTime(2022, 12, 31),
+    onConfirm: (date) {
+    print('confirm $date');
+    _date = '${date.year} - ${date.month} - ${date.day}';
+    setState(() {});
+    },
+    currentTime: DateTime.now(),
+    locale: LocaleType.en);
+    },
+    child: Container(
+    alignment: Alignment.center,
+    height: 50.0,
+    child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: &lt;Widget&gt;[
+    Row(
+    children: &lt;Widget&gt;[
+    Container(
+    child: Row(
+    children: &lt;Widget&gt;[
+    Icon(
+    Icons.date_range,
+    size: 18.0,
+    color: Colors.teal,
+    ),
+    Text(
+    " $_date",
+    style: TextStyle(
+    color: Colors.teal,
+    fontWeight: FontWeight.bold,
+    fontSize: 18.0),
+    ),
+    ],
+    ),
+    )
+    ],
+    ),
+    Text(
+    "  Change",
+    style: TextStyle(
+    color: Colors.teal,
+    fontWeight: FontWeight.bold,
+    fontSize: 18.0),
+    ),
+    ],
+    ),
+    ),
+    color: Colors.white,
+    ),
+    SizedBox(
+    height: 20.0,
+    ),
+    ]
+    ,
+    )
+    ,
+    )
+    )
+    ]))));
+  }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当您运行此代码时，您将在控制台中获得 fcm_token，然后复制该令牌并执行以下步骤：</p>
+<h3 id="第十步"><a href="#第十步" class="headerlink" title="第十步"></a>第十步</h3><p>打开 firebase 项目并转到云消息部分并编写通知标题和正文，如下所示：</p>
+<img src="/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/2.png" class="" title="示意图 width=400">
+
+<p>完成上图后，点击发送消息，你会得到如下所示：</p>
+<img src="/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/3.png" class="" title="示意图 width=400">
+
+<p>在这里粘贴 fcm_token（您在前面的步骤中从终端复制的内容）并点击测试按钮。<br>在完成所有这些步骤之后，您将在您的移动设备中收到通知，无论是应用程序处于运行状态还是在后台运行或已关闭。</p>
+<p>最后，推送通知有效，您可以在未来的应用程序中使用此功能。<br>谢谢 ：）</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="木辛念做梓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 酷学小栈">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-title-link" itemprop="url">PHP核心技术的面试题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-17 21:04:12 / 修改时间：21:24:21" itemprop="dateCreated datePublished" datetime="2022-03-17T21:04:12+08:00">2022-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" itemprop="url" rel="index"><span itemprop="name">面试准备</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>862</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1 oop是什么?<br>答:oop是面向对象编程,面向对象编程是一种计算机编程架构,OOP 的一条基本原则是计算机程序是由单个能够起到子程序作用的单元或对象组合而成。<br>OOP具有三大特点<br>1、封装性：也称为信息隐藏，就是将一个类的使用和实现分开，只保留部分接口和方法与外部联系，或者说只公开了一些供开发人员使用的方法。于是开发人员只 需要关注这个类如何使用，而不用去关心其具体的实现过程，这样就能实现MVC分工合作，也能有效避免程序间相互依赖，实现代码模块间松藕合。<br>2、继承性：就是子类自动继承其父级类中的属性和方法，并可以添加新的属性和方法或者对部分属性和方法进行重写。继承增加了代码的可重用性。PHP只支持单继承，也就是说一个子类只能有一个父类。<br>3、多态性：子类继承了来自父级类中的属性和方法，并对其中部分方法进行重写。于是多个子类中虽然都具有同一个方法，但是这些子类实例化的对象调用这些相同的方法后却可以获得完全不同的结果，这种技术就是多态性。<br>多态性增强了软件的灵活性。<br>1、易维护<br>采用面向对象思想设计的结构，可读性高，由于继承的存在，即使改变需求，那么维护也只是在局部模块，所以维护起来是非常方便和较低成本的。<br>2、质量高<br>在设计时，可重用现有的，在以前的项目的领域中已被测试过的类使系统满足业务需求并具有较高的质量。<br>3、效率高<br>在软件开发时，根据设计的需要对现实世界的事物进行抽象，产生类。使用这样的方法解决问题，接近于日常生活和自然的思考方式，势必提高软件开发的效率和质量。<br>4、易扩展<br>由于继承、封装、多态的特性，自然设计出高内聚、低耦合的系统结构，使得系统更灵活、更容易扩展，而且成本较低。<br>2 合并两个数组有几种方式，试比较它们的异同<br>方式：<br>1、array_merge()<br>2、’+’<br>3、array_merge_recursive<br>异同：<br>array_merge 简单的合并数组<br>array_merge_recursive 合并两个数组，如果数组中有完全一样的数据，将它们递归合并<br>array_combine 和 ‘+’ ：合并两个数组，前者的值作为新数组的键</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -222,9 +645,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-15 18:08:13 / 修改时间：20:53:44" itemprop="dateCreated datePublished" datetime="2022-03-15T18:08:13+08:00">2022-03-15</time>
+      <time title="创建时间：2022-03-15 18:08:13" itemprop="dateCreated datePublished" datetime="2022-03-15T18:08:13+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-17 21:52:26" itemprop="dateModified" datetime="2022-03-17T21:52:26+08:00">2022-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -233,6 +662,10 @@
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Widget/" itemprop="url" rel="index"><span itemprop="name">Widget</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Widget/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
         </span>
     </span>
 
@@ -432,9 +865,15 @@ ListWheelScrollView(
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-15 18:02:16 / 修改时间：22:05:26" itemprop="dateCreated datePublished" datetime="2022-03-15T18:02:16+08:00">2022-03-15</time>
+      <time title="创建时间：2022-03-15 18:02:16" itemprop="dateCreated datePublished" datetime="2022-03-15T18:02:16+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-17 21:52:12" itemprop="dateModified" datetime="2022-03-17T21:52:12+08:00">2022-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -443,6 +882,10 @@ ListWheelScrollView(
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Widget/" itemprop="url" rel="index"><span itemprop="name">Widget</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Widget/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
         </span>
     </span>
 
@@ -765,9 +1208,15 @@ RaisedButton(
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-15 15:06:52 / 修改时间：16:06:52" itemprop="dateCreated datePublished" datetime="2022-03-15T15:06:52+08:00">2022-03-15</time>
+      <time title="创建时间：2022-03-15 15:06:52" itemprop="dateCreated datePublished" datetime="2022-03-15T15:06:52+08:00">2022-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-17 21:52:23" itemprop="dateModified" datetime="2022-03-17T21:52:23+08:00">2022-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -776,6 +1225,10 @@ RaisedButton(
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Architecture/" itemprop="url" rel="index"><span itemprop="name">Architecture</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Architecture/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
         </span>
     </span>
 
@@ -1677,9 +2130,15 @@ void main() async {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-14 09:09:08 / 修改时间：09:42:01" itemprop="dateCreated datePublished" datetime="2022-03-14T09:09:08+08:00">2022-03-14</time>
+      <time title="创建时间：2022-03-14 09:09:08" itemprop="dateCreated datePublished" datetime="2022-03-14T09:09:08+08:00">2022-03-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-17 21:52:20" itemprop="dateModified" datetime="2022-03-17T21:52:20+08:00">2022-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1688,6 +2147,10 @@ void main() async {
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Architecture/" itemprop="url" rel="index"><span itemprop="name">Architecture</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Architecture/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
         </span>
     </span>
 
@@ -2066,9 +2529,15 @@ Widget build(BuildContext context) {
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-13 22:34:28 / 修改时间：22:55:30" itemprop="dateCreated datePublished" datetime="2022-03-13T22:34:28+08:00">2022-03-13</time>
+      <time title="创建时间：2022-03-13 22:34:28" itemprop="dateCreated datePublished" datetime="2022-03-13T22:34:28+08:00">2022-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-17 21:52:34" itemprop="dateModified" datetime="2022-03-17T21:52:34+08:00">2022-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2077,6 +2546,10 @@ Widget build(BuildContext context) {
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
         </span>
     </span>
 
@@ -2220,7 +2693,7 @@ Widget build(BuildContext context) {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-13 22:54:19" itemprop="dateModified" datetime="2022-03-13T22:54:19+08:00">2022-03-13</time>
+      <time title="修改时间：2022-03-17 21:52:30" itemprop="dateModified" datetime="2022-03-17T21:52:30+08:00">2022-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2229,6 +2702,10 @@ Widget build(BuildContext context) {
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
         </span>
     </span>
 
@@ -2539,7 +3016,7 @@ class _HomeScreenState extends State&lt;HomeScreen&gt; {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-13 22:58:03" itemprop="dateModified" datetime="2022-03-13T22:58:03+08:00">2022-03-13</time>
+      <time title="修改时间：2022-03-17 21:52:16" itemprop="dateModified" datetime="2022-03-17T21:52:16+08:00">2022-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2548,6 +3025,10 @@ class _HomeScreenState extends State&lt;HomeScreen&gt; {
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
         </span>
     </span>
 
@@ -2760,390 +3241,6 @@ final vm = Provider.of&lt;MovieListViewModel&gt;(context);<span aria-hidden="tru
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="木辛念做梓">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="酷学小栈">
-      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 酷学小栈">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">iOS开发者们，你们也许需要这5个神奇的工具</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-03-07 15:42:12 / 修改时间：16:20:22" itemprop="dateCreated datePublished" datetime="2022-03-07T15:42:12+08:00">2022-03-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/" itemprop="url" rel="index"><span itemprop="name">工具篇</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>世上有着数以万计的工具，这些工具都不同程度上为我们的开发提供了很大的帮助，也许你正在使用着这样的工具，不过，你想不想来看看我今天给你们推荐的这5款相当神奇的工具捏？</p>
-<img src="/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/1.jpeg" class="" title="示意图 width=400">
-
-<ol>
-<li>Xcodes</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">这是一款非常好用的工具，它可以非常简单的管理你已经安装的多款不同版本的Xcode，包括：安装和切换哟<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>用过的人都知道，支持多个Xcode版本并与betas保持同步十分惹人恼怒，而且还会消耗大量磁盘空间。打开官网一个个查找您需要的一个 Xcode 版本非常烦人！</p>
-<p>现在，福利来了，使用Xcodes这款软件，你可以非常简单的下载并且管理所有你需要的Xcode的版本。不仅可以查看已经安装的版本，还能通过简单的点击获取到不同的版本，只需要点击一下哟。</p>
-<p>价格？是免费的，哈！<br>如果你现在就像去尝试，那么请移步<a target="_blank" rel="noopener" href="https://github.com/RobotsAndPencils/XcodesApp/">GitHub</a>。</p>
-<img src="/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/2.png" class="" title="示意图 width=400">
-
-<ol start="2">
-<li>DevCleaner for Xcode</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">如果您想回收用于各种 Xcode 缓存的数十 GB 存储空间 - 这个工具适合您！<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>旧的 Xcode 和 iOS 版本、派生数据、文档和日志……我们的 Mac 上堆积了很多垃圾。 DevCleaner 会清除您的开发人员目录并列出所有不需要的垃圾。🧹</p>
-<p>您可以选择要保存的内容，也可以选择一键删除不需要的内容。这样，您可以在短时间内节省大量的硬盘空间。使用此工具，您会真真切切的感受到减少很多磁盘空间的快感。</p>
-<p>Price: free</p>
-<p>价格？使用是免费的，但是存在应用内付费情况</p>
-<p>登录<a target="_blank" rel="noopener" href="https://apps.apple.com/de/app/devcleaner-for-xcode/id1388020431?mt=12">Mac App Store</a> 去下载吧</p>
-<img src="/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/3.jpg" class="" title="示意图 width=400">
-
-<ol start="3">
-<li>ControlRoom</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">掌控你的 iOS 模拟器<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>这个应用程序可以增强您的模拟器！ 🚀</p>
-<p>它提供对语言和位置设置的便捷访问，并允许更改时间、电池电量和网络状态。它还可以触发推送通知并模拟位置变化。</p>
-<p>价格？免费的</p>
-<p>下载：克隆 <a target="_blank" rel="noopener" href="https://github.com/twostraws/ControlRoom">GitHub</a> 项目并使用 Xcode 构建项目。使用这个应用程序可能稍微有一些难度，但对开发人员的你来说应该没什么问题吧 😉</p>
-<img src="/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/4.png" class="" title="示意图 width=400">
-
-<ol start="4">
-<li>SwiftAlyzer</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">使用这个软件之后，你可以想看谷歌地图一样查看你的Swift代码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>SwiftAlyzer可以分析和可视化您的项目。了解您的应用程序的结构，以及包含哪些类、结构、协议和枚举，以及相互之间的关系。</p>
-<p>没事的时候用用，你会发现这个应用程序和我一样有用😁</p>
-<p>价格？免费</p>
-<p>下载：需要在其<a target="_blank" rel="noopener" href="https://swiftalyzer.com/">网站</a>下载。</p>
-<img src="/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/5.png" class="" title="示意图 width=400">
-
-<ol start="5">
-<li>Fireworks</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">Swift 的粒子效果<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>您是否曾经创建过粒子效果来为您的应用程序添加特殊的触感？<br>如果是这样，您将知道需要多少尝试和错误才能以您想要的方式获得 CAEmitterLayer 和 CAEmitterCells。</p>
-<p>Fireworks 是一个创建粒子效果的编辑器。您可以更改效果的各个方面并立即查看结果。<br>最棒的是：它会生成 Swift 代码，因此您可以使用刚刚配置的效果。</p>
-<p>这个应用程序是每个使用粒子效果的人必备的！ 🎆</p>
-<p>价格: 免费 (网站), 4.99$ (Mac App Store)</p>
-<p>下载: 可以从其<a target="_blank" rel="noopener" href="https://www.fireworksapp.xyz/">网站</a>下载这个app。您也可以从 [Mac App Store](您也可以从 Mac App Store 购买) 购买。</p>
-<img src="/2022/03/07/iOS%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%EF%BC%8C%E4%BD%A0%E4%BB%AC%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E8%BF%995%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B7%A5%E5%85%B7/6.gif" class="" title="示意图 width=400">
-
-<p>感谢您的阅读，我希望，通过这篇文章让您找到了一个新的应用程序来试用。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="木辛念做梓">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="酷学小栈">
-      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 酷学小栈">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/" class="post-title-link" itemprop="url">从0开始使用flutter和flame创建手机游戏</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-01-31 09:02:04" itemprop="dateCreated datePublished" datetime="2022-01-31T09:02:04+08:00">2022-01-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-08 11:14:55" itemprop="dateModified" datetime="2022-02-08T11:14:55+08:00">2022-02-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/" itemprop="url" rel="index"><span itemprop="name">深入浅出系列</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>为啥要做游戏开发呢？<br>不得不承认，游戏是一个非常让人着迷的活动（孩子们不要沉迷哟）。<br>我很喜欢玩游戏，虽然不是非常非常痴迷，但是也因此入手了好几部游戏机，其实我一直心心念念的向入手一部小霸王（此处可以认为是软广，小霸王不要忘了给我广告费，哈哈）红白机，和我的孩子一起怀念一下我小时候的快乐。<br>你们是不是也有这样的情愫呢？</p>
-<p>游戏之所以这么吸引人，也许是因为，他可以从简单和线性的游戏玩法到真正复杂的涉及 3D、几乎真实的物理引擎、逼真的图形、程序生成的世界以及适应玩家选择的故事情节。</p>
-<p>有很多很多的人，肯定都像木辛老师一样，想做出属于自己的精美、好玩的游戏。如果你在这一群人里边，那么恭喜你，本篇内容将带领你入门一款经典的游戏引擎。不过，本篇更多的关注的是理论知识，暂时没有涉猎实际开发效果，也并没有讲到如何发布游戏。所以，如果你想巩固游戏开发过程中的理论知识，建议你好好读读这篇文章哈。</p>
-<p>编写过程中难免会有纰漏，如果恰巧您发现了这些问题，可以给我留言或者私信告诉我，我会以最快的速度修正，再次非常感谢！</p>
-<h2 id="阅前必备技能"><a href="#阅前必备技能" class="headerlink" title="阅前必备技能"></a>阅前必备技能</h2><p>本文将假设您已经是一名开发人员，并且对开发软件的概念有扎实的掌握。<br>当然了，如果您是新手，那也没有关系，只要您对游戏开发有足够的兴趣，这也是可以的。</p>
-<p>虽然，兴趣是第一老师，是催动你进步的助力，但是这还不算准备就绪。开始游戏，你还需要一台电脑，足够让你配置好开发所需要的环境，以便于可以编写和编译代码。<br>更好一些的，如果你恰巧配备了一台Android手机，那么你就可以在其上进行软件的测试和实际的使用体验啦。<br>SO，欲善其事，先来利其器吧！</p>
-<p>使用Flutter编写的程序可以被编译和构建在Android手机和iOS手机上边。<br>Android手机用的十分广泛，所以本章节会主要以Android手机为例，你可以通过准备的Android设备进行开发和调试，一旦你完成了这个程序，就可以很轻易的通过不同的构建命令实现iOS设备上的运行。</p>
-<p>再一次假设，你已经顺利完成了如下步骤：</p>
-<ol>
-<li>Microsoft Visual Studio Code：使用任何IDE或者文本编辑工具都可以编写程序，当然了，如果你是一个新手，那么强烈推荐你使用VSCode，它将会给你带来一个与众不同的感觉。<br>一定要从官网下载软件哟，否则一不小心下载到流氓软件就不好了。<br>还有一件挺重要的事情，安装好VScode之后可以安装一下Flutte和Dart的插件，虽然这个不是必须要的，但是配置好了以后，对你的开发工作会有很大的帮助。</li>
-</ol>
-<p>如下两个准备，必须要做，一定要做，不得不做吖。<br>Android SDK：如果你想编写Android程序的话，这个一定要有。<br>如果你觉得一步步地配置太麻烦，也可以直接下载Android Studio开发工具，这样就可以一键完成所有配置。<br>当然了，也有一些同学不想安装这个“巨大”的工具，指向最小化安装，那么你只需要安装SDK就可以啦。<br>接下来的这个“装备”，你是必须、必须、必须一定要安装的，否则你就没有办法开发Flutter程序啦！<br>Flutter SDK/Framework：除了Flutter还有Flame这个插件，这个才是我们今天内容的主角，使用这两个玩意才能最终完成游戏的开发。</p>
-<h2 id="那么，接下来让我们开始游戏开发之旅吧"><a href="#那么，接下来让我们开始游戏开发之旅吧" class="headerlink" title="那么，接下来让我们开始游戏开发之旅吧!"></a>那么，接下来让我们开始游戏开发之旅吧!</h2><p>让我们先从一个非常非常简单的开始。<br>我们这款游戏是这样的，在一整个黑色的屏幕中有一块白色的方块，我们把它放置在屏幕的正中间，当你点击这个白色的方块的时候，它就会变成绿色，这样你就赢了（不要太简单啦）。</p>
-<p>我们暂时先不用比较复杂的元素，所以，在这个游戏中我么不会使用图片文件什么的。</p>
-<p>所以，现在正式开始！</p>
-<h2 id="第一步，创建一个Flutter程序项目"><a href="#第一步，创建一个Flutter程序项目" class="headerlink" title="第一步，创建一个Flutter程序项目"></a>第一步，创建一个Flutter程序项目</h2><p>打开终端（就是计算机中可以输入命令行的东东），并且定位到你要创建的项目目录下，然后执行如下命令：</p>
-<pre class="line-numbers language-none"><code class="language-none">$ flutter create boxgame<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>此命令使用 Flutter 命令行工具为您初始化和引导一个基本的移动应用程序。</p>
-<p>如果需要，您可以选择除 boxgame 以外的任何名称。只需确保将所有 boxgame 实例替换为您在后续操作中使用的任何内容。</p>
-<p>此时，您可以在 Visual Studio Code 中打开生成的 boxgame 文件夹，也可以使用以下命令立即运行您的应用程序：</p>
-<pre class="line-numbers language-none"><code class="language-none">$ cd boxgame
-$ flutter run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>第一次运行新创建的应用程序可能需要一段时间。当移动应用程序运行时，您应该会看到如下内容：</p>
-<img src="/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/1.png" class="" title="第一次运行新项目 width=400">
-
-<h2 id="第二步：安装Flame插件并且清理一下项目"><a href="#第二步：安装Flame插件并且清理一下项目" class="headerlink" title="第二步：安装Flame插件并且清理一下项目"></a>第二步：安装Flame插件并且清理一下项目</h2><pre class="line-numbers language-none"><code class="language-none">注意：从这里开始，我们将项目目录称为 ./。如果你的游戏项目在 ~/boxgame 中，./lib/main.dart 指的是 ~/boxgame/lib/main.dart 中的文件。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>启动 Visual Studio Code 并打开上一步创建的 boxgame 目录。</p>
-<p>由于我们将使用简单而强大的 Flame 插件，因此我们需要将其添加到我们的应用程序将依赖的 Dart 包列表中。在 IDE 的左侧，您将看到项目文件夹中的文件列表。打开 ./pubspec.yaml 并在依赖项下的 cupertino_icons 行下方添加以下行（注意缩进）。</p>
-<pre class="line-numbers language-none"><code class="language-none">flame: ^1.0.0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>你应该会看到像我这里差不多的样子：</p>
-<img src="/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/2.png" class="" title="VSC打开的样子">
-
-<p>如果您使用的是 Visual Studio Code，IDE 将在保存文件时自动为您安装插件。</p>
-<p>您可以通过打开终端、导航到项目文件夹并运行 flutter packages get 来手动完成。</p>
-<p>下一步是清理主代码，删除掉Flutter 项目中./lib/main.dart 文件中所有内容，并将其替换为空程序。</p>
-<p>空程序只有一行：void main() {}。</p>
-<p>您会注意到的一件事是，我们将 import 语句留在了顶部。我们将在稍后启动游戏时运行 runApp 方法时使用material库。您现在应该有如下所示的内容：</p>
-<img src="/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/3.png" class="" title="清空主程序的样子">
-
-<p>另一件事是 ./test 文件夹中的文件显示错误。如果您没有使用 Visual Studio Code，这可能不会显示，但您的应用程序将不会运行。</p>
-<p>测试（和测试驱动的开发）超出了本教程的范围，所以要解决这个问题，只需删除整个测试文件夹。</p>
-<h2 id="第三步：设置游戏循环逻辑"><a href="#第三步：设置游戏循环逻辑" class="headerlink" title="第三步：设置游戏循环逻辑"></a>第三步：设置游戏循环逻辑</h2><p>现在我们要设置游戏循环……</p>
-<p>但是什么是游戏循环？<br>游戏循环是游戏的核心。计算机反复运行的一组指令。</p>
-<p>游戏中通常有个概念叫做FPS。它代表每秒帧数。这意味着如果您的游戏以 60 fps 运行，则计算机每秒运行您的游戏循环 60 次。</p>
-<p>简而言之：一帧 = 一次游戏循环。</p>
-<p>一个基本的游戏循环由两部分组成，更新和渲染。</p>
-<img src="/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/game-loop.png" class="" title="game_loop">
-
-<p>更新部分处理对象的移动（如角色、敌人、障碍物、地图本身）和其他需要更新的东西（例如计时器）。</p>
-<p>大部分动作都发生在这里。</p>
-<p>例如，计算敌人是否被子弹击中或计算敌人是否接触主角(主角通常不喜欢这样)。</p>
-<p>渲染部分在屏幕上绘制所有对象。这是一个单独的进程，因此一切都是同步的。</p>
-<h2 id="为啥需要同步捏？"><a href="#为啥需要同步捏？" class="headerlink" title="为啥需要同步捏？"></a>为啥需要同步捏？</h2><p>想象一下，如果你正更新主角的位置呐。如果这个主角没啥“异议（没有变化）”，那么一切皆无恙。</p>
-<p>但是，说来不巧，正好有一颗子弹就在几个像素之外。您恰巧更新了子弹，并且它击中了您的角色。</p>
-<p>现在，主角死了，所以你不要拔出子弹。而此时，您绘制完角色垂死动画的第一帧，在下一个周期中，您将跳过更新角色，改为渲染他垂死动画的第一帧（而不是第二帧）。</p>
-<p>这会给你的游戏一种生涩的感觉。想象一下玩射击游戏，你射击一个敌人，他没有倒下，你再次射击，但在子弹击中之前他就死了，死了，死了，了。。。</p>
-<p>非同步渲染的抖动性能可能并不明显（尤其是在每秒运行 60 帧时），但如果这种情况发生得太频繁，玩家就会感觉你这款游戏是不是还没搞完，直接就弃了。</p>
-<p>SO，您是真希望计算所有内容，并且当所有对象的状态都计算并最终确定之后，才会绘制屏幕上。</p>
-<h2 id="使用Flame"><a href="#使用Flame" class="headerlink" title="使用Flame"></a>使用Flame</h2><p>Flame 已经有处理这些边边角角的代码了，所以我们只需要关注编写实际的更新和渲染过程。</p>
-<p>但首先，我们的应用程序需要做两个准备：一个是全屏，一个是竖屏锁定。</p>
-<p>Flame 还为这些提供了实用功能。因此，让我们将它们添加到我们的代码中。</p>
-<p>以下这几行代码请添加到文件的顶部：</p>
-<pre class="line-numbers language-none"><code class="language-none">import 'package:flame/flame.dart';
-import 'package:flutter/services.dart';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>然后在 main 函数中，我们可以直接使用Flame.device静态调用的方式，使用 fullscreen 和 setOrientation 函数，一定要耐心等待哟，因为这些函数返回一个 Future。</p>
-<pre class="line-numbers language-none"><code class="language-none">await Flame.device.fullScreen();
-await Flame.device.setOrientation(DeviceOrientation.portraitUp);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>注意：Futures、async 和 await 是编码实践，允许您“等待”一个较长的进程完成而不会阻塞其他所有内容。如果您有兴趣了解它们，</p>
-<a href="https://www.dartlang.org/tutorials/language/futures" title="可以从 Dart 的官方网站阅读此页面" target=""></a> 。
-
-<p>为了能够等待 Futures，上下文必须在异步函数中。所以让我们把 main 函数转换成一个异步函数。</p>
-<pre class="line-numbers language-none"><code class="language-none">void main() async {<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>最后，您应该有如下所示的内容：</p>
-<img src="/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/4.png" class="" title="使用flame">
-
-<p>要利用 Flame 插件提供的游戏循环机制，我们必须创建一个 Flame 的 Game 类的子类。为此，请在 ./lib 下创建一个新文件并将其命名为 box-game.dart。</p>
-<p>然后我们将编写一个名为 BoxGame 的类（如果你知道类是如何工作的，你可以使用任何类）来扩展 Flame 的 Game 类。</p>
-<pre class="line-numbers language-none"><code class="language-none">import 'dart:ui';
-
-import 'package:flame/game.dart';
-
-class BoxGame extends Game {
-  void render(Canvas canvas) {
-    // TODO: implement render
-  }
-
-  void update(double t) {
-    // TODO: implement update
-  }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>让我们分解一下：我们导入 Dart 的 ui 库，这样就可以使用 Canvas 类，然后使用 Size 类。<br>我们导入 Flame 的游戏库，其中包括正在扩展的 Game 类。其他所有内容都是具有两种方法的类定义：更新和渲染。这些方法会覆盖父类（也称为超类）的同名方法。</p>
-<pre class="line-numbers language-none"><code class="language-none">注意：@override 注释在 Dart 2 中是可选的，所以，如果你找不到它也不找着急，这是正常的。 
-new 关键字也是可选的，所以我们也不会使用它。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>下一步是创建此 BoxGame 类的实例并将其小部件属性传递给 runApp。</p>
-<p>让我们回到 ./lib/main.dart 并在文件的最顶部插入以下行：</p>
-<pre class="line-numbers language-none"><code class="language-none">import 'package:boxgame/box-game.dart';<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>该行确保 BoxGame 类可以在 main.dart 中使用。<br>接下来，创建 BoxGame 类的实例并将其小部件属性传递给 runApp 函数。<br>在 main 函数的末尾（右大括号 } 上方）插入以下行。</p>
-<pre class="line-numbers language-none"><code class="language-none">BoxGame game = BoxGame();
-runApp(game.widget);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>现在我们的移动应用程序就可以称作是一个游戏啦！</p>
-<p>如果你运行游戏，你只会看到一个空白/黑屏，因为屏幕上还没有绘制任何东西。</p>
-<p>您的 main.dart 文件应如下所示：</p>
-<img src="/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/5.png" class="" title="run_app">
-
-<h2 id="第四步：绘制界面"><a href="#第四步：绘制界面" class="headerlink" title="第四步：绘制界面"></a>第四步：绘制界面</h2><p>在屏幕上绘图之前，我们必须提前知道屏幕的大小。<br>Flutter 在屏幕上绘图时使用逻辑像素，因此您不必担心调整游戏对象的大小。</p>
-<p>一英寸的设备包含大约 96 个逻辑像素。因此，假设我们将手机作为我们的发布平台。大多数现代和主流手机的尺寸都差不多，因为我们的游戏非常简单，我们不必担心尺寸。</p>
-<p>Flame 建立在这个大小系统之上，而 Game 类实际上有一个我们可以覆盖的调整大小的函数。这个函数接受一个 Size 参数，我们可以通过这个参数确定屏幕的大小（以逻辑像素为单位）。</p>
-<p>首先，让我们在类级别声明一个变量。这个变量（也称为实例变量）将保存屏幕的大小，并且仅在屏幕改变大小时更新（对于我们的游戏应该只发生一次）。这也是在屏幕上绘制对象时的基础。这个变量的类型应该是 Size。与传递给 resize 函数的内容相同。</p>
-<pre class="line-numbers language-none"><code class="language-none">class BoxGame extends Game {
-  Size screenSize;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>screenSize 变量将被初始化为 null。在检查我们是否知道渲染过程中的屏幕大小时，这将很有帮助。稍后再谈。</p>
-<p>接下来，让我们在 ./lib/box-game.dart 中添加重载函数resize()。</p>
-<pre class="line-numbers language-none"><code class="language-none">void resize(Size size) {
-  screenSize = size;
-  super.resize(size);
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>注意：超类的 resize 函数实际上是空的，但调用我们要覆盖的超类的超函数是个好主意。除非我们完全想重写该函数。所以，让我们先把它留在这里吧。</p>
-<p>另一个需要注意的地方：实例变量是可以从类的所有方法/函数访问的变量。例如，您可以在调整大小时设置它，然后在渲染时获取它的值。</p>
-<p>您的代码应如下所示：</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -3169,14 +3266,14 @@ runApp(game.widget);<span aria-hidden="true" class="line-numbers-rows"><span></s
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">155k</span>
+    <span title="站点总字数">164k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:21</span>
+    <span title="站点阅读时长">2:29</span>
   </span>
 </div>
 <div class="busuanzi-count">
