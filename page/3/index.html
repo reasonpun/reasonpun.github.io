@@ -225,6 +225,13 @@
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:43:27" itemprop="dateModified" datetime="2022-03-18T11:43:27+08:00">2022-03-18</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -316,6 +323,13 @@
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:34" itemprop="dateModified" datetime="2022-03-18T11:42:34+08:00">2022-03-18</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -352,109 +366,14 @@
 </ul>
 </li>
 </ul>
-<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><p>Hadoop cluster 服务</p>
-<ul>
-<li>HDFS</li>
-<li>YARN</li>
-<li>Zookeeper</li>
-<li>Kafka</li>
-<li>Spark (on YARN)</li>
-</ul>
-<p>Note that for CDH, Kafka is available as a parcel from <a target="_blank" rel="noopener" href="http://www.cloudera.com/content/cloudera/en/developers/home/cloudera-labs/apache-kafka.html">Cloudera Labs</a>.</p>
-<p>Kafka brokers 需要配置在集群中，根据实例，需要注意hosts和端口。端口一般会设置为9092，此处和ZK server的端口保持一致，缺省设置为2181。缺省端口会在随后的例子中使用。</p>
-<p>多个hosts需要通过逗号分割，并需要提供host:port 这种方式，比如 ： your-zk-1:2181,your-zk-2:2181。</p>
-<p>同时需要注意，你的ZK实例是否使用了chroot path。这是一个简单的路径前缀，比如 your-zk:2181/your-chroot<br>/kafka 是经常用到作为前缀的。如果没有使用chroot，就可以忽略这个。注意：如果存在多个ZK server，和一个chroot，只需要在最后添加一次chroot即可，比如 your-zk-1:2181,your-zk-2:2181/kafka</p>
-<h3 id="配置Kafka"><a href="#配置Kafka" class="headerlink" title="配置Kafka"></a>配置Kafka</h3><p>Oryx 使用2个Kafka topics 做数据传输。</p>
-<ul>
-<li>一个传输输入数据到批量处理，和实时计算层</li>
-<li>另一个同步模型更新到服务层</li>
-</ul>
-<p>缺省的topics的名称分别为OryxInput 和 OryxUpdate，只有Oryx服务启动后才能创建这两个topics。</p>
-<p>输入topic的分区数目会影响消费数据的Spark Streaming 作业的分区数，甚至是并发数。比如，批量处理层读取HDFS上的历史数据分区和Kafka数据。</p>
-<p>如果输入topic只有一个分区，且在每个时间间隔内有大量的数据涌入，这时Kafka基于的输入分区相对的需要很长的时间去处理。一个比较合适的经验值是选择一些topic分区，在一个批处理时间间隔内到达的大量数据，大约是一个HDFS块大小，缺省值是128MB。</p>
-<p>提供的oryx-run.sh kafka设置脚本，缺省设置为4个分区，当然了，这个值之后是可以修改的。必须注意不能设置更新topic多于1个分区。</p>
-<p>重复因子可以设置为任何值，但是建议最少是2。注意：重复因子数目不能超过Kafka brokers在集群上的数目。所以提供的设置脚本里缺省设置重复因子为1. 之后你可以通过kafka-topics –zookeeper … –alter –topic … –replication-factor N 等修改这些缺省值。</p>
-<p>你需要为其中一个或者两个topic配置持续时间。尤其重要的是需要限制更新topic的持续时间，因为实时计算层和服务层需要从启动开始的起点获取整个topic。这个机制并不如输入数据重要，输入数据不会再次从头读取数据。</p>
-<p>设置这个值为批量处理层更新间隔的2倍是比较合适。比如设置该值为1天（24 * 60 * 60 * 1000 = 86400000 ms），设置topic的为86400000ms。这个可以通过oryx-run.sh设置脚本自动设置。</p>
-<p>上述两个topics会包含大量信息；尤其是更新topic包含整个序列化的PMML模型。很有可能他会超过Kafka缺省最大消息的大小（kafka消息最大1Mib）。如果有更大的数据则需要设置topic’s max.message.bytes。oryx-run.sh Kafka设置脚本设置更新topic缺省为16Mib。这也是Oryx试图吸入更新topic里的模型的最大值默认；更大的模型只会以文件的形式保存到HDFS中的路径中。请查看属性oryx.update-topic.message.max-size。</p>
-<p>Kafka代理的message.max.bytes属性可以控制这个，但是设置这个值会影响到代理管理的所有的topics，甚至包括不良状态的topics。可以通过查看性能和资源部分了解更多。尤其是需要注意的，必须设置代理的replica.fetch.max.bytes属性，以防止重复任何非常大的消息。</p>
-<blockquote>
-<p>There is no per-topic equivalent to this.</p>
-</blockquote>
-<h3 id="Kafka配置自动设置"><a href="#Kafka配置自动设置" class="headerlink" title="Kafka配置自动设置"></a>Kafka配置自动设置</h3><p>提供的oryx-run.sh脚本可以打印ZK的当前配置，列出已经存在的Kafka中的topics，如果需要，会创建配置好的输入topics和更新topics。</p>
-<p>你需要先创建Oryx配置文件，或者可以拷贝conf/als-example.conf。需要按照要求修改Kafka和ZK的配置文件，比如topic名称。</p>
-<p>oryx.conf文件需要和每个层的JAR文件放在同一个目录下，然后执行：</p>
-<pre class="line-numbers language-none"><code class="language-none">./oryx-run.sh kafka-setup
-
-Input  ZK:    your-zk:2181
-Input  Kafka: your-kafka:9092
-Input  topic: OryxInput
-Update ZK:    your-zk:2181
-Update Kafka: your-kafka:9092
-Update topic: OryxUpdate
-
-All available topics:
-
-
-Input topic OryxInput does not exist. Create it? y
-Creating topic OryxInput
-Created topic "OryxInput".
-Status of topic OryxInput:
-Topic:OryxInput	PartitionCount:4	ReplicationFactor:1	Configs:
-	Topic: OryxInput	Partition: 0	Leader: 120	Replicas: 120,121	Isr: 120,121
-	Topic: OryxInput	Partition: 1	Leader: 121	Replicas: 121,120	Isr: 121,120
-	Topic: OryxInput	Partition: 2	Leader: 120	Replicas: 120,121	Isr: 120,121
-	Topic: OryxInput	Partition: 3	Leader: 121	Replicas: 121,120	Isr: 121,120
-
-Update topic OryxUpdate does not exist. Create it? y
-Creating topic OryxUpdate
-Created topic "OryxUpdate".
-Updated config for topic "OryxUpdate".
-Status of topic OryxUpdate:
-Topic:OryxUpdate	PartitionCount:1	ReplicationFactor:1	Configs:retention.ms=86400000,max.message.bytes=16777216
-	Topic: OryxUpdate	Partition: 0	Leader: 120	Replicas: 120,121	Isr: 120,121<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>查看发送到输入和更新topic，监控应用的动作，可以执行：</p>
-<pre class="line-numbers language-none"><code class="language-none">./oryx-run.sh kafka-tail
-Input  ZK:    your-zk:2181
-Input  Kafka: your-kafka:9092
-Input  topic: OryxInput
-Update ZK:    your-zk:2181
-Update Kafka: your-kafka:9092
-Update topic: OryxUpdate
-
-...output...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>接着在另外一个窗口，可以接受输入数据，比如将来自终端用户的文档data.csv加入到输入队列，并验证：</p>
-<pre class="line-numbers language-none"><code class="language-none">./oryx-run.sh kafka-input --input-file data.csv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>如果以上全部成功了，可以关闭这些进程。集群至此已经准备好运行Oryx了。</p>
-<h3 id="HDFS和数据层"><a href="#HDFS和数据层" class="headerlink" title="HDFS和数据层"></a>HDFS和数据层</h3><p>在Oryx中，Kafka是数据传输的途径，因此数据在Kafka中只是需要暂时存放的。然而输入数据也会持久化到HDFS中以备之后使用。同样的，模型和更新用来为Kafka的更新topic提供数据，模型也会持久化到HDFS以备之后引用。</p>
-<p>oryx.batch.storage.data-dir定义了输入数据存放在HDFS中的位置。在这个目录下，子目录标题会以oryx-[timestamp].data形式创建，每一个会通过Spark Straming在批量处理层执行。在这里，时间戳格式格式与Unix相同，且以毫秒为单位。</p>
-<p>实际上，和大多数Hadoop中分布式进程输出的『文件』一样，存在这样的一个子目录，包含了很多以part-开头的文件。每个文件都是序列化文件，通过Writable类序列化Kafka输入topics的键值，Writable类实现自oryx.batch.storage.key-writable-class 和 oryx.batch.storage.message-writable-class类。默认情况下，这是TextWritable，并且keys和消息是以字符串形式被记录下来的。</p>
-<p>该目录下的数据会被删除。也就不会再次被批处理层计算使用。尤其是，设置oryx.batch.storage.max-age-data-hours为一个非负数，将会使批处理层自动删除大于给定时间的数据。</p>
-<p>同样的，在每个批处理间隔内被批处理层选中的模型会被原始的机器学习应用（扩展子MLUpdate）输出。也会被持久化到oryx.batch.storage.model-dir定义的目录下的子目录中。在这个目录下，子目录的命名都是以时间戳形式实现的，同Unix毫秒形式。</p>
-<p>子目录下的内容取决于应用，但是一般会包含以model.pmml命名的PMML模块，并且和模块一起存在的可选的追加文件。</p>
-<p>这个目录之所以存在是因为需要记录PMML模块用来归档用或者被其他工具使用。也可按照规则删除其内容。</p>
-<h3 id="捕获错误"><a href="#捕获错误" class="headerlink" title="捕获错误"></a>捕获错误</h3><p>最后，你可能希望停止其中一个或者几个层的运行，或者重启。服务也可能挂鸟。这到底发生了神马？为啥会这样捏？</p>
-<h4 id="数据丢失"><a href="#数据丢失" class="headerlink" title="数据丢失"></a>数据丢失</h4><p>历史数据存放在HDFS中，理论上会存放多个副本。HDFS会确保数据被靠谱的存放着。当设置了副本，Kafka也被设计为采用副本方式应对故障。</p>
-<p>这并没有啥鸟用，这样不能确保数据不会丢失，只能依靠HDFS和Kafka能正常可用罢了。</p>
-<h4 id="服务器挂鸟"><a href="#服务器挂鸟" class="headerlink" title="服务器挂鸟"></a>服务器挂鸟</h4><p>通常情况下，所有的三层服务进程应该会持续的工作，如果不得不停止或者挂鸟的话，服务自己会立即重启。这个可以通过初始化脚本完美的完成或者类似机制（尚未实现鸟）</p>
-<h5 id="服务层"><a href="#服务层" class="headerlink" title="服务层"></a>服务层</h5><p>服务层是无状态的。启动后，他会读取更新topics中的所有的模型和可用更新。当首个可用的模型就绪后，就可以开始应答请求。基于这个原因，需要适当的限制更新topic的持续时间。</p>
-<p>服务层的操作不是分布式的，每个实例是独立的，启动和停止不会影响到其他部分。</p>
-<h5 id="实时计算层"><a href="#实时计算层" class="headerlink" title="实时计算层"></a>实时计算层</h5><p>实时计算层同样也不存在状态，也会在读取全部的模型和更新topic的更新。只要存在合法的模型，就可以生成更新。同时，从最后一次偏移位置开始读取输入topics。</p>
-<p>实时计算层使用Spark和Spark Streaming 做计算。Spark会响应计算过程中失败情况，并重试任务。</p>
-<p>Spark Streaming的Kafka集成模块在某些情况下可以恢复接收的故障。<br>如果是整个进程死掉并被重新启动，oryx.id的值被设定以后，系统会自动从上一次Kafka记录的偏移地址开始读取。（否则，将会从上次偏移地址开始，这就意味着实时计算层没有运行的时候，到达的数据就不会生成任何更新。），同样的，如果实时计算层的模型还没有准备好的话，收到的数据也会被忽略。It effectively adopts “at most once” semantics.</p>
-<p>由于实时计算层的作用是为最后发布的模型提供approximate, “best effort”的更新。这种行为由于其间接性一般是没有问题，且令人满意的。</p>
-<h5 id="批处理层"><a href="#批处理层" class="headerlink" title="批处理层"></a>批处理层</h5><p>批处理层是最复杂的，因为他并生成某些状态：</p>
-<ul>
-<li>历史数据，总是持久化到HDFS</li>
-<li>如果应用选择的话，模型的扩展状态和topics都可以被持久化到HDFS上</li>
-</ul>
-<p>对于多次或者根本不读取数据是非常敏感的，因为他本来就是生产官方下一代模型的组件</p>
-<p>与实时计算层一起，Spark和Spark Streaming在计算过程中可以捕获很多错误情况。也可以管理存储到HDFS中的数据，负责避免两次写入相同数据。</p>
-<p>应用负责回复各自的「状态」，一般情况下，建立在Oryx ML层的应用会将状态写入唯一的子目录中，并且重启后会在新的目录简单的产生一个新状态。前一个状态如果存在的话，也会被完整写入或者被完全忽视。</p>
-<p>批处理层也和实时计算层一样，符合『至多一次』的规则。综上，如果整个进程死掉或者被重启，oryx.id被设置的话，则会从Kafka记录的最后一次偏移重新读取，否则会在最后一次偏移处重新读取数据。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/30/2015-12-21-Oryx2-Admin-Docs/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -511,6 +430,13 @@ Update topic: OryxUpdate
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:38" itemprop="dateModified" datetime="2022-03-18T11:42:38+08:00">2022-03-18</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -540,55 +466,14 @@ Update topic: OryxUpdate
           <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>![Oryx2](/assets/images/posts/oryx/OryxLogoMedium.png)</p>
 <p>Oryx2是专注于进行大规模，实时机器学习框架，遵循lambda规则，基于Apache Spark和Apache Kafka构建。</p>
 <p>Oryx 不仅是构建应用程序的框架，而且包含 协同过滤，分类，回归和聚类的打包的端到端的应用。</p>
-<p>包含3层</p>
-<ul>
-<li>lambda层<ul>
-<li>批量处理</li>
-<li>快速处理</li>
-<li>服务</li>
-</ul>
-</li>
-<li>ML抽象层</li>
-<li>端到端实现层</li>
-</ul>
-<p>从另一个角度，可以看成是一系列链接的元素</p>
-<ul>
-<li>批处理层：依据历史数据进行离线处理</li>
-<li>实时处理层：通过增量数据流，实时更新结果</li>
-<li>服务层：通过模型的传递实现异步查询API</li>
-<li>数据传输层：在外部数据源与处理层之间传输数据</li>
-</ul>
-<p>The project</p>
-<ul>
-<li>may be reused tier by tier for example, the packaged app tier can be ignored, and it can be a framework for building new ML applications.</li>
-<li>It can be reused layer by layer too: for example, the Speed Layer can be omitted if a deployment does not need incremental updates.</li>
-<li>It can be modified piece-by-piece too: the collaborative filtering application’s model-building batch layer could be swapped for a custom implementation based on a new algorithm outside Spark MLlib while retaining the serving and speed layer implementations.</li>
-</ul>
-<p>![Architecture](/assets/images/posts/oryx/Architecture.png)</p>
-<h3 id="Lambda层实现"><a href="#Lambda层实现" class="headerlink" title="Lambda层实现"></a>Lambda层实现</h3><h4 id="数据传输"><a href="#数据传输" class="headerlink" title="数据传输"></a>数据传输</h4><p>  数据传输机制其实就是一个Kafka的Topic。任何一个进程（包含且不局限与服务层）都可以向topic中写入数据，并通过实时处理和批处理层查看。<br>  Kafka Topic也可以用来模型和模型之间的更新，并被实时处理层和服务层消费。</p>
-<h4 id="批处理层"><a href="#批处理层" class="headerlink" title="批处理层"></a>批处理层</h4><p>  批处理层是以Spark Streaming进程的方式实现的，运行在Hadoop Cluster节点上，并读取来自Kafka topic的输入数据。 Streaming 进程会有一个很长的运行周期-若干小时甚至一天。会使用Spark存储当前会话数据到HDFS中，然后合并HDFS上的所有历史数据，之后重新初始化构建新的结果数据。并将新的结果重新写入HDFS，同时发不到Kafka更新topic中。</p>
-<h4 id="实时处理层"><a href="#实时处理层" class="headerlink" title="实时处理层"></a>实时处理层</h4><p>  实时处理层也是由Spark Streaming进程实现的，同样读取Kafka topic输入数据。但是他存在比较短的运行周期，比如秒级别。会持续消费更新topic中的新模型，并生产新的模型。也会回写更新topic。</p>
-<h4 id="服务层"><a href="#服务层" class="headerlink" title="服务层"></a>服务层</h4><p>  服务层监听更新topic上的模型以及模型更新。在内存中持久化模型状态。<br>  会暴露顶层方法的 HTTP REST API 用于查询内存中的模型。大部分接口都支持大规模的部署。<br>  每个接口都可以接收新的数据并写入Kafka，以此在实时处理层和批处理层可见。</p>
-<h4 id="配置和部署"><a href="#配置和部署" class="headerlink" title="配置和部署"></a>配置和部署</h4><p>  程序是基于Java实现的，依赖<br>    * Spark 1.3.x+<br>    * Hadoop 2.6.x+<br>    * Tomcat 8.x+<br>    * Kafka 0.8.2+<br>    * Zookeeper 等。</p>
-<p>  配置文件通过 <a target="_blank" rel="noopener" href="https://github.com/typesafehub/config">Typesafe Config</a> 的方式实现整个系统的部署配置。<br>  包括： 批处理，实时处理，服务层逻辑关键的接口类的实现</p>
-<p>  每个层的二进制形式分开进行打包和部署的，每个都是以可执行的Java的jar包的形式存在并包含所有必须的服务。</p>
-<h3 id="ML层实现"><a href="#ML层实现" class="headerlink" title="ML层实现"></a>ML层实现</h3><p>  ML层对上述通用接口方法做了简单的专一话的实现，实现了通用ML需求，并且对应用暴露了机器学习特有的接入接口。</p>
-<p>  举个例子，实现了批量处理层，用于自动更新测试集和训练集进程。可以调用应用提供的函数来评估测试机模型。通过尝试不同的超参数值，选择出最佳结果。通过PMML管理模型的序列号。</p>
-<h3 id="端到端应用实现"><a href="#端到端应用实现" class="headerlink" title="端到端应用实现"></a>端到端应用实现</h3><p>  除了作为一种框架，Oryx2 包含完整的三中机器学习需要的批处理层，实时处理层，服务层。<br>  开箱即用，或者作为自定义程序的基础：</p>
-<pre><code>* 基于最小二乘法的协同过滤/推荐
-* 基于k-means的聚类
-* 基于随机决策森林的分类和回归
-</code></pre>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
-<li><a target="_blank" rel="noopener" href="http://oryx.io/index.html">http://oryx.io/index.html</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.ivanopt.com/oryx-document%E7%BF%BB%E8%AF%91/">http://www.ivanopt.com/oryx-document%E7%BF%BB%E8%AF%91/</a></li>
-<li><a target="_blank" rel="noopener" href="http://jameskinley.tumblr.com/post/37398560534/the-lambda-architecture-principles-for">http://jameskinley.tumblr.com/post/37398560534/the-lambda-architecture-principles-for</a></li>
-<li><a target="_blank" rel="noopener" href="http://dmg.org/pmml/v4-1/GeneralStructure.html">http://dmg.org/pmml/v4-1/GeneralStructure.html</a></li>
-<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/nxcjh321/article/details/24796879">http://blog.csdn.net/nxcjh321/article/details/24796879</a></li>
-<li><a target="_blank" rel="noopener" href="http://youngfor.me/post/recsys/oryx-tui-jian-xi-tong-chu-ti-yan">http://youngfor.me/post/recsys/oryx-tui-jian-xi-tong-chu-ti-yan</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx">https://github.com/OryxProject/oryx</a></li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/30/2015-12-21-Oryx2-Overview/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -645,6 +530,13 @@ Update topic: OryxUpdate
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:41" itemprop="dateModified" datetime="2022-03-18T11:42:41+08:00">2022-03-18</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -676,211 +568,14 @@ Update topic: OryxUpdate
 Python 2.7.10 (default, Oct 23 2015, 18:05:06)
 [GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="Yield关键字"><a href="#Yield关键字" class="headerlink" title="Yield关键字"></a>Yield关键字</h3><p>理解yield关键字之前需要先明白什么是迭代。</p>
-<h4 id="可迭代对象"><a href="#可迭代对象" class="headerlink" title="可迭代对象"></a>可迭代对象</h4><p>建立一个列表之后，可以逐项的读取列表中的元素，这就是一个可迭代的对象：</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; list = [1, 2, 3, 4]
-&gt;&gt;&gt; for i in list:
-...     print i
-...
-1
-2
-3
-4
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>使用列表生成器建立一个列表，同样也是创建了一个可迭代的对象：</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; list = [x * 2 for x in range(3)]
-&gt;&gt;&gt; list
-[0, 2, 4]
-&gt;&gt;&gt; for i in list:
-...     print i
-...
-0
-2
-4
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>可以使用for .. in .. 的方式处理：链表，字符串等，这就叫做一个迭代器。但是这样会将数据存放到内存中，如果数据量过大的话，就非常不适合了。</p>
-<h4 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h4><p><a target="_blank" rel="noopener" href="http://pyzh.readthedocs.org/en/latest/the-python-yield-keyword-explained.html">生成器是可以迭代的，但是你 只可以读取它一次 ，因为它并不把所有的值放在内存中，它是实时地生成数据</a></p>
-<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; g = (x * 2 for x in range(3))
-&gt;&gt;&gt; g
-&lt;generator object &lt;genexpr&gt; at 0x10978ca00&gt;
-&gt;&gt;&gt; for i in g:
-...     print i
-...
-0
-2
-4
-&gt;&gt;&gt; for i in g:
-...     print i
-...
-&gt;&gt;&gt;
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="yield关键字"><a href="#yield关键字" class="headerlink" title="yield关键字"></a>yield关键字</h4><p>yield 是一个类似return的关键字，但是这个函数返回的是生成器。</p>
-<p>同时我们可以利用 isgeneratorfunction 判断一个特殊的 generator 函数</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; mg = createGenerator()
-&gt;&gt;&gt; print (mg)
-&lt;generator object createGenerator at 0x10978c9b0&gt;
-&gt;&gt;&gt; for i in mg:
-...     print i
-...
-0
-2
-4
-&gt;&gt;&gt; from inspect import isgeneratorfunction
-&gt;&gt;&gt; isgeneratorfunction(mg)
-False
-&gt;&gt;&gt; isgeneratorfunction(createGenerator)
-True
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>需要注意的是：<em>当你调用这个函数的时候，函数内部的代码并不立马执行</em> ，而是返回一个生成器对象。只有当使用for进行迭代的时候，函数内的代码才会执行。</p>
-<h4 id="控制资源访问"><a href="#控制资源访问" class="headerlink" title="控制资源访问"></a>控制资源访问</h4><pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; class Bank():
-...     crisis = False
-...     def createAtm(self):
-...             while not self.crisis:
-...                     yield "$100"
-...
-&gt;&gt;&gt;
-&gt;&gt;&gt; bank = Bank()
-&gt;&gt;&gt; atm = bank.createAtm()
-&gt;&gt;&gt; print(atm.next())
-$100
-&gt;&gt;&gt; print(atm.next())
-$100
-&gt;&gt;&gt; print(atm.next())
-$100
-&gt;&gt;&gt; print(atm.next())
-$100
-&gt;&gt;&gt; atm.crisis = True
-Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-AttributeError: 'generator' object has no attribute 'crisis'
-&gt;&gt;&gt; bank.crisis = True
-&gt;&gt;&gt; print (atm.next())
-Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-StopIteration
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如果不使用yield的话，这个类执行createAtm之后就会导致系统资源耗尽（或者说是无限循环）</p>
-<h4 id="使用yield可以是程序非常优美，虽然python程序本身就会很优美"><a href="#使用yield可以是程序非常优美，虽然python程序本身就会很优美" class="headerlink" title="使用yield可以是程序非常优美，虽然python程序本身就会很优美"></a>使用yield可以是程序非常优美，虽然python程序本身就会很优美</h4><h5 id="生成斐波那契（Fibonacci）数列"><a href="#生成斐波那契（Fibonacci）数列" class="headerlink" title="生成斐波那契（Fibonacci）数列"></a>生成斐波那契（Fibonacci）数列</h5><p>许多初学者都会这么写</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; def fab(max):
-...     n, a, b = 0, 0, 1
-...     while n &lt; max:
-...             print b
-...             a, b = b, a + b
-...             n = n + 1
-...
-&gt;&gt;&gt; fab(5)
-1
-1
-2
-3
-5
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>使用yield改写一个版本</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; def fab(max):
-...     n, a, b = 0, 0, 1
-...     while n &lt; max:
-...             yield b
-...             a, b = b, a + b
-...             n = n + 1
-...
-&gt;&gt;&gt;
-&gt;&gt;&gt; for n in fab(5):
-...     print n
-...
-1
-1
-2
-3
-5
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="简单描述下"><a href="#简单描述下" class="headerlink" title="简单描述下"></a>简单描述下</h4><p>for 语句在碰到生成器 generator 的时候，</p>
-<p>调用</p>
-<pre class="line-numbers language-none"><code class="language-none">generator.__next__()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>获取生成器的返回值。</p>
-<pre class="line-numbers language-none"><code class="language-none">__next__()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>以Fibonacci为例：for每次调用，可以理解为执行了一次generator() 执行到 yield 的时候，生成器返回了n的值并停止。<br>这就像普通函数碰到 return 时一样，剩下的代码都被忽略了。</p>
-<p>不同的地方在于，python 会记录这个停止的位置。 当再次执行generator()的时候，python 从这个停止位置开始执行而不是开头， 也就是说这次返回了1。再执行generator()，则返回2，当执行到返回5的时候，已经没有 yield 语句了， 就抛出了 StopIteration 。这和其他迭代器是类似的，当然在for中是不会抛出异常的。</p>
-<h4 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h4><p>在<a target="_blank" rel="noopener" href="https://www.python.org/dev/peps/pep-0342/">PEP 342</a>中加入了将值传给生成器的支持。PEP 342加入了新的特性，能让生成器在单一语句中实现，生成一个值（像从前一样），接受一个值，或同时生成一个值并接受一个值。<br>我们用前面那个关于素数的函数来展示如何将一个值传给生成器。这一次，我们不再简单地生成比某个数大的素数，而是找出比某个数的等比级数大的最小素数（例如10， 我们要生成比10，100，1000，10000 … 大的最小素数）。</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; import math
-&gt;&gt;&gt; def getPrimes(number):
-...     while True:
-...             if isPrime(number):
-&gt;&gt;&gt;                     '''
-...                     yield关键字返回number的值，
-...                     而other = yield foo "返回foo的值，
-...                     这个值返回给调用者的同时，将other的值也设置为那个值"。
-...                     可以通过send方法来将一个值”发送“给生成器。
-&gt;&gt;&gt;                     '''
-...                     number = yield number
-...             number += 1
-...
-&gt;&gt;&gt; def printSuccessivePrimes(iterations, base=10):
-...     printGenerator = getPrimes(base)
-&gt;&gt;&gt;     '''
-...     用send来“启动”一个生成器时（就是从生成器函数的第一行代码执行到第一个yield语句的位置），必须发送None。因为此时生成器还没有走到第一个yield语句，如果send一个真实的值，这时是没有人去“接收”它的。一旦生成器启动了，我们就可以像上面那样发送数据了
-&gt;&gt;&gt;     '''
-...     printGenerator.send(None)
-...     for power in range(iterations):
-&gt;&gt;&gt;             '''
-...             打印的是generator.send的结果，send在发送数据给生成器的同时还返回生成器通过yield生成的值
-&gt;&gt;&gt;             '''
-...             print(printGenerator.send(base ** power))
-...
-&gt;&gt;&gt; def isPrime(number):
-...     if number &gt; 1:
-...             if number == 2:
-...                     return True
-...             if number % 2 == 0:
-...                     return False
-...             for current in range(3, int(math.sqrt(number) + 1), 2):
-...                     if number % current == 0:
-...                             return False
-...             return True
-...     return False
-...
-&gt;&gt;&gt;
-&gt;&gt;&gt; printSuccessivePrimes(10)
-2
-11
-101
-1009
-10007
-100003
-1000003
-10000019
-100000007
-1000000007
-&gt;&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Python 使用yield的关键思想</p>
-<ul>
-<li>generator是用来产生一系列值的</li>
-<li>yield则像是generator函数的返回结果</li>
-<li>yield唯一所做的另一件事就是保存一个generator函数的状态</li>
-<li>generator就是一个特殊类型的迭代器（iterator）</li>
-<li>和迭代器相似，我们可以通过使用next()来从generator中获取下一个值</li>
-<li>通过隐式地调用next()来忽略一些值</li>
-</ul>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
-<li><a target="_blank" rel="noopener" href="http://pyzh.readthedocs.org/en/latest/the-python-yield-keyword-explained.html">http://pyzh.readthedocs.org/en/latest/the-python-yield-keyword-explained.html</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.dabeaz.com/coroutines/index.html">http://www.dabeaz.com/coroutines/index.html</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.python.org/2/tutorial/classes.html">https://docs.python.org/2/tutorial/classes.html</a></li>
-<li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python">http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.pydanny.com/python-yields-are-fun.html">http://www.pydanny.com/python-yields-are-fun.html</a></li>
-<li><a target="_blank" rel="noopener" href="http://dhcmrlchtdj.github.io/sia/post/2012-11-20/python_yield.html">http://dhcmrlchtdj.github.io/sia/post/2012-11-20/python_yield.html</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.oschina.net/translate/improve-your-python-yield-and-generators-explained">http://www.oschina.net/translate/improve-your-python-yield-and-generators-explained</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.pythonclub.org/python-basic/yield">http://www.pythonclub.org/python-basic/yield</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/">https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/">https://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/</a></li>
-<li><a target="_blank" rel="noopener" href="http://pythontips.com/2013/09/29/the-python-yield-keyword-explained/">http://pythontips.com/2013/09/29/the-python-yield-keyword-explained/</a></li>
-<li><a target="_blank" rel="noopener" href="http://blog.jobbole.com/28506/">http://blog.jobbole.com/28506/</a></li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/30/2016-01-02-Python-keyword-yield/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -937,6 +632,13 @@ StopIteration
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:45" itemprop="dateModified" datetime="2022-03-18T11:42:45+08:00">2022-03-18</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -970,87 +672,14 @@ StopIteration
 <li>内存</li>
 </ul>
 <p>通常来说，如果配置适当的内存，那么瓶颈就是带宽。但是有些时候，有需要做些优化，比如以序列化的形式存储RDD，从而降低内存的占用。</p>
-<p>此会从两方面分析</p>
-<ul>
-<li>数据序列化</li>
-<li>内存优化</li>
-</ul>
-<h3 id="Data-Serialization"><a href="#Data-Serialization" class="headerlink" title="Data Serialization"></a>Data Serialization</h3><p>序列化在分布式计算程序中占有非常重要的地位。迟缓的序列化格式，或者消费一个超大的字节数据，都会大大的减缓计算速度。所以，第一件事应该先尝试优化Spark程序。Spark试图达到在易用性（允许你定义任何的Java类型）和性能两方面达到一种平衡，并且提供两种序列化库：</p>
-<ul>
-<li><p>Java序列化：缺省情况下，Spark使用Java的ObjectOutputStream框架序列化对象，<br>  从而可以和任何实现了java.io.Serializable接口的类一起玩耍。也可以更紧密的控制扩展了java.io.Externalizable的序列化的性能。Java的序列化是非常丰富的，但是速度奇慢，并且会导致很多类产生大量的序列化格式。</p>
-</li>
-<li><p>Kryo序列化：Spark也可以使用Kryo库（Version2）非常迅速的序列化对象。Kryo比Java序列化快很多并且更大的压缩率（通常是10x），但是并不支持所有的类型，另外也需要你在程序中注册类以获得最好的性能。</p>
-</li>
-</ul>
-<p>你可以选择通过设置SparkConf或者调用conf.set(“spark.serializer”, “org.apache.spark.serializer.KryoSerializer”)来使用Kryo初始化Job。这样设置的话，不仅可以配置通过worker节点间shuffling数据，还能将RDD序列化到磁盘上。Kryo不是缺省配置的原因是由于自定义注册的要求决定的，同时我们也想在网络密集型应用中使用它。</p>
-<p>Spark automatically includes Kryo serializers for the many commonly-used core Scala classes covered in the AllScalaRegistrar from the Twitter chill library.</p>
-<p>使用Kryo注册自定义类，需要使用registerKryoClasses方法。</p>
-  <pre class="line-numbers language-none"><code class="language-none">val conf = new SparkConf().setMaster(...).setAppName(...)
-conf.registerKryoClasses(Array(classOf[MyClass1], classOf[MyClass2]))
-val sc = new SparkContext(conf)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>Kryo文档描述了更多高级的注册选项，比如添加自定义序列代码。</p>
-<p>如果你的对象非常大，则需要增加spark.kryoserializer.buffer配置参数。这个值缺省为2，但是这个值需要足够大足以保存序列号的对象。</p>
-<p>最后，如果你没有注册自定义类，Kryo仍然会起作用，但是它不得不存储每个对象的全部类，这样是非常浪费的。</p>
-<h3 id="内存优化"><a href="#内存优化" class="headerlink" title="内存优化"></a>内存优化</h3><p>内存优化的方法有3个方面需要考虑的：你的对象使用的总内存量（你可能希望全部数据都放到内存里），对象存取成本，GC的开销（如果你有非常高的对象交换频率）</p>
-<p>默认情况下，Java对象可以被快速的访问，但是会轻易的耗尽它们字段中比“raw”数据多2到5倍的空间的因子。这取决于多个因素：</p>
-<ul>
-<li>每个独立的Java对象包含一个“对象头”，16字节长度并包含诸如只想它的类的一些信息。<br>  对于一个非常小的数据来说（比如Int），这个可能比数据本身都要大一些。</li>
-<li>Java字符串有大约40字节的对象头，比“raw”数据要多（因为它们按照字符串数组的形式保存，并且还包含扩展数据，比如说数据的长度），<br>  由于采用了UTF-16编码格式，所以在字符串内部，存储一个字符需要占用2个字节的空间。因此10个字符就可以轻易的消耗掉60字节空间。</li>
-<li>普通的集合对象，比如说HashMap和LinkedList，使用的是链式数据结构，对于每个实体都存在一个“wrapper”对象（比如 Map.Entry）。这个对象不仅包含头，链表中还有指向下一个对象的指针（通常需要8个字节）。</li>
-<li>私有类型的集合经常以“装箱”对象的形式存储，比如java.lang.Integer。</li>
-</ul>
-<p>这一章讨论的是如何确定对象的内存占用情况，和改进的方法－不止保护改变你的数据结构，另外还需要以一种序列号的形式存储数据。然后我们就可以覆盖到优化Spark缓存和Java GC的知识了。</p>
-<h4 id="搞清楚内存消耗"><a href="#搞清楚内存消耗" class="headerlink" title="搞清楚内存消耗"></a>搞清楚内存消耗</h4><p>测试一个数据集消耗内存的总量最好的方式创建一个RDD，并放到缓冲中，通过web页面查看存储情况。这个页面的内容可以显示RDD到底占有了多少内存。</p>
-<p>估算一个分区数据消耗的内存，可以使用SizeEstimator’s estimate的方法，这是一种非常有用的方式去试验不同的数据结构去减少内存的使用，即可以确定广播变量占用空间可以消耗每个可执行堆的情况。</p>
-<h4 id="优化数据结构"><a href="#优化数据结构" class="headerlink" title="优化数据结构"></a>优化数据结构</h4><p>首选的降低内存消耗的方法是避免使用具有Java的特性导致的开销，比如基于指针的数据结构核包装类。有多种方式可以做到：</p>
-<ul>
-<li>设计你的数据结构以提升对象数组和原始类型，用来替换标准的Java或者Scala的集合类（比如：HashMap）。<br>  fastutil类库为原始类型提供了适当的集合类型，可以兼容Java的标准库。</li>
-<li>尽量避免包含大量小对象核指针的嵌套数据结构。</li>
-<li>考虑使用数字类型的ID或者枚举对象来替代字符串行的key。</li>
-<li>如果你的RAM不足32GB，可以通过设置JVM的-XX:+UseCompressedOops参数，修改指针默认占用8字节为4个字节。也可以讲这些参数加到spaspark-env.sh中。</li>
-</ul>
-<h4 id="序列化的RDD存储"><a href="#序列化的RDD存储" class="headerlink" title="序列化的RDD存储"></a>序列化的RDD存储</h4><p>通过以上的优化，你的对象仍然很大从而影响到高效的存储的话，一种更加简单的减少内存使用的方法是通过RDD的持久化API序列化StorageLevels，从而使他们以序列化的方式存储，比如MEMORY_ONLY_SER。Spark这时就可以将每个RDD作为一个大字节数组分区存储。唯一的不足是，序列化存储的数据每次读取的时候会很慢，这个取决于每个对象的反序列化（on the fly）。我们强烈建议使用Kryo作为缓存序列化数据的方法，这样可以比Java序列化占用更少的空间（甚至是原始的Java对象）</p>
-<h4 id="GC优化"><a href="#GC优化" class="headerlink" title="GC优化"></a>GC优化</h4><p>JVM 的GC可能会是一个问题，当你的程序在存储一个RDD方面存在一个很大的『churn』。（他不会是一个大问题，如果只是每次读取一个RDD，并多次操作）当Java需要逐渐的用新对象替换旧对象时，GC就会追踪你的所有Java对象，找到并替换掉。这里的重点指出的，GC的执行成本是与Java对象的个数成正比的，因此使用更少对象的数据结构可以大大降低GC的成本（比如一个Int类型的数组替换LinkedList的数组）。更好的方法是持久化被序列化之后的对象，如上述，在每个RDD分区里只会存在一个对象（一个字节数组）。在尝试其他技术之前，如果GC是一个问题，那么第一件事就是尝试序列化的缓存。</p>
-<p>你的任务的占用的活动内存核缓存在你节点上的RDD之间的干扰也会导致GC出现问题（需要执行任务所需的内容总量）。我们将会讨论怎样控制分配给RDD缓存的空间以减少这种影响。</p>
-<h5 id="衡量GC的影响"><a href="#衡量GC的影响" class="headerlink" title="衡量GC的影响"></a>衡量GC的影响</h5><p>GC优化的第一步需要先手机统计数据：GC发生的频率和发费的时间。这个可以通过添加设置java参数-verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps实现。（详情见传递Java参数到Spark任务的指南）下一次你的Spark任务执行时，你就可以在每个worker的日志中看到关于GC事件的信息。注意，这些日志时存放到worker节点上的，并不是在driver 程序上。</p>
-<h5 id="缓冲大小优化"><a href="#缓冲大小优化" class="headerlink" title="缓冲大小优化"></a>缓冲大小优化</h5><p>GC一个重要的配置参数是分配给缓存RDD使用的内存总量。缺省情况下，Spark会使用配置给executor memory (spark.executor.memory) 60%的内存量缓冲RDD。也就是说40%的内存是用于在任务执行过程中任何其它的对象。</p>
-<p>当你的任务速度缓慢，并且发现JVM GC频率特别频繁或者出现内存溢出的问题时，降低这个值会对降低内存消耗提供帮助。修改这个值可以通过设置spark.storage.memoryFraction，比如修改成50%，则可以conf.set(“spark.storage.memoryFraction”, “0.5”)。结合使用序列化缓存，使用更少的缓存就可以充分的减轻大部分的GC问题。</p>
-<h5 id="高级GC优化"><a href="#高级GC优化" class="headerlink" title="高级GC优化"></a>高级GC优化</h5><p>更进一步的GC优化，我们首先需要理解一些基本的JVM管理内存管理知识：</p>
-<ul>
-<li>Java堆空间被划分为两个部分Young 和 Old。Young generation用来保存短周期的对象，同时Old generation是用来保持长周期对象。</li>
-<li>Young generation被进一步划分为3部分：Eden, Survivor1, Survivor2。</li>
-<li>一个简单的关于垃圾回收程序的描述：当Eden满了的时候，a minor GC is run on Eden and objects that are alive from Eden and Survivor1 are copied to Survivor2。Survivor部分是可以交换的。如果一个对象已经旧了或者Survivor2满了，他就会被移动到旧的部分。最后，当旧的部分接近满的时候，一个满的GC就会被唤起。</li>
-</ul>
-<p>Spark中GC优化的目标是确保只有需要长久存在的RDD才会被存储在Old generation，Young generation有足够的空间处处短周期的对象。这就可以帮助避免full GCs在任务执行过程中收集临时任务。这里的一些步骤可能会比较有用：</p>
-<ul>
-<li>通过检查GC的状态检查是否存在多个垃圾回收。如果一个full GC在一个任务结束之前被多次唤醒，这就意味着没有足够的可用内存涌来执行任务。</li>
-<li>In the GC stats that are printed，如果OldGen接近满的状态的话，就减少缓存的内存总量。这个可以通过设置spark.storage.memoryFraction property来达成。缓存更少的对象总比减慢任务执行速度要好的多！</li>
-<li>如果存在很多的次要collections而不是很多的主要的GCs，给Eden分配更多的内存会有所帮助。你可以设置Eden稍微高些的内存给每个任务。如果Eden表示成E，那么可以通过设置Young generation的参数大小为-Xmn=4/3*E。（The scaling up by 4/3 is to account for space used by survivor regions as well.）</li>
-<li>举个例子，如果你的任务正在从HDFS中读取数据，任务使用的内存被标记为数据的块大小。<br>  注意，解压后的数据块大约是之前数据的2～3倍。因此我们希望有3或者4个任务的工作空间，并且HDFS块的大小是64M，我们就可以估算出Eden大小大约是4<em>3</em>64MB。</li>
-<li>通过修改新的设置来监测垃圾回收的频率和时间</li>
-</ul>
-<p>我的经验得出GC优化的改进取决于你的程序和可用的内存总量。在网上有很多优化选项的描述，但是再进一步，管理full GC的频率可以有助于降低顶层限制。</p>
-<h3 id="其它需要考虑的事情"><a href="#其它需要考虑的事情" class="headerlink" title="其它需要考虑的事情"></a>其它需要考虑的事情</h3><h4 id="并行的水平"><a href="#并行的水平" class="headerlink" title="并行的水平"></a>并行的水平</h4><p>节点不会被充分利用，除非喂每个操作设置了足够高的并行水平。Spark会自动设置“map”任务的数量执行每个文件以和他的大小保持一致（尽管你可以通过SparkContext.textFile的可选参数控制），并且对于分布式的“reduce”操作，比如groupByKey 和 reduceByKey，会使用最大的父RDD的分区数。你可以传递并行的level作为第二个参数，活着设置spark.default.parallelism配置属性改变默认值。通常情况下，我们建议在节点上每个CPU内核执行2～3个任务。</p>
-<h4 id="降低任务的内存使用"><a href="#降低任务的内存使用" class="headerlink" title="降低任务的内存使用"></a>降低任务的内存使用</h4><p>有时，你可能得到OutOfMemoryError错误，但是这并不是因为你的Rdd不适合你的内存，而是因为任务中的其中一个的设置，比如其中一个reduce任务执行groupByKey时太大。Spark的shuffle操作（sortByKey, groupByKey, reduceByKey, join等）会创建一个哈希表并且每个任务会执行grouping操作，这个通常情况下也会很大。此时最简单的解决办法是增加并行的水平，以降低任务的输入集大小。Spark可以高效的支持任务，因为它可以重复利用一个executor JVM，并且有很低的任务加载消耗，所以你可以安全的增加并发水平，甚至超过你节点上核心的数目。</p>
-<h4 id="广播大变量"><a href="#广播大变量" class="headerlink" title="广播大变量"></a>广播大变量</h4><p>使用SparkContext上可用的广播功能可以明显的减少每个序列化任务的大小，和通过节点加载任务的消耗。如果你的任务使用来自driver程序的大的对象（比如：静态查找表），试着转化成一个广播变量。Spark打印出主节点上每个任务的序列化后的大小，从而你可以通过这个决定你的任务是否过大；通常的任务大于20KB就值得优化了。</p>
-<h4 id="数据的位置"><a href="#数据的位置" class="headerlink" title="数据的位置"></a>数据的位置</h4><p>数据的位置可能是影响Spark作业的最主要的一个影响因素。如果数据和代码被放置在一起的话，计算速度会明显加快。但是如果代码和数据是分开的，不同的两块数据会被移动到一起。特别是，传输序列化的代码比数据块要快很多，这是因为代码的大小比数据小很多。Spark构建调度的主要原则就是由数据的位置决定的。</p>
-<p>数据的位置到底距离操作他的代码多近的距离才合适呢？这里存在多个级别（自近及远）：</p>
-<ul>
-<li>PROCESS_LOCAL  数据和代码在同一个JVM中，这种方式是最好的一种情况</li>
-<li>NODE_LOCAL 数据在同一个节点。比如说在HDFS的同一个节点，或者相同节点的不同executor。<br>  这种方式比PROCESS_LOCAL稍微慢些，因为这种情况下，数据需要在不同进程中传输</li>
-<li>NO_PREF data is accessed equally quickly from anywhere and has no locality preference</li>
-<li>RACK_LOCAL 数据在同一个服务器机架。数据在同一个机架的不同的服务器上的话，数据需要通过网络进行传输，typically through a single switch</li>
-<li>ANY 数据分布在网络的各个地方，并且不在同一个机架</li>
-</ul>
-<p>Spark更倾向于调度最好的locality级别的所有任务，但是这并不是经常发生的。在这种情况下，不在处理数据的任何空闲executor，Spark都会选择更低的locality级别。这有两种选择：</p>
-<ul>
-<li>等待同一个服务器上的任务，直到对应的CPU闲下来才执行</li>
-<li>立即执行一个新任务，并通过移动数据到更远的节点执行</li>
-</ul>
-<p>Spark通常会稍微等一下，以等待CPU执行完毕。一旦超时，他就会将远端的数据传递给空闲的CPU。不同级别的等待超时回退可以单独配置，或者在一个参数中集中修改；前往配置页查看spark.locality参数详情。如果你的任务are long and see poor locality，你也可以修改设置，但是缺省值是完全可以满足要求的。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这是一个简短的介绍，其中指出了你可能需要了解的优化Spark应用的最主要的要点，数据序列化和内存优化。对于大多数的程序来说，选择Kryo序列化，并且以序列化形式保存数据可以解决大部分一般的性能问题。Feel free to ask on the Spark mailing list about other tuning best practices.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/30/2016-01-04-Spark-tuning/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1107,6 +736,13 @@ val sc = new SparkContext(conf)<span aria-hidden="true" class="line-numbers-rows
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:48" itemprop="dateModified" datetime="2022-03-18T11:42:48+08:00">2022-03-18</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -1138,33 +774,14 @@ val sc = new SparkContext(conf)<span aria-hidden="true" class="line-numbers-rows
         '"$request_body" $body_bytes_sent "$http_referer" "$http_user_agent" '
         'RESP:$upstream_response_time '
         'REQ:$request_time';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h1><pre class="line-numbers language-none"><code class="language-none">[192.168.1.5:80] 19.78.22.51 [31/Dec/2015:13:59:02 +0800] "POST /api/mbbb/dup_msg_send?pallow_dubbing=0&amp;partner_msgs_id=279&amp;roles_id=23&amp;score=6700&amp;section_id=512&amp;whole_audio=200.m4a&amp;d
-evice_id=112222f0fc3&amp;lang=zh-CN&amp;trigger=user&amp;user_id=516487&amp;v=ios_7.0.3 HTTP/1.1" 200 "audio_fragment=00280%22%3A%7B%22pitch%22%3A47%2C%22rhythm%22%3A95%2C%22tone%22%3A75%7D%2C%226800278%22%3A%7B%22pitch%22%3A70%2C%22rhythm%22%3A90%2%7D%2C%226800276%22
-%3A%7B%22pitch%22%3A60%2C%22rhythm%22%3A82%2C%22tone%22D&amp;content=hhhhhh%E5%B0%8F%E5%AB%A9%E8%8D%89" 51 "-" "paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)" RESP:0.166 REQ:0.167
-[192.168.1.5:80, 192.169.1.33:88] 60.12.246.5 [31/Dec/2015:23:59:02 +0800] "GET /api/mppb/notice/list?device_id=112233fe6a6d991f&amp;lang=zh-CN&amp;user_id=6120&amp;v=ios_7.0.3 HTTP/1.1" 200 "-" 54 "-" "paipao/7.0.3 (iPhone; iOS 9.2; Scale/2.00)" RESP:0.006 REQ:0.006<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="Python版本"><a href="#Python版本" class="headerlink" title="Python版本"></a>Python版本</h2><pre class="line-numbers language-none"><code class="language-none">p = re.compile(
-            r"\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \"(\S+)\ (\S+)\ .*?\"\ (\d+)\ \"(.*?)\"\ (\d+)\ \"([^\"]*)\"\ \".*?\" .*?")
-m = re.findall(p, line)
-day = m[0][0]
-month = m[0][1]
-year = m[0][2]
-ttime = m[0][3]
-method = m[0][4]
-request = m[0][5]
-status = m[0][6]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="Scala版本"><a href="#Scala版本" class="headerlink" title="Scala版本"></a>Scala版本</h2><pre class="line-numbers language-none"><code class="language-none">val regex = new Regex( """\[\-?[\d.\:]*[\ \,]*?.*?\]\ [\d.\:]*\ \[(\d+)/(\w+)/(\d+)\:(\S+)\ [\S]+\]\ \"(\S+)\ (\S+)\ .*?\"\ (\d+)\ \"(.*?)\"\ (\d+)\ \"([^\"]*)\"\ \".*?\" .*?""")
-val regex(day, month, year, time, method, request, status, postData, bytes, refer) = line<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
-<li><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/5d8c802be13d">http://www.jianshu.com/p/5d8c802be13d</a></li>
-<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000002727070">https://segmentfault.com/a/1190000002727070</a></li>
-<li><a target="_blank" rel="noopener" href="http://desert3.iteye.com/blog/1001568">http://desert3.iteye.com/blog/1001568</a></li>
-<li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/996536/regex-in-python">http://stackoverflow.com/questions/996536/regex-in-python</a></li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/30/2016-01-24-Reg-Nginx/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1220,6 +837,13 @@ val regex(day, month, year, time, method, request, status, postData, bytes, refe
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:52" itemprop="dateModified" datetime="2022-03-18T11:42:52+08:00">2022-03-18</time>
     </span>
 
   
@@ -1312,6 +936,13 @@ val regex(day, month, year, time, method, request, status, postData, bytes, refe
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:55" itemprop="dateModified" datetime="2022-03-18T11:42:55+08:00">2022-03-18</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -1344,134 +975,14 @@ val regex(day, month, year, time, method, request, status, postData, bytes, refe
 <li><a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK</a> (不能只有JRE) 7 或者更新版本</li>
 </ul>
 <p>以上需要已经安装到了你的开发环境中。</p>
-<h2 id="Building"><a href="#Building" class="headerlink" title="Building"></a>Building</h2><p>克隆代码到你本地，并且编译：</p>
-<pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/OryxProject/oryx.git oryx
-cd oryx
-mvn -DskipTests package<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>会编译出如下的二进制的jar文件：</p>
-<ul>
-<li>批处理层: deploy/oryx-batch/target/oryx-batch-2.1.2.jar</li>
-<li>实时处理层: deploy/oryx-speed/target/oryx-speed-2.1.2.jar</li>
-<li>服务层: deploy/oryx-serving/target/oryx-serving-2.1.2.jar</li>
-</ul>
-<p>友情提醒，如果你对开发Oryx感兴趣，可以根据这个<a target="_blank" rel="noopener" href="https://help.github.com/articles/fork-a-repo">分支</a>克隆自己的分支，然后就可以提交修改了。</p>
-<h3 id="Java-8"><a href="#Java-8" class="headerlink" title="Java 8"></a>Java 8</h3><p>如果使用Java8编译，需要添加参数-Pjava8 并且测试这里的指令。</p>
-<h3 id="Platform-Only"><a href="#Platform-Only" class="headerlink" title="Platform Only"></a>Platform Only</h3><p>默认的编译包括基于Spark MLlib和其他库的端到端的ML程序。如果只是编译lambda和ML层，需要通过参数-P!app-tier关闭其他的选项。注意，在bash中，！需要转义： -P!app-tier。</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>mvn 测试会执行所有的但愿测试用例。也同时会执行所有的集成测试，这个可能会需要稍微长点的时间。</p>
-<h2 id="模型对应表"><a href="#模型对应表" class="headerlink" title="模型对应表"></a>模型对应表</h2><p>主要的模型和他们对应的层：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Serving</th>
-<th>Speed</th>
-<th>Batch</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Binary</td>
-<td>oryx-serving</td>
-<td>oryx-speed</td>
-<td>oryx-batch</td>
-</tr>
-<tr>
-<td>App</td>
-<td>oryx-app-serving</td>
-<td>oryx-app-mllib oryx-app</td>
-<td>oryx-app-mllib oryx-app</td>
-</tr>
-<tr>
-<td>ML</td>
-<td></td>
-<td>oryx-ml</td>
-<td>oryx-ml</td>
-</tr>
-<tr>
-<td>Lambda</td>
-<td>oryx-lambda-serving</td>
-<td>oryx-lambda</td>
-<td>oryx-lambda</td>
-</tr>
-</tbody></table>
-<p>支持的模型，比如：<a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-common">oryx-common</a>, <a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-common">oryx-app-common</a>, <a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/tree/master/framework/oryx-api">oryx-api</a>, and <a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/tree/master/app/oryx-app-api">oryx-app-api</a> 没有在这里列出了。</p>
-<h2 id="实现一个Oryx-程序"><a href="#实现一个Oryx-程序" class="headerlink" title="实现一个Oryx 程序"></a>实现一个Oryx 程序</h2><p>Oryx 中的“app 层”，是实现了推荐的真实的批处理，实时，服务层逻辑，集群和分类。然而，任何实现都需要使用到Oryx。他们也可以混合和匹配。举个例子，你可以重新实现ALS-related推荐的批处理层，但是仍然使用原来的ALS的服务层和实时计算层。</p>
-<h3 id="创建一个程序"><a href="#创建一个程序" class="headerlink" title="创建一个程序"></a>创建一个程序</h3><p>在每个例子中，创建一个自定义的批处理层，实时计算层或者服务层的程序都需要实现com.cloudera.oryx.api中的几个关键的Java接口或者Scala的特性。这些接口/特性可以在项目的oryx-api模型中找到。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Java</th>
-<th>Scala</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Batch</td>
-<td>batch.BatchLayerUpdate</td>
-<td>batch.ScalaBatchLayerUpdate</td>
-</tr>
-<tr>
-<td>Speed</td>
-<td>speed.SpeedModelManager</td>
-<td>speed.ScalaSpeedModelManager</td>
-</tr>
-<tr>
-<td>Serving</td>
-<td>serving.ServingModelManager</td>
-<td>serving.ScalaServingModelManager</td>
-</tr>
-</tbody></table>
-<p>com.cloudera.oryx.api也包含大量的关键的类和接口，举个例子，<a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/blob/master/framework/oryx-api/src/main/java/com/cloudera/oryx/api/serving/OryxResource.java">serving.OryxResource</a>  是一个入口，用来编译自定义的JAX-RS 端点，但是不需要使用。</p>
-<h3 id="编译程序"><a href="#编译程序" class="headerlink" title="编译程序"></a>编译程序</h3><p>进入你的程序的这些接口/特性，添加一个com.cloudera.oryx:oryx-api的依赖，scope字段需要填写“provided”，在Maven中，需要添加如下依赖：<br>In Maven, this would mean adding a dependency like:</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;dependencies&gt;
-  &lt;dependency&gt;
-    &lt;groupId&gt;com.cloudera.oryx&lt;/groupId&gt;
-    &lt;artifactId&gt;oryx-api&lt;/artifactId&gt;
-    &lt;scope&gt;provided&lt;/scope&gt;
-    &lt;version&gt;2.1.2&lt;/version&gt;
-  &lt;/dependency&gt;
-&lt;/dependencies&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>这些artifacts被放在了<a target="_blank" rel="noopener" href="https://repository.cloudera.com/artifactory/cloudera-repos/">Cloudera</a>这个分支下，因此在编译的时候需要引用这个分支：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;repositories&gt;
-  &lt;repository&gt;
-    &lt;id&gt;cloudera&lt;/id&gt;
-    &lt;url&gt;https://repository.cloudera.com/artifactory/cloudera-repos/&lt;/url&gt;
-  &lt;/repository&gt;
-&lt;/repositories&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>一个最小的实例可以访问<a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/tree/master/app/example">example/</a> 这里。</p>
-<p>”Word Count” 这个程序是按照空格将行分割成独立的单词，然后统计出排重后的单词出现的次数。</p>
-<p>编译代码后生成一个JAR文件，包含了程序实现和所有第三方的diam，如果使用Maven，可以通过mvn package命令。</p>
-<h3 id="编译-Word-Count-例子"><a href="#编译-Word-Count-例子" class="headerlink" title="编译 Word Count 例子"></a>编译 Word Count 例子</h3><p>举例：编译样例代码如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">cd app/example
-mvn package<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>生成的JAR包在target/example-2.1.2.jar。</p>
-<h3 id="自定义Oryx程序"><a href="#自定义Oryx程序" class="headerlink" title="自定义Oryx程序"></a>自定义Oryx程序</h3><p>当发布一个源自Oryx的预打包程序，在某些情况下，有可能会提供一个扩展的实现，从而可以自定义他们的行为。举例，ALS推荐程序暴露了com.cloudera.oryx.app.als.RescorerProvider接口。这些特定程序API类可以在模块oryx-app-api中找到。这些接口的实现也可以在独立模式下被编译，打包，部署。</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;dependencies&gt;
-  &lt;dependency&gt;
-    &lt;groupId&gt;com.cloudera.oryx&lt;/groupId&gt;
-    &lt;artifactId&gt;oryx-app-api&lt;/artifactId&gt;
-    &lt;scope&gt;provided&lt;/scope&gt;
-    &lt;version&gt;2.1.2&lt;/version&gt;
-  &lt;/dependency&gt;
-&lt;/dependencies&gt;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="发布程序"><a href="#发布程序" class="headerlink" title="发布程序"></a>发布程序</h2><p>拷贝生成的JAR文件–myapp.jar，放到需要执行的Oryx 二进制JAR文件相同的目录下。</p>
-<p>修改Oryx的配置文件，以便于引用自定义的批处理，实时计算和服务层的实现。<br>当执行批处理，实时计算和服务层时，需要添加–app-jar myapp.jar到oryx-run.sh命令行中。</p>
-<h3 id="发布-Word-Count-例子"><a href="#发布-Word-Count-例子" class="headerlink" title="发布 Word Count 例子"></a>发布 Word Count 例子</h3><p>举例，如果已经编译好了上述的“word count”的程序，你可以执行这个程序，直接引用wordcount-example.conf这个配置文件：</p>
-<pre class="line-numbers language-none"><code class="language-none">./oryx-run.sh batch --conf wordcount-example.conf --app-jar example-2.1.2.jar<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>… 对于实时计算和服务层也是同样的。</p>
-<pre class="line-numbers language-none"><code class="language-none">curl -X POST http://.../add/foo%20bar%20baz
-...
-curl http://.../distinct
-{"foo":2,"bar":2,"baz":2}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>配置文件本身已经配置好了主机名称和<a target="_blank" rel="noopener" href="http://www.cloudera.com/content/www/en-us/downloads/quickstart_vms.html">Cloudera Quickstart VM</a>的参数。事实上，这个例子可以作为一个集群配置的例子：<a target="_blank" rel="noopener" href="http://oryx.io/docs/admin.html#cloudera_quickstart_vm_setup">Cloudera Quickstart VM Setup</a>。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/30/2016-04-06-Oryx2-developer-doc/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1527,6 +1038,13 @@ curl http://.../distinct
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:12" itemprop="dateModified" datetime="2022-03-18T11:42:12+08:00">2022-03-18</time>
     </span>
 
   
@@ -1618,6 +1136,13 @@ curl http://.../distinct
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2022-01-30 23:11:00" itemprop="dateCreated datePublished" datetime="2022-01-30T23:11:00+08:00">2022-01-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-18 11:42:22" itemprop="dateModified" datetime="2022-03-18T11:42:22+08:00">2022-03-18</time>
     </span>
 
   
