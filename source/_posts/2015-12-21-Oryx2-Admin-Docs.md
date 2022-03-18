@@ -13,6 +13,7 @@ title: Oryx2 管理员文档
   * Apache Kafka 0.8.2 or later (in 0.8.x line)
   * Apache Spark 1.5.0 or later
 
+<!--more-->
 
 ### 服务
 

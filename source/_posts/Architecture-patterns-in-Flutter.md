@@ -13,6 +13,8 @@ tags:
 
 Flutter 拥有一个不断增长的状态管理解决方案生态系统。 [Flutter文档](https://flutter.dev/docs/development/data-and-backend/state-mgmt/options)本身列出了 10 多个选项！弄清楚选择哪种解决方案是一项艰巨的任务。
 
+<!--more-->
+
 在我们进入更多细节之前，让我们首先了解一个非常基本的概念。 
 Flutter 是一个声明式 UI 框架。这意味着我们需要呈现在特定的状态下Flutter UI效果。
 

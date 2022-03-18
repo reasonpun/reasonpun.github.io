@@ -16,6 +16,8 @@ reasonpun@reasonpun:~$ echo $logRecordDate
 reasonpun@reasonpun:~$
 ```
 
+<!--more-->
+
 2、上个月的今天：
 
 ```

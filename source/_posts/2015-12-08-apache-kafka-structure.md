@@ -8,6 +8,8 @@ title: Apache Kafka Structure
 
   * 参考地址 [http://kafka.apache.org/documentation.html](http://kafka.apache.org/documentation.html#brokerconfigs)
 
+<!--more-->
+
   * 消息队列的分类
 
     * 点对点

@@ -13,6 +13,8 @@ Python 2.7.10 (default, Oct 23 2015, 18:05:06)
 Type "help", "copyright", "credits" or "license" for more information.
 ```
 
+<!--more-->
+
 ### Yield关键字
 
 理解yield关键字之前需要先明白什么是迭代。

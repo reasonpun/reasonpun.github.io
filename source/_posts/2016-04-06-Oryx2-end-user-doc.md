@@ -12,6 +12,8 @@ title: Oryx2 终端用户文档
 
 或者，源码编译他们并从deploy/bin/获取最新的脚本。
 
+<!--more-->
+
 拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。
 
 创建一个配置文件，可以简单的拷贝例子中的conf/als-example.conf。并修改host名称，端口和目录。实际上，选择hdfs上已经存在的数据和模型目录便于用户运行Oryx 二进制命令。

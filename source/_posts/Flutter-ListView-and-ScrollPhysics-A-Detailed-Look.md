@@ -14,7 +14,7 @@ tags:
 
 本文旨在对 ListView 类、ScrollPhysics 以及通用小部件的调整和优化进行更详细的探索。
 Flutter 中的 ListView 是可滚动项的线性列表。我们可以使用它来制作可滚动的项目列表或制作重复项目的列表。
-
+<!--more-->
 ## 探索 ListView 的类型
 
 我们将从查看 ListView 的类型开始，然后查看其他功能和对其进行的巧妙修改。

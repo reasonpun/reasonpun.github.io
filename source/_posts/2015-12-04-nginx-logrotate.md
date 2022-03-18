@@ -11,6 +11,8 @@ tag: [nginx,logrotate]
 
 _logrotate_ is  designed to ease administration of systems that generatelarge numbers of log files.  It allows automatic rotation, compression,removal, and mailing of log files.  Each log file may be handled daily,weekly, monthly, or when it grows too large. ([Logrotate man page](http://linuxcommand.org/man_pages/logrotate8.html))
 
+<!--more-->
+
 #### 配置文件 ####
 
 ##### 内容示例

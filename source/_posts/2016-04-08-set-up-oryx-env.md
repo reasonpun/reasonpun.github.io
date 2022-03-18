@@ -13,6 +13,8 @@ title: 玩转 Oryx2 （一）
     * Kafka
     * Spark (on YARN)
 
+<!--more-->
+
 ### 下载最新版本
 
   * 进入[下载页面](https://github.com/OryxProject/oryx/releases/tag/oryx-2.1.2)，分别下载

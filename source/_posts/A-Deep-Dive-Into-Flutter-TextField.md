@@ -14,6 +14,8 @@ tags:
 
 在本文中，我们将全面介绍 Flutter TextField 小部件，并找出它的功能和可能的定制。
 
+<!--more-->
+
 ## 文本控件简介
 
 TextField 小部件允许从用户那里收集信息。最基本的使用TextField 的代码很简单：

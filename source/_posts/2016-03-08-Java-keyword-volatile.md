@@ -13,6 +13,8 @@ Java关键字volatile标识一个变量“被存储在主内存中”。更准�
 
 实际上，自Java5开始，volatile关键字保证的是volatile声明的变量都是写入和读取自主内存的。以下将会详细讲解。
 
+<!--more-->
+
 ### Java volatile保证可见性
 
 Java中volatile关键字保证了线程之间变量修改的可见性。这个可能会有点抽象，因此让我详细讲解下。

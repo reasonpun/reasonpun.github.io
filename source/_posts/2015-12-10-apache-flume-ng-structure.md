@@ -13,6 +13,7 @@ title: Apache Flume-ng Structure
 
   经过架构重构后，Flume NG更像是一个轻量的小工具，非常简单，容易适应各种方式日志收集，并支持failover和负载均衡。
 
+<!--more-->
 
 ### 架构设计要点
 

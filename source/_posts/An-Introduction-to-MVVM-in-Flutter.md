@@ -13,6 +13,8 @@ tags:
 在这篇文章中，我们将使用 MVVM 设计模式来编写一个完整的 Flutter 应用程序
 ```
 
+<!--more-->
+
 {% asset_img 1.jpeg 示意图 width="400" %}
 
 默认情况下，Flutter 应用程序不使用任何特定的设计模式。
