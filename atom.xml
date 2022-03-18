@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-18T03:44:59.403Z</updated>
+  <updated>2022-03-18T13:54:45.548Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter：黄金测试 —— 比较 Widgets 和 Snapshots</title>
+    <link href="https://reasonpun.github.io/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/"/>
+    <id>https://reasonpun.github.io/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/</id>
+    <published>2022-03-18T13:26:02.000Z</published>
+    <updated>2022-03-18T13:54:45.548Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="单元测试" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="CI/CD" scheme="https://reasonpun.github.io/tags/CI-CD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用 Codemagic CI/CD 运行 Flutter Golden（快照）测试</title>
+    <link href="https://reasonpun.github.io/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/"/>
+    <id>https://reasonpun.github.io/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/</id>
+    <published>2022-03-18T12:29:02.000Z</published>
+    <updated>2022-03-18T14:46:48.203Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="单元测试" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="CI/CD" scheme="https://reasonpun.github.io/tags/CI-CD/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 Firebase 在后台和前台推送通知</title>
@@ -425,44 +483,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>使用Vagrant部署Rails项目</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2016-11-04-Using-Vagrant-for-Rails-Development/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2016-11-04-Using-Vagrant-for-Rails-Development/</id>
-    <published>2022-01-30T15:11:00.378Z</published>
-    <updated>2022-03-18T03:43:15.099Z</updated>
-    
-    
-    <summary type="html">Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。</summary>
-    
-    
-    
-    
-    <category term="Vagrant" scheme="https://reasonpun.github.io/tags/Vagrant/"/>
-    
-    <category term="Rails" scheme="https://reasonpun.github.io/tags/Rails/"/>
-    
-    <category term="Ruby" scheme="https://reasonpun.github.io/tags/Ruby/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Emacs STEP-1</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2017-01-21-Emacs-STEP-1/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2017-01-21-Emacs-STEP-1/</id>
-    <published>2022-01-30T15:11:00.378Z</published>
-    <updated>2022-03-18T03:43:18.394Z</updated>
-    
-    
-    <summary type="html">一年成为Emacs高手（像神一样使用编辑器）</summary>
-    
-    
-    
-    
-    <category term="Emacs" scheme="https://reasonpun.github.io/tags/Emacs/"/>
     
   </entry>
   
