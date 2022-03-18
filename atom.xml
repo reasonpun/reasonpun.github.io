@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-18T13:54:45.548Z</updated>
+  <updated>2022-03-18T14:50:27.011Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://reasonpun.github.io/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/"/>
     <id>https://reasonpun.github.io/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/</id>
     <published>2022-03-18T13:26:02.000Z</published>
-    <updated>2022-03-18T13:54:45.548Z</updated>
+    <updated>2022-03-18T14:50:27.011Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图</summary>
-        
-      
+    <summary type="html">&lt;img src=&quot;/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;测试对于交付具有最佳质量的应用程序非常重要。 在这篇文章中，我想谈谈 Widget 测试中鲜为人知的特性之一——黄金测试。&lt;/p&gt;</summary>
     
     
     
@@ -50,16 +46,12 @@
     <link href="https://reasonpun.github.io/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/"/>
     <id>https://reasonpun.github.io/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/</id>
     <published>2022-03-18T12:29:02.000Z</published>
-    <updated>2022-03-18T14:46:48.203Z</updated>
+    <updated>2022-03-18T14:50:21.026Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图</summary>
-        
-      
+    <summary type="html">&lt;img src=&quot;/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;测试是开发的一个非常重要的方面，它有助于确保您的应用程序可以正常运行并为用户提供正确的外观。 很高兴有 CI/CD 工具可以自动为您检查应用程序质量、在出现问题时通知团队以及将应用程序发布给最终用户。&lt;br&gt;在本文中，我将和您唠一唠如何使用 Codemagic CI/CD 运行 Golden 测试。&lt;/p&gt;</summary>
     
     
     
