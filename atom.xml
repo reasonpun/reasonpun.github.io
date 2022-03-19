@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-18T14:50:27.011Z</updated>
+  <updated>2022-03-19T13:28:43.382Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter 中的 Paypal 支付网关的集成</title>
+    <link href="https://reasonpun.github.io/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/"/>
+    <id>https://reasonpun.github.io/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/</id>
+    <published>2022-03-19T13:17:47.000Z</published>
+    <updated>2022-03-19T13:28:43.382Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;问题：&lt;br&gt;在撰写本文时，Paypal 还没有为</summary>
+        
+      
+    
+    
+    
+    <category term="Payment" scheme="https://reasonpun.github.io/categories/Payment/"/>
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Payment/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="Paypal" scheme="https://reasonpun.github.io/tags/Paypal/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter：黄金测试 —— 比较 Widgets 和 Snapshots</title>
@@ -448,30 +479,6 @@
     
     
     <summary type="html">&lt;p&gt;这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>玩转 Oryx2 （一）</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2016-04-08-set-up-oryx-env/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2016-04-08-set-up-oryx-env/</id>
-    <published>2022-01-30T15:11:00.378Z</published>
-    <updated>2022-03-18T03:43:11.711Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;h3 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;CDH 5.5.2, Parcel&lt;ul&gt;
-&lt;li&gt;HDFS&lt;/li&gt;
-&lt;li&gt;YARN&lt;/li&gt;
-&lt;li&gt;Zookeeper&lt;/li&gt;
-&lt;li&gt;Kafka&lt;/li&gt;
-&lt;li&gt;Spark (on YARN)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
     
     
     
