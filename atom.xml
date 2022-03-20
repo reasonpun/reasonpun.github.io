@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-19T13:39:28.022Z</updated>
+  <updated>2022-03-20T04:41:18.138Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -17,22 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>15 Javascript codes you will always need</title>
+    <link href="https://reasonpun.github.io/2022/03/20/15-Javascript-codes-you-will-always-need/"/>
+    <id>https://reasonpun.github.io/2022/03/20/15-Javascript-codes-you-will-always-need/</id>
+    <published>2022-03-20T01:53:08.000Z</published>
+    <updated>2022-03-20T04:41:18.138Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;随机排列数组&quot;&gt;&lt;a href=&quot;#随机排列数组&quot; class=&quot;headerlink&quot; title=&quot;随机排列数组&quot;&gt;&lt;/a&gt;随机排列数组&lt;/h3&gt;&lt;p&gt;使用排序和随机方法对数组进行排序非常容易。&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;const shuffleArray = (arr) =&amp;gt; arr.sort(() =&amp;gt; 0.5 - Math.random());
+console.log(shuffleArray([1, 2, 3, 4]));
+// Result: [ 1, 4, 3, 2 ]&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://reasonpun.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://reasonpun.github.io/tags/JavaScript/"/>
+    
+    <category term="编程技巧" scheme="https://reasonpun.github.io/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Flutter 中的 Paypal 支付网关的集成</title>
     <link href="https://reasonpun.github.io/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/"/>
     <id>https://reasonpun.github.io/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/</id>
     <published>2022-03-19T13:17:47.000Z</published>
-    <updated>2022-03-19T13:39:28.022Z</updated>
+    <updated>2022-03-19T13:42:40.556Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;img src=&quot;/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
 
-&lt;p&gt;问题：&lt;br&gt;在撰写本文时，Paypal 还没有为</summary>
-        
-      
+&lt;p&gt;问题：&lt;br&gt;在撰写本文时，Paypal 还没有为 Flutter 中的支付网关集成提供 SDK 包。 此外，整个互联网上貌似都没有解决此问题的方法。&lt;br&gt;在对该主题进行了大量研究之后，我觉得我找到了解决此问题的简单方法。&lt;/p&gt;
+&lt;p&gt;解决方案：&lt;br&gt;我已经使用 WebView 成功实现了 Paypal 支付网关。 我使用了一些 Paypal 的可用 API 来进行支付，这些 API 可以正式集成到网站中。&lt;/p&gt;</summary>
     
     
     
@@ -44,6 +63,28 @@
     <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
     
     <category term="Paypal" scheme="https://reasonpun.github.io/tags/Paypal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Firebase — Flutter</title>
+    <link href="https://reasonpun.github.io/2022/03/19/Firebase-%E2%80%94-Flutter/"/>
+    <id>https://reasonpun.github.io/2022/03/19/Firebase-%E2%80%94-Flutter/</id>
+    <published>2022-03-19T03:09:52.000Z</published>
+    <updated>2022-03-20T04:40:36.485Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Firebase 是 Fl​​utter 中使用最广泛的后端之一。它由谷歌开发并提供了很多功能。让我们看看 Firebase 中有哪些可以与 Flutter 应用集成的功能！&lt;/p&gt;
+&lt;img src=&quot;/2022/03/19/Firebase-%E2%80%94-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    
+    <category term="Firebase" scheme="https://reasonpun.github.io/tags/Firebase/"/>
     
   </entry>
   
@@ -450,38 +491,6 @@
     <category term="读后感" scheme="https://reasonpun.github.io/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
     <category term="谷歌方法论" scheme="https://reasonpun.github.io/tags/%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oryx2 终端用户文档</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2016-04-06-Oryx2-end-user-doc/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2016-04-06-Oryx2-end-user-doc/</id>
-    <published>2022-01-30T15:11:00.378Z</published>
-    <updated>2022-03-18T03:43:00.765Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;运行&quot;&gt;&lt;a href=&quot;#运行&quot; class=&quot;headerlink&quot; title=&quot;运行&quot;&gt;&lt;/a&gt;运行&lt;/h3&gt;&lt;p&gt;注意：你必须已经按照&lt;a href=&quot;http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/&quot;&gt;管理员文档&lt;/a&gt;中提到的配置好了你的集群。&lt;/p&gt;
-&lt;p&gt;下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。&lt;/p&gt;
-&lt;p&gt;或者，源码编译他们并从deploy/bin/获取最新的脚本。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Oryx2 性能优化文档</title>
-    <link href="https://reasonpun.github.io/2022/01/30/2016-04-07-Oryx2-performance-doc/"/>
-    <id>https://reasonpun.github.io/2022/01/30/2016-04-07-Oryx2-performance-doc/</id>
-    <published>2022-01-30T15:11:00.378Z</published>
-    <updated>2022-03-18T03:43:07.729Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。&lt;/p&gt;</summary>
-    
-    
-    
     
   </entry>
   
