@@ -17,6 +17,9 @@ tags:
 
 解决方案：
 我已经使用 WebView 成功实现了 Paypal 支付网关。 我使用了一些 Paypal 的可用 API 来进行支付，这些 API 可以正式集成到网站中。
+
+<!--more-->
+
 所以让我们从编码部分开始。
 首先，我们需要创建一个名为 PaypalServices.dart 的 dart 文件，其中包含使用 Paypal 执行交易所需的所有 API。
 下面给出了代码。 您可以复制这些代码来创建 dart 文件。
