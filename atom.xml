@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-24T04:55:43.974Z</updated>
+  <updated>2022-03-24T05:01:51.382Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://reasonpun.github.io/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/"/>
     <id>https://reasonpun.github.io/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/</id>
     <published>2022-03-24T03:03:50.000Z</published>
-    <updated>2022-03-24T04:55:43.974Z</updated>
+    <updated>2022-03-24T05:01:51.382Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
-        
-      
+    <summary type="html">&lt;img src=&quot;/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;当您大规模设计和构建应用程序时，您将面临两个重大挑战：可扩展性和稳健性。&lt;br&gt;您应该设计您的服务，以便即使它受到间歇性重负载的影响，它也能继续可靠地运行。&lt;br&gt;以 Apple Store 为例。&lt;br&gt;每年都有数百万 Apple 客户预先注册购买新 iPhone。&lt;br&gt;数百万人同时购买一件商品。&lt;/p&gt;</summary>
     
     
     
