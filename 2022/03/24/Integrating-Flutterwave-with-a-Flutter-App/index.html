@@ -22,12 +22,12 @@
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592202470693653"
      crossorigin="anonymous"></script>
-    <meta name="description" content="付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。但是，如果商家希望从不同地点的客户进行付款&#x2F;接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？ 使用各种支付服务提供商进行这些集成的方法有很多，但是，在本">
+    <meta name="description" content="付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。但是，如果商家希望从不同地点的客户进行付款&#x2F;接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Flutter中集成Flutterwave">
 <meta property="og:url" content="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/index.html">
 <meta property="og:site_name" content="酷学小栈">
-<meta property="og:description" content="付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。但是，如果商家希望从不同地点的客户进行付款&#x2F;接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？ 使用各种支付服务提供商进行这些集成的方法有很多，但是，在本">
+<meta property="og:description" content="付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。但是，如果商家希望从不同地点的客户进行付款&#x2F;接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/0.png">
 <meta property="og:image" content="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/1.png">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/7.png">
 <meta property="og:image" content="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/8.png">
 <meta property="article:published_time" content="2022-03-24T02:07:47.000Z">
-<meta property="article:modified_time" content="2022-03-24T03:01:22.471Z">
+<meta property="article:modified_time" content="2022-03-24T03:02:44.230Z">
 <meta property="article:author" content="木辛念做梓">
 <meta property="article:tag" content="Flutter">
 <meta property="article:tag" content="Flutterwave">
@@ -67,9 +67,9 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml">
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -155,18 +155,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -245,7 +245,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-24 10:07:47 / 修改时间：11:01:22" itemprop="dateCreated datePublished" datetime="2022-03-24T10:07:47+08:00">2022-03-24</time>
+      <time title="创建时间：2022-03-24 10:07:47 / 修改时间：11:02:44" itemprop="dateCreated datePublished" datetime="2022-03-24T10:07:47+08:00">2022-03-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,6 +296,8 @@
         <img src="/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/0.png" class="" title="示意图 width=400">
 
 <p>付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。<br>作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。<br>但是，如果商家希望从不同地点的客户进行付款/接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？</p>
+<span id="more"></span>
+
 <p>使用各种支付服务提供商进行这些集成的方法有很多，但是，在本教程中，我将向您展示如何在Flutter中集成将提供各种支付选项的支付服务提供商 Flutterwave的模块。</p>
 <h3 id="Flutterwave是个啥？"><a href="#Flutterwave是个啥？" class="headerlink" title="Flutterwave是个啥？"></a>Flutterwave是个啥？</h3><p>Flutterwave 是一家支付服务提供商，提供各种服务来发送和接收付款。 如果您是企业主，您可以使用 Flutterwave 的各种选项向客户收取款项，例如：</p>
 <ul>
@@ -574,6 +576,9 @@ void _makeFlutterwavePayment(BuildContext context, String fullname, String phone
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/" rel="next" title="如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务">
+                  如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -606,14 +611,14 @@ void _makeFlutterwavePayment(BuildContext context, String fullname, String phone
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">196k</span>
+    <span title="站点总字数">207k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:58</span>
+    <span title="站点阅读时长">3:08</span>
   </span>
 </div>
 <div class="busuanzi-count">

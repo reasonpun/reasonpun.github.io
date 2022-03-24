@@ -6,7 +6,7 @@
   <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
   
   <link href="https://reasonpun.github.io/"/>
-  <updated>2022-03-24T03:01:22.471Z</updated>
+  <updated>2022-03-24T04:55:43.974Z</updated>
   <id>https://reasonpun.github.io/</id>
   
   <author>
@@ -17,20 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务</title>
+    <link href="https://reasonpun.github.io/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/"/>
+    <id>https://reasonpun.github.io/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/</id>
+    <published>2022-03-24T03:03:50.000Z</published>
+    <updated>2022-03-24T04:55:43.974Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="SpringBoot" scheme="https://reasonpun.github.io/categories/SpringBoot/"/>
+    
+    <category term="Java" scheme="https://reasonpun.github.io/categories/SpringBoot/Java/"/>
+    
+    
+    <category term="Java" scheme="https://reasonpun.github.io/tags/Java/"/>
+    
+    <category term="SprintBoot" scheme="https://reasonpun.github.io/tags/SprintBoot/"/>
+    
+    <category term="Kubernetes" scheme="https://reasonpun.github.io/tags/Kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在Flutter中集成Flutterwave</title>
     <link href="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/"/>
     <id>https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/</id>
     <published>2022-03-24T02:07:47.000Z</published>
-    <updated>2022-03-24T03:01:22.471Z</updated>
+    <updated>2022-03-24T03:02:44.230Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/0.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
-        
-      
+    <summary type="html">&lt;img src=&quot;/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/0.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。&lt;br&gt;作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。&lt;br&gt;但是，如果商家希望从不同地点的客户进行付款/接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？&lt;/p&gt;</summary>
     
     
     
@@ -484,29 +511,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="iOS" scheme="https://reasonpun.github.io/tags/iOS/"/>
     
     <category term="Xcode" scheme="https://reasonpun.github.io/tags/Xcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从0开始使用flutter和flame创建手机游戏</title>
-    <link href="https://reasonpun.github.io/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/"/>
-    <id>https://reasonpun.github.io/2022/01/31/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8flutter%E5%92%8Cflame%E5%88%9B%E5%BB%BA%E6%89%8B%E6%9C%BA%E6%B8%B8%E6%88%8F/</id>
-    <published>2022-01-31T01:02:04.000Z</published>
-    <updated>2022-03-18T03:44:12.535Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;为啥要做游戏开发呢？&lt;br&gt;不得不承认，游戏是一个非常让人着迷的活动（孩子们不要沉迷哟）。&lt;br&gt;我很喜欢玩游戏，虽然不是非常非常痴迷，但是也因此入手了好几部游戏机，其实我一直心心念念的向入手一部小霸王（此处可以认为是软广，小霸王不要忘了给我广告费，哈哈）红白机，和我的孩子一起怀念一下我小时候的快乐。&lt;br&gt;你们是不是也有这样的情愫呢？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="深入浅出系列" scheme="https://reasonpun.github.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
-    
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
-    
-    <category term="Flame" scheme="https://reasonpun.github.io/tags/Flame/"/>
     
   </entry>
   
