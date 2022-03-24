@@ -252,12 +252,12 @@ tag_icon: false
 # Front-matter variable (nonsupport animation).
 reward_settings:
   # If true, a donate button will be displayed in every article by default.
-  enable: false
-  animation: false
-  #comment: Buy me a coffee
+  enable: true  #是否开启打赏功能
+  animation: true   #微信支付跳动动画开关
+  comment: 你的鼓励是我更新的动力！ #页面上留言信息
 
 reward:
-  #wechatpay: /images/wechatpay.png
+  wechatpay: /images/wechatpay.png
   #alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
@@ -663,7 +663,7 @@ add_this_id:
 # Google Analytics
 # See: https://analytics.google.com
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: G-1HVT1YE421
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
