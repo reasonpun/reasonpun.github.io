@@ -18,6 +18,9 @@ tags:
 以 Apple Store 为例。
 每年都有数百万 Apple 客户预先注册购买新 iPhone。
 数百万人同时购买一件商品。
+
+<!--more-->
+
 如果您将 Apple 商店的流量描绘为随时间变化的每秒请求数，图表可能如下所示：
 
 {% asset_img 2.png 示意图 width="400" %}
