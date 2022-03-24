@@ -7,6 +7,7 @@ categories:
 tags:
 - Flutter
 - Flame
+- Game
 ---
 为啥要做游戏开发呢？
 不得不承认，游戏是一个非常让人着迷的活动（孩子们不要沉迷哟）。
