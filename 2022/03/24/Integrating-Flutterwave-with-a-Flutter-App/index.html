@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/7.png">
 <meta property="og:image" content="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/8.png">
 <meta property="article:published_time" content="2022-03-24T02:07:47.000Z">
-<meta property="article:modified_time" content="2022-03-24T02:48:48.116Z">
+<meta property="article:modified_time" content="2022-03-24T02:57:29.304Z">
 <meta property="article:author" content="木辛念做梓">
 <meta property="article:tag" content="Flutter">
 <meta property="article:tag" content="Flutterwave">
@@ -67,9 +67,9 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml">
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flutterwave%E6%98%AF%E4%B8%AA%E5%95%A5%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Flutterwave是个啥？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flutterwave-%E9%9B%86%E6%88%90%E9%80%89%E9%A1%B9"><span class="nav-number">2.</span> <span class="nav-text">Flutterwave 集成选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A5%E9%97%A8"><span class="nav-number">3.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-Flutterwave-%E5%B8%90%E6%88%B7%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">创建一个 Flutterwave 帐户。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E5%88%B0%E6%82%A8%E7%9A%84-Flutterwave-%E5%B8%90%E6%88%B7%E3%80%82"><span class="nav-number">3.2.</span> <span class="nav-text">登录到您的 Flutterwave 帐户。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B-Flutter-%E9%A1%B9%E7%9B%AE"><span class="nav-number">4.1.</span> <span class="nav-text">1. 创建一个示例 Flutter 项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%A0%E9%99%A4%E9%A2%84%E7%94%9F%E6%88%90%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.2.</span> <span class="nav-text">2.删除预生成的代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%9C%A8-pubspec-yml-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Flutterwave-%E5%8C%85"><span class="nav-number">5.</span> <span class="nav-text">3. 在 pubspec.yml 中添加 Flutterwave 包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%9C%A8main-dart%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BC%E5%85%A5Flutterwave%E5%8C%85"><span class="nav-number">6.</span> <span class="nav-text">4.在main.dart文件中导入Flutterwave包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-FlutterWave-%E5%AE%9E%E4%BE%8B%E3%80%82"><span class="nav-number">7.</span> <span class="nav-text">5. 创建一个 FlutterWave 实例。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%A4%84%E7%90%86%E5%93%8D%E5%BA%94"><span class="nav-number">8.</span> <span class="nav-text">6. 处理响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%90%91-Flutterwave-%E4%BB%98%E6%AC%BE%E3%80%82"><span class="nav-number">9.</span> <span class="nav-text">7. 向 Flutterwave 付款。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Flutterwave-%E6%94%AF%E4%BB%98%E7%A1%AE%E8%AE%A4"><span class="nav-number">10.</span> <span class="nav-text">8. Flutterwave 支付确认</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">11.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flutterwave%E6%98%AF%E4%B8%AA%E5%95%A5%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Flutterwave是个啥？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flutterwave-%E9%9B%86%E6%88%90%E9%80%89%E9%A1%B9"><span class="nav-number">2.</span> <span class="nav-text">Flutterwave 集成选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A5%E9%97%A8"><span class="nav-number">3.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-Flutterwave-%E5%B8%90%E6%88%B7%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">创建一个 Flutterwave 帐户。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E5%88%B0%E6%82%A8%E7%9A%84-Flutterwave-%E5%B8%90%E6%88%B7%E3%80%82"><span class="nav-number">3.2.</span> <span class="nav-text">登录到您的 Flutterwave 帐户。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B-Flutter-%E9%A1%B9%E7%9B%AE"><span class="nav-number">4.1.</span> <span class="nav-text">1. 创建一个示例 Flutter 项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%A0%E9%99%A4%E9%A2%84%E7%94%9F%E6%88%90%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.2.</span> <span class="nav-text">2.删除预生成的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%9C%A8-pubspec-yml-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Flutterwave-%E5%8C%85"><span class="nav-number">4.3.</span> <span class="nav-text">3. 在 pubspec.yml 中添加 Flutterwave 包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%9C%A8main-dart%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BC%E5%85%A5Flutterwave%E5%8C%85"><span class="nav-number">4.4.</span> <span class="nav-text">4.在main.dart文件中导入Flutterwave包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-FlutterWave-%E5%AE%9E%E4%BE%8B%E3%80%82"><span class="nav-number">4.5.</span> <span class="nav-text">5. 创建一个 FlutterWave 实例。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E5%A4%84%E7%90%86%E5%93%8D%E5%BA%94"><span class="nav-number">4.6.</span> <span class="nav-text">6. 处理响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E5%90%91-Flutterwave-%E4%BB%98%E6%AC%BE%E3%80%82"><span class="nav-number">4.7.</span> <span class="nav-text">7. 向 Flutterwave 付款。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-Flutterwave-%E6%94%AF%E4%BB%98%E7%A1%AE%E8%AE%A4"><span class="nav-number">4.8.</span> <span class="nav-text">8. Flutterwave 支付确认</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -245,7 +245,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-24 10:07:47 / 修改时间：10:48:48" itemprop="dateCreated datePublished" datetime="2022-03-24T10:07:47+08:00">2022-03-24</time>
+      <time title="创建时间：2022-03-24 10:07:47 / 修改时间：10:57:29" itemprop="dateCreated datePublished" datetime="2022-03-24T10:07:47+08:00">2022-03-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -365,12 +365,12 @@ class MyApp extends StatelessWidget {
     }
   }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上面的代码显示了一个简单的 UI，其标题为“Flutter +Flutterwave”，界面中心有一个按钮，用于使用 Flutterwave 发起支付。</p>
-<h3 id="3-在-pubspec-yml-中添加-Flutterwave-包"><a href="#3-在-pubspec-yml-中添加-Flutterwave-包" class="headerlink" title="3. 在 pubspec.yml 中添加 Flutterwave 包"></a>3. 在 pubspec.yml 中添加 Flutterwave 包</h3><pre class="line-numbers language-none"><code class="language-none">flutterwave: ^1.0.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="3-在-pubspec-yml-中添加-Flutterwave-包"><a href="#3-在-pubspec-yml-中添加-Flutterwave-包" class="headerlink" title="3. 在 pubspec.yml 中添加 Flutterwave 包"></a>3. 在 pubspec.yml 中添加 Flutterwave 包</h4><pre class="line-numbers language-none"><code class="language-none">flutterwave: ^1.0.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>始终确保从 <a target="_blank" rel="noopener" href="https://pub.dev/packages/flutterwave#prerequisite">Pub dev</a> 下载包版本以获得最新包。</p>
-<h3 id="4-在main-dart文件中导入Flutterwave包"><a href="#4-在main-dart文件中导入Flutterwave包" class="headerlink" title="4.在main.dart文件中导入Flutterwave包"></a>4.在main.dart文件中导入Flutterwave包</h3><pre class="line-numbers language-none"><code class="language-none">import 'package:flutterwave/flutterwave.dart';<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="4-在main-dart文件中导入Flutterwave包"><a href="#4-在main-dart文件中导入Flutterwave包" class="headerlink" title="4.在main.dart文件中导入Flutterwave包"></a>4.在main.dart文件中导入Flutterwave包</h4><pre class="line-numbers language-none"><code class="language-none">import 'package:flutterwave/flutterwave.dart';<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="5-创建一个-FlutterWave-实例。"><a href="#5-创建一个-FlutterWave-实例。" class="headerlink" title="5. 创建一个 FlutterWave 实例。"></a>5. 创建一个 FlutterWave 实例。</h3><p>通过调用 Flutterwave.forUIPayment() 构造函数创建 Flutterwave 实例。<br>构造函数接受以下详细信息的<strong>强制</strong>实例：</p>
+<h4 id="5-创建一个-FlutterWave-实例。"><a href="#5-创建一个-FlutterWave-实例。" class="headerlink" title="5. 创建一个 FlutterWave 实例。"></a>5. 创建一个 FlutterWave 实例。</h4><p>通过调用 Flutterwave.forUIPayment() 构造函数创建 Flutterwave 实例。<br>构造函数接受以下详细信息的<strong>强制</strong>实例：</p>
 <p><strong>Context</strong> , <strong>publicKey</strong> , <strong>encryptionKey</strong> , <strong>amount</strong> , <strong>currency</strong> , <strong>email</strong> , <strong>fullName</strong> , <strong>txRef</strong> , <strong>isDebugMode</strong> and <strong>phoneNumber</strong> </p>
 <p>这将返回 Flutterwave 的一个实例。<br>好吧，既然有一些必需的参数，让我们调整 UI 以使用户在付款时只从 UI 输入字段中填写必要的详细信息，例如电子邮件、金额、全名和电话号码。<br>注意：如果您希望使用不同货币的用户进行 Flutterwave 付款，您可以在 UI 中添加货币输入字段。<br>但是，如果您只想使用一种货币，您可以在代码中预先配置它，这样用户就不必在每次进行 Flutterwave 支付时都填写它。<br>有了这些新增功能，您的代码将如下所示：</p>
 <pre class="line-numbers language-none"><code class="language-none">  //add the following values to create the UI for Flutterwave Payment
@@ -480,7 +480,7 @@ void _makeFlutterwavePayment(BuildContext context, String fullname, String phone
 
 <p>注意：在这个 Demo 中，我们将使用 Mpesa 测试 Flutterwave 付款，可以通过 Mpesa 接受付款，这就是为什么在上述方法的第 26 行中将 acceptMpesaPayment 设置为 true 的原因。</p>
 <p>但是，您可以根据您所在的国家/地区和可接受的付款类型，将您想要测试的其他付款设置为真实。<br>如果您也想测试 CardPayment，请随意将其设置为 true。</p>
-<h3 id="6-处理响应"><a href="#6-处理响应" class="headerlink" title="6. 处理响应"></a>6. 处理响应</h3><p>接下来，在 Flutterwave 实例下方添加一个响应，该实例返回一个 Flutterwave 实例，然后我们在其上调用异步方法 .initializeForUiPayments()。<br>请参阅下面的示例代码：</p>
+<h4 id="6-处理响应"><a href="#6-处理响应" class="headerlink" title="6. 处理响应"></a>6. 处理响应</h4><p>接下来，在 Flutterwave 实例下方添加一个响应，该实例返回一个 Flutterwave 实例，然后我们在其上调用异步方法 .initializeForUiPayments()。<br>请参阅下面的示例代码：</p>
 <pre class="line-numbers language-none"><code class="language-none">final response = await flutterwave.initializeForUiPayments();
    if (response == null) {
        print("Transaction Failed");
@@ -499,7 +499,7 @@ void _makeFlutterwavePayment(BuildContext context, String fullname, String phone
    }
  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="7-向-Flutterwave-付款。"><a href="#7-向-Flutterwave-付款。" class="headerlink" title="7. 向 Flutterwave 付款。"></a>7. 向 Flutterwave 付款。</h3><p>现在您已经创建了 Flutterwave 实例和响应，请在 onPressed() 函数上调用您在上面（在步骤 6 中）创建的 _makeFlutterwavePayment 方法，以在按下按钮时执行付款。<br>请看下面的代码：</p>
+<h4 id="7-向-Flutterwave-付款。"><a href="#7-向-Flutterwave-付款。" class="headerlink" title="7. 向 Flutterwave 付款。"></a>7. 向 Flutterwave 付款。</h4><p>现在您已经创建了 Flutterwave 实例和响应，请在 onPressed() 函数上调用您在上面（在步骤 6 中）创建的 _makeFlutterwavePayment 方法，以在按下按钮时执行付款。<br>请看下面的代码：</p>
 <pre class="line-numbers language-none"><code class="language-none">ElevatedButton(
             child: const Text('Pay with Flutterwave'),
             onPressed: () {
@@ -515,7 +515,7 @@ void _makeFlutterwavePayment(BuildContext context, String fullname, String phone
         ),<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>是的，我们已经完成了代码实现。</p>
-<h3 id="8-Flutterwave-支付确认"><a href="#8-Flutterwave-支付确认" class="headerlink" title="8. Flutterwave 支付确认"></a>8. Flutterwave 支付确认</h3><p>现在运行我们刚刚按照上述说明构建的 Flutterwave Flutter 示例应用程序，并以测试用户的身份填写 UI 付款详细信息。<br>见下图：</p>
+<h4 id="8-Flutterwave-支付确认"><a href="#8-Flutterwave-支付确认" class="headerlink" title="8. Flutterwave 支付确认"></a>8. Flutterwave 支付确认</h4><p>现在运行我们刚刚按照上述说明构建的 Flutterwave Flutter 示例应用程序，并以测试用户的身份填写 UI 付款详细信息。<br>见下图：</p>
 <img src="/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/3.png" class="" title="示意图 width=400">
 
 <p>然后按下使用 Flutterwave 付款按钮，您现在应该可以开始付款了。 这只会显示一个付款选项，即 Mpesa，因为这是我们设置的。 检查下面的屏幕截图。</p>
