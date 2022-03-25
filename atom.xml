@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-03-25T13:40:39.302Z</updated>
+  <updated>2022-03-25T13:40:39.387Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -17,377 +17,501 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>内田光子-关于一流水准的思考</title>
-    <link href="https://pangz.fun/2022/03/25/2019-03-14-%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83/"/>
-    <id>https://pangz.fun/2022/03/25/2019-03-14-%E5%86%85%E7%94%B0%E5%85%89%E5%AD%90-%E5%85%B3%E4%BA%8E%E4%B8%80%E6%B5%81%E6%B0%B4%E5%87%86%E7%9A%84%E6%80%9D%E8%80%83/</id>
-    <published>2022-03-25T13:40:39.302Z</published>
-    <updated>2022-03-25T13:40:39.302Z</updated>
+    <title>Flutter &amp; Flame — 第 1 步：创建您的游戏</title>
+    <link href="https://pangz.fun/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/"/>
+    <id>https://pangz.fun/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/</id>
+    <published>2022-03-24T11:22:47.000Z</published>
+    <updated>2022-03-25T13:40:39.387Z</updated>
     
     
-    <summary type="html">区分一流和二流、三流并不需要通过什么复杂难做的大事，一流的人可以从平凡中显示出伟大。通俗地讲，就是能炒好土豆丝。</summary>
-    
-    
-    
-    
-    <category term="硅谷来信" scheme="https://pangz.fun/tags/%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1/"/>
-    
-    <category term="艺术" scheme="https://pangz.fun/tags/%E8%89%BA%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读 吴军《谷歌方法论》- 为什么学习语文</title>
-    <link href="https://pangz.fun/2022/03/25/2019-03-22-%E5%90%B4%E5%86%9B-%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%84%8F%E4%B9%89/"/>
-    <id>https://pangz.fun/2022/03/25/2019-03-22-%E5%90%B4%E5%86%9B-%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%84%8F%E4%B9%89/</id>
-    <published>2022-03-25T13:40:39.302Z</published>
-    <updated>2022-03-25T13:40:39.303Z</updated>
-    
-    
-    <summary type="html">阅读理解能力在通讯上可以被看作是接受信息，而发送信息则是我们的表达能力</summary>
+    <summary type="html">&lt;img src=&quot;/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/1.jpeg&quot; class=&quot;&quot; title=&quot;第一次运行新项目 width=400&quot;&gt;
+
+&lt;p&gt;从一个想法到一个商店就绪的游戏，所有这些都是用 Flutter 和 Flame 制作的。 加入我们本系列的第一部分，学习如何使用 Flutter 建立一个 Flame 项目并在屏幕上绘制你的第一个元素。&lt;/p&gt;</summary>
     
     
     
+    <category term="深入浅出系列" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
     
-    <category term="读后感" scheme="https://pangz.fun/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
     
-    <category term="谷歌方法论" scheme="https://pangz.fun/tags/%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Flame" scheme="https://pangz.fun/tags/Flame/"/>
+    
+    <category term="Game" scheme="https://pangz.fun/tags/Game/"/>
     
   </entry>
   
   <entry>
-    <title>读吴军《硅谷来信》心得笔记 - 第一篇</title>
-    <link href="https://pangz.fun/2022/03/25/2019-03-11-%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01/"/>
-    <id>https://pangz.fun/2022/03/25/2019-03-11-%E5%90%B4%E5%86%9B-%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1-%E7%AC%94%E8%AE%B0-01/</id>
-    <published>2022-03-25T13:40:39.301Z</published>
-    <updated>2022-03-25T13:40:39.302Z</updated>
+    <title>如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务</title>
+    <link href="https://pangz.fun/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/"/>
+    <id>https://pangz.fun/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/</id>
+    <published>2022-03-24T03:03:50.000Z</published>
+    <updated>2022-03-25T13:40:39.577Z</updated>
     
     
-    <summary type="html">谷歌小时候的故事：给初创公司创始人的建议</summary>
-    
-    
-    
-    
-    <category term="硅谷来信" scheme="https://pangz.fun/tags/%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1/"/>
-    
-    <category term="读后感" scheme="https://pangz.fun/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Vagrant部署Rails项目</title>
-    <link href="https://pangz.fun/2022/03/25/2016-11-04-Using-Vagrant-for-Rails-Development/"/>
-    <id>https://pangz.fun/2022/03/25/2016-11-04-Using-Vagrant-for-Rails-Development/</id>
-    <published>2022-03-25T13:40:39.300Z</published>
-    <updated>2022-03-25T13:40:39.300Z</updated>
-    
-    
-    <summary type="html">Vagrant 是一个自动化工具，可以在你的电脑的虚拟机里自动搭建一个开发环境。这就意味着你本地开发环境可以完全与生产服务器上保持一致，你的合作小伙伴也可以和你保持高度一致的运行环境。</summary>
+    <summary type="html">&lt;img src=&quot;/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;当您大规模设计和构建应用程序时，您将面临两个重大挑战：可扩展性和稳健性。&lt;br&gt;您应该设计您的服务，以便即使它受到间歇性重负载的影响，它也能继续可靠地运行。&lt;br&gt;以 Apple Store 为例。&lt;br&gt;每年都有数百万 Apple 客户预先注册购买新 iPhone。&lt;br&gt;数百万人同时购买一件商品。&lt;/p&gt;</summary>
     
     
     
+    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
     
-    <category term="Vagrant" scheme="https://pangz.fun/tags/Vagrant/"/>
-    
-    <category term="Rails" scheme="https://pangz.fun/tags/Rails/"/>
-    
-    <category term="Ruby" scheme="https://pangz.fun/tags/Ruby/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Emacs STEP-1</title>
-    <link href="https://pangz.fun/2022/03/25/2017-01-21-Emacs-STEP-1/"/>
-    <id>https://pangz.fun/2022/03/25/2017-01-21-Emacs-STEP-1/</id>
-    <published>2022-03-25T13:40:39.300Z</published>
-    <updated>2022-03-25T13:40:39.301Z</updated>
-    
-    
-    <summary type="html">一年成为Emacs高手（像神一样使用编辑器）</summary>
-    
-    
-    
-    
-    <category term="Emacs" scheme="https://pangz.fun/tags/Emacs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>玩转 Oryx2 （一）</title>
-    <link href="https://pangz.fun/2022/03/25/2016-04-08-set-up-oryx-env/"/>
-    <id>https://pangz.fun/2022/03/25/2016-04-08-set-up-oryx-env/</id>
-    <published>2022-03-25T13:40:39.299Z</published>
-    <updated>2022-03-25T13:40:39.299Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;h3 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;CDH 5.5.2, Parcel&lt;ul&gt;
-&lt;li&gt;HDFS&lt;/li&gt;
-&lt;li&gt;YARN&lt;/li&gt;
-&lt;li&gt;Zookeeper&lt;/li&gt;
-&lt;li&gt;Kafka&lt;/li&gt;
-&lt;li&gt;Spark (on YARN)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Oryx2 终端用户文档</title>
-    <link href="https://pangz.fun/2022/03/25/2016-04-06-Oryx2-end-user-doc/"/>
-    <id>https://pangz.fun/2022/03/25/2016-04-06-Oryx2-end-user-doc/</id>
-    <published>2022-03-25T13:40:39.298Z</published>
-    <updated>2022-03-25T13:40:39.298Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;运行&quot;&gt;&lt;a href=&quot;#运行&quot; class=&quot;headerlink&quot; title=&quot;运行&quot;&gt;&lt;/a&gt;运行&lt;/h3&gt;&lt;p&gt;注意：你必须已经按照&lt;a href=&quot;http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/&quot;&gt;管理员文档&lt;/a&gt;中提到的配置好了你的集群。&lt;/p&gt;
-&lt;p&gt;下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。&lt;/p&gt;
-&lt;p&gt;或者，源码编译他们并从deploy/bin/获取最新的脚本。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Oryx2 性能优化文档</title>
-    <link href="https://pangz.fun/2022/03/25/2016-04-07-Oryx2-performance-doc/"/>
-    <id>https://pangz.fun/2022/03/25/2016-04-07-Oryx2-performance-doc/</id>
-    <published>2022-03-25T13:40:39.298Z</published>
-    <updated>2022-03-25T13:40:39.299Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;这里收集了各种意见，经验法则和基准测试相关的性能：做这些不同的工作需要多少资源。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Oryx2 开发者文档</title>
-    <link href="https://pangz.fun/2022/03/25/2016-04-06-Oryx2-developer-doc/"/>
-    <id>https://pangz.fun/2022/03/25/2016-04-06-Oryx2-developer-doc/</id>
-    <published>2022-03-25T13:40:39.297Z</published>
-    <updated>2022-03-25T13:40:39.297Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;环境需求&quot;&gt;&lt;a href=&quot;#环境需求&quot; class=&quot;headerlink&quot; title=&quot;环境需求&quot;&gt;&lt;/a&gt;环境需求&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;git&lt;/a&gt;, 或者一个支持git的IDE&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://maven.apache.org/&quot;&gt;Apache Maven&lt;/a&gt; 3.2.1 或者更新版本&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot;&gt;Java JDK&lt;/a&gt; (不能只有JRE) 7 或者更新版本&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以上需要已经安装到了你的开发环境中。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式处理Nginx</title>
-    <link href="https://pangz.fun/2022/03/25/2016-01-24-Reg-Nginx/"/>
-    <id>https://pangz.fun/2022/03/25/2016-01-24-Reg-Nginx/</id>
-    <published>2022-03-25T13:40:39.296Z</published>
-    <updated>2022-03-25T13:40:39.296Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;Nginx-日志配置格式&quot;&gt;&lt;a href=&quot;#Nginx-日志配置格式&quot; class=&quot;headerlink&quot; title=&quot;Nginx 日志配置格式&quot;&gt;&lt;/a&gt;Nginx 日志配置格式&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;log_format  main
-        &#39;[$upstream_addr] $remote_addr [$time_local] &quot;$request&quot; $status &#39;
-        &#39;&quot;$request_body&quot; $body_bytes_sent &quot;$http_referer&quot; &quot;$http_user_agent&quot; &#39;
-        &#39;RESP:$upstream_response_time &#39;
-        &#39;REQ:$request_time&#39;;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java关键字volatile</title>
-    <link href="https://pangz.fun/2022/03/25/2016-03-08-Java-keyword-volatile/"/>
-    <id>https://pangz.fun/2022/03/25/2016-03-08-Java-keyword-volatile/</id>
-    <published>2022-03-25T13:40:39.296Z</published>
-    <updated>2022-03-25T13:40:39.297Z</updated>
-    
-    
-    <summary type="html">Java关键字volatile标识一个变量“被存储在主内存中”。更准确的说法是：每次volatile变量会从主内存中读取，而不是从CPU缓存；每次volatile变量的写操作会写入主内存，而不仅仅是CPU缓存。</summary>
-    
-    
+    <category term="Java" scheme="https://pangz.fun/categories/SpringBoot/Java/"/>
     
     
     <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Python关键字:yield</title>
-    <link href="https://pangz.fun/2022/03/25/2016-01-02-Python-keyword-yield/"/>
-    <id>https://pangz.fun/2022/03/25/2016-01-02-Python-keyword-yield/</id>
-    <published>2022-03-25T13:40:39.295Z</published>
-    <updated>2022-03-25T13:40:39.295Z</updated>
+    <category term="SprintBoot" scheme="https://pangz.fun/tags/SprintBoot/"/>
     
-    
-    <summary type="html">&lt;p&gt;注：以下代码实验环境均为&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;➜  ~  python
-Python 2.7.10 (default, Oct 23 2015, 18:05:06)
-[GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
+    <category term="Kubernetes" scheme="https://pangz.fun/tags/Kubernetes/"/>
     
   </entry>
   
   <entry>
-    <title>Spark优化</title>
-    <link href="https://pangz.fun/2022/03/25/2016-01-04-Spark-tuning/"/>
-    <id>https://pangz.fun/2022/03/25/2016-01-04-Spark-tuning/</id>
-    <published>2022-03-25T13:40:39.295Z</published>
-    <updated>2022-03-25T13:40:39.296Z</updated>
+    <title>在Flutter中集成Flutterwave</title>
+    <link href="https://pangz.fun/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/"/>
+    <id>https://pangz.fun/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/</id>
+    <published>2022-03-24T02:07:47.000Z</published>
+    <updated>2022-03-25T13:40:39.595Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;Spark-优化&quot;&gt;&lt;a href=&quot;#Spark-优化&quot; class=&quot;headerlink&quot; title=&quot;Spark 优化&quot;&gt;&lt;/a&gt;Spark 优化&lt;/h2&gt;&lt;p&gt;由于Spark内存计算特性，Spark程序会由集群上的如下因素决定其性能&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CPU&lt;/li&gt;
-&lt;li&gt;网络带宽&lt;/li&gt;
-&lt;li&gt;内存&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通常来说，如果配置适当的内存，那么瓶颈就是带宽。但是有些时候，有需要做些优化，比如以序列化的形式存储RDD，从而降低内存的占用。&lt;/p&gt;</summary>
+    <summary type="html">&lt;img src=&quot;/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/0.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。&lt;br&gt;作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。&lt;br&gt;但是，如果商家希望从不同地点的客户进行付款/接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？&lt;/p&gt;</summary>
     
     
     
+    <category term="Payment" scheme="https://pangz.fun/categories/Payment/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Oryx2 管理员文档</title>
-    <link href="https://pangz.fun/2022/03/25/2015-12-21-Oryx2-Admin-Docs/"/>
-    <id>https://pangz.fun/2022/03/25/2015-12-21-Oryx2-Admin-Docs/</id>
-    <published>2022-03-25T13:40:39.294Z</published>
-    <updated>2022-03-25T13:40:39.294Z</updated>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Payment/Flutter/"/>
     
     
-    <summary type="html">&lt;h3 id=&quot;Oryx-2-1-0-系统要求&quot;&gt;&lt;a href=&quot;#Oryx-2-1-0-系统要求&quot; class=&quot;headerlink&quot; title=&quot;Oryx 2.1.0 系统要求&quot;&gt;&lt;/a&gt;Oryx 2.1.0 系统要求&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Java 7 or later (JRE only is required)&lt;/li&gt;
-&lt;li&gt;A Hadoop cluster running the following components:&lt;ul&gt;
-&lt;li&gt;Apache Hadoop 2.6.0 or later&lt;/li&gt;
-&lt;li&gt;Apache Zookeeper 3.4.5 or later&lt;/li&gt;
-&lt;li&gt;Apache Kafka 0.8.2 or later (in 0.8.x line)&lt;/li&gt;
-&lt;li&gt;Apache Spark 1.5.0 or later&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    
-    
+    <category term="Flutterwave" scheme="https://pangz.fun/tags/Flutterwave/"/>
     
   </entry>
   
   <entry>
-    <title>Oryx2 简介</title>
-    <link href="https://pangz.fun/2022/03/25/2015-12-21-Oryx2-Overview/"/>
-    <id>https://pangz.fun/2022/03/25/2015-12-21-Oryx2-Overview/</id>
-    <published>2022-03-25T13:40:39.294Z</published>
-    <updated>2022-03-25T13:40:39.295Z</updated>
+    <title>Flutter TimePicker</title>
+    <link href="https://pangz.fun/2022/03/22/Flutter-TimePicker/"/>
+    <id>https://pangz.fun/2022/03/22/Flutter-TimePicker/</id>
+    <published>2022-03-22T02:17:22.000Z</published>
+    <updated>2022-03-25T13:40:39.499Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;![Oryx2](/assets/images/posts/oryx/OryxLogoMedium.png)&lt;/p&gt;
-&lt;p&gt;Oryx2是专注于进行大规模，实时机器学习框架，遵循lambda规则，基于Apache Spark和Apache Kafka构建。&lt;/p&gt;
-&lt;p&gt;Oryx 不仅是构建应用程序的框架，而且包含 协同过滤，分类，回归和聚类的打包的端到端的应用。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Kafka Structure</title>
-    <link href="https://pangz.fun/2022/03/25/2015-12-08-apache-kafka-structure/"/>
-    <id>https://pangz.fun/2022/03/25/2015-12-08-apache-kafka-structure/</id>
-    <published>2022-03-25T13:40:39.293Z</published>
-    <updated>2022-03-25T13:40:39.293Z</updated>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;Apache-Kafka消息服务&quot;&gt;&lt;a href=&quot;#Apache-Kafka消息服务&quot; class=&quot;headerlink&quot; title=&quot;Apache Kafka消息服务&quot;&gt;&lt;/a&gt;Apache Kafka消息服务&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;参考地址 &lt;a href=&quot;http://kafka.apache.org/documentation.html#brokerconfigs&quot;&gt;http://kafka.apache.org/documentation.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary>
+    <summary type="html">&lt;img src=&quot;/2022/03/22/Flutter-TimePicker/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在本文中，我们将快速探索日期和时间选择器。&lt;br&gt;我们不会在这个应用程序中使用任何包。我们将使用 Flutter 中可用的一些核心功能来实现这一点。 我们将在您的 Flutter 应用程序中实现日期和时间选择器的演示。&lt;/p&gt;</summary>
     
     
     
+    <category term="TimePicker" scheme="https://pangz.fun/categories/TimePicker/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/TimePicker/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="TimePicker" scheme="https://pangz.fun/tags/TimePicker/"/>
     
   </entry>
   
   <entry>
-    <title>Apache Flume-ng Structure</title>
-    <link href="https://pangz.fun/2022/03/25/2015-12-10-apache-flume-ng-structure/"/>
-    <id>https://pangz.fun/2022/03/25/2015-12-10-apache-flume-ng-structure/</id>
-    <published>2022-03-25T13:40:39.293Z</published>
-    <updated>2022-03-25T13:40:39.294Z</updated>
+    <title>15 Javascript codes you will always need</title>
+    <link href="https://pangz.fun/2022/03/20/15-Javascript-codes-you-will-always-need/"/>
+    <id>https://pangz.fun/2022/03/20/15-Javascript-codes-you-will-always-need/</id>
+    <published>2022-03-20T01:53:08.000Z</published>
+    <updated>2022-03-25T13:40:39.290Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;Apache-flume-NG-配置&quot;&gt;&lt;a href=&quot;#Apache-flume-NG-配置&quot; class=&quot;headerlink&quot; title=&quot;Apache-flume NG 配置&quot;&gt;&lt;/a&gt;Apache-flume NG 配置&lt;/h2&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;  Flume NG是一个分布式、可靠、可用的系统，它能够将不同数据源的海量日志数据进行高效收集、聚合、移动，最后存储到一个中心化数据存储系统中。&lt;/p&gt;
-&lt;p&gt;  由原来的Flume OG到现在的Flume NG，进行了架构重构，并且现在NG版本完全不兼容原来的OG版本。&lt;/p&gt;
-&lt;p&gt;  经过架构重构后，Flume NG更像是一个轻量的小工具，非常简单，容易适应各种方式日志收集，并支持failover和负载均衡。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux shell 获得以前日期</title>
-    <link href="https://pangz.fun/2022/03/25/2015-12-05-linux-shell-generate-date/"/>
-    <id>https://pangz.fun/2022/03/25/2015-12-05-linux-shell-generate-date/</id>
-    <published>2022-03-25T13:40:39.292Z</published>
-    <updated>2022-03-25T13:40:39.293Z</updated>
-    
-    
-    <summary type="html">Linux shell 获取各种格式的日期</summary>
+    <summary type="html">&lt;h3 id=&quot;随机排列数组&quot;&gt;&lt;a href=&quot;#随机排列数组&quot; class=&quot;headerlink&quot; title=&quot;随机排列数组&quot;&gt;&lt;/a&gt;随机排列数组&lt;/h3&gt;&lt;p&gt;使用排序和随机方法对数组进行排序非常容易。&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;const shuffleArray = (arr) =&amp;gt; arr.sort(() =&amp;gt; 0.5 - Math.random());
+console.log(shuffleArray([1, 2, 3, 4]));
+// Result: [ 1, 4, 3, 2 ]&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     
+    <category term="JavaScript" scheme="https://pangz.fun/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://pangz.fun/tags/JavaScript/"/>
+    
+    <category term="编程技巧" scheme="https://pangz.fun/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
   <entry>
-    <title>Nginx Logrotate</title>
-    <link href="https://pangz.fun/2022/03/25/2015-12-04-nginx-logrotate/"/>
-    <id>https://pangz.fun/2022/03/25/2015-12-04-nginx-logrotate/</id>
-    <published>2022-03-25T13:40:39.291Z</published>
-    <updated>2022-03-25T13:40:39.291Z</updated>
+    <title>Flutter 中的 Paypal 支付网关的集成</title>
+    <link href="https://pangz.fun/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/"/>
+    <id>https://pangz.fun/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/</id>
+    <published>2022-03-19T13:17:47.000Z</published>
+    <updated>2022-03-25T13:40:39.632Z</updated>
     
     
-    <summary type="html">logrotate is  designed to ease administration of systems that generatelarge numbers of log files.  It allows automatic rotation, compression,removal, and mailing of log files.  Each log file may be handled daily,weekly, monthly, or when it grows too large.</summary>
+    <summary type="html">&lt;img src=&quot;/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;问题：&lt;br&gt;在撰写本文时，Paypal 还没有为 Flutter 中的支付网关集成提供 SDK 包。 此外，整个互联网上貌似都没有解决此问题的方法。&lt;br&gt;在对该主题进行了大量研究之后，我觉得我找到了解决此问题的简单方法。&lt;/p&gt;
+&lt;p&gt;解决方案：&lt;br&gt;我已经使用 WebView 成功实现了 Paypal 支付网关。 我使用了一些 Paypal 的可用 API 来进行支付，这些 API 可以正式集成到网站中。&lt;/p&gt;</summary>
     
     
     
+    <category term="Payment" scheme="https://pangz.fun/categories/Payment/"/>
     
-    <category term="nginx" scheme="https://pangz.fun/tags/nginx/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Payment/Flutter/"/>
     
-    <category term="logrotate" scheme="https://pangz.fun/tags/logrotate/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Paypal" scheme="https://pangz.fun/tags/Paypal/"/>
     
   </entry>
   
   <entry>
-    <title>Docker中搭建Spark计算框架</title>
-    <link href="https://pangz.fun/2022/03/25/2015-12-04-spark-in-docker/"/>
-    <id>https://pangz.fun/2022/03/25/2015-12-04-spark-in-docker/</id>
-    <published>2022-03-25T13:40:39.291Z</published>
-    <updated>2022-03-25T13:40:39.292Z</updated>
+    <title>Firebase — Flutter</title>
+    <link href="https://pangz.fun/2022/03/19/Firebase-%E2%80%94-Flutter/"/>
+    <id>https://pangz.fun/2022/03/19/Firebase-%E2%80%94-Flutter/</id>
+    <published>2022-03-19T03:09:52.000Z</published>
+    <updated>2022-03-25T13:40:39.381Z</updated>
     
     
-    <summary type="html">Spark计算框架在Docker中的部署步骤</summary>
+    <summary type="html">&lt;p&gt;Firebase 是 Fl​​utter 中使用最广泛的后端之一。它由谷歌开发并提供了很多功能。让我们看看 Firebase 中有哪些可以与 Flutter 应用集成的功能！&lt;/p&gt;
+&lt;img src=&quot;/2022/03/19/Firebase-%E2%80%94-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
     
     
     
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
     
-    <category term="Spark" scheme="https://pangz.fun/tags/Spark/"/>
     
-    <category term="Docker" scheme="https://pangz.fun/tags/Docker/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter：黄金测试 —— 比较 Widgets 和 Snapshots</title>
+    <link href="https://pangz.fun/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/"/>
+    <id>https://pangz.fun/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/</id>
+    <published>2022-03-18T13:26:02.000Z</published>
+    <updated>2022-03-25T13:40:39.398Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;测试对于交付具有最佳质量的应用程序非常重要。 在这篇文章中，我想谈谈 Widget 测试中鲜为人知的特性之一——黄金测试。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用 Codemagic CI/CD 运行 Flutter Golden（快照）测试</title>
+    <link href="https://pangz.fun/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/"/>
+    <id>https://pangz.fun/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/</id>
+    <published>2022-03-18T12:29:02.000Z</published>
+    <updated>2022-03-25T13:40:39.573Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;测试是开发的一个非常重要的方面，它有助于确保您的应用程序可以正常运行并为用户提供正确的外观。 很高兴有 CI/CD 工具可以自动为您检查应用程序质量、在出现问题时通知团队以及将应用程序发布给最终用户。&lt;br&gt;在本文中，我将和您唠一唠如何使用 Codemagic CI/CD 运行 Golden 测试。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Firebase 在后台和前台推送通知</title>
+    <link href="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/"/>
+    <id>https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/</id>
+    <published>2022-03-17T13:50:00.000Z</published>
+    <updated>2022-03-25T13:40:39.633Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在应用程序中，我们需要集成推送通知。&lt;br&gt;虽然我们成功集成了它，但有时在应用程序未运行或在后台打开时发送推送通知会出现问题或者导致应用程序的崩溃。&lt;br&gt;所以，本篇内容中我们将在Flutter中使用 firebase ，使用它的通知适用于所有状态：前台、后台，甚至在应用程序关闭（未运行）时。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
+    
+    <category term="Notification" scheme="https://pangz.fun/tags/Notification/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP核心技术的面试题</title>
+    <link href="https://pangz.fun/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>https://pangz.fun/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
+    <published>2022-03-17T13:04:12.000Z</published>
+    <updated>2022-03-25T13:40:39.630Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/1.jpg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;1 oop是什么?&lt;br&gt;答:oop是面向对象编程,面向对象编程是一种计算机编程架构,OOP 的一条基本原则是计算机程序是由单个能够起到子程序作用的单元或对象组合而成。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="面试准备" scheme="https://pangz.fun/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    
+    <category term="PHP" scheme="https://pangz.fun/tags/PHP/"/>
+    
+    <category term="面试" scheme="https://pangz.fun/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter ListView 和 ScrollPhysics 之详解</title>
+    <link href="https://pangz.fun/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/"/>
+    <id>https://pangz.fun/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/</id>
+    <published>2022-03-15T10:08:13.000Z</published>
+    <updated>2022-03-25T13:40:39.402Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;本文旨在对 ListView 类、ScrollPhysics 以及通用小部件的调整和优化进行更详细的探索。&lt;br&gt;Flutter 中的 ListView 是可滚动项的线性列表。我们可以使用它来制作可滚动的项目列表或制作重复项目的列表。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Widget" scheme="https://pangz.fun/categories/Widget/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Widget/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
+    
+    <category term="ListView" scheme="https://pangz.fun/tags/ListView/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入了解 Flutter TextField</title>
+    <link href="https://pangz.fun/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/"/>
+    <id>https://pangz.fun/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/</id>
+    <published>2022-03-15T10:02:16.000Z</published>
+    <updated>2022-03-25T13:40:39.333Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在本文中，我们将全面介绍 Flutter TextField 小部件，并找出它的功能和可能的定制。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Widget" scheme="https://pangz.fun/categories/Widget/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Widget/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="TextField" scheme="https://pangz.fun/tags/TextField/"/>
+    
+    <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>适合初学者的Flutter Bloc模式</title>
+    <link href="https://pangz.fun/2022/03/15/Flutter-bloc-for-beginners/"/>
+    <id>https://pangz.fun/2022/03/15/Flutter-bloc-for-beginners/</id>
+    <published>2022-03-15T07:06:52.000Z</published>
+    <updated>2022-03-25T13:40:39.515Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/15/Flutter-bloc-for-beginners/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;h3 id=&quot;什么是Flutter-的Bocl模式&quot;&gt;&lt;a href=&quot;#什么是Flutter-的Bocl模式&quot; class=&quot;headerlink&quot; title=&quot;什么是Flutter 的Bocl模式&quot;&gt;&lt;/a&gt;什么是Flutter 的Bocl模式&lt;/h3&gt;&lt;p&gt;Flutter bloc 是 Fl​​utter 应用程序的状态管理之一。您可以使用它以 &lt;strong&gt;简单&lt;/strong&gt; 的方式处理应用程序的所有可能状态。&lt;br&gt;Flutter bloc 易于使用，因为您和您的团队将很快理解这个概念，无论您的级别是什么，这个库都有非常好的文档和大量的示例，也是 Flutter 社区中使用最多的库之一，因此，如果您有任何疑问或问题，您可能会通过互联网上的简单搜索找到解决方案。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Architecture" scheme="https://pangz.fun/categories/Architecture/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Architecture/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Patterns" scheme="https://pangz.fun/tags/Patterns/"/>
+    
+    <category term="Beginners" scheme="https://pangz.fun/tags/Beginners/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter中的架构模式</title>
+    <link href="https://pangz.fun/2022/03/14/Architecture-patterns-in-Flutter/"/>
+    <id>https://pangz.fun/2022/03/14/Architecture-patterns-in-Flutter/</id>
+    <published>2022-03-14T01:09:08.000Z</published>
+    <updated>2022-03-25T13:40:39.375Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/14/Architecture-patterns-in-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;Flutter 拥有一个不断增长的状态管理解决方案生态系统。 &lt;a href=&quot;https://flutter.dev/docs/development/data-and-backend/state-mgmt/options&quot;&gt;Flutter文档&lt;/a&gt;本身列出了 10 多个选项！弄清楚选择哪种解决方案是一项艰巨的任务。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Architecture" scheme="https://pangz.fun/categories/Architecture/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Architecture/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Patterns" scheme="https://pangz.fun/tags/Patterns/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>寻找Flutter模板的5个最佳网站</title>
+    <link href="https://pangz.fun/2022/03/14/5-Best-Websites-for-Flutter-Templates/"/>
+    <id>https://pangz.fun/2022/03/14/5-Best-Websites-for-Flutter-Templates/</id>
+    <published>2022-03-14T00:28:10.000Z</published>
+    <updated>2022-03-25T13:40:39.303Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/14/5-Best-Websites-for-Flutter-Templates/0.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;模板使 Flutter 开发变得简单快捷。您还可以从模板中获得一些设计灵感。&lt;br&gt;今天我将分享一些令人惊叹的网站，您可以获得免费的 Flutter 模板。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具篇" scheme="https://pangz.fun/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Templates" scheme="https://pangz.fun/tags/Templates/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>试一下这个极佳的文件夹结构吧</title>
+    <link href="https://pangz.fun/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/"/>
+    <id>https://pangz.fun/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/</id>
+    <published>2022-03-13T14:34:28.000Z</published>
+    <updated>2022-03-25T13:40:39.628Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;一个快速发展且计划不断变化的项目对于每个开发人员来说都是一场噩梦。&lt;br&gt;摆脱这种情况的唯一方法是有一个合理的规划。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Structure" scheme="https://pangz.fun/tags/Structure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter的MVVM设计模式</title>
+    <link href="https://pangz.fun/2022/03/12/Flutter-MVVM-Architecture/"/>
+    <id>https://pangz.fun/2022/03/12/Flutter-MVVM-Architecture/</id>
+    <published>2022-03-12T15:08:44.000Z</published>
+    <updated>2022-03-25T13:40:39.495Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2022/03/12/Flutter-MVVM-Architecture/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;模型-视图-视图模型 (MVVM) 在软件开发方面是一种非常成熟的架构模式。 MVVM 有什么特别之处？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="MVVM" scheme="https://pangz.fun/tags/MVVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简单的介绍Flutter的MVVM设计模式</title>
+    <link href="https://pangz.fun/2022/03/12/An-Introduction-to-MVVM-in-Flutter/"/>
+    <id>https://pangz.fun/2022/03/12/An-Introduction-to-MVVM-in-Flutter/</id>
+    <published>2022-03-12T13:35:03.000Z</published>
+    <updated>2022-03-25T13:40:39.348Z</updated>
+    
+    
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;在这篇文章中，我们将使用 MVVM 设计模式来编写一个完整的 Flutter 应用程序&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="MVVM" scheme="https://pangz.fun/tags/MVVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提高移动应用开发速度的10大Flutter工具</title>
+    <link href="https://pangz.fun/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/"/>
+    <id>https://pangz.fun/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/</id>
+    <published>2022-03-10T06:33:32.000Z</published>
+    <updated>2022-03-25T13:40:39.637Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Flutter 是让企业保持在数字化轨道上的最具吸引力和最出色的框架之一。&lt;br&gt;企业可以从多种 Flutter 应用开发工具中进行选择来开发应用。这些工具中的每一个都有可能使开发人员的编码更加敏捷和简单。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="深入浅出系列" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Tools" scheme="https://pangz.fun/tags/Tools/"/>
     
   </entry>
   

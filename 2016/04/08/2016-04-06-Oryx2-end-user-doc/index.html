@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"pangz.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592202470693653"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="运行注意：你必须已经按照管理员文档中提到的配置好了你的集群。 下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。 或者，源码编译他们并从deploy&#x2F;bin&#x2F;获取最新的脚本。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oryx2 终端用户文档">
+<meta property="og:url" content="https://pangz.fun/2016/04/08/2016-04-06-Oryx2-end-user-doc/index.html">
+<meta property="og:site_name" content="酷学小栈">
+<meta property="og:description" content="运行注意：你必须已经按照管理员文档中提到的配置好了你的集群。 下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。 或者，源码编译他们并从deploy&#x2F;bin&#x2F;获取最新的脚本。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-04-08T10:02:16.000Z">
+<meta property="article:modified_time" content="2022-03-25T14:08:20.180Z">
+<meta property="article:author" content="木辛念做梓">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://pangz.fun/2016/04/08/2016-04-06-Oryx2-end-user-doc/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://pangz.fun/2016/04/08/2016-04-06-Oryx2-end-user-doc/","path":"2016/04/08/2016-04-06-Oryx2-end-user-doc/","title":"Oryx2 终端用户文档"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Oryx2 终端用户文档 | 酷学小栈</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HVT1YE421"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-1HVT1YE421","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">酷学小栈</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">还要再走500里</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">1.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E4%B8%8BALS%E7%9A%84%E4%BE%8B%E5%AD%90%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text">尝试下ALS的例子吧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#API%E6%89%8B%E5%86%8C"><span class="nav-number">3.</span> <span class="nav-text">API手册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E5%92%8C%E6%8E%A8%E8%8D%90"><span class="nav-number">4.</span> <span class="nav-text">协同过滤和推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB-x2F-%E5%9B%9E%E5%BD%92"><span class="nav-number">5.</span> <span class="nav-text">分类 &#x2F; 回归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%9A%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">聚类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">7.</span> <span class="nav-text">配置</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">木辛念做梓</p>
+  <div class="site-description" itemprop="description">读万卷书，行万里路，胸中脱去尘浊</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://io-oi.me/" title="https:&#x2F;&#x2F;io-oi.me" rel="noopener" target="_blank">reuixiy</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pangz.fun/2016/04/08/2016-04-06-Oryx2-end-user-doc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="木辛念做梓">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酷学小栈">
+      <meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Oryx2 终端用户文档 | 酷学小栈">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Oryx2 终端用户文档
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2016-04-08 18:02:16" itemprop="dateCreated datePublished" datetime="2016-04-08T18:02:16+08:00">2016-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-25 22:08:20" itemprop="dateModified" datetime="2022-03-25T22:08:20+08:00">2022-03-25</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>注意：你必须已经按照<a target="_blank" rel="noopener" href="http://reasonpun.com/2015/12/21/Oryx2-Admin-Docs/">管理员文档</a>中提到的配置好了你的集群。</p>
+<p>下载最新的Oryx版本，包括批处理层，实时计算层和服务层的jar文件和sh脚本。</p>
+<p>或者，源码编译他们并从deploy/bin/获取最新的脚本。</p>
+<span id="more"></span>
+
+<p>拷贝二进制和脚本到hadoop集群的机器上。他们可以会被部署到不同的机器，或者是被部署到一个测试机器上。实时和批处理层应该运行且只能运行在一台机器上（The Speed and Batch Layers should run on at most one machine, each），服务层则可以运行于多个节点上。</p>
+<p>创建一个配置文件，可以简单的拷贝例子中的conf/als-example.conf。并修改host名称，端口和目录。实际上，选择hdfs上已经存在的数据和模型目录便于用户运行Oryx 二进制命令。</p>
+<p>拷贝该配置文件，并重命名为oryx.conf，将他放到每个机器的上二进制命令和脚本相同的目录下。</p>
+<p>执行如下命令开始这3个层的运行：</p>
+<pre class="line-numbers language-none"><code class="language-none">./oryx-run.sh batch
+./oryx-run.sh speed
+./oryx-run.sh serving<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>参数–layer-jar your-layer.jar and –conf your-config.conf可以指定某一层特定位置的jar文件和配置文件。也可以使用–jvm-args直接传递更多的参数给Spark驱动程序，比如：–jvm-args=”-Dkey=value”</p>
+<p>这都不需要在同一台机器上，但是也不一定（如果配置特殊指定批处理和实时处理层，服务层API不同的端口）。服务层可以运行在多个机器上。</p>
+<p>举个例子，批处理层SparkUI运行在启动脚本所在的机器的4040端口（除非通过配置更改）。一个简单的基于web端的控制台的服务层默认是运行在8080端口的。</p>
+<p>完美！</p>
+<h3 id="尝试下ALS的例子吧"><a href="#尝试下ALS的例子吧" class="headerlink" title="尝试下ALS的例子吧"></a>尝试下ALS的例子吧</h3><p>如果你已经使用了上述的配置，你就已经可以运行一个基于ALS的推荐程序实例。<br>自获取GroupLens 100K的数据集，并且找到u.data文件，这个文件的内容需要转换成csv格式：</p>
+<pre class="line-numbers language-none"><code class="language-none">tr '\t' ',' &lt; u.data &gt; data.csv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>将这些数据放入服务层，使用本地的命令行工具，如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">wget --quiet --post-file data.csv --output-document - \
+  --header "Content-Type: text/csv" \
+  http://your-serving-layer:8080/ingest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>如果你使用tail命令查看输入的内容，可以看到如下数据：</p>
+<pre class="line-numbers language-none"><code class="language-none">196,242,3.0,881250949186
+196,242,3.0,881250949
+186,302,3.0,891717742
+22,377,1.0,878887116
+244,51,2.0,880606923
+166,346,1.0,886397596
+298,474,4.0,884182806
+...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>很快的，你也可以看到批处理层已经开始触发一个新的计算了。这个例子被配置为5分钟一个周期。</p>
+<p>数据首先会被写入HDFS。默认配置被写入hdfs:///user/example/Oryx/data/目录下。且目录以时间戳命名，每一部分都包含Hadoop part-r-* 文件，都是以文本的序列话文件的方式存储。虽然不是纯文本，打印出来的话，还是有一部分是可以识别的，因为这其实真的是文本。</p>
+<pre class="line-numbers language-none"><code class="language-none">SEQorg.apache.hadoop.io.Textorg.apache.hadoop.io.Text����^�]�XسN�22,377,1.0,87888711662...<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>模型计算开始。这些批处理层会以大量的新的分布式的作业形式展现。在这个例子中，Spark UI可以通过<a href="http://your-batch-layer:4040访问。">http://your-batch-layer:4040访问。</a></p>
+<p>模型计算是非常快的，执行完毕以后会合并PMML和支持数据文件并存储到目录hdfs:///user/example/Oryx/model/下。举个例子，model.pmml 的内容如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2.1"&gt;
+    &lt;Header&gt;
+        &lt;Application name="Oryx"/&gt;
+        &lt;Timestamp&gt;2014-12-18T04:48:54-0800&lt;/Timestamp&gt;
+    &lt;/Header&gt;
+    &lt;Extension name="X" value="X/"/&gt;
+    &lt;Extension name="Y" value="Y/"/&gt;
+    &lt;Extension name="features" value="10"/&gt;
+    &lt;Extension name="lambda" value="0.001"/&gt;
+    &lt;Extension name="implicit" value="true"/&gt;
+    &lt;Extension name="alpha" value="1.0"/&gt;
+    &lt;Extension name="XIDs"&gt;56 168 222 343 397 ...
+     ...
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The X/ and Y/ subdirectories next to it contain feature vectors, like:</p>
+<pre class="line-numbers language-none"><code class="language-none">[56,[0.5746282834154238,-0.08896614131333057,-0.029456222765775263,
+  0.6039821219690552,0.1497901814774658,-0.018654312114339863,
+  -0.37342063488340266,-0.2370768843521807,1.148260034028485,
+  1.0645643656769153]]
+[168,[0.8722769882777296,0.4370416943031704,0.27402044461549885,
+  -0.031252701117490456,-0.7241385753098256,0.026079081002582338,
+  0.42050973702065714,0.27766923396205817,0.6241033215856671,
+  -0.48530795198811266]]
+...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果使用tail命令查看更新的内容。<br>这些数据会很快放入服务层，此时访问/ready会返回200 OK。</p>
+<pre class="line-numbers language-none"><code class="language-none">wget --quiet --output-document - --server-response \
+  http://your-serving-layer:8080/ready
+...
+  HTTP/1.1 200 OK
+  Content-Length: 0
+  Date: Tue, 1 Sep 2015 13:26:53 GMT
+  Server: Oryx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">wget --quiet --output-document -  http://your-serving-layer:8080/recommend/17
+...
+50,0.7749542842056966
+275,0.7373013861581563
+258,0.731818692628511
+181,0.7049967175706345
+127,0.704518989947498
+121,0.7014631029793741
+15,0.6954683387287907
+288,0.6774889711024022
+25,0.6663619887033064
+285,0.6398968471343595<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>恭喜！实时推荐系统搭建完毕！可以通过Ctrl-C关闭。</p>
+<h3 id="API手册"><a href="#API手册" class="headerlink" title="API手册"></a>API手册</h3><p>Oryx 支持多种端到端的程序，包括服务层的REST 接口。</p>
+<h3 id="协同过滤和推荐"><a href="#协同过滤和推荐" class="headerlink" title="协同过滤和推荐"></a>协同过滤和推荐</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Recommend.html">/recommend</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToMany.html">/recommendToMany</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendToAnonymous.html">/recommendToAnonymous</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/RecommendWithContext.html">/recommendWithContext</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Similarity.html">/similarity</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/SimilarityToItem.html">/similarityToItem</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/KnownItems.html">/knownItems</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Estimate.html">/estimate</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/EstimateForAnonymous.html">/estimateForAnonymous</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Because.html">/because</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostSurprising.html">/mostSurprising</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/PopularRepresentativeItems.html">/popularRepresentativeItems</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html">/mostActiveUsers</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostPopularItems.html">/mostPopularItems</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/MostActiveUsers.html">/mostActiveUsers</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/AllItemIDs.html">/item/allIDs</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ready.html">/ready</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Preference.html">/pref</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/als/Ingest.html">/ingest</a></li>
+</ul>
+<h3 id="分类-x2F-回归"><a href="#分类-x2F-回归" class="headerlink" title="分类 / 回归"></a>分类 / 回归</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Predict.html">/predict</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/ClassificationDistribution.html">/classificationDistribution</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Ready.html">/ready</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/rdf/Train.html">/train</a></li>
+</ul>
+<h3 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Assign.html">/assign</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/DistanceToNearest.html">/distanceToNearest</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Ready.html">/ready</a></li>
+<li><a target="_blank" rel="noopener" href="http://oryx.io/apidocs/com/cloudera/oryx/app/serving/kmeans/Add.html">/add</a></li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/blob/master/app/conf/als-example.conf">app/conf/als-example.conf</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/blob/master/app/conf/kmeans-example.conf">app/conf/kmeans-example.conf</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/OryxProject/oryx/blob/master/app/conf/rdf-example.conf">app/conf/rdf-example.conf</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>你的鼓励是我更新的动力！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="木辛念做梓 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="木辛念做梓 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2016/04/08/2016-04-08-set-up-oryx-env/" rel="prev" title="玩转 Oryx2 （一）">
+                  <i class="fa fa-chevron-left"></i> 玩转 Oryx2 （一）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2016/04/08/2016-04-06-Oryx2-developer-doc/" rel="next" title="Oryx2 开发者文档">
+                  Oryx2 开发者文档 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">木辛念做梓</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">212k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">3:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
