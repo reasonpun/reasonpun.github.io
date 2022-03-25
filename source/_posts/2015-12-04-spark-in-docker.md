@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Docker中搭建Spark计算框架
+date: 2015-12-04 18:02:16
 excerpt: Spark计算框架在Docker中的部署步骤
 tag: [Spark, Docker]
 ---

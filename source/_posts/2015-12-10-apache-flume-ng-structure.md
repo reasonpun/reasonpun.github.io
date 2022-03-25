@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Apache Flume-ng Structure
+date: 2015-12-10 18:02:16
 ---
 
 ## Apache-flume NG 配置
