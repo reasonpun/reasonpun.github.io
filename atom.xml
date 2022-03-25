@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>酷学小栈</title>
-  <icon>https://reasonpun.github.io/icon.png</icon>
+  <icon>https://pangz.fun/icon.png</icon>
   <subtitle>还要再走500里</subtitle>
-  <link href="https://reasonpun.github.io/atom.xml" rel="self"/>
+  <link href="https://pangz.fun/atom.xml" rel="self"/>
   
-  <link href="https://reasonpun.github.io/"/>
+  <link href="https://pangz.fun/"/>
   <updated>2022-03-24T15:00:40.112Z</updated>
-  <id>https://reasonpun.github.io/</id>
+  <id>https://pangz.fun/</id>
   
   <author>
     <name>木辛念做梓</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Flutter &amp; Flame — 第 1 步：创建您的游戏</title>
-    <link href="https://reasonpun.github.io/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/"/>
-    <id>https://reasonpun.github.io/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/</id>
+    <link href="https://pangz.fun/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/"/>
+    <id>https://pangz.fun/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/</id>
     <published>2022-03-24T11:22:47.000Z</published>
     <updated>2022-03-24T15:00:40.112Z</updated>
     
@@ -30,23 +30,23 @@
     
     
     
-    <category term="深入浅出系列" scheme="https://reasonpun.github.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
+    <category term="深入浅出系列" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Flame" scheme="https://reasonpun.github.io/tags/Flame/"/>
+    <category term="Flame" scheme="https://pangz.fun/tags/Flame/"/>
     
-    <category term="Game" scheme="https://reasonpun.github.io/tags/Game/"/>
+    <category term="Game" scheme="https://pangz.fun/tags/Game/"/>
     
   </entry>
   
   <entry>
     <title>如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务</title>
-    <link href="https://reasonpun.github.io/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/"/>
-    <id>https://reasonpun.github.io/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/</id>
+    <link href="https://pangz.fun/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/"/>
+    <id>https://pangz.fun/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/</id>
     <published>2022-03-24T03:03:50.000Z</published>
     <updated>2022-03-24T05:01:51.382Z</updated>
     
@@ -57,23 +57,23 @@
     
     
     
-    <category term="SpringBoot" scheme="https://reasonpun.github.io/categories/SpringBoot/"/>
+    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
     
-    <category term="Java" scheme="https://reasonpun.github.io/categories/SpringBoot/Java/"/>
+    <category term="Java" scheme="https://pangz.fun/categories/SpringBoot/Java/"/>
     
     
-    <category term="Java" scheme="https://reasonpun.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
     
-    <category term="SprintBoot" scheme="https://reasonpun.github.io/tags/SprintBoot/"/>
+    <category term="SprintBoot" scheme="https://pangz.fun/tags/SprintBoot/"/>
     
-    <category term="Kubernetes" scheme="https://reasonpun.github.io/tags/Kubernetes/"/>
+    <category term="Kubernetes" scheme="https://pangz.fun/tags/Kubernetes/"/>
     
   </entry>
   
   <entry>
     <title>在Flutter中集成Flutterwave</title>
-    <link href="https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/"/>
-    <id>https://reasonpun.github.io/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/</id>
+    <link href="https://pangz.fun/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/"/>
+    <id>https://pangz.fun/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/</id>
     <published>2022-03-24T02:07:47.000Z</published>
     <updated>2022-03-24T03:02:44.230Z</updated>
     
@@ -84,21 +84,21 @@
     
     
     
-    <category term="Payment" scheme="https://reasonpun.github.io/categories/Payment/"/>
+    <category term="Payment" scheme="https://pangz.fun/categories/Payment/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Payment/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Payment/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Flutterwave" scheme="https://reasonpun.github.io/tags/Flutterwave/"/>
+    <category term="Flutterwave" scheme="https://pangz.fun/tags/Flutterwave/"/>
     
   </entry>
   
   <entry>
     <title>Flutter TimePicker</title>
-    <link href="https://reasonpun.github.io/2022/03/22/Flutter-TimePicker/"/>
-    <id>https://reasonpun.github.io/2022/03/22/Flutter-TimePicker/</id>
+    <link href="https://pangz.fun/2022/03/22/Flutter-TimePicker/"/>
+    <id>https://pangz.fun/2022/03/22/Flutter-TimePicker/</id>
     <published>2022-03-22T02:17:22.000Z</published>
     <updated>2022-03-22T02:38:02.562Z</updated>
     
@@ -109,21 +109,21 @@
     
     
     
-    <category term="TimePicker" scheme="https://reasonpun.github.io/categories/TimePicker/"/>
+    <category term="TimePicker" scheme="https://pangz.fun/categories/TimePicker/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/TimePicker/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/TimePicker/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="TimePicker" scheme="https://reasonpun.github.io/tags/TimePicker/"/>
+    <category term="TimePicker" scheme="https://pangz.fun/tags/TimePicker/"/>
     
   </entry>
   
   <entry>
     <title>15 Javascript codes you will always need</title>
-    <link href="https://reasonpun.github.io/2022/03/20/15-Javascript-codes-you-will-always-need/"/>
-    <id>https://reasonpun.github.io/2022/03/20/15-Javascript-codes-you-will-always-need/</id>
+    <link href="https://pangz.fun/2022/03/20/15-Javascript-codes-you-will-always-need/"/>
+    <id>https://pangz.fun/2022/03/20/15-Javascript-codes-you-will-always-need/</id>
     <published>2022-03-20T01:53:08.000Z</published>
     <updated>2022-03-20T04:41:18.138Z</updated>
     
@@ -135,21 +135,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="JavaScript" scheme="https://reasonpun.github.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="https://pangz.fun/categories/JavaScript/"/>
     
     
-    <category term="JavaScript" scheme="https://reasonpun.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://pangz.fun/tags/JavaScript/"/>
     
-    <category term="编程技巧" scheme="https://reasonpun.github.io/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/"/>
+    <category term="编程技巧" scheme="https://pangz.fun/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
   <entry>
     <title>Flutter 中的 Paypal 支付网关的集成</title>
-    <link href="https://reasonpun.github.io/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/"/>
-    <id>https://reasonpun.github.io/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/</id>
+    <link href="https://pangz.fun/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/"/>
+    <id>https://pangz.fun/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/</id>
     <published>2022-03-19T13:17:47.000Z</published>
-    <updated>2022-03-19T13:42:40.556Z</updated>
+    <updated>2022-03-20T04:41:02.477Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -159,21 +159,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="Payment" scheme="https://reasonpun.github.io/categories/Payment/"/>
+    <category term="Payment" scheme="https://pangz.fun/categories/Payment/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Payment/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Payment/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Paypal" scheme="https://reasonpun.github.io/tags/Paypal/"/>
+    <category term="Paypal" scheme="https://pangz.fun/tags/Paypal/"/>
     
   </entry>
   
   <entry>
     <title>Firebase — Flutter</title>
-    <link href="https://reasonpun.github.io/2022/03/19/Firebase-%E2%80%94-Flutter/"/>
-    <id>https://reasonpun.github.io/2022/03/19/Firebase-%E2%80%94-Flutter/</id>
+    <link href="https://pangz.fun/2022/03/19/Firebase-%E2%80%94-Flutter/"/>
+    <id>https://pangz.fun/2022/03/19/Firebase-%E2%80%94-Flutter/</id>
     <published>2022-03-19T03:09:52.000Z</published>
     <updated>2022-03-20T04:40:36.485Z</updated>
     
@@ -183,19 +183,19 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Firebase" scheme="https://reasonpun.github.io/tags/Firebase/"/>
+    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
     
   </entry>
   
   <entry>
     <title>Flutter：黄金测试 —— 比较 Widgets 和 Snapshots</title>
-    <link href="https://reasonpun.github.io/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/"/>
-    <id>https://reasonpun.github.io/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/</id>
+    <link href="https://pangz.fun/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/"/>
+    <id>https://pangz.fun/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/</id>
     <published>2022-03-18T13:26:02.000Z</published>
     <updated>2022-03-18T14:50:27.011Z</updated>
     
@@ -206,21 +206,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="单元测试" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="CI/CD" scheme="https://reasonpun.github.io/tags/CI-CD/"/>
+    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
     
   </entry>
   
   <entry>
     <title>如何使用 Codemagic CI/CD 运行 Flutter Golden（快照）测试</title>
-    <link href="https://reasonpun.github.io/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/"/>
-    <id>https://reasonpun.github.io/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/</id>
+    <link href="https://pangz.fun/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/"/>
+    <id>https://pangz.fun/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/</id>
     <published>2022-03-18T12:29:02.000Z</published>
     <updated>2022-03-18T14:50:21.026Z</updated>
     
@@ -231,21 +231,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="单元测试" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="CI/CD" scheme="https://reasonpun.github.io/tags/CI-CD/"/>
+    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
     
   </entry>
   
   <entry>
     <title>使用 Firebase 在后台和前台推送通知</title>
-    <link href="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/"/>
-    <id>https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/</id>
+    <link href="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/"/>
+    <id>https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/</id>
     <published>2022-03-17T13:50:00.000Z</published>
     <updated>2022-03-18T03:44:59.403Z</updated>
     
@@ -256,21 +256,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Notification" scheme="https://reasonpun.github.io/tags/Notification/"/>
+    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
     
-    <category term="Firebase" scheme="https://reasonpun.github.io/tags/Firebase/"/>
+    <category term="Notification" scheme="https://pangz.fun/tags/Notification/"/>
     
   </entry>
   
   <entry>
     <title>PHP核心技术的面试题</title>
-    <link href="https://reasonpun.github.io/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>https://reasonpun.github.io/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
+    <link href="https://pangz.fun/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>https://pangz.fun/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <published>2022-03-17T13:04:12.000Z</published>
     <updated>2022-03-18T03:44:51.688Z</updated>
     
@@ -281,19 +281,19 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="面试准备" scheme="https://reasonpun.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    <category term="面试准备" scheme="https://pangz.fun/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
     
     
-    <category term="PHP" scheme="https://reasonpun.github.io/tags/PHP/"/>
+    <category term="PHP" scheme="https://pangz.fun/tags/PHP/"/>
     
-    <category term="面试" scheme="https://reasonpun.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    <category term="面试" scheme="https://pangz.fun/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>Flutter ListView 和 ScrollPhysics 之详解</title>
-    <link href="https://reasonpun.github.io/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/"/>
-    <id>https://reasonpun.github.io/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/</id>
+    <link href="https://pangz.fun/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/"/>
+    <id>https://pangz.fun/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/</id>
     <published>2022-03-15T10:08:13.000Z</published>
     <updated>2022-03-18T03:44:31.155Z</updated>
     
@@ -304,23 +304,23 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="Widget" scheme="https://reasonpun.github.io/categories/Widget/"/>
+    <category term="Widget" scheme="https://pangz.fun/categories/Widget/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Widget/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Widget/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Dive Into" scheme="https://reasonpun.github.io/tags/Dive-Into/"/>
+    <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
     
-    <category term="ListView" scheme="https://reasonpun.github.io/tags/ListView/"/>
+    <category term="ListView" scheme="https://pangz.fun/tags/ListView/"/>
     
   </entry>
   
   <entry>
     <title>深入了解 Flutter TextField</title>
-    <link href="https://reasonpun.github.io/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/"/>
-    <id>https://reasonpun.github.io/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/</id>
+    <link href="https://pangz.fun/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/"/>
+    <id>https://pangz.fun/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/</id>
     <published>2022-03-15T10:02:16.000Z</published>
     <updated>2022-03-18T03:44:17.244Z</updated>
     
@@ -331,23 +331,23 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="Widget" scheme="https://reasonpun.github.io/categories/Widget/"/>
+    <category term="Widget" scheme="https://pangz.fun/categories/Widget/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Widget/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Widget/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="TextField" scheme="https://reasonpun.github.io/tags/TextField/"/>
+    <category term="TextField" scheme="https://pangz.fun/tags/TextField/"/>
     
-    <category term="Dive Into" scheme="https://reasonpun.github.io/tags/Dive-Into/"/>
+    <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
     
   </entry>
   
   <entry>
     <title>适合初学者的Flutter Bloc模式</title>
-    <link href="https://reasonpun.github.io/2022/03/15/Flutter-bloc-for-beginners/"/>
-    <id>https://reasonpun.github.io/2022/03/15/Flutter-bloc-for-beginners/</id>
+    <link href="https://pangz.fun/2022/03/15/Flutter-bloc-for-beginners/"/>
+    <id>https://pangz.fun/2022/03/15/Flutter-bloc-for-beginners/</id>
     <published>2022-03-15T07:06:52.000Z</published>
     <updated>2022-03-18T03:44:28.029Z</updated>
     
@@ -358,23 +358,23 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="Architecture" scheme="https://reasonpun.github.io/categories/Architecture/"/>
+    <category term="Architecture" scheme="https://pangz.fun/categories/Architecture/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Architecture/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Architecture/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Patterns" scheme="https://reasonpun.github.io/tags/Patterns/"/>
+    <category term="Patterns" scheme="https://pangz.fun/tags/Patterns/"/>
     
-    <category term="Beginners" scheme="https://reasonpun.github.io/tags/Beginners/"/>
+    <category term="Beginners" scheme="https://pangz.fun/tags/Beginners/"/>
     
   </entry>
   
   <entry>
     <title>Flutter中的架构模式</title>
-    <link href="https://reasonpun.github.io/2022/03/14/Architecture-patterns-in-Flutter/"/>
-    <id>https://reasonpun.github.io/2022/03/14/Architecture-patterns-in-Flutter/</id>
+    <link href="https://pangz.fun/2022/03/14/Architecture-patterns-in-Flutter/"/>
+    <id>https://pangz.fun/2022/03/14/Architecture-patterns-in-Flutter/</id>
     <published>2022-03-14T01:09:08.000Z</published>
     <updated>2022-03-18T03:44:24.433Z</updated>
     
@@ -385,21 +385,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="Architecture" scheme="https://reasonpun.github.io/categories/Architecture/"/>
+    <category term="Architecture" scheme="https://pangz.fun/categories/Architecture/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/Architecture/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/Architecture/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Patterns" scheme="https://reasonpun.github.io/tags/Patterns/"/>
+    <category term="Patterns" scheme="https://pangz.fun/tags/Patterns/"/>
     
   </entry>
   
   <entry>
     <title>寻找Flutter模板的5个最佳网站</title>
-    <link href="https://reasonpun.github.io/2022/03/14/5-Best-Websites-for-Flutter-Templates/"/>
-    <id>https://reasonpun.github.io/2022/03/14/5-Best-Websites-for-Flutter-Templates/</id>
+    <link href="https://pangz.fun/2022/03/14/5-Best-Websites-for-Flutter-Templates/"/>
+    <id>https://pangz.fun/2022/03/14/5-Best-Websites-for-Flutter-Templates/</id>
     <published>2022-03-14T00:28:10.000Z</published>
     <updated>2022-03-18T03:41:57.017Z</updated>
     
@@ -410,19 +410,19 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="工具篇" scheme="https://reasonpun.github.io/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/"/>
+    <category term="工具篇" scheme="https://pangz.fun/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Templates" scheme="https://reasonpun.github.io/tags/Templates/"/>
+    <category term="Templates" scheme="https://pangz.fun/tags/Templates/"/>
     
   </entry>
   
   <entry>
     <title>试一下这个极佳的文件夹结构吧</title>
-    <link href="https://reasonpun.github.io/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/"/>
-    <id>https://reasonpun.github.io/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/</id>
+    <link href="https://pangz.fun/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/"/>
+    <id>https://pangz.fun/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/</id>
     <published>2022-03-13T14:34:28.000Z</published>
     <updated>2022-03-18T04:05:08.832Z</updated>
     
@@ -433,21 +433,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="设计模式" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Structure" scheme="https://reasonpun.github.io/tags/Structure/"/>
+    <category term="Structure" scheme="https://pangz.fun/tags/Structure/"/>
     
   </entry>
   
   <entry>
     <title>Flutter的MVVM设计模式</title>
-    <link href="https://reasonpun.github.io/2022/03/12/Flutter-MVVM-Architecture/"/>
-    <id>https://reasonpun.github.io/2022/03/12/Flutter-MVVM-Architecture/</id>
+    <link href="https://pangz.fun/2022/03/12/Flutter-MVVM-Architecture/"/>
+    <id>https://pangz.fun/2022/03/12/Flutter-MVVM-Architecture/</id>
     <published>2022-03-12T15:08:44.000Z</published>
     <updated>2022-03-18T03:44:35.336Z</updated>
     
@@ -458,21 +458,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="设计模式" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="MVVM" scheme="https://reasonpun.github.io/tags/MVVM/"/>
+    <category term="MVVM" scheme="https://pangz.fun/tags/MVVM/"/>
     
   </entry>
   
   <entry>
     <title>简单的介绍Flutter的MVVM设计模式</title>
-    <link href="https://reasonpun.github.io/2022/03/12/An-Introduction-to-MVVM-in-Flutter/"/>
-    <id>https://reasonpun.github.io/2022/03/12/An-Introduction-to-MVVM-in-Flutter/</id>
+    <link href="https://pangz.fun/2022/03/12/An-Introduction-to-MVVM-in-Flutter/"/>
+    <id>https://pangz.fun/2022/03/12/An-Introduction-to-MVVM-in-Flutter/</id>
     <published>2022-03-12T13:35:03.000Z</published>
     <updated>2022-03-18T03:44:21.201Z</updated>
     
@@ -481,21 +481,21 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="设计模式" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="MVVM" scheme="https://reasonpun.github.io/tags/MVVM/"/>
+    <category term="MVVM" scheme="https://pangz.fun/tags/MVVM/"/>
     
   </entry>
   
   <entry>
     <title>提高移动应用开发速度的10大Flutter工具</title>
-    <link href="https://reasonpun.github.io/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/"/>
-    <id>https://reasonpun.github.io/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/</id>
+    <link href="https://pangz.fun/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/"/>
+    <id>https://pangz.fun/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/</id>
     <published>2022-03-10T06:33:32.000Z</published>
     <updated>2022-03-18T03:45:06.807Z</updated>
     
@@ -504,14 +504,14 @@ console.log(shuffleArray([1, 2, 3, 4]));
     
     
     
-    <category term="深入浅出系列" scheme="https://reasonpun.github.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
+    <category term="深入浅出系列" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
     
     
-    <category term="Flutter" scheme="https://reasonpun.github.io/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
-    <category term="Tools" scheme="https://reasonpun.github.io/tags/Tools/"/>
+    <category term="Tools" scheme="https://pangz.fun/tags/Tools/"/>
     
   </entry>
   

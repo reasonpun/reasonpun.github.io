@@ -18,35 +18,35 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"reasonpun.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"pangz.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592202470693653"
      crossorigin="anonymous"></script>
     <meta name="description" content="在应用程序中，我们需要集成推送通知。虽然我们成功集成了它，但有时在应用程序未运行或在后台打开时发送推送通知会出现问题或者导致应用程序的崩溃。所以，本篇内容中我们将在Flutter中使用 firebase ，使用它的通知适用于所有状态：前台、后台，甚至在应用程序关闭（未运行）时。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Firebase 在后台和前台推送通知">
-<meta property="og:url" content="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/index.html">
+<meta property="og:url" content="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/index.html">
 <meta property="og:site_name" content="酷学小栈">
 <meta property="og:description" content="在应用程序中，我们需要集成推送通知。虽然我们成功集成了它，但有时在应用程序未运行或在后台打开时发送推送通知会出现问题或者导致应用程序的崩溃。所以，本篇内容中我们将在Flutter中使用 firebase ，使用它的通知适用于所有状态：前台、后台，甚至在应用程序关闭（未运行）时。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/1.png">
-<meta property="og:image" content="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/2.png">
-<meta property="og:image" content="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/3.png">
+<meta property="og:image" content="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/1.png">
+<meta property="og:image" content="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/2.png">
+<meta property="og:image" content="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/3.png">
 <meta property="article:published_time" content="2022-03-17T13:50:00.000Z">
 <meta property="article:modified_time" content="2022-03-18T03:44:59.403Z">
 <meta property="article:author" content="木辛念做梓">
 <meta property="article:tag" content="Flutter">
-<meta property="article:tag" content="Notification">
 <meta property="article:tag" content="Firebase">
+<meta property="article:tag" content="Notification">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/1.png">
+<meta name="twitter:image" content="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/1.png">
 
 
-<link rel="canonical" href="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/">
+<link rel="canonical" href="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/","path":"2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/","title":"使用 Firebase 在后台和前台推送通知"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/","path":"2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/","title":"使用 Firebase 在后台和前台推送通知"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>使用 Firebase 在后台和前台推送通知 | 酷学小栈</title>
@@ -210,7 +210,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://reasonpun.github.io/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/">
+    <link itemprop="mainEntityOfPage" href="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -556,8 +556,8 @@ class _selState extends State&lt;sel&gt; {
 
           <div class="post-tags">
               <a href="/tags/Flutter/" rel="tag"># Flutter</a>
-              <a href="/tags/Notification/" rel="tag"># Notification</a>
               <a href="/tags/Firebase/" rel="tag"># Firebase</a>
+              <a href="/tags/Notification/" rel="tag"># Notification</a>
           </div>
 
         

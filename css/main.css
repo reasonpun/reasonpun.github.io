@@ -18,9 +18,9 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #f0f0f0;
+  --highlight-background: #f3f3f3;
   --highlight-foreground: #444;
-  --highlight-gutter-background: #dedede;
+  --highlight-gutter-background: #e1e1e1;
   --highlight-gutter-foreground: #555;
   color-scheme: light;
 }
@@ -2296,6 +2296,10 @@ pre code {
 }
 .post-reward div span {
   display: block;
+}
+.post-reward div:hover span {
+  animation: next-roll 0.1s infinite linear;
+  pointer-events: none;
 }
 .post-reward img {
   display: inline-block;
