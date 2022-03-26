@@ -191,15 +191,6 @@
   </url>
   
   <url>
-    <loc>https://pangz.fun/friends/index.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://pangz.fun/about/index.html</loc>
     
     <lastmod>2022-03-25</lastmod>
@@ -219,6 +210,15 @@
   
   <url>
     <loc>https://pangz.fun/contact/index.html</loc>
+    
+    <lastmod>2022-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/friends/index.html</loc>
     
     <lastmod>2022-03-25</lastmod>
     
@@ -452,20 +452,6 @@
 
   
   <url>
-    <loc>https://pangz.fun/tags/nginx/</loc>
-    <lastmod>2022-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/tags/logrotate/</loc>
-    <lastmod>2022-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://pangz.fun/tags/JavaScript/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -474,6 +460,20 @@
   
   <url>
     <loc>https://pangz.fun/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2022-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/tags/nginx/</loc>
+    <lastmod>2022-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/tags/logrotate/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
