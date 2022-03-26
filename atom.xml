@@ -18,8 +18,8 @@
   
   <entry>
     <title>Flutter &amp; Flame — 第 1 步：创建您的游戏</title>
-    <link href="https://pangz.fun/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/"/>
-    <id>https://pangz.fun/2022/03/24/Flutter-Flame-%E2%80%94Step-1-Create-your-game/</id>
+    <link href="https://pangz.fun/Flutter-Flame-%E2%80%94Step-1-Create-your-game.html"/>
+    <id>https://pangz.fun/Flutter-Flame-%E2%80%94Step-1-Create-your-game.html</id>
     <published>2022-03-24T11:22:47.000Z</published>
     <updated>2022-03-25T13:40:39.387Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务</title>
-    <link href="https://pangz.fun/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/"/>
-    <id>https://pangz.fun/2022/03/24/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/</id>
+    <link href="https://pangz.fun/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes.html"/>
+    <id>https://pangz.fun/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes.html</id>
     <published>2022-03-24T03:03:50.000Z</published>
     <updated>2022-03-25T13:40:39.577Z</updated>
     
@@ -72,8 +72,8 @@
   
   <entry>
     <title>在Flutter中集成Flutterwave</title>
-    <link href="https://pangz.fun/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/"/>
-    <id>https://pangz.fun/2022/03/24/Integrating-Flutterwave-with-a-Flutter-App/</id>
+    <link href="https://pangz.fun/Integrating-Flutterwave-with-a-Flutter-App.html"/>
+    <id>https://pangz.fun/Integrating-Flutterwave-with-a-Flutter-App.html</id>
     <published>2022-03-24T02:07:47.000Z</published>
     <updated>2022-03-25T13:40:39.595Z</updated>
     
@@ -97,8 +97,8 @@
   
   <entry>
     <title>Flutter TimePicker</title>
-    <link href="https://pangz.fun/2022/03/22/Flutter-TimePicker/"/>
-    <id>https://pangz.fun/2022/03/22/Flutter-TimePicker/</id>
+    <link href="https://pangz.fun/Flutter-TimePicker.html"/>
+    <id>https://pangz.fun/Flutter-TimePicker.html</id>
     <published>2022-03-22T02:17:22.000Z</published>
     <updated>2022-03-25T13:40:39.499Z</updated>
     
@@ -122,8 +122,8 @@
   
   <entry>
     <title>15 Javascript codes you will always need</title>
-    <link href="https://pangz.fun/2022/03/20/15-Javascript-codes-you-will-always-need/"/>
-    <id>https://pangz.fun/2022/03/20/15-Javascript-codes-you-will-always-need/</id>
+    <link href="https://pangz.fun/15-Javascript-codes-you-will-always-need.html"/>
+    <id>https://pangz.fun/15-Javascript-codes-you-will-always-need.html</id>
     <published>2022-03-20T01:53:08.000Z</published>
     <updated>2022-03-25T13:40:39.290Z</updated>
     
@@ -146,8 +146,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>Flutter 中的 Paypal 支付网关的集成</title>
-    <link href="https://pangz.fun/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/"/>
-    <id>https://pangz.fun/2022/03/19/Paypal-Payment-Gateway-Integration-in-Flutter/</id>
+    <link href="https://pangz.fun/Paypal-Payment-Gateway-Integration-in-Flutter.html"/>
+    <id>https://pangz.fun/Paypal-Payment-Gateway-Integration-in-Flutter.html</id>
     <published>2022-03-19T13:17:47.000Z</published>
     <updated>2022-03-25T13:40:39.632Z</updated>
     
@@ -172,8 +172,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>Firebase — Flutter</title>
-    <link href="https://pangz.fun/2022/03/19/Firebase-%E2%80%94-Flutter/"/>
-    <id>https://pangz.fun/2022/03/19/Firebase-%E2%80%94-Flutter/</id>
+    <link href="https://pangz.fun/Firebase-%E2%80%94-Flutter.html"/>
+    <id>https://pangz.fun/Firebase-%E2%80%94-Flutter.html</id>
     <published>2022-03-19T03:09:52.000Z</published>
     <updated>2022-03-25T13:40:39.381Z</updated>
     
@@ -194,8 +194,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>Flutter：黄金测试 —— 比较 Widgets 和 Snapshots</title>
-    <link href="https://pangz.fun/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/"/>
-    <id>https://pangz.fun/2022/03/18/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/</id>
+    <link href="https://pangz.fun/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots.html"/>
+    <id>https://pangz.fun/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots.html</id>
     <published>2022-03-18T13:26:02.000Z</published>
     <updated>2022-03-25T13:40:39.398Z</updated>
     
@@ -219,8 +219,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>如何使用 Codemagic CI/CD 运行 Flutter Golden（快照）测试</title>
-    <link href="https://pangz.fun/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/"/>
-    <id>https://pangz.fun/2022/03/18/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/</id>
+    <link href="https://pangz.fun/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD.html"/>
+    <id>https://pangz.fun/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD.html</id>
     <published>2022-03-18T12:29:02.000Z</published>
     <updated>2022-03-25T13:40:39.573Z</updated>
     
@@ -244,8 +244,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>使用 Firebase 在后台和前台推送通知</title>
-    <link href="https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/"/>
-    <id>https://pangz.fun/2022/03/17/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/</id>
+    <link href="https://pangz.fun/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase.html"/>
+    <id>https://pangz.fun/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase.html</id>
     <published>2022-03-17T13:50:00.000Z</published>
     <updated>2022-03-25T13:40:39.633Z</updated>
     
@@ -269,8 +269,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>PHP核心技术的面试题</title>
-    <link href="https://pangz.fun/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>https://pangz.fun/2022/03/17/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
+    <link href="https://pangz.fun/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98.html"/>
+    <id>https://pangz.fun/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98.html</id>
     <published>2022-03-17T13:04:12.000Z</published>
     <updated>2022-03-25T13:40:39.630Z</updated>
     
@@ -292,8 +292,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>Flutter ListView 和 ScrollPhysics 之详解</title>
-    <link href="https://pangz.fun/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/"/>
-    <id>https://pangz.fun/2022/03/15/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/</id>
+    <link href="https://pangz.fun/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look.html"/>
+    <id>https://pangz.fun/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look.html</id>
     <published>2022-03-15T10:08:13.000Z</published>
     <updated>2022-03-25T13:40:39.402Z</updated>
     
@@ -319,8 +319,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>深入了解 Flutter TextField</title>
-    <link href="https://pangz.fun/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/"/>
-    <id>https://pangz.fun/2022/03/15/A-Deep-Dive-Into-Flutter-TextField/</id>
+    <link href="https://pangz.fun/A-Deep-Dive-Into-Flutter-TextField.html"/>
+    <id>https://pangz.fun/A-Deep-Dive-Into-Flutter-TextField.html</id>
     <published>2022-03-15T10:02:16.000Z</published>
     <updated>2022-03-25T13:40:39.333Z</updated>
     
@@ -346,8 +346,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>适合初学者的Flutter Bloc模式</title>
-    <link href="https://pangz.fun/2022/03/15/Flutter-bloc-for-beginners/"/>
-    <id>https://pangz.fun/2022/03/15/Flutter-bloc-for-beginners/</id>
+    <link href="https://pangz.fun/Flutter-bloc-for-beginners.html"/>
+    <id>https://pangz.fun/Flutter-bloc-for-beginners.html</id>
     <published>2022-03-15T07:06:52.000Z</published>
     <updated>2022-03-25T13:40:39.515Z</updated>
     
@@ -373,8 +373,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>Flutter中的架构模式</title>
-    <link href="https://pangz.fun/2022/03/14/Architecture-patterns-in-Flutter/"/>
-    <id>https://pangz.fun/2022/03/14/Architecture-patterns-in-Flutter/</id>
+    <link href="https://pangz.fun/Architecture-patterns-in-Flutter.html"/>
+    <id>https://pangz.fun/Architecture-patterns-in-Flutter.html</id>
     <published>2022-03-14T01:09:08.000Z</published>
     <updated>2022-03-25T13:40:39.375Z</updated>
     
@@ -398,8 +398,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>寻找Flutter模板的5个最佳网站</title>
-    <link href="https://pangz.fun/2022/03/14/5-Best-Websites-for-Flutter-Templates/"/>
-    <id>https://pangz.fun/2022/03/14/5-Best-Websites-for-Flutter-Templates/</id>
+    <link href="https://pangz.fun/5-Best-Websites-for-Flutter-Templates.html"/>
+    <id>https://pangz.fun/5-Best-Websites-for-Flutter-Templates.html</id>
     <published>2022-03-14T00:28:10.000Z</published>
     <updated>2022-03-25T13:40:39.303Z</updated>
     
@@ -421,8 +421,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>试一下这个极佳的文件夹结构吧</title>
-    <link href="https://pangz.fun/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/"/>
-    <id>https://pangz.fun/2022/03/13/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/</id>
+    <link href="https://pangz.fun/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project.html"/>
+    <id>https://pangz.fun/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project.html</id>
     <published>2022-03-13T14:34:28.000Z</published>
     <updated>2022-03-25T13:40:39.628Z</updated>
     
@@ -446,8 +446,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>Flutter的MVVM设计模式</title>
-    <link href="https://pangz.fun/2022/03/12/Flutter-MVVM-Architecture/"/>
-    <id>https://pangz.fun/2022/03/12/Flutter-MVVM-Architecture/</id>
+    <link href="https://pangz.fun/Flutter-MVVM-Architecture.html"/>
+    <id>https://pangz.fun/Flutter-MVVM-Architecture.html</id>
     <published>2022-03-12T15:08:44.000Z</published>
     <updated>2022-03-25T13:40:39.495Z</updated>
     
@@ -471,8 +471,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>简单的介绍Flutter的MVVM设计模式</title>
-    <link href="https://pangz.fun/2022/03/12/An-Introduction-to-MVVM-in-Flutter/"/>
-    <id>https://pangz.fun/2022/03/12/An-Introduction-to-MVVM-in-Flutter/</id>
+    <link href="https://pangz.fun/An-Introduction-to-MVVM-in-Flutter.html"/>
+    <id>https://pangz.fun/An-Introduction-to-MVVM-in-Flutter.html</id>
     <published>2022-03-12T13:35:03.000Z</published>
     <updated>2022-03-25T13:40:39.348Z</updated>
     
@@ -494,8 +494,8 @@ console.log(shuffleArray([1, 2, 3, 4]));
   
   <entry>
     <title>提高移动应用开发速度的10大Flutter工具</title>
-    <link href="https://pangz.fun/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/"/>
-    <id>https://pangz.fun/2022/03/10/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development/</id>
+    <link href="https://pangz.fun/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development.html"/>
+    <id>https://pangz.fun/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development.html</id>
     <published>2022-03-10T06:33:32.000Z</published>
     <updated>2022-03-25T13:40:39.637Z</updated>
     
