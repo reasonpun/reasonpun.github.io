@@ -121,7 +121,7 @@ Spring JMS（Java 消息服务）是一种使用标准协议发送和接收消�
 更棒的是，Spring Boot 与 JMS 具有出色的集成，因此您可以立即上手。
 实际上，下面的短类封装了用于与队列交互的逻辑：
 
-```
+```java
 @Component
 public class QueueService implements MessageListener {
 private static final Logger LOGGER = LoggerFactory.getLogger(QueueService.class);
@@ -156,7 +156,7 @@ private static final Logger LOGGER = LoggerFactory.getLogger(QueueService.class)
 最后一块内容要说的是指示 Spring Boot 使用该类。
 您可以通过在 [Spring Boot 应用程序中注册侦听器](https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#jms-annotated-programmatic-registration)来在后台处理消息，如下所示：
 
-```
+```java
 @SpringBootApplication
 @EnableJms
 public class SpringBootApplication implements JmsListenerConfigurer {
@@ -263,7 +263,7 @@ docker images | grep spring
 让我们从 ActiveMQ 开始。
 您应该创建一个包含以下内容的 activemq-deployment.yaml 文件：
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -328,7 +328,7 @@ kubectl get pods -l=app=queue
 
 创建包含以下内容的 fe-deployment.yaml 文件：
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -370,7 +370,7 @@ spec:
  * 有一个 liveness probe 会告诉你应用程序何时准备好接受流量
 创建一个 fe-service.yaml 文件，内容如下：
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -403,7 +403,7 @@ kubectl get pods -l=app=frontend
 
 创建一个包含以下内容的 backend-deployment.yaml 文件：
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -443,7 +443,7 @@ spec:
 
 创建一个包含以下内容的 backend-service.yaml 文件：
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -580,7 +580,7 @@ Kubernetes 有一个名为 Horizontal Pod Autoscaler 的对象，用于监控部
 您将需要其中之一来自动扩展您的实例。
 您应该创建一个包含以下内容的 hpa.yaml 文件：
 
-```
+```yaml
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:

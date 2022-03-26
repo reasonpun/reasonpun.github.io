@@ -36,7 +36,7 @@ Flutter 的日期和时间选择器，您可以选择英语、荷兰语和任何
 
 > 在此屏幕中，您将能够通过在您的应用程序中点击它们来选择日期和时间。
 
-```
+```dart
 Future<Null> _selectDate(BuildContext context) async {
   final DateTime picked = await showDatePicker(
       context: context,
@@ -58,7 +58,7 @@ Future<Null> _selectDate(BuildContext context) async {
 
 > 在 TextFromField 的 onTap 中，我们调用 _selectDate 函数，然后将显示选择器并保存选择的日期和时间。
 
-```
+```dart
 InkWell(
   onTap: () {
     _selectDate(context);
@@ -89,7 +89,7 @@ InkWell(
 
 它只是一个 _selectTime 函数，如下所示。
 
-```
+```dart
 Future<Null> _selectTime(BuildContext context) async {
   final TimeOfDay picked = await showTimePicker(
     context: context,
@@ -115,7 +115,7 @@ Future<Null> _selectTime(BuildContext context) async {
 
 > 在点击 TextFormField 时，我们调用一个 _selectTime 函数，它将显示日期和时间选择器以保存选择的时间。
 
-```
+```dart
 InkWell(
   onTap: () {
     _selectTime(context);
@@ -147,7 +147,7 @@ InkWell(
 
 ### 代码实现：
 
-```
+```dart
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';

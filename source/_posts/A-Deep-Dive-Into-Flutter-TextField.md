@@ -31,7 +31,7 @@ TextField()
 由于 TextField 没有 Android 中的 ID，因此无法按需检索文本，而必须在更改时将其存储在变量中或使用控制器。
 1. 最简单的方法是使用 onChanged 方法并将当前值存储在一个简单的变量中。这是它的示例代码：
 
-```
+```dart
 String value = "";
 TextField(
   onChanged: (text) {
@@ -41,7 +41,7 @@ TextField(
 ```
 2. 第二种方法是使用 TextEditingController。控制器附加到 TextField 并让我们也可以监听和控制 TextField 的文本。
 
-```
+```dart
 TextEditingController controller = TextEditingController();
 TextField(
   controller: controller,
@@ -55,7 +55,7 @@ controller.addListener(() {
 });
 ```
 并获取或设置值
-```
+```dart
 print(controller.text); // Print current value
 controller.text = "Demo Text"; // Set new value
 ```
@@ -77,7 +77,7 @@ TextField获取焦点，意味着使 TextField 处于活动状态，并且来自
 1. 使用自动对焦
 要在创建小部件时自动聚焦于 TextField，请将 autofocus 字段设置为 true。
 
-```
+```dart
 TextField(
   autofocus: true,
 ),
@@ -90,7 +90,7 @@ TextField(
 如果我们想改变一下需求，而不仅仅是自动对焦怎么办？
 由于我们需要某种方式来引用我们接下来要关注的 TextField，因此我们将 FocusNode 附加到 TextField 并使用它来切换焦点。
 
-```
+```dart
 // Initialise outside the build method
 FocusNode nodeOne = FocusNode();
 FocusNode nodeTwo = FocusNode();
@@ -225,7 +225,7 @@ TextField(
 光标可直接从 TextField 小部件自定义。
 您可以更改拐角的光标颜色、宽度和半径。例如，这里我随便制作了一个圆形红色光标。
 
-```
+```dart
 TextField(
   cursorColor: Colors.red,
   cursorRadius: Radius.circular(16.0),
@@ -289,7 +289,7 @@ TextField(
 
 您可以将图标直接添加到 TextFields。您也可以使用 prefixText 和 suffixText 代替 Text。
 
-```
+```dart
 TextField(
   decoration: InputDecoration(
     icon: Icon(Icons.print)
@@ -298,7 +298,7 @@ TextField(
 ```
 {% asset_img 19.png 示意图 width="400" %}
 
-```
+```dart
 TextField(
   decoration: InputDecoration(
     prefixIcon: Icon(Icons.print)
@@ -309,7 +309,8 @@ TextField(
 
 ### 同样对于任何其他小部件，使用“prefix”而不是“prefixIcon”
 要使用通用小部件而不是图标，请使用前缀字段。同样，没有明显的原因，让我们在 TextField 中添加一个循环进度指示器。
-```
+
+```dart
 TextField(
   decoration: InputDecoration(
     prefix: CircularProgressIndicator(),
@@ -322,7 +323,7 @@ TextField(
 
 要设置提示样式，请使用hintStyle。要设置标签样式，请使用 labelStyle。
 
-```
+```dart
 TextField(
   decoration: InputDecoration(
     hintText: "Demo Text",
@@ -333,7 +334,8 @@ TextField(
 {% asset_img 22.png 示意图 width="400" %}
 
 **如果您不想要标签但想要为用户提供持久消息，请使用“helperText”。**
-```
+
+```dart
 TextField(
   decoration: InputDecoration(
     helperText: "Hello"
@@ -344,7 +346,7 @@ TextField(
 使用“decoration: null”或 InputDecoration.collapsed 删除 TextField 上的默认下划线
 使用这些来删除 TextField 上的默认下划线。
 
-```
+```dart
 TextField(
   decoration: InputDecoration.collapsed(hintText: "")
 ),
@@ -353,7 +355,7 @@ TextField(
 
 ### 使用“border”为 TextField 设置边框
 
-```
+```dart
 TextField(
   decoration: InputDecoration(
     border: OutlineInputBorder()

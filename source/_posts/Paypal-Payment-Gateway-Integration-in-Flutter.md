@@ -24,7 +24,7 @@ tags:
 首先，我们需要创建一个名为 PaypalServices.dart 的 dart 文件，其中包含使用 Paypal 执行交易所需的所有 API。
 下面给出了代码。 您可以复制这些代码来创建 dart 文件。
 
-```
+```dart
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert' as convert;
@@ -117,7 +117,7 @@ class PaypalServices {
 
 现在，我们需要创建一个名为 PaypalPayment.dart 的 dart 文件，其中包含带有 Paypal URL 的 WebView 小部件，必须在其中执行交易。
 
-```
+```dart
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -324,7 +324,7 @@ class PaypalPaymentState extends State<PaypalPayment> {
 在创建和配置这两个给定的上述文件之后。 我们需要从我们的主文件调用 PaypalPayment 小部件。 
 在这里，我创建了一个简单易懂的 makePayment.dart 文件，其中包含一个按钮，通过单击您将被重定向到 PaypalPayment 小部件。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'PaypalPayment.dart';

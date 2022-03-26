@@ -20,7 +20,7 @@ tags:
 
 使用以下代码在计数器应用程序的测试文件夹中创建 golden_widget_test.dart：
 
-```
+```dart
 void main() {
   testWidgets(‘Golden test’, (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
@@ -84,7 +84,7 @@ cp -r test/goldens $FCI_EXPORT_DIR
 您现在需要的是下载这个 zip 并将生成的黄金文件提取到您的项目中。
 提示：您的项目中存在有 Golden 测试的话，如果平台不是 MacOS，则应添加跳过参数。 然后，如果你在本地运行 flutter test，测试不会因为与 Mac 的黄金差异而失败。
 
-```
+```dart
 testWidgets('Golden test', (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
     await expectLater(

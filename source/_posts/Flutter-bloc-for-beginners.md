@@ -16,7 +16,9 @@ tags:
 
 Flutter bloc 是 Fl​​utter 应用程序的状态管理之一。您可以使用它以 **简单** 的方式处理应用程序的所有可能状态。
 Flutter bloc 易于使用，因为您和您的团队将很快理解这个概念，无论您的级别是什么，这个库都有非常好的文档和大量的示例，也是 Flutter 社区中使用最多的库之一，因此，如果您有任何疑问或问题，您可能会通过互联网上的简单搜索找到解决方案。
+
 <!--more-->
+
 **功能强大**是因为它可以帮助您创建各种应用程序，例如您可以创建用于学习目的的应用程序，也可以在生产环境中创建复杂的应用程序，flutter bloc 在这两种情况下都有效。
 这个库的另一个重要方面是您可以轻松地**测试**您的块逻辑。
 
@@ -166,7 +168,7 @@ context.read<YourRepository>();
 这个页面非常重要，因为我在这里使用了两个 Bloc Widget：MultiBlocProvider 和 RepositoryProvider。
 这个页面的想法是在初始化这个页面时让所有的块都准备好使用，所以，要做到这一点，我需要用 RepositoryProvider 包装我的子类，为所有块提供存储库，而且，我需要初始化所有带有 MultiBlocProvider 的块。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/repository/game_repository.dart';
@@ -224,7 +226,7 @@ class HomePage extends StatelessWidget {
 
 此类具有我上面提到的三个主要小部件，还包含视图的骨架。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:infogames/ui/home/widgets/all_games_widget/all_games_widget.dart';
 import 'package:infogames/ui/home/widgets/category_widget/categories_widget.dart';
@@ -270,7 +272,7 @@ class HomeLayout extends StatelessWidget {
  * GetCategories：获取类别的事件。
  * SelectCategories：知道何时选择类别的事件。
 
- ```
+ ```dart
  part of 'category_bloc.dart';
 
 class CategoryEvent extends Equatable {
@@ -296,7 +298,7 @@ class SelectCategory extends CategoryEvent {
 在这个类里边，bloc可以发出不同的状态。我创建了一个扩展来以简洁明了的方式处理视图中所有可能的状态。
 我使用 Equatable 库和 Dart 中的对象作比较，如果你不是很清楚的话，强烈建议您查看[文档](https://pub.dev/packages/equatable)。
 
-```
+```dart
 part of 'category_bloc.dart';
 
 enum CategoryStatus { initial, success, error, loading, selected }
@@ -344,7 +346,7 @@ class CategoryState extends Equatable {
 mapGetCategoriesEventToState：此方法调用存储库以从 API 获取数据。当存储库返回数据 o 抛出错误时，该块会发出相应的状态。
 mapSelectCategoryEventToState：此方法将发出“选定”这样的状态。
 
-```
+```dart
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/repository/game_repository.dart';
@@ -395,7 +397,7 @@ class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
 好吧，当发出一个状态时，我想用相应的数据重建视图。为此，在我看来，我有一个 BlocBuilder。
 在这种情况下，我只想在当前状态成功时重建视图，因此我使用 buildWhen() 来实现（第 11 行）。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/ui/home/widgets/category_widget/category_barrel.dart';
@@ -420,7 +422,7 @@ SelectCategory：在视图中更改所选项目的颜色和大小。这将使用
 
 来看下完整的类。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/repository/models/genre.dart';
@@ -476,7 +478,7 @@ class CategoriesSuccessWidget extends StatelessWidget {
 让我们看一下 state.isSelected 时的视图（选择类别时）。
 我使用 BlocSelector 来控制这种情况，当用户单击其中一个类别时，将触发事件并且该 bloc 将发出带有所选类别 id 的状态 isSelected，因此在 bloc选择器，我必须检查这些条件是否为真（第 24 行）以使用新的大小和颜色重建视图（第 35、36 和 39 行）。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/repository/models/genre.dart';
@@ -549,7 +551,7 @@ class CategoryItem extends StatelessWidget {
 
 在这里，我创建了一个事件来按类别过滤所有游戏，并添加了类别名称以将其显示为列表的标题。
 
-```
+```dart
 part of 'games_by_category_bloc.dart';
 
 class GamesByCategoryEvent extends Equatable {
@@ -573,7 +575,7 @@ class GetGamesByCategory extends GamesByCategoryEvent {
 ### GameByCategoryState
 和之前的状态类一样，这里我有一个扩展来检查不同的状态，还有一个 copyWith 方法来创建游戏列表和类别名称的新副本。
 
-```
+```dart
 part of 'games_by_category_bloc.dart';
 
 enum GamesByCategoryStatus { initial, success, error, loading }
@@ -618,7 +620,7 @@ class GamesByCategoryState extends Equatable {
 
 在这个块中，我将处理调用存储库的事件 GetGamesByCategory 以获取与该类型 ID 匹配的所有游戏。当存储库返回有效数据时，bloc将发出成功的消息，例如状态和列表的新副本以及类别名称，相反，如果结果无效，则bloc将发出错误状态。
 
-```
+```dart
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/repository/game_repository.dart';
@@ -659,7 +661,7 @@ class GamesByCategoryBloc
 
 完美，下一步是检查视图中的状态以对它们做出反应。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/ui/widgets/error_widget.dart';
@@ -697,7 +699,7 @@ class GamesByCategoryWidget extends StatelessWidget {
  * 成功：显示 GameByCategorySuccessWidget。这个小部件负责按类别显示游戏列表。
  这是小部件：
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:infogames/repository/models/result.dart';
 import 'package:infogames/ui/home/widgets/games_by_category_widget/games_by_category_barrel.dart';
@@ -763,7 +765,7 @@ class GameByCategorySuccessWidget extends StatelessWidget {
 
 我创建了一个事件来从 API 获取所有游戏。
 
-```
+```dart
 part of 'all_games_bloc.dart';
 
 class AllGamesEvent extends Equatable {
@@ -781,7 +783,7 @@ class GetGames extends AllGamesEvent {
 
 和之前一样，我创建了一个扩展来处理所有可能的状态，并且我还有一个 copyWith 方法可以在需要时创建对象的新副本。
 
-```
+```dart
 part of 'all_games_bloc.dart';
 
 enum AllGamesStatus { initial, success, error, loading }
@@ -820,7 +822,7 @@ class AllGamesState extends Equatable {
 
 在这里，我调用存储库，当它返回有效数据时，bloc 将通过游戏列表的副本发出成功，相反，如果存储库返回无效数据，bloc 将发出错误状态。
 
-```
+```dart
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/repository/game_repository.dart';
@@ -859,7 +861,7 @@ class AllGamesBloc extends Bloc<AllGamesEvent, AllGamesState> {
 ### AllGamesWidget
 这是所有游戏小部件。在这里，我有一个 BlocBuilder 来根据状态重建视图。
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infogames/ui/home/widgets/all_games_widget/all_games_barrel.dart';
@@ -902,7 +904,7 @@ class AllGamesWidget extends StatelessWidget {
  
 这是小部件：
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:infogames/repository/models/result.dart';
 import 'package:infogames/ui/home/widgets/all_games_widget/all_games_barrel.dart';
@@ -963,7 +965,7 @@ class AllGamesSuccessWidget extends StatelessWidget {
 
 如果你想有一个日志来知道哪个是当前状态，哪个是下一个要添加的事件，你需要一个 Bloc Observer 类。您应该创建此类并将其初始化到您的主类中。
 
-```
+```dart
 class AppBlocObserver extends BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {

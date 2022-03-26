@@ -51,7 +51,7 @@ ViewModel 可以被多个 View 使用，这意味着单个 ViewModel 可以为�
 
 MediaService.dart
 
-```
+```dart
 import 'dart:convert';
 import 'dart:io';
 import 'package:meta/meta.dart';
@@ -96,7 +96,7 @@ class MediaService {
 
 MediaRepository.dart
 
-```
+```dart
 import 'package:mvvm_flutter_app/model/media.dart';
 import 'package:mvvm_flutter_app/model/services/media_service.dart';
 
@@ -115,7 +115,7 @@ class MediaRepository {
 
 MediaViewModel.dart
 
-```
+```dart
 import 'package:flutter/cupertino.dart';
 import 'package:mvvm_flutter_app/model/apis/api_response.dart';
 import 'package:mvvm_flutter_app/model/media.dart';
@@ -156,7 +156,7 @@ class MediaViewModel with ChangeNotifier {
 
 HomScreen.dart
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:mvvm_flutter_app/model/apis/api_response.dart';
 import 'package:mvvm_flutter_app/model/media.dart';

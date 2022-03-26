@@ -68,7 +68,7 @@ $ flutter create flutterwave_flutter_app
 成功创建flutter+flutter wave示例app后，在main.dart文件中，去掉默认生成的代码，替换为如下代码：
 （这一步假设你对 Flutter 项目结构有一个基本的想法）。 如果您是 Flutter 新手，请查看 [Flutter 官方文档](https://flutter.dev/docs/get-started/codelab)。
 
-```
+```dart
 import 'package:flutter/material.dart';
 
 void main() {
@@ -144,7 +144,7 @@ import 'package:flutterwave/flutterwave.dart';
 但是，如果您只想使用一种货币，您可以在代码中预先配置它，这样用户就不必在每次进行 Flutterwave 支付时都填写它。
 有了这些新增功能，您的代码将如下所示：
 
-```
+``` dart
   //add the following values to create the UI for Flutterwave Payment
 class HomePageState extends State<HomePage> {
   //use the currency you would like the user to Pay In, in this case, I used KES currency
@@ -226,7 +226,7 @@ class HomePageState extends State<HomePage> {
 
 请参阅下面创建 Flutterwave 实例的完整代码：
 
-```
+```dart
  //Add a method to make the flutter wave payment
  //This Method includes all the values needed to create the Flutterwave Instance
 void _makeFlutterwavePayment(BuildContext context, String fullname, String phone, String email, String amount) async {
@@ -269,7 +269,7 @@ void _makeFlutterwavePayment(BuildContext context, String fullname, String phone
 接下来，在 Flutterwave 实例下方添加一个响应，该实例返回一个 Flutterwave 实例，然后我们在其上调用异步方法 .initializeForUiPayments()。
 请参阅下面的示例代码：
 
-```
+```dart
  final response = await flutterwave.initializeForUiPayments();
     if (response == null) {
         print("Transaction Failed");
@@ -294,7 +294,7 @@ void _makeFlutterwavePayment(BuildContext context, String fullname, String phone
 现在您已经创建了 Flutterwave 实例和响应，请在 onPressed() 函数上调用您在上面（在步骤 6 中）创建的 _makeFlutterwavePayment 方法，以在按下按钮时执行付款。
 请看下面的代码：
 
-```
+```dart
 ElevatedButton(
             child: const Text('Pay with Flutterwave'),
             onPressed: () {

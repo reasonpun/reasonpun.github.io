@@ -27,7 +27,7 @@ Firebase 和推送通知设置
  * 为您的应用创建 firebase 项目并在 android/app 文件夹中添加googleservices.json 文件。
  * 在你的 Flutter 项目中安装 firebase_messaging 和 firebase_core。
 
-```
+```yaml
 firebase_messaging: ^11.2.11
 firebase_core: any
 ```
@@ -56,8 +56,8 @@ implementation 'com.android.support:multidex:1.0.3'
 
 在 android/app/src/main/kotlin 中创建 Application.kt 文件（简单地说您在该文件夹中看到 MainActivity.kt 文件的位置创建 Application.kt 文件）并复制并粘贴以下代码：
 
-```
-package <your_package_name>
+``` java
+//package <your_package_name>
 import io.flutter.app.FlutterApplication
 import io.flutter.plugin.common.PluginRegistry
 import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
@@ -77,7 +77,7 @@ class Application: FlutterApplication(), PluginRegistry.PluginRegistrantCallback
 
 在 pubspec.yaml 文件中添加 flutter_local_notifications 包
 
-```
+``` yaml
 flutter_local_notifications:
 ```
 
@@ -85,7 +85,7 @@ flutter_local_notifications:
 
 在 android/app/src/main/res/AndroidManifest.xml 中添加以下行
 
-```
+``` xml
 <application
   android:name=".Application"
   ...>
@@ -109,7 +109,7 @@ flutter_local_notifications:
 
 在 main.dart 文件的 main 函数中添加这些行。
 
-```
+``` dart
 WidgetsFlutterBinding.ensureInitialized();
 await Firebase.initializeApp();
 ```
@@ -118,7 +118,7 @@ await Firebase.initializeApp();
 
 创建一个页面并通过分别导入这些包来初始化 firebase_messaging 和 flutter_local_notifications。
 
-```
+``` dart
 import ‘package:firebase_messaging/firebase_messaging.dart’;
 import ‘package:flutter_local_notifications/flutter_local_notifications.dart’;
 // create an instance 
@@ -130,7 +130,7 @@ FlutterLocalNotificationsPlugin fltNotification;
 
 在这里，我们编写了在终端中获取 fcm 令牌的代码，以便我们可以在步骤 I 中创建的 firebase 项目中的云消息传递下使用这些令牌。
 
-```
+``` dart
 void pushFCMtoken() async {
   String token=await messaging.getToken();
   print(token);
@@ -141,7 +141,7 @@ void pushFCMtoken() async {
 
 在这一步中，我们编写用于接收通知格式和设置的代码。
 
-```
+``` dart
 void initMessaging() {
   var androiInit = AndroidInitializationSettings(‘@mipmap/ic_launcher’);//for logo
   var iosInit = IOSInitializationSettings();
@@ -170,7 +170,7 @@ FirebaseMessaging.onMessage.listen((RemoteMessage message) {     RemoteNotificat
 
 最终代码将是：
 
-```
+``` dart
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';

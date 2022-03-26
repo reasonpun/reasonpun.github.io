@@ -28,7 +28,7 @@ tags:
 
 在 Flutter 项目测试文件夹中，我们使用以下代码创建 golden_widget_test.dart：
 
-```
+```dart
 void main() {
   testWidgets('Golden test', (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
@@ -86,7 +86,7 @@ flutter test
 当您生成图像时，LocalFileComparator（默认的黄金文件比较器）用于创建/更新磁盘上的文件以匹配渲染。 当您运行测试时，LocalFileComparator 从本地文件系统加载图像文件，并对编码的 PNG 执行简单的逐字节比较。 如果存在完全匹配，则返回 true。 即使您的文件代表相同的像素，但编码不同，测试也会失败。
 您可以通过实现您的来覆盖默认比较器。 为此，您的比较器需要扩展 GoldenFileComparator 类。 然后将该类的一个实例分配给goldenFileComparator。 代码片段如下所示：
 
-```
+```dart
 void main() {
   goldenFileComparator = YourComparator();
 

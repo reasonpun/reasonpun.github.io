@@ -34,7 +34,7 @@ Flutter 中的 ListView 是可滚动项的线性列表。我们可以使用它�
 
 代码的一般格式是：
 
-```
+```dart
 ListView(
   children: <Widget>[
     ItemOne(),
@@ -54,7 +54,7 @@ builder() 构造函数构造一个重复的项目列表。构造函数有两个�
 
 代码的一般格式是：
 
-```
+```dart
 ListView.builder(
   itemCount: itemCount,
   itemBuilder: (context, position) {
@@ -67,7 +67,7 @@ ListView.builder(
 
 巧妙的技巧：由于元素是延迟加载的，并且只加载了所需数量的元素，因此我们实际上不需要 itemCount 作为强制参数，并且列表可以是无限的。
 
-```
+```dart
 ListView.builder(
   itemBuilder: (context, position) {
     return Card(
@@ -92,7 +92,7 @@ ListView.builder(
 请注意，这里不能使用前面构造函数中讨论的无限计数，并且此构造函数强制使用 itemCount。
 这种类型的代码如下：
 
-```
+```dart
 ListView.separated(
       itemBuilder: (context, position) {
         return ListItem();
@@ -155,7 +155,7 @@ FixedExtentScrollPhysics 仅滚动到项目而不是两者之间的任何偏移�
 
 这个例子的代码非常简单：
 
-```
+```dart
 FixedExtentScrollController fixedExtentScrollController =
     new FixedExtentScrollController();
 ListWheelScrollView(

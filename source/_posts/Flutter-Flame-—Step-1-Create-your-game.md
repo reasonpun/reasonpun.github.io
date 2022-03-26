@@ -130,7 +130,7 @@ Dart 项目中还有一个官方的：
 将以下内容复制到您的 main.dart 文件中。 
 不用担心，您会遇到一些错误，我们会立即逐步修复。
 
-```
+```dart
 import 'dart:async';
 
 import 'package:flame/flame.dart';
@@ -189,7 +189,7 @@ Flame 在这个实用程序类中提供了更多功能和帮助程序，如果�
 
 创建一个名为 components 的目录并添加一个包含以下内容的新文件：rocket_component.dart：
 
-```
+```dart
 import 'package:flame/components.dart';
 import 'package:flame/extensions.dart';
 import 'package:flame/geometry.dart';
