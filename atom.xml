@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-03-25T13:40:39.387Z</updated>
+  <updated>2022-03-26T01:38:03.925Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入了解 Flutter 生命周期</title>
+    <link href="https://pangz.fun/Deep-Drive-into-Flutter-Lifecycle.html"/>
+    <id>https://pangz.fun/Deep-Drive-into-Flutter-Lifecycle.html</id>
+    <published>2022-03-26T01:07:22.000Z</published>
+    <updated>2022-03-26T01:38:03.925Z</updated>
+    
+    
+    <summary type="html">了解Flutter生命周期的简单方法</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="深入浅出系列" scheme="https://pangz.fun/categories/Flutter/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Lifecycle" scheme="https://pangz.fun/tags/Lifecycle/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter &amp; Flame — 第 1 步：创建您的游戏</title>
@@ -489,29 +512,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="MVVM" scheme="https://pangz.fun/tags/MVVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>提高移动应用开发速度的10大Flutter工具</title>
-    <link href="https://pangz.fun/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development.html"/>
-    <id>https://pangz.fun/Top-10-Flutter-Tools-to-Increase-Speed-of-Mobile-App-Development.html</id>
-    <published>2022-03-10T06:33:32.000Z</published>
-    <updated>2022-03-25T13:40:39.637Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Flutter 是让企业保持在数字化轨道上的最具吸引力和最出色的框架之一。&lt;br&gt;企业可以从多种 Flutter 应用开发工具中进行选择来开发应用。这些工具中的每一个都有可能使开发人员的编码更加敏捷和简单。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="深入浅出系列" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Tools" scheme="https://pangz.fun/tags/Tools/"/>
     
   </entry>
   
