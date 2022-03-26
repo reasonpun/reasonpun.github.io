@@ -2,6 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pangz.fun/A-Deep-Dive-Into-Flutter-TextField.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Flutter-bloc-for-beginners.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Flutter-Flame-%E2%80%94Step-1-Create-your-game.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Flutter-MVVM-Architecture.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Flutter-TimePicker.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Integrating-Flutterwave-with-a-Flutter-App.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Paypal-Payment-Gateway-Integration-in-Flutter.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase.html</loc>
+    
+    <lastmod>2022-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://pangz.fun/Deep-Drive-into-Flutter-Lifecycle.html</loc>
     
     <lastmod>2022-03-26</lastmod>
@@ -263,24 +371,6 @@
   </url>
   
   <url>
-    <loc>https://pangz.fun/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Paypal-Payment-Gateway-Integration-in-Flutter.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://pangz.fun/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98.html</loc>
     
     <lastmod>2022-03-25</lastmod>
@@ -299,88 +389,7 @@
   </url>
   
   <url>
-    <loc>https://pangz.fun/Integrating-Flutterwave-with-a-Flutter-App.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://pangz.fun/I-am-Back.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Flutter-bloc-for-beginners.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Flutter-TimePicker.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Flutter-MVVM-Architecture.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Flutter-Flame-%E2%80%94Step-1-Create-your-game.html</loc>
     
     <lastmod>2022-03-25</lastmod>
     
@@ -408,15 +417,6 @@
   
   <url>
     <loc>https://pangz.fun/An-Introduction-to-MVVM-in-Flutter.html</loc>
-    
-    <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/A-Deep-Dive-Into-Flutter-TextField.html</loc>
     
     <lastmod>2022-03-25</lastmod>
     
@@ -461,20 +461,6 @@
 
   
   <url>
-    <loc>https://pangz.fun/tags/JavaScript/</loc>
-    <lastmod>2022-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2022-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://pangz.fun/tags/nginx/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -483,6 +469,20 @@
   
   <url>
     <loc>https://pangz.fun/tags/logrotate/</loc>
+    <lastmod>2022-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/tags/JavaScript/</loc>
+    <lastmod>2022-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -538,14 +538,14 @@
   </url>
   
   <url>
-    <loc>https://pangz.fun/tags/%E8%89%BA%E6%9C%AF/</loc>
+    <loc>https://pangz.fun/tags/%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://pangz.fun/tags/%E8%B0%B7%E6%AD%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
+    <loc>https://pangz.fun/tags/%E8%89%BA%E6%9C%AF/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -588,6 +588,13 @@
   
   <url>
     <loc>https://pangz.fun/tags/Patterns/</loc>
+    <lastmod>2022-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/tags/Lifecycle/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -733,13 +740,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://pangz.fun/tags/Lifecycle/</loc>
-    <lastmod>2022-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -785,14 +785,14 @@
   </url>
   
   <url>
-    <loc>https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/</loc>
+    <loc>https://pangz.fun/categories/Widget/Flutter/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://pangz.fun/categories/Widget/Flutter/</loc>
+    <loc>https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -821,6 +821,13 @@
   
   <url>
     <loc>https://pangz.fun/categories/Architecture/Flutter/</loc>
+    <lastmod>2022-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/categories/Flutter/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -877,13 +884,6 @@
   
   <url>
     <loc>https://pangz.fun/categories/SpringBoot/Java/</loc>
-    <lastmod>2022-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/categories/Flutter/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2022-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
