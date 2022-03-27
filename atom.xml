@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-03-26T01:50:51.876Z</updated>
+  <updated>2022-03-27T10:30:00.767Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How can I start with Flutter Testing?</title>
+    <link href="https://pangz.fun/How-can-I-start-with-Flutter-Testing.html"/>
+    <id>https://pangz.fun/How-can-I-start-with-Flutter-Testing.html</id>
+    <published>2022-03-27T08:03:26.000Z</published>
+    <updated>2022-03-27T10:30:00.767Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/How-can-I-start-with-Flutter-Testing/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;大家好! 👋&lt;br&gt;这些天我开始了我的Flutter测试之旅。这个世界对我来说是未知的，但我知道在我们的应用程序中进行测试是超级重要的，我决定自己学习。&lt;br&gt;也许我现在给你看的代码可以做得更好，但请记住，这是我第一次做flutter测试，我想向你展示我所做的，当然，如果你有任何建议，代码将是开源的。&lt;br&gt;我对这个资源库的想法是为每个对学习测试感兴趣的人提供一个地方，创建新的内容，PR，并一起合作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
+    
+  </entry>
   
   <entry>
     <title>深入了解 Flutter 生命周期</title>
@@ -480,29 +505,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <summary type="html">&lt;img src=&quot;/Flutter-MVVM-Architecture/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
 
 &lt;p&gt;模型-视图-视图模型 (MVVM) 在软件开发方面是一种非常成熟的架构模式。 MVVM 有什么特别之处？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="MVVM" scheme="https://pangz.fun/tags/MVVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>简单的介绍Flutter的MVVM设计模式</title>
-    <link href="https://pangz.fun/An-Introduction-to-MVVM-in-Flutter.html"/>
-    <id>https://pangz.fun/An-Introduction-to-MVVM-in-Flutter.html</id>
-    <published>2022-03-12T13:35:03.000Z</published>
-    <updated>2022-03-25T13:40:39.348Z</updated>
-    
-    
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;在这篇文章中，我们将使用 MVVM 设计模式来编写一个完整的 Flutter 应用程序&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     
