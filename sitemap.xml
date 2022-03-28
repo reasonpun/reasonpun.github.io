@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pangz.fun/Flutter-MVVM-Architecture.html</loc>
+    
+    <lastmod>2022-03-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://pangz.fun/An-Introduction-to-MVVM-in-Flutter.html</loc>
     
     <lastmod>2022-03-28</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://pangz.fun/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look.html</loc>
-    
-    <lastmod>2022-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Flutter-MVVM-Architecture.html</loc>
     
     <lastmod>2022-03-26</lastmod>
     
