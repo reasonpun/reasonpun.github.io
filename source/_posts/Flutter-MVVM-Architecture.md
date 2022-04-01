@@ -257,3 +257,8 @@ class _HomeScreenState extends State<HomeScreen> {
 ```
 
 MVVM 现在被大量使用，因为它支持事件驱动的方法，这与许多组件是基于事件执行密切相关。
+
+以上所有源代码，您可以移步：[https://github.com/reasonpun/my_100_goals/tree/main/goals_03](https://github.com/reasonpun/my_100_goals/tree/main/goals_03)
+
+
+<!-- https://medium.com/flutterworld/flutter-mvvm-architecture-f8bed2521958 -->

@@ -197,7 +197,7 @@ class App extends StatelessWidget {
 
 ### 显示电影
 
-对于我们的应用程序，我们将要求用户输入关键字并按键盘上的返回键。这将调用 MovieListViewModel 上的 fetchMovies 方法，如下所示：
+对于我们的应用程序，我们将要求用户输入关键字并按键盘上的搜索键。这将调用 MovieListViewModel 上的 fetchMovies 方法，如下所示：
 
 ```
  Container(
@@ -244,4 +244,7 @@ class _MovieListPageState extends State<MovieListPage> {
 
 请注意，我们为 Provider 传递了 listen: false ，这意味着这只是一次调用，并且 Provider 不会跟踪更改。
 
+以上所有源代码，您可以移步：[https://github.com/reasonpun/my_100_goals/tree/main/goals_02](https://github.com/reasonpun/my_100_goals/tree/main/goals_02)
+
 谢谢阅读！
+<!-- https://betterprogramming.pub/mvvm-in-flutter-edd212fd767a -->
