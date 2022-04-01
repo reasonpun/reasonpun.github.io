@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-03-27T10:48:07.923Z</updated>
+  <updated>2022-04-01T02:54:58.813Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅析setState()</title>
+    <link href="https://pangz.fun/Breakdown-setState-signature.html"/>
+    <id>https://pangz.fun/Breakdown-setState-signature.html</id>
+    <published>2022-04-01T01:00:24.000Z</published>
+    <updated>2022-04-01T02:54:58.813Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/Breakdown-setState-signature/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="Function" scheme="https://pangz.fun/categories/Function/"/>
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Function/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Function" scheme="https://pangz.fun/tags/Function/"/>
+    
+  </entry>
   
   <entry>
     <title>我怎样才能开始进行Flutter测试？</title>
@@ -491,31 +520,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Structure" scheme="https://pangz.fun/tags/Structure/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter的MVVM设计模式</title>
-    <link href="https://pangz.fun/Flutter-MVVM-Architecture.html"/>
-    <id>https://pangz.fun/Flutter-MVVM-Architecture.html</id>
-    <published>2022-03-12T15:08:44.000Z</published>
-    <updated>2022-03-28T04:22:27.857Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Flutter-MVVM-Architecture/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;模型-视图-视图模型 (MVVM) 在软件开发方面是一种非常成熟的架构模式。 MVVM 有什么特别之处？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="MVVM" scheme="https://pangz.fun/tags/MVVM/"/>
     
   </entry>
   
