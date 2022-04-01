@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-04-01T02:54:58.813Z</updated>
+  <updated>2022-04-01T03:25:12.091Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://pangz.fun/Breakdown-setState-signature.html"/>
     <id>https://pangz.fun/Breakdown-setState-signature.html</id>
     <published>2022-04-01T01:00:24.000Z</published>
-    <updated>2022-04-01T02:54:58.813Z</updated>
+    <updated>2022-04-01T03:25:12.091Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/Breakdown-setState-signature/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
-        
-      
+    <summary type="html">&lt;img src=&quot;/Breakdown-setState-signature/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;大多数时候，初学者在编写setState()方法时都会感到困惑。&lt;/p&gt;</summary>
     
     
     
