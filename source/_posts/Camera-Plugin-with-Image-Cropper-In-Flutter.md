@@ -130,7 +130,7 @@ onImageButtonPressed(
 
 当按钮被按下时，我们调用这个方法。在这里，我们要发送不同的参数，其中最重要的一个是参数，通过这个参数，该方法可以知道哪个动作要发生。
 
-> 对于相机，我们使用ImageSource.camera，对于相册，使用ImageSource.gallery。
+> 对于相机，我们使用ImageSource.camera；对于相册，使用ImageSource.gallery。
 
 > CaputuredImageFile是一个回调函数，我们通过它接收文件并根据我们的需要使用它。
 
@@ -263,6 +263,7 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 总结：
-事实上，有不同的方法来访问相机和从图片库中挑选图片，但最重要的是以最简单的方式定义事物，并轻松地工作。在这个例子中，我以最简单的方式展示了这些东西，如果你想尝试，你只需要复制这些代码文件并添加这些依赖性，它就会开始工作啦，要不你试试捏！
+事实上，有不同的方法来访问相机和从图片库中挑选图片，但最重要的是以最简单的方式定义事物，并轻松地工作。
+在这个例子中，我以最简单的方式展示了这些东西，如果你想尝试，你只需要复制这些代码文件并添加这些依赖性，它就会开始工作啦，要不你试试捏！
 
 <!-- https://medium.flutterdevs.com/camera-plugin-with-image-cropper-flutter-97b76105857e -->
