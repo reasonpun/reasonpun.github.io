@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-04-01T06:38:22.528Z</updated>
+  <updated>2022-05-04T09:12:49.404Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter中带有图像剪裁器的相机插件</title>
+    <link href="https://pangz.fun/Camera-Plugin-with-Image-Cropper-In-Flutter.html"/>
+    <id>https://pangz.fun/Camera-Plugin-with-Image-Cropper-In-Flutter.html</id>
+    <published>2022-05-03T09:28:47.000Z</published>
+    <updated>2022-05-04T09:12:49.404Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Camera-Plugin-with-Image-Cropper-In-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在不同的应用程序中使用摄像头是很正常的。&lt;br&gt;但在实现它时，你可能会面临各种问题：&lt;br&gt;例如，如果你在一个电子商务的应用程序中，需要管理不同的东西，需要选择不同的项目，也需要用图片发布我们的回应，那时我们就需要编写一个单一的代码库，从那里我们可以在整个应用程序的不同位置管理摄像头。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="image" scheme="https://pangz.fun/categories/Flutter/image/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="图像剪裁器" scheme="https://pangz.fun/tags/%E5%9B%BE%E5%83%8F%E5%89%AA%E8%A3%81%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter中如何使用Bottom Sheet</title>
+    <link href="https://pangz.fun/Modal-Bottom-Sheet-In-Flutter.html"/>
+    <id>https://pangz.fun/Modal-Bottom-Sheet-In-Flutter.html</id>
+    <published>2022-05-01T10:19:32.000Z</published>
+    <updated>2022-05-04T09:12:49.414Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是菜单或对话框的替代品，并阻止用户与应用程序的其他部分进行互动&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/Modal-Bottom-Sheet-In-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在这篇博客中，我们将探讨Flutter中的Modal Bottom Sheet Widget。&lt;br&gt;我们还将实现一个模态底部工作表小部件的演示，并描述它的属性，以及如何在您的flutter应用程序中使用它们。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Bottom Sheet" scheme="https://pangz.fun/tags/Bottom-Sheet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web3是自我认证的</title>
+    <link href="https://pangz.fun/Web3-is-Self-Certifying.html"/>
+    <id>https://pangz.fun/Web3-is-Self-Certifying.html</id>
+    <published>2022-04-19T08:05:32.000Z</published>
+    <updated>2022-05-04T09:12:49.421Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Web3-is-Self-Certifying/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;最近有很多关于Web3是什么和不是什么的讨论。&lt;br&gt;以下是我的定义:&lt;br&gt;Web3是用户生成的权威，由自我认证的网络协议实现。&lt;br&gt;这些是包括区块链在内的技术的超集，但不限于此。这就是其他人认为的 “Web3”吗？也许不是，但听我说完。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web3" scheme="https://pangz.fun/categories/Web3/"/>
+    
+    <category term="Certifying" scheme="https://pangz.fun/categories/Web3/Certifying/"/>
+    
+    
+    <category term="Web3" scheme="https://pangz.fun/tags/Web3/"/>
+    
+    <category term="Certifying" scheme="https://pangz.fun/tags/Certifying/"/>
+    
+  </entry>
   
   <entry>
     <title>浅析setState()</title>
@@ -443,79 +519,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="Patterns" scheme="https://pangz.fun/tags/Patterns/"/>
     
     <category term="Beginners" scheme="https://pangz.fun/tags/Beginners/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter中的架构模式</title>
-    <link href="https://pangz.fun/Architecture-patterns-in-Flutter.html"/>
-    <id>https://pangz.fun/Architecture-patterns-in-Flutter.html</id>
-    <published>2022-03-14T01:09:08.000Z</published>
-    <updated>2022-03-25T13:40:39.375Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Architecture-patterns-in-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;Flutter 拥有一个不断增长的状态管理解决方案生态系统。 &lt;a href=&quot;https://flutter.dev/docs/development/data-and-backend/state-mgmt/options&quot;&gt;Flutter文档&lt;/a&gt;本身列出了 10 多个选项！弄清楚选择哪种解决方案是一项艰巨的任务。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Architecture" scheme="https://pangz.fun/categories/Architecture/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Architecture/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Patterns" scheme="https://pangz.fun/tags/Patterns/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>寻找Flutter模板的5个最佳网站</title>
-    <link href="https://pangz.fun/5-Best-Websites-for-Flutter-Templates.html"/>
-    <id>https://pangz.fun/5-Best-Websites-for-Flutter-Templates.html</id>
-    <published>2022-03-14T00:28:10.000Z</published>
-    <updated>2022-03-25T13:40:39.303Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/5-Best-Websites-for-Flutter-Templates/0.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;模板使 Flutter 开发变得简单快捷。您还可以从模板中获得一些设计灵感。&lt;br&gt;今天我将分享一些令人惊叹的网站，您可以获得免费的 Flutter 模板。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具篇" scheme="https://pangz.fun/categories/%E5%B7%A5%E5%85%B7%E7%AF%87/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Templates" scheme="https://pangz.fun/tags/Templates/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>试一下这个极佳的文件夹结构吧</title>
-    <link href="https://pangz.fun/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project.html"/>
-    <id>https://pangz.fun/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project.html</id>
-    <published>2022-03-13T14:34:28.000Z</published>
-    <updated>2022-03-25T13:40:39.628Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Make-your-flutter-projects-scalable-%E2%80%94-Best-folder-structure-for-your-next-project/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;一个快速发展且计划不断变化的项目对于每个开发人员来说都是一场噩梦。&lt;br&gt;摆脱这种情况的唯一方法是有一个合理的规划。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="设计模式" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Structure" scheme="https://pangz.fun/tags/Structure/"/>
     
   </entry>
   
