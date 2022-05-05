@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-05-04T09:12:49.404Z</updated>
+  <updated>2022-05-05T01:48:23.388Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>客厅的木制卡座桌</title>
+    <link href="https://pangz.fun/Wooden-Cassette-Table-for-the-Living-Room.html"/>
+    <id>https://pangz.fun/Wooden-Cassette-Table-for-the-Living-Room.html</id>
+    <published>2022-05-05T00:54:56.000Z</published>
+    <updated>2022-05-05T01:48:23.388Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/Wooden-Cassette-Table-for-the-Living-Room/1.jpg&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="手工" scheme="https://pangz.fun/categories/%E6%89%8B%E5%B7%A5/"/>
+    
+    <category term="handwork" scheme="https://pangz.fun/categories/%E6%89%8B%E5%B7%A5/handwork/"/>
+    
+    
+    <category term="手工" scheme="https://pangz.fun/tags/%E6%89%8B%E5%B7%A5/"/>
+    
+    <category term="乌七八糟" scheme="https://pangz.fun/tags/%E4%B9%8C%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter中带有图像剪裁器的相机插件</title>
@@ -492,33 +521,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="TextField" scheme="https://pangz.fun/tags/TextField/"/>
     
     <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>适合初学者的Flutter Bloc模式</title>
-    <link href="https://pangz.fun/Flutter-bloc-for-beginners.html"/>
-    <id>https://pangz.fun/Flutter-bloc-for-beginners.html</id>
-    <published>2022-03-15T07:06:52.000Z</published>
-    <updated>2022-03-26T01:58:28.038Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Flutter-bloc-for-beginners/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;h3 id=&quot;什么是Flutter-的Bocl模式&quot;&gt;&lt;a href=&quot;#什么是Flutter-的Bocl模式&quot; class=&quot;headerlink&quot; title=&quot;什么是Flutter 的Bocl模式&quot;&gt;&lt;/a&gt;什么是Flutter 的Bocl模式&lt;/h3&gt;&lt;p&gt;Flutter bloc 是 Fl​​utter 应用程序的状态管理之一。您可以使用它以 &lt;strong&gt;简单&lt;/strong&gt; 的方式处理应用程序的所有可能状态。&lt;br&gt;Flutter bloc 易于使用，因为您和您的团队将很快理解这个概念，无论您的级别是什么，这个库都有非常好的文档和大量的示例，也是 Flutter 社区中使用最多的库之一，因此，如果您有任何疑问或问题，您可能会通过互联网上的简单搜索找到解决方案。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Architecture" scheme="https://pangz.fun/categories/Architecture/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Architecture/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Patterns" scheme="https://pangz.fun/tags/Patterns/"/>
-    
-    <category term="Beginners" scheme="https://pangz.fun/tags/Beginners/"/>
     
   </entry>
   
