@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-05-05T01:55:00.343Z</updated>
+  <updated>2022-05-17T01:01:44.683Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter中的请求权限服务的实现</title>
+    <link href="https://pangz.fun/Request-Permissions-in-Flutter-as-a-Consumable-Service.html"/>
+    <id>https://pangz.fun/Request-Permissions-in-Flutter-as-a-Consumable-Service.html</id>
+    <published>2022-05-17T00:23:17.000Z</published>
+    <updated>2022-05-17T01:01:44.683Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Request-Permissions-in-Flutter-as-a-Consumable-Service/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;当你想在用户使用过程中获取很多很多权限的时候，请求权限通常会成为一个混乱的任务。&lt;br&gt;为了开始清理所有的权限代码，我们将把它包装在一个带有专门权限请求功能的服务中。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="Permissions" scheme="https://pangz.fun/categories/Flutter/Permissions/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Permissions" scheme="https://pangz.fun/tags/Permissions/"/>
+    
+  </entry>
   
   <entry>
     <title>客厅的木制卡座桌</title>
@@ -490,33 +515,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
     
     <category term="ListView" scheme="https://pangz.fun/tags/ListView/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入了解 Flutter TextField</title>
-    <link href="https://pangz.fun/A-Deep-Dive-Into-Flutter-TextField.html"/>
-    <id>https://pangz.fun/A-Deep-Dive-Into-Flutter-TextField.html</id>
-    <published>2022-03-15T10:02:16.000Z</published>
-    <updated>2022-03-26T01:59:34.359Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/A-Deep-Dive-Into-Flutter-TextField/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在本文中，我们将全面介绍 Flutter TextField 小部件，并找出它的功能和可能的定制。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Widget" scheme="https://pangz.fun/categories/Widget/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Widget/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="TextField" scheme="https://pangz.fun/tags/TextField/"/>
-    
-    <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
     
   </entry>
   
