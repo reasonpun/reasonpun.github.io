@@ -31,6 +31,16 @@ path_provider:
 
 > 注意：image_cropper需要在manifest.xml文件中添加一些东西。你可以在imageCropper插件中找到这些需要注意的地方。
 
+比如：
+还需要在Android平台中添加如下代码：
+AndroidManifest.xml文件中
+```
+<activity
+  android:name="com.yalantis.ucrop.UCropActivity"
+  android:screenOrientation="portrait"
+  android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+```
+
 camera插件用于访问相机，image_cropper用于编辑点击或挑选的图像，path_provider用于寻找文件系统上的常用位置，image_picker用于挑选图像。
 
 ```dart
@@ -49,24 +59,20 @@ onImageButtonPressed(ImageSource source,
     source: source,
   );
 
-  val = await ImageCropper.cropImage(
+  val = await ImageCropper().cropImage(
     sourcePath: pickedFile.path,
     aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),
     compressQuality: 100,
     maxHeight: 700,
     maxWidth: 700,
     compressFormat: ImageCompressFormat.jpg,
-    androidUiSettings: AndroidUiSettings(
-      toolbarColor: Colors.white,
-      toolbarTitle: "genie cropper",
-    ),
   );
   print("cropper ${val.runtimeType}");
   capturedImageFile(val.path);
  
 }
 
-typedef capturedImageFile = String Function(String);
+typedef CapturedImageFile = String Function(String);
 typedef void OnPickImageCallback(
     double maxWidth, double maxHeight, int quality);
 ```
@@ -89,17 +95,13 @@ final pickedFile = await _picker.getImage(
 {% asset_img 2.png 示意图 width="400" %}
 
 ```dart
-val = await ImageCropper.cropImage(
+val = await ImageCropper().cropImage(
   sourcePath: pickedFile.path,
   aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),
   compressQuality: 100,
   maxHeight: 700,
   maxWidth: 700,
   compressFormat: ImageCompressFormat.jpg,
-  androidUiSettings: AndroidUiSettings(
-    toolbarColor: Colors.white,
-    toolbarTitle: "genie cropper",
-  ),
 );
 ```
 
