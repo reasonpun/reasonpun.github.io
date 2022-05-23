@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-05-17T01:01:44.683Z</updated>
+  <updated>2022-05-23T13:23:02.862Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter控件 ： permission_handler v9.2.0</title>
+    <link href="https://pangz.fun/permission-handler-9-2-0.html"/>
+    <id>https://pangz.fun/permission-handler-9-2-0.html</id>
+    <published>2022-05-20T02:00:30.000Z</published>
+    <updated>2022-05-23T13:23:02.862Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;用于 Flutter 的权限插件。这个插件提供了一个跨平台（iOS，Android）的API来请求和检查权限。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在大多数操作系统中，权限并不是在安装时授予应用程序的。相反，开发者必须在应用运行时向用户请求权限。&lt;/p&gt;
+&lt;p&gt;这个插件提供了一个跨平台（iOS、Android）的API来请求权限并检查其状态。你也可以打开设备的应用设置，这样用户就可以授予一个权限。&lt;br&gt;在Android上，你可以显示请求权限的理由。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="Permissions" scheme="https://pangz.fun/categories/Flutter/Permissions/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Permissions" scheme="https://pangz.fun/tags/Permissions/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter中的请求权限服务的实现</title>
@@ -488,33 +515,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="PHP" scheme="https://pangz.fun/tags/PHP/"/>
     
     <category term="面试" scheme="https://pangz.fun/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter ListView 和 ScrollPhysics 之详解</title>
-    <link href="https://pangz.fun/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look.html"/>
-    <id>https://pangz.fun/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look.html</id>
-    <published>2022-03-15T10:08:13.000Z</published>
-    <updated>2022-03-26T01:56:38.692Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Flutter-ListView-and-ScrollPhysics-A-Detailed-Look/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;本文旨在对 ListView 类、ScrollPhysics 以及通用小部件的调整和优化进行更详细的探索。&lt;br&gt;Flutter 中的 ListView 是可滚动项的线性列表。我们可以使用它来制作可滚动的项目列表或制作重复项目的列表。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Widget" scheme="https://pangz.fun/categories/Widget/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Widget/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Dive Into" scheme="https://pangz.fun/tags/Dive-Into/"/>
-    
-    <category term="ListView" scheme="https://pangz.fun/tags/ListView/"/>
     
   </entry>
   
