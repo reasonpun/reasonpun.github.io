@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pangz.fun/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html</loc>
+    
+    <lastmod>2022-05-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://pangz.fun/permission-handler-9-2-0.html</loc>
     
     <lastmod>2022-05-23</lastmod>
@@ -877,6 +886,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://pangz.fun/tags/hack/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1077,6 +1093,13 @@
   
   <url>
     <loc>https://pangz.fun/categories/Flutter/Permissions/</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/categories/Flutter/hack/</loc>
     <lastmod>2022-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

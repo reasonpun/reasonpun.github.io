@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>现在就开始提升你的Flutter生产力吧!</title>
+      <link href="/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html"/>
+      <url>/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html</url>
+      
+        <content type="html"><![CDATA[<img src="/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/1.png" class="" title="示意图 width=400"><p>今天，我将向您介绍3个技巧，这些技巧将使您的Flutter开发更上一层楼<br>如果您喜欢这个内容，请给点个赞呗！<br>让我们马上开始吧!</p><span id="more"></span><h3 id="修复所有错误"><a href="#修复所有错误" class="headerlink" title="修复所有错误"></a>修复所有错误</h3><p>在VSCode中看到这个消息是不是非常令人恼怒呢？</p><p>通常是不需要的导入，缺少const关键词等等。但是，难道没有一些方法可以在几秒钟内修复整个项目中的这些错误吗？是的，有的，而且比你想象的要容易得多。只要在终端导航到你的项目，输入</p><pre class="line-numbers language-none"><code class="language-none">dart fix --apply<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>一切就都解决了；)</p><h3 id="更好的错误屏幕"><a href="#更好的错误屏幕" class="headerlink" title="更好的错误屏幕"></a>更好的错误屏幕</h3><p>每个人，真的是每个人都讨厌这个错误屏幕。</p><img src="/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/2.png" class="" title="示意图 width=400"><p>但是，如果我告诉你，你可以用几行代码让这个屏幕变得更好呢？<br>来，来，来，我将向你展示如何做到这一点。</p><ol><li>在你的主函数中，添加以下内容。<img src="/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/3.png" class="" title="示意图 width=400"></li></ol><p>现在你可以在material widget中创建你自己的屏幕。这可以看起来像这样：</p><img src="/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/4.png" class="" title="示意图 width=400"><p>但是，等等，我现在是怎么把错误信息显示在屏幕上的呢？<br>嗯，很简单，通过调用 </p><pre class="line-numbers language-dart" data-language="dart"><code class="language-dart">details<span class="token punctuation">.</span>exception<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="查看你所有的依赖性"><a href="#查看你所有的依赖性" class="headerlink" title="查看你所有的依赖性"></a>查看你所有的依赖性</h3><p>您想知道您的 Flutter 项目中的所有依赖项吗？为此，有一个命令：</p><pre class="line-numbers language-none"><code class="language-none">flutter pub deps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>现在您会得到一个看起来像这样的树</p><img src="/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/5.png" class="" title="示意图 width=400"><p>谢谢你的阅读，别忘了给我点赞哟!</p><!-- https://tomicriedel.medium.com/3-tips-to-hack-your-flutter-productivity-that-you-can-use-right-away-d809812d7079 -->]]></content>
+      
+      
+      <categories>
+          
+          <category> Flutter </category>
+          
+          <category> hack </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Flutter </tag>
+            
+            <tag> hack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Flutter控件 ： permission_handler v9.2.0</title>
       <link href="/permission-handler-9-2-0.html"/>
       <url>/permission-handler-9-2-0.html</url>

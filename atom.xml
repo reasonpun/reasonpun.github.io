@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-05-23T13:23:02.862Z</updated>
+  <updated>2022-05-24T12:17:43.109Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>现在就开始提升你的Flutter生产力吧!</title>
+    <link href="https://pangz.fun/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html"/>
+    <id>https://pangz.fun/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html</id>
+    <published>2022-05-24T00:47:43.000Z</published>
+    <updated>2022-05-24T12:17:43.109Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;今天，我将向您介绍3个技巧，这些技巧将使您的Flutter开发更上一层楼&lt;br&gt;如果您喜欢这个内容，请给点个赞呗！&lt;br&gt;让我们马上开始吧!&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="hack" scheme="https://pangz.fun/categories/Flutter/hack/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="hack" scheme="https://pangz.fun/tags/hack/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter控件 ： permission_handler v9.2.0</title>
@@ -492,29 +517,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
     
     <category term="Notification" scheme="https://pangz.fun/tags/Notification/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP核心技术的面试题</title>
-    <link href="https://pangz.fun/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98.html"/>
-    <id>https://pangz.fun/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98.html</id>
-    <published>2022-03-17T13:04:12.000Z</published>
-    <updated>2022-03-25T13:40:39.630Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/1.jpg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;1 oop是什么?&lt;br&gt;答:oop是面向对象编程,面向对象编程是一种计算机编程架构,OOP 的一条基本原则是计算机程序是由单个能够起到子程序作用的单元或对象组合而成。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="面试准备" scheme="https://pangz.fun/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
-    
-    
-    <category term="PHP" scheme="https://pangz.fun/tags/PHP/"/>
-    
-    <category term="面试" scheme="https://pangz.fun/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
