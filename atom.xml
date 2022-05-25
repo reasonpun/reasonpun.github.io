@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-05-24T12:17:43.109Z</updated>
+  <updated>2022-05-25T12:23:03.468Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何用Mobx在Flutter中管理状态</title>
+    <link href="https://pangz.fun/How-to-manage-state-in-Flutter-with-Mobx.html"/>
+    <id>https://pangz.fun/How-to-manage-state-in-Flutter-with-Mobx.html</id>
+    <published>2022-05-25T12:15:02.000Z</published>
+    <updated>2022-05-25T12:23:03.468Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/How-to-manage-state-in-Flutter-with-Mobx/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="Mobx" scheme="https://pangz.fun/categories/Flutter/Mobx/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Mobx" scheme="https://pangz.fun/tags/Mobx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何用Provider管理Flutter中的状态</title>
+    <link href="https://pangz.fun/How-To-Manage-State-in-Flutter-With-Provider.html"/>
+    <id>https://pangz.fun/How-To-Manage-State-in-Flutter-With-Provider.html</id>
+    <published>2022-05-25T10:52:50.000Z</published>
+    <updated>2022-05-25T11:03:44.562Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/How-To-Manage-State-in-Flutter-With-Provider/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;可以认为Flutter是一个正在茁壮成长的孩子。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="Provider" scheme="https://pangz.fun/categories/Flutter/Provider/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Provider" scheme="https://pangz.fun/tags/Provider/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你应该使用BLoC来管理Flutter中的状态吗？</title>
+    <link href="https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html"/>
+    <id>https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html</id>
+    <published>2022-05-25T10:49:32.000Z</published>
+    <updated>2022-05-25T12:16:10.118Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Should-You-Use-BLoC-to-Manage-State-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;我将对Flutter中最广泛使用的状态管理器进行并列比较。&lt;/p&gt;
+&lt;p&gt;现在有很多工具，但往往缺乏对它们的明确比较。这是一个遗憾，因为选择了错误的状态管理器，当你开始构建时就不容易挽回了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="BLoC" scheme="https://pangz.fun/categories/Flutter/BLoC/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="BLoC" scheme="https://pangz.fun/tags/BLoC/"/>
+    
+  </entry>
   
   <entry>
     <title>现在就开始提升你的Flutter生产力吧!</title>
@@ -442,81 +522,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter：黄金测试 —— 比较 Widgets 和 Snapshots</title>
-    <link href="https://pangz.fun/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots.html"/>
-    <id>https://pangz.fun/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots.html</id>
-    <published>2022-03-18T13:26:02.000Z</published>
-    <updated>2022-03-26T01:56:51.422Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Flutter-Golden-tests-%E2%80%94-compare-Widgets-with-Snapshots/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;测试对于交付具有最佳质量的应用程序非常重要。 在这篇文章中，我想谈谈 Widget 测试中鲜为人知的特性之一——黄金测试。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用 Codemagic CI/CD 运行 Flutter Golden（快照）测试</title>
-    <link href="https://pangz.fun/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD.html"/>
-    <id>https://pangz.fun/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD.html</id>
-    <published>2022-03-18T12:29:02.000Z</published>
-    <updated>2022-03-26T01:55:35.550Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/How-to-run-Flutter-Golden-Snapshot-Tests-with-Codemagic-CI-CD/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;测试是开发的一个非常重要的方面，它有助于确保您的应用程序可以正常运行并为用户提供正确的外观。 很高兴有 CI/CD 工具可以自动为您检查应用程序质量、在出现问题时通知团队以及将应用程序发布给最终用户。&lt;br&gt;在本文中，我将和您唠一唠如何使用 Codemagic CI/CD 运行 Golden 测试。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Firebase 在后台和前台推送通知</title>
-    <link href="https://pangz.fun/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase.html"/>
-    <id>https://pangz.fun/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase.html</id>
-    <published>2022-03-17T13:50:00.000Z</published>
-    <updated>2022-03-26T01:53:01.513Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Push-Notification-In-Flutter-in-Background-as-well-as-in-Foreground-Using-Firebase/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在应用程序中，我们需要集成推送通知。&lt;br&gt;虽然我们成功集成了它，但有时在应用程序未运行或在后台打开时发送推送通知会出现问题或者导致应用程序的崩溃。&lt;br&gt;所以，本篇内容中我们将在Flutter中使用 firebase ，使用它的通知适用于所有状态：前台、后台，甚至在应用程序关闭（未运行）时。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
-    
-    <category term="Notification" scheme="https://pangz.fun/tags/Notification/"/>
     
   </entry>
   
