@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html</loc>
-    
-    <lastmod>2022-05-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://pangz.fun/How-to-manage-state-in-Flutter-with-Mobx.html</loc>
     
     <lastmod>2022-05-25</lastmod>
@@ -21,6 +12,15 @@
   
   <url>
     <loc>https://pangz.fun/How-To-Manage-State-in-Flutter-With-Provider.html</loc>
+    
+    <lastmod>2022-05-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html</loc>
     
     <lastmod>2022-05-25</lastmod>
     
