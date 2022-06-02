@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-06-02T04:53:30.099Z</updated>
+  <updated>2022-06-02T08:16:55.804Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html"/>
     <id>https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html</id>
     <published>2022-06-02T01:18:46.000Z</published>
-    <updated>2022-06-02T04:53:30.099Z</updated>
+    <updated>2022-06-02T08:16:55.804Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
-        
-      
+    <summary type="html">&lt;img src=&quot;/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;我编写flutter的代码已经有些年头了。&lt;br&gt;当我发现riverpod与flutter钩子的简单性相结合时的强大，我爱上了它，爱了，爱了！&lt;br&gt;现在几乎所有的项目中，我都使用它来进行状态管理。&lt;br&gt;我将向你解释为什么，并告诉你为什么你可以用这两个天使轻松地赋予你的项目。&lt;/p&gt;</summary>
     
     
     
