@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-05-25T12:32:35.581Z</updated>
+  <updated>2022-06-02T04:53:30.099Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Riverpod + Flutter Hooks：状态管理的最佳组合</title>
+    <link href="https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html"/>
+    <id>https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html</id>
+    <published>2022-06-02T01:18:46.000Z</published>
+    <updated>2022-06-02T04:53:30.099Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="State" scheme="https://pangz.fun/categories/Flutter/State/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Riverpod" scheme="https://pangz.fun/tags/Riverpod/"/>
+    
+    <category term="Hooks" scheme="https://pangz.fun/tags/Hooks/"/>
+    
+  </entry>
   
   <entry>
     <title>如何用Mobx在Flutter中管理状态</title>
@@ -496,28 +527,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Paypal" scheme="https://pangz.fun/tags/Paypal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Firebase — Flutter</title>
-    <link href="https://pangz.fun/Firebase-%E2%80%94-Flutter.html"/>
-    <id>https://pangz.fun/Firebase-%E2%80%94-Flutter.html</id>
-    <published>2022-03-19T03:09:52.000Z</published>
-    <updated>2022-03-25T13:40:39.381Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Firebase 是 Fl​​utter 中使用最广泛的后端之一。它由谷歌开发并提供了很多功能。让我们看看 Firebase 中有哪些可以与 Flutter 应用集成的功能！&lt;/p&gt;
-&lt;img src=&quot;/Firebase-%E2%80%94-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
     
   </entry>
   
