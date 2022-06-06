@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-06-02T08:16:55.804Z</updated>
+  <updated>2022-06-06T13:13:25.286Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在Flutter中实现订阅的应用内购买</title>
+    <link href="https://pangz.fun/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter.html"/>
+    <id>https://pangz.fun/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter.html</id>
+    <published>2022-06-06T08:46:05.000Z</published>
+    <updated>2022-06-06T13:13:25.286Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;我们以这种或那种方式建立我们的应用程序，从而从中赚钱。&lt;br&gt;有时我们出售广告并要求用户升级以获得更好的体验，有时我们有只针对付费用户的优质内容。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="Subscriptions" scheme="https://pangz.fun/categories/Flutter/Subscriptions/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="In-App Purchase" scheme="https://pangz.fun/tags/In-App-Purchase/"/>
+    
+    <category term="Subscriptions" scheme="https://pangz.fun/tags/Subscriptions/"/>
+    
+  </entry>
   
   <entry>
     <title>Riverpod + Flutter Hooks：状态管理的最佳组合</title>
@@ -497,32 +524,6 @@ console.log(shuffleArray([1, 2, 3, 4]));
     <category term="JavaScript" scheme="https://pangz.fun/tags/JavaScript/"/>
     
     <category term="编程技巧" scheme="https://pangz.fun/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter 中的 Paypal 支付网关的集成</title>
-    <link href="https://pangz.fun/Paypal-Payment-Gateway-Integration-in-Flutter.html"/>
-    <id>https://pangz.fun/Paypal-Payment-Gateway-Integration-in-Flutter.html</id>
-    <published>2022-03-19T13:17:47.000Z</published>
-    <updated>2022-03-26T01:53:25.644Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Paypal-Payment-Gateway-Integration-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;问题：&lt;br&gt;在撰写本文时，Paypal 还没有为 Flutter 中的支付网关集成提供 SDK 包。 此外，整个互联网上貌似都没有解决此问题的方法。&lt;br&gt;在对该主题进行了大量研究之后，我觉得我找到了解决此问题的简单方法。&lt;/p&gt;
-&lt;p&gt;解决方案：&lt;br&gt;我已经使用 WebView 成功实现了 Paypal 支付网关。 我使用了一些 Paypal 的可用 API 来进行支付，这些 API 可以正式集成到网站中。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Payment" scheme="https://pangz.fun/categories/Payment/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Payment/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Paypal" scheme="https://pangz.fun/tags/Paypal/"/>
     
   </entry>
   
