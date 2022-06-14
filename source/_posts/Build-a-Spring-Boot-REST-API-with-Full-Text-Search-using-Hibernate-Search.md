@@ -14,11 +14,13 @@ tags:
 
 搜索是网络的支柱之一，而全文搜索是每个网站都需要的强制性功能之一。但是实现这样的功能是很复杂的，很多熟练的工程师已经对这个问题进行了认真的思考。所以，我们不要重新发明轮子，而要使用久经考验的Hibernate搜索库。
 
-在这篇博文中，我们将学习如何在Spring boot中建立一个简单的REST API端点，并使用Hibernate Search进行全文搜索。我们将只介绍基础知识，但Hibernate Search是一个功能丰富的库，它的许多功能远远超过我们在这篇文章中所看到的。你可以在官方文档中查看它所提供的一切，[https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#gettingstarted-framework。](https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#gettingstarted-framework。)
+<!--more-->
+
+在这篇博文中，我们将学习如何在Spring boot中建立一个简单的REST API，并使用Hibernate Search进行全文搜索。我们将只介绍基础知识，但Hibernate Search是一个功能丰富的库，它的许多功能远远超过我们在这篇文章中所看到的。你可以在官方文档中查看它所提供的一切，[https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#gettingstarted-framework。](https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#gettingstarted-framework。)
 
 ### 创建项目
 
-第一步是使用spring initializr生成spring boot项目。
+第一步是生成spring boot项目。
 在本教程中，我们通过SDKman使用spring CLI，但也可以通过Web UI [https://start.spring.io/](https://start.spring.io/) 或直接通过IDEA [https://www.jetbrains.com/help/idea/spring-boot.html](https://www.jetbrains.com/help/idea/spring-boot.html) 轻松完成。
 
 要想了解如何在自己的机器上设置CLI，请按照这个指南[https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.installing.cli.sdkman](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.installing.cli.sdkman)。一旦你安装了CLI，执行这个命令就可以生成具有必要依赖性的项目。
@@ -31,7 +33,7 @@ spring init --dependencies=web,data-jpa,h2,lombok,validation spring-boot-hiberna
 
  * 用于REST API的web依赖。
  * 用于数据访问层的spring data JPA，它使用hibernate作为默认的对象关系映射工具。
- * h2库，提供一个易于使用的内存嵌入式数据库。这种类型的数据库适合于像本项目这样的小型玩具项目，但它不应该被用于任何将在某个时候运往生产的严肃项目。
+ * h2库，提供一个易于使用的内存嵌入式数据库。这种类型的数据库适合于像本项目这样的小型玩具项目，但它不应该被用于任何将在某个时候运往生产的正式项目。
  * Lombok通过注释生成代码片段，避免任何模板代码
  * validation是Hibernate对遵循JSR380规范的验证API的实现。它允许，除其他外，使用注释来验证Bean。
 
@@ -128,7 +130,7 @@ public class Plant {
 
 然后......这就是了! 对于我们这样一个简单的案例来说，就是这么简单
 
-但是你可以用库提供的东西做得更多，比如使用条件性索引或调整索引协调。再一次，如果你想了解更多，请查看官方文档。
+但是你可以用库提供的东西做得更多，比如使用条件性索引或调整索引协调。SO，如果你想了解更多，请查看官方文档。
 
 ### 定义数据层
 我们现在需要定义我们的数据层，处理与数据库的交互。
@@ -458,9 +460,9 @@ public class Application {
 ```
 我们在主应用程序类中直接定义Bean。
 
-buildIndex方法通过依赖注入将索引器作为一个参数。该方法在应用程序启动时执行，就在上下文初始化之后和spring boot应用程序启动之前。
+buildIndex方法通过依赖注入将索引器作为一个参数。该方法在应用程序启动时执行（就在上下文初始化之后和spring boot应用程序启动之前）。
 
-### 把它放在一起
+### 把它们放在一起
 让我们首先初始化样本数据。
 
 ```java

@@ -12,9 +12,11 @@ tags:
 
 {% asset_img 1.png 示意图 width="400" %}
 
-在[之前的文章]()中，我们学习了如何使用Hibernate Search为Spring Boot Rest API添加全文搜索。
+在[之前的文章](https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html)中，我们学习了如何使用Hibernate Search为Spring Boot Rest API添加全文搜索。
 
 在这篇文章中，我们将在此基础上，学习如何向现有的REST API添加分页搜索。
+
+<!--more-->
 
 ### 项目设置
 你可以查看之前的博文，以获得关于如何使用Spring Initializer设置项目的详细攻略。
@@ -257,7 +259,7 @@ public class PlantController {
 
 我们记录收到的请求数据并调用我们在PlantService中定义的新函数。
 
-### 把它放在一起
+### 把它们放在一起
 是时候测试我们的代码了!
 
 我们可以用命令行启动我们的应用程序。
