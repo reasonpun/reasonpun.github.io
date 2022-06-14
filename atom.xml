@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-06-14T12:16:15.783Z</updated>
+  <updated>2022-06-14T12:23:53.858Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html"/>
     <id>https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html</id>
     <published>2022-06-14T11:46:18.000Z</published>
-    <updated>2022-06-14T12:16:15.783Z</updated>
+    <updated>2022-06-14T12:23:53.858Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -48,16 +48,13 @@
     <link href="https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search.html"/>
     <id>https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search.html</id>
     <published>2022-06-14T11:42:55.000Z</published>
-    <updated>2022-06-14T12:15:28.712Z</updated>
+    <updated>2022-06-14T12:25:51.320Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
-        
-      
+    <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在&lt;a href=&quot;https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html&quot;&gt;之前的文章&lt;/a&gt;中，我们学习了如何使用Hibernate Search为Spring Boot Rest API添加全文搜索。&lt;/p&gt;
+&lt;p&gt;在这篇文章中，我们将在此基础上，学习如何向现有的REST API添加分页搜索。&lt;/p&gt;</summary>
     
     
     
