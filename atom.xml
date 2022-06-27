@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-06-27T03:44:50.884Z</updated>
+  <updated>2022-06-27T03:46:37.180Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html"/>
     <id>https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html</id>
     <published>2022-06-27T02:28:08.000Z</published>
-    <updated>2022-06-27T03:44:50.884Z</updated>
+    <updated>2022-06-27T03:46:37.180Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最常见但又被低估的做法之一是写代码而不实施测试，甚至大多数专业人士也是如此。&lt;br&gt;尽管一个明显的事实是，如果你理解了业务逻辑，你就可以直接深入到执行中去，但这并不意味着你遵循了被编程专家长期证明的最佳实践。实现你的程序的最好方法之一是遵循TDD或测试驱动的开发。&lt;br&gt;在</summary>
-        
-      
+    <summary type="html">&lt;p&gt;最常见但又被低估的做法之一是写代码而不实施测试，甚至大多数专业人士也是如此。&lt;br&gt;尽管一个明显的事实是，如果你理解了业务逻辑，你就可以直接深入到执行中去，但这并不意味着你遵循了被编程专家长期证明的最佳实践。&lt;br&gt;实现你的程序的最好方法之一是遵循TDD或测试驱动的开发。&lt;br&gt;在这篇文章中，我们将看看什么是TDD，以及如何使用TDD进行更好的编程。&lt;/p&gt;</summary>
     
     
     
