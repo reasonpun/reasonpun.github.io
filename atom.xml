@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-06-14T12:23:53.858Z</updated>
+  <updated>2022-06-27T03:44:50.884Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java程序员的测试驱动开发(TDD)</title>
+    <link href="https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html"/>
+    <id>https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html</id>
+    <published>2022-06-27T02:28:08.000Z</published>
+    <updated>2022-06-27T03:44:50.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最常见但又被低估的做法之一是写代码而不实施测试，甚至大多数专业人士也是如此。&lt;br&gt;尽管一个明显的事实是，如果你理解了业务逻辑，你就可以直接深入到执行中去，但这并不意味着你遵循了被编程专家长期证明的最佳实践。实现你的程序的最好方法之一是遵循TDD或测试驱动的开发。&lt;br&gt;在</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://pangz.fun/categories/Java/"/>
+    
+    <category term="TDD" scheme="https://pangz.fun/categories/Java/TDD/"/>
+    
+    
+    <category term="SprJavaing" scheme="https://pangz.fun/tags/SprJavaing/"/>
+    
+    <category term="TDD" scheme="https://pangz.fun/tags/TDD/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Hibernate搜索构建带有全文搜索的Spring Boot REST API</title>
@@ -505,31 +534,6 @@
     <category term="SprintBoot" scheme="https://pangz.fun/tags/SprintBoot/"/>
     
     <category term="Kubernetes" scheme="https://pangz.fun/tags/Kubernetes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Flutter中集成Flutterwave</title>
-    <link href="https://pangz.fun/Integrating-Flutterwave-with-a-Flutter-App.html"/>
-    <id>https://pangz.fun/Integrating-Flutterwave-with-a-Flutter-App.html</id>
-    <published>2022-03-24T02:07:47.000Z</published>
-    <updated>2022-03-26T01:54:17.884Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Integrating-Flutterwave-with-a-Flutter-App/0.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;付款始终是企业不可或缺的一部分，当向错误的个人付款或向正确的人多付钱时，它就会成为一件非常麻烦的事情。&lt;br&gt;作为开发人员，集成支付模块是需要额外重视的关键主题之一，以确保正确完成支付，同时确保支付安全并发送给正确的接收者。&lt;br&gt;但是，如果商家希望从不同地点的客户进行付款/接收付款，但在如何无缝地做到这一点方面的选择有限，那么您如何进行这些集成呢？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Payment" scheme="https://pangz.fun/categories/Payment/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Payment/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Flutterwave" scheme="https://pangz.fun/tags/Flutterwave/"/>
     
   </entry>
   
