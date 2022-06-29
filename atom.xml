@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-06-27T03:49:12.057Z</updated>
+  <updated>2022-06-29T02:53:30.301Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5个Flutter工具 助力创业公司起飞</title>
+    <link href="https://pangz.fun/5-flutter-tools-to-built-startup-fast.html"/>
+    <id>https://pangz.fun/5-flutter-tools-to-built-startup-fast.html</id>
+    <published>2022-06-29T02:25:16.000Z</published>
+    <updated>2022-06-29T02:53:30.301Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/5-flutter-tools-to-built-startup-fast/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;Flutter是最有效的应用开发平台之一。Flutter是一个工具包，能够实现自动代码完成、调试和视觉支持。凭借快速的开发时间，Flutter让人们的工作变得更加轻松。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="flutter" scheme="https://pangz.fun/categories/flutter/"/>
+    
+    <category term="startup" scheme="https://pangz.fun/categories/flutter/startup/"/>
+    
+    
+    <category term="flutter" scheme="https://pangz.fun/tags/flutter/"/>
+    
+    <category term="startup" scheme="https://pangz.fun/tags/startup/"/>
+    
+  </entry>
   
   <entry>
     <title>Java程序员的测试驱动开发(TDD)</title>
@@ -503,33 +528,6 @@
     <category term="Flame" scheme="https://pangz.fun/tags/Flame/"/>
     
     <category term="Game" scheme="https://pangz.fun/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务</title>
-    <link href="https://pangz.fun/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes.html"/>
-    <id>https://pangz.fun/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes.html</id>
-    <published>2022-03-24T03:03:50.000Z</published>
-    <updated>2022-03-26T01:55:24.548Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/How-to-scale-Microservices-with-Message-Queues-Spring-Boot-and-Kubernetes/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;当您大规模设计和构建应用程序时，您将面临两个重大挑战：可扩展性和稳健性。&lt;br&gt;您应该设计您的服务，以便即使它受到间歇性重负载的影响，它也能继续可靠地运行。&lt;br&gt;以 Apple Store 为例。&lt;br&gt;每年都有数百万 Apple 客户预先注册购买新 iPhone。&lt;br&gt;数百万人同时购买一件商品。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
-    
-    <category term="Java" scheme="https://pangz.fun/categories/SpringBoot/Java/"/>
-    
-    
-    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
-    
-    <category term="SprintBoot" scheme="https://pangz.fun/tags/SprintBoot/"/>
-    
-    <category term="Kubernetes" scheme="https://pangz.fun/tags/Kubernetes/"/>
     
   </entry>
   
