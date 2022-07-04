@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-06-29T02:53:30.301Z</updated>
+  <updated>2022-07-04T13:10:25.342Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot Application Use @valid to Validate API Request</title>
+    <link href="https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html"/>
+    <id>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</id>
+    <published>2022-07-04T13:02:37.000Z</published>
+    <updated>2022-07-04T13:10:25.342Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用@valid可以使你的Request验证更容易。&lt;/p&gt;
+&lt;img src=&quot;/Spring-Boot-Application-Use-valid-to-Validate-API-Request/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;当我们开发rest API时，我们认为每个人都需要验证接口输入参数的合法性。&lt;br&gt;一些初学者可能会使用许多if-else条件表达式进行验证。以一个新的用户注册为例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Spring" scheme="https://pangz.fun/categories/Spring/"/>
+    
+    <category term="API" scheme="https://pangz.fun/categories/Spring/API/"/>
+    
+    
+    <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+  </entry>
   
   <entry>
     <title>5个Flutter工具 助力创业公司起飞</title>
@@ -501,33 +527,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Lifecycle" scheme="https://pangz.fun/tags/Lifecycle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter &amp; Flame — 第 1 步：创建您的游戏</title>
-    <link href="https://pangz.fun/Flutter-Flame-%E2%80%94Step-1-Create-your-game.html"/>
-    <id>https://pangz.fun/Flutter-Flame-%E2%80%94Step-1-Create-your-game.html</id>
-    <published>2022-03-24T11:22:47.000Z</published>
-    <updated>2022-03-26T01:57:11.289Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Flutter-Flame-%E2%80%94Step-1-Create-your-game/1.jpeg&quot; class=&quot;&quot; title=&quot;第一次运行新项目 width=400&quot;&gt;
-
-&lt;p&gt;从一个想法到一个商店就绪的游戏，所有这些都是用 Flutter 和 Flame 制作的。 加入我们本系列的第一部分，学习如何使用 Flutter 建立一个 Flame 项目并在屏幕上绘制你的第一个元素。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="深入浅出系列" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Flame" scheme="https://pangz.fun/tags/Flame/"/>
-    
-    <category term="Game" scheme="https://pangz.fun/tags/Game/"/>
     
   </entry>
   
