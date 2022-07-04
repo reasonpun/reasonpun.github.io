@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-07-04T13:10:25.342Z</updated>
+  <updated>2022-07-04T13:42:42.114Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Spring Boot Application Use @valid to Validate API Request</title>
+    <title>Spring Boot应用程序使用@valid来验证API请求</title>
     <link href="https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html"/>
     <id>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</id>
     <published>2022-07-04T13:02:37.000Z</published>
-    <updated>2022-07-04T13:10:25.342Z</updated>
+    <updated>2022-07-04T13:42:42.114Z</updated>
     
     
     <summary type="html">&lt;p&gt;使用@valid可以使你的Request验证更容易。&lt;/p&gt;
