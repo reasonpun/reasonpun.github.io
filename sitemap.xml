@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pangz.fun/Using-Agile-Effectively-In-Mobile-App-Development.html</loc>
+    
+    <lastmod>2022-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</loc>
     
     <lastmod>2022-07-04</lastmod>
@@ -1081,6 +1090,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://pangz.fun/tags/develop/</loc>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/tags/software/</loc>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1372,6 +1395,20 @@
   
   <url>
     <loc>https://pangz.fun/categories/Spring/API/</loc>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/categories/develop/</loc>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/categories/develop/software/</loc>
     <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

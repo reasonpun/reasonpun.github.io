@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-07-04T13:42:42.114Z</updated>
+  <updated>2022-08-02T23:41:34.513Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在移动应用开发中有效地使用敏捷技术</title>
+    <link href="https://pangz.fun/Using-Agile-Effectively-In-Mobile-App-Development.html"/>
+    <id>https://pangz.fun/Using-Agile-Effectively-In-Mobile-App-Development.html</id>
+    <published>2022-08-02T23:33:11.000Z</published>
+    <updated>2022-08-02T23:41:34.513Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Using-Agile-Effectively-In-Mobile-App-Development/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;移动应用开发是一个复杂的过程，涉及来自不同领域的多个专家，我们试图以最佳方式整合所有这些过程，以确保我们的产品符合标准。&lt;br&gt;要做到这一点，我们必须选择正确的模式，据观察，敏捷模式已经显示出移动应用开发的多种好处。&lt;br&gt;我们已经了解到，创建应用程序的过程涉及到团队内部和客户之间的不断沟通，以便他们能够概述他们想要从应用程序中获得什么。在整个过程中应始终咨询客户，因为这有助于开发高效的软件应用程序。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="develop" scheme="https://pangz.fun/categories/develop/"/>
+    
+    <category term="software" scheme="https://pangz.fun/categories/develop/software/"/>
+    
+    
+    <category term="develop" scheme="https://pangz.fun/tags/develop/"/>
+    
+    <category term="software" scheme="https://pangz.fun/tags/software/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring Boot应用程序使用@valid来验证API请求</title>
@@ -502,31 +527,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入了解 Flutter 生命周期</title>
-    <link href="https://pangz.fun/Deep-Drive-into-Flutter-Lifecycle.html"/>
-    <id>https://pangz.fun/Deep-Drive-into-Flutter-Lifecycle.html</id>
-    <published>2022-03-26T01:07:22.000Z</published>
-    <updated>2022-03-26T01:50:51.876Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Deep-Drive-into-Flutter-Lifecycle/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在这篇文章中，我们将讨论flutter的生命周期，每个人都知道生命周期在我们生活中是一个非常重要的存在，对于编码来说也是如此。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="深入浅出系列" scheme="https://pangz.fun/categories/Flutter/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%B3%BB%E5%88%97/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Lifecycle" scheme="https://pangz.fun/tags/Lifecycle/"/>
     
   </entry>
   
