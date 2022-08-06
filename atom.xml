@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-08-02T23:41:34.513Z</updated>
+  <updated>2022-08-06T02:35:25.162Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何设计一个有吸引力的GitHub简介</title>
+    <link href="https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html"/>
+    <id>https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html</id>
+    <published>2022-08-05T23:47:45.000Z</published>
+    <updated>2022-08-06T02:35:25.162Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/How-to-Design-an-Attractive-GitHub-Profile-Readme/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;如何创建一个具有视觉吸引力的GitHub配置文件自述。你们都知道会有这样的效果吧？&lt;br&gt;你们中的一些人可能会想：”唉，太好了，又是一篇关于如何制作一个令人印象深刻的GitHub简介的博客😑”。&lt;br&gt;嗯……是的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="GitHub" scheme="https://pangz.fun/categories/GitHub/"/>
+    
+    <category term="Profile" scheme="https://pangz.fun/categories/GitHub/Profile/"/>
+    
+    
+    <category term="GitHub" scheme="https://pangz.fun/tags/GitHub/"/>
+    
+    <category term="Profile" scheme="https://pangz.fun/tags/Profile/"/>
+    
+  </entry>
   
   <entry>
     <title>在移动应用开发中有效地使用敏捷技术</title>
@@ -502,31 +527,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Function" scheme="https://pangz.fun/tags/Function/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我怎样才能开始进行Flutter测试？</title>
-    <link href="https://pangz.fun/How-can-I-start-with-Flutter-Testing.html"/>
-    <id>https://pangz.fun/How-can-I-start-with-Flutter-Testing.html</id>
-    <published>2022-03-27T08:03:26.000Z</published>
-    <updated>2022-03-27T10:48:07.923Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/How-can-I-start-with-Flutter-Testing/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;大家好! 👋&lt;br&gt;这些天我开始了我的Flutter测试之旅。这个世界对我来说是未知的，但我知道在我们的应用程序中进行测试是超级重要的，我决定自己学习。&lt;br&gt;也许我现在给你看的代码可以做得更好，但请记住，这是我第一次做flutter测试，我想向你展示我所做的，当然，如果你有任何建议，代码将是开源的。&lt;br&gt;我对这个资源库的想法是为每个对学习测试感兴趣的人提供一个地方，创建新的内容，PR，并一起合作。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="单元测试" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="CI/CD" scheme="https://pangz.fun/tags/CI-CD/"/>
     
   </entry>
   
