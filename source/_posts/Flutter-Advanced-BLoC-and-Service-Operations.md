@@ -14,7 +14,11 @@ tags:
 {% asset_img 1.png 示意图 width="400" %}
 
 Vexana是一个由 Veli Bacık 基于Dio库之上编写的。它对服务操作非常有用。
-与其他库不同，我们创建模型类的方法如下：
+与其他库不同。
+
+<!--more-->
+
+我们创建模型类的方法如下：
 
 ```dart
 import 'package:vexana/vexana.dart';
