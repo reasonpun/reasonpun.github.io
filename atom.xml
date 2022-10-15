@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-15T08:39:44.424Z</updated>
+  <updated>2022-10-15T11:16:09.492Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="https://pangz.fun/Email-Authentication-with-Flutter-Firebase.html"/>
     <id>https://pangz.fun/Email-Authentication-with-Flutter-Firebase.html</id>
     <published>2022-10-15T08:20:52.000Z</published>
-    <updated>2022-10-15T08:39:44.424Z</updated>
+    <updated>2022-10-15T11:16:09.492Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;认证是每个应用程序应该具备的基本功能之一。下面是如何使用Firebase Auth为您的Flutter应用添加认证的方法。&lt;/p&gt;
-&lt;img src=&quot;/Email-Authentication-with-Flutter-Firebase/1.png&quot; class=&quot;&quot;</summary>
-        
-      
+&lt;img src=&quot;/Email-Authentication-with-Flutter-Firebase/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;Firebase是Flutter应用程序的首选后端之一，因为它提供了许多免费的功能，以及与Flutter的良好整合。&lt;br&gt;Firebase提供的功能之一是认证。&lt;br&gt;因此，我们就可以在我们的应用程序中整合电子邮件、电话、谷歌、苹果和更多的认证。&lt;/p&gt;</summary>
     
     
     
@@ -49,17 +45,11 @@
     <link href="https://pangz.fun/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase.html"/>
     <id>https://pangz.fun/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase.html</id>
     <published>2022-10-15T07:50:53.000Z</published>
-    <updated>2022-10-15T08:39:48.275Z</updated>
+    <updated>2022-10-15T13:20:29.655Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;将flutter_bloc整合到现有的电子邮件认证中，该认证以前是用Firebase认证做的。&lt;/p&gt;
-&lt;img src=&quot;/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase/1.png&quot; class=&quot;&quot;</summary>
-        
-      
+&lt;img src=&quot;/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
     
     
     
