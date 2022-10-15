@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-08-06T02:35:25.162Z</updated>
+  <updated>2022-10-15T08:39:44.424Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -17,11 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用Flutter进行电子邮件认证 - Firebase</title>
+    <link href="https://pangz.fun/Email-Authentication-with-Flutter-Firebase.html"/>
+    <id>https://pangz.fun/Email-Authentication-with-Flutter-Firebase.html</id>
+    <published>2022-10-15T08:20:52.000Z</published>
+    <updated>2022-10-15T08:39:44.424Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;认证是每个应用程序应该具备的基本功能之一。下面是如何使用Firebase Auth为您的Flutter应用添加认证的方法。&lt;/p&gt;
+&lt;img src=&quot;/Email-Authentication-with-Flutter-Firebase/1.png&quot; class=&quot;&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
+    
+    <category term="认证" scheme="https://pangz.fun/tags/%E8%AE%A4%E8%AF%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Bloc进行电子邮件认证 - Flutter | Firebase</title>
+    <link href="https://pangz.fun/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase.html"/>
+    <id>https://pangz.fun/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase.html</id>
+    <published>2022-10-15T07:50:53.000Z</published>
+    <updated>2022-10-15T08:39:48.275Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;将flutter_bloc整合到现有的电子邮件认证中，该认证以前是用Firebase认证做的。&lt;/p&gt;
+&lt;img src=&quot;/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase/1.png&quot; class=&quot;&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
+    
+    <category term="Bloc" scheme="https://pangz.fun/tags/Bloc/"/>
+    
+    <category term="认证" scheme="https://pangz.fun/tags/%E8%AE%A4%E8%AF%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何设计一个有吸引力的GitHub简介</title>
     <link href="https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html"/>
     <id>https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html</id>
     <published>2022-08-05T23:47:45.000Z</published>
-    <updated>2022-08-06T02:35:25.162Z</updated>
+    <updated>2022-10-15T07:56:12.851Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/How-to-Design-an-Attractive-GitHub-Profile-Readme/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -31,8 +89,6 @@
     
     
     <category term="GitHub" scheme="https://pangz.fun/categories/GitHub/"/>
-    
-    <category term="Profile" scheme="https://pangz.fun/categories/GitHub/Profile/"/>
     
     
     <category term="GitHub" scheme="https://pangz.fun/tags/GitHub/"/>
@@ -46,7 +102,7 @@
     <link href="https://pangz.fun/Using-Agile-Effectively-In-Mobile-App-Development.html"/>
     <id>https://pangz.fun/Using-Agile-Effectively-In-Mobile-App-Development.html</id>
     <published>2022-08-02T23:33:11.000Z</published>
-    <updated>2022-08-02T23:41:34.513Z</updated>
+    <updated>2022-10-15T08:16:46.452Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Using-Agile-Effectively-In-Mobile-App-Development/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -55,14 +111,14 @@
     
     
     
-    <category term="develop" scheme="https://pangz.fun/categories/develop/"/>
-    
-    <category term="software" scheme="https://pangz.fun/categories/develop/software/"/>
+    <category term="敏捷开发" scheme="https://pangz.fun/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
     
     
     <category term="develop" scheme="https://pangz.fun/tags/develop/"/>
     
     <category term="software" scheme="https://pangz.fun/tags/software/"/>
+    
+    <category term="敏捷开发" scheme="https://pangz.fun/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -71,7 +127,7 @@
     <link href="https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html"/>
     <id>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</id>
     <published>2022-07-04T13:02:37.000Z</published>
-    <updated>2022-07-04T13:42:42.114Z</updated>
+    <updated>2022-10-15T08:15:55.071Z</updated>
     
     
     <summary type="html">&lt;p&gt;使用@valid可以使你的Request验证更容易。&lt;/p&gt;
@@ -82,8 +138,6 @@
     
     
     <category term="Spring" scheme="https://pangz.fun/categories/Spring/"/>
-    
-    <category term="API" scheme="https://pangz.fun/categories/Spring/API/"/>
     
     
     <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
@@ -97,7 +151,7 @@
     <link href="https://pangz.fun/5-flutter-tools-to-built-startup-fast.html"/>
     <id>https://pangz.fun/5-flutter-tools-to-built-startup-fast.html</id>
     <published>2022-06-29T02:25:16.000Z</published>
-    <updated>2022-06-29T02:53:30.301Z</updated>
+    <updated>2022-10-15T07:52:54.760Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/5-flutter-tools-to-built-startup-fast/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -107,8 +161,6 @@
     
     
     <category term="flutter" scheme="https://pangz.fun/categories/flutter/"/>
-    
-    <category term="startup" scheme="https://pangz.fun/categories/flutter/startup/"/>
     
     
     <category term="flutter" scheme="https://pangz.fun/tags/flutter/"/>
@@ -122,7 +174,7 @@
     <link href="https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html"/>
     <id>https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html</id>
     <published>2022-06-27T02:28:08.000Z</published>
-    <updated>2022-06-27T03:49:12.057Z</updated>
+    <updated>2022-10-15T08:16:08.600Z</updated>
     
     
     <summary type="html">&lt;p&gt;最常见但又被低估的做法之一是写代码而不实施测试，甚至大多数专业人士也是如此。&lt;br&gt;尽管一个明显的事实是，如果你理解了业务逻辑，你就可以直接深入到执行中去，但这并不意味着你遵循了被编程专家长期证明的最佳实践。&lt;br&gt;实现你的程序的最好方法之一是遵循TDD或测试驱动的开发。&lt;br&gt;在这篇文章中，我们将看看什么是TDD，以及如何使用TDD进行更好的编程。&lt;/p&gt;
@@ -133,10 +185,10 @@
     
     <category term="Java" scheme="https://pangz.fun/categories/Java/"/>
     
-    <category term="TDD" scheme="https://pangz.fun/categories/Java/TDD/"/>
     
+    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
     
-    <category term="SprJavaing" scheme="https://pangz.fun/tags/SprJavaing/"/>
+    <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
     
     <category term="TDD" scheme="https://pangz.fun/tags/TDD/"/>
     
@@ -147,7 +199,7 @@
     <link href="https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html"/>
     <id>https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html</id>
     <published>2022-06-14T11:46:18.000Z</published>
-    <updated>2022-06-14T12:23:53.858Z</updated>
+    <updated>2022-10-15T07:54:46.878Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -156,9 +208,7 @@
     
     
     
-    <category term="Spring" scheme="https://pangz.fun/categories/Spring/"/>
-    
-    <category term="Hibernate" scheme="https://pangz.fun/categories/Spring/Hibernate/"/>
+    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
     
     
     <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
@@ -174,7 +224,7 @@
     <link href="https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search.html"/>
     <id>https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search.html</id>
     <published>2022-06-14T11:42:55.000Z</published>
-    <updated>2022-06-14T12:25:51.320Z</updated>
+    <updated>2022-10-15T07:55:02.200Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -184,9 +234,7 @@
     
     
     
-    <category term="Spring" scheme="https://pangz.fun/categories/Spring/"/>
-    
-    <category term="Hibernate" scheme="https://pangz.fun/categories/Spring/Hibernate/"/>
+    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
     
     
     <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
@@ -202,7 +250,7 @@
     <link href="https://pangz.fun/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter.html"/>
     <id>https://pangz.fun/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter.html</id>
     <published>2022-06-06T08:46:05.000Z</published>
-    <updated>2022-06-06T13:41:49.821Z</updated>
+    <updated>2022-10-15T07:56:18.861Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -212,8 +260,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="Subscriptions" scheme="https://pangz.fun/categories/Flutter/Subscriptions/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -229,7 +275,7 @@
     <link href="https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html"/>
     <id>https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html</id>
     <published>2022-06-02T01:18:46.000Z</published>
-    <updated>2022-06-02T08:16:55.804Z</updated>
+    <updated>2022-10-15T08:15:45.081Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -239,8 +285,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="State" scheme="https://pangz.fun/categories/Flutter/State/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -256,7 +300,7 @@
     <link href="https://pangz.fun/How-to-manage-state-in-Flutter-with-Mobx.html"/>
     <id>https://pangz.fun/How-to-manage-state-in-Flutter-with-Mobx.html</id>
     <published>2022-05-25T12:15:02.000Z</published>
-    <updated>2022-05-25T12:32:35.581Z</updated>
+    <updated>2022-10-15T07:56:22.785Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/How-to-manage-state-in-Flutter-with-Mobx/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -266,8 +310,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="Mobx" scheme="https://pangz.fun/categories/Flutter/Mobx/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -281,7 +323,7 @@
     <link href="https://pangz.fun/How-To-Manage-State-in-Flutter-With-Provider.html"/>
     <id>https://pangz.fun/How-To-Manage-State-in-Flutter-With-Provider.html</id>
     <published>2022-05-25T10:52:50.000Z</published>
-    <updated>2022-05-25T12:31:24.728Z</updated>
+    <updated>2022-10-15T07:56:28.805Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/How-To-Manage-State-in-Flutter-With-Provider/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -291,8 +333,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="Provider" scheme="https://pangz.fun/categories/Flutter/Provider/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -306,7 +346,7 @@
     <link href="https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html"/>
     <id>https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html</id>
     <published>2022-05-25T10:49:32.000Z</published>
-    <updated>2022-05-25T12:31:19.421Z</updated>
+    <updated>2022-10-15T08:15:52.011Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Should-You-Use-BLoC-to-Manage-State-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -317,8 +357,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="BLoC" scheme="https://pangz.fun/categories/Flutter/BLoC/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -332,7 +370,7 @@
     <link href="https://pangz.fun/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html"/>
     <id>https://pangz.fun/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html</id>
     <published>2022-05-24T00:47:43.000Z</published>
-    <updated>2022-05-24T12:17:43.109Z</updated>
+    <updated>2022-10-15T07:52:36.508Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -342,8 +380,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="hack" scheme="https://pangz.fun/categories/Flutter/hack/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -357,7 +393,7 @@
     <link href="https://pangz.fun/permission-handler-9-2-0.html"/>
     <id>https://pangz.fun/permission-handler-9-2-0.html</id>
     <published>2022-05-20T02:00:30.000Z</published>
-    <updated>2022-05-23T13:23:02.862Z</updated>
+    <updated>2022-10-15T08:15:25.554Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -369,8 +405,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="Permissions" scheme="https://pangz.fun/categories/Flutter/Permissions/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -384,7 +418,7 @@
     <link href="https://pangz.fun/Request-Permissions-in-Flutter-as-a-Consumable-Service.html"/>
     <id>https://pangz.fun/Request-Permissions-in-Flutter-as-a-Consumable-Service.html</id>
     <published>2022-05-17T00:23:17.000Z</published>
-    <updated>2022-05-17T01:01:44.683Z</updated>
+    <updated>2022-10-15T08:15:40.997Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Request-Permissions-in-Flutter-as-a-Consumable-Service/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -394,8 +428,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="Permissions" scheme="https://pangz.fun/categories/Flutter/Permissions/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -409,7 +441,7 @@
     <link href="https://pangz.fun/Wooden-Cassette-Table-for-the-Living-Room.html"/>
     <id>https://pangz.fun/Wooden-Cassette-Table-for-the-Living-Room.html</id>
     <published>2022-05-05T00:54:56.000Z</published>
-    <updated>2022-05-05T01:55:00.343Z</updated>
+    <updated>2022-10-15T08:17:02.466Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Wooden-Cassette-Table-for-the-Living-Room/1.jpg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -420,12 +452,12 @@
     
     <category term="手工" scheme="https://pangz.fun/categories/%E6%89%8B%E5%B7%A5/"/>
     
-    <category term="handwork" scheme="https://pangz.fun/categories/%E6%89%8B%E5%B7%A5/handwork/"/>
-    
     
     <category term="手工" scheme="https://pangz.fun/tags/%E6%89%8B%E5%B7%A5/"/>
     
     <category term="乌七八糟" scheme="https://pangz.fun/tags/%E4%B9%8C%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    <category term="handwork" scheme="https://pangz.fun/tags/handwork/"/>
     
   </entry>
   
@@ -434,7 +466,7 @@
     <link href="https://pangz.fun/Camera-Plugin-with-Image-Cropper-In-Flutter.html"/>
     <id>https://pangz.fun/Camera-Plugin-with-Image-Cropper-In-Flutter.html</id>
     <published>2022-05-03T09:28:47.000Z</published>
-    <updated>2022-05-05T15:15:41.546Z</updated>
+    <updated>2022-10-15T07:55:07.724Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/Camera-Plugin-with-Image-Cropper-In-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
@@ -444,8 +476,6 @@
     
     
     <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="image" scheme="https://pangz.fun/categories/Flutter/image/"/>
     
     
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
@@ -477,56 +507,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Bottom Sheet" scheme="https://pangz.fun/tags/Bottom-Sheet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web3是自我认证的</title>
-    <link href="https://pangz.fun/Web3-is-Self-Certifying.html"/>
-    <id>https://pangz.fun/Web3-is-Self-Certifying.html</id>
-    <published>2022-04-19T08:05:32.000Z</published>
-    <updated>2022-05-04T09:12:49.421Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Web3-is-Self-Certifying/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;最近有很多关于Web3是什么和不是什么的讨论。&lt;br&gt;以下是我的定义:&lt;br&gt;Web3是用户生成的权威，由自我认证的网络协议实现。&lt;br&gt;这些是包括区块链在内的技术的超集，但不限于此。这就是其他人认为的 “Web3”吗？也许不是，但听我说完。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web3" scheme="https://pangz.fun/categories/Web3/"/>
-    
-    <category term="Certifying" scheme="https://pangz.fun/categories/Web3/Certifying/"/>
-    
-    
-    <category term="Web3" scheme="https://pangz.fun/tags/Web3/"/>
-    
-    <category term="Certifying" scheme="https://pangz.fun/tags/Certifying/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浅析setState()</title>
-    <link href="https://pangz.fun/Breakdown-setState-signature.html"/>
-    <id>https://pangz.fun/Breakdown-setState-signature.html</id>
-    <published>2022-04-01T01:00:24.000Z</published>
-    <updated>2022-04-01T06:38:22.528Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Breakdown-setState-signature/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;大多数时候，初学者在编写setState()方法时都会感到困惑。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Function" scheme="https://pangz.fun/categories/Function/"/>
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Function/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Function" scheme="https://pangz.fun/tags/Function/"/>
     
   </entry>
   
