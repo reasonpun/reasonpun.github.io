@@ -170,7 +170,7 @@
     <link href="https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html"/>
     <id>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</id>
     <published>2022-07-04T13:02:37.000Z</published>
-    <updated>2022-10-15T08:15:55.071Z</updated>
+    <updated>2022-10-15T13:26:19.690Z</updated>
     
     
     <summary type="html">&lt;p&gt;使用@valid可以使你的Request验证更容易。&lt;/p&gt;
@@ -180,7 +180,7 @@
     
     
     
-    <category term="Spring" scheme="https://pangz.fun/categories/Spring/"/>
+    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
     
     
     <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>

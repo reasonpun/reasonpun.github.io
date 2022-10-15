@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://pangz.fun/Stunning-Ticket-Widget-For-Flutter.html</loc>
     
     <lastmod>2022-10-15</lastmod>
@@ -84,15 +93,6 @@
   
   <url>
     <loc>https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html</loc>
-    
-    <lastmod>2022-10-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</loc>
     
     <lastmod>2022-10-15</lastmod>
     
@@ -1265,13 +1265,6 @@
   
   <url>
     <loc>https://pangz.fun/categories/Flutter/BLoC/</loc>
-    <lastmod>2022-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://pangz.fun/categories/Spring/</loc>
     <lastmod>2022-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
