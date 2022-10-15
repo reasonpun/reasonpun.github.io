@@ -2,7 +2,7 @@
 title: PHP核心技术的面试题
 date: 2022-03-17 21:04:12
 categories:
-- 面试准备
+- PHP
 tags:
 - PHP
 - 面试

@@ -2,7 +2,6 @@
 title: Flutter & Flame — 第 1 步：创建您的游戏
 date: 2022-03-24 19:22:47
 categories:
-- 深入浅出系列
 - Flutter
 tags:
 - Flutter

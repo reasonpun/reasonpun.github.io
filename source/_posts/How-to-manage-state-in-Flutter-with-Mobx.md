@@ -3,7 +3,6 @@ title: 如何用Mobx在Flutter中管理状态
 date: 2022-05-25 20:15:02
 categories:
 - Flutter
-- Mobx
 tags:
 - Flutter
 - Mobx
