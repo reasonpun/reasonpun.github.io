@@ -65,6 +65,59 @@
   </entry>
   
   <entry>
+    <title>用于Flutter的令人惊叹的票务小工具</title>
+    <link href="https://pangz.fun/Stunning-Ticket-Widget-For-Flutter.html"/>
+    <id>https://pangz.fun/Stunning-Ticket-Widget-For-Flutter.html</id>
+    <published>2022-09-23T08:16:19.000Z</published>
+    <updated>2022-10-15T13:21:13.151Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Stunning-Ticket-Widget-For-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在您的flutter应用程序中添加漂亮的Ticket UI。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="Widget" scheme="https://pangz.fun/categories/Flutter/Widget/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Widget" scheme="https://pangz.fun/tags/Widget/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter高级BLoC和服务操作</title>
+    <link href="https://pangz.fun/Flutter-Advanced-BLoC-and-Service-Operations.html"/>
+    <id>https://pangz.fun/Flutter-Advanced-BLoC-and-Service-Operations.html</id>
+    <published>2022-09-22T02:27:24.000Z</published>
+    <updated>2022-10-15T13:21:13.148Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在这篇文章中，我将解释Bloc和Vexana库的使用，它是一个状态管理解决方案，处于高级水平。我在这个项目中也使用了Provider。我将在下一篇文章中对此进行解释。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/Flutter-Advanced-BLoC-and-Service-Operations/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;Vexana是一个由 Veli Bacık 基于Dio库之上编写的。它对服务操作非常有用。&lt;br&gt;与其他库不同。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="BLoC" scheme="https://pangz.fun/categories/Flutter/BLoC/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="BLoC" scheme="https://pangz.fun/tags/BLoC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何设计一个有吸引力的GitHub简介</title>
     <link href="https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html"/>
     <id>https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html</id>
@@ -448,55 +501,6 @@
     <category term="乌七八糟" scheme="https://pangz.fun/tags/%E4%B9%8C%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     <category term="handwork" scheme="https://pangz.fun/tags/handwork/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter中带有图像剪裁器的相机插件</title>
-    <link href="https://pangz.fun/Camera-Plugin-with-Image-Cropper-In-Flutter.html"/>
-    <id>https://pangz.fun/Camera-Plugin-with-Image-Cropper-In-Flutter.html</id>
-    <published>2022-05-03T09:28:47.000Z</published>
-    <updated>2022-10-15T07:55:07.724Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Camera-Plugin-with-Image-Cropper-In-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在不同的应用程序中使用摄像头是很正常的。&lt;br&gt;但在实现它时，你可能会面临各种问题：&lt;br&gt;例如，如果你在一个电子商务的应用程序中，需要管理不同的东西，需要选择不同的项目，也需要用图片发布我们的回应，那时我们就需要编写一个单一的代码库，从那里我们可以在整个应用程序的不同位置管理摄像头。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="图像剪裁器" scheme="https://pangz.fun/tags/%E5%9B%BE%E5%83%8F%E5%89%AA%E8%A3%81%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter中如何使用Bottom Sheet</title>
-    <link href="https://pangz.fun/Modal-Bottom-Sheet-In-Flutter.html"/>
-    <id>https://pangz.fun/Modal-Bottom-Sheet-In-Flutter.html</id>
-    <published>2022-05-01T10:19:32.000Z</published>
-    <updated>2022-05-04T09:12:49.414Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;这是菜单或对话框的替代品，并阻止用户与应用程序的其他部分进行互动&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;img src=&quot;/Modal-Bottom-Sheet-In-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在这篇博客中，我们将探讨Flutter中的Modal Bottom Sheet Widget。&lt;br&gt;我们还将实现一个模态底部工作表小部件的演示，并描述它的属性，以及如何在您的flutter应用程序中使用它们。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Bottom Sheet" scheme="https://pangz.fun/tags/Bottom-Sheet/"/>
     
   </entry>
   

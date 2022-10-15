@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pangz.fun/Stunning-Ticket-Widget-For-Flutter.html</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/Flutter-Advanced-BLoC-and-Service-Operations.html</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://pangz.fun/Email-Authentication-with-Bloc-%E2%80%94-Flutter-Firebase.html</loc>
     
     <lastmod>2022-10-15</lastmod>
@@ -1201,6 +1219,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://pangz.fun/tags/Widget/</loc>
+    <lastmod>2022-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1233,6 +1258,13 @@
   
   <url>
     <loc>https://pangz.fun/categories/%E6%89%8B%E5%B7%A5/</loc>
+    <lastmod>2022-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/categories/Flutter/BLoC/</loc>
     <lastmod>2022-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1289,6 +1321,13 @@
   
   <url>
     <loc>https://pangz.fun/categories/iOS/</loc>
+    <lastmod>2022-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pangz.fun/categories/Flutter/Widget/</loc>
     <lastmod>2022-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
