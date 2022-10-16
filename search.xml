@@ -100,8 +100,6 @@
           
           <category> Flutter </category>
           
-          <category> BLoC </category>
-          
       </categories>
       
       
@@ -210,14 +208,14 @@
       
       <categories>
           
-          <category> flutter </category>
+          <category> Flutter </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> flutter </tag>
+            <tag> Flutter </tag>
             
             <tag> startup </tag>
             
