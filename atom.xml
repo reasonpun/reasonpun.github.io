@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-16T01:32:38.427Z</updated>
+  <updated>2022-10-16T23:37:56.181Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Flutter中使用GitHub Actions</title>
+    <link href="https://pangz.fun/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course.html"/>
+    <id>https://pangz.fun/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course.html</id>
+    <published>2022-10-16T23:20:19.000Z</published>
+    <updated>2022-10-16T23:37:56.181Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;自动化是我们作为开发者可以拥有的最好的东西之一。&lt;br&gt;这就是为什么当一个新的拉动请求被创建时，自动测试或构建是非常重要的，这样我们就不需要手动操作了。&lt;br&gt;今天我将向你展示如何使用GitHub Actions和Flutter来创建一个完整的持续集成流程。&lt;br&gt;让我们开始吧!&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    <category term="GitHub" scheme="https://pangz.fun/categories/Flutter/GitHub/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="GitHub" scheme="https://pangz.fun/tags/GitHub/"/>
+    
+  </entry>
   
   <entry>
     <title>你应该在你的下一个项目中使用7个有用的Python库</title>
@@ -463,29 +488,6 @@
 &lt;/blockquote&gt;
 &lt;p&gt;在大多数操作系统中，权限并不是在安装时授予应用程序的。相反，开发者必须在应用运行时向用户请求权限。&lt;/p&gt;
 &lt;p&gt;这个插件提供了一个跨平台（iOS、Android）的API来请求权限并检查其状态。你也可以打开设备的应用设置，这样用户就可以授予一个权限。&lt;br&gt;在Android上，你可以显示请求权限的理由。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Permissions" scheme="https://pangz.fun/tags/Permissions/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter中的请求权限服务的实现</title>
-    <link href="https://pangz.fun/Request-Permissions-in-Flutter-as-a-Consumable-Service.html"/>
-    <id>https://pangz.fun/Request-Permissions-in-Flutter-as-a-Consumable-Service.html</id>
-    <published>2022-05-17T00:23:17.000Z</published>
-    <updated>2022-10-15T08:15:40.997Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Request-Permissions-in-Flutter-as-a-Consumable-Service/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;当你想在用户使用过程中获取很多很多权限的时候，请求权限通常会成为一个混乱的任务。&lt;br&gt;为了开始清理所有的权限代码，我们将把它包装在一个带有专门权限请求功能的服务中。&lt;/p&gt;</summary>
     
     
     
