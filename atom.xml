@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-15T11:16:09.492Z</updated>
+  <updated>2022-10-16T01:32:38.427Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你应该在你的下一个项目中使用7个有用的Python库</title>
+    <link href="https://pangz.fun/7-Useful-Python-Libraries-You-Should-Use-in-Your-Next-Project.html"/>
+    <id>https://pangz.fun/7-Useful-Python-Libraries-You-Should-Use-in-Your-Next-Project.html</id>
+    <published>2022-10-16T01:17:41.000Z</published>
+    <updated>2022-10-16T01:32:38.427Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/7-Useful-Python-Libraries-You-Should-Use-in-Your-Next-Project/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;有一句谚语：”你不必重新发明车轮”。&lt;br&gt;库就是最好的例子，它可以帮助你以一种简单的方式编写复杂而耗时的功能。、据我所知，一个好的项目会使用一些最好的库。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://pangz.fun/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://pangz.fun/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>用Flutter进行电子邮件认证 - Firebase</title>
@@ -474,31 +495,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Permissions" scheme="https://pangz.fun/tags/Permissions/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>客厅的木制卡座桌</title>
-    <link href="https://pangz.fun/Wooden-Cassette-Table-for-the-Living-Room.html"/>
-    <id>https://pangz.fun/Wooden-Cassette-Table-for-the-Living-Room.html</id>
-    <published>2022-05-05T00:54:56.000Z</published>
-    <updated>2022-10-15T08:17:02.466Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Wooden-Cassette-Table-for-the-Living-Room/1.jpg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;当我搬进我的公寓时，我成为了一个伟大的完全磨损的宜家桌子的主人。&lt;br&gt;带着沉重的心情，我不得不去寻找一张新桌子。&lt;br&gt;不幸的是，没有一张桌子能满足我对设计和价格的期望。&lt;br&gt;因此，我制定了一个计划来创造我自己的新桌子。&lt;br&gt;我画了几张图纸，开始了建造…&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="手工" scheme="https://pangz.fun/categories/%E6%89%8B%E5%B7%A5/"/>
-    
-    
-    <category term="手工" scheme="https://pangz.fun/tags/%E6%89%8B%E5%B7%A5/"/>
-    
-    <category term="乌七八糟" scheme="https://pangz.fun/tags/%E4%B9%8C%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-    
-    <category term="handwork" scheme="https://pangz.fun/tags/handwork/"/>
     
   </entry>
   
