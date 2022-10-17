@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-16T23:37:56.181Z</updated>
+  <updated>2022-10-17T23:42:38.683Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>7个最佳Python工具让你的生活更轻松</title>
+    <link href="https://pangz.fun/7-Best-Python-Tools-To-Make-Your-Life-Easier.html"/>
+    <id>https://pangz.fun/7-Best-Python-Tools-To-Make-Your-Life-Easier.html</id>
+    <published>2022-10-17T23:31:59.000Z</published>
+    <updated>2022-10-17T23:42:38.683Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/7-Best-Python-Tools-To-Make-Your-Life-Easier/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;有一句谚语 “你不必重新发明车轮”。&lt;br&gt;工具就是最好的例子。它可以帮助你以一种简单的方式实现复杂和耗时的功能。&lt;br&gt;据我所知，为了提高生产力和效率，我们需要使用一些最好的工具。&lt;br&gt;在这里，有7个工具，它们将帮助你完成你的开发之旅。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://pangz.fun/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://pangz.fun/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>在Flutter中使用GitHub Actions</title>
@@ -472,31 +493,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="hack" scheme="https://pangz.fun/tags/hack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter控件 ： permission_handler v9.2.0</title>
-    <link href="https://pangz.fun/permission-handler-9-2-0.html"/>
-    <id>https://pangz.fun/permission-handler-9-2-0.html</id>
-    <published>2022-05-20T02:00:30.000Z</published>
-    <updated>2022-10-15T08:15:25.554Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;用于 Flutter 的权限插件。这个插件提供了一个跨平台（iOS，Android）的API来请求和检查权限。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在大多数操作系统中，权限并不是在安装时授予应用程序的。相反，开发者必须在应用运行时向用户请求权限。&lt;/p&gt;
-&lt;p&gt;这个插件提供了一个跨平台（iOS、Android）的API来请求权限并检查其状态。你也可以打开设备的应用设置，这样用户就可以授予一个权限。&lt;br&gt;在Android上，你可以显示请求权限的理由。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Permissions" scheme="https://pangz.fun/tags/Permissions/"/>
     
   </entry>
   

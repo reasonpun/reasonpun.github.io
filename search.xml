@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>7个最佳Python工具让你的生活更轻松</title>
+      <link href="/7-Best-Python-Tools-To-Make-Your-Life-Easier.html"/>
+      <url>/7-Best-Python-Tools-To-Make-Your-Life-Easier.html</url>
+      
+        <content type="html"><![CDATA[<img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/1.jpeg" class="" title="示意图 width=400"><p>有一句谚语 “你不必重新发明车轮”。<br>工具就是最好的例子。它可以帮助你以一种简单的方式实现复杂和耗时的功能。<br>据我所知，为了提高生产力和效率，我们需要使用一些最好的工具。<br>在这里，有7个工具，它们将帮助你完成你的开发之旅。</p><span id="more"></span><h4 id="1-thefuck"><a href="#1-thefuck" class="headerlink" title="1. thefuck"></a>1. <a href="https://github.com/nvbn/thefuck">thefuck</a></h4><img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/2.gif" class="" title="示意图 width=400"><p>这是我目前正在使用的一个。<br>我认为用命令行工作会使你的工作效率更高。这是一个宏伟的应用程序，可以纠正你之前的控制台命令。<br>它试图用一条规则来匹配之前的命令。<br>如果发现匹配，就会使用匹配的规则创建一个新的命令并执行。<br>它也是在GitHub上拥有超过73000颗星的最多星级存储库之一。</p><h4 id="2-py-spy"><a href="#2-py-spy" class="headerlink" title="2. py-spy"></a>2. <a href="https://github.com/benfred/py-spy">py-spy</a></h4><img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/3.jpeg" class="" title="示意图 width=400"><p>了解我们的程序在哪里花费时间是开发者的重要任务之一。<br>这个库可以让你直观地看到你的Python程序在什么地方花费时间，而不需要重新启动程序或以任何方式修改代码。<br>为了提高速度，它是用Rust编写的，并且不会与被剖析的Python程序在同一进程中运行。这意味着这个库可以安全地针对生产的Python代码使用。<br>这个库在GitHub上有超过9k颗星。</p><h4 id="3-httpie"><a href="#3-httpie" class="headerlink" title="3. httpie"></a>3. <a href="https://github.com/httpie/httpie">httpie</a></h4><img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/4.gif" class="" title="示意图 width=400"><p>这是一个命令行HTTP客户端。<br>它的目标是使CLI与Web服务的交互尽可能的人性化。<br>它被设计用于测试、调试以及与API和HTTP服务器进行一般的交互。http &amp; https命令允许创建和发送任意的HTTP请求。<br>它在GitHub上有超过24k颗星。</p><h4 id="4-poetry"><a href="#4-poetry" class="headerlink" title="4. poetry"></a>4. <a href="https://github.com/python-poetry/poetry">poetry</a></h4><img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/5.gif" class="" title="示意图 width=400"><p>作为一个开发者，我想你已经知道管理依赖性有时会很费时或复杂。<br>这可以帮助你声明、管理和安装项目的依赖性，确保你在任何地方都有正确的堆栈。<br>它用一个简单的基于pyproject.toml的项目格式取代了setup.py、requirements.txt、setup.cfg、MANIFEST.in和Pipfile。<br>它在GitHub上有超过22000颗星。</p><h4 id="5-you-get"><a href="#5-you-get" class="headerlink" title="5. you-get"></a>5. <a href="https://github.com/soimort/you-get">you-get</a></h4><img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/6.png" class="" title="示意图 width=400"><p>如果你喜欢互联网上的东西，只是想下载它们供自己享用，那么这就是你需要的工具。<br>这是一个很小的命令行工具，用于从网络上下载媒体内容（视频、音频、图片），以防没有其他方便的方法来做。<br>它在GitHub上有超过45.5万颗星。<br>你可以用这个命令安装它 <code>$ pip3 install you-get</code></p><h4 id="6-pyarmor"><a href="#6-pyarmor" class="headerlink" title="6. pyarmor"></a>6. <a href="https://github.com/dashingsoft/pyarmor">pyarmor</a></h4><img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/7.png" class="" title="示意图 width=400"><p>混淆是保护你的代码的最好方法之一。<br>这个库是一个命令行工具，用来混淆Python脚本，将被混淆的脚本绑定到固定的机器上，或者使被混淆的脚本失效。<br>被混淆的脚本是一个普通的python脚本。<br>通过一个额外的扩展模块pytransform，普通的Python脚本可以被混淆的脚本无缝替换。<br>这个库在Github上有超过1.8k颗星。</p><h4 id="7-black"><a href="#7-black" class="headerlink" title="7. black"></a>7. <a href="https://github.com/psf/black">black</a></h4><img src="/7-Best-Python-Tools-To-Make-Your-Life-Easier/8.png" class="" title="示意图 width=400"><p>我相信代码格式化是每个开发人员最常用的工具之一。<br>因为代码格式化器总是为更重要的事情节省时间和精神能量。<br>正如你所猜测的，这个库将帮助你进行Python代码格式化。它为你提供了速度、确定性和摆脱 pycodestyle 对格式化的唠叨的自由。<br>它在GitHub上有超过29k颗星。</p><p>今天就讲到这里。我相信这些库会在你的开发旅程中帮助你很多。</p><!-- https://medium.com/geekculture/7-best-python-tools-to-make-your-life-easier-6fc79c1a65e7 -->]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在Flutter中使用GitHub Actions</title>
       <link href="/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course.html"/>
       <url>/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course.html</url>
