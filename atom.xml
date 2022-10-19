@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-17T23:42:38.683Z</updated>
+  <updated>2022-10-19T07:39:33.703Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Flutter使用NFC</title>
+    <link href="https://pangz.fun/NFC-with-Flutter.html"/>
+    <id>https://pangz.fun/NFC-with-Flutter.html</id>
+    <published>2022-10-19T00:21:06.000Z</published>
+    <updated>2022-10-19T07:39:33.703Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/NFC-with-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+&lt;p&gt;近场通信技术有各种各样的用例，让我们看看我们如何在跨平台的Flutter应用程序中使用它。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="NFC" scheme="https://pangz.fun/tags/NFC/"/>
+    
+  </entry>
   
   <entry>
     <title>7个最佳Python工具让你的生活更轻松</title>
@@ -470,29 +492,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="BLoC" scheme="https://pangz.fun/tags/BLoC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>现在就开始提升你的Flutter生产力吧!</title>
-    <link href="https://pangz.fun/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html"/>
-    <id>https://pangz.fun/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away.html</id>
-    <published>2022-05-24T00:47:43.000Z</published>
-    <updated>2022-10-15T07:52:36.508Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/3-Tips-to-hack-your-Flutter-productivity-that-you-can-use-right-away/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;今天，我将向您介绍3个技巧，这些技巧将使您的Flutter开发更上一层楼&lt;br&gt;如果您喜欢这个内容，请给点个赞呗！&lt;br&gt;让我们马上开始吧!&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="hack" scheme="https://pangz.fun/tags/hack/"/>
     
   </entry>
   
