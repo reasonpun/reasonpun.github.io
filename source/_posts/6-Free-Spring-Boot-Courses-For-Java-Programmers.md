@@ -24,7 +24,7 @@ tags:
 ### 面向Java程序员的免费Spring Boot课程
 请记住，这些免费的Spring Boot课程将来可能又会变成付费课程，所以把它们放在你的清单上，避免以后再付费。不多说了，我们开始吧!
 
-#### 1. [Spring Boot Restful Web Services Tutorial](https://click.linksynergy.com/deeplink?id=0F1O0otUXQc&mid=39197&u1=csMedium&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fspring-boot-restful-web-services-tutorial-free-course%2F) — [Udemy]
+#### 1. [Spring Boot Restful Web Services Tutorial](https://www.udemy.com/course/spring-boot-restful-web-services-tutorial-free-course/) — [Udemy]
 
 {% asset_img 2.jpeg 示意图 width="400" %}
 
@@ -42,7 +42,7 @@ Spring Boot允许开发人员快速、轻松地创建基于Spring的应用程序
 
 这是Udemy上的一门免费Spring Boot课程，在5门课程中获得了4.4分，长度为1小时51分钟。另外，请记住，由于这是一个免费的Udemy课程，你在完成后不会得到一个证书。
 
-#### 2. [Building Scalable Java Microservices with Spring Boot and Spring Cloud](https://coursera.pxf.io/c/1137078/1213622/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fgoogle-cloud-java-spring&subId1=csMedium) — [Coursera]
+#### 2. [Building Scalable Java Microservices with Spring Boot and Spring Cloud](https://www.coursera.org/learn/google-cloud-java-spring) — [Coursera]
 微服务是松散耦合的服务，形成一种软件设计模式。
 它们是细粒度的，可以独立地进行扩展和维护。由于强调弹性扩展和按需资源，微服务是公共云环境的理想选择。
 本课程教您如何使用Spring Boot和Spring Cloud在谷歌云上开发Java应用程序。
@@ -60,7 +60,7 @@ Spring Boot允许开发人员快速、轻松地创建基于Spring的应用程序
 
 这是Coursera上的一门免费的Spring boot课程，在5门课程中获得了4.3分，学时为13小时。由于这是一门免费的Coursera课程，你在完成后会收到一份证书。
 
-#### 3. [Introduction to Spring Boot 2 and Spring Framework 5](https://click.linksynergy.com/deeplink?id=0F1O0otUXQc&mid=39197&u1=csMedium&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-spring-boot-2-and-spring-framework-5%2F) — [Udemy]
+#### 3. [Introduction to Spring Boot 2 and Spring Framework 5](https://www.udemy.com/course/introduction-to-spring-boot-2-and-spring-framework-5/) — [Udemy]
 
 {% asset_img 3.jpeg 示意图 width="400" %}
 
@@ -80,7 +80,7 @@ Spring Boot允许开发人员快速、轻松地创建基于Spring的应用程序
 
 这是Udemy的一门免费的Spring boot课程，课程评分为4.4（满分5分），时长2小时18分钟。另外，请记住，由于这是一个免费的Udemy课程，你在完成后不会得到一个证书。
 
-#### 4. [Spring MVC, Spring Boot, and Rest Controllers](https://coursera.pxf.io/c/1137078/1213622/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fspring-mvc-rest-controller&subId1=csMedium) — [Coursera]
+#### 4. [Spring MVC, Spring Boot, and Rest Controllers](https://www.coursera.org/learn/spring-mvc-rest-controller) — [Coursera]
 
 希望使用著名的Spring MVC和Spring Boot框架开发基于Java的Web应用和Restful Micro Services的学生将从本课程中受益。
 作为课程的一部分，学生将使用各种URL模板创建服务，使用json或XML有效载荷进行消费和响应，并创建自定义HTTP头。
@@ -98,7 +98,7 @@ Spring Boot允许开发人员快速、轻松地创建基于Spring的应用程序
 这是Coursera上的一门免费的Spring boot课程，课程评分为4.3分，时长为12小时。
 由于这是一门免费的Coursera课程，你在完成后会收到一份证书。
 
-#### 5. [Spring Framework And Dependency Injection For Beginners](https://click.linksynergy.com/deeplink?id=0F1O0otUXQc&mid=39197&u1=csMedium&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fspring-framework-video-tutorial%2F) — [Udemy]
+#### 5. [Spring Framework And Dependency Injection For Beginners](https://www.udemy.com/course/spring-framework-video-tutorial/) — [Udemy]
 
 本课程非常适合那些刚接触Spring框架或Spring但过去从未配置过Java的初学者。
 一个真实世界的开发者只需要知道Spring框架的依赖注入框架的几个关键特性。
