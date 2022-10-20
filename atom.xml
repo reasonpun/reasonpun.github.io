@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-19T07:39:33.703Z</updated>
+  <updated>2022-10-20T14:28:47.577Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>6个针对Java程序员的免费Spring Boot课程</title>
+    <link href="https://pangz.fun/6-Free-Spring-Boot-Courses-For-Java-Programmers.html"/>
+    <id>https://pangz.fun/6-Free-Spring-Boot-Courses-For-Java-Programmers.html</id>
+    <published>2022-10-20T14:14:58.000Z</published>
+    <updated>2022-10-20T14:28:47.577Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这些免费课程将教会你关于流行的Java框架Spring Boot的一切知识。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/6-Free-Spring-Boot-Courses-For-Java-Programmers/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;在过去十年中，Spring已经成为Java开发者最受欢迎的框架之一。&lt;br&gt;同样，Spring Boot是Spring框架的一个轻量级版本，用于微服务。&lt;br&gt;它不仅仅是一个框架，而是一个拥有许多集成工具的平台，支持多种行业用例，如Spring Batch和Spring Integration。它是一个直观的、易于配置的下一代框架。&lt;/p&gt;
+&lt;p&gt;因此，我在这里分享一些最有用的免费Spring boot课程。如果你对支付Spring Boot教程不感兴趣，这篇文章将帮助你学习它。所以，不再多说，让我们开始吧!&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
+    
+    
+    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
+    
+    <category term="SpringBoot" scheme="https://pangz.fun/tags/SpringBoot/"/>
+    
+    <category term="Courses" scheme="https://pangz.fun/tags/Courses/"/>
+    
+  </entry>
   
   <entry>
     <title>在Flutter使用NFC</title>
@@ -468,30 +497,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Provider" scheme="https://pangz.fun/tags/Provider/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你应该使用BLoC来管理Flutter中的状态吗？</title>
-    <link href="https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html"/>
-    <id>https://pangz.fun/Should-You-Use-BLoC-to-Manage-State-in-Flutter.html</id>
-    <published>2022-05-25T10:49:32.000Z</published>
-    <updated>2022-10-15T08:15:52.011Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Should-You-Use-BLoC-to-Manage-State-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;我将对Flutter中最广泛使用的状态管理器进行并列比较。&lt;/p&gt;
-&lt;p&gt;现在有很多工具，但往往缺乏对它们的明确比较。这是一个遗憾，因为选择了错误的状态管理器，当你开始构建时就不容易挽回了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="BLoC" scheme="https://pangz.fun/tags/BLoC/"/>
     
   </entry>
   
