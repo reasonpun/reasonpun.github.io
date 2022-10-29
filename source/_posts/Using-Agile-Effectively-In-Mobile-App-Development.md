@@ -2,11 +2,11 @@
 title: 在移动应用开发中有效地使用敏捷技术
 date: 2022-08-03 07:33:11
 categories:
-- develop
-- software
+- 敏捷开发
 tags:
 - develop
 - software
+- 敏捷开发
 ---
 
 {% asset_img 1.png 示意图 width="400" %}

@@ -3,7 +3,6 @@ title: 如何设计一个有吸引力的GitHub简介
 date: 2022-08-06 07:47:45
 categories:
 - GitHub
-- Profile
 tags:
 - GitHub
 - Profile

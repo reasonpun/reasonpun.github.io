@@ -2,8 +2,7 @@
 title: 使用Hibernate搜索构建带有全文搜索的Spring Boot REST API
 date: 2022-06-14 19:46:18
 categories:
-- Spring
-- Hibernate
+- SpringBoot
 tags:
 - Spring
 - Hibernate

@@ -2,8 +2,7 @@
 title: 使用Hibernate建立一个带有分页的全文搜索的Spring Boot REST API
 date: 2022-06-14 19:42:55
 categories:
-- Spring
-- Hibernate
+- SpringBoot
 tags:
 - Spring
 - Hibernate

@@ -2,11 +2,11 @@
 title: 在Flutter中集成Flutterwave
 date: 2022-03-24 10:07:47
 categories:
-- Payment
 - Flutter
 tags:
 - Flutter
 - Flutterwave
+- Payment
 ---
 
 {% asset_img 0.png 示意图 width="400" %}

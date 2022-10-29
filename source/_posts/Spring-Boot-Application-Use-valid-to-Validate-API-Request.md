@@ -2,8 +2,7 @@
 title: Spring Boot应用程序使用@valid来验证API请求
 date: 2022-07-04 21:02:37
 categories:
-- Spring
-- API
+- SpringBoot
 tags:
 - Spring
 - API

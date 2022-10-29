@@ -2,7 +2,6 @@
 title: 如何使用 Codemagic CI/CD 运行 Flutter Golden（快照）测试
 date: 2022-03-18 20:29:02
 categories:
-- 单元测试
 - Flutter
 tags:
 - Flutter

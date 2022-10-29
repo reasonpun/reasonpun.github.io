@@ -3,7 +3,6 @@ title: 你应该使用BLoC来管理Flutter中的状态吗？
 date: 2022-05-25 18:49:32
 categories:
 - Flutter
-- BLoC
 tags:
 - Flutter
 - BLoC

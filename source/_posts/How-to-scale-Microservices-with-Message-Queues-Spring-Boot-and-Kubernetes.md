@@ -3,7 +3,6 @@ title: 如何使用消息队列、Spring Boot 和 Kubernetes 扩展微服务
 date: 2022-03-24 11:03:50
 categories:
 - SpringBoot
-- Java
 tags:
 - SprintBoot
 - Java
