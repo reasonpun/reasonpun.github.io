@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-20T14:38:14.757Z</updated>
+  <updated>2022-10-29T11:53:48.365Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,94 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter Google Map With Live Location Tracking — Uber Style</title>
+    <link href="https://pangz.fun/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html"/>
+    <id>https://pangz.fun/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html</id>
+    <published>2022-10-29T09:26:57.000Z</published>
+    <updated>2022-10-29T11:53:48.365Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style/1.gif&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;!--</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter - 带有自定义标记的谷歌地图📍</title>
+    <link href="https://pangz.fun/Flutter-%E2%80%94-Google-Map-with-Custom-Marker.html"/>
+    <id>https://pangz.fun/Flutter-%E2%80%94-Google-Map-with-Custom-Marker.html</id>
+    <published>2022-10-29T08:21:16.000Z</published>
+    <updated>2022-10-29T11:53:48.403Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;让我们把谷歌地图添加到您的Flutter应用中，用一个花哨的标记来取代无聊的标记。&lt;/p&gt;
+&lt;img src=&quot;/Flutter-%E2%80%94-Google-Map-with-Custom-Marker/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="GoogleMap" scheme="https://pangz.fun/tags/GoogleMap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter - 在谷歌地图中突出显示任何区域</title>
+    <link href="https://pangz.fun/Flutter-%E2%80%94-Highlight-any-area-in-Google-Maps.html"/>
+    <id>https://pangz.fun/Flutter-%E2%80%94-Highlight-any-area-in-Google-Maps.html</id>
+    <published>2022-10-29T08:16:57.000Z</published>
+    <updated>2022-10-29T11:53:48.411Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我们已经向您展示了如何在Flutter应用程序中添加谷歌地图和自定义标记。&lt;br&gt;让我们更进一步，向您展示如何在您的地图上添加一个圆圈，或识别一个特定的区域市、州或国家。&lt;/p&gt;
+&lt;img src=&quot;/Flutter-%E2%80%94-Highlight-any-area-in-Google-Maps/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="GoogleMap" scheme="https://pangz.fun/tags/GoogleMap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter ARKit — the complete crash course</title>
+    <link href="https://pangz.fun/Flutter-ARKit-%E2%80%94-the-complete-crash-course.html"/>
+    <id>https://pangz.fun/Flutter-ARKit-%E2%80%94-the-complete-crash-course.html</id>
+    <published>2022-10-21T00:50:20.000Z</published>
+    <updated>2022-10-30T00:33:54.059Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;有没有想过在Flutter应用程序中使用AR？&lt;br&gt;Well，ARKit可以帮助你。这是一个非常容易使用的软件包，只要你了解它是如何工作的。&lt;br&gt;这就是为什么我今天要向你介绍这个软件包的原因! 让我们开始吧!&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="ARKit" scheme="https://pangz.fun/tags/ARKit/"/>
+    
+  </entry>
   
   <entry>
     <title>6个针对Java程序员的免费Spring Boot课程</title>
@@ -401,102 +489,6 @@
     <category term="Hibernate" scheme="https://pangz.fun/tags/Hibernate/"/>
     
     <category term="API" scheme="https://pangz.fun/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何在Flutter中实现订阅的应用内购买</title>
-    <link href="https://pangz.fun/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter.html"/>
-    <id>https://pangz.fun/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter.html</id>
-    <published>2022-06-06T08:46:05.000Z</published>
-    <updated>2022-10-15T07:56:18.861Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/How-to-Implement-Subscriptions-In-App-Purchase-in-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;我们以这种或那种方式建立我们的应用程序，期望着从中赚钱。&lt;br&gt;有时我们出售广告并要求用户升级以获得更好的体验，而有时我们有只针对付费用户的优质内容。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="In-App Purchase" scheme="https://pangz.fun/tags/In-App-Purchase/"/>
-    
-    <category term="Subscriptions" scheme="https://pangz.fun/tags/Subscriptions/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Riverpod + Flutter Hooks：状态管理的最佳组合</title>
-    <link href="https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html"/>
-    <id>https://pangz.fun/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management.html</id>
-    <published>2022-06-02T01:18:46.000Z</published>
-    <updated>2022-10-15T08:15:45.081Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Riverpod-Flutter-Hooks-The-Best-Duo-for-State-Management/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;我编写flutter的代码已经有些年头了。&lt;br&gt;当我发现riverpod与flutter钩子的简单性相结合时的强大，我爱上了它，爱了，爱了！&lt;br&gt;现在几乎所有的项目中，我都使用它来进行状态管理。&lt;br&gt;我将向你解释为什么，并告诉你为什么你可以用这两个天使轻松地赋予你的项目。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Riverpod" scheme="https://pangz.fun/tags/Riverpod/"/>
-    
-    <category term="Hooks" scheme="https://pangz.fun/tags/Hooks/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何用Mobx在Flutter中管理状态</title>
-    <link href="https://pangz.fun/How-to-manage-state-in-Flutter-with-Mobx.html"/>
-    <id>https://pangz.fun/How-to-manage-state-in-Flutter-with-Mobx.html</id>
-    <published>2022-05-25T12:15:02.000Z</published>
-    <updated>2022-10-15T07:56:22.785Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/How-to-manage-state-in-Flutter-with-Mobx/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在这个由三部分组成的系列中，我将对Flutter中最广泛使用的状态管理器进行并列比较。&lt;br&gt;现在有很多工具，但往往缺乏对它们的明确比较。&lt;br&gt;这是一个遗憾，因为选择了错误的状态管理器，当你开始构建时就不容易恢复了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Mobx" scheme="https://pangz.fun/tags/Mobx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何用Provider管理Flutter中的状态</title>
-    <link href="https://pangz.fun/How-To-Manage-State-in-Flutter-With-Provider.html"/>
-    <id>https://pangz.fun/How-To-Manage-State-in-Flutter-With-Provider.html</id>
-    <published>2022-05-25T10:52:50.000Z</published>
-    <updated>2022-10-15T07:56:28.805Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/How-To-Manage-State-in-Flutter-With-Provider/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;可以认为Flutter是一个正在茁壮成长的孩子。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Provider" scheme="https://pangz.fun/tags/Provider/"/>
     
   </entry>
   
