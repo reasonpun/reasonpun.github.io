@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-29T11:53:48.365Z</updated>
+  <updated>2022-10-30T00:56:30.980Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -17,25 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Flutter Google Map With Live Location Tracking — Uber Style</title>
+    <title>带有实时位置跟踪的Flutter谷歌地图--Uber风格</title>
     <link href="https://pangz.fun/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html"/>
     <id>https://pangz.fun/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html</id>
     <published>2022-10-29T09:26:57.000Z</published>
-    <updated>2022-10-29T11:53:48.365Z</updated>
+    <updated>2022-10-30T00:56:30.980Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;img src=&quot;/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style/1.gif&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;!--</summary>
-        
-      
+    <summary type="html">&lt;p&gt;通过本课，您将学习如何在Flutter中使用谷歌地图，并进行一些定制，如设置自定义图像标记和绘制路线方向折线。在地图上添加实时位置更新。&lt;/p&gt;
+&lt;img src=&quot;/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style/1.gif&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
     
     
     
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="GoogleMap" scheme="https://pangz.fun/tags/GoogleMap/"/>
     
   </entry>
   
@@ -88,10 +87,12 @@
     <link href="https://pangz.fun/Flutter-ARKit-%E2%80%94-the-complete-crash-course.html"/>
     <id>https://pangz.fun/Flutter-ARKit-%E2%80%94-the-complete-crash-course.html</id>
     <published>2022-10-21T00:50:20.000Z</published>
-    <updated>2022-10-30T00:40:18.063Z</updated>
+    <updated>2022-10-30T00:42:06.626Z</updated>
     
     
-    <summary type="html">&lt;p&gt;有没有想过在Flutter应用程序中使用AR？&lt;br&gt;Well，ARKit可以帮助你。这是一个非常容易使用的软件包，只要你了解它是如何工作的。&lt;br&gt;这就是为什么我今天要向你介绍这个软件包的原因! 让我们开始吧!&lt;/p&gt;</summary>
+    <summary type="html">&lt;img src=&quot;/Flutter-ARKit-%E2%80%94-the-complete-crash-course/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;有没有想过在Flutter应用程序中使用AR？&lt;br&gt;Well，ARKit可以帮助你。这是一个非常容易使用的软件包，只要你了解它是如何工作的。&lt;br&gt;这就是为什么我今天要向你介绍这个软件包的原因! 让我们开始吧!&lt;/p&gt;</summary>
     
     
     
