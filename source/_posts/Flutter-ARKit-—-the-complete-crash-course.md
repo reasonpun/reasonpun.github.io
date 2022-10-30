@@ -8,7 +8,7 @@ tags:
 - ARKit
 ---
 
-{% asset_img 1.jpeg 示意图 width="400" %}
+{% asset_img 1.png 示意图 width="400" %}
 
 有没有想过在Flutter应用程序中使用AR？
 Well，ARKit可以帮助你。这是一个非常容易使用的软件包，只要你了解它是如何工作的。
