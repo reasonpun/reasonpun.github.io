@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>15个免费的API，你可以在自己的项目里试试</title>
+      <link href="/15-Free-APIs-for-your-Programming-Projects.html"/>
+      <url>/15-Free-APIs-for-your-Programming-Projects.html</url>
+      
+        <content type="html"><![CDATA[<p>API是应用编程接口的意思。<br>作为一个程序员，使用外部工具是加快你想建立的项目开发的一个好方法。<br>API简化了开发者如何将新的应用组件集成到现有的架构中。<br>这里有15个API，你可以用它来帮助你启动一个惊人的项目。<br>每个程序员都应该在他们的编程项目中使用这15个API。</p><span id="more"></span><h4 id="⭐Fake-Store-API"><a href="#⭐Fake-Store-API" class="headerlink" title="⭐Fake Store API"></a>⭐<a href="http://fakestoreapi.com/">Fake Store API</a></h4><p>如果你正在创建一个电子商务商店，那么这个API是为你准备的。<br>电子商务商店是一个伟大的项目，有了Fake Store API，它就变得更容易了。<br>忘掉后台和数据库的繁琐，专注于建立购物车、愿望清单、推荐和其他功能。</p><h4 id="⭐Words-API"><a href="#⭐Words-API" class="headerlink" title="⭐Words API"></a>⭐<a href="https://www.wordsapi.com/">Words API</a></h4><p>一个英语语言的API。Words API是一组Restful API，允许开发者查询单词的定义、上下文细节和其他形态上的单词特定信息，如同义词、示例用法、语篇、押韵、使用区域等。</p><h4 id="⭐随机用户数据API"><a href="#⭐随机用户数据API" class="headerlink" title="⭐随机用户数据API"></a>⭐<a href="https://randomuser.me/">随机用户数据API</a></h4><p>不要再浪费时间手动创建假的用户数据。<br>只需从这个API拉过全面的随机用户数据。对项目来说是非常方便的API。<br>而且它比硬编码数据更能模拟真实的做法。</p><h4 id="⭐Quotes-API"><a href="#⭐Quotes-API" class="headerlink" title="⭐Quotes API"></a>⭐<a href="https://api-ninjas.com/api/quotes">Quotes API</a></h4><p>Quotes API提供了历史上几乎无穷无尽的名人名言。<br>Quotes API结合了检索证券日终价格、延迟价格和实时价格的端点，以及证券和市场层面的业绩关键数字和基本参考数据。</p><h4 id="⭐DummyAPI"><a href="#⭐DummyAPI" class="headerlink" title="⭐DummyAPI"></a>⭐<a href="http://dummyapi.io/">DummyAPI</a></h4><p>Dummy API拥有你所需要的一切，使你的应用程序看起来像有真实的用户活动在热闹。从假用户到假评论和帖子。告别硬编码的JSON数据。</p><h4 id="⭐Sejda"><a href="#⭐Sejda" class="headerlink" title="⭐Sejda"></a>⭐<a href="https://www.sejda.com/">Sejda</a></h4><p>是否曾经不得不下载一个PDF，只是为了阅读或编辑它？<br>只是为了再次上传修改内容。不要让您的用户忍受这种糟糕的用户体验。使用Sejda的API，你可以直接从你的Web应用中阅读和编辑PDF。</p><h4 id="⭐IGDB-API"><a href="#⭐IGDB-API" class="headerlink" title="⭐IGDB API"></a>⭐<a href="https://www.igdb.com/api">IGDB API</a></h4><p>互联网游戏数据库。</p><p>IGDB是一个流行的视频游戏数据库网站，它有一个强大和公开的API。<br>这有助于我们需要视频游戏数据的每个项目–如发布日期、Metacritic评分、标签等。<br>这在大多数情况下效果很好，特别是自V4以来，Twitch（亚马逊）也被支持该API了。</p><h4 id="⭐Movie-DB-API-TMDB"><a href="#⭐Movie-DB-API-TMDB" class="headerlink" title="⭐Movie DB API (TMDB)"></a>⭐<a href="https://www.themoviedb.org/documentation/api">Movie DB API (TMDB)</a></h4><p>这个API是史诗级的! 它有这么多的数据，有很好的文档，并允许你创建令人难以置信的应用程序，如Netflix的克隆。<br>而且它是完全免费的。只要把它们归入你的应用程序。</p><h4 id="⭐Mailchimp"><a href="#⭐Mailchimp" class="headerlink" title="⭐Mailchimp"></a>⭐<a href="https://mailchimp.com/">Mailchimp</a></h4><p>说 “我是专家 “的最好方式莫过于向您的用户自动发送欢迎邮件。<br>有了Mailchimp慷慨的免费层级，你就可以做到这一点!<br>Mailchimp的经典自动化功能可以让你建立一系列的邮件，在特定的日期、活动或事件的触发下发送给用户。使用API来管理自动化工作流程、电子邮件和队列。</p><h4 id="⭐Mapbox"><a href="#⭐Mapbox" class="headerlink" title="⭐Mapbox"></a>⭐<a href="https://www.mapbox.com/">Mapbox</a></h4><p>正在建立一个基于位置的项目吗？这是为你准备的API! 被Strava等知名公司使用，所以你知道他们的API是顶级质量的。<br>他们的免费等级门槛非常慷慨，你可以使用Mapbox而不需要支付一分钱。</p><h4 id="⭐市场数据API"><a href="#⭐市场数据API" class="headerlink" title="⭐市场数据API"></a>⭐<a href="https://site.financialmodelingprep.com/developer/docs/">市场数据API</a></h4><p>股票API是一个编程接口，旨在向特定来源提供实时股票市场数据流。<br>例如，许多现有的经纪平台依靠股票API为他们提供实时信息，他们的投资者可以利用这些信息做出购买和销售决策。</p><h4 id="⭐SERP-API"><a href="#⭐SERP-API" class="headerlink" title="⭐SERP API"></a>⭐<a href="https://serpapi.com/">SERP API</a></h4><p>搜索引擎结果页。</p><p>SERP API 使用 Google 的地理定位、加密参数，并通过离你所需位置最近的代理服务器路由你的请求以确保准确性。在我们的location端点获取位置。</p><p>当你有谷歌和其他搜索引擎的力量支持时，可能性是无穷的。SERP API使这一切成为可能。<br>想象一下，你可以用这种力量建立什么!</p><h4 id="⭐Auth0-API"><a href="#⭐Auth0-API" class="headerlink" title="⭐Auth0 API"></a>⭐<a href="https://auth0.com/">Auth0 API</a></h4><p>Auth0是实现OAuth或单点登录（SSO）的好方法。<br>SSO使用户能够通过第三方应用程序如Facebook或Google进行注册或登录。<br>这是一个伟大的功能，可以添加到一个更大的项目。</p><h4 id="⭐ILovePDF-API"><a href="#⭐ILovePDF-API" class="headerlink" title="⭐ILovePDF API"></a>⭐<a href="https://www.ilovepdf.com/">ILovePDF API</a></h4><p>无论你是一个小型的创业公司还是一个大型企业，ILovePDF API都可以帮助你实现文档处理的自动化。<br>使用ILovePDF API的PDF处理工作流程非常简单，由4个基本请求指令组成：<br>开始任务、上传文件、处理文件和下载文件。<br>一旦API执行了这四个步骤，你的PDF文件将被你所需要的工具处理，并下载到你喜欢的地方。</p><h4 id="⭐新闻-API"><a href="#⭐新闻-API" class="headerlink" title="⭐新闻 API"></a>⭐<a href="https://newsapi.org/">新闻 API</a></h4><p>强大的新闻 API 扫描整个网络的数万个新闻源，并根据您的请求返回相关内容。如果你想在你的网站上介绍与你的产品或行业相关的内容，这是一个方便的工具。</p><!-- https://medium.com/@flutterqueen/15-free-apis-for-your-programming-projects-c68aca72b392 -->]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>带有实时位置跟踪的Flutter谷歌地图--Uber风格</title>
       <link href="/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html"/>
       <url>/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html</url>

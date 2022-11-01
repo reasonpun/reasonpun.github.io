@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-10-30T00:56:30.980Z</updated>
+  <updated>2022-11-01T10:01:23.012Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>15个免费的API，你可以在自己的项目里试试</title>
+    <link href="https://pangz.fun/15-Free-APIs-for-your-Programming-Projects.html"/>
+    <id>https://pangz.fun/15-Free-APIs-for-your-Programming-Projects.html</id>
+    <published>2022-11-01T09:46:32.000Z</published>
+    <updated>2022-11-01T10:01:23.012Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;API是应用编程接口的意思。&lt;br&gt;作为一个程序员，使用外部工具是加快你想建立的项目开发的一个好方法。&lt;br&gt;API简化了开发者如何将新的应用组件集成到现有的架构中。&lt;br&gt;这里有15个API，你可以用它来帮助你启动一个惊人的项目。&lt;br&gt;每个程序员都应该在他们的编程项目中使用这15个API。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+  </entry>
   
   <entry>
     <title>带有实时位置跟踪的Flutter谷歌地图--Uber风格</title>
@@ -453,32 +470,6 @@
     <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
 
 &lt;p&gt;搜索是网络的支柱之一，而全文搜索是每个网站都需要的强制性功能之一。但是实现这样的功能是很复杂的，很多熟练的工程师已经对这个问题进行了认真的思考。所以，我们不要重新发明轮子，而要使用久经考验的Hibernate搜索库。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
-    
-    
-    <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
-    
-    <category term="Hibernate" scheme="https://pangz.fun/tags/Hibernate/"/>
-    
-    <category term="API" scheme="https://pangz.fun/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Hibernate建立一个带有分页的全文搜索的Spring Boot REST API</title>
-    <link href="https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search.html"/>
-    <id>https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search.html</id>
-    <published>2022-06-14T11:42:55.000Z</published>
-    <updated>2022-10-15T07:55:02.200Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Paginated-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在&lt;a href=&quot;https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html&quot;&gt;之前的文章&lt;/a&gt;中，我们学习了如何使用Hibernate Search为Spring Boot Rest API添加全文搜索。&lt;/p&gt;
-&lt;p&gt;在这篇文章中，我们将在此基础上，学习如何向现有的REST API添加分页搜索。&lt;/p&gt;</summary>
     
     
     
