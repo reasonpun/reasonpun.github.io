@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-11-01T10:01:23.012Z</updated>
+  <updated>2022-11-02T13:00:10.515Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>是什么让Julia独树一帜？</title>
+    <link href="https://pangz.fun/What-Makes-Julia-Unique.html"/>
+    <id>https://pangz.fun/What-Makes-Julia-Unique.html</id>
+    <published>2022-11-02T12:12:15.000Z</published>
+    <updated>2022-11-02T13:00:10.515Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;看看多重调度是如何将Julia与所有其他编程语言区分开来的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/What-Makes-Julia-Unique/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="Julia" scheme="https://pangz.fun/categories/Julia/"/>
+    
+    
+    <category term="Julia" scheme="https://pangz.fun/tags/Julia/"/>
+    
+  </entry>
   
   <entry>
     <title>15个免费的API，你可以在自己的项目里试试</title>
@@ -30,6 +52,28 @@
     
     
     <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每个Java开发者都必须知道的七个Intellij调试技巧</title>
+    <link href="https://pangz.fun/Seven-Intellij-Debug-Tricks-that-Every-Java-Developer-Must-Know.html"/>
+    <id>https://pangz.fun/Seven-Intellij-Debug-Tricks-that-Every-Java-Developer-Must-Know.html</id>
+    <published>2022-10-31T02:39:38.000Z</published>
+    <updated>2022-11-01T10:51:58.325Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;你知道这些窍门吗？这些肯定会提高你的开发效率。&lt;/p&gt;
+&lt;img src=&quot;/Seven-Intellij-Debug-Tricks-that-Every-Java-Developer-Must-Know/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://pangz.fun/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
+    
+    <category term="Intellij" scheme="https://pangz.fun/tags/Intellij/"/>
     
   </entry>
   
@@ -431,56 +475,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="startup" scheme="https://pangz.fun/tags/startup/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java程序员的测试驱动开发(TDD)</title>
-    <link href="https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html"/>
-    <id>https://pangz.fun/Test-Driven-Development-TDD-for-Java-Programmers.html</id>
-    <published>2022-06-27T02:28:08.000Z</published>
-    <updated>2022-10-15T08:16:08.600Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最常见但又被低估的做法之一是写代码而不实施测试，甚至大多数专业人士也是如此。&lt;br&gt;尽管一个明显的事实是，如果你理解了业务逻辑，你就可以直接深入到执行中去，但这并不意味着你遵循了被编程专家长期证明的最佳实践。&lt;br&gt;实现你的程序的最好方法之一是遵循TDD或测试驱动的开发。&lt;br&gt;在这篇文章中，我们将看看什么是TDD，以及如何使用TDD进行更好的编程。&lt;/p&gt;
-&lt;p&gt;什么是TDD？&lt;br&gt;TDD仅仅意味着我们使用测试来驱动代码的实现。但实际上，它是一个从红色到绿色到重构的工作流程。&lt;/p&gt;
-&lt;img src=&quot;/Test-Driven-Development-TDD-for-Java-Programmers/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Java" scheme="https://pangz.fun/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
-    
-    <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
-    
-    <category term="TDD" scheme="https://pangz.fun/tags/TDD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Hibernate搜索构建带有全文搜索的Spring Boot REST API</title>
-    <link href="https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html"/>
-    <id>https://pangz.fun/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search.html</id>
-    <published>2022-06-14T11:46:18.000Z</published>
-    <updated>2022-10-15T07:54:46.878Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Build-a-Spring-Boot-REST-API-with-Full-Text-Search-using-Hibernate-Search/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;搜索是网络的支柱之一，而全文搜索是每个网站都需要的强制性功能之一。但是实现这样的功能是很复杂的，很多熟练的工程师已经对这个问题进行了认真的思考。所以，我们不要重新发明轮子，而要使用久经考验的Hibernate搜索库。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
-    
-    
-    <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
-    
-    <category term="Hibernate" scheme="https://pangz.fun/tags/Hibernate/"/>
-    
-    <category term="API" scheme="https://pangz.fun/tags/API/"/>
     
   </entry>
   
