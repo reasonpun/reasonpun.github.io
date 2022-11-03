@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-11-02T14:00:14.360Z</updated>
+  <updated>2022-11-03T14:06:31.565Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nylo v3.x - Flutter的最新微框架</title>
+    <link href="https://pangz.fun/Nylo-v3-x-%E2%80%94-Flutter%E2%80%99s-Latest-Micro-Framework.html"/>
+    <id>https://pangz.fun/Nylo-v3-x-%E2%80%94-Flutter%E2%80%99s-Latest-Micro-Framework.html</id>
+    <published>2022-11-03T13:41:16.000Z</published>
+    <updated>2022-11-03T14:06:31.565Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Nylo v3.x已经面世，可以帮助你更容易地构建Flutter应用程序。&lt;/p&gt;
+&lt;img src=&quot;/Nylo-v3-x-%E2%80%94-Flutter%E2%80%99s-Latest-Micro-Framework/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Nylo" scheme="https://pangz.fun/tags/Nylo/"/>
+    
+  </entry>
   
   <entry>
     <title>是什么让Julia独树一帜？</title>
@@ -452,29 +474,6 @@
     <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
     
     <category term="API" scheme="https://pangz.fun/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5个Flutter工具 助力创业公司起飞</title>
-    <link href="https://pangz.fun/5-flutter-tools-to-built-startup-fast.html"/>
-    <id>https://pangz.fun/5-flutter-tools-to-built-startup-fast.html</id>
-    <published>2022-06-29T02:25:16.000Z</published>
-    <updated>2022-10-16T01:14:22.104Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/5-flutter-tools-to-built-startup-fast/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;Flutter是最有效的应用开发平台之一。Flutter是一个工具包，能够实现自动代码完成、调试和视觉支持。凭借快速的开发时间，Flutter让人们的工作变得更加轻松。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="startup" scheme="https://pangz.fun/tags/startup/"/>
     
   </entry>
   
