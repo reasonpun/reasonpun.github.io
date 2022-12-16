@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-11-03T14:16:05.999Z</updated>
+  <updated>2022-12-16T02:58:12.837Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>8个必须知道的Stream API使用方法</title>
+    <link href="https://pangz.fun/8-Must-know-Stream-API-Usages.html"/>
+    <id>https://pangz.fun/8-Must-know-Stream-API-Usages.html</id>
+    <published>2022-12-16T02:46:01.000Z</published>
+    <updated>2022-12-16T02:58:12.837Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/8-Must-know-Stream-API-Usages/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;作为一名java开发工程师，数组和集合在我的代码中随处可见。我经常使用集合或数组来处理数据，如过滤和对象转换。我相信大家对数组的数据处理已经非常熟悉了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://pangz.fun/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
+    
+    <category term="StreamAPI" scheme="https://pangz.fun/tags/StreamAPI/"/>
+    
+  </entry>
   
   <entry>
     <title>Nylo v3.x - Flutter的最新微框架</title>
@@ -450,30 +473,6 @@
     <category term="software" scheme="https://pangz.fun/tags/software/"/>
     
     <category term="敏捷开发" scheme="https://pangz.fun/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot应用程序使用@valid来验证API请求</title>
-    <link href="https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html"/>
-    <id>https://pangz.fun/Spring-Boot-Application-Use-valid-to-Validate-API-Request.html</id>
-    <published>2022-07-04T13:02:37.000Z</published>
-    <updated>2022-10-15T13:26:19.690Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;使用@valid可以使你的Request验证更容易。&lt;/p&gt;
-&lt;img src=&quot;/Spring-Boot-Application-Use-valid-to-Validate-API-Request/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;当我们开发rest API时，我们认为每个人都需要验证接口输入参数的合法性。&lt;br&gt;一些初学者可能会使用许多if-else条件表达式进行验证。以一个新的用户注册为例。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
-    
-    
-    <category term="Spring" scheme="https://pangz.fun/tags/Spring/"/>
-    
-    <category term="API" scheme="https://pangz.fun/tags/API/"/>
     
   </entry>
   
