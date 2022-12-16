@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-12-16T02:58:12.837Z</updated>
+  <updated>2022-12-16T03:55:15.207Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter游戏开发 初探Bonfire</title>
+    <link href="https://pangz.fun/Flutter-games-exploring-Bonfire.html"/>
+    <id>https://pangz.fun/Flutter-games-exploring-Bonfire.html</id>
+    <published>2022-12-16T03:03:47.000Z</published>
+    <updated>2022-12-16T03:55:15.207Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;新的工具包 “Flutter Casual Games Toolkit “已随Flutter 3.0公布。它并不假装是任何问题的通用解决方案，但我们看到它是如何向游戏开发迈出 “官方 “的第一步。&lt;/p&gt;
+&lt;p&gt;还有其他工具，其中最强大的是Flame框架。在Flame的基础上建立了 “Bonfire”–一个游戏开发框架。它看起来至少是开发RPG游戏的最简单的框架。&lt;/p&gt;
+&lt;img src=&quot;/Flutter-games-exploring-Bonfire/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
+    
+    
+    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
+    
+    <category term="Bonfire" scheme="https://pangz.fun/tags/Bonfire/"/>
+    
+  </entry>
   
   <entry>
     <title>8个必须知道的Stream API使用方法</title>
@@ -448,31 +471,6 @@
     <category term="GitHub" scheme="https://pangz.fun/tags/GitHub/"/>
     
     <category term="Profile" scheme="https://pangz.fun/tags/Profile/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在移动应用开发中有效地使用敏捷技术</title>
-    <link href="https://pangz.fun/Using-Agile-Effectively-In-Mobile-App-Development.html"/>
-    <id>https://pangz.fun/Using-Agile-Effectively-In-Mobile-App-Development.html</id>
-    <published>2022-08-02T23:33:11.000Z</published>
-    <updated>2022-10-15T08:16:46.452Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Using-Agile-Effectively-In-Mobile-App-Development/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;移动应用开发是一个复杂的过程，涉及来自不同领域的多个专家，我们试图以最佳方式整合所有这些过程，以确保我们的产品符合标准。&lt;br&gt;要做到这一点，我们必须选择正确的模式，据观察，敏捷模式已经显示出移动应用开发的多种好处。&lt;br&gt;我们已经了解到，创建应用程序的过程涉及到团队内部和客户之间的不断沟通，以便他们能够概述他们想要从应用程序中获得什么。在整个过程中应始终咨询客户，因为这有助于开发高效的软件应用程序。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="敏捷开发" scheme="https://pangz.fun/categories/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="develop" scheme="https://pangz.fun/tags/develop/"/>
-    
-    <category term="software" scheme="https://pangz.fun/tags/software/"/>
-    
-    <category term="敏捷开发" scheme="https://pangz.fun/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
