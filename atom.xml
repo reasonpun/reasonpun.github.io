@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2022-12-16T03:55:15.207Z</updated>
+  <updated>2023-02-15T01:48:57.633Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你知道微服务和其设计模式吗？</title>
+    <link href="https://pangz.fun/Do-you-know-about-Microservices-and-their-Design-Patterns.html"/>
+    <id>https://pangz.fun/Do-you-know-about-Microservices-and-their-Design-Patterns.html</id>
+    <published>2023-02-15T00:24:50.000Z</published>
+    <updated>2023-02-15T01:48:57.633Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Do-you-know-about-Microservices-and-their-Design-Patterns/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;大家好。&lt;br&gt;在这篇文章中，我们将看到微服务架构，以及它与单体应用的区别。还将看到什么是微服务设计模式和不同的类型。&lt;br&gt;然后，我们将看到微服务架构的优势和劣势，以结束这篇文章。&lt;br&gt;让我们开始吧！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Microservices" scheme="https://pangz.fun/categories/Microservices/"/>
+    
+    
+    <category term="Microservices" scheme="https://pangz.fun/tags/Microservices/"/>
+    
+    <category term="Design Patterns" scheme="https://pangz.fun/tags/Design-Patterns/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter游戏开发 初探Bonfire</title>
@@ -448,29 +471,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="BLoC" scheme="https://pangz.fun/tags/BLoC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何设计一个有吸引力的GitHub简介</title>
-    <link href="https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html"/>
-    <id>https://pangz.fun/How-to-Design-an-Attractive-GitHub-Profile-Readme.html</id>
-    <published>2022-08-05T23:47:45.000Z</published>
-    <updated>2022-10-15T07:56:12.851Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/How-to-Design-an-Attractive-GitHub-Profile-Readme/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;如何创建一个具有视觉吸引力的GitHub配置文件自述。你们都知道会有这样的效果吧？&lt;br&gt;你们中的一些人可能会想：”唉，太好了，又是一篇关于如何制作一个令人印象深刻的GitHub简介的博客😑”。&lt;br&gt;嗯……是的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="GitHub" scheme="https://pangz.fun/categories/GitHub/"/>
-    
-    
-    <category term="GitHub" scheme="https://pangz.fun/tags/GitHub/"/>
-    
-    <category term="Profile" scheme="https://pangz.fun/tags/Profile/"/>
     
   </entry>
   
