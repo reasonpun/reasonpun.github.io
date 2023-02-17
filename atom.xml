@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2023-02-15T01:48:57.633Z</updated>
+  <updated>2023-02-17T01:45:56.114Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>6个容易上手的编程副业，每月赚取1,000多美元</title>
+    <link href="https://pangz.fun/6-Easy-to-Start-Programming-Side-Hustle-to-Earn-1-000-A-Month.html"/>
+    <id>https://pangz.fun/6-Easy-to-Start-Programming-Side-Hustle-to-Earn-1-000-A-Month.html</id>
+    <published>2023-02-17T01:33:15.000Z</published>
+    <updated>2023-02-17T01:45:56.114Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/6-Easy-to-Start-Programming-Side-Hustle-to-Earn-1-000-A-Month/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;本文转自 Nitin Sharma 的博客&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你们中的大多数人都读过这样的故事，希望其中一些能帮助你们产生更多的钱。&lt;/p&gt;
+&lt;p&gt;嗯，几年前我也是这样的人。我希望能尝试一些新的副业，赚点钱。其中一个视频建议我在网上写作，此后我制作了许多技术文章。&lt;/p&gt;
+&lt;p&gt;而在这个过程中，我开展了多项副业，在全职工作之外还产生了被动收入，并认识了几位专家，从他们那里我又学到了很多。&lt;/p&gt;
+&lt;p&gt;因此，基于这一篇文章，我将协助你开始你的副业，甚至与你分享收入证明以资鼓励。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Microservices" scheme="https://pangz.fun/categories/Microservices/"/>
+    
+    
+    <category term="设计模式" scheme="https://pangz.fun/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="Microservices" scheme="https://pangz.fun/tags/Microservices/"/>
+    
+  </entry>
   
   <entry>
     <title>你知道微服务和其设计模式吗？</title>
@@ -445,32 +474,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Widget" scheme="https://pangz.fun/tags/Widget/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter高级BLoC和服务操作</title>
-    <link href="https://pangz.fun/Flutter-Advanced-BLoC-and-Service-Operations.html"/>
-    <id>https://pangz.fun/Flutter-Advanced-BLoC-and-Service-Operations.html</id>
-    <published>2022-09-22T02:27:24.000Z</published>
-    <updated>2022-10-16T01:14:40.281Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;在这篇文章中，我将解释Bloc和Vexana库的使用，它是一个状态管理解决方案，处于高级水平。我在这个项目中也使用了Provider。我将在下一篇文章中对此进行解释。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;img src=&quot;/Flutter-Advanced-BLoC-and-Service-Operations/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;Vexana是一个由 Veli Bacık 基于Dio库之上编写的。它对服务操作非常有用。&lt;br&gt;与其他库不同。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="BLoC" scheme="https://pangz.fun/tags/BLoC/"/>
     
   </entry>
   
