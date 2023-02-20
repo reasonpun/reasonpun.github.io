@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2023-02-17T01:45:56.114Z</updated>
+  <updated>2023-02-20T11:47:24.423Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>14个免费教程让你开始使用Web3</title>
+    <link href="https://pangz.fun/14-Free-Tutorials-to-Get-You-Started-with-Web3.html"/>
+    <id>https://pangz.fun/14-Free-Tutorials-to-Get-You-Started-with-Web3.html</id>
+    <published>2023-02-20T11:13:43.000Z</published>
+    <updated>2023-02-20T11:47:24.423Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/14-Free-Tutorials-to-Get-You-Started-with-Web3/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;你可能听说过这样一句话–当所有人都在挖金子的时候，做镐头和铲子的生意就好了。&lt;/p&gt;
+&lt;p&gt;Binance、Coinbase和其他加密货币交易所以这种方式获利。同样，各种公司也在不断涌现，在给消费者带来价值的同时也在赚钱。&lt;/p&gt;
+&lt;p&gt;人们也对投资加密货币感兴趣。&lt;br&gt;是的，我们大多数人都专注于购买更多的比特币和以太坊，因为我们相信加密货币在未来会暴涨。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web3" scheme="https://pangz.fun/categories/Web3/"/>
+    
+    
+    <category term="Web3" scheme="https://pangz.fun/tags/Web3/"/>
+    
+    <category term="Tutorials" scheme="https://pangz.fun/tags/Tutorials/"/>
+    
+  </entry>
   
   <entry>
     <title>6个容易上手的编程副业，每月赚取1,000多美元</title>
@@ -449,31 +474,6 @@
     <category term="Bloc" scheme="https://pangz.fun/tags/Bloc/"/>
     
     <category term="认证" scheme="https://pangz.fun/tags/%E8%AE%A4%E8%AF%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用于Flutter的令人惊叹的票务小工具</title>
-    <link href="https://pangz.fun/Stunning-Ticket-Widget-For-Flutter.html"/>
-    <id>https://pangz.fun/Stunning-Ticket-Widget-For-Flutter.html</id>
-    <published>2022-09-23T08:16:19.000Z</published>
-    <updated>2022-10-15T13:21:13.151Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Stunning-Ticket-Widget-For-Flutter/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在您的flutter应用程序中添加漂亮的Ticket UI。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="Widget" scheme="https://pangz.fun/categories/Flutter/Widget/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Widget" scheme="https://pangz.fun/tags/Widget/"/>
     
   </entry>
   
