@@ -2,10 +2,10 @@
 layout: post
 title: Top 10 Data & AI Trends for 2024
 date: 2024-07-22 12:54:11
-excerpt: AI 2024
+excerpt: 数据和人工智能领域发展迅速。如果你不偶尔停下来四处看看，你可能会错过它。
 ---
 
-{% asset_img 1.jpeg 示意图 width="400" %}
+{% asset_img 1.webp 示意图 width="400" %}
 
 数据和人工智能领域发展迅速。如果你不偶尔停下来四处看看，你可能会错过它。
 
