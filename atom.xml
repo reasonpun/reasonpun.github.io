@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-07-24T01:38:35.370Z</updated>
+  <updated>2024-07-24T01:43:11.841Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -17,17 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>System Design Basics — Rate Limiter</title>
+    <title>系统设计基础——速率限制器</title>
     <link href="https://pangz.fun/System-Design-Basics-%E2%80%94-Rate-Limiter.html"/>
     <id>https://pangz.fun/System-Design-Basics-%E2%80%94-Rate-Limiter.html</id>
     <published>2024-07-24T01:34:11.000Z</published>
-    <updated>2024-07-24T01:38:35.370Z</updated>
+    <updated>2024-07-24T01:43:11.841Z</updated>
     
     
-    <summary type="html">在今天的高流量、分布式系统架构中，应用程序和服务与许多用户和系统交互，维护稳定性和防止滥用是至关重要的问题。而速率限制有助于解决这些问题。</summary>
+    <summary type="html">&lt;img src=&quot;/System-Design-Basics-%E2%80%94-Rate-Limiter/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;h3 id=&quot;你好，伙计们，如果你正在为系统设计面试做准备，你可能已经遇到了“速率限制器”，这是软件架构中的基本组件之一，与API网关、负载均衡器、分布式缓存等一起。&quot;&gt;&lt;a href=&quot;#你好，伙计们，如果你正在为系统设计面试做准备，你可能已经遇到了“速率限制器”，这是软件架构中的基本组件之一，与API网关、负载均衡器、分布式缓存等一起。&quot; class=&quot;headerlink&quot; title=&quot;你好，伙计们，如果你正在为系统设计面试做准备，你可能已经遇到了“速率限制器”，这是软件架构中的基本组件之一，与API网关、负载均衡器、分布式缓存等一起。&quot;&gt;&lt;/a&gt;你好，伙计们，如果你正在为系统设计面试做准备，你可能已经遇到了“速率限制器”，这是软件架构中的基本组件之一，与API网关、负载均衡器、分布式缓存等一起。&lt;/h3&gt;&lt;p&gt;在今天的高流量、分布式系统架构中，应用程序和服务与许多用户和系统交互，维护稳定性和防止滥用是至关重要的问题。&lt;/p&gt;
+&lt;p&gt;而速率限制有助于解决这些问题。&lt;/p&gt;
+&lt;p&gt;想象一下，我们有一个服务，它接收到大量的请求，但它每秒只能处理有限数量的请求。为了处理这个问题，我们需要某种节流或速率限制机制，只允许一定数量的请求，这样我们的服务就可以响应所有请求。&lt;/p&gt;</summary>
     
     
     
+    <category term="System Design" scheme="https://pangz.fun/categories/System-Design/"/>
+    
+    
+    <category term="System" scheme="https://pangz.fun/tags/System/"/>
+    
+    <category term="Design" scheme="https://pangz.fun/tags/Design/"/>
     
   </entry>
   
@@ -36,13 +46,23 @@
     <link href="https://pangz.fun/Top-10-Data-AI-Trends-for-2024.html"/>
     <id>https://pangz.fun/Top-10-Data-AI-Trends-for-2024.html</id>
     <published>2024-07-22T04:54:11.000Z</published>
-    <updated>2024-07-22T05:20:12.267Z</updated>
+    <updated>2024-07-24T01:42:52.920Z</updated>
     
     
-    <summary type="html">数据和人工智能领域发展迅速。如果你不能经常停下来多瞅瞅这个，你可能会错过它。</summary>
+    <summary type="html">&lt;img src=&quot;/Top-10-Data-AI-Trends-for-2024/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;数据和人工智能领域发展迅速。如果你不能经常停下来多瞅瞅这个，你可能会错过它。&lt;/p&gt;</summary>
     
     
     
+    <category term="大数据" scheme="https://pangz.fun/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    <category term="人工智能" scheme="https://pangz.fun/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    
+    <category term="大数据" scheme="https://pangz.fun/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    <category term="人工智能" scheme="https://pangz.fun/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
