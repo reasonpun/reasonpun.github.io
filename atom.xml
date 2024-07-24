@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-07-22T05:20:12.267Z</updated>
+  <updated>2024-07-24T01:38:35.370Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>System Design Basics — Rate Limiter</title>
+    <link href="https://pangz.fun/System-Design-Basics-%E2%80%94-Rate-Limiter.html"/>
+    <id>https://pangz.fun/System-Design-Basics-%E2%80%94-Rate-Limiter.html</id>
+    <published>2024-07-24T01:34:11.000Z</published>
+    <updated>2024-07-24T01:38:35.370Z</updated>
+    
+    
+    <summary type="html">在今天的高流量、分布式系统架构中，应用程序和服务与许多用户和系统交互，维护稳定性和防止滥用是至关重要的问题。而速率限制有助于解决这些问题。</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2024 年十大数据和人工智能趋势</title>
@@ -441,30 +456,6 @@
     
     
     <category term="Python" scheme="https://pangz.fun/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用Flutter进行电子邮件认证 - Firebase</title>
-    <link href="https://pangz.fun/Email-Authentication-with-Flutter-Firebase.html"/>
-    <id>https://pangz.fun/Email-Authentication-with-Flutter-Firebase.html</id>
-    <published>2022-10-15T08:20:52.000Z</published>
-    <updated>2023-12-04T09:15:55.609Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;认证是每个应用程序应该具备的基本功能之一。下面是如何使用Firebase Auth为您的Flutter应用添加认证的方法。&lt;/p&gt;
-&lt;img src=&quot;/Email-Authentication-with-Flutter-Firebase/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;Firebase是Flutter应用程序的首选后端之一，因为它提供了许多免费的功能，以及与Flutter的良好整合。&lt;br&gt;Firebase提供的功能之一是认证。&lt;br&gt;因此，我们就可以在我们的应用程序中整合电子邮件、电话、谷歌、苹果和更多的认证。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="认证" scheme="https://pangz.fun/tags/%E8%AE%A4%E8%AF%81/"/>
-    
-    <category term="Firebase" scheme="https://pangz.fun/tags/Firebase/"/>
     
   </entry>
   
