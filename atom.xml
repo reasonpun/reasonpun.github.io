@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-07-26T03:39:52.103Z</updated>
+  <updated>2024-08-08T01:11:34.589Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++中位运算讲解</title>
+    <link href="https://pangz.fun/c-bitset.html"/>
+    <id>https://pangz.fun/c-bitset.html</id>
+    <published>2024-08-08T01:08:30.000Z</published>
+    <updated>2024-08-08T01:11:34.589Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/c-bitset/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="C++ Bit" scheme="https://pangz.fun/categories/C-Bit/"/>
+    
+    
+    <category term="C++" scheme="https://pangz.fun/tags/C/"/>
+    
+    <category term="Bit" scheme="https://pangz.fun/tags/Bit/"/>
+    
+  </entry>
   
   <entry>
     <title>微服务之间共享数据</title>
@@ -454,31 +481,6 @@
     
     
     <category term="Python" scheme="https://pangz.fun/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Flutter中使用GitHub Actions</title>
-    <link href="https://pangz.fun/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course.html"/>
-    <id>https://pangz.fun/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course.html</id>
-    <published>2022-10-16T23:20:19.000Z</published>
-    <updated>2023-12-04T09:15:56.736Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Use-GitHub-Actions-with-Flutter-%E2%80%94-Crash-Course/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;自动化是我们作为开发者可以拥有的最好的东西之一。&lt;br&gt;这就是为什么当一个新的拉动请求被创建时，自动测试或构建是非常重要的，这样我们就不需要手动操作了。&lt;br&gt;今天我将向你展示如何使用GitHub Actions和Flutter来创建一个完整的持续集成流程。&lt;br&gt;让我们开始吧!&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    <category term="GitHub" scheme="https://pangz.fun/categories/Flutter/GitHub/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="GitHub" scheme="https://pangz.fun/tags/GitHub/"/>
     
   </entry>
   
