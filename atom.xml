@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-08-08T05:51:40.876Z</updated>
+  <updated>2024-10-05T11:09:25.527Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>High-Precision Computation</title>
+    <link href="https://pangz.fun/High-Precision-Computation.html"/>
+    <id>https://pangz.fun/High-Precision-Computation.html</id>
+    <published>2024-10-05T11:08:29.000Z</published>
+    <updated>2024-10-05T11:09:25.527Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;高精度计算（High-Precision Computation）是指在计算机中处理超过内置数据类型（如</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>冒泡排序（Bubble Sort）详解</title>
+    <link href="https://pangz.fun/Bubble-Sort.html"/>
+    <id>https://pangz.fun/Bubble-Sort.html</id>
+    <published>2024-10-05T10:58:53.000Z</published>
+    <updated>2024-10-05T11:07:28.321Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;冒泡排序（Bubble-Sort）详解&quot;&gt;&lt;a href=&quot;#冒泡排序（Bubble-Sort）详解&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序（Bubble Sort）详解&quot;&gt;&lt;/a&gt;冒泡排序（Bubble</summary>
+        
+      
+    
+    
+    
+    <category term="Bubble Sort" scheme="https://pangz.fun/categories/Bubble-Sort/"/>
+    
+    
+    <category term="Sort" scheme="https://pangz.fun/tags/Sort/"/>
+    
+    <category term="算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>C++中位运算讲解</title>
@@ -438,49 +490,6 @@
     <category term="SpringBoot" scheme="https://pangz.fun/tags/SpringBoot/"/>
     
     <category term="Courses" scheme="https://pangz.fun/tags/Courses/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Flutter使用NFC</title>
-    <link href="https://pangz.fun/NFC-with-Flutter.html"/>
-    <id>https://pangz.fun/NFC-with-Flutter.html</id>
-    <published>2022-10-19T00:21:06.000Z</published>
-    <updated>2023-12-04T09:15:56.620Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/NFC-with-Flutter/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-&lt;p&gt;近场通信技术有各种各样的用例，让我们看看我们如何在跨平台的Flutter应用程序中使用它。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="NFC" scheme="https://pangz.fun/tags/NFC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>7个最佳Python工具让你的生活更轻松</title>
-    <link href="https://pangz.fun/7-Best-Python-Tools-To-Make-Your-Life-Easier.html"/>
-    <id>https://pangz.fun/7-Best-Python-Tools-To-Make-Your-Life-Easier.html</id>
-    <published>2022-10-17T23:31:59.000Z</published>
-    <updated>2023-12-04T09:15:55.490Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/7-Best-Python-Tools-To-Make-Your-Life-Easier/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;有一句谚语 “你不必重新发明车轮”。&lt;br&gt;工具就是最好的例子。它可以帮助你以一种简单的方式实现复杂和耗时的功能。&lt;br&gt;据我所知，为了提高生产力和效率，我们需要使用一些最好的工具。&lt;br&gt;在这里，有7个工具，它们将帮助你完成你的开发之旅。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://pangz.fun/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://pangz.fun/tags/Python/"/>
     
   </entry>
   
