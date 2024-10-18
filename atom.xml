@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-10-05T11:14:39.927Z</updated>
+  <updated>2024-10-18T09:16:59.959Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c++中的排列的概念</title>
+    <link href="https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E6%8E%92%E5%88%97%E7%9A%84%E6%A6%82%E5%BF%B5.html"/>
+    <id>https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E6%8E%92%E5%88%97%E7%9A%84%E6%A6%82%E5%BF%B5.html</id>
+    <published>2024-10-18T09:11:53.000Z</published>
+    <updated>2024-10-18T09:16:59.959Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-什么是排列？&quot;&gt;&lt;a href=&quot;#1-什么是排列？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是排列？&quot;&gt;&lt;/a&gt;1. 什么是排列？&lt;/h2&gt;&lt;p&gt;在数学中，&lt;strong&gt;排列&lt;/strong&gt;指的是从一组不同的元素中选出一部分，并按照一定的顺序进行排列。比如，如果你有三个字母 ( {A, B, C} )，那么它们的排列就是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ABC, ACB, BAC, BCA, CAB, CBA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看到，每个排列都包括了所有的元素，并且它们的顺序不同。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 排列" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c++中的组合的概念</title>
+    <link href="https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E7%BB%84%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5.html"/>
+    <id>https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E7%BB%84%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5.html</id>
+    <published>2024-10-18T09:10:12.000Z</published>
+    <updated>2024-10-18T09:16:20.052Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-什么是组合？&quot;&gt;&lt;a href=&quot;#1-什么是组合？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是组合？&quot;&gt;&lt;/a&gt;1. 什么是组合？&lt;/h2&gt;&lt;p&gt;在数学中，&lt;strong&gt;组合&lt;/strong&gt;是从一组元素中选择出若干个元素，不考虑元素的排列顺序。例如，假设有三个字母 ( {A, B, C} )，如果我们想要从中选择两个字母，组合的结果有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AB, AC, BC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意：组合与排列不同，组合只关心选择哪些元素，不考虑这些元素的顺序。因此，组合中的 AB 和 BA 被认为是相同的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 组合" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E7%BB%84%E5%90%88/"/>
+    
+  </entry>
   
   <entry>
     <title>高精度计算</title>
@@ -426,58 +472,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="GoogleMap" scheme="https://pangz.fun/tags/GoogleMap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter ARKit--完整的速成课程</title>
-    <link href="https://pangz.fun/Flutter-ARKit-%E2%80%94-the-complete-crash-course.html"/>
-    <id>https://pangz.fun/Flutter-ARKit-%E2%80%94-the-complete-crash-course.html</id>
-    <published>2022-10-21T00:50:20.000Z</published>
-    <updated>2023-12-04T09:15:55.689Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Flutter-ARKit-%E2%80%94-the-complete-crash-course/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;有没有想过在Flutter应用程序中使用AR？&lt;br&gt;Well，ARKit可以帮助你。这是一个非常容易使用的软件包，只要你了解它是如何工作的。&lt;br&gt;这就是为什么我今天要向你介绍这个软件包的原因! 让我们开始吧!&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="ARKit" scheme="https://pangz.fun/tags/ARKit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6个针对Java程序员的免费Spring Boot课程</title>
-    <link href="https://pangz.fun/6-Free-Spring-Boot-Courses-For-Java-Programmers.html"/>
-    <id>https://pangz.fun/6-Free-Spring-Boot-Courses-For-Java-Programmers.html</id>
-    <published>2022-10-20T14:14:58.000Z</published>
-    <updated>2023-12-04T09:15:55.487Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;这些免费课程将教会你关于流行的Java框架Spring Boot的一切知识。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;img src=&quot;/6-Free-Spring-Boot-Courses-For-Java-Programmers/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;在过去十年中，Spring已经成为Java开发者最受欢迎的框架之一。&lt;br&gt;同样，Spring Boot是Spring框架的一个轻量级版本，用于微服务。&lt;br&gt;它不仅仅是一个框架，而是一个拥有许多集成工具的平台，支持多种行业用例，如Spring Batch和Spring Integration。它是一个直观的、易于配置的下一代框架。&lt;/p&gt;
-&lt;p&gt;因此，我在这里分享一些最有用的免费Spring boot课程。如果你对支付Spring Boot教程不感兴趣，这篇文章将帮助你学习它。所以，不再多说，让我们开始吧!&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SpringBoot" scheme="https://pangz.fun/categories/SpringBoot/"/>
-    
-    
-    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
-    
-    <category term="SpringBoot" scheme="https://pangz.fun/tags/SpringBoot/"/>
-    
-    <category term="Courses" scheme="https://pangz.fun/tags/Courses/"/>
     
   </entry>
   
