@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-10-18T09:16:59.959Z</updated>
+  <updated>2024-10-19T23:51:11.842Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python中的多线程和多进程</title>
+    <link href="https://pangz.fun/python%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%A4%9A%E8%BF%9B%E7%A8%8B.html"/>
+    <id>https://pangz.fun/python%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%A4%9A%E8%BF%9B%E7%A8%8B.html</id>
+    <published>2024-10-19T23:49:13.000Z</published>
+    <updated>2024-10-19T23:51:11.842Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-Python中的多线程与多进程&quot;&gt;&lt;a href=&quot;#1-Python中的多线程与多进程&quot; class=&quot;headerlink&quot; title=&quot;1. Python中的多线程与多进程&quot;&gt;&lt;/a&gt;1. Python中的多线程与多进程&lt;/h3&gt;&lt;p&gt;Python支持&lt;strong&gt;多线程&lt;/strong&gt;和&lt;strong&gt;多进程&lt;/strong&gt;，用以处理并发任务。了解这两者的优缺点、适用场景以及实现方式，有助于根据应用需求选择合适的并发处理方式。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://pangz.fun/categories/Python/"/>
+    
+    
+    <category term="多线程 多进程" scheme="https://pangz.fun/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>c++中的排列的概念</title>
@@ -441,28 +460,6 @@
     
     <summary type="html">&lt;p&gt;让我们把谷歌地图添加到您的Flutter应用中，用一个花哨的标记来取代无聊的标记。&lt;/p&gt;
 &lt;img src=&quot;/Flutter-%E2%80%94-Google-Map-with-Custom-Marker/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="GoogleMap" scheme="https://pangz.fun/tags/GoogleMap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter - 在谷歌地图中突出显示任何区域</title>
-    <link href="https://pangz.fun/Flutter-%E2%80%94-Highlight-any-area-in-Google-Maps.html"/>
-    <id>https://pangz.fun/Flutter-%E2%80%94-Highlight-any-area-in-Google-Maps.html</id>
-    <published>2022-10-29T08:16:57.000Z</published>
-    <updated>2023-12-04T09:15:56.422Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;我们已经向您展示了如何在Flutter应用程序中添加谷歌地图和自定义标记。&lt;br&gt;让我们更进一步，向您展示如何在您的地图上添加一个圆圈，或识别一个特定的区域市、州或国家。&lt;/p&gt;
-&lt;img src=&quot;/Flutter-%E2%80%94-Highlight-any-area-in-Google-Maps/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
     
     
     
