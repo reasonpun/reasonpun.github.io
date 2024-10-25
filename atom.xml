@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-10-19T23:51:11.842Z</updated>
+  <updated>2024-10-25T07:41:49.529Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++中如何理解数理逻辑</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91.html</id>
+    <published>2024-10-25T07:41:04.000Z</published>
+    <updated>2024-10-25T07:41:49.529Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在NOIP（全国青少年信息学奥林匹克联赛）中，数理逻辑是一个重要的知识点，它涉及到命题逻辑的基本概念和操作。以下是一些关键的数理逻辑知识点，以及它们在C++编程中的应用示例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 数理逻辑" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/"/>
+    
+  </entry>
   
   <entry>
     <title>python中的多线程和多进程</title>
@@ -438,28 +457,6 @@
     
     <summary type="html">&lt;p&gt;通过本课，您将学习如何在Flutter中使用谷歌地图，并进行一些定制，如设置自定义图像标记和绘制路线方向折线。在地图上添加实时位置更新。&lt;/p&gt;
 &lt;img src=&quot;/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style/1.gif&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="GoogleMap" scheme="https://pangz.fun/tags/GoogleMap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter - 带有自定义标记的谷歌地图📍</title>
-    <link href="https://pangz.fun/Flutter-%E2%80%94-Google-Map-with-Custom-Marker.html"/>
-    <id>https://pangz.fun/Flutter-%E2%80%94-Google-Map-with-Custom-Marker.html</id>
-    <published>2022-10-29T08:21:16.000Z</published>
-    <updated>2023-12-04T09:15:56.414Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;让我们把谷歌地图添加到您的Flutter应用中，用一个花哨的标记来取代无聊的标记。&lt;/p&gt;
-&lt;img src=&quot;/Flutter-%E2%80%94-Google-Map-with-Custom-Marker/1.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
     
     
     
