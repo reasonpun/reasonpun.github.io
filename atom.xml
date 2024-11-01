@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-10-25T07:41:49.529Z</updated>
+  <updated>2024-11-01T09:10:37.647Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++中如何理解枚举</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%9E%9A%E4%B8%BE.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%9E%9A%E4%B8%BE.html</id>
+    <published>2024-11-01T09:09:21.000Z</published>
+    <updated>2024-11-01T09:10:37.647Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在C++中，枚举是一种常用的算法思想，用于有序地列举所有可能的情况或组合。在NOIP（全国青少年信息学奥林匹克竞赛）编程竞赛中，枚举是一项非常重要的技巧。本文将从枚举的基本概念、意义和应用场景展开，介绍几种典型的枚举方式，并结合示例进行讲解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 枚举" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%9E%9A%E4%B8%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>C++中如何理解数理逻辑</title>
@@ -444,28 +463,6 @@
     <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
     
     <category term="Intellij" scheme="https://pangz.fun/tags/Intellij/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>带有实时位置跟踪的Flutter谷歌地图--Uber风格</title>
-    <link href="https://pangz.fun/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html"/>
-    <id>https://pangz.fun/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style.html</id>
-    <published>2022-10-29T09:26:57.000Z</published>
-    <updated>2023-12-04T09:15:55.864Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;通过本课，您将学习如何在Flutter中使用谷歌地图，并进行一些定制，如设置自定义图像标记和绘制路线方向折线。在地图上添加实时位置更新。&lt;/p&gt;
-&lt;img src=&quot;/Flutter-Google-Map-With-Live-Location-Tracking-%E2%80%94-Uber-Style/1.gif&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="GoogleMap" scheme="https://pangz.fun/tags/GoogleMap/"/>
     
   </entry>
   
