@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-11-01T09:10:37.647Z</updated>
+  <updated>2024-11-08T08:33:13.750Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++中的函数递归调用</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8.html</id>
+    <published>2024-11-08T08:31:43.000Z</published>
+    <updated>2024-11-08T08:33:13.750Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-递归的基本概念&quot;&gt;&lt;a href=&quot;#1-递归的基本概念&quot; class=&quot;headerlink&quot; title=&quot;1. 递归的基本概念&quot;&gt;&lt;/a&gt;1. 递归的基本概念&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;递归（Recursion）&lt;/strong&gt; 是指一个函数直接或间接调用自身的编程技术。递归是解决问题的一种常用方法，尤其在涉及分治法、树形结构、回溯等算法时，递归往往能简化问题的解决过程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 递归" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
   
   <entry>
     <title>C++中如何理解枚举</title>
@@ -441,28 +460,6 @@
     
     
     <category term="API" scheme="https://pangz.fun/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每个Java开发者都必须知道的七个Intellij调试技巧</title>
-    <link href="https://pangz.fun/Seven-Intellij-Debug-Tricks-that-Every-Java-Developer-Must-Know.html"/>
-    <id>https://pangz.fun/Seven-Intellij-Debug-Tricks-that-Every-Java-Developer-Must-Know.html</id>
-    <published>2022-10-31T02:39:38.000Z</published>
-    <updated>2023-12-04T09:15:56.650Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;你知道这些窍门吗？这些肯定会提高你的开发效率。&lt;/p&gt;
-&lt;img src=&quot;/Seven-Intellij-Debug-Tricks-that-Every-Java-Developer-Must-Know/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Java" scheme="https://pangz.fun/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
-    
-    <category term="Intellij" scheme="https://pangz.fun/tags/Intellij/"/>
     
   </entry>
   
