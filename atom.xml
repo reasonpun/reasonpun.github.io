@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-11-08T08:33:13.750Z</updated>
+  <updated>2024-12-13T09:24:53.394Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++中的顺序搜索</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%90%9C%E7%B4%A2.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%90%9C%E7%B4%A2.html</id>
+    <published>2024-12-13T09:20:53.000Z</published>
+    <updated>2024-12-13T09:24:53.394Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;顺序查找，也称为线性查找，是一种最基本的查找技术，用于在数据结构（如数组或列表）中搜索特定的值。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 二分搜索" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中的二分搜索</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html</id>
+    <published>2024-12-13T09:19:07.000Z</published>
+    <updated>2024-12-13T09:19:49.545Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;二分查找是一种在有序数组中查找特定元素的高效算法。它的基本思想是将数组分成两半，然后根据目标值与中间元素的大小关系来决定是继续在左半部分还是右半部分进行查找，这个过程会不断重复，直到找到目标值或者搜索范围为空。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 二分搜索" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>C++中的函数递归调用</title>
@@ -421,45 +459,6 @@
     <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
     
     <category term="Nylo" scheme="https://pangz.fun/tags/Nylo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>是什么让Julia独树一帜？</title>
-    <link href="https://pangz.fun/What-Makes-Julia-Unique.html"/>
-    <id>https://pangz.fun/What-Makes-Julia-Unique.html</id>
-    <published>2022-11-02T12:12:15.000Z</published>
-    <updated>2023-12-04T09:15:56.747Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;看看multiple dispatch是如何将Julia与所有其他编程语言区分开来的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;img src=&quot;/What-Makes-Julia-Unique/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Julia" scheme="https://pangz.fun/categories/Julia/"/>
-    
-    
-    <category term="Julia" scheme="https://pangz.fun/tags/Julia/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>15个免费的API，你可以在自己的项目里试试</title>
-    <link href="https://pangz.fun/15-Free-APIs-for-your-Programming-Projects.html"/>
-    <id>https://pangz.fun/15-Free-APIs-for-your-Programming-Projects.html</id>
-    <published>2022-11-01T09:46:32.000Z</published>
-    <updated>2023-12-04T09:15:55.443Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;API是应用编程接口的意思。&lt;br&gt;作为一个程序员，使用外部工具是加快你想建立的项目开发的一个好方法。&lt;br&gt;API简化了开发者如何将新的应用组件集成到现有的架构中。&lt;br&gt;这里有15个API，你可以用它来帮助你启动一个惊人的项目。&lt;br&gt;每个程序员都应该在他们的编程项目中使用这15个API。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="API" scheme="https://pangz.fun/tags/API/"/>
     
   </entry>
   
