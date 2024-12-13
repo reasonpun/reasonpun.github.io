@@ -40,7 +40,7 @@
     <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html"/>
     <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html</id>
     <published>2024-12-13T09:19:07.000Z</published>
-    <updated>2024-12-13T09:19:49.545Z</updated>
+    <updated>2024-12-13T11:48:13.739Z</updated>
     
     
     <summary type="html">&lt;p&gt;二分查找是一种在有序数组中查找特定元素的高效算法。它的基本思想是将数组分成两半，然后根据目标值与中间元素的大小关系来决定是继续在左半部分还是右半部分进行查找，这个过程会不断重复，直到找到目标值或者搜索范围为空。&lt;/p&gt;</summary>
