@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-12-20T02:40:22.117Z</updated>
+  <updated>2024-12-27T09:22:38.656Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模拟加法器de代码解释</title>
+    <link href="https://pangz.fun/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html"/>
+    <id>https://pangz.fun/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html</id>
+    <published>2024-12-27T09:21:14.000Z</published>
+    <updated>2024-12-27T09:22:38.656Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;左移操作在加法器设计中的主要作用是处理和传递进位，这是实现二进制加法的核心。通过左移操作，我们可以模拟加法过程中的进位传递，从而实现两个数的精确相加。这种方法不仅适用于简单的加法器，也是现代计算机中算术逻辑单元（ALU）执行加法操作的基础。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 加法器" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%8A%A0%E6%B3%95%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中模拟算法</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%AE%97%E6%B3%95.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%AE%97%E6%B3%95.html</id>
+    <published>2024-12-27T09:17:25.000Z</published>
+    <updated>2024-12-27T09:20:50.477Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;C-中模拟算法详解与代码示例&quot;&gt;&lt;a href=&quot;#C-中模拟算法详解与代码示例&quot; class=&quot;headerlink&quot; title=&quot;C++中模拟算法详解与代码示例&quot;&gt;&lt;/a&gt;C++中模拟算法详解与代码示例&lt;/h1&gt;&lt;h2 id=&quot;📚-1-模拟算法简介&quot;&gt;&lt;a href=&quot;#📚-1-模拟算法简介&quot; class=&quot;headerlink&quot; title=&quot;📚 1. 模拟算法简介&quot;&gt;&lt;/a&gt;📚 1. 模拟算法简介&lt;/h2&gt;&lt;p&gt;模拟算法是一种通过代码直接模拟问题描述中所给出的操作或过程，来达到解决问题目的的算法思想。&lt;br&gt;模拟算法没有固定的模板，通常依赖对问题的理解和逐步还原操作流程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 模拟" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>C++中排序和复杂度</title>
@@ -411,52 +449,6 @@
     <category term="Microservices" scheme="https://pangz.fun/tags/Microservices/"/>
     
     <category term="Design Patterns" scheme="https://pangz.fun/tags/Design-Patterns/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter游戏开发 初探Bonfire</title>
-    <link href="https://pangz.fun/Flutter-games-exploring-Bonfire.html"/>
-    <id>https://pangz.fun/Flutter-games-exploring-Bonfire.html</id>
-    <published>2022-12-16T03:03:47.000Z</published>
-    <updated>2023-12-04T09:15:56.411Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;新的工具包 “Flutter Casual Games Toolkit “已随Flutter 3.0公布。它并不假装是任何问题的通用解决方案，但我们看到它是如何向游戏开发迈出 “官方 “的第一步。&lt;/p&gt;
-&lt;p&gt;还有其他工具，其中最强大的是Flame框架。在Flame的基础上建立了 “Bonfire”–一个游戏开发框架。它看起来至少是开发RPG游戏的最简单的框架。&lt;/p&gt;
-&lt;img src=&quot;/Flutter-games-exploring-Bonfire/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/categories/Flutter/"/>
-    
-    
-    <category term="Flutter" scheme="https://pangz.fun/tags/Flutter/"/>
-    
-    <category term="Bonfire" scheme="https://pangz.fun/tags/Bonfire/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>8个必须知道的Stream API使用方法</title>
-    <link href="https://pangz.fun/8-Must-know-Stream-API-Usages.html"/>
-    <id>https://pangz.fun/8-Must-know-Stream-API-Usages.html</id>
-    <published>2022-12-16T02:46:01.000Z</published>
-    <updated>2023-12-04T09:15:55.539Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/8-Must-know-Stream-API-Usages/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;作为一名java开发工程师，数组和集合在我的代码中随处可见。我经常使用集合或数组来处理数据，如过滤和对象转换。我相信大家对数组的数据处理已经非常熟悉了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Java" scheme="https://pangz.fun/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://pangz.fun/tags/Java/"/>
-    
-    <category term="StreamAPI" scheme="https://pangz.fun/tags/StreamAPI/"/>
     
   </entry>
   
