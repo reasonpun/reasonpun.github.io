@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-12-27T09:22:38.656Z</updated>
+  <updated>2024-12-27T09:33:32.902Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>逻辑运算知识点: 3 &lt;= i &lt;= 5</title>
+    <link href="https://pangz.fun/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html"/>
+    <id>https://pangz.fun/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html</id>
+    <published>2024-12-27T09:22:54.000Z</published>
+    <updated>2024-12-27T09:33:32.902Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以下是将您提供的内容转换成Markdown格式的文本：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-markdown&quot; data-language=&quot;markdown&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 逻辑运算" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>模拟加法器de代码解释</title>
@@ -426,29 +452,6 @@
     <category term="Microservices" scheme="https://pangz.fun/tags/Microservices/"/>
     
     <category term="设计模式" scheme="https://pangz.fun/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你知道微服务和其设计模式吗？</title>
-    <link href="https://pangz.fun/Do-you-know-about-Microservices-and-their-Design-Patterns.html"/>
-    <id>https://pangz.fun/Do-you-know-about-Microservices-and-their-Design-Patterns.html</id>
-    <published>2023-02-15T00:24:50.000Z</published>
-    <updated>2023-12-04T09:15:55.604Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Do-you-know-about-Microservices-and-their-Design-Patterns/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;大家好。&lt;br&gt;在这篇文章中，我们将看到微服务架构，以及它与单体应用的区别。还将看到什么是微服务设计模式和不同的类型。&lt;br&gt;然后，我们将看到微服务架构的优势和劣势，以结束这篇文章。&lt;br&gt;让我们开始吧！&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Microservices" scheme="https://pangz.fun/categories/Microservices/"/>
-    
-    
-    <category term="Microservices" scheme="https://pangz.fun/tags/Microservices/"/>
-    
-    <category term="Design Patterns" scheme="https://pangz.fun/tags/Design-Patterns/"/>
     
   </entry>
   

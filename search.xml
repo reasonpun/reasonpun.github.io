@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>逻辑运算知识点: 3 &lt;= i &lt;= 5</title>
+      <link href="/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html"/>
+      <url>/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html</url>
+      
+        <content type="html"><![CDATA[<p>以下是将您提供的内容转换成Markdown格式的文本：</p><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 在 C++ 中，表达式 `3 &lt;= i &lt;= 5` 的解析</span>在 C++ 中，表达式 <span class="token code-snippet code keyword">`3 &lt;= i &lt;= 5`</span> 并不是你可能预期的 "i 在 3 到 5 之间" 的意思。实际上，这个表达式是由两个比较操作符构成的，具体含义如下：<span class="token title important"><span class="token punctuation">##</span> 解析步骤：</span><span class="token list punctuation">1.</span> <span class="token code-snippet code keyword">`3 &lt;= i`</span>：首先，比较 3 是否小于或等于 i。   <span class="token list punctuation">-</span> 如果 i 的值大于或等于 3，则 <span class="token code-snippet code keyword">`3 &lt;= i`</span> 的结果为 true（即 1），否则为 false（即 0）。<span class="token list punctuation">2.</span> <span class="token code-snippet code keyword">`(结果) &lt;= 5`</span>：然后，将上一步的结果与 5 进行比较。   <span class="token list punctuation">-</span> 如果 <span class="token code-snippet code keyword">`3 &lt;= i`</span> 的结果是 true（即 1），那么 1 &lt;= 5，这个表达式的结果为 true。   <span class="token list punctuation">-</span> 如果 <span class="token code-snippet code keyword">`3 &lt;= i`</span> 的结果是 false（即 0），那么 0 &lt;= 5，这个表达式的结果仍然是 true。<span class="token title important"><span class="token punctuation">##</span> 举个例子：</span><span class="token list punctuation">-</span> 当 i = 4 时：  <span class="token list punctuation">-</span> <span class="token code-snippet code keyword">`3 &lt;= 4`</span> 是 true，即 1。  <span class="token list punctuation">-</span> 然后，1 &lt;= 5 也是 true，所以整个表达式 <span class="token code-snippet code keyword">`3 &lt;= 4 &lt;= 5`</span> 的结果是 true。<span class="token list punctuation">-</span> 当 i = 2 时：  <span class="token list punctuation">-</span> <span class="token code-snippet code keyword">`3 &lt;= 2`</span> 是 false，即 0。  <span class="token list punctuation">-</span> 然后，0 &lt;= 5 是 true，所以整个表达式 <span class="token code-snippet code keyword">`3 &lt;= 2 &lt;= 5`</span> 的结果是 true。<span class="token list punctuation">-</span> 当 i = 6 时：  <span class="token list punctuation">-</span> <span class="token code-snippet code keyword">`3 &lt;= 6`</span> 是 true，即 1。  <span class="token list punctuation">-</span> 然后，1 &lt;= 5 是 true，所以整个表达式 <span class="token code-snippet code keyword">`3 &lt;= 6 &lt;= 5`</span> 的结果是 true。<span class="token title important"><span class="token punctuation">##</span> 总结：</span><span class="token code-snippet code keyword">`3 &lt;= i &lt;= 5`</span> 实际上会被解释为：<span class="token list punctuation">-</span> 先计算 <span class="token code-snippet code keyword">`3 &lt;= i`</span> 的结果（true 或 false），然后<span class="token list punctuation">-</span> 再检查这个结果是否小于或等于 5。这意味着，<span class="token code-snippet code keyword">`3 &lt;= i &lt;= 5`</span> 可能不会按你期望的方式工作，它的实际行为可能不符合数学上的 <span class="token code-snippet code keyword">`3 &lt;= i &lt;= 5`</span> 这一不等式的意义。如果你想检查 i 是否在 3 到 5 的范围内，应该使用：```cpp3 &lt;= i &amp;&amp; i &lt;= 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这样，表达式会先判断 i 是否大于或等于 3，再判断 i 是否小于或等于 5，确保结果符合你预期的范围判断。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 逻辑运算 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模拟加法器de代码解释</title>
       <link href="/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html"/>
       <url>/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html</url>
