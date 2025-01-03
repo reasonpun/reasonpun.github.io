@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2024-12-27T12:45:57.768Z</updated>
+  <updated>2025-01-03T09:05:11.807Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++Dijkstra算法</title>
+    <link href="https://pangz.fun/C-Dijkstra%E7%AE%97%E6%B3%95.html"/>
+    <id>https://pangz.fun/C-Dijkstra%E7%AE%97%E6%B3%95.html</id>
+    <published>2025-01-03T09:00:35.000Z</published>
+    <updated>2025-01-03T09:05:11.807Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;📚-Dijkstra-算法详解（C-）&quot;&gt;&lt;a href=&quot;#📚-Dijkstra-算法详解（C-）&quot; class=&quot;headerlink&quot; title=&quot;📚 Dijkstra 算法详解（C++）&quot;&gt;&lt;/a&gt;📚 &lt;strong&gt;Dijkstra 算法详解（C++）&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-什么是-Dijkstra-算法？&quot;&gt;&lt;a href=&quot;#1-什么是-Dijkstra-算法？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 Dijkstra 算法？&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 什么是 Dijkstra 算法？&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Dijkstra 算法&lt;/strong&gt;是一种用于&lt;strong&gt;计算单源最短路径&lt;/strong&gt;的经典算法。它可以在&lt;strong&gt;加权有向图或无向图&lt;/strong&gt;中找到&lt;strong&gt;从起点到其他所有节点的最短路径&lt;/strong&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 Dijkstra算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-Dijkstra%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++哈夫曼编码</title>
+    <link href="https://pangz.fun/C-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81.html"/>
+    <id>https://pangz.fun/C-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81.html</id>
+    <published>2025-01-03T08:57:05.000Z</published>
+    <updated>2025-01-03T09:01:14.317Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;📚-哈夫曼编码（Huffman-Coding）详解&quot;&gt;&lt;a href=&quot;#📚-哈夫曼编码（Huffman-Coding）详解&quot; class=&quot;headerlink&quot; title=&quot;📚 哈夫曼编码（Huffman Coding）详解&quot;&gt;&lt;/a&gt;📚 &lt;strong&gt;哈夫曼编码（Huffman Coding）详解&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-什么是哈夫曼编码？&quot;&gt;&lt;a href=&quot;#1-什么是哈夫曼编码？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是哈夫曼编码？&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 什么是哈夫曼编码？&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;哈夫曼编码（Huffman Coding）&lt;/strong&gt; 是一种广泛使用的&lt;strong&gt;数据压缩算法&lt;/strong&gt;，用于减少数据传输和存储所需的空间。它属于一种&lt;strong&gt;前缀编码&lt;/strong&gt;（Prefix Code），即任意一个字符的编码都不会是另一个字符编码的前缀，避免了解码歧义。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 哈夫曼编码" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++贪心算法</title>
+    <link href="https://pangz.fun/C-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.html"/>
+    <id>https://pangz.fun/C-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.html</id>
+    <published>2025-01-03T08:53:53.000Z</published>
+    <updated>2025-01-03T08:56:06.482Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;📚-C-中贪心算法详解&quot;&gt;&lt;a href=&quot;#📚-C-中贪心算法详解&quot; class=&quot;headerlink&quot; title=&quot;📚 C++ 中贪心算法详解&quot;&gt;&lt;/a&gt;📚 C++ 中贪心算法详解&lt;/h1&gt;&lt;h2 id=&quot;1-贪心算法的定义&quot;&gt;&lt;a href=&quot;#1-贪心算法的定义&quot; class=&quot;headerlink&quot; title=&quot;1. 贪心算法的定义&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 贪心算法的定义&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;贪心算法&lt;/strong&gt;（Greedy Algorithm）是一种在每一步选择中都采取当前状态下&lt;strong&gt;局部最优&lt;/strong&gt;的选择，以期最终达到&lt;strong&gt;全局最优解&lt;/strong&gt;的算法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 贪心算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>逻辑运算知识点: 3 &lt;= i &lt;= 5</title>
@@ -372,85 +429,6 @@
     <category term="System" scheme="https://pangz.fun/tags/System/"/>
     
     <category term="Design" scheme="https://pangz.fun/tags/Design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024 年十大数据和人工智能趋势</title>
-    <link href="https://pangz.fun/Top-10-Data-AI-Trends-for-2024.html"/>
-    <id>https://pangz.fun/Top-10-Data-AI-Trends-for-2024.html</id>
-    <published>2024-07-22T04:54:11.000Z</published>
-    <updated>2024-07-24T01:42:52.920Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Top-10-Data-AI-Trends-for-2024/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;数据和人工智能领域发展迅速。如果你不能经常停下来多瞅瞅这个，你可能会错过它。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="大数据" scheme="https://pangz.fun/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-    <category term="人工智能" scheme="https://pangz.fun/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    
-    <category term="大数据" scheme="https://pangz.fun/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-    <category term="人工智能" scheme="https://pangz.fun/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>14个免费教程让你开始使用Web3</title>
-    <link href="https://pangz.fun/14-Free-Tutorials-to-Get-You-Started-with-Web3.html"/>
-    <id>https://pangz.fun/14-Free-Tutorials-to-Get-You-Started-with-Web3.html</id>
-    <published>2023-02-20T11:13:43.000Z</published>
-    <updated>2023-12-04T09:15:55.437Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/14-Free-Tutorials-to-Get-You-Started-with-Web3/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;你可能听说过这样一句话–当所有人都在挖金子的时候，做镐头和铲子的生意就好了。&lt;/p&gt;
-&lt;p&gt;Binance、Coinbase和其他加密货币交易所以这种方式获利。同样，各种公司也在不断涌现，在给消费者带来价值的同时也在赚钱。&lt;/p&gt;
-&lt;p&gt;人们也对投资加密货币感兴趣。&lt;br&gt;是的，我们大多数人都专注于购买更多的比特币和以太坊，因为我们相信加密货币在未来会暴涨。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web3" scheme="https://pangz.fun/categories/Web3/"/>
-    
-    
-    <category term="Web3" scheme="https://pangz.fun/tags/Web3/"/>
-    
-    <category term="Tutorials" scheme="https://pangz.fun/tags/Tutorials/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6个容易上手的编程副业，每月赚取1,000多美元</title>
-    <link href="https://pangz.fun/6-Easy-to-Start-Programming-Side-Hustle-to-Earn-1-000-A-Month.html"/>
-    <id>https://pangz.fun/6-Easy-to-Start-Programming-Side-Hustle-to-Earn-1-000-A-Month.html</id>
-    <published>2023-02-17T01:33:15.000Z</published>
-    <updated>2023-12-04T09:15:55.486Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/6-Easy-to-Start-Programming-Side-Hustle-to-Earn-1-000-A-Month/1.jpeg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;本文转自 Nitin Sharma 的博客&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;你们中的大多数人都读过这样的故事，希望其中一些能帮助你们产生更多的钱。&lt;/p&gt;
-&lt;p&gt;嗯，几年前我也是这样的人。我希望能尝试一些新的副业，赚点钱。其中一个视频建议我在网上写作，此后我制作了许多技术文章。&lt;/p&gt;
-&lt;p&gt;而在这个过程中，我开展了多项副业，在全职工作之外还产生了被动收入，并认识了几位专家，从他们那里我又学到了很多。&lt;/p&gt;
-&lt;p&gt;因此，基于这一篇文章，我将协助你开始你的副业，甚至与你分享收入证明以资鼓励。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Microservices" scheme="https://pangz.fun/categories/Microservices/"/>
-    
-    
-    <category term="Microservices" scheme="https://pangz.fun/tags/Microservices/"/>
-    
-    <category term="设计模式" scheme="https://pangz.fun/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
