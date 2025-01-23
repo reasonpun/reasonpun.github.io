@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>酷学小栈</title>
+  <icon>https://pangz.fun/icon.png</icon>
+  <subtitle>还要再走500里</subtitle>
+  <link href="https://pangz.fun/atom.xml" rel="self"/>
+  
+  <link href="https://pangz.fun/"/>
+  <updated>2025-01-23T09:09:20.454Z</updated>
+  <id>https://pangz.fun/</id>
+  
+  <author>
+    <name>木辛念做梓</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++图论基础-概念和遍历</title>
+    <link href="https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%A6%82%E5%BF%B5%E5%92%8C%E9%81%8D%E5%8E%86.html"/>
+    <id>https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%A6%82%E5%BF%B5%E5%92%8C%E9%81%8D%E5%8E%86.html</id>
+    <published>2025-01-17T07:52:23.000Z</published>
+    <updated>2025-01-23T09:09:20.454Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-图的定义和基本概念&quot;&gt;&lt;a href=&quot;#1-图的定义和基本概念&quot; class=&quot;headerlink&quot; title=&quot;1. 图的定义和基本概念&quot;&gt;&lt;/a&gt;1. 图的定义和基本概念&lt;/h3&gt;&lt;p&gt;在图论中，图（Graph）是由顶点（Vertex）和边（Edge）构成的集合。我们可以通过图来表示各种关系，比如社交网络中的人际关系、城市交通中的路线等。图的基本元素包括顶点和边。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 图论" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%9B%BE%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++Dijkstra算法</title>
+    <link href="https://pangz.fun/C-Dijkstra%E7%AE%97%E6%B3%95.html"/>
+    <id>https://pangz.fun/C-Dijkstra%E7%AE%97%E6%B3%95.html</id>
+    <published>2025-01-03T09:00:35.000Z</published>
+    <updated>2025-01-23T09:09:20.436Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;📚-Dijkstra-算法详解（C-）&quot;&gt;&lt;a href=&quot;#📚-Dijkstra-算法详解（C-）&quot; class=&quot;headerlink&quot; title=&quot;📚 Dijkstra 算法详解（C++）&quot;&gt;&lt;/a&gt;📚 &lt;strong&gt;Dijkstra 算法详解（C++）&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-什么是-Dijkstra-算法？&quot;&gt;&lt;a href=&quot;#1-什么是-Dijkstra-算法？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 Dijkstra 算法？&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 什么是 Dijkstra 算法？&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Dijkstra 算法&lt;/strong&gt;是一种用于&lt;strong&gt;计算单源最短路径&lt;/strong&gt;的经典算法。它可以在&lt;strong&gt;加权有向图或无向图&lt;/strong&gt;中找到&lt;strong&gt;从起点到其他所有节点的最短路径&lt;/strong&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 Dijkstra算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-Dijkstra%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++哈夫曼编码</title>
+    <link href="https://pangz.fun/C-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81.html"/>
+    <id>https://pangz.fun/C-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81.html</id>
+    <published>2025-01-03T08:57:05.000Z</published>
+    <updated>2025-01-23T09:09:20.452Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;📚-哈夫曼编码（Huffman-Coding）详解&quot;&gt;&lt;a href=&quot;#📚-哈夫曼编码（Huffman-Coding）详解&quot; class=&quot;headerlink&quot; title=&quot;📚 哈夫曼编码（Huffman Coding）详解&quot;&gt;&lt;/a&gt;📚 &lt;strong&gt;哈夫曼编码（Huffman Coding）详解&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-什么是哈夫曼编码？&quot;&gt;&lt;a href=&quot;#1-什么是哈夫曼编码？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是哈夫曼编码？&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 什么是哈夫曼编码？&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;哈夫曼编码（Huffman Coding）&lt;/strong&gt; 是一种广泛使用的&lt;strong&gt;数据压缩算法&lt;/strong&gt;，用于减少数据传输和存储所需的空间。它属于一种&lt;strong&gt;前缀编码&lt;/strong&gt;（Prefix Code），即任意一个字符的编码都不会是另一个字符编码的前缀，避免了解码歧义。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 哈夫曼编码" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++贪心算法</title>
+    <link href="https://pangz.fun/C-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.html"/>
+    <id>https://pangz.fun/C-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.html</id>
+    <published>2025-01-03T08:53:53.000Z</published>
+    <updated>2025-01-23T09:09:20.454Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;📚-C-中贪心算法详解&quot;&gt;&lt;a href=&quot;#📚-C-中贪心算法详解&quot; class=&quot;headerlink&quot; title=&quot;📚 C++ 中贪心算法详解&quot;&gt;&lt;/a&gt;📚 C++ 中贪心算法详解&lt;/h1&gt;&lt;h2 id=&quot;1-贪心算法的定义&quot;&gt;&lt;a href=&quot;#1-贪心算法的定义&quot; class=&quot;headerlink&quot; title=&quot;1. 贪心算法的定义&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 贪心算法的定义&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;贪心算法&lt;/strong&gt;（Greedy Algorithm）是一种在每一步选择中都采取当前状态下&lt;strong&gt;局部最优&lt;/strong&gt;的选择，以期最终达到&lt;strong&gt;全局最优解&lt;/strong&gt;的算法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 贪心算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>逻辑运算知识点: 3 &lt;= i &lt;= 5</title>
+    <link href="https://pangz.fun/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html"/>
+    <id>https://pangz.fun/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html</id>
+    <published>2024-12-27T09:22:54.000Z</published>
+    <updated>2025-01-23T09:09:22.110Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-C-中，表达式-3&quot;&gt;&lt;a href=&quot;#在-C-中，表达式-3&quot; class=&quot;headerlink&quot; title=&quot;在 C++ 中，表达式 3 &lt;= i &lt;= 5 的解析&quot;&gt;&lt;/a&gt;在 C++ 中，表达式 &lt;code&gt;3 &amp;lt;= i &amp;lt;=</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 逻辑运算" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模拟加法器de代码解释</title>
+    <link href="https://pangz.fun/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html"/>
+    <id>https://pangz.fun/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html</id>
+    <published>2024-12-27T09:21:14.000Z</published>
+    <updated>2025-01-23T09:09:22.110Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;左移操作在加法器设计中的主要作用是处理和传递进位，这是实现二进制加法的核心。通过左移操作，我们可以模拟加法过程中的进位传递，从而实现两个数的精确相加。这种方法不仅适用于简单的加法器，也是现代计算机中算术逻辑单元（ALU）执行加法操作的基础。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 加法器" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%8A%A0%E6%B3%95%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中模拟算法</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%AE%97%E6%B3%95.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%AE%97%E6%B3%95.html</id>
+    <published>2024-12-27T09:17:25.000Z</published>
+    <updated>2025-01-23T09:09:20.447Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;C-中模拟算法详解与代码示例&quot;&gt;&lt;a href=&quot;#C-中模拟算法详解与代码示例&quot; class=&quot;headerlink&quot; title=&quot;C++中模拟算法详解与代码示例&quot;&gt;&lt;/a&gt;C++中模拟算法详解与代码示例&lt;/h1&gt;&lt;h2 id=&quot;📚-1-模拟算法简介&quot;&gt;&lt;a href=&quot;#📚-1-模拟算法简介&quot; class=&quot;headerlink&quot; title=&quot;📚 1. 模拟算法简介&quot;&gt;&lt;/a&gt;📚 1. 模拟算法简介&lt;/h2&gt;&lt;p&gt;模拟算法是一种通过代码直接模拟问题描述中所给出的操作或过程，来达到解决问题目的的算法思想。&lt;br&gt;模拟算法没有固定的模板，通常依赖对问题的理解和逐步还原操作流程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 模拟" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中排序和复杂度</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E6%8E%92%E5%BA%8F%E5%92%8C%E5%A4%8D%E6%9D%82%E5%BA%A6.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E6%8E%92%E5%BA%8F%E5%92%8C%E5%A4%8D%E6%9D%82%E5%BA%A6.html</id>
+    <published>2024-12-20T02:33:55.000Z</published>
+    <updated>2025-01-23T09:09:20.441Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;C-中排序算法详解&quot;&gt;&lt;a href=&quot;#C-中排序算法详解&quot; class=&quot;headerlink&quot; title=&quot;C++ 中排序算法详解&quot;&gt;&lt;/a&gt;C++ 中排序算法详解&lt;/h1&gt;&lt;p&gt;排序算法是计算机科学中的基础内容之一，用于按特定顺序排列元素。C++ 提供了多种排序算法，常见的排序方法包括&lt;strong&gt;快速排序&lt;/strong&gt;、&lt;strong&gt;插入排序&lt;/strong&gt;和&lt;strong&gt;希尔排序&lt;/strong&gt;。本文将详细讲解这些排序算法的概念、实现及其时间复杂度分析。&lt;/p&gt;
+&lt;img src=&quot;/C-%E4%B8%AD%E6%8E%92%E5%BA%8F%E5%92%8C%E5%A4%8D%E6%9D%82%E5%BA%A6/time_complexity_trend.jpg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 排序" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中的顺序搜索</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%90%9C%E7%B4%A2.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%90%9C%E7%B4%A2.html</id>
+    <published>2024-12-13T09:20:53.000Z</published>
+    <updated>2025-01-23T09:09:20.451Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;顺序查找，也称为线性查找，是一种最基本的查找技术，用于在数据结构（如数组或列表）中搜索特定的值。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 二分搜索" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中的二分搜索</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html</id>
+    <published>2024-12-13T09:19:07.000Z</published>
+    <updated>2025-01-23T09:09:20.447Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;二分查找是一种在有序数组中查找特定元素的高效算法。它的基本思想是将数组分成两半，然后根据目标值与中间元素的大小关系来决定是继续在左半部分还是右半部分进行查找，这个过程会不断重复，直到找到目标值或者搜索范围为空。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 二分搜索" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中的函数递归调用</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8.html</id>
+    <published>2024-11-08T08:31:43.000Z</published>
+    <updated>2025-01-23T09:09:20.449Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-递归的基本概念&quot;&gt;&lt;a href=&quot;#1-递归的基本概念&quot; class=&quot;headerlink&quot; title=&quot;1. 递归的基本概念&quot;&gt;&lt;/a&gt;1. 递归的基本概念&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;递归（Recursion）&lt;/strong&gt; 是指一个函数直接或间接调用自身的编程技术。递归是解决问题的一种常用方法，尤其在涉及分治法、树形结构、回溯等算法时，递归往往能简化问题的解决过程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 递归" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中如何理解枚举</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%9E%9A%E4%B8%BE.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%9E%9A%E4%B8%BE.html</id>
+    <published>2024-11-01T09:09:21.000Z</published>
+    <updated>2025-01-23T09:09:20.436Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在C++中，枚举是一种常用的算法思想，用于有序地列举所有可能的情况或组合。在NOIP（全国青少年信息学奥林匹克竞赛）编程竞赛中，枚举是一项非常重要的技巧。本文将从枚举的基本概念、意义和应用场景展开，介绍几种典型的枚举方式，并结合示例进行讲解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 枚举" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%9E%9A%E4%B8%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中如何理解数理逻辑</title>
+    <link href="https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91.html"/>
+    <id>https://pangz.fun/C-%E4%B8%AD%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91.html</id>
+    <published>2024-10-25T07:41:04.000Z</published>
+    <updated>2025-01-23T09:09:20.436Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在NOIP（全国青少年信息学奥林匹克联赛）中，数理逻辑是一个重要的知识点，它涉及到命题逻辑的基本概念和操作。以下是一些关键的数理逻辑知识点，以及它们在C++编程中的应用示例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 数理逻辑" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python中的多线程和多进程</title>
+    <link href="https://pangz.fun/python%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%A4%9A%E8%BF%9B%E7%A8%8B.html"/>
+    <id>https://pangz.fun/python%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%A4%9A%E8%BF%9B%E7%A8%8B.html</id>
+    <published>2024-10-19T23:49:13.000Z</published>
+    <updated>2025-01-23T09:09:22.074Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-Python中的多线程与多进程&quot;&gt;&lt;a href=&quot;#1-Python中的多线程与多进程&quot; class=&quot;headerlink&quot; title=&quot;1. Python中的多线程与多进程&quot;&gt;&lt;/a&gt;1. Python中的多线程与多进程&lt;/h3&gt;&lt;p&gt;Python支持&lt;strong&gt;多线程&lt;/strong&gt;和&lt;strong&gt;多进程&lt;/strong&gt;，用以处理并发任务。了解这两者的优缺点、适用场景以及实现方式，有助于根据应用需求选择合适的并发处理方式。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://pangz.fun/categories/Python/"/>
+    
+    
+    <category term="多线程 多进程" scheme="https://pangz.fun/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c++中的排列的概念</title>
+    <link href="https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E6%8E%92%E5%88%97%E7%9A%84%E6%A6%82%E5%BF%B5.html"/>
+    <id>https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E6%8E%92%E5%88%97%E7%9A%84%E6%A6%82%E5%BF%B5.html</id>
+    <published>2024-10-18T09:11:53.000Z</published>
+    <updated>2025-01-23T09:09:21.991Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-什么是排列？&quot;&gt;&lt;a href=&quot;#1-什么是排列？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是排列？&quot;&gt;&lt;/a&gt;1. 什么是排列？&lt;/h2&gt;&lt;p&gt;在数学中，&lt;strong&gt;排列&lt;/strong&gt;指的是从一组不同的元素中选出一部分，并按照一定的顺序进行排列。比如，如果你有三个字母 ( {A, B, C} )，那么它们的排列就是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ABC, ACB, BAC, BCA, CAB, CBA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看到，每个排列都包括了所有的元素，并且它们的顺序不同。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 排列" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c++中的组合的概念</title>
+    <link href="https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E7%BB%84%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5.html"/>
+    <id>https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E7%BB%84%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5.html</id>
+    <published>2024-10-18T09:10:12.000Z</published>
+    <updated>2025-01-23T09:09:21.992Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-什么是组合？&quot;&gt;&lt;a href=&quot;#1-什么是组合？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是组合？&quot;&gt;&lt;/a&gt;1. 什么是组合？&lt;/h2&gt;&lt;p&gt;在数学中，&lt;strong&gt;组合&lt;/strong&gt;是从一组元素中选择出若干个元素，不考虑元素的排列顺序。例如，假设有三个字母 ( {A, B, C} )，如果我们想要从中选择两个字母，组合的结果有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AB, AC, BC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意：组合与排列不同，组合只关心选择哪些元素，不考虑这些元素的顺序。因此，组合中的 AB 和 BA 被认为是相同的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 组合" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E7%BB%84%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高精度计算</title>
+    <link href="https://pangz.fun/High-Precision-Computation.html"/>
+    <id>https://pangz.fun/High-Precision-Computation.html</id>
+    <published>2024-10-05T11:08:29.000Z</published>
+    <updated>2025-01-23T09:09:21.637Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;高精度计算（High-Precision Computation）是指在计算机中处理超过内置数据类型（如 &lt;code&gt;int&lt;/code&gt;、&lt;code&gt;long&lt;/code&gt;、&lt;code&gt;float&lt;/code&gt;、&lt;code&gt;double&lt;/code&gt;）所能表示的数值范围和精度的数值计算。在许多应用场景中，如科学计算、加密算法、大数运算、金融分析等，高精度计算是必不可少的。本文将详细介绍 C++ 中实现高精度计算的相关知识点，包括基本概念、实现方法、常用库及示例代码。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>冒泡排序（Bubble Sort）详解</title>
+    <link href="https://pangz.fun/Bubble-Sort.html"/>
+    <id>https://pangz.fun/Bubble-Sort.html</id>
+    <published>2024-10-05T10:58:53.000Z</published>
+    <updated>2025-01-23T09:09:20.424Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;冒泡排序（Bubble-Sort）详解&quot;&gt;&lt;a href=&quot;#冒泡排序（Bubble-Sort）详解&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序（Bubble Sort）详解&quot;&gt;&lt;/a&gt;冒泡排序（Bubble Sort）详解&lt;/h3&gt;&lt;p&gt;冒泡排序是一种简单的排序算法，其工作原理是通过重复遍历要排序的数列，比较相邻的元素并在顺序错误的情况下交换它们。遍历数列的工作是重复进行的，直到没有需要交换的元素为止，这时数列已经排序完成。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Bubble Sort" scheme="https://pangz.fun/categories/Bubble-Sort/"/>
+    
+    
+    <category term="Sort" scheme="https://pangz.fun/tags/Sort/"/>
+    
+    <category term="算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中位运算讲解</title>
+    <link href="https://pangz.fun/c-bitset.html"/>
+    <id>https://pangz.fun/c-bitset.html</id>
+    <published>2024-08-08T01:08:30.000Z</published>
+    <updated>2025-01-23T09:09:21.986Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/c-bitset/1.png&quot; class=&quot;&quot; title=&quot;示意图</summary>
+        
+      
+    
+    
+    
+    <category term="C++ Bit" scheme="https://pangz.fun/categories/C-Bit/"/>
+    
+    
+    <category term="C++" scheme="https://pangz.fun/tags/C/"/>
+    
+    <category term="Bit" scheme="https://pangz.fun/tags/Bit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微服务之间共享数据</title>
+    <link href="https://pangz.fun/Sharing-Data-Between-Microservices.html"/>
+    <id>https://pangz.fun/Sharing-Data-Between-Microservices.html</id>
+    <published>2024-07-26T03:32:02.000Z</published>
+    <updated>2025-01-23T09:09:21.845Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/Sharing-Data-Between-Microservices/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;当我开始使用微服务时，我对“两个服务不能共享数据源”这一常见规则的理解过于字面化了。&lt;/p&gt;
+&lt;p&gt;我在互联网上到处都看到这个规定：“你不应该在两个服务之间共享数据库”，这确实有道理。一个服务必须拥有自己的数据，并保留按照自己的意愿更改其模式的自由，而不需要更改其面向外部的API。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Microservices" scheme="https://pangz.fun/categories/Microservices/"/>
+    
+    
+    <category term="Data" scheme="https://pangz.fun/tags/Data/"/>
+    
+    <category term="Sharing" scheme="https://pangz.fun/tags/Sharing/"/>
+    
+  </entry>
+  
+</feed>

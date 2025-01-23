@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png"><link rel="mask-icon" href="/images/logo.svg" color="#222"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous"><script class="next-config" data-name="main" type="application/json">{"hostname":"pangz.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592202470693653" crossorigin="anonymous"></script><meta name="description" content="Spark计算框架在Docker中的部署步骤"><meta property="og:type" content="article"><meta property="og:title" content="Docker中搭建Spark计算框架"><meta property="og:url" content="https://pangz.fun/2015-12-04-spark-in-docker.html"><meta property="og:site_name" content="酷学小栈"><meta property="og:description" content="Spark计算框架在Docker中的部署步骤"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2015-12-04T10:02:16.000Z"><meta property="article:modified_time" content="2025-01-23T09:09:20.167Z"><meta property="article:author" content="木辛念做梓"><meta property="article:tag" content="Spark"><meta property="article:tag" content="Docker"><meta name="twitter:card" content="summary"><link rel="canonical" href="https://pangz.fun/2015-12-04-spark-in-docker.html"><script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://pangz.fun/2015-12-04-spark-in-docker.html","path":"2015-12-04-spark-in-docker.html","title":"Docker中搭建Spark计算框架"}</script><script class="next-config" data-name="calendar" type="application/json">""</script><title>Docker中搭建Spark计算框架 | 酷学小栈</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-1HVT1YE421"></script><script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-1HVT1YE421","only_pageview":false}</script><script src="/js/third-party/analytics/google-analytics.js"></script><link rel="stylesheet" type="text/css" href="/css/injector/main.css"><link rel="preload" as="style" href="/css/injector/light.css"><link rel="preload" as="style" href="/css/injector/dark.css"><noscript><link rel="stylesheet" href="/css/noscript.css"></noscript><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="酷学小栈" type="application/atom+xml"></head><body itemscope itemtype="http://schema.org/WebPage" class="use-motion"><div class="headband"></div><main class="main"><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏" role="button"><span class="toggle-line"></span> <span class="toggle-line"></span> <span class="toggle-line"></span></div></div><div class="site-meta"><a href="/" class="brand" rel="start"><i class="logo-line"></i><p class="site-title">酷学小栈</p><i class="logo-line"></i></a><p class="site-subtitle" itemprop="description">还要再走500里</p></div><div class="site-nav-right"><div class="toggle popup-trigger"></div></div></div><nav class="site-nav"><ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li></ul></nav></div><div class="toggle sidebar-toggle" role="button"><span class="toggle-line"></span> <span class="toggle-line"></span> <span class="toggle-line"></span></div><aside class="sidebar"><div class="sidebar-inner sidebar-nav-active sidebar-toc-active"><ul class="sidebar-nav"><li class="sidebar-nav-toc">文章目录</li><li class="sidebar-nav-overview">站点概览</li></ul><div class="sidebar-panel-container"><div class="post-toc-wrap sidebar-panel"><div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%A5%BDDocker%E4%B9%8B%E5%90%8E"><span class="nav-number">1.</span> <span class="nav-text">安装好Docker之后</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%88%E6%8B%89%E5%8F%96%E4%B8%80%E4%B8%AA%E5%AE%98%E6%96%B9%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%95%9C%E5%83%8Fubuntu"><span class="nav-number">2.</span> <span class="nav-text">先拉取一个官方的基本镜像ubuntu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%8Cubuntu%E9%95%9C%E5%83%8F%E4%B9%8B%E5%90%8E%E8%BF%90%E8%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">下载完ubuntu镜像之后运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cubuntu%E5%AE%B9%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">运行ubuntu容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E5%AE%B9%E5%99%A8%E4%B8%AD%E5%AE%89%E8%A3%85ssh"><span class="nav-number">5.</span> <span class="nav-text">在容器中安装ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85JDK"><span class="nav-number">6.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Zookeeper"><span class="nav-number">7.</span> <span class="nav-text">安装Zookeeper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hadoop"><span class="nav-number">8.</span> <span class="nav-text">安装Hadoop</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Spark"><span class="nav-number">9.</span> <span class="nav-text">安装Spark</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">10.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">11.</span> <span class="nav-text">参考文献</span></a></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person"><p class="site-author-name" itemprop="name">木辛念做梓</p><div class="site-description" itemprop="description">读万卷书，行万里路，胸中脱去尘浊</div></div><div class="site-state-wrap site-overview-item animated"><nav class="site-state"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">109</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/"><span class="site-state-item-count">21</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/"><span class="site-state-item-count">113</span> <span class="site-state-item-name">标签</span></a></div></nav></div><div class="links-of-blogroll site-overview-item animated"><div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i> Links</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"><a href="https://io-oi.me/" title="https:&#x2F;&#x2F;io-oi.me" rel="noopener" target="_blank">reuixiy</a></li></ul></div></div></div></div></aside><div class="sidebar-dimmer"></div></header><div class="back-to-top" role="button" aria-label="返回顶部"><i class="fa fa-arrow-up"></i> <span>0%</span></div><noscript><div class="noscript-warning">Theme NexT works best with JavaScript enabled</div></noscript><div class="main-inner post posts-expand"><div class="post-block"><article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://pangz.fun/2015-12-04-spark-in-docker.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.gif"><meta itemprop="name" content="木辛念做梓"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="酷学小栈"><meta itemprop="description" content="读万卷书，行万里路，胸中脱去尘浊"></span><span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork"><meta itemprop="name" content="Docker中搭建Spark计算框架 | 酷学小栈"><meta itemprop="description" content=""></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Docker中搭建Spark计算框架</h1><div class="post-meta-container"><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2015-12-04 18:02:16" itemprop="dateCreated datePublished" datetime="2015-12-04T18:02:16+08:00">2015-12-04</time> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar-check"></i> </span><span class="post-meta-item-text">更新于</span> <time title="修改时间：2025-01-23 17:09:20" itemprop="dateModified" datetime="2025-01-23T17:09:20+08:00">2025-01-23</time> </span><span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv"><span class="post-meta-item-icon"><i class="far fa-eye"></i> </span><span class="post-meta-item-text">阅读次数：</span> <span id="busuanzi_value_page_pv"></span> </span><span class="post-meta-break"></span> <span class="post-meta-item" title="本文字数"><span class="post-meta-item-icon"><i class="far fa-file-word"></i> </span><span class="post-meta-item-text">本文字数：</span> <span>19k</span> </span><span class="post-meta-item" title="阅读时长"><span class="post-meta-item-icon"><i class="far fa-clock"></i> </span><span class="post-meta-item-text">阅读时长 &asymp;</span> <span>17 分钟</span></span></div></div></header><div class="post-body" itemprop="articleBody"><h4 id="安装好Docker之后"><a href="#安装好Docker之后" class="headerlink" title="安装好Docker之后"></a>安装好Docker之后</h4><h4 id="先拉取一个官方的基本镜像ubuntu"><a href="#先拉取一个官方的基本镜像ubuntu" class="headerlink" title="先拉取一个官方的基本镜像ubuntu"></a>先拉取一个官方的基本镜像ubuntu</h4><p>docker pull ubuntu</p><p>我们将在这个基础镜像上运行容器，将这个容器当成一个普通的ubuntu虚拟机来操作部署spark，最后将配置好的容器commit为一个镜像，之后就可以通过这个镜像运行n个节点来完成集群的搭建</p><!--more--><h4 id="下载完ubuntu镜像之后运行"><a href="#下载完ubuntu镜像之后运行" class="headerlink" title="下载完ubuntu镜像之后运行"></a>下载完ubuntu镜像之后运行</h4><pre class="line-numbers language-none"><code class="language-none">[reason@localhost ~]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+mofun/spark         v2.0                b2dacac3e132        About an hour ago   1.508 GB
+mofun/spark         v1.3                4d2f33ca61ee        18 hours ago        1.506 GB
+ubuntu              latest              0a17decee413        6 days ago          188.3 MB
+docker/whalesay     latest              ded5e192a685        4 months ago        247 MB
+[reason@localhost ~]$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="运行ubuntu容器"><a href="#运行ubuntu容器" class="headerlink" title="运行ubuntu容器"></a>运行ubuntu容器</h4><pre class="line-numbers language-none"><code class="language-none">[reason@localhost ~]$ docker run -v /home/docker/software/:/software -it ubuntu
+root@f4c0a9d42852:/#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="在容器中安装ssh"><a href="#在容器中安装ssh" class="headerlink" title="在容器中安装ssh"></a>在容器中安装ssh</h4><pre class="line-numbers language-none"><code class="language-none">[reason@localhost ~]$ docker run -v /home/docker/software/:/software -it ubuntu
+root@3970c1e5466e:/# apt-get install ssh
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+
+# ssh默认配置root无法登陆
+root@3970c1e5466e:~/.ssh# vim /etc/ssh/sshd_config
+root@3970c1e5466e:~/.ssh#
+# 将 /etc/ssh/sshd_config中PermitRootLogin no/without_passwd 改为yes
+
+# 生成访问密钥
+root@3970c1e5466e:~# ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+Generating public/private rsa key pair.
+Created directory '/root/.ssh'.
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+b5:d1:e1:dd:98:7d:be:cc:55:69:c6:e7:67:80:d8:d3 root@3970c1e5466e
+The key's randomart image is:
++--[ RSA 2048]----+
+|            .    |
+|           = =.=.|
+|          + * E=*|
+|         . o .o++|
+|        S .     *|
+|              o.+|
+|               + |
+|                 |
+|                 |
++-----------------+
+root@3970c1e5466e:~#
+root@3970c1e5466e:~# cd ~/.ssh/
+root@3970c1e5466e:~/.ssh# cat id_rsa.pub &gt;&gt; authorized_keys
+root@3970c1e5466e:~/.ssh#
+root@3970c1e5466e:~/.ssh# vim ~/.bashrc
+#加入/usr/sbin/sshd
+#如果在启动容器的时候还是无法启动ssh的话，
+# 在/etc/rc.local文件中也加入
+root@3970c1e5466e:~/.ssh# vim /etc/rc.local
+#加入
+root@3970c1e5466e:~/.ssh# /usr/sbin/sshd
+Missing privilege separation directory: /var/run/sshd
+root@3970c1e5466e:~/.ssh# mkdir /var/run/sshd
+root@3970c1e5466e:~/.ssh# /usr/sbin/sshd
+root@3970c1e5466e:~/.ssh#
+# 开启ssh服务后验证是否可以使用，打印出当前时间
+root@3970c1e5466e:~/.ssh# ssh localhost date
+The authenticity of host 'localhost (::1)' can't be established.
+ECDSA key fingerprint is ab:43:27:e6:1c:44:be:2c:f1:17:27:90:6d:2c:68:86.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.
+Mon Oct 19 05:57:44 UTC 2015
+root@3970c1e5466e:~/.ssh#
+# ssh安装完毕<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h4><p>可以使用apt-get方式直接下载安装jdk（不推荐，下载速度慢，有可能还会失败）<br>这里选择从网上下载完jdk-8u60-linux-xx.bin之后<br>将其传到Ubuntu宿主机中，在运行容器的时候使用-v参数将宿主机上的目录映射到容器中，这样在容器中就可以访问到宿主机中的文件了</p><pre class="line-numbers language-none"><code class="language-none">如果提示不能安装.bin文件，使用以下命令即可解决
+root@3970c1e5466e:~/.ssh# apt-get update
+root@3970c1e5466e:~/.ssh# apt-getinstall g++-multilib<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="安装Zookeeper"><a href="#安装Zookeeper" class="headerlink" title="安装Zookeeper"></a>安装Zookeeper</h4><pre class="line-numbers language-none"><code class="language-none">将下载好的zookeeper-3.4.6.tar.gz上传
+root@3970c1e5466e:~/.ssh# mv /software/zookeeper-3.4.6.tar.gz /usr/local/zookeeper-3.4.6
+root@3970c1e5466e:~/.ssh# tar -zxvf zookeeper-3.4.6.tar.gz
+root@3970c1e5466e:~/.ssh# cd /usr/local/zookeeper-3.4.6/conf/
+root@3970c1e5466e:~/.ssh# cp zoo_sample.cfgzoo.cfgvim zoo.cfg
+root@3970c1e5466e:~/.ssh# vim zoo.cfg
+#修改：dataDir=/root/zookeeper/tmp
+#在最后添加：
+server.1=cloud4:2888:3888
+server.2=cloud5:2888:3888
+server.3=cloud6:2888:3888
+
+#保存退出，然后创建一个tmp文件夹
+root@3970c1e5466e:~/.ssh# mkdir /data/zookeeper/tmp
+#再创建一个空文件
+root@3970c1e5466e:~/.ssh# touch /data/zookeeper/tmp/myid
+#最后向该文件写入ID
+root@3970c1e5466e:~/.ssh# echo 1&gt; /data/zookeeper/tmp/myid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="安装Hadoop"><a href="#安装Hadoop" class="headerlink" title="安装Hadoop"></a>安装Hadoop</h4><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:~/.ssh# mv /software/hadoop-2.6.1.tar.gz /usr/local/
+root@3970c1e5466e:~/.ssh# tar -zxvf hadoop-2.2.0-64bit.tar.gz
+root@3970c1e5466e:~/.ssh# cd /usr/local/hadoop/etc/hadoop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>更改hadoop-env.sh</p><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:/data/test# cd /usr/local/hadoop-2.6.1/
+root@3970c1e5466e:/usr/local/hadoop-2.6.1# ls
+LICENSE.txt  NOTICE.txt  README.txt  bin  etc  include  lib  libexec  logs  sbin  share
+root@3970c1e5466e:/usr/local/hadoop-2.6.1# cd etc/hadoop/
+root@3970c1e5466e:/usr/local/hadoop-2.6.1/etc/hadoop# vim hadoop-env.sh
+#加入java环境变量
+export JAVA_HOME=/usr/local/jdk1.8.0_60<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>修改core-site.xml</p><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:/usr/local/hadoop-2.6.1/etc/hadoop# vim core-site.xml
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;
+&lt;configuration&gt;
+
+&lt;property&gt;
+&lt;name&gt;fs.defaultFS&lt;/name&gt;
+&lt;value&gt;hdfs://ns1&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+&lt;value&gt;/data/hadoop/tmp&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;ha.zookeeper.quorum&lt;/name&gt;
+&lt;value&gt;cloud4:2181,cloud5:2182,cloud6:2183&lt;/value&gt;
+&lt;/property&gt;
+&lt;/configuration&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>修改hdfs-site.xml, mapred-site.xml, yarn-site.xml</p><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:/usr/local/hadoop-2.6.1/etc/hadoop# vim hdfs-site.xml
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;
+
+&lt;configuration&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.nameservices&lt;/name&gt;
+&lt;value&gt;ns1&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.ha.namenodes.ns1&lt;/name&gt;
+&lt;value&gt;nn1,nn2&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.namenode.rpc-address.ns1.nn1&lt;/name&gt;
+&lt;value&gt;cloud1:9000&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.namenode.http-address.ns1.nn1&lt;/name&gt;
+&lt;value&gt;cloud1:50070&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.namenode.rpc-address.ns1.nn2&lt;/name&gt;
+&lt;value&gt;cloud2:9000&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.namenode.http-address.ns1.nn2&lt;/name&gt;
+&lt;value&gt;cloud2:50070&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.namenode.shared.edits.dir&lt;/name&gt;
+&lt;value&gt;qjournal://cloud4:8485;cloud5:8485;cloud6:8485/ns1&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.journalnode.edits.dir&lt;/name&gt;
+&lt;value&gt;/data/hadoop/journal&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.ha.automatic-failover.enabled&lt;/name&gt;
+&lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.client.failover.proxy.provider.ns1&lt;/name&gt;
+&lt;value&gt;
+org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider
+&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.ha.fencing.methods&lt;/name&gt;
+&lt;value&gt;
+sshfence
+&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.ha.fencing.ssh.private-key-files&lt;/name&gt;
+&lt;value&gt;/root/.ssh/id_rsa&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;dfs.ha.fencing.ssh.connect-timeout&lt;/name&gt;
+&lt;value&gt;30000&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;
+        &lt;value&gt;file:///data/hadoop/workspace/hdfs/name&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+        &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;
+        &lt;value&gt;file:///data/hadoop/workspace/hdfs/data&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+       &lt;name&gt;dfs.replication&lt;/name&gt;
+       &lt;value&gt;2&lt;/value&gt;
+&lt;/property&gt;
+&lt;/configuration&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:/usr/local/hadoop-2.6.1/etc/hadoop# mv mapred-site.xml.template mapred-site.xml
+root@3970c1e5466e:/usr/local/hadoop-2.6.1/etc/hadoop# vim mapred-site.xml
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;
+&lt;configuration&gt;
+
+&lt;property&gt;
+&lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+&lt;value&gt;yarn&lt;/value&gt;
+&lt;/property&gt;
+&lt;/configuration&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:/usr/local/hadoop-2.6.1/etc/hadoop# vim yarn-site.xml
+&lt;?xml version="1.0"?&gt;
+&lt;configuration&gt;
+
+&lt;property&gt;
+&lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+&lt;value&gt;cloud3&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+&lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;/configuration&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:/usr/local/hadoop-2.6.1/etc/hadoop# vim slaves
+cloud1
+cloud2
+cloud3
+cloud4
+cloud5
+cloud6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="安装Spark"><a href="#安装Spark" class="headerlink" title="安装Spark"></a>安装Spark</h4><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:~/.ssh# mv /software/scala-2.11.7 /usr/local/
+root@3970c1e5466e:~/.ssh# tar -zxvf scala-2.11.7.tgz
+root@3970c1e5466e:~/.ssh# vim ~/.bashrc
+export JAVA_HOME=/usr/local/jdk1.8.0_60
+export HADOOP_HOME=/usr/local/hadoop-2.6.1
+export SCALA_HOME=/usr/local/scala-2.11.7
+export SPARK_HOME=/usr/local/spark-1.5.1-bin-hadoop2.6
+export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$SCALA_HOME/bin:$SPARK_HOME/bin
+
+root@3970c1e5466e:~/.ssh# mv /software/spark-1.5.1-bin-hadoop2.6.tgz /usr/local/
+root@3970c1e5466e:~/.ssh# tar -zxvf spark-1.5.1-bin-hadoop2.6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>编辑配置文件</p><pre class="line-numbers language-none"><code class="language-none">root@3970c1e5466e:~/.ssh# cd /usr/local/spark-1.5.1-bin-hadoop2.6/
+root@3970c1e5466e:/usr/local/spark-1.5.1-bin-hadoop2.6# cd conf/
+root@3970c1e5466e:/usr/local/spark-1.5.1-bin-hadoop2.6# vim slaves
+cloud1
+cloud2
+cloud3
+cloud4
+cloud5
+cloud6
+root@3970c1e5466e:/usr/local/spark-1.5.1-bin-hadoop2.6# mv spark-env.sh.template spark-env.sh
+root@3970c1e5466e:/usr/local/spark-1.5.1-bin-hadoop2.6# vim ~/spark/conf/spark-env.sh
+export SPARK_MASTER_IP=cloud1
+export SPARK_WORKER_MEMORY=128m
+export JAVA_HOME=/usr/local/jdk1.8.0_60
+export SCALA_HOME=/usr/local/scala-2.11.7
+export SPARK_HOME=/usr/local/spark-1.5.1-bin-hadoop2.6
+export HADOOP_CONF_DIR=/usr/local/hadoop-2.6.1/etc/hadoop
+export SPARK_LIBRARY_PATH=$$SPARK_HOME/lib
+export SCALA_LIBRARY_PATH=$SPARK_LIBRARY_PATH
+export SPARK_WORKER_CORES=1
+export SPARK_WORKER_INSTANCES=1
+export SPARK_MASTER_PORT=7077<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>此时配置已经基本完成，所以需要__保存镜像__</p><pre class="line-numbers language-none"><code class="language-none">[reason@localhost ~]$ sudo docker commit -m "mofun spark first commit" -a "reason" cloud1 mofun/spark:v1.0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>查看执行过的镜像</p><pre class="line-numbers language-none"><code class="language-none">[reason@localhost ~]$ sudo docker ps -a
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                         PORTS               NAMES
+d4e581ba6af8        mofun/spark:v1.0   "/bin/bash"              11 seconds ago      Exited (0) 7 seconds ago                           hungry_pasteur<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>启动容器</p><pre class="line-numbers language-none"><code class="language-none"># 后台模式运行
+[reason@localhost ~]$ docker run -d --name cloud2 -h cloud2 -it mofun/spark:v2.0 /bin/bash
+
+需要使用刚才制作的镜像启动6个容器
+[reason@localhost ~]$ docker run --name cloud1 -h cloud1 -it mofun/spark:v2.0 /bin/bash
+[reason@localhost ~]$ docker run --name cloud2 -h cloud2 -it mofun/spark:v2.0 /bin/bash
+[reason@localhost ~]$ docker run --name cloud3 -h cloud3 -it mofun/spark:v2.0 /bin/bash
+[reason@localhost ~]$ docker run --name cloud4 -h cloud4 -it mofun/spark:v2.0 /bin/bash
+[reason@localhost ~]$ docker run --name cloud5 -h cloud5 -it mofun/spark:v2.0 /bin/bash
+[reason@localhost ~]$ docker run --name cloud6 -h cloud6 -it mofun/spark:v2.0 /bin/bash
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>做最后的修改</p><pre class="line-numbers language-none"><code class="language-none">#在cloud5~cloud6中分别手动修改myid
+root@cloud5:~# echo 2 &gt;  /data/zookeeper/myid
+root@cloud5:~# echo 2 &gt; /usr/local/zookeeper-3.4.6/tmp/myid
+root@cloud6:~# echo 3 &gt;  /data/zookeeper/myid
+root@cloud6:~# echo 3 &gt; /usr/local/zookeeper-3.4.6/tmp/myid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>启动zookeeper集群</p><pre class="line-numbers language-none"><code class="language-none"># 启动zookeeper集群（分别在cloud4、cloud5、cloud6上启动zk）
+# 全部节点启动后，再执行zkServer.sh status
+# 返回正常
+# root@cloud6:/usr/local/zookeeper-3.4.6/bin# ./zkServer.sh status
+# JMX enabled by default
+# Using config: /usr/local/zookeeper-3.4.6/bin/../conf/zoo.cfg
+# Mode: follower
+root@cloud5:~# /usr/local/zookeeper-3.4.6/bin/zkServer.sh start
+# 当3个节点服务正常启动后
+# 使用status查看是否启动
+root@cloud5:~# /usr/local/zookeeper-3.4.6/bin/zkServer.sh status
+JMX enabled by default
+Using config: /usr/local/zookeeper-3.4.6/bin/../conf/zoo.cfg
+Mode: follower
+root@cloud5:~#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>进入cloud1，开启hadoop和spark服务</p><pre class="line-numbers language-none"><code class="language-none"># 启动journalnode（在cloud1上启动所有journalnode，注意：是调用的hadoop-daemons.sh这个脚本，注意是复数s的那个脚本）
+# 运行jps命令检验，cloud4、cloud5、cloud6上多了JournalNode进程
+root@cloud1:/usr/local/hadoop-2.6.1/sbin# pwd
+/usr/local/hadoop-2.6.1/sbin
+root@cloud1:/usr/local/hadoop-2.6.1/sbin#
+root@cloud1:/usr/local/hadoop-2.6.1/sbin# hadoop-daemons.sh start journalnode
+
+# 格式化ZK(在cloud1上执行即可，在bin目录下)
+root@cloud1:/usr/local/hadoop-2.6.1/bin# hdfs zkfc -formatZK
+
+# 进入节点cloud4，查看zookeeper信息
+root@cloud4:/usr/local/zookeeper-3.4.6/bin# pwd
+/usr/local/zookeeper-3.4.6/bin
+root@cloud4:/usr/local/zookeeper-3.4.6/bin# ls
+README.txt  zkCleanup.sh  zkCli.cmd  zkCli.sh  zkEnv.cmd  zkEnv.sh  zkServer.cmd  zkServer.sh  zookeeper.out
+root@cloud4:/usr/local/zookeeper-3.4.6/bin#
+root@cloud4:/usr/local/zookeeper-3.4.6/bin# ./zkCli.sh
+Connecting to localhost:2181
+2015-10-21 09:34:34,485 [myid:] - INFO  [main:Environment@100] - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2015-10-21 09:34:34,487 [myid:] - INFO  [main:Environment@100] - Client environment:host.name=cloud4
+2015-10-21 09:34:34,487 [myid:] - INFO  [main:Environment@100] - Client environment:java.version=1.8.0_...
+...
+
+[zk: localhost:2181(CONNECTED) 2] ls /hadoop-ha
+[ns1]
+[zk: localhost:2181(CONNECTED) 3]
+
+# 格式化HDFS(在bin目录下),在cloud1上执行命令:
+root@cloud1:/usr/local/hadoop-2.6.1/bin# hdfs namenode -format
+
+# 首先启动active节点，执行如下命令(在cloud1上执行)
+root@cloud1:/usr/local/hadoop-2.6.1/sbin# hadoop-daemon.sh start namenode  
+
+# 进入cloud2，需要启动standy模式
+root@cloud2:/usr/local/hadoop-2.6.1/bin# pwd
+/usr/local/hadoop-2.6.1/bin
+root@cloud2:/usr/local/hadoop-2.6.1/bin# ./hdfs namenode -bootstrapStandby
+root@cloud2:/usr/local/hadoop-2.6.1/sbin# pwd
+/usr/local/hadoop-2.6.1/sbin
+# 这条命令可以等到hadoop-daemons.sh start zkfc 成功以后执行
+# 貌似是zkfc的启动慢导致standby模式启动出错？
+
+root@cloud1:/usr/local/spark-1.5.1-bin-hadoop2.6/bin# jps
+1522 NameNode
+2546 Jps
+1859 DFSZKFailoverController
+1109 Worker
+104 JournalNode
+426 DataNode
+558 NodeManager
+943 Master
+# 仔细观察DFSZKFailoverController 这个进程的存在情况
+
+root@cloud2:/usr/local/hadoop-2.6.1/sbin# ./hadoop-daemon.sh start namenode
+
+# 重新进入cloud1 ，启动datanode
+root@cloud4:/usr/local/hadoop-2.6.1/sbin# pwd
+/usr/local/hadoop-2.6.1/sbin
+root@cloud4:/usr/local/hadoop-2.6.1/sbin# ./hadoop-daemons.sh start datanode
+
+
+# 在cloud3上执行start-yarn.sh
+root@cloud3:/usr/local/hadoop-2.6.1/sbin# start-yarn.sh
+
+# 启动ZKFC
+root@cloud1:/usr/local/hadoop-2.6.1/sbin# ./hadoop-daemons.sh start zkfc
+# 启动spark集群
+root@cloud1:/usr/local/hadoop-2.6.1/sbin# cd /usr/local/spark-1.5.1-bin-hadoop2.6/sbin/
+root@cloud1:/usr/local/spark-1.5.1-bin-hadoop2.6/sbin# start-all.sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>此时可以通过CURL访问服务了，如果宿主机中的hosts文件没有配置docker容器的主机名和IP地址映射关系的话要换成用IP访问</p><pre class="line-numbers language-none"><code class="language-none">[reason@localhost ~]$ curl http://172.17.0.56:50070
+[reason@localhost ~]$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><pre class="line-numbers language-none"><code class="language-none"># 删除镜像
+[reason@localhost ~]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+mofun/spark         v2.0                b2dacac3e132        3 hours ago         1.508 GB
+mofun/spark         v1.3                4d2f33ca61ee        21 hours ago        1.506 GB
+ubuntu              latest              0a17decee413        6 days ago          188.3 MB
+docker/whalesay     latest              ded5e192a685        4 months ago        247 MB
+[reason@localhost ~]$ sudo docker rmi 4d2f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none"># 删除容器
+[reason@localhost ~]$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        PORTS               NAMES
+8258875263be        ubuntu              "/bin/bash"         3 minutes ago       Exited (127) 3 minutes ago                        mad_mestorf
+[reason@localhost ~]$ sudo docker rm 8258875263be
+8258875263be
+[reason@localhost ~]$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none"># 删除(NULL) 容器
+root@iZ28ikebrg6Z:/var/run# docker images  
+REPOSITORY             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE  
+&lt;none&gt;                 &lt;none&gt;              def2e0b08cbc        About an hour ago   1.37 GB  
+sameersbn/redmine      latest              f0bec095f291        2 hours ago         614.6 MB  
+root@iZ28ikebrg6Z:/var/run# docker ps -a  
+CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS                     PORTS               NAMES  
+5d6373cb79e6        224b40d4b89f             "/bin/sh -c 'apt-get   25 hours ago        Exited (0) 25 hours ago                        distracted_blackwell    
+root@iZ28ikebrg6Z:/var/run# docker rm 5d63  
+5d63<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none"># 镜像导出
+[reason@localhost ~]$ sudo docker ps -a
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                         PORTS               NAMES
+d4e581ba6af8        mofun/spark_rc:v1.0   "/bin/bash"              11 seconds ago      Exited (0) 7 seconds ago                           hungry_pasteur
+[reason@localhost ~]$ sudo docker export d4e581ba6af8 &gt; mofunspark_v1.0.tar
+
+# 和导入恢复
+[reason@localhost ~]$ cat mofunspark_v1.0.tar | sudo docker import - mofun/spark:v1.0
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>执行Scala交互模式时出错时，需要检查</p><pre class="line-numbers language-none"><code class="language-none">root@cloud1:/usr/local/jdk1.8.0_60/jre/lib/ext# ls -la
+total 25632
+drwxr-xr-x.  3  501 staff     4096 Oct 19 02:35 .
+drwxr-xr-x. 15  501 staff     4096 Oct 18 03:34 ..
+-rw-r--r--.  1  501 staff  3860522 Aug  4 19:29 cldrdata.jar
+-rw-r--r--.  1  501 staff     8286 Aug  4 19:29 dnsns.jar
+-rw-r--r--.  1  501 staff    44516 Aug  4 19:29 jaccess.jar
+-rwxr-xr-x.  1  501 staff 18464934 Aug  3 17:58 jfxrt.jar
+-rw-r--r--.  1  501 staff  1178935 Aug  4 19:29 localedata.jar
+-rw-r--r--.  1  501 staff     1269 Aug  4 19:29 meta-index
+-rw-r--r--.  1  501 staff  2014239 Aug  4 19:29 nashorn.jar
+-rw-r--r--.  1  501 staff    39771 Aug  4 19:29 sunec.jar
+-rw-r--r--.  1  501 staff   278680 Aug  4 19:29 sunjce_provider.jar
+-rw-r--r--.  1  501 staff   250826 Aug  4 19:29 sunpkcs11.jar
+drwxr-xr-x.  2 root root      4096 Oct 19 02:35 tmp
+-rw-r--r--.  1  501 staff    68848 Aug  4 19:29 zipfs.jar
+root@cloud1:/usr/local/jdk1.8.0_60/jre/lib/ext#
+# 该目录下出现了很多类似._jfxrt.jar 的包，直接予以删除即可。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><ul><li><a target="_blank" rel="noopener" href="http://eksliang.iteye.com/blog/2226986">http://eksliang.iteye.com/blog/2226986</a></li><li><a target="_blank" rel="noopener" href="http://dockerpool.com/static/books/docker_practice/container/daemon.html">http://dockerpool.com/static/books/docker_practice/container/daemon.html</a></li><li><a target="_blank" rel="noopener" href="http://dockerpool.com/static/books/docker_practice/install/ubuntu.html">http://dockerpool.com/static/books/docker_practice/install/ubuntu.html</a></li><li><a target="_blank" rel="noopener" href="http://dockerpool.com/static/books/docker_practice/image/create.html">http://dockerpool.com/static/books/docker_practice/image/create.html</a></li><li><a target="_blank" rel="noopener" href="http://dockerpool.com/static/books/docker_practice/image/save_load.html">http://dockerpool.com/static/books/docker_practice/image/save_load.html</a></li><li><a target="_blank" rel="noopener" href="http://dockerpool.com/static/books/docker_practice/container/rm.html">http://dockerpool.com/static/books/docker_practice/container/rm.html</a></li><li><a target="_blank" rel="noopener" href="http://blog.csdn.net/qq1010885678/article/details/46353101">http://blog.csdn.net/qq1010885678/article/details/46353101</a></li><li><a target="_blank" rel="noopener" href="http://cn.soulmachine.me/blog/20131027/">http://cn.soulmachine.me/blog/20131027/</a></li><li><a target="_blank" rel="noopener" href="http://my.oschina.net/zjzhai/blog/225112">http://my.oschina.net/zjzhai/blog/225112</a></li><li><a target="_blank" rel="noopener" href="http://blog.csdn.net/minimicall/article/details/40188251">http://blog.csdn.net/minimicall/article/details/40188251</a></li><li><a target="_blank" rel="noopener" href="http://www.scala-lang.org/documentation/">http://www.scala-lang.org/documentation/</a></li><li><a target="_blank" rel="noopener" href="https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/streaming/NetworkWordCount.scala">https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/streaming/NetworkWordCount.scala</a></li><li><a target="_blank" rel="noopener" href="http://spark.apache.org/docs/latest/">http://spark.apache.org/docs/latest/</a></li><li><a target="_blank" rel="noopener" href="https://docs.sigmoidanalytics.com/index.php/Error:_Failed_to_initialize_compiler:_object_scala_not_found.">https://docs.sigmoidanalytics.com/index.php/Error:_Failed_to_initialize_compiler:_object_scala_not_found.</a></li><li><a target="_blank" rel="noopener" href="http://docs.docker.com/linux/step_one/">http://docs.docker.com/linux/step_one/</a></li><li><a target="_blank" rel="noopener" href="http://blog.sequenceiq.com/blog/2015/01/09/spark-1-2-0-docker/">http://blog.sequenceiq.com/blog/2015/01/09/spark-1-2-0-docker/</a></li></ul></div><footer class="post-footer"><div class="reward-container"><div>你的鼓励是我更新的动力！</div><button>赞赏</button><div class="post-reward"><div><img src="/images/wechatpay.png" alt="木辛念做梓 微信"> <span>微信</span></div><div><img src="/images/alipay.png" alt="木辛念做梓 支付宝"> <span>支付宝</span></div></div></div><div class="post-tags"><a href="/tags/Spark/" rel="tag"># Spark</a> <a href="/tags/Docker/" rel="tag"># Docker</a></div><div class="post-nav"><div class="post-nav-item"><a href="/2015-12-04-nginx-logrotate.html" rel="prev" title="Nginx Logrotate"><i class="fa fa-chevron-left"></i> Nginx Logrotate</a></div><div class="post-nav-item"><a href="/2015-12-05-linux-shell-generate-date.html" rel="next" title="Linux shell 获得以前日期">Linux shell 获得以前日期 <i class="fa fa-chevron-right"></i></a></div></div></footer></article></div></div></main><footer class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2025</span> <span class="with-love"><i class="fa fa-heart"></i> </span><span class="author" itemprop="copyrightHolder">木辛念做梓</span></div><div class="wordcount"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-chart-line"></i> </span><span>站点总字数：</span> <span title="站点总字数">530k</span> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-coffee"></i> </span><span>站点阅读时长 &asymp;</span> <span title="站点阅读时长">8:02</span></span></div><div class="busuanzi-count"><span class="post-meta-item" id="busuanzi_container_site_uv"><span class="post-meta-item-icon"><i class="fa fa-user"></i> </span><span class="site-uv" title="总访客量"><span id="busuanzi_value_site_uv"></span> </span></span><span class="post-meta-item" id="busuanzi_container_site_pv"><span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="site-pv" title="总访问量"><span id="busuanzi_value_site_pv"></span></span></span></div><div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动</div></div></footer><script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script><script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="moon-menu"><div class="moon-menu-items"><div id="moon-menu-item-back2bottom" class="moon-menu-item"><i class="fas fa-chevron-down"></i></div><div id="moon-menu-item-back2top" class="moon-menu-item"><i class="fas fa-chevron-up"></i></div></div><div class="moon-menu-button"><svg class="moon-menu-bg"><circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle><circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle></svg><div class="moon-menu-content"><div class="moon-menu-icon"><i class="fas fa-ellipsis-v"></i></div><div class="moon-menu-text"></div></div></div></div><script src="/js/injector.js"></script></body></html>
