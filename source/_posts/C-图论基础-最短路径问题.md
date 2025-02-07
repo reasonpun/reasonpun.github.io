@@ -7,7 +7,7 @@ tags:
 - 算法 最短路径
 ---
 
-## 课件目标
+## 课程目标
 
 - 了解最短路径问题的基本概念。
 - 掌握最常用的最短路径算法：Dijkstra算法、Bellman-Ford算法和Floyd-Warshall算法。
