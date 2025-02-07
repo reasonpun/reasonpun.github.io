@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2025-01-23T09:09:20.454Z</updated>
+  <updated>2025-02-07T10:51:37.229Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++图论基础 - 最短路径问题</title>
+    <link href="https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html"/>
+    <id>https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html</id>
+    <published>2025-02-07T09:19:07.000Z</published>
+    <updated>2025-02-07T10:51:37.229Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;课件目标&quot;&gt;&lt;a href=&quot;#课件目标&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法 最短路径" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
+    
+  </entry>
   
   <entry>
     <title>C++图论基础-概念和遍历</title>
@@ -399,30 +424,6 @@
     <category term="C++" scheme="https://pangz.fun/tags/C/"/>
     
     <category term="Bit" scheme="https://pangz.fun/tags/Bit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微服务之间共享数据</title>
-    <link href="https://pangz.fun/Sharing-Data-Between-Microservices.html"/>
-    <id>https://pangz.fun/Sharing-Data-Between-Microservices.html</id>
-    <published>2024-07-26T03:32:02.000Z</published>
-    <updated>2025-01-23T09:09:21.845Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/Sharing-Data-Between-Microservices/1.webp&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
-
-&lt;p&gt;当我开始使用微服务时，我对“两个服务不能共享数据源”这一常见规则的理解过于字面化了。&lt;/p&gt;
-&lt;p&gt;我在互联网上到处都看到这个规定：“你不应该在两个服务之间共享数据库”，这确实有道理。一个服务必须拥有自己的数据，并保留按照自己的意愿更改其模式的自由，而不需要更改其面向外部的API。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Microservices" scheme="https://pangz.fun/categories/Microservices/"/>
-    
-    
-    <category term="Data" scheme="https://pangz.fun/tags/Data/"/>
-    
-    <category term="Sharing" scheme="https://pangz.fun/tags/Sharing/"/>
     
   </entry>
   
