@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 酷学小栈
+title: 左右酷学网
 subtitle: 还要再走500里
 description: 读万卷书，行万里路，胸中脱去尘浊
 keywords:
-author: 木辛念做梓
+author: 庞木辛
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://pangz.fun
+url: https://zyoo.top
 #permalink: :year/:month/:day/:title/
 permalink: :title.html
 permalink_defaults:
@@ -161,5 +161,5 @@ neat_js:
 deploy:
   type: git
   #repository: https://github.com/reasonpun/reasonpun.github.io
-  repository: git@github.com:reasonpun/reasonpun.github.io.git
-  branch: gh-pages
+  repo: aliyun-ecs:/opt/hexo.git
+  branch: master
