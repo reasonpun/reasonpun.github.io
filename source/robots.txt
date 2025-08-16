@@ -5,4 +5,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zyoo.top/sitemap.xml
+Sitemap: https://pangz.fun/sitemap.xml
