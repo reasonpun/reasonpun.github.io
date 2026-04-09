@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-09T02:12:33.284Z</updated>
+  <updated>2026-04-09T07:45:06.466Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,136 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>luanti 分组（Groups）</title>
+    <link href="https://pangz.fun/luanti-groups.html"/>
+    <id>https://pangz.fun/luanti-groups.html</id>
+    <published>2026-04-09T07:43:42.000Z</published>
+    <updated>2026-04-09T07:45:06.466Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;分组（Groups）&quot;&gt;&lt;a href=&quot;#分组（Groups）&quot; class=&quot;headerlink&quot; title=&quot;分组（Groups）&quot;&gt;&lt;/a&gt;分组（Groups）&lt;/h1&gt;&lt;p&gt;分组是 Luanti</summary>
+        
+      
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏主题重实现</title>
+    <link href="https://pangz.fun/luanti-game-theme-re-implementation.html"/>
+    <id>https://pangz.fun/luanti-game-theme-re-implementation.html</id>
+    <published>2026-04-09T07:40:54.000Z</published>
+    <updated>2026-04-09T07:42:29.578Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;游戏主题重实现&quot;&gt;&lt;a href=&quot;#游戏主题重实现&quot; class=&quot;headerlink&quot; title=&quot;游戏主题重实现&quot;&gt;&lt;/a&gt;游戏主题重实现&lt;/h1&gt;&lt;p&gt;主菜单里负责&lt;strong&gt;背景、标题栏&lt;/strong&gt;等主题的逻辑，默认是用</summary>
+        
+      
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti 脱离 ContentDB 分发游戏</title>
+    <link href="https://pangz.fun/luanti-distributing-games-outside-contentdb.html"/>
+    <id>https://pangz.fun/luanti-distributing-games-outside-contentdb.html</id>
+    <published>2026-04-09T07:28:51.000Z</published>
+    <updated>2026-04-09T07:40:15.734Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;脱离-ContentDB-分发游戏&quot;&gt;&lt;a href=&quot;#脱离-ContentDB-分发游戏&quot; class=&quot;headerlink&quot; title=&quot;脱离 ContentDB 分发游戏&quot;&gt;&lt;/a&gt;脱离 ContentDB 分发游戏&lt;/h1&gt;&lt;p&gt;这篇教你&lt;strong&gt;不依赖官方商店&lt;/strong&gt;，把你的 Luanti 游戏打包成独立客户端发布。&lt;br&gt;前提：你得会从源码编译 Luanti。&lt;/p&gt;
+&lt;p&gt;Luanti 引擎本身&lt;strong&gt;没有官方一键导出&lt;/strong&gt;功能，游戏默认都走 &lt;a href=&quot;https://content.luanti.org/packages/?type=game&quot;&gt;ContentDB&lt;/a&gt;、在游戏内安装。但因为 Luanti 是自由软件，你可以&lt;strong&gt;fork 引擎 → 改头换面 → 绑定你的游戏 → 独立发布&lt;/strong&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti 开发问题排查</title>
+    <link href="https://pangz.fun/luanti-development-troubleshooting.html"/>
+    <id>https://pangz.fun/luanti-development-troubleshooting.html</id>
+    <published>2026-04-09T07:24:05.000Z</published>
+    <updated>2026-04-09T07:27:25.244Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;开发问题排查&quot;&gt;&lt;a href=&quot;#开发问题排查&quot; class=&quot;headerlink&quot; title=&quot;开发问题排查&quot;&gt;&lt;/a&gt;开发问题排查&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;Lua-API-常见坑&quot;&gt;&lt;a href=&quot;#Lua-API-常见坑&quot; class=&quot;headerlink&quot; title=&quot;Lua API 常见坑&quot;&gt;&lt;/a&gt;Lua API 常见坑&lt;/h2&gt;&lt;p&gt;先把 &lt;strong&gt;Lua 5.1 官方手册&lt;/strong&gt;吃透，少犯低级错误！&lt;/p&gt;
+&lt;h3 id=&quot;Q：我写了新类，但调用方法报“userdata-value”错误&quot;&gt;&lt;a href=&quot;#Q：我写了新类，但调用方法报“userdata-value”错误&quot; class=&quot;headerlink&quot; title=&quot;Q：我写了新类，但调用方法报“userdata value”错误&quot;&gt;&lt;/a&gt;Q：我写了新类，但调用方法报“userdata value”错误&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A：你忘了注册类！&lt;/strong&gt;&lt;br&gt;C++ 暴露给 Lua 的对象默认是裸 userdata，必须配 &lt;code&gt;__index&lt;/code&gt; 和 &lt;code&gt;__metatable&lt;/code&gt; 才能当对象用。&lt;br&gt;照着 &lt;code&gt;LuaPerlinNoise&lt;/code&gt; 的 &lt;code&gt;Register()&lt;/code&gt; 写法抄，并且在 &lt;code&gt;scriptapi_export()&lt;/code&gt; 里调用。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发工具</title>
+    <link href="https://pangz.fun/luanti-development-tools.html"/>
+    <id>https://pangz.fun/luanti-development-tools.html</id>
+    <published>2026-04-09T02:50:47.000Z</published>
+    <updated>2026-04-09T07:25:00.569Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h1&gt;&lt;p&gt;这一页整理了&lt;strong&gt;开发 Luanti 游戏/模组、改引擎&lt;/strong&gt;必备的实用工具，全是圈内人常用的神器！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
   
   <entry>
     <title>开发环境配置</title>
@@ -390,106 +520,6 @@
     
     
     <category term="基础知识点" scheme="https://pangz.fun/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基数排序</title>
-    <link href="https://pangz.fun/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html"/>
-    <id>https://pangz.fun/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.html</id>
-    <published>2025-04-25T10:10:10.000Z</published>
-    <updated>2025-11-25T01:49:53.654Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;基数排序（Radix-Sort）详解&quot;&gt;&lt;a href=&quot;#基数排序（Radix-Sort）详解&quot; class=&quot;headerlink&quot; title=&quot;基数排序（Radix Sort）详解&quot;&gt;&lt;/a&gt;基数排序（Radix Sort）详解&lt;/h1&gt;&lt;h2 id=&quot;一、基数排序简介&quot;&gt;&lt;a href=&quot;#一、基数排序简介&quot; class=&quot;headerlink&quot; title=&quot;一、基数排序简介&quot;&gt;&lt;/a&gt;一、基数排序简介&lt;/h2&gt;&lt;p&gt;基数排序（Radix Sort）是一种非比较型整数排序算法，适用于整数或者字符串的排序。它的基本思想是：按照“位”进行排序，先排低位，再排高位，直到所有位都排好。它通常配合&lt;strong&gt;计数排序（Counting Sort）&lt;/strong&gt;在每一位上进行稳定排序。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 基数排序" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++图论基础 - 最短路径问题</title>
-    <link href="https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html"/>
-    <id>https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html</id>
-    <published>2025-02-07T09:19:07.000Z</published>
-    <updated>2025-11-25T01:49:51.165Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;课程目标&quot;&gt;&lt;a href=&quot;#课程目标&quot; class=&quot;headerlink&quot; title=&quot;课程目标&quot;&gt;&lt;/a&gt;课程目标&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;了解最短路径问题的基本概念。&lt;/li&gt;
-&lt;li&gt;掌握最常用的最短路径算法：Dijkstra算法、Bellman-Ford算法和Floyd-Warshall算法。&lt;/li&gt;
-&lt;li&gt;理解每种算法的应用场景、优缺点及其实现方式。&lt;/li&gt;
-&lt;li&gt;通过代码示例帮助学生深入理解算法的实际应用。&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 最短路径" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++图论基础-概念和遍历</title>
-    <link href="https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%A6%82%E5%BF%B5%E5%92%8C%E9%81%8D%E5%8E%86.html"/>
-    <id>https://pangz.fun/C-%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80-%E6%A6%82%E5%BF%B5%E5%92%8C%E9%81%8D%E5%8E%86.html</id>
-    <published>2025-01-17T07:52:23.000Z</published>
-    <updated>2025-11-25T01:49:51.165Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;1-图的定义和基本概念&quot;&gt;&lt;a href=&quot;#1-图的定义和基本概念&quot; class=&quot;headerlink&quot; title=&quot;1. 图的定义和基本概念&quot;&gt;&lt;/a&gt;1. 图的定义和基本概念&lt;/h3&gt;&lt;p&gt;在图论中，图（Graph）是由顶点（Vertex）和边（Edge）构成的集合。我们可以通过图来表示各种关系，比如社交网络中的人际关系、城市交通中的路线等。图的基本元素包括顶点和边。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 图论" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%9B%BE%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++Dijkstra算法</title>
-    <link href="https://pangz.fun/C-Dijkstra%E7%AE%97%E6%B3%95.html"/>
-    <id>https://pangz.fun/C-Dijkstra%E7%AE%97%E6%B3%95.html</id>
-    <published>2025-01-03T09:00:35.000Z</published>
-    <updated>2025-11-25T01:49:51.132Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;📚-Dijkstra-算法详解（C-）&quot;&gt;&lt;a href=&quot;#📚-Dijkstra-算法详解（C-）&quot; class=&quot;headerlink&quot; title=&quot;📚 Dijkstra 算法详解（C++）&quot;&gt;&lt;/a&gt;📚 &lt;strong&gt;Dijkstra 算法详解（C++）&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-什么是-Dijkstra-算法？&quot;&gt;&lt;a href=&quot;#1-什么是-Dijkstra-算法？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 Dijkstra 算法？&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 什么是 Dijkstra 算法？&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Dijkstra 算法&lt;/strong&gt;是一种用于&lt;strong&gt;计算单源最短路径&lt;/strong&gt;的经典算法。它可以在&lt;strong&gt;加权有向图或无向图&lt;/strong&gt;中找到&lt;strong&gt;从起点到其他所有节点的最短路径&lt;/strong&gt;。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 Dijkstra算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-Dijkstra%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++哈夫曼编码</title>
-    <link href="https://pangz.fun/C-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81.html"/>
-    <id>https://pangz.fun/C-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81.html</id>
-    <published>2025-01-03T08:57:05.000Z</published>
-    <updated>2025-11-25T01:49:51.165Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;📚-哈夫曼编码（Huffman-Coding）详解&quot;&gt;&lt;a href=&quot;#📚-哈夫曼编码（Huffman-Coding）详解&quot; class=&quot;headerlink&quot; title=&quot;📚 哈夫曼编码（Huffman Coding）详解&quot;&gt;&lt;/a&gt;📚 &lt;strong&gt;哈夫曼编码（Huffman Coding）详解&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-什么是哈夫曼编码？&quot;&gt;&lt;a href=&quot;#1-什么是哈夫曼编码？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是哈夫曼编码？&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 什么是哈夫曼编码？&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;哈夫曼编码（Huffman Coding）&lt;/strong&gt; 是一种广泛使用的&lt;strong&gt;数据压缩算法&lt;/strong&gt;，用于减少数据传输和存储所需的空间。它属于一种&lt;strong&gt;前缀编码&lt;/strong&gt;（Prefix Code），即任意一个字符的编码都不会是另一个字符编码的前缀，避免了解码歧义。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 哈夫曼编码" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
     
   </entry>
   
