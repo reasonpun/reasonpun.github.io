@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-09T07:45:06.466Z</updated>
+  <updated>2026-04-09T08:02:54.788Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>luanti 空手（手）</title>
+    <link href="https://pangz.fun/luanti-hand.html"/>
+    <id>https://pangz.fun/luanti-hand.html</id>
+    <published>2026-04-09T07:57:55.000Z</published>
+    <updated>2026-04-09T08:02:54.788Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;空手（手）&quot;&gt;&lt;a href=&quot;#空手（手）&quot; class=&quot;headerlink&quot; title=&quot;空手（手）&quot;&gt;&lt;/a&gt;空手（手）&lt;/h1&gt;&lt;p&gt;空手是 Luanti</summary>
+        
+      
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你的第一个生物</title>
+    <link href="https://pangz.fun/luanti-your-first-mob.html"/>
+    <id>https://pangz.fun/luanti-your-first-mob.html</id>
+    <published>2026-04-09T07:53:18.000Z</published>
+    <updated>2026-04-09T08:02:34.088Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;你的第一个生物&quot;&gt;&lt;a href=&quot;#你的第一个生物&quot; class=&quot;headerlink&quot; title=&quot;你的第一个生物&quot;&gt;&lt;/a&gt;你的第一个生物&lt;/h1&gt;&lt;p&gt;这篇教程带你从零做一只&lt;strong&gt;简单的攻击型怪物&lt;/strong&gt;，名字叫 &lt;strong&gt;Bloblet（小绿团）&lt;/strong&gt;。&lt;br&gt;教程会教你实体（entity）基础用法——凡是比方块更“能动”的东西，全都靠实体实现。&lt;/p&gt;
+&lt;p&gt;前提：你已经有一个基础模组 &lt;code&gt;mymod&lt;/code&gt;，要编辑 &lt;code&gt;mymod/init.lua&lt;/code&gt;。&lt;br&gt;版本要求：&lt;strong&gt;Luanti 5.5.0 及以上&lt;/strong&gt;。&lt;/p&gt;
+&lt;img src=&quot;/luanti-your-first-mob/bloblets.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
   
   <entry>
     <title>luanti 分组（Groups）</title>
@@ -474,52 +528,6 @@
     <category term="games" scheme="https://pangz.fun/tags/games/"/>
     
     <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>碎银几两</title>
-    <link href="https://pangz.fun/%E7%A2%8E%E9%93%B6%E5%87%A0%E4%B8%A4.html"/>
-    <id>https://pangz.fun/%E7%A2%8E%E9%93%B6%E5%87%A0%E4%B8%A4.html</id>
-    <published>2025-08-16T09:32:48.000Z</published>
-    <updated>2025-11-25T01:49:53.654Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;所作之事，皆为碎银几两。&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>初赛考前笔记</title>
-    <link href="https://pangz.fun/%E5%88%9D%E8%B5%9B%E8%80%83%E5%89%8D%E7%AC%94%E8%AE%B0.html"/>
-    <id>https://pangz.fun/%E5%88%9D%E8%B5%9B%E8%80%83%E5%89%8D%E7%AC%94%E8%AE%B0.html</id>
-    <published>2025-05-09T07:56:19.000Z</published>
-    <updated>2025-11-25T01:49:53.654Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;编程基础知识点&quot;&gt;&lt;a href=&quot;#编程基础知识点&quot; class=&quot;headerlink&quot; title=&quot;编程基础知识点&quot;&gt;&lt;/a&gt;编程基础知识点&lt;/h1&gt;&lt;h2 id=&quot;1-变量的定义规则&quot;&gt;&lt;a href=&quot;#1-变量的定义规则&quot; class=&quot;headerlink&quot; title=&quot;1. 变量的定义规则&quot;&gt;&lt;/a&gt;1. 变量的定义规则&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;不能使用关键字&lt;/strong&gt;，如：&lt;code&gt;int do max&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;不能数字开头&lt;/strong&gt;，如：&lt;code&gt;1a,2c&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;不能使用特殊符号&lt;/strong&gt;，&lt;code&gt;_&lt;/code&gt; 除外。如 &lt;code&gt;_a&lt;/code&gt; 是可以的&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;区分大小写&lt;/strong&gt;。如 &lt;code&gt;a,A&lt;/code&gt; 是可以的&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="C++" scheme="https://pangz.fun/categories/C/"/>
-    
-    
-    <category term="基础知识点" scheme="https://pangz.fun/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
   </entry>
   
