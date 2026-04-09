@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-09T02:07:43.802Z</updated>
+  <updated>2026-04-09T02:12:33.284Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>luanti development-setup</title>
+    <title>开发环境配置</title>
     <link href="https://pangz.fun/luanti-development-setup.html"/>
     <id>https://pangz.fun/luanti-development-setup.html</id>
     <published>2026-04-09T02:05:23.000Z</published>
-    <updated>2026-04-09T02:07:43.802Z</updated>
+    <updated>2026-04-09T02:12:33.284Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;开发环境配置&quot;&gt;&lt;a href=&quot;#开发环境配置&quot; class=&quot;headerlink&quot; title=&quot;开发环境配置&quot;&gt;&lt;/a&gt;开发环境配置&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;写模组随便用啥编辑器都行，但强烈建议用支持 &lt;a href=&quot;https://microsoft.github.io/language-server-protocol/&quot;&gt;&lt;strong&gt;LSP（语言服务器协议）&lt;/strong&gt;&lt;/a&gt; 的编辑器，能自动补全、报错误，开发爽到飞起。&lt;/p&gt;
@@ -47,11 +47,11 @@
   </entry>
   
   <entry>
-    <title>luanti debug</title>
+    <title>调试（Debug）</title>
     <link href="https://pangz.fun/luanti-debug.html"/>
     <id>https://pangz.fun/luanti-debug.html</id>
     <published>2026-04-09T01:50:07.000Z</published>
-    <updated>2026-04-09T02:00:07.218Z</updated>
+    <updated>2026-04-09T02:12:28.865Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;调试（Debug）&quot;&gt;&lt;a href=&quot;#调试（Debug）&quot; class=&quot;headerlink&quot; title=&quot;调试（Debug）&quot;&gt;&lt;/a&gt;调试（Debug）&lt;/h1&gt;&lt;p&gt;调试界面默认按 &lt;strong&gt;F5&lt;/strong&gt; 打开，里面全是 Luanti 的技术参数，对开发者超有用，普通玩家最常用的就是&lt;strong&gt;看坐标&lt;/strong&gt;。&lt;/p&gt;
@@ -77,11 +77,11 @@
   </entry>
   
   <entry>
-    <title>luanti creating-texture-packs</title>
+    <title>制作材质包</title>
     <link href="https://pangz.fun/luanti-creating-texture-packs.html"/>
     <id>https://pangz.fun/luanti-creating-texture-packs.html</id>
     <published>2026-04-09T01:45:58.000Z</published>
-    <updated>2026-04-09T01:51:56.797Z</updated>
+    <updated>2026-04-09T02:12:23.862Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;制作材质包&quot;&gt;&lt;a href=&quot;#制作材质包&quot; class=&quot;headerlink&quot; title=&quot;制作材质包&quot;&gt;&lt;/a&gt;制作材质包&lt;/h1&gt;&lt;p&gt;材质包就是一个&lt;strong&gt;装图片的文件夹&lt;/strong&gt;，文件名和原版保持一致就能替换贴图。Luanti 对材质包要求极低，基本是个游戏都能用。&lt;/p&gt;</summary>
@@ -100,11 +100,11 @@
   </entry>
   
   <entry>
-    <title>luanti creating-mods</title>
+    <title>制作模组</title>
     <link href="https://pangz.fun/luanti-creating-mods.html"/>
     <id>https://pangz.fun/luanti-creating-mods.html</id>
     <published>2026-04-09T01:41:36.000Z</published>
-    <updated>2026-04-09T01:45:31.165Z</updated>
+    <updated>2026-04-09T02:12:17.679Z</updated>
     
     
       
@@ -129,11 +129,11 @@
   </entry>
   
   <entry>
-    <title>luanti for-creators</title>
+    <title>luanti 创作者专区</title>
     <link href="https://pangz.fun/luanti-for-creators.html"/>
     <id>https://pangz.fun/luanti-for-creators.html</id>
     <published>2026-04-09T01:38:11.000Z</published>
-    <updated>2026-04-09T01:38:42.603Z</updated>
+    <updated>2026-04-09T02:12:08.870Z</updated>
     
     
       
@@ -158,11 +158,11 @@
   </entry>
   
   <entry>
-    <title>luanti forks</title>
+    <title>Luanti 分支总览</title>
     <link href="https://pangz.fun/luanti-forks.html"/>
     <id>https://pangz.fun/luanti-forks.html</id>
     <published>2026-04-09T01:33:57.000Z</published>
-    <updated>2026-04-09T01:48:12.852Z</updated>
+    <updated>2026-04-09T02:12:03.973Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Luanti-分支总览&quot;&gt;&lt;a href=&quot;#Luanti-分支总览&quot; class=&quot;headerlink&quot; title=&quot;Luanti 分支总览&quot;&gt;&lt;/a&gt;Luanti 分支总览&lt;/h1&gt;&lt;p&gt;这篇专门讲 Luanti 的各种&lt;strong&gt;魔改分支（fork）&lt;/strong&gt;，哪些还活着、哪些已经凉透，一次说清！&lt;/p&gt;</summary>
@@ -181,11 +181,11 @@
   </entry>
   
   <entry>
-    <title>luanti luanti</title>
+    <title>Luanti 官方介绍</title>
     <link href="https://pangz.fun/luanti-luanti.html"/>
     <id>https://pangz.fun/luanti-luanti.html</id>
     <published>2026-04-09T01:30:28.000Z</published>
-    <updated>2026-04-09T01:48:15.141Z</updated>
+    <updated>2026-04-09T02:11:58.700Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Luanti-官方介绍&quot;&gt;&lt;a href=&quot;#Luanti-官方介绍&quot; class=&quot;headerlink&quot; title=&quot;Luanti 官方介绍&quot;&gt;&lt;/a&gt;Luanti 官方介绍&lt;/h1&gt;&lt;h2 id=&quot;Luanti-是啥？&quot;&gt;&lt;a href=&quot;#Luanti-是啥？&quot; class=&quot;headerlink&quot; title=&quot;Luanti 是啥？&quot;&gt;&lt;/a&gt;Luanti 是啥？&lt;/h2&gt;&lt;p&gt;Luanti（曾用名：Minetest）是一款&lt;strong&gt;免费开源&lt;/strong&gt;的体素游戏引擎，专门用来做各种方块游戏，灵感来自 InfiniMiner、我的世界 等作品。&lt;br&gt;最早由 Perttu Ahola（网名：celeron55）开发。&lt;/p&gt;</summary>
