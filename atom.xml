@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-09T00:41:58.859Z</updated>
+  <updated>2026-04-09T02:07:43.802Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,193 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>luanti development-setup</title>
+    <link href="https://pangz.fun/luanti-development-setup.html"/>
+    <id>https://pangz.fun/luanti-development-setup.html</id>
+    <published>2026-04-09T02:05:23.000Z</published>
+    <updated>2026-04-09T02:07:43.802Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;开发环境配置&quot;&gt;&lt;a href=&quot;#开发环境配置&quot; class=&quot;headerlink&quot; title=&quot;开发环境配置&quot;&gt;&lt;/a&gt;开发环境配置&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;写模组随便用啥编辑器都行，但强烈建议用支持 &lt;a href=&quot;https://microsoft.github.io/language-server-protocol/&quot;&gt;&lt;strong&gt;LSP（语言服务器协议）&lt;/strong&gt;&lt;/a&gt; 的编辑器，能自动补全、报错误，开发爽到飞起。&lt;/p&gt;
+&lt;p&gt;支持 LSP 的常见编辑器：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Visual Studio Code&lt;/li&gt;
+&lt;li&gt;Kate&lt;/li&gt;
+&lt;li&gt;NeoVim&lt;/li&gt;
+&lt;li&gt;Helix&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti debug</title>
+    <link href="https://pangz.fun/luanti-debug.html"/>
+    <id>https://pangz.fun/luanti-debug.html</id>
+    <published>2026-04-09T01:50:07.000Z</published>
+    <updated>2026-04-09T02:00:07.218Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;调试（Debug）&quot;&gt;&lt;a href=&quot;#调试（Debug）&quot; class=&quot;headerlink&quot; title=&quot;调试（Debug）&quot;&gt;&lt;/a&gt;调试（Debug）&lt;/h1&gt;&lt;p&gt;调试界面默认按 &lt;strong&gt;F5&lt;/strong&gt; 打开，里面全是 Luanti 的技术参数，对开发者超有用，普通玩家最常用的就是&lt;strong&gt;看坐标&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;按 F5 可以循环切换这几种模式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关闭调试&lt;/li&gt;
+&lt;li&gt;显示调试信息&lt;/li&gt;
+&lt;li&gt;调试信息 + 性能曲线图&lt;/li&gt;
+&lt;li&gt;调试信息 + 线框模式（需要 &lt;code&gt;debug&lt;/code&gt; 权限）&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti creating-texture-packs</title>
+    <link href="https://pangz.fun/luanti-creating-texture-packs.html"/>
+    <id>https://pangz.fun/luanti-creating-texture-packs.html</id>
+    <published>2026-04-09T01:45:58.000Z</published>
+    <updated>2026-04-09T01:51:56.797Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;制作材质包&quot;&gt;&lt;a href=&quot;#制作材质包&quot; class=&quot;headerlink&quot; title=&quot;制作材质包&quot;&gt;&lt;/a&gt;制作材质包&lt;/h1&gt;&lt;p&gt;材质包就是一个&lt;strong&gt;装图片的文件夹&lt;/strong&gt;，文件名和原版保持一致就能替换贴图。Luanti 对材质包要求极低，基本是个游戏都能用。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti creating-mods</title>
+    <link href="https://pangz.fun/luanti-creating-mods.html"/>
+    <id>https://pangz.fun/luanti-creating-mods.html</id>
+    <published>2026-04-09T01:41:36.000Z</published>
+    <updated>2026-04-09T01:45:31.165Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;制作模组&quot;&gt;&lt;a href=&quot;#制作模组&quot; class=&quot;headerlink&quot; title=&quot;制作模组&quot;&gt;&lt;/a&gt;制作模组&lt;/h1&gt;&lt;p&gt;Luanti 内置一套&lt;strong&gt;脚本 API&lt;/strong&gt;，专门用来写游戏和&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti for-creators</title>
+    <link href="https://pangz.fun/luanti-for-creators.html"/>
+    <id>https://pangz.fun/luanti-for-creators.html</id>
+    <published>2026-04-09T01:38:11.000Z</published>
+    <updated>2026-04-09T01:38:42.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;创作者专区&quot;&gt;&lt;a href=&quot;#创作者专区&quot; class=&quot;headerlink&quot; title=&quot;创作者专区&quot;&gt;&lt;/a&gt;创作者专区&lt;/h1&gt;&lt;h1 id=&quot;给创作者看的&quot;&gt;&lt;a href=&quot;#给创作者看的&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti forks</title>
+    <link href="https://pangz.fun/luanti-forks.html"/>
+    <id>https://pangz.fun/luanti-forks.html</id>
+    <published>2026-04-09T01:33:57.000Z</published>
+    <updated>2026-04-09T01:48:12.852Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Luanti-分支总览&quot;&gt;&lt;a href=&quot;#Luanti-分支总览&quot; class=&quot;headerlink&quot; title=&quot;Luanti 分支总览&quot;&gt;&lt;/a&gt;Luanti 分支总览&lt;/h1&gt;&lt;p&gt;这篇专门讲 Luanti 的各种&lt;strong&gt;魔改分支（fork）&lt;/strong&gt;，哪些还活着、哪些已经凉透，一次说清！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti luanti</title>
+    <link href="https://pangz.fun/luanti-luanti.html"/>
+    <id>https://pangz.fun/luanti-luanti.html</id>
+    <published>2026-04-09T01:30:28.000Z</published>
+    <updated>2026-04-09T01:48:15.141Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Luanti-官方介绍&quot;&gt;&lt;a href=&quot;#Luanti-官方介绍&quot; class=&quot;headerlink&quot; title=&quot;Luanti 官方介绍&quot;&gt;&lt;/a&gt;Luanti 官方介绍&lt;/h1&gt;&lt;h2 id=&quot;Luanti-是啥？&quot;&gt;&lt;a href=&quot;#Luanti-是啥？&quot; class=&quot;headerlink&quot; title=&quot;Luanti 是啥？&quot;&gt;&lt;/a&gt;Luanti 是啥？&lt;/h2&gt;&lt;p&gt;Luanti（曾用名：Minetest）是一款&lt;strong&gt;免费开源&lt;/strong&gt;的体素游戏引擎，专门用来做各种方块游戏，灵感来自 InfiniMiner、我的世界 等作品。&lt;br&gt;最早由 Perttu Ahola（网名：celeron55）开发。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
   
   <entry>
     <title>luanti irc</title>
@@ -303,140 +490,6 @@
     
     
     <category term="算法 哈夫曼编码" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++贪心算法</title>
-    <link href="https://pangz.fun/C-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.html"/>
-    <id>https://pangz.fun/C-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.html</id>
-    <published>2025-01-03T08:53:53.000Z</published>
-    <updated>2025-11-25T01:49:51.165Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;📚-C-中贪心算法详解&quot;&gt;&lt;a href=&quot;#📚-C-中贪心算法详解&quot; class=&quot;headerlink&quot; title=&quot;📚 C++ 中贪心算法详解&quot;&gt;&lt;/a&gt;📚 C++ 中贪心算法详解&lt;/h1&gt;&lt;h2 id=&quot;1-贪心算法的定义&quot;&gt;&lt;a href=&quot;#1-贪心算法的定义&quot; class=&quot;headerlink&quot; title=&quot;1. 贪心算法的定义&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 贪心算法的定义&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;贪心算法&lt;/strong&gt;（Greedy Algorithm）是一种在每一步选择中都采取当前状态下&lt;strong&gt;局部最优&lt;/strong&gt;的选择，以期最终达到&lt;strong&gt;全局最优解&lt;/strong&gt;的算法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 贪心算法" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>逻辑运算知识点: 3 &lt;= i &lt;= 5</title>
-    <link href="https://pangz.fun/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html"/>
-    <id>https://pangz.fun/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9F%A5%E8%AF%86%E7%82%B9-3-i-5.html</id>
-    <published>2024-12-27T09:22:54.000Z</published>
-    <updated>2025-11-25T01:49:53.654Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;在-C-中，表达式-3&quot;&gt;&lt;a href=&quot;#在-C-中，表达式-3&quot; class=&quot;headerlink&quot; title=&quot;在 C++ 中，表达式 3 &lt;= i &lt;= 5 的解析&quot;&gt;&lt;/a&gt;在 C++ 中，表达式 &lt;code&gt;3 &amp;lt;= i &amp;lt;= 5&lt;/code&gt; 的解析&lt;/h1&gt;&lt;p&gt;在 C++ 中，表达式 &lt;code&gt;3 &amp;lt;= i &amp;lt;= 5&lt;/code&gt; 并不是你可能预期的 “i 在 3 到 5 之间” 的意思。实际上，这个表达式是由两个比较操作符构成的，具体含义如下：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 逻辑运算" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模拟加法器de代码解释</title>
-    <link href="https://pangz.fun/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html"/>
-    <id>https://pangz.fun/%E6%A8%A1%E6%8B%9F%E5%8A%A0%E6%B3%95%E5%99%A8de%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A.html</id>
-    <published>2024-12-27T09:21:14.000Z</published>
-    <updated>2025-11-25T01:49:53.654Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;左移操作在加法器设计中的主要作用是处理和传递进位，这是实现二进制加法的核心。通过左移操作，我们可以模拟加法过程中的进位传递，从而实现两个数的精确相加。这种方法不仅适用于简单的加法器，也是现代计算机中算术逻辑单元（ALU）执行加法操作的基础。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 加法器" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E5%8A%A0%E6%B3%95%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++中模拟算法</title>
-    <link href="https://pangz.fun/C-%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%AE%97%E6%B3%95.html"/>
-    <id>https://pangz.fun/C-%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%AE%97%E6%B3%95.html</id>
-    <published>2024-12-27T09:17:25.000Z</published>
-    <updated>2025-11-25T01:49:51.151Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;C-中模拟算法详解与代码示例&quot;&gt;&lt;a href=&quot;#C-中模拟算法详解与代码示例&quot; class=&quot;headerlink&quot; title=&quot;C++中模拟算法详解与代码示例&quot;&gt;&lt;/a&gt;C++中模拟算法详解与代码示例&lt;/h1&gt;&lt;h2 id=&quot;📚-1-模拟算法简介&quot;&gt;&lt;a href=&quot;#📚-1-模拟算法简介&quot; class=&quot;headerlink&quot; title=&quot;📚 1. 模拟算法简介&quot;&gt;&lt;/a&gt;📚 1. 模拟算法简介&lt;/h2&gt;&lt;p&gt;模拟算法是一种通过代码直接模拟问题描述中所给出的操作或过程，来达到解决问题目的的算法思想。&lt;br&gt;模拟算法没有固定的模板，通常依赖对问题的理解和逐步还原操作流程。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 模拟" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++中排序和复杂度</title>
-    <link href="https://pangz.fun/C-%E4%B8%AD%E6%8E%92%E5%BA%8F%E5%92%8C%E5%A4%8D%E6%9D%82%E5%BA%A6.html"/>
-    <id>https://pangz.fun/C-%E4%B8%AD%E6%8E%92%E5%BA%8F%E5%92%8C%E5%A4%8D%E6%9D%82%E5%BA%A6.html</id>
-    <published>2024-12-20T02:33:55.000Z</published>
-    <updated>2025-11-25T01:49:51.149Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;C-中排序算法详解&quot;&gt;&lt;a href=&quot;#C-中排序算法详解&quot; class=&quot;headerlink&quot; title=&quot;C++ 中排序算法详解&quot;&gt;&lt;/a&gt;C++ 中排序算法详解&lt;/h1&gt;&lt;p&gt;排序算法是计算机科学中的基础内容之一，用于按特定顺序排列元素。C++ 提供了多种排序算法，常见的排序方法包括&lt;strong&gt;快速排序&lt;/strong&gt;、&lt;strong&gt;插入排序&lt;/strong&gt;和&lt;strong&gt;希尔排序&lt;/strong&gt;。本文将详细讲解这些排序算法的概念、实现及其时间复杂度分析。&lt;/p&gt;
-&lt;img src=&quot;/C-%E4%B8%AD%E6%8E%92%E5%BA%8F%E5%92%8C%E5%A4%8D%E6%9D%82%E5%BA%A6/time_complexity_trend.jpg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 排序" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++中的顺序搜索</title>
-    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%90%9C%E7%B4%A2.html"/>
-    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%90%9C%E7%B4%A2.html</id>
-    <published>2024-12-13T09:20:53.000Z</published>
-    <updated>2025-11-25T01:49:51.165Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;顺序查找，也称为线性查找，是一种最基本的查找技术，用于在数据结构（如数组或列表）中搜索特定的值。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 二分搜索" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++中的二分搜索</title>
-    <link href="https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html"/>
-    <id>https://pangz.fun/C-%E4%B8%AD%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2.html</id>
-    <published>2024-12-13T09:19:07.000Z</published>
-    <updated>2025-11-25T01:49:51.165Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;二分查找是一种在有序数组中查找特定元素的高效算法。它的基本思想是将数组分成两半，然后根据目标值与中间元素的大小关系来决定是继续在左半部分还是右半部分进行查找，这个过程会不断重复，直到找到目标值或者搜索范围为空。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 二分搜索" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/"/>
     
   </entry>
   

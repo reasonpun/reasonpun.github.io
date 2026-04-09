@@ -4,6 +4,209 @@
   
     
     <entry>
+      <title>luanti development-setup</title>
+      <link href="/luanti-development-setup.html"/>
+      <url>/luanti-development-setup.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="开发环境配置"><a href="#开发环境配置" class="headerlink" title="开发环境配置"></a>开发环境配置</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>写模组随便用啥编辑器都行，但强烈建议用支持 <a href="https://microsoft.github.io/language-server-protocol/"><strong>LSP（语言服务器协议）</strong></a> 的编辑器，能自动补全、报错误，开发爽到飞起。</p><p>支持 LSP 的常见编辑器：</p><ul><li>Visual Studio Code</li><li>Kate</li><li>NeoVim</li><li>Helix</li></ul><span id="more"></span><hr><h2 id="安装语言服务器"><a href="#安装语言服务器" class="headerlink" title="安装语言服务器"></a>安装语言服务器</h2><p>不同编辑器、系统安装方式不一样：</p><ul><li><strong>VS Code</strong>：装 <a href="https://marketplace.visualstudio.com/items?itemName=sumneko.lua">Lua 插件</a>，自带语言服务器</li><li><strong>NeoVim</strong>：用 mason 或其他 LSP 插件装</li><li>其他不自带的编辑器：需要在系统层面<a href="https://luals.github.io/#install">手动安装</a></li></ul><hr><h2 id="配置自动补全"><a href="#配置自动补全" class="headerlink" title="配置自动补全"></a>配置自动补全</h2><h3 id="下载类型注解文档"><a href="#下载类型注解文档" class="headerlink" title="下载类型注解文档"></a>下载类型注解文档</h3><p>类型注解能让编辑器<strong>精准提示 Luanti API</strong>，带参数类型、返回值提示。<br>我们用 <a href="https://git.minetest.land/andro/luanti-api"><strong>luanti-api</strong></a> 这个非官方实验性注解库。</p><p>不想用这个也可以直接用引擎自带的 <code>&lt;Luanti安装目录&gt;/builtin</code>，只是没有类型提示。</p><p>配置补全有两种方式：</p><hr><h3 id="方式1：全局配置（推荐）"><a href="#方式1：全局配置（推荐）" class="headerlink" title="方式1：全局配置（推荐）"></a>方式1：全局配置（推荐）</h3><ol><li>下载 <code>luanti-api</code> 仓库（git 克隆或下载 zip）</li><li>放到电脑任意位置，比如：<code>/home/user/luanti-api</code></li><li>配置 Lua 语言服务器，把路径加到 <code>workspace.library</code></li></ol><p>VS Code 示例（在 <code>settings.json</code> 里加）：</p><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"Lua.workspace.library"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"/home/user/luanti-api"</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure><hr><h3 id="方式2：按项目配置"><a href="#方式2：按项目配置" class="headerlink" title="方式2：按项目配置"></a>方式2：按项目配置</h3><ol><li>初始化 git 仓库<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git submodule init</span><br></pre></td></tr></tbody></table></figure></li><li>添加 luanti-api 为子模块<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add https://git.minetest.land/archie/luanti-api.git</span><br></pre></td></tr></tbody></table></figure></li><li>在项目根目录新建 <code>.luarc.json</code>：<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"$schema"</span><span class="punctuation">:</span> <span class="string">"https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"workspace.library"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"./luanti-api"</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure></li></ol><p>搞定！编辑器就会<strong>全自动提示 Luanti 所有 API</strong> 了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti debug</title>
+      <link href="/luanti-debug.html"/>
+      <url>/luanti-debug.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="调试（Debug）"><a href="#调试（Debug）" class="headerlink" title="调试（Debug）"></a>调试（Debug）</h1><p>调试界面默认按 <strong>F5</strong> 打开，里面全是 Luanti 的技术参数，对开发者超有用，普通玩家最常用的就是<strong>看坐标</strong>。</p><p>按 F5 可以循环切换这几种模式：</p><ul><li>关闭调试</li><li>显示调试信息</li><li>调试信息 + 性能曲线图</li><li>调试信息 + 线框模式（需要 <code>debug</code> 权限）</li></ul><span id="more"></span><hr><h2 id="调试信息详解"><a href="#调试信息详解" class="headerlink" title="调试信息详解"></a>调试信息详解</h2><h3 id="基础调试信息（屏幕左上角）"><a href="#基础调试信息（屏幕左上角）" class="headerlink" title="基础调试信息（屏幕左上角）"></a>基础调试信息（屏幕左上角）</h3><p>长这样：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Minetest 5.5.0 | FPS: 59 | drawtime: 15ms | dtime jitter: 1.6% | view range: 200 | RTT: 1.00ms</span><br><span class="line">pos: (-382.2,14.5,347.0) | yaw: 0.4° North +Z | pitch: -65.1° | seed: 16341313069868655721, pointed: default:dirt_with_grass, param2: 0</span><br></pre></td></tr></tbody></table></figure><h3 id="第一行参数"><a href="#第一行参数" class="headerlink" title="第一行参数"></a>第一行参数</h3><ul><li><strong>Luanti X.Y.Z</strong>：引擎版本号</li><li><strong>FPS</strong>：帧率，越高越流畅；默认锁 60；低于 30 就很卡</li><li><strong>drawtime</strong>：单帧渲染耗时，越低越好</li><li><strong>dtime jitter</strong>：帧时间波动；≤50% 算正常</li><li><strong>view range</strong>：视距（节点数）；All = 无限视距</li><li><strong>RTT</strong>：网络延迟（联机关键），越低越好</li></ul><h3 id="第二行参数"><a href="#第二行参数" class="headerlink" title="第二行参数"></a>第二行参数</h3><ul><li><strong>pos</strong>：你的坐标 XYZ（找家、传送必备）</li><li><strong>yaw</strong>：水平朝向；0°=北，90°=西，180°=南，270°=东</li><li><strong>pitch</strong>：垂直视角；0°平视，正数抬头，负数低头</li><li><strong>seed</strong>：地图种子；相同种子 = 相同地形</li><li><strong>pointed</strong>：你准星指着的方块<strong>内部名称</strong></li><li><strong>param2</strong>：方块的旋转、颜色等附加数据（开发者用）</li></ul><hr><h2 id="准星指向实体时"><a href="#准星指向实体时" class="headerlink" title="准星指向实体时"></a>准星指向实体时</h2><p>指着掉落物、生物、玩家时，左边会显示：</p><ul><li><strong>Entity type</strong>：实体类型</li><li><strong>hp</strong>：血量</li><li><strong>armor</strong>：护甲组（伤害减免百分比）</li></ul><hr><h2 id="护甲组（Armor-groups）简单说"><a href="#护甲组（Armor-groups）简单说" class="headerlink" title="护甲组（Armor groups）简单说"></a>护甲组（Armor groups）简单说</h2><p>护甲组决定实体<strong>吃多少伤害</strong>，数值是百分比：</p><ul><li>100 = 吃满伤害</li><li>200 = 受到双倍伤害</li><li>50 = 只受一半伤害</li></ul><p>默认常用：</p><ul><li><code>fleshy=100</code>：大部分生物/玩家的默认护甲组</li><li><code>immortal=1</code>：无敌，不吃任何常规伤害</li></ul><hr><h2 id="性能曲线图（Profiler-graphs）"><a href="#性能曲线图（Profiler-graphs）" class="headerlink" title="性能曲线图（Profiler graphs）"></a>性能曲线图（Profiler graphs）</h2><p>详细性能监控，主要给<strong>引擎开发者</strong>看，普通玩家不用管。</p><hr><h2 id="线框模式（Wireframe）"><a href="#线框模式（Wireframe）" class="headerlink" title="线框模式（Wireframe）"></a>线框模式（Wireframe）</h2><p>世界会变成<strong>透视线框</strong>，相当于开了透视挂。<br>因为太破坏平衡，<strong>必须有 debug 权限才能开</strong>。</p><hr><h2 id="受限调试视图"><a href="#受限调试视图" class="headerlink" title="受限调试视图"></a>受限调试视图</h2><p>有些游戏/模组会<strong>隐藏坐标、血量</strong>等信息，增加生存难度。<br>如果你有 <code>debug</code> 权限，就能<strong>无视限制</strong>，看完整信息。</p><h3 id="被隐藏的内容"><a href="#被隐藏的内容" class="headerlink" title="被隐藏的内容"></a>被隐藏的内容</h3><ul><li>坐标、朝向、地图种子</li><li>指向的方块名称与 param2</li><li>实体信息（类型、血量、护甲）</li><li>地图块边界显示</li></ul><h3 id="为啥要限制？"><a href="#为啥要限制？" class="headerlink" title="为啥要限制？"></a>为啥要限制？</h3><p>为了游戏性：比如让玩家必须<strong>制作指南针/雷达</strong>才能看坐标，而不是直接按 F5 白嫖。</p><h3 id="单机破解限制"><a href="#单机破解限制" class="headerlink" title="单机破解限制"></a>单机破解限制</h3><p>聊天框输入这条指令直接拿满权限：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/grantme debug</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti creating-texture-packs</title>
+      <link href="/luanti-creating-texture-packs.html"/>
+      <url>/luanti-creating-texture-packs.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="制作材质包"><a href="#制作材质包" class="headerlink" title="制作材质包"></a>制作材质包</h1><p>材质包就是一个<strong>装图片的文件夹</strong>，文件名和原版保持一致就能替换贴图。Luanti 对材质包要求极低，基本是个游戏都能用。</p><span id="more"></span><hr><h2 id="图片结构（5-1-版本）"><a href="#图片结构（5-1-版本）" class="headerlink" title="图片结构（5.1 版本）"></a>图片结构（5.1 版本）</h2><h3 id="引擎自带纹理"><a href="#引擎自带纹理" class="headerlink" title="引擎自带纹理"></a>引擎自带纹理</h3><p>Luanti 本身自带的基础纹理很少，放在这里：<br><code>你的路径/luanti/textures/base/pack</code><br>包括：服务器图标、小地图、Logo、加载条等。</p><h3 id="游戏专属纹理"><a href="#游戏专属纹理" class="headerlink" title="游戏专属纹理"></a>游戏专属纹理</h3><p>每个游戏用的模组不一样，纹理也不一样。<br>比如 Minetest Game 5.1 自带 31 个模组，有的有纹理，有的没有。<br>举个例子：<br><code>games/minetest_game/mods/default/textures</code> 有大量纹理<br><code>games/minetest_game/mods/spawn</code> 则一个纹理都没有</p><h3 id="引擎-游戏完整材质包"><a href="#引擎-游戏完整材质包" class="headerlink" title="引擎 + 游戏完整材质包"></a>引擎 + 游戏完整材质包</h3><p>想做一套完整的自定义材质包，你需要：</p><ol><li>把 <code>base/pack</code> 里的引擎纹理全复制到新文件夹</li><li>把游戏每个模组里的 <code>textures</code> 全复制到同一个文件夹</li></ol><hr><h2 id="搭建自定义材质包文件夹"><a href="#搭建自定义材质包文件夹" class="headerlink" title="搭建自定义材质包文件夹"></a>搭建自定义材质包文件夹</h2><h3 id="新建文件夹"><a href="#新建文件夹" class="headerlink" title="新建文件夹"></a>新建文件夹</h3><p>在 <code>你的路径/luanti/textures</code> 下新建文件夹，名字就是你的材质包名。<br>目录里自带一个 <code>texture_packs_here.txt</code> 告诉你位置对不对。</p><hr><h2 id="复制纹理（简单版）"><a href="#复制纹理（简单版）" class="headerlink" title="复制纹理（简单版）"></a>复制纹理（简单版）</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><ol><li>打开 Luanti 目录</li><li>进入 <code>games/minetest_game</code></li><li>搜索 <code>*.png</code></li><li>Ctrl+A 全选 → 复制 → 粘贴到你的材质包文件夹</li></ol><p>想替换引擎基础纹理：<br>去 <code>textures/base/pack</code> 复制这些：</p><ul><li><code>logo.png</code> —— 主界面图标</li><li><code>minimap_*.png</code> —— 小地图</li><li><code>unknown_*.png</code> —— 未知物体</li><li><code>server_*.png</code> —— 服务器图标</li><li><code>progress_*.png</code> —— 加载条</li></ul><h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>终端一键复制：</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">TP_NAME=你的材质包名</span><br><span class="line"><span class="built_in">cd</span> 你的路径/luanti</span><br><span class="line"><span class="built_in">mkdir</span> textures/<span class="variable">$TP_NAME</span></span><br><span class="line">find games/minetest_game/ -name <span class="string">'*.png'</span> -<span class="built_in">exec</span> <span class="built_in">cp</span> <span class="string">'{}'</span> <span class="string">"textures/<span class="variable">$TP_NAME</span>"</span> <span class="string">';'</span></span><br></pre></td></tr></tbody></table></figure><hr><h2 id="复制纹理（复杂版，保留模组结构）"><a href="#复制纹理（复杂版，保留模组结构）" class="headerlink" title="复制纹理（复杂版，保留模组结构）"></a>复制纹理（复杂版，保留模组结构）</h2><h3 id="Windows（用-robocopy）"><a href="#Windows（用-robocopy）" class="headerlink" title="Windows（用 robocopy）"></a>Windows（用 robocopy）</h3><figure class="highlight cmd"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robocopy "C:\你的路径\luanti\games\minetest_game\mods" "C:\你的路径\luanti\textures\你的包名" *.png /s</span><br></pre></td></tr></tbody></table></figure><p>复制引擎纹理：</p><figure class="highlight cmd"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robocopy "C:\你的路径\luanti\textures\base" "C:\你的路径\luanti\textures\你的包名" *.png /s</span><br></pre></td></tr></tbody></table></figure><p>结构会变成：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你的包名/</span><br><span class="line">├─ default/</span><br><span class="line">│  └─ textures/ *.png</span><br></pre></td></tr></tbody></table></figure><p>你可以用这个批处理把文件上提一级：</p><figure class="highlight bat"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> thisdir=<span class="variable">%cd%</span></span><br><span class="line"><span class="keyword">for</span> /f "delims=" <span class="variable">%%B</span> <span class="keyword">in</span> ('<span class="built_in">dir</span> /b /ad') <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">cd</span> "<span class="variable">%%~</span>dpnB"</span><br><span class="line">    <span class="keyword">for</span> /f "delims=" <span class="variable">%%C</span> <span class="keyword">in</span> ('<span class="built_in">dir</span> /b /ad') <span class="keyword">do</span> (</span><br><span class="line">        <span class="built_in">cd</span> "<span class="variable">%%~</span>dpnC"</span><br><span class="line">        <span class="built_in">move</span> *.png ..\</span><br><span class="line">        <span class="built_in">cd</span>..</span><br><span class="line">        <span class="built_in">rd</span> "<span class="variable">%%~</span>dpnC"</span><br><span class="line">    )</span><br><span class="line">    <span class="built_in">cd</span>..</span><br><span class="line">)</span><br><span class="line"><span class="built_in">cd</span> /d "<span class="variable">%thisdir%</span>"</span><br></pre></td></tr></tbody></table></figure><p>保存成 <code>.bat</code> 放在材质包文件夹里双击运行。</p><h3 id="Linux-1"><a href="#Linux-1" class="headerlink" title="Linux"></a>Linux</h3><p>自己看着办，不会就给文档组提 issue。</p><hr><h2 id="特殊纹理"><a href="#特殊纹理" class="headerlink" title="特殊纹理"></a>特殊纹理</h2><p>Luanti 有一些<strong>特殊用途纹理</strong>，完整列表看源码里的 <code>texture_packs.md</code>。</p><hr><h2 id="编辑-制作纹理"><a href="#编辑-制作纹理" class="headerlink" title="编辑 / 制作纹理"></a>编辑 / 制作纹理</h2><h3 id="版权问题（非常重要）"><a href="#版权问题（非常重要）" class="headerlink" title="版权问题（非常重要）"></a>版权问题（非常重要）</h3><ul><li>偷别的体素游戏的纹理<strong>绝对不行</strong>，上传 ContentDB 直接被拒</li><li>必须用<strong>免费授权</strong>的图片（CC 系列为主）</li><li>即使 CC0 也要标注来源，基本礼貌</li></ul><h3 id="画图工具推荐"><a href="#画图工具推荐" class="headerlink" title="画图工具推荐"></a>画图工具推荐</h3><ul><li><strong>GIMP</strong>：全能免费画图工具，有点难但很强</li><li><strong>Libresprite</strong>：专门画像素画</li><li><strong>Paint.NET</strong>：Windows 好用小工具</li><li>Lospec 像素工具网站</li></ul><h3 id="怎么画"><a href="#怎么画" class="headerlink" title="怎么画"></a>怎么画</h3><ul><li>尺寸最好是<strong>2的次方</strong>：16×16、32×32、64×64、128×128、256×256</li><li>超过 512×512 性能会崩，没必要</li><li>格式优先 <strong>PNG</strong>，也支持 JPG、BMP、TGA</li></ul><hr><h2 id="从哪开始做？"><a href="#从哪开始做？" class="headerlink" title="从哪开始做？"></a>从哪开始做？</h2><ul><li>先给小模组做材质，试试水</li><li>优先做 <code>default</code> 模组，约 250 张贴图，影响最大</li><li>难点：动画纹理（火把、水）</li><li>简单：木板、树叶（改个色就行）</li></ul><hr><h2 id="发布前准备"><a href="#发布前准备" class="headerlink" title="发布前准备"></a>发布前准备</h2><ol><li>加 <code>license.txt</code> 写清楚授权</li><li>截几张游戏内效果图</li><li>新建 <code>texture_pack.conf</code> 写信息：</li></ol><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = very_cool_texture_pack</span><br><span class="line">title = 超酷材质包</span><br><span class="line">description = 这是一个超酷的材质包</span><br></pre></td></tr></tbody></table></figure><hr><h2 id="发布渠道"><a href="#发布渠道" class="headerlink" title="发布渠道"></a>发布渠道</h2><h3 id="Git-托管"><a href="#Git-托管" class="headerlink" title="Git 托管"></a>Git 托管</h3><ul><li>GitHub</li><li>Codeberg</li><li>Gitlab</li></ul><h3 id="官方平台"><a href="#官方平台" class="headerlink" title="官方平台"></a>官方平台</h3><p><strong>ContentDB</strong> —— 官方发布渠道，游戏内可直接安装。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti creating-mods</title>
+      <link href="/luanti-creating-mods.html"/>
+      <url>/luanti-creating-mods.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="制作模组"><a href="#制作模组" class="headerlink" title="制作模组"></a>制作模组</h1><p>Luanti 内置一套<strong>脚本 API</strong>，专门用来写游戏和<a href="https://docs.luanti.org/for-players/mods">模组</a>，你可以用它做全新玩法，也可以给现有游戏疯狂扩内容。<br>这套 API 用 <a href="https://api.luanti.org/"><strong>Lua</strong></a> 语言编写——简单、好学、轻量。引擎目前使用 <strong>Lua 5.1</strong>，但很多人会跑 <strong>LuaJIT</strong> 来提速。<br>你只需要有<strong>基础编程常识</strong>就能上手。</p><hr><h2 id="官方文档与教程"><a href="#官方文档与教程" class="headerlink" title="官方文档与教程"></a>官方文档与教程</h2><ul><li>官方 Lua API 文档：<strong>api.luanti.org</strong></li><li><a href="https://docs.luanti.org/for-creators/api">本站 API 板块也有全套指南</a></li></ul><p>想做你的第一个模组/游戏，最强入门材料是：<br><a href="https://rubenwardy.com/minetest_modding_book/en/index.html"><strong>《Luanti Modding Book》</strong></a><br>作者：rubenwardy，校对：Shara</p><p>⚠️ 小知识：<br>Luanti 里的<strong>游戏</strong>和<strong>模组</strong>是同一套系统，游戏本质就是<strong>一堆模组的集合</strong>。<br>详细看<a href="https://rubenwardy.com/minetest_modding_book/en/games/games.html">《模组开发书》</a>里的「Games」章节。</p><hr><h2 id="推荐工具（大佬都在用）"><a href="#推荐工具（大佬都在用）" class="headerlink" title="推荐工具（大佬都在用）"></a>推荐工具（大佬都在用）</h2><ul><li><strong>VS Code / VSCodium</strong>：最强代码编辑器<br>我们还出了 <a href="https://marketplace.visualstudio.com/items?itemName=GreenXenith.minetest-tools"><strong>Luanti Tools</strong></a> 插件，自带代码补全，插件商店直接搜</li><li><a href="https://github.com/lunarmodules/luacheck"><strong>luacheck</strong></a>：Lua 代码静态检查工具，帮你找bug</li><li><a href="https://luals.github.io/"><strong>Lua Language Server</strong></a>：带类型提示的Lua智能提示工具（作者：<a href="https://git.minetest.land/andro/luanti-api">Archie</a>）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti for-creators</title>
+      <link href="/luanti-for-creators.html"/>
+      <url>/luanti-for-creators.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="创作者专区"><a href="#创作者专区" class="headerlink" title="创作者专区"></a>创作者专区</h1><h1 id="给创作者看的"><a href="#给创作者看的" class="headerlink" title="给创作者看的"></a>给创作者看的</h1><p>Luanti 就是一个让你<strong>随便造、随便传</strong>的平台——游戏、模组、材质包，全都能搞。<br>这一板块也包含<strong>内容翻译</strong>相关指南。</p><hr><h3 id="快速上手指南"><a href="#快速上手指南" class="headerlink" title="快速上手指南"></a>快速上手指南</h3><ul><li>制作模组</li><li>制作材质包</li><li>在 ContentDB 之外分发游戏</li><li>内容翻译</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti forks</title>
+      <link href="/luanti-forks.html"/>
+      <url>/luanti-forks.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Luanti-分支总览"><a href="#Luanti-分支总览" class="headerlink" title="Luanti 分支总览"></a>Luanti 分支总览</h1><p>这篇专门讲 Luanti 的各种<strong>魔改分支（fork）</strong>，哪些还活着、哪些已经凉透，一次说清！</p><span id="more"></span><hr><h2 id="啥叫-Luanti-分支（fork）？"><a href="#啥叫-Luanti-分支（fork）？" class="headerlink" title="啥叫 Luanti 分支（fork）？"></a>啥叫 Luanti 分支（fork）？</h2><p>简单说：<strong>拿官方源码自己改、自己发的版本</strong>，就是分支。</p><ul><li>只堆模组 = <strong>模组包</strong>，不算分支</li><li>改了<strong>引擎核心代码</strong>、又没合并回官方 = 真·分支</li></ul><hr><h2 id="已知分支项目列表"><a href="#已知分支项目列表" class="headerlink" title="已知分支项目列表"></a>已知分支项目列表</h2><p>下面这些都是有名有姓的 Luanti 魔改分支，<strong>有的还在更新，有的已经入土</strong>。</p><h3 id="Voxelands"><a href="#Voxelands" class="headerlink" title="Voxelands"></a>Voxelands</h3><ul><li>2013-04-15 诞生，原名 <strong>Minetest Classic</strong></li><li>基于超老的 0.3 版 Minetest-c55 改的</li><li>2022 年有人短暂复活过，<strong>现在彻底没人管</strong></li></ul><p>为啥做这个分支？<br>当年官方越来越往<strong>引擎方向</strong>走，不再是单纯游戏，老玩家不爽；<br>加上 0.4 加了 Lua 模组后性能拉胯，于是就有了这个分支。</p><p>特点：</p><ul><li>死守 0.3 版性能与风格</li><li>加内容、平衡玩法</li><li>向后兼容 0.3 网络协议</li><li><strong>和官方 Luanti 完全不兼容</strong></li></ul><hr><h3 id="Blocklife"><a href="#Blocklife" class="headerlink" title="Blocklife"></a>Blocklife</h3><ul><li>2015-04-30 论坛发布</li><li>基于 0.4.7 小改，自带比 MTG 多一点模组的游戏</li><li>亮点：<strong>支持两只手独立操作</strong></li><li>后来想把方块缩小到 1/10，做“更圆润的世界”</li><li><strong>现已停更</strong></li></ul><hr><h3 id="Freeminer"><a href="#Freeminer" class="headerlink" title="Freeminer"></a>Freeminer</h3><ul><li>2013-11 一群开发者不满官方路线开的分支</li><li>现在是维护者 proller 的<strong>私人实验场</strong></li><li>会定期同步官方稳定版</li><li>目标：做个<strong>好玩、能玩</strong>的游戏</li><li>自带魔改整合包，有怪物、护甲等</li><li><strong>有安卓版</strong></li></ul><hr><h3 id="Minetest-delta"><a href="#Minetest-delta" class="headerlink" title="Minetest-delta"></a>Minetest-delta</h3><ul><li>2011 年的实验性分支</li><li>加了一堆测试功能</li><li>甘蔗、仙人掌、雨林等内容后来<strong>被官方收编</strong></li><li>已凉</li></ul><hr><h3 id="Minetest-M13"><a href="#Minetest-M13" class="headerlink" title="Minetest-M13"></a>Minetest-M13</h3><ul><li>上古分支</li><li>2012 年后查无此人</li><li>已凉</li></ul><hr><h2 id="各种安卓魔改分支（重点避雷！）"><a href="#各种安卓魔改分支（重点避雷！）" class="headerlink" title="各种安卓魔改分支（重点避雷！）"></a>各种安卓魔改分支（重点避雷！）</h2><p>安卓上<strong>一大堆乱七八糟的魔改版</strong>，大部分是<strong>垃圾、盗版、广告流氓</strong>。</p><p>⚠️ 高能预警：</p><ul><li>疯狂弹广告，<strong>卡到玩不了</strong></li><li>内置内购</li><li>不开源、闭源侵权</li><li><strong>全都不是官方 Luanti！</strong></li></ul><p>官方正版只有两个：</p><ul><li>Luanti 在 <strong>F-Droid</strong></li><li>Luanti 在 <strong>Google Play</strong></li></ul><p>重要！<br>Luanti <strong>永远不会有广告、不会有内购</strong>。<br>你看到广告 = 你装了盗版垃圾！</p><p>这些盗版在商店里常见名字（随时下架，仅供避雷）：</p><ul><li>Worldcraft: Exploration Lite</li><li>WorldCraft 2</li><li>PixelCraft — 3D Survival!</li><li>MultiCraft ― Free Miner!</li><li>Crazy Craft on Castle World PE</li><li>Cartoon Craft: Castle World PE</li><li>Voxel Craft: Castle Build PE</li><li>World Craft 3D</li><li>Squeake Craft PLUS</li></ul><p>总结：<br>这些全是<strong>侵权闭源垃圾</strong>，没源码、没节操，只恰烂钱。<br>我们不反对魔改，但反对<strong>拿开源软件骗钱、加广告</strong>。<br>想安全就用 <strong>F-Droid</strong> 装正版！</p><hr><h2 id="iOS-魔改分支"><a href="#iOS-魔改分支" class="headerlink" title="iOS 魔改分支"></a>iOS 魔改分支</h2><p>和安卓一样，一堆盗版，<strong>全不推荐</strong>：</p><ul><li>Buildcraft</li><li>Worldcraft 2</li><li>Worldcraft Pocket Edition</li><li>Exploration</li><li>FreeCraft</li></ul><p>全是闭源，有的还<strong>逼你内购去广告</strong>，纯纯流氓。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti luanti</title>
+      <link href="/luanti-luanti.html"/>
+      <url>/luanti-luanti.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Luanti-官方介绍"><a href="#Luanti-官方介绍" class="headerlink" title="Luanti 官方介绍"></a>Luanti 官方介绍</h1><h2 id="Luanti-是啥？"><a href="#Luanti-是啥？" class="headerlink" title="Luanti 是啥？"></a>Luanti 是啥？</h2><p>Luanti（曾用名：Minetest）是一款<strong>免费开源</strong>的体素游戏引擎，专门用来做各种方块游戏，灵感来自 InfiniMiner、我的世界 等作品。<br>最早由 Perttu Ahola（网名：celeron55）开发。</p><span id="more"></span><hr><h2 id="核心玩法"><a href="#核心玩法" class="headerlink" title="核心玩法"></a>核心玩法</h2><p>所有基于 Luanti 的游戏基本逻辑都差不多：<br>玩家被扔进一个<strong>超大立方体世界</strong>，方块构成地形，几乎能随意破坏/放置。<br>收集材料就能合成工具、物品，玩法还能无限魔改。</p><p>它的灵魂功能：<strong>内置 Lua 语言模组系统</strong>。</p><ul><li>简单模组：加几个装饰方块</li><li>复杂模组：改玩法、重做世界、加剧情、做新机制</li></ul><p>装模组超简单：复制文件 → 点几下界面就行。<br>支持<strong>单机 + 多人联机</strong>。<br>游戏资源都在 <strong>ContentDB</strong> 里。</p><hr><h2 id="核心亮点"><a href="#核心亮点" class="headerlink" title="核心亮点"></a>核心亮点</h2><ul><li>超大立方体世界，每个方向 <strong>61840 格</strong></li><li>程序化自动生成地图</li><li>多种地图生成器，参数随便调</li><li>自定义拉满：可视化设置 + 配置文件双支持</li><li>材质包自由换贴图、音效</li><li>内置 ContentDB 一键下载游戏/模组/材质</li><li>单机 + 在线联机</li><li>内置服务器列表</li><li>Lua 模组系统强大易用</li><li>模组全在服务端，玩家进服<strong>不用提前装任何东西</strong></li><li>配置要求极低，低配机也能跑</li></ul><hr><h2 id="游戏与模组"><a href="#游戏与模组" class="headerlink" title="游戏与模组"></a>游戏与模组</h2><ul><li>游戏：Luanti 是引擎，画面和玩法全看你装的游戏</li><li>模组：ContentDB 上有<strong>几千个免费模组</strong></li></ul><hr><h2 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h2><ul><li>硬件：低配电脑、安卓手机都能流畅跑</li><li>操作：PC/Mac 支持鼠标+键盘</li><li>系统：跨平台支持，官方支持列表看下载页</li></ul><hr><h2 id="法律说明"><a href="#法律说明" class="headerlink" title="法律说明"></a>法律说明</h2><ul><li>完全免费、无广告</li><li>引擎协议：<strong>GNU LGPL 2.1</strong></li><li>美术资源：<strong>CC BY-SA 3.0</strong></li></ul><hr><h2 id="名字的故事"><a href="#名字的故事" class="headerlink" title="名字的故事"></a>名字的故事</h2><ol><li>最早叫 <strong>Minetest-c55</strong><ul><li>Minetest：当年是复刻 MC 的测试项目</li><li>c55：作者 celeron55</li></ul></li><li>后来简化成 <strong>Minetest</strong>，用了很多年</li><li>2024 年 10 月 13 日正式改名 <strong>Luanti</strong><ul><li>芬兰语 <strong>luonti</strong> = 创造</li><li>脚本语言 <strong>Lua</strong></li><li>合起来：Luanti</li></ul></li></ol><p>现在它已经是<strong>全能体素引擎</strong>，不再只是 MC 复刻。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>luanti irc</title>
       <link href="/luanti-irc.html"/>
       <url>/luanti-irc.html</url>
