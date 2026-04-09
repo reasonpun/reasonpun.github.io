@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-09T00:22:17.884Z</updated>
+  <updated>2026-04-09T00:22:44.173Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -21,10 +21,12 @@
     <link href="https://pangz.fun/luanti-about.html"/>
     <id>https://pangz.fun/luanti-about.html</id>
     <published>2026-04-09T00:10:19.000Z</published>
-    <updated>2026-04-09T00:22:17.884Z</updated>
+    <updated>2026-04-09T00:22:44.173Z</updated>
     
     
-    <summary type="html">&lt;p&gt;🎮 关于咱 Luanti（前身为 &lt;a href=&quot;https://blog.luanti.org/2024/10/13/Introducing-Our-New-Name/&quot;&gt;Minetest&lt;/a&gt;）&lt;/p&gt;
+    <summary type="html">&lt;img src=&quot;/luanti-about/8.jpg&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;
+
+&lt;p&gt;🎮 关于咱 Luanti（前身为 &lt;a href=&quot;https://blog.luanti.org/2024/10/13/Introducing-Our-New-Name/&quot;&gt;Minetest&lt;/a&gt;）&lt;/p&gt;
 &lt;p&gt;Luanti 就是免费开源的体素游戏引擎天花板，自带专属&lt;a href=&quot;https://docs.luanti.org/about/contentdb&quot;&gt;分发平台&lt;/a&gt;和&lt;a href=&quot;https://docs.luanti.org/about/luanti&quot;&gt;客户端&lt;/a&gt;，玩方块、造世界、开服务器、改引擎全都能搞定！不管你是纯玩的玩家、搞创作的大佬、开服的卷王，还是改引擎的代码大神，在这都能找到入门攻略，少走十年弯路！&lt;/p&gt;</summary>
     
     
