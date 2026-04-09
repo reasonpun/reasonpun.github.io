@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-09T00:28:11.648Z</updated>
+  <updated>2026-04-09T00:32:25.122Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -17,21 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>给Luanti文档添砖加瓦</title>
+    <link href="https://pangz.fun/contributing-to-docs.html"/>
+    <id>https://pangz.fun/contributing-to-docs.html</id>
+    <published>2026-04-09T00:30:34.000Z</published>
+    <updated>2026-04-09T00:32:25.122Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;咱这 Luanti 文档全是用 &lt;strong&gt;Markdown&lt;/strong&gt; 写的，靠 &lt;strong&gt;Hugo&lt;/strong&gt;（免费开源静态网站生成器）转成网页。源码搁 &lt;strong&gt;GitHub&lt;/strong&gt; 上，用 &lt;strong&gt;GitHub Actions&lt;/strong&gt; 自动发布。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
     <title>luanti-文档-contentdb</title>
     <link href="https://pangz.fun/luanti-contentdb.html"/>
     <id>https://pangz.fun/luanti-contentdb.html</id>
     <published>2026-04-09T00:25:19.000Z</published>
-    <updated>2026-04-09T00:28:11.648Z</updated>
+    <updated>2026-04-09T00:32:20.194Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;咱这ContentDB，说白了就是Luanti 官方内容大仓库！&lt;/p&gt;
-&lt;p&gt;里面全是玩家和大佬整出来的模组、整合包、材质包（统称</summary>
-        
-      
+&lt;p&gt;里面全是玩家和大佬整出来的模组、整合包、材质包（统称 “游戏资源包”），是下游戏拓展内容最快、最省心的官方渠道，客户端里能直接用，网页上也能随便逛。&lt;/p&gt;</summary>
     
     
     
@@ -406,25 +423,6 @@
     
     
     <category term="算法 数理逻辑" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python中的多线程和多进程</title>
-    <link href="https://pangz.fun/python%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%A4%9A%E8%BF%9B%E7%A8%8B.html"/>
-    <id>https://pangz.fun/python%E4%B8%AD%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%A4%9A%E8%BF%9B%E7%A8%8B.html</id>
-    <published>2024-10-19T23:49:13.000Z</published>
-    <updated>2025-11-25T01:49:53.606Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;1-Python中的多线程与多进程&quot;&gt;&lt;a href=&quot;#1-Python中的多线程与多进程&quot; class=&quot;headerlink&quot; title=&quot;1. Python中的多线程与多进程&quot;&gt;&lt;/a&gt;1. Python中的多线程与多进程&lt;/h3&gt;&lt;p&gt;Python支持&lt;strong&gt;多线程&lt;/strong&gt;和&lt;strong&gt;多进程&lt;/strong&gt;，用以处理并发任务。了解这两者的优缺点、适用场景以及实现方式，有助于根据应用需求选择合适的并发处理方式。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://pangz.fun/categories/Python/"/>
-    
-    
-    <category term="多线程 多进程" scheme="https://pangz.fun/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B/"/>
     
   </entry>
   
