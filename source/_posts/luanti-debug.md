@@ -1,5 +1,5 @@
 ---
-title: luanti debug
+title: 调试（Debug）
 date: 2026-04-09 09:50:07
 categories:
 - luanti

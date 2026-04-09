@@ -1,5 +1,5 @@
 ---
-title: luanti development-setup
+title: 开发环境配置
 date: 2026-04-09 10:05:23
 categories:
 - luanti
