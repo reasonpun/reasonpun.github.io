@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2025-11-25T01:49:53.654Z</updated>
+  <updated>2026-04-09T00:18:17.797Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>luanti-文档-关于页面</title>
+    <link href="https://pangz.fun/luanti-about.html"/>
+    <id>https://pangz.fun/luanti-about.html</id>
+    <published>2026-04-09T00:10:19.000Z</published>
+    <updated>2026-04-09T00:18:17.797Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;🎮 关于咱 Luanti（前身为 &lt;a href=&quot;https://blog.luanti.org/2024/10/13/Introducing-Our-New-Name/&quot;&gt;Minetest&lt;/a&gt;）&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
   
   <entry>
     <title>碎银几两</title>
@@ -392,29 +415,6 @@
     
     
     <category term="算法 排列" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c++中的组合的概念</title>
-    <link href="https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E7%BB%84%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5.html"/>
-    <id>https://pangz.fun/c-%E4%B8%AD%E7%9A%84%E7%BB%84%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5.html</id>
-    <published>2024-10-18T09:10:12.000Z</published>
-    <updated>2025-11-25T01:49:53.475Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-什么是组合？&quot;&gt;&lt;a href=&quot;#1-什么是组合？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是组合？&quot;&gt;&lt;/a&gt;1. 什么是组合？&lt;/h2&gt;&lt;p&gt;在数学中，&lt;strong&gt;组合&lt;/strong&gt;是从一组元素中选择出若干个元素，不考虑元素的排列顺序。例如，假设有三个字母 ( {A, B, C} )，如果我们想要从中选择两个字母，组合的结果有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AB, AC, BC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注意：组合与排列不同，组合只关心选择哪些元素，不考虑这些元素的顺序。因此，组合中的 AB 和 BA 被认为是相同的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://pangz.fun/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法 组合" scheme="https://pangz.fun/tags/%E7%AE%97%E6%B3%95-%E7%BB%84%E5%90%88/"/>
     
   </entry>
   

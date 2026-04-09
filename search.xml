@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>luanti-文档-关于页面</title>
+      <link href="/luanti-about.html"/>
+      <url>/luanti-about.html</url>
+      
+        <content type="html"><![CDATA[<p>🎮 关于咱 Luanti（前身为 <a href="https://blog.luanti.org/2024/10/13/Introducing-Our-New-Name/">Minetest</a>）</p><span id="more"></span><p>Luanti 就是免费开源的体素游戏引擎天花板，自带专属<a href="https://docs.luanti.org/about/contentdb">分发平台</a>和<a href="https://docs.luanti.org/about/luanti">客户端</a>，玩方块、造世界、开服务器、改引擎全都能搞定！不管你是纯玩的玩家、搞创作的大佬、开服的卷王，还是改引擎的代码大神，在这都能找到入门攻略，少走十年弯路！<br>🛠️ 网站小科普<br>这网站是用 <a href="https://gohugo.io/">Hugo</a> 搭的，皮肤是 <a href="https://themes.gohugo.io/themes/hugo-book/">Hugo Book</a> 主题，源码全放 <a href="https://github.com/luanti-org/docs.luanti.org/tree/master/content">GitHub</a> 上了，欢迎各路大神来提交修改，一起完善文档，人人都是贡献者！想参与的直接看「<a href="https://docs.luanti.org/about/contributing-to-docs">文档贡献指南</a>」就行～<br>🚀 入门速查（按身份对号入座）<br>咱这文档直接按人群分类，不用瞎翻找：<br><a href="https://docs.luanti.org/for-players">纯玩党</a>：教你装客户端、装模组、装游戏，还有基础玩法，小白秒上手<br><a href="https://docs.luanti.org/for-creators">创作大神</a>：模组制作、游戏开发、材质包设计、翻译，各种造东西的教程全在这<br><a href="https://docs.luanti.org/for-server-hosts">服主卷王</a>：多人服务器搭建一条龙，开服不踩坑<br><a href="https://docs.luanti.org/for-engine-devs">引擎大佬</a>：教你怎么给 Luanti 引擎写 C++ 代码，硬核改造随便玩<br>📜 Luanti 文档使命宣言<br>咱这文档就是 Luanti 项目的核心百科全书！所有贡献者和写手一起肝，打造经过实测、通俗易懂、分类清晰、搜啥都有的超全资料，紧跟 Luanti 最新版本。<br>文档覆盖这些硬核内容：<br>超全 API 参考、实例、教程<br>引擎底层结构与参考指南<br>服务器和平台使用教程（玩家友好版）<br>这项目 2024 年 12 月才启动，未来规划直接看 <a href="https://github.com/luanti-org/docs.luanti.org/issues/113">GitHub 第 113 号问题</a>：路线图！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>碎银几两</title>
       <link href="/%E7%A2%8E%E9%93%B6%E5%87%A0%E4%B8%A4.html"/>
       <url>/%E7%A2%8E%E9%93%B6%E5%87%A0%E4%B8%A4.html</url>
