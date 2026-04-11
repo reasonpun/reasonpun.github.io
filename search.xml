@@ -4,6 +4,316 @@
   
     
     <entry>
+      <title>luanti API 文件系统</title>
+      <link href="/luanti-API-filesystem.html"/>
+      <url>/luanti-API-filesystem.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h1><p>（官方文档风格 · 简洁准确 · 可直接用于模组开发）</p><h1 id="文件系统（Filesystem）"><a href="#文件系统（Filesystem）" class="headerlink" title="文件系统（Filesystem）"></a>文件系统（Filesystem）</h1><p>Luanti 提供大量工具函数，用于管理<strong>路径、文件、文件夹</strong>。</p><h1 id="重要说明"><a href="#重要说明" class="headerlink" title="重要说明"></a>重要说明</h1><p>模组安全系统会<strong>限制文件访问路径</strong>：</p><ul><li>加载时：只能访问<strong>当前模组目录（mod path）</strong></li><li>运行时：只能访问<strong>世界存档目录（world path）</strong><br>详见：Lua 环境（Lua Environment）</li></ul><span id="more"></span><h1 id="路径（Paths）"><a href="#路径（Paths）" class="headerlink" title="路径（Paths）"></a>路径（Paths）</h1><h2 id="⚠-警告"><a href="#⚠-警告" class="headerlink" title="⚠ 警告"></a>⚠ 警告</h2><p><strong>永远使用绝对路径，不要使用相对路径！</strong><br>不要假设当前工作目录是什么。</p><hr><h1 id="路径规范化（Normalization）"><a href="#路径规范化（Normalization）" class="headerlink" title="路径规范化（Normalization）"></a>路径规范化（Normalization）</h1><p>Luanti 会自动规范化传入的路径：</p><ul><li>将 <code>/</code> 替换为<strong>系统专属路径分隔符</strong><ul><li>Windows：<code>\</code></li><li>UNIX/Linux：<code>/</code></li></ul></li></ul><p>所以你<strong>永远可以用 <code>/</code> 写路径</strong>，不会出错。<br>但注意：Luanti 返回的路径<strong>通常不会被自动规范化</strong>。</p><hr><h1 id="DIR-DELIM"><a href="#DIR-DELIM" class="headerlink" title="DIR_DELIM"></a>DIR_DELIM</h1><p>全局变量，保存<strong>系统专属路径分隔符</strong>。</p><ul><li>Windows：<code>\</code></li><li>UNIX：<code>/</code></li></ul><p>通常不需要手动使用（因为路径会自动规范化），<br>仅在需要<strong>拼接、解析路径</strong>时使用。</p><hr><h1 id="core-get-modpath-modname"><a href="#core-get-modpath-modname" class="headerlink" title="core.get_modpath(modname)"></a>core.get_modpath(modname)</h1><p>获取一个已加载模组的路径。<br>如果模组未加载，返回 <code>nil</code>。</p><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul><li><code>modname</code>：模组名字（字符串）</li></ul><h2 id="推荐写法"><a href="#推荐写法" class="headerlink" title="推荐写法"></a>推荐写法</h2><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> modpath = core.get_modpath(core.get_current_modname())</span><br></pre></td></tr></tbody></table></figure><p>不要硬编码模组名！</p><h2 id="返回"><a href="#返回" class="headerlink" title="返回"></a>返回</h2><ul><li><code>modpath</code>：模组目录的<strong>绝对路径（未规范化）</strong></li></ul><hr><h1 id="core-get-worldpath"><a href="#core-get-worldpath" class="headerlink" title="core.get_worldpath()"></a>core.get_worldpath()</h1><p>无参数。</p><h2 id="返回-1"><a href="#返回-1" class="headerlink" title="返回"></a>返回</h2><ul><li><code>worldpath</code>：世界存档目录的<strong>绝对路径（未规范化）</strong></li></ul><hr><h1 id="目录操作（Directories）"><a href="#目录操作（Directories）" class="headerlink" title="目录操作（Directories）"></a>目录操作（Directories）</h1><h2 id="通用返回值"><a href="#通用返回值" class="headerlink" title="通用返回值"></a>通用返回值</h2><ul><li><code>success</code>：布尔值，表示操作是否成功。</li></ul><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>可用 <code>assert(...)</code> 让失败时直接抛出错误。</p><hr><h1 id="core-mkdir-path"><a href="#core-mkdir-path" class="headerlink" title="core.mkdir(path)"></a>core.mkdir(path)</h1><p>创建一个目录，<strong>自动创建不存在的父目录</strong>。</p><h2 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h2><ul><li><code>path</code>：要创建的目录路径</li></ul><hr><h1 id="core-cpdir-source-path-destination-path"><a href="#core-cpdir-source-path-destination-path" class="headerlink" title="core.cpdir(source_path, destination_path)"></a>core.cpdir(source_path, destination_path)</h1><p>将<strong>源目录</strong>复制到<strong>目标目录</strong>。</p><h2 id="参数-2"><a href="#参数-2" class="headerlink" title="参数"></a>参数</h2><ul><li><code>source_path</code>：源目录路径</li><li><code>destination_path</code>：目标目录路径</li></ul><h2 id="⚠-警告-1"><a href="#⚠-警告-1" class="headerlink" title="⚠ 警告"></a>⚠ 警告</h2><p>如果目标目录已存在，<strong>会被覆盖</strong>。</p><hr><h1 id="core-mvdir-source-path-destination-path"><a href="#core-mvdir-source-path-destination-path" class="headerlink" title="core.mvdir(source_path, destination_path)"></a>core.mvdir(source_path, destination_path)</h1><p>将<strong>源目录</strong>移动到<strong>目标目录</strong>。</p><h2 id="参数-3"><a href="#参数-3" class="headerlink" title="参数"></a>参数</h2><ul><li><code>source_path</code>：源目录路径</li><li><code>destination_path</code>：目标目录路径</li></ul><h2 id="⚠-警告-2"><a href="#⚠-警告-2" class="headerlink" title="⚠ 警告"></a>⚠ 警告</h2><p>如果目标是<strong>非空目录</strong>，移动会失败。</p><hr><h1 id="core-rmdir-path-recursive"><a href="#core-rmdir-path-recursive" class="headerlink" title="core.rmdir(path, recursive)"></a>core.rmdir(path, recursive)</h1><p>删除一个目录。</p><h2 id="参数-4"><a href="#参数-4" class="headerlink" title="参数"></a>参数</h2><ul><li><code>path</code>：要删除的目录路径</li><li><code>recursive</code>：布尔值，是否<strong>递归删除内容</strong></li></ul><h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><ul><li>如果不设为 <code>true</code>，目录<strong>非空时删除失败</strong>。</li></ul><hr><h1 id="core-get-dir-list-path-is-dir"><a href="#core-get-dir-list-path-is-dir" class="headerlink" title="core.get_dir_list(path, is_dir)"></a>core.get_dir_list(path, is_dir)</h1><p>列出目录<strong>直接内容</strong>（不递归）。</p><h2 id="参数-5"><a href="#参数-5" class="headerlink" title="参数"></a>参数</h2><ul><li><code>path</code>：要遍历的目录路径</li><li><code>is_dir</code>：nil / 布尔值<ul><li><code>nil</code>：同时列出<strong>文件夹 + 文件</strong></li><li><code>true</code>：只列出<strong>文件夹</strong></li><li><code>false</code>：只列出<strong>文件</strong></li></ul></li></ul><h2 id="返回-2"><a href="#返回-2" class="headerlink" title="返回"></a>返回</h2><ul><li><code>entry_list</code>：字符串列表<br>只返回<strong>条目名称</strong>，<strong>不是完整路径</strong>！<br>顺序不保证。</li></ul><hr><h1 id="文件操作（Files）"><a href="#文件操作（Files）" class="headerlink" title="文件操作（Files）"></a>文件操作（Files）</h1><h1 id="core-safe-file-write-path-content"><a href="#core-safe-file-write-path-content" class="headerlink" title="core.safe_file_write(path, content)"></a>core.safe_file_write(path, content)</h1><p><strong>原子性二进制安全写入</strong>：要么全部写入，要么完全不写。</p><p>原理：先写临时文件 → 再替换原文件。<br>用于<strong>防止存档损坏</strong>。</p><p>等价于（但原子安全）：</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> f = <span class="built_in">io</span>.<span class="built_in">open</span>(<span class="built_in">path</span>, <span class="string">"wb"</span>)</span><br><span class="line">f:<span class="built_in">write</span>(content)</span><br><span class="line">f:<span class="built_in">close</span>()</span><br></pre></td></tr></tbody></table></figure><h2 id="参数-6"><a href="#参数-6" class="headerlink" title="参数"></a>参数</h2><ul><li><code>path</code>：文件路径</li><li><code>content</code>：要写入的内容（字符串）</li></ul><h2 id="返回-3"><a href="#返回-3" class="headerlink" title="返回"></a>返回</h2><ul><li><code>success</code>：是否成功</li></ul><hr><h1 id="Lua-内置函数（已被安全重写）"><a href="#Lua-内置函数（已被安全重写）" class="headerlink" title="Lua 内置函数（已被安全重写）"></a>Lua 内置函数（已被安全重写）</h1><p>所有函数都已被 Luanti <strong>重写并应用模组安全限制</strong>。</p><h1 id="io-open-filename-mode"><a href="#io-open-filename-mode" class="headerlink" title="io.open(filename, mode)"></a>io.open(filename, mode)</h1><p>打开文件用于读/写。</p><h2 id="重要提示"><a href="#重要提示" class="headerlink" title="重要提示"></a>重要提示</h2><p>处理<strong>二进制文件</strong>必须用：</p><ul><li><code>rb</code>（读）</li><li><code>wb</code>（写）<br>不要用 <code>r</code> / <code>w</code>，否则在 Windows 上会出错！</li></ul><hr><h1 id="io-lines-filename"><a href="#io-lines-filename" class="headerlink" title="io.lines([filename])"></a>io.lines([filename])</h1><p>获取文件行的<strong>迭代器</strong>。</p><hr><h1 id="io-tmpfile"><a href="#io-tmpfile" class="headerlink" title="io.tmpfile()"></a>io.tmpfile()</h1><p>获取临时文件句柄。</p><hr><h1 id="os-tmpname"><a href="#os-tmpname" class="headerlink" title="os.tmpname()"></a>os.tmpname()</h1><p>获取临时文件名。</p><hr><h1 id="os-remove-filename"><a href="#os-remove-filename" class="headerlink" title="os.remove(filename)"></a>os.remove(filename)</h1><p>删除一个条目（文件 或 空目录）。</p><hr><h1 id="os-rename-oldname-newname"><a href="#os-rename-oldname-newname" class="headerlink" title="os.rename(oldname, newname)"></a>os.rename(oldname, newname)</h1><p>移动/重命名一个条目（文件 或 目录）。</p><hr><h1 id="翻译说明"><a href="#翻译说明" class="headerlink" title="翻译说明"></a>翻译说明</h1><ul><li>保持官方术语：<code>path</code>、<code>directory</code>、<code>atomic</code>、<code>normalization</code></li><li>简洁、可直接用于中文模组文档</li><li>保留所有警告、提示、重要规则</li><li>符合模组开发者阅读习惯</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes voxelarea</title>
+      <link href="/luanti-API-Classes-voxelarea.html"/>
+      <url>/luanti-API-Classes-voxelarea.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="VoxelArea"><a href="#VoxelArea" class="headerlink" title="VoxelArea"></a>VoxelArea</h1><p>VoxelArea 是用于<strong>VoxelManip（地图区块操作）<strong>的面向对象工具类，专门用来</strong>计算坐标索引</strong>，避免手写复杂的三维下标公式。</p><hr><h2 id="VoxelArea-new-self-o"><a href="#VoxelArea-new-self-o" class="headerlink" title="VoxelArea.new(self, o)"></a>VoxelArea.new(self, o)</h2><p>创建一个 VoxelArea 实例。<br>会自动设置 <code>self.__index = self</code>，并将 <code>self</code> 设为 <code>o</code> 的元表。</p><h3 id="必须字段"><a href="#必须字段" class="headerlink" title="必须字段"></a>必须字段</h3><ul><li><strong>MinEdge</strong>：区域最小坐标（包含）<br>为整数向量，默认 <code>vector.new(1, 1, 1)</code></li><li><strong>MaxEdge</strong>：区域最大坐标（包含）<br>为整数向量，默认 <code>vector.new(0, 0, 0)</code></li></ul><span id="more"></span><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ul><li>两个坐标都必须是<strong>整数向量</strong></li><li>MinEdge 的每个分量必须 <strong>小于</strong> MaxEdge 的对应分量</li><li>可以用 <code>minp, maxp = vector.sort(minp, maxp)</code> 自动排序</li></ul><h3 id="自动计算"><a href="#自动计算" class="headerlink" title="自动计算"></a>自动计算</h3><p>创建时会自动计算并存储：</p><ul><li><code>ystride</code></li><li><code>zstride</code></li></ul><hr><h2 id="典型用法"><a href="#典型用法" class="headerlink" title="典型用法"></a>典型用法</h2><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> voxelmanip = core.get_voxel_manip(pos_min, pos_max)</span><br><span class="line"><span class="keyword">local</span> emin, emax = voxelmanip:read_from_map(pos_min, pos_max)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 必须传入实际 emerged 的最小/最大坐标</span></span><br><span class="line"><span class="keyword">local</span> voxelarea = VoxelArea:new{</span><br><span class="line">    MinEdge = emin,</span><br><span class="line">    MaxEdge = emax</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><hr><h1 id="重要警告"><a href="#重要警告" class="headerlink" title="重要警告"></a>重要警告</h1><ol><li><strong>必须传入实际 emerge 后的最小/最大坐标</strong><br>不要传入你“想要”的最小/最大坐标。</li><li><strong>绝对不能传入小数坐标</strong><br>必须是整数，可用：<ul><li><code>vector.floor()</code></li><li><code>vector.round()</code></li><li><code>vector.apply(vec, math.ceil)</code></li></ul></li></ol><hr><h1 id="方法（OOP-调用方式）"><a href="#方法（OOP-调用方式）" class="headerlink" title="方法（OOP 调用方式）"></a>方法（OOP 调用方式）</h1><p>下面示例中 <code>area</code> 是一个合法的 VoxelArea 实例。</p><h2 id="area-getExtent"><a href="#area-getExtent" class="headerlink" title="area:getExtent()"></a>area:getExtent()</h2><p>返回区域的<strong>尺寸向量</strong>（长、宽、高）。<br>返回值：整数向量 <code>{x=dx, y=dy, z=dz}</code></p><h2 id="area-getVolume"><a href="#area-getVolume" class="headerlink" title="area:getVolume()"></a>area:getVolume()</h2><p>返回区域内<strong>总方块数量</strong>（体积）。</p><h2 id="area-index-x-y-z"><a href="#area-index-x-y-z" class="headerlink" title="area:index(x, y, z)"></a>area:index(x, y, z)</h2><p>输入<strong>绝对世界坐标</strong>，返回在 VoxelManip 数据表里的<strong>索引下标</strong>。</p><h3 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h3><ul><li>会自动向下取整，<strong>不会报错</strong></li><li>你必须确保坐标是整数</li><li>你必须确保坐标在区域范围内</li></ul><h2 id="area-indexp-p"><a href="#area-indexp-p" class="headerlink" title="area:indexp(p)"></a>area:indexp(p)</h2><p><code>area:index(p.x, p.y, p.z)</code> 的简写。<br>传入坐标向量，返回索引。</p><h2 id="area-position-index"><a href="#area-position-index" class="headerlink" title="area:position(index)"></a>area:position(index)</h2><p><code>indexp</code> 的<strong>逆运算</strong>。<br>输入索引，返回对应的<strong>绝对世界坐标</strong>。</p><h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>返回的坐标<strong>没有 vector 元表</strong>。<br>如果需要标准向量：</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> p = vector.new(area:position(index))</span><br></pre></td></tr></tbody></table></figure><h2 id="area-contains-x-y-z"><a href="#area-contains-x-y-z" class="headerlink" title="area:contains(x, y, z)"></a>area:contains(x, y, z)</h2><p>判断坐标 (x,y,z) <strong>是否在区域范围内</strong>（包含边界）。<br>返回：<code>true</code> / <code>false</code></p><h2 id="area-containsp-p"><a href="#area-containsp-p" class="headerlink" title="area:containsp(p)"></a>area:containsp(p)</h2><p><code>contains(p.x, p.y, p.z)</code> 的简写。<br>传入向量，返回是否在区域内。</p><h2 id="area-containsi-i"><a href="#area-containsi-i" class="headerlink" title="area:containsi(i)"></a>area:containsi(i)</h2><p>判断索引 <code>i</code> 是否在 <strong>1 到 区域体积</strong> 之间（包含）。</p><h3 id="警告-1"><a href="#警告-1" class="headerlink" title="警告"></a>警告</h3><p><code>area:containsi(area:indexp(p))</code> <strong>不等于</strong> <code>area:containsp(p)</code><br>因为 <code>indexp</code> 对区域外坐标也可能生成合法索引。</p><hr><h2 id="area-iter-minx-miny-minz-maxx-maxy-maxz"><a href="#area-iter-minx-miny-minz-maxx-maxy-maxz" class="headerlink" title="area:iter(minx, miny, minz, maxx, maxy, maxz)"></a>area:iter(minx, miny, minz, maxx, maxy, maxz)</h2><p>返回一个<strong>迭代器</strong>，按 <strong>XYZ 顺序</strong>遍历区域内所有方块：</p><ol><li>先遍历 X</li><li>再遍历 Y</li><li>最后遍历 Z</li></ol><h2 id="area-iterp-minp-maxp"><a href="#area-iterp-minp-maxp" class="headerlink" title="area:iterp(minp, maxp)"></a>area:iterp(minp, maxp)</h2><p><code>iter()</code> 的简写，直接传入两个向量。</p><h3 id="示例（最常用）"><a href="#示例（最常用）" class="headerlink" title="示例（最常用）"></a>示例（最常用）</h3><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> area:iterp(pos_min, pos_max) <span class="keyword">do</span></span><br><span class="line">    content_id_data[index] = 方块ID</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></tbody></table></figure><p>等价于（但更简短、更快）：</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> z = pos_min.z, pos_max.z <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">for</span> y = pos_min.y, pos_max.y <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">for</span> x = pos_min.x, pos_max.x <span class="keyword">do</span></span><br><span class="line">            <span class="keyword">local</span> index = area:index(x, y, z)</span><br><span class="line">            content_id_data[index] = 方块ID</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes 向量 API</title>
+      <link href="/luanti-API-Classes-vector.html"/>
+      <url>/luanti-API-Classes-vector.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="向量-API"><a href="#向量-API" class="headerlink" title="向量 API"></a>向量 API</h1><p>Vector（向量）过去只是带 <code>x</code>/<code>y</code>/<code>z</code> 的普通表，现在已升级为带元表的增强类型。<br>除非特别说明，本文提到的 <code>vector</code> 均指<strong>带元表的向量</strong>。</p><h2 id="vector-命名空间函数"><a href="#vector-命名空间函数" class="headerlink" title="vector 命名空间函数"></a>vector 命名空间函数</h2><h3 id="vector-new-a-b-c"><a href="#vector-new-a-b-c" class="headerlink" title="vector.new(a, b, c)"></a><code>vector.new(a, b, c)</code></h3><p>创建新向量。</p><ul><li><code>a</code>、<code>b</code>、<code>c</code> 为数字 → 返回 <code>{x=a, y=b, z=c}</code></li><li><code>a</code> 是向量 → 等价 <code>vector.copy(a)</code></li><li>全空 → 等价 <code>vector.zero()</code></li></ul><span id="more"></span><h3 id="vector-zero"><a href="#vector-zero" class="headerlink" title="vector.zero()"></a><code>vector.zero()</code></h3><p>返回零向量：<code>{x=0, y=0, z=0}</code></p><h3 id="vector-copy-v"><a href="#vector-copy-v" class="headerlink" title="vector.copy(v)"></a><code>vector.copy(v)</code></h3><p>深拷贝一个向量，并正确设置元表。</p><h3 id="vector-from-string-s-init"><a href="#vector-from-string-s-init" class="headerlink" title="vector.from_string(s, init)"></a><code>vector.from_string(s, init)</code></h3><p>从字符串解析向量，格式：<code>(x, y, z)</code><br>返回：<strong>向量对象</strong>、<strong>下一个字符位置</strong></p><h3 id="vector-to-string-v"><a href="#vector-to-string-v" class="headerlink" title="vector.to_string(v)"></a><code>vector.to_string(v)</code></h3><p>把向量转成字符串：<code>(x, y, z)</code></p><h3 id="vector-equals-a-b"><a href="#vector-equals-a-b" class="headerlink" title="vector.equals(a, b)"></a><code>vector.equals(a, b)</code></h3><p>判断两个向量是否完全相等。</p><h3 id="vector-length-v"><a href="#vector-length-v" class="headerlink" title="vector.length(v)"></a><code>vector.length(v)</code></h3><p>返回向量长度（模）：√(x²+y²+z²)</p><h3 id="vector-normalize-v"><a href="#vector-normalize-v" class="headerlink" title="vector.normalize(v)"></a><code>vector.normalize(v)</code></h3><p>单位化向量（长度变为 1），长度为 0 时返回零向量。</p><h3 id="vector-floor-v"><a href="#vector-floor-v" class="headerlink" title="vector.floor(v)"></a><code>vector.floor(v)</code></h3><p>对 x/y/z 分别向下取整。</p><h3 id="vector-round-v"><a href="#vector-round-v" class="headerlink" title="vector.round(v)"></a><code>vector.round(v)</code></h3><p>对 x/y/z 分别四舍五入。</p><h3 id="vector-apply-v-func"><a href="#vector-apply-v-func" class="headerlink" title="vector.apply(v, func)"></a><code>vector.apply(v, func)</code></h3><p>对 x/y/z 分别应用函数 <code>func</code>。</p><h3 id="vector-combine-v-w-func"><a href="#vector-combine-v-w-func" class="headerlink" title="vector.combine(v, w, func)"></a><code>vector.combine(v, w, func)</code></h3><p>对两个向量的 x/y/z 分别应用函数。</p><h3 id="vector-distance-a-b"><a href="#vector-distance-a-b" class="headerlink" title="vector.distance(a, b)"></a><code>vector.distance(a, b)</code></h3><p>返回 a 和 b 两点之间的距离。</p><h3 id="vector-direction-pos1-pos2"><a href="#vector-direction-pos1-pos2" class="headerlink" title="vector.direction(pos1, pos2)"></a><code>vector.direction(pos1, pos2)</code></h3><p>返回从 pos1 指向 pos2 的<strong>单位方向向量</strong>。</p><h3 id="vector-angle-a-b"><a href="#vector-angle-a-b" class="headerlink" title="vector.angle(a, b)"></a><code>vector.angle(a, b)</code></h3><p>返回两个向量之间的夹角（弧度）。</p><h3 id="vector-dot-a-b"><a href="#vector-dot-a-b" class="headerlink" title="vector.dot(a, b)"></a><code>vector.dot(a, b)</code></h3><p>向量点积。</p><h3 id="vector-cross-a-b"><a href="#vector-cross-a-b" class="headerlink" title="vector.cross(a, b)"></a><code>vector.cross(a, b)</code></h3><p>向量叉积，返回新向量。</p><hr><h2 id="数学运算"><a href="#数学运算" class="headerlink" title="数学运算"></a>数学运算</h2><h3 id="vector-add-a-b"><a href="#vector-add-a-b" class="headerlink" title="vector.add(a, b)"></a><code>vector.add(a, b)</code></h3><ul><li>b 是向量 → 对应分量相加</li><li>b 是数字 → 所有分量加 b</li></ul><h3 id="vector-subtract-a-b"><a href="#vector-subtract-a-b" class="headerlink" title="vector.subtract(a, b)"></a><code>vector.subtract(a, b)</code></h3><ul><li>b 是向量 → 对应分量相减</li><li>b 是数字 → 所有分量减 b</li></ul><h3 id="vector-multiply-a-b"><a href="#vector-multiply-a-b" class="headerlink" title="vector.multiply(a, b)"></a><code>vector.multiply(a, b)</code></h3><ul><li>b 是向量 → 分量相乘</li><li>b 是数字 → 所有分量乘 b</li></ul><h3 id="vector-divide-a-b"><a href="#vector-divide-a-b" class="headerlink" title="vector.divide(a, b)"></a><code>vector.divide(a, b)</code></h3><ul><li>b 是向量 → 分量相除</li><li>b 是数字 → 所有分量除以 b</li></ul><h3 id="vector-offset-v-x-y-z"><a href="#vector-offset-v-x-y-z" class="headerlink" title="vector.offset(v, x, y, z)"></a><code>vector.offset(v, x, y, z)</code></h3><p>给向量 v 分别加上 x/y/z 偏移量。</p><h3 id="vector-sort-a-b"><a href="#vector-sort-a-b" class="headerlink" title="vector.sort(a, b)"></a><code>vector.sort(a, b)</code></h3><p>返回两个新向量：</p><ol><li>每个分量取较小值</li><li>每个分量取较大值</li></ol><p>常用于获取区域最小/最大角点。</p><h3 id="vector-check-v"><a href="#vector-check-v" class="headerlink" title="vector.check(v)"></a><code>vector.check(v)</code></h3><p>检查是否为合法的增强向量。</p><h3 id="vector-rotate-around-axis-v-axis-angle"><a href="#vector-rotate-around-axis-v-axis-angle" class="headerlink" title="vector.rotate_around_axis(v, axis, angle)"></a><code>vector.rotate_around_axis(v, axis, angle)</code></h3><p>让向量 v 绕 axis 轴逆时针旋转 angle（弧度）。</p><h3 id="vector-rotate-v-rot"><a href="#vector-rotate-v-rot" class="headerlink" title="vector.rotate(v, rot)"></a><code>vector.rotate(v, rot)</code></h3><p>按 rot 旋转向量：</p><ul><li>rot.x = pitch（俯仰）</li><li>rot.y = yaw（偏航）</li><li>rot.z = roll（滚转）</li></ul><h3 id="vector-dir-to-rotation-forward-up"><a href="#vector-dir-to-rotation-forward-up" class="headerlink" title="vector.dir_to_rotation(forward, up)"></a><code>vector.dir_to_rotation(forward, up)</code></h3><p>把方向向量转为旋转量（ you 看哪里 → 旋转值）。<br>up 默认是 <code>{x=0,y=1,z=0}</code>。</p><hr><h2 id="元表操作（最常用！）"><a href="#元表操作（最常用！）" class="headerlink" title="元表操作（最常用！）"></a>元表操作（最常用！）</h2><p>增强向量支持<strong>直接数学运算</strong>，代码更干净：</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> a = vector.new(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="keyword">local</span> b = vector.new(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> c = a + b      <span class="comment">-- 相加</span></span><br><span class="line"><span class="keyword">local</span> d = a - b      <span class="comment">-- 相减</span></span><br><span class="line"><span class="keyword">local</span> e = a * <span class="number">2</span>      <span class="comment">-- 乘数字</span></span><br><span class="line"><span class="keyword">local</span> f = a / <span class="number">2</span>      <span class="comment">-- 除数字</span></span><br><span class="line"><span class="keyword">local</span> g = -a         <span class="comment">-- 取反</span></span><br></pre></td></tr></tbody></table></figure><p>支持：</p><ul><li><code>==</code> → <code>vector.equals</code></li><li><code>+</code> <code>-</code> <code>*</code> <code>/</code></li><li>负号 <code>-v</code></li></ul><p>⚠️ 注意：<br>元表运算<strong>不支持向量+数字</strong>，只能用 <code>vector.add</code>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes 射线检测（Raycast）</title>
+      <link href="/luanti-API-Classes-raycast.html"/>
+      <url>/luanti-API-Classes-raycast.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="射线检测（Raycast）"><a href="#射线检测（Raycast）" class="headerlink" title="射线检测（Raycast）"></a>射线检测（Raycast）</h1><p>射线用于模拟一条“线”，检测它碰到了哪些<strong>选择箱</strong>（selection box）。<br>效果和玩家准星指向几乎完全一样（有少量限制）。</p><h2 id="指向结果（pointed-thing）格式"><a href="#指向结果（pointed-thing）格式" class="headerlink" title="指向结果（pointed_thing）格式"></a>指向结果（pointed_thing）格式</h2><p>射线碰到的东西只有 3 种：</p><ol><li><strong>nothing</strong>：没碰到任何东西</li><li><strong>object</strong>：实体、生物、玩家</li><li><strong>node</strong>：方块（固体/液体）</li></ol><span id="more"></span><h3 id="对象（实体-玩家）"><a href="#对象（实体-玩家）" class="headerlink" title="对象（实体/玩家）"></a>对象（实体/玩家）</h3><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="built_in">type</span> = <span class="string">"object"</span>,</span><br><span class="line">    ref = ObjectRef  <span class="comment">-- 引用</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h3 id="方块"><a href="#方块" class="headerlink" title="方块"></a>方块</h3><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="built_in">type</span> = <span class="string">"node"</span>,</span><br><span class="line">    under = 被指向的方块位置,</span><br><span class="line">    above = 方块上方放置位置</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h3 id="射线特有的额外字段"><a href="#射线特有的额外字段" class="headerlink" title="射线特有的额外字段"></a>射线特有的额外字段</h3><ul><li><code>box_id</code>：碰到的选择箱编号（从 1 开始）</li><li><code>intersection_normal</code>：接触面法线向量</li><li><code>intersection_point</code>：精确碰撞点坐标</li></ul><p><strong>射线不会返回 nothing，没碰到就直接返回 nil。</strong></p><hr><h2 id="core-line-of-sight-pos1-pos2"><a href="#core-line-of-sight-pos1-pos2" class="headerlink" title="core.line_of_sight(pos1, pos2)"></a><code>core.line_of_sight(pos1, pos2)</code></h2><p><strong>检查两点之间是否有非空气方块遮挡视线</strong><br>适合做生物视野判断、能否看到目标。</p><p>返回：</p><ul><li><code>free_sight</code>：是否无遮挡</li><li><code>pos</code>：第一个遮挡方块的位置</li></ul><hr><h2 id="Raycast-起点-终点-检测对象-检测液体"><a href="#Raycast-起点-终点-检测对象-检测液体" class="headerlink" title="Raycast(起点, 终点, 检测对象?, 检测液体?)"></a><code>Raycast(起点, 终点, 检测对象?, 检测液体?)</code></h2><p>创建射线（等价于 <code>core.raycast</code>）</p><p>参数：</p><ul><li><code>from_pos</code>：起点（通常是眼睛位置）</li><li><code>to_pos</code>：终点</li><li><code>include_objects</code>：是否检测实体/玩家（默认 true）</li><li><code>include_liquids</code>：是否检测液体（默认 true）</li></ul><p>返回：<br><strong>可迭代的射线对象</strong>（一次性、不可重启）</p><hr><h2 id="重要说明"><a href="#重要说明" class="headerlink" title="重要说明"></a>重要说明</h2><ul><li>射线检测 <strong>选择箱</strong>，不是碰撞箱</li><li>服务端射线<strong>不能正确处理挂载/模型动画</strong></li><li>射线迭代<strong>只能用一次</strong>，用完就“耗尽”了</li><li>可以中途 break，下次循环会<strong>继续上次位置</strong></li></ul><hr><h2 id="使用方法（最简单）"><a href="#使用方法（最简单）" class="headerlink" title="使用方法（最简单）"></a>使用方法（最简单）</h2><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> ray = Raycast(pos1, pos2, <span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> pointed_thing <span class="keyword">in</span> ray <span class="keyword">do</span></span><br><span class="line">    <span class="comment">-- 处理碰到的东西</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></tbody></table></figure><hr><h2 id="实用示例：重现玩家手里工具的射线"><a href="#实用示例：重现玩家手里工具的射线" class="headerlink" title="实用示例：重现玩家手里工具的射线"></a>实用示例：重现玩家手里工具的射线</h2><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> eye_pos = player:get_pos()</span><br><span class="line">eye_pos.y = eye_pos.y + player:get_properties().eye_height</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 眼睛偏移</span></span><br><span class="line"><span class="keyword">local</span> first = player:get_eye_offset()</span><br><span class="line">eye_pos = vector.add(eye_pos, vector.divide(first, <span class="number">10</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 方向与距离</span></span><br><span class="line"><span class="keyword">local</span> look_dir = player:get_look_dir()</span><br><span class="line"><span class="keyword">local</span> range = player:get_wielded_item():get_definition().range <span class="keyword">or</span> <span class="number">4</span></span><br><span class="line"><span class="keyword">local</span> end_pos = vector.add(eye_pos, vector.multiply(look_dir, range))</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 射线</span></span><br><span class="line"><span class="keyword">for</span> pt <span class="keyword">in</span> core.raycast(eye_pos, end_pos, <span class="literal">true</span>, <span class="literal">true</span>) <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> pt.ref ~= player <span class="keyword">then</span></span><br><span class="line">        <span class="comment">-- 你看到了 pt</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes 随机数（Random）</title>
+      <link href="/luanti-API-Classes-random.html"/>
+      <url>/luanti-API-Classes-random.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="随机数（Random）"><a href="#随机数（Random）" class="headerlink" title="随机数（Random）"></a>随机数（Random）</h1><p>Luanti 提供<strong>四种随机数生成器</strong>，各有优缺点，模组开发者需要根据场景选择。</p><h2 id="Lua-内置随机（全局）"><a href="#Lua-内置随机（全局）" class="headerlink" title="Lua 内置随机（全局）"></a>Lua 内置随机（全局）</h2><p>不受模组安全限制，服务端和客户端模组都能用。</p><h3 id="math-randomseed-seed"><a href="#math-randomseed-seed" class="headerlink" title="math.randomseed(seed)"></a><code>math.randomseed(seed)</code></h3><p>设置全局随机种子。<br>引擎<strong>已经用系统时间自动帮你设置过</strong>。</p><span id="more"></span><h3 id="重要提醒"><a href="#重要提醒" class="headerlink" title="重要提醒"></a>重要提醒</h3><ul><li><strong>不要自己手动设置种子</strong>，会破坏其他模组的随机性</li><li>全局只有一个种子，一旦修改会影响所有代码</li><li>如果你必须临时用固定种子，用完要立刻还原</li></ul><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 安全用法示例</span></span><br><span class="line"><span class="keyword">local</span> reseed = <span class="built_in">math</span>.<span class="built_in">random</span>(<span class="number">2147483647</span>) <span class="comment">-- 先存一个随机种子</span></span><br><span class="line"><span class="built_in">math</span>.<span class="built_in">randomseed</span>(我的固定种子) <span class="comment">-- 临时 deterministic</span></span><br><span class="line"><span class="comment">-- 做你的事...</span></span><br><span class="line"><span class="built_in">math</span>.<span class="built_in">randomseed</span>(reseed) <span class="comment">-- 恢复全局随机性</span></span><br></pre></td></tr></tbody></table></figure><h3 id="math-random"><a href="#math-random" class="headerlink" title="math.random()"></a><code>math.random()</code></h3><p>获取随机数：</p><ul><li>无参：0~1 浮点数</li><li>1 个参：1~n</li><li>2 个参：min~max</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>不同平台、不同 Lua 版本结果不一样</li><li><strong>不能用于地图生成</strong>（会出现不同步）</li><li>精度约 32 位，不是完整 52 位</li></ul><h3 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h3><p>快速、非确定性、不需要跨平台一致的随机。</p><hr><h2 id="四种随机生成器详解"><a href="#四种随机生成器详解" class="headerlink" title="四种随机生成器详解"></a>四种随机生成器详解</h2><h3 id="1-PcgRandom（推荐！）"><a href="#1-PcgRandom（推荐！）" class="headerlink" title="1. PcgRandom（推荐！）"></a>1. PcgRandom（推荐！）</h3><p><strong>可设置种子、32 位、高质量、跨平台一致</strong><br>适合地图生成、结构、树、矿石等。</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> r = PcgRandom(seed)</span><br><span class="line">r:<span class="built_in">next</span>([<span class="built_in">min</span>, <span class="built_in">max</span>])</span><br></pre></td></tr></tbody></table></figure><ul><li>默认范围：-2³¹ ~ 2³¹-1</li><li>质量高、速度不错</li><li><strong>全平台结果完全一致</strong></li></ul><h3 id="rand-normal-dist-min-max-num-trials"><a href="#rand-normal-dist-min-max-num-trials" class="headerlink" title=":rand_normal_dist(min, max, [num_trials])"></a><code>:rand_normal_dist(min, max, [num_trials])</code></h3><p>近似正态分布（高斯）<br>均值在中间， trials 越大越接近正态。<br><strong>官方不推荐使用</strong>。</p><hr><h3 id="2-PseudoRandom（老古董，不推荐）"><a href="#2-PseudoRandom（老古董，不推荐）" class="headerlink" title="2. PseudoRandom（老古董，不推荐）"></a>2. PseudoRandom（老古董，不推荐）</h3><p>16 位 LCG 随机算法，质量最差。</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> r = PseudoRandom(seed)</span><br><span class="line">r:<span class="built_in">next</span>()</span><br></pre></td></tr></tbody></table></figure><ul><li>范围：0~65535</li><li>分布差、功能弱</li><li><strong>官方结论：永远不要用</strong></li></ul><hr><h3 id="3-SecureRandom（密码级安全随机）"><a href="#3-SecureRandom（密码级安全随机）" class="headerlink" title="3. SecureRandom（密码级安全随机）"></a>3. SecureRandom（密码级安全随机）</h3><p>系统级加密安全随机数，<strong>不可预测、不可设置种子</strong>。</p><p>用于：</p><ul><li>生成令牌</li><li>密钥</li><li>抽奖、防作弊</li></ul><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> r = SecureRandom()</span><br><span class="line"><span class="keyword">local</span> bytes = r:next_bytes([count])</span><br></pre></td></tr></tbody></table></figure><ul><li>最多一次取 2048 字节</li><li>Windows 使用 CryptoAPI</li><li>Linux/Android 使用 /dev/urandom</li></ul><hr><h2 id="性能对比（越快越好）"><a href="#性能对比（越快越好）" class="headerlink" title="性能对比（越快越好）"></a>性能对比（越快越好）</h2><ul><li>math.random：最快（1x）</li><li>PcgRandom：约 14x</li><li>PseudoRandom：约 15x</li><li>SecureRandom：约 30x</li></ul><hr><h2 id="总结对比表（精简版）"><a href="#总结对比表（精简版）" class="headerlink" title="总结对比表（精简版）"></a>总结对比表（精简版）</h2><table><thead><tr><th>类型</th><th>可设种子</th><th>跨平台一致</th><th>质量</th><th>用途</th></tr></thead><tbody><tr><td>math.random</td><td>全局</td><td>❌ 不保证</td><td>一般</td><td>快速普通随机</td></tr><tr><td><strong>PcgRandom</strong></td><td>✅ 实例独立</td><td>✅ 完全一致</td><td>高</td><td><strong>地图生成、模组逻辑</strong></td></tr><tr><td>PseudoRandom</td><td>✅</td><td>✅</td><td>差</td><td>不用</td></tr><tr><td>SecureRandom</td><td>❌</td><td>—</td><td>最高</td><td>密码、防作弊</td></tr></tbody></table><hr><h2 id="官方最终结论"><a href="#官方最终结论" class="headerlink" title="官方最终结论"></a>官方最终结论</h2><ul><li><strong>永远不要用 PseudoRandom</strong>，被 PcgRandom 全面吊打</li><li>要<strong>快、简单</strong> → <code>math.random</code></li><li>要<strong>确定性、地图生成、全平台一致</strong> → <strong>PcgRandom</strong></li><li>要<strong>加密安全</strong> → SecureRandom</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes PlayerMetaData</title>
+      <link href="/luanti-API-Classes-playermetadata.html"/>
+      <url>/luanti-API-Classes-playermetadata.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="PlayerMetaData"><a href="#PlayerMetaData" class="headerlink" title="PlayerMetaData"></a>PlayerMetaData</h1><p>PlayerMetaData 是<strong>每个世界、每个玩家独立</strong>的持久化字符串键值存储，<strong>完全继承 MetaData 所有方法</strong>。</p><h2 id="保存频率"><a href="#保存频率" class="headerlink" title="保存频率"></a>保存频率</h2><p>数据保存间隔由服务器配置 <code>map_save_interval</code> 控制。</p><h2 id="重要规范（必看）"><a href="#重要规范（必看）" class="headerlink" title="重要规范（必看）"></a>重要规范（必看）</h2><p>PlayerMetaData 是<strong>所有模组共用</strong>的，为了避免键名冲突，<strong>必须给你的 key 加模组名前缀</strong>。</p><p>例子：</p><ul><li>任务模组的分数 → <code>fancy_quests:score</code></li><li>生物模组的分数 → <code>fancy_mobs:score</code></li></ul><span id="more"></span><h2 id="player-get-meta"><a href="#player-get-meta" class="headerlink" title="player:get_meta()"></a><code>player:get_meta()</code></h2><p>获取一个玩家的元数据对象。</p><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul><li>必须传入<strong>在线玩家对象</strong>才能使用</li><li><strong>玩家离线时无法访问</strong> PlayerMetaData</li><li>如果你需要存<strong>离线玩家数据</strong>，请用 <strong>ModStorage</strong>，并把玩家名加进键名里</li></ul><h3 id="离线存储替代方案（ModStorage）"><a href="#离线存储替代方案（ModStorage）" class="headerlink" title="离线存储替代方案（ModStorage）"></a>离线存储替代方案（ModStorage）</h3><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 把玩家数据存在 ModStorage 中，支持离线读取</span></span><br><span class="line"><span class="keyword">local</span> storage = core.get_mod_storage()</span><br><span class="line"><span class="keyword">local</span> player_name = player:get_player_name()</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 存</span></span><br><span class="line">storage:set_string(player_name .. <span class="string">":score"</span>, <span class="string">"100"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 取</span></span><br><span class="line"><span class="keyword">local</span> score = storage:get_string(player_name .. <span class="string">":score"</span>)</span><br></pre></td></tr></tbody></table></figure><hr><h2 id="总结一句话"><a href="#总结一句话" class="headerlink" title="总结一句话"></a>总结一句话</h2><ul><li><strong>ModStorage</strong>：模组全局，世界维度，离线可读写</li><li><strong>NodeMetaData</strong>：单个方块，带界面、带背包</li><li><strong>PlayerMetaData</strong>：单个玩家，在线才能读写</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes NodeMetaData</title>
+      <link href="/luanti-API-Classes-nodemetadata.html"/>
+      <url>/luanti-API-Classes-nodemetadata.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="NodeMetaData"><a href="#NodeMetaData" class="headerlink" title="NodeMetaData"></a>NodeMetaData</h1><p>NodeMetaData 让你可以给<strong>世界里的每一个方块</strong>绑定独立的持久化键值数据，完全继承 MetaData 所有方法。<br>它最常用的功能是给箱子、熔炉等方块<strong>存储背包与界面</strong>。</p><h2 id="传统方块只能存这些（非常少）"><a href="#传统方块只能存这些（非常少）" class="headerlink" title="传统方块只能存这些（非常少）"></a>传统方块只能存这些（非常少）</h2><ul><li>方块ID（名称）</li><li>param1：通常用于光照（0–255）</li><li>param2：旋转、颜色、形状等（0–255）</li></ul><p>有了 NodeMetaData，你想存多少就存多少。</p><span id="more"></span><hr><h2 id="获取方块元数据"><a href="#获取方块元数据" class="headerlink" title="获取方块元数据"></a>获取方块元数据</h2><h3 id="core-get-meta-pos"><a href="#core-get-meta-pos" class="headerlink" title="core.get_meta(pos)"></a><code>core.get_meta(pos)</code></h3><p>获取指定位置方块的元数据对象。</p><ul><li>参数：<code>pos</code> 坐标（会自动取整）</li><li>返回：NodeMetaData 对象</li></ul><h3 id="core-find-nodes-with-meta-pos1-pos2"><a href="#core-find-nodes-with-meta-pos1-pos2" class="headerlink" title="core.find_nodes_with_meta(pos1, pos2)"></a><code>core.find_nodes_with_meta(pos1, pos2)</code></h3><p>在一个长方体区域内<strong>搜索所有带有元数据的方块</strong>。</p><ul><li>参数：区域两个对角坐标</li><li>返回：带元数据的位置列表</li></ul><hr><h2 id="特殊字段（引擎自带功能）"><a href="#特殊字段（引擎自带功能）" class="headerlink" title="特殊字段（引擎自带功能）"></a>特殊字段（引擎自带功能）</h2><h3 id="formspec"><a href="#formspec" class="headerlink" title="formspec"></a><code>formspec</code></h3><p>右键点开方块时显示的界面。</p><ul><li>如果方块定义了 <code>on_rightclick</code>，这个字段<strong>不生效</strong></li><li>优点：<strong>客户端秒开</strong>，不用等服务器往返（RTT）</li><li>缺点：界面基本是静态的，不能动态生成</li><li>只有这里能用 <code>context</code>  inventory 位置</li></ul><h3 id="infotext"><a href="#infotext" class="headerlink" title="infotext"></a><code>infotext</code></h3><p>准星指向方块时显示的文字（比如箱子里有什么）。</p><ul><li>自动换行、超长自动截断</li></ul><hr><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="mark-as-private-keys"><a href="#mark-as-private-keys" class="headerlink" title=":mark_as_private(keys)"></a><code>:mark_as_private(keys)</code></h3><p>把字段标记为<strong>私有</strong>，<strong>不发给客户端</strong>，防作弊、减流量。</p><ul><li>可以传单个 key 或 key 列表</li><li>删除键后标记会消失</li><li>重新创建键必须重新标记</li><li><code>to_table</code> / <code>from_table</code> <strong>不保留私有标记</strong></li></ul><h3 id="get-inventory"><a href="#get-inventory" class="headerlink" title=":get_inventory()"></a><code>:get_inventory()</code></h3><p>获取这个方块绑定的<strong>背包</strong>（箱子、熔炉等）。</p><h3 id="to-table"><a href="#to-table" class="headerlink" title=":to_table()"></a><code>:to_table()</code></h3><p>在 MetaData 基础上<strong>额外包含 inventory</strong>，导出所有背包物品。</p><h3 id="from-table-table"><a href="#from-table-table" class="headerlink" title=":from_table(table)"></a><code>:from_table(table)</code></h3><p>从表格批量恢复<strong>元数据 + 背包</strong>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes ModStorage</title>
+      <link href="/luanti-modstorage.html"/>
+      <url>/luanti-modstorage.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="ModStorage"><a href="#ModStorage" class="headerlink" title="ModStorage"></a>ModStorage</h1><p>ModStorage 是<strong>每个世界、每个模组独立</strong>的持久化字符串键值存储，<strong>完全继承 MetaData 的所有方法</strong>。</p><h2 id="保存机制"><a href="#保存机制" class="headerlink" title="保存机制"></a>保存机制</h2><p>数据的保存频率由服务器配置 <code>map_save_interval</code> 决定。</p><span id="more"></span><hr><h2 id="存储后端（两种）"><a href="#存储后端（两种）" class="headerlink" title="存储后端（两种）"></a>存储后端（两种）</h2><ul><li><strong>JSON</strong>：纯文本存储，简单但不支持二进制数据</li><li><strong>SQLite3</strong>：数据库存储，支持任意字节串，效率更高</li></ul><h3 id="⚠️-重要警告"><a href="#⚠️-重要警告" class="headerlink" title="⚠️ 重要警告"></a>⚠️ 重要警告</h3><ul><li>JSON <strong>不能存原始二进制数据</strong></li><li>即使 SQLite3 支持二进制，也<strong>不要依赖</strong>它，因为用户可能用 JSON 后端</li><li>SQLite3 只保存<strong>变化的部分</strong>，更快、更安全</li><li>JSON 每次都要<strong>全量重写</strong>，崩溃时更容易丢数据</li></ul><hr><h2 id="core-get-mod-storage"><a href="#core-get-mod-storage" class="headerlink" title="core.get_mod_storage()"></a><code>core.get_mod_storage()</code></h2><ul><li>必须在<strong>模组加载时调用</strong></li><li>返回当前模组的<strong>私有存储对象</strong></li></ul><hr><h2 id="示例代码（欢迎语持久化）"><a href="#示例代码（欢迎语持久化）" class="headerlink" title="示例代码（欢迎语持久化）"></a>示例代码（欢迎语持久化）</h2><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 获取模组存储</span></span><br><span class="line"><span class="keyword">local</span> storage = core.get_mod_storage()</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 玩家进入时发送欢迎语</span></span><br><span class="line">core.register_on_joinplayer(<span class="function"><span class="keyword">function</span><span class="params">(player)</span></span></span><br><span class="line">    <span class="keyword">local</span> greeting = storage:get(<span class="string">"greeting"</span>)</span><br><span class="line">    <span class="keyword">if</span> greeting <span class="keyword">then</span></span><br><span class="line">        core.chat_send_player(player:get_player_name(), greeting)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 管理员设置欢迎语</span></span><br><span class="line">core.register_chatcommand(<span class="string">"/set_greeting"</span>, {</span><br><span class="line">    params = <span class="string">"&lt;欢迎语&gt;"</span>,</span><br><span class="line">    description = <span class="string">"设置玩家进服欢迎语"</span>,</span><br><span class="line">    privs = {server = <span class="literal">true</span>},</span><br><span class="line"></span><br><span class="line">    func = <span class="function"><span class="keyword">function</span><span class="params">(name, param)</span></span></span><br><span class="line">        param = param:trim()</span><br><span class="line">        storage:set_string(<span class="string">"greeting"</span>, param)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>, param == <span class="string">""</span> <span class="keyword">and</span> <span class="string">"欢迎语已清空"</span> <span class="keyword">or</span> <span class="string">"欢迎语已设置"</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes metadata</title>
+      <link href="/luanti-metadata.html"/>
+      <url>/luanti-metadata.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="MetaData"><a href="#MetaData" class="headerlink" title="MetaData"></a>MetaData</h1><p>MetaData 是一个<strong>通用键值存储接口</strong>，用于给对象持久化保存字符串数据。<br>下面所有方法，在它的<strong>所有子类</strong>里都可以用。</p><h2 id="子类（它管哪些东西）"><a href="#子类（它管哪些东西）" class="headerlink" title="子类（它管哪些东西）"></a>子类（它管哪些东西）</h2><ul><li><strong>ModStorage</strong>：模组全局存储（整个模组共用）</li><li><strong>NodeMetaData</strong>：地图上的单个方块存储</li><li><strong>ItemStackMetaData</strong>：物品堆存储</li><li><strong>PlayerMetaData</strong>：玩家存储</li></ul><span id="more"></span><hr><h2 id="核心注意"><a href="#核心注意" class="headerlink" title="核心注意"></a>核心注意</h2><ul><li>所有值<strong>最终都会存成字符串</strong>，没有类型标记</li><li>你自己要记住存的是字符串、整数还是浮点数</li><li><strong>不要混用类型</strong>，否则会出bug</li><li>读取时会自动解析，但不保证完全符合你的预期</li></ul><h3 id="推荐：存复杂数据用序列化"><a href="#推荐：存复杂数据用序列化" class="headerlink" title="推荐：存复杂数据用序列化"></a>推荐：存复杂数据用序列化</h3><ul><li>存 JSON 表格：<code>core.write_json</code> / <code>core.parse_json</code></li><li>存任意 Lua 表格：<code>core.serialize</code> / <code>core.deserialize</code></li></ul><p>这样存数字、表格<strong>绝对安全</strong>，不怕类型丢失。</p><hr><h1 id="获取类方法（Getters）"><a href="#获取类方法（Getters）" class="headerlink" title="获取类方法（Getters）"></a>获取类方法（Getters）</h1><p>所有 get 方法只传一个参数：<strong>key（键名）</strong></p><h3 id="contains-key"><a href="#contains-key" class="headerlink" title=":contains(key)"></a><code>:contains(key)</code></h3><p>检查某个键<strong>是否存在</strong><br>返回：</p><ul><li><code>nil</code>：对象无效</li><li><code>false</code>：不存在</li><li><code>true</code>：存在</li></ul><h3 id="get-key"><a href="#get-key" class="headerlink" title=":get(key)"></a><code>:get(key)</code></h3><p>获取键的值（原始方法）<br>返回：</p><ul><li><code>nil</code>：不存在</li><li>字符串：存在的值</li></ul><h3 id="get-string-key"><a href="#get-string-key" class="headerlink" title=":get_string(key)"></a><code>:get_string(key)</code></h3><p>获取字符串，<strong>不存在返回空字符串 “”</strong></p><h3 id="get-int-key"><a href="#get-int-key" class="headerlink" title=":get_int(key)"></a><code>:get_int(key)</code></h3><p>获取整数，<strong>不存在返回 0</strong><br>自动把字符串转成数字</p><h3 id="get-float-key"><a href="#get-float-key" class="headerlink" title=":get_float(key)"></a><code>:get_float(key)</code></h3><p>获取浮点数，<strong>不存在返回 0</strong></p><hr><h1 id="设置类方法（Setters）"><a href="#设置类方法（Setters）" class="headerlink" title="设置类方法（Setters）"></a>设置类方法（Setters）</h1><p>所有 set 方法传两个参数：<strong>key, value</strong></p><h3 id="set-string-key-value"><a href="#set-string-key-value" class="headerlink" title=":set_string(key, value)"></a><code>:set_string(key, value)</code></h3><p>存字符串</p><ul><li>传 <code>""</code> 等于<strong>删除这个键</strong></li></ul><h3 id="set-int-key-value"><a href="#set-int-key-value" class="headerlink" title=":set_int(key, value)"></a><code>:set_int(key, value)</code></h3><p>存整数<br>⚠️ <strong>警告</strong>：<br>内部是 C++ 32位 int，范围：<br><strong>-2³¹ ~ 2³¹-1</strong><br>超出会溢出出错！</p><h3 id="set-float-key-value"><a href="#set-float-key-value" class="headerlink" title=":set_float(key, value)"></a><code>:set_float(key, value)</code></h3><p>存浮点数<br>⚠️ <strong>警告</strong>：<br>内部是 C++ 32位 float，<strong>精度比 Lua 64位低</strong>，大数可能丢失精度。</p><hr><h1 id="其他实用方法"><a href="#其他实用方法" class="headerlink" title="其他实用方法"></a>其他实用方法</h1><h3 id="equals-other"><a href="#equals-other" class="headerlink" title=":equals(other)"></a><code>:equals(other)</code></h3><p>比较两个元数据对象<strong>是否完全一样</strong>（键值全相同）</p><h3 id="to-table"><a href="#to-table" class="headerlink" title=":to_table()"></a><code>:to_table()</code></h3><p>把所有元数据<strong>转成 Lua 表格</strong><br>结构：</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    fields = { 键 = 值, ... }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h3 id="from-table-table"><a href="#from-table-table" class="headerlink" title=":from_table(table)"></a><code>:from_table(table)</code></h3><p>从表格<strong>批量加载</strong>元数据</p><ul><li>传非表格 = <strong>清空所有数据</strong></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>luanti API-Classes ItemStackMetaData</title>
+      <link href="/luanti-itemstackmetadata.html"/>
+      <url>/luanti-itemstackmetadata.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="ItemStackMetaData"><a href="#ItemStackMetaData" class="headerlink" title="ItemStackMetaData"></a>ItemStackMetaData</h1><p>ItemStackMetaData 是 <strong>MetaData 的子类</strong>，通过 <code>stack:get_meta()</code> 获取，用于<strong>给物品堆绑定持久化的键值对数据</strong>。</p><span id="more"></span><hr><h2 id="重要警告"><a href="#重要警告" class="headerlink" title="重要警告"></a>重要警告</h2><p>物品堆元数据会和物品一起序列化，会<strong>增加物品名称字符串长度</strong>。<br>攻击者可能故意把元数据撑到最大，导致背包无法正常传输。<br><strong>请始终限制物品元数据的大小</strong>，保证背包能正常发送。</p><hr><h2 id="特殊字段"><a href="#特殊字段" class="headerlink" title="特殊字段"></a>特殊字段</h2><h3 id="描述文字"><a href="#描述文字" class="headerlink" title="描述文字"></a>描述文字</h3><ul><li><code>description</code>：鼠标悬停时显示的物品描述（对应 <code>ItemStack:get_description</code>）</li><li><code>short_description</code>：物品简短描述（对应 <code>ItemStack:get_short_description</code>）</li></ul><h3 id="硬件着色"><a href="#硬件着色" class="headerlink" title="硬件着色"></a>硬件着色</h3><ul><li><code>color</code>：用于物品硬件着色的颜色字符串</li><li><code>palette_index</code>：物品硬件着色使用的调色板索引（如果物品有调色板）</li></ul><h3 id="数量显示"><a href="#数量显示" class="headerlink" title="数量显示"></a>数量显示</h3><p>需要 Luanti 5.6+ 客户端支持（低版本客户端会显示默认数量）；服务端全 5.x 版本兼容。</p><ul><li><code>count_meta</code>：在背包中显示的<strong>自定义数量文字</strong>，覆盖真实数量</li><li><code>count_alignment</code>：数量文字对齐方式（用 <code>:get_int</code> / <code>:set_int</code>）</li></ul><p>对齐值计算规则：<br><code>对齐值 = x_align + 4 * y_align</code></p><table><thead><tr><th>数值</th><th>X 轴对齐（水平）</th><th>Y 轴对齐（垂直）</th></tr></thead><tbody><tr><td>0</td><td>默认（同 3）</td><td>默认（同 3）</td></tr><tr><td>1</td><td>左</td><td>上</td></tr><tr><td>2</td><td>居中</td><td>居中</td></tr><tr><td>3</td><td>右</td><td>下</td></tr></tbody></table><h3 id="小提示"><a href="#小提示" class="headerlink" title="小提示"></a>小提示</h3><p>直接写数字会降低可读性，建议加注释或封装成函数：</p><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 右上角对齐</span></span><br><span class="line"><span class="keyword">local</span> align_top_right = <span class="number">3</span> + <span class="number">4</span> * <span class="number">1</span></span><br><span class="line">meta:set_int(<span class="string">"count_alignment"</span>, align_top_right)</span><br></pre></td></tr></tbody></table></figure><hr><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="set-tool-capabilities-tool-capabilities"><a href="#set-tool-capabilities-tool-capabilities" class="headerlink" title=":set_tool_capabilities(tool_capabilities)"></a><code>:set_tool_capabilities(tool_capabilities)</code></h3><p>允许<strong>覆盖物品定义里的工具属性</strong>。</p><p>参数：</p><ul><li><code>nil</code>：清除工具属性覆盖，恢复默认</li><li>工具属性表：覆盖原有工具属性（格式见 ItemDefinition）</li></ul><p>注意：<br>对应的获取方法 <code>:get_tool_capabilities</code> <strong>不属于 ItemStackMetaData</strong>，而是属于父级 ItemStack。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> luanti </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> luanti </tag>
+            
+            <tag> games </tag>
+            
+            <tag> mods </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>luanti 硬编码功能列表</title>
       <link href="/luanti-list-of-hardcoded-features.html"/>
       <url>/luanti-list-of-hardcoded-features.html</url>
