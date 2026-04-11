@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-11T04:17:54.191Z</updated>
+  <updated>2026-04-11T04:19:29.822Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -21,11 +21,10 @@
     <link href="https://pangz.fun/luanti-API-filesystem.html"/>
     <id>https://pangz.fun/luanti-API-filesystem.html</id>
     <published>2026-04-11T04:17:04.000Z</published>
-    <updated>2026-04-11T04:17:54.191Z</updated>
+    <updated>2026-04-11T04:19:29.822Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;文件系统&quot;&gt;&lt;a href=&quot;#文件系统&quot; class=&quot;headerlink&quot; title=&quot;文件系统&quot;&gt;&lt;/a&gt;文件系统&lt;/h1&gt;&lt;p&gt;（官方文档风格 · 简洁准确 · 可直接用于模组开发）&lt;/p&gt;
-&lt;h1 id=&quot;文件系统（Filesystem）&quot;&gt;&lt;a href=&quot;#文件系统（Filesystem）&quot; class=&quot;headerlink&quot; title=&quot;文件系统（Filesystem）&quot;&gt;&lt;/a&gt;文件系统（Filesystem）&lt;/h1&gt;&lt;p&gt;Luanti 提供大量工具函数，用于管理&lt;strong&gt;路径、文件、文件夹&lt;/strong&gt;。&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;文件系统（Filesystem）&quot;&gt;&lt;a href=&quot;#文件系统（Filesystem）&quot; class=&quot;headerlink&quot; title=&quot;文件系统（Filesystem）&quot;&gt;&lt;/a&gt;文件系统（Filesystem）&lt;/h1&gt;&lt;p&gt;Luanti 提供大量工具函数，用于管理&lt;strong&gt;路径、文件、文件夹&lt;/strong&gt;。&lt;/p&gt;
 &lt;h1 id=&quot;重要说明&quot;&gt;&lt;a href=&quot;#重要说明&quot; class=&quot;headerlink&quot; title=&quot;重要说明&quot;&gt;&lt;/a&gt;重要说明&lt;/h1&gt;&lt;p&gt;模组安全系统会&lt;strong&gt;限制文件访问路径&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;加载时：只能访问&lt;strong&gt;当前模组目录（mod path）&lt;/strong&gt;&lt;/li&gt;
