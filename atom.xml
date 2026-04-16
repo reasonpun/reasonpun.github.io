@@ -6,7 +6,7 @@
   <link href="https://pangz.fun/atom.xml" rel="self"/>
   
   <link href="https://pangz.fun/"/>
-  <updated>2026-04-11T04:19:29.822Z</updated>
+  <updated>2026-04-16T08:43:14.689Z</updated>
   <id>https://pangz.fun/</id>
   
   <author>
@@ -15,6 +15,255 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>luanti Lua 编码规范</title>
+    <link href="https://pangz.fun/luanti-lua-conventions.html"/>
+    <id>https://pangz.fun/luanti-lua-conventions.html</id>
+    <published>2026-04-16T08:41:47.000Z</published>
+    <updated>2026-04-16T08:43:14.689Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Lua-编码规范&quot;&gt;&lt;a href=&quot;#Lua-编码规范&quot; class=&quot;headerlink&quot; title=&quot;Lua 编码规范&quot;&gt;&lt;/a&gt;Lua 编码规范&lt;/h1&gt;&lt;p&gt;Lua 是一门简洁、极简、优雅、高效、可嵌入、表现力强的脚本语言。想要高效开发 Luanti 模组与游戏，必须熟练掌握 Lua。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti API 计时与事件循环</title>
+    <link href="https://pangz.fun/luanti-API-timing-and-event-loop.html"/>
+    <id>https://pangz.fun/luanti-API-timing-and-event-loop.html</id>
+    <published>2026-04-16T08:39:52.000Z</published>
+    <updated>2026-04-16T08:40:40.642Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;计时与事件循环&quot;&gt;&lt;a href=&quot;#计时与事件循环&quot; class=&quot;headerlink&quot; title=&quot;计时与事件循环&quot;&gt;&lt;/a&gt;计时与事件循环&lt;/h1&gt;&lt;p&gt;Luanti 的 Lua API 可用于获取时间、日期，或调度&lt;strong&gt;一次性/每帧执行&lt;/strong&gt;的事件。&lt;/p&gt;
+&lt;h2 id=&quot;设置项&quot;&gt;&lt;a href=&quot;#设置项&quot; class=&quot;headerlink&quot; title=&quot;设置项&quot;&gt;&lt;/a&gt;设置项&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;服务器&lt;/strong&gt;：&lt;code&gt;dedicated_server_step&lt;/code&gt; 控制&lt;strong&gt;服务端帧间隔&lt;/strong&gt;，这是无忙等待时游戏循环的最大粒度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;单人模式&lt;/strong&gt;：帧率决定服务端帧执行频率。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti API 纹理修饰器</title>
+    <link href="https://pangz.fun/luanti-API-texture-modifiers.html"/>
+    <id>https://pangz.fun/luanti-API-texture-modifiers.html</id>
+    <published>2026-04-16T08:38:18.000Z</published>
+    <updated>2026-04-16T08:39:14.502Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;纹理修饰器&quot;&gt;&lt;a href=&quot;#纹理修饰器&quot; class=&quot;headerlink&quot; title=&quot;纹理修饰器&quot;&gt;&lt;/a&gt;纹理修饰器&lt;/h1&gt;&lt;p&gt;纹理修饰器是一串告诉 Luanti 如何处理图片的字符串，除动态媒体外，它是&lt;strong&gt;运行时动态生成纹理&lt;/strong&gt;的唯一方式。&lt;br&gt;它也能用来简化模组，批量生成重复纹理，比如不同颜色的工具贴图。&lt;/p&gt;
+&lt;p&gt;ℹ️ 说明&lt;br&gt;纹理修饰器和硬件着色功能部分重叠。&lt;strong&gt;优先使用硬件着色&lt;/strong&gt;，更灵活、产生的冗余纹理更少。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti API 数据持久化</title>
+    <link href="https://pangz.fun/luanti-API-persistence.html"/>
+    <id>https://pangz.fun/luanti-API-persistence.html</id>
+    <published>2026-04-16T08:37:04.000Z</published>
+    <updated>2026-04-16T08:37:52.814Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;数据持久化&quot;&gt;&lt;a href=&quot;#数据持久化&quot; class=&quot;headerlink&quot; title=&quot;数据持久化&quot;&gt;&lt;/a&gt;数据持久化&lt;/h1&gt;&lt;p&gt;本页概览 Luanti 提供的&lt;strong&gt;序列化与数据持久化方案&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;选择持久化方式主要看这些：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据结构与类型：数据长啥样？有哪些类型？&lt;/li&gt;
+&lt;li&gt;数据大小与修改频率：能不能塞进内存？更新开销多大？&lt;/li&gt;
+&lt;li&gt;所需粒度：数据需要多久存一次？&lt;/li&gt;
+&lt;li&gt;查询需求：是否需要索引快速查找？&lt;/li&gt;
+&lt;li&gt;数据绑定对象：物品？玩家？方块？&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti API 对象属性</title>
+    <link href="https://pangz.fun/luanti-API-object-properties.html"/>
+    <id>https://pangz.fun/luanti-API-object-properties.html</id>
+    <published>2026-04-16T08:35:46.000Z</published>
+    <updated>2026-04-16T08:37:14.374Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;对象属性&quot;&gt;&lt;a href=&quot;#对象属性&quot; class=&quot;headerlink&quot; title=&quot;对象属性&quot;&gt;&lt;/a&gt;对象属性&lt;/h1&gt;&lt;p&gt;本页面列出对象可拥有的全部属性。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti API 模组通信频道</title>
+    <link href="https://pangz.fun/luanti-API-modchannels.html"/>
+    <id>https://pangz.fun/luanti-API-modchannels.html</id>
+    <published>2026-04-16T08:34:32.000Z</published>
+    <updated>2026-04-16T08:35:17.830Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;模组通信频道（Modchannels）&quot;&gt;&lt;a href=&quot;#模组通信频道（Modchannels）&quot; class=&quot;headerlink&quot; title=&quot;模组通信频道（Modchannels）&quot;&gt;&lt;/a&gt;模组通信频道（Modchannels）&lt;/h1&gt;&lt;p&gt;用于&lt;strong&gt;服务端模组（SSM）&lt;/strong&gt; 和&lt;strong&gt;客户端模组（CSM）&lt;/strong&gt; 互相发消息、双向通信。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti API LuaJIT</title>
+    <link href="https://pangz.fun/luanti-API-luajit.html"/>
+    <id>https://pangz.fun/luanti-API-luajit.html</id>
+    <published>2026-04-16T08:33:11.000Z</published>
+    <updated>2026-04-16T08:34:03.604Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;LuaJIT&quot;&gt;&lt;a href=&quot;#LuaJIT&quot; class=&quot;headerlink&quot; title=&quot;LuaJIT&quot;&gt;&lt;/a&gt;LuaJIT&lt;/h1&gt;&lt;p&gt;LuaJIT 是一款面向 Lua 的&lt;strong&gt;即时编译器（JIT）&lt;/strong&gt;，它完整实现了 &lt;strong&gt;Lua 5.1 标准&lt;/strong&gt;（为区分起见，官方标准 Lua 称为 PUC Lua），同时附带一些扩展与差异。&lt;br&gt;LuaJIT 运行速度通常远快于 PUC Lua，因此&lt;strong&gt;强烈推荐使用&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;除非你编译 Luanti 时&lt;strong&gt;手动禁用了 LuaJIT&lt;/strong&gt;，否则 Luanti 默认都会用 LuaJIT 作为 Lua 运行时。&lt;br&gt;官方 Windows、Android 以及大多数 Linux 发行版安装包，均已启用 LuaJIT。&lt;br&gt;你可以在终端执行这条命令确认：&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;./luanti --version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti 运行环境</title>
+    <link href="https://pangz.fun/luanti-API-lua-environment.html"/>
+    <id>https://pangz.fun/luanti-API-lua-environment.html</id>
+    <published>2026-04-16T08:29:19.000Z</published>
+    <updated>2026-04-16T08:30:16.709Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Lua-运行环境&quot;&gt;&lt;a href=&quot;#Lua-运行环境&quot; class=&quot;headerlink&quot; title=&quot;Lua 运行环境&quot;&gt;&lt;/a&gt;Lua 运行环境&lt;/h1&gt;&lt;p&gt;Luanti 采用 &lt;strong&gt;Lua 5.1&lt;/strong&gt;。模组的实际运行环境取决于&lt;strong&gt;四大要素&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;操作系统&lt;/li&gt;
+&lt;li&gt;Luanti 构建版本：LuaJIT（默认）或 PUC Lua 5.1&lt;/li&gt;
+&lt;li&gt;模组类型：客户端侧（CSM）或服务端侧（SSM）&lt;/li&gt;
+&lt;li&gt;模组环境：安全模式 或 不安全模式&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>luanti HTTP API</title>
+    <link href="https://pangz.fun/luanti-API-http-api.html"/>
+    <id>https://pangz.fun/luanti-API-http-api.html</id>
+    <published>2026-04-16T08:25:05.000Z</published>
+    <updated>2026-04-16T08:26:35.659Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;HTTP-API&quot;&gt;&lt;a href=&quot;#HTTP-API&quot; class=&quot;headerlink&quot; title=&quot;HTTP API&quot;&gt;&lt;/a&gt;HTTP API&lt;/h1&gt;&lt;p&gt;HTTP API 允许模组发起网络请求（GET/POST 等）。&lt;/p&gt;
+&lt;h2 id=&quot;设置（必须配置）&quot;&gt;&lt;a href=&quot;#设置（必须配置）&quot; class=&quot;headerlink&quot; title=&quot;设置（必须配置）&quot;&gt;&lt;/a&gt;设置（必须配置）&lt;/h2&gt;&lt;p&gt;要使用此 API，模组必须在以下&lt;strong&gt;任一配置项&lt;/strong&gt;中被列出（使用 CSV 格式，即逗号分隔）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;secure.trusted_mods&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;secure.http_mods&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
+    
+    
+    <category term="API" scheme="https://pangz.fun/tags/API/"/>
+    
+    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
+    
+    <category term="games" scheme="https://pangz.fun/tags/games/"/>
+    
+    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
+    
+  </entry>
   
   <entry>
     <title>luanti API 文件系统</title>
@@ -326,258 +575,6 @@
     <summary type="html">&lt;h1 id=&quot;硬编码功能列表&quot;&gt;&lt;a href=&quot;#硬编码功能列表&quot; class=&quot;headerlink&quot; title=&quot;硬编码功能列表&quot;&gt;&lt;/a&gt;硬编码功能列表&lt;/h1&gt;&lt;p&gt;这里列出 Luanti</summary>
         
       
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>luanti 引擎限制</title>
-    <link href="https://pangz.fun/luanti-limitations.html"/>
-    <id>https://pangz.fun/luanti-limitations.html</id>
-    <published>2026-04-09T12:24:39.000Z</published>
-    <updated>2026-04-09T12:26:06.052Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;引擎限制&quot;&gt;&lt;a href=&quot;#引擎限制&quot; class=&quot;headerlink&quot; title=&quot;引擎限制&quot;&gt;&lt;/a&gt;引擎限制&lt;/h1&gt;&lt;p&gt;这一页列出 Luanti</summary>
-        
-      
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>luanti 授权许可</title>
-    <link href="https://pangz.fun/luanti-licensing.html"/>
-    <id>https://pangz.fun/luanti-licensing.html</id>
-    <published>2026-04-09T08:33:40.000Z</published>
-    <updated>2026-04-09T08:35:13.590Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;授权许可&quot;&gt;&lt;a href=&quot;#授权许可&quot; class=&quot;headerlink&quot; title=&quot;授权许可&quot;&gt;&lt;/a&gt;授权许可&lt;/h1&gt;&lt;p&gt;很多基于 Luanti</summary>
-        
-      
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>luanti L‑System 自动种树教程</title>
-    <link href="https://pangz.fun/luanti-l-system-trees.html"/>
-    <id>https://pangz.fun/luanti-l-system-trees.html</id>
-    <published>2026-04-09T08:23:11.000Z</published>
-    <updated>2026-04-09T08:32:24.206Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;L‑System-自动种树教程&quot;&gt;&lt;a href=&quot;#L‑System-自动种树教程&quot; class=&quot;headerlink&quot; title=&quot;L‑System 自动种树教程&quot;&gt;&lt;/a&gt;L‑System 自动种树教程&lt;/h1&gt;&lt;p&gt;Luanti</summary>
-        
-      
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>luanti 保持世界兼容</title>
-    <link href="https://pangz.fun/luanti-keeping-world-compatibility.html"/>
-    <id>https://pangz.fun/luanti-keeping-world-compatibility.html</id>
-    <published>2026-04-09T08:19:21.000Z</published>
-    <updated>2026-04-09T08:21:24.153Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;保持世界兼容&quot;&gt;&lt;a href=&quot;#保持世界兼容&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>luanti 空手（手）</title>
-    <link href="https://pangz.fun/luanti-hand.html"/>
-    <id>https://pangz.fun/luanti-hand.html</id>
-    <published>2026-04-09T07:57:55.000Z</published>
-    <updated>2026-04-09T08:02:54.788Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;空手（手）&quot;&gt;&lt;a href=&quot;#空手（手）&quot; class=&quot;headerlink&quot; title=&quot;空手（手）&quot;&gt;&lt;/a&gt;空手（手）&lt;/h1&gt;&lt;p&gt;空手是 Luanti</summary>
-        
-      
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你的第一个生物</title>
-    <link href="https://pangz.fun/luanti-your-first-mob.html"/>
-    <id>https://pangz.fun/luanti-your-first-mob.html</id>
-    <published>2026-04-09T07:53:18.000Z</published>
-    <updated>2026-04-09T08:02:34.088Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;你的第一个生物&quot;&gt;&lt;a href=&quot;#你的第一个生物&quot; class=&quot;headerlink&quot; title=&quot;你的第一个生物&quot;&gt;&lt;/a&gt;你的第一个生物&lt;/h1&gt;&lt;p&gt;这篇教程带你从零做一只&lt;strong&gt;简单的攻击型怪物&lt;/strong&gt;，名字叫 &lt;strong&gt;Bloblet（小绿团）&lt;/strong&gt;。&lt;br&gt;教程会教你实体（entity）基础用法——凡是比方块更“能动”的东西，全都靠实体实现。&lt;/p&gt;
-&lt;p&gt;前提：你已经有一个基础模组 &lt;code&gt;mymod&lt;/code&gt;，要编辑 &lt;code&gt;mymod/init.lua&lt;/code&gt;。&lt;br&gt;版本要求：&lt;strong&gt;Luanti 5.5.0 及以上&lt;/strong&gt;。&lt;/p&gt;
-&lt;img src=&quot;/luanti-your-first-mob/bloblets.png&quot; class=&quot;&quot; title=&quot;示意图 width=400&quot;&gt;</summary>
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>luanti 分组（Groups）</title>
-    <link href="https://pangz.fun/luanti-groups.html"/>
-    <id>https://pangz.fun/luanti-groups.html</id>
-    <published>2026-04-09T07:43:42.000Z</published>
-    <updated>2026-04-09T07:45:06.466Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;分组（Groups）&quot;&gt;&lt;a href=&quot;#分组（Groups）&quot; class=&quot;headerlink&quot; title=&quot;分组（Groups）&quot;&gt;&lt;/a&gt;分组（Groups）&lt;/h1&gt;&lt;p&gt;分组是 Luanti</summary>
-        
-      
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>游戏主题重实现</title>
-    <link href="https://pangz.fun/luanti-game-theme-re-implementation.html"/>
-    <id>https://pangz.fun/luanti-game-theme-re-implementation.html</id>
-    <published>2026-04-09T07:40:54.000Z</published>
-    <updated>2026-04-09T07:42:29.578Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;游戏主题重实现&quot;&gt;&lt;a href=&quot;#游戏主题重实现&quot; class=&quot;headerlink&quot; title=&quot;游戏主题重实现&quot;&gt;&lt;/a&gt;游戏主题重实现&lt;/h1&gt;&lt;p&gt;主菜单里负责&lt;strong&gt;背景、标题栏&lt;/strong&gt;等主题的逻辑，默认是用</summary>
-        
-      
-    
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/categories/luanti/"/>
-    
-    
-    <category term="luanti" scheme="https://pangz.fun/tags/luanti/"/>
-    
-    <category term="games" scheme="https://pangz.fun/tags/games/"/>
-    
-    <category term="mods" scheme="https://pangz.fun/tags/mods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>luanti 脱离 ContentDB 分发游戏</title>
-    <link href="https://pangz.fun/luanti-distributing-games-outside-contentdb.html"/>
-    <id>https://pangz.fun/luanti-distributing-games-outside-contentdb.html</id>
-    <published>2026-04-09T07:28:51.000Z</published>
-    <updated>2026-04-09T07:40:15.734Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;脱离-ContentDB-分发游戏&quot;&gt;&lt;a href=&quot;#脱离-ContentDB-分发游戏&quot; class=&quot;headerlink&quot; title=&quot;脱离 ContentDB 分发游戏&quot;&gt;&lt;/a&gt;脱离 ContentDB 分发游戏&lt;/h1&gt;&lt;p&gt;这篇教你&lt;strong&gt;不依赖官方商店&lt;/strong&gt;，把你的 Luanti 游戏打包成独立客户端发布。&lt;br&gt;前提：你得会从源码编译 Luanti。&lt;/p&gt;
-&lt;p&gt;Luanti 引擎本身&lt;strong&gt;没有官方一键导出&lt;/strong&gt;功能，游戏默认都走 &lt;a href=&quot;https://content.luanti.org/packages/?type=game&quot;&gt;ContentDB&lt;/a&gt;、在游戏内安装。但因为 Luanti 是自由软件，你可以&lt;strong&gt;fork 引擎 → 改头换面 → 绑定你的游戏 → 独立发布&lt;/strong&gt;。&lt;/p&gt;</summary>
     
     
     
